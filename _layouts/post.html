@@ -5,13 +5,13 @@
         {%- include head.html -%}
 
         {% if page.previous %}
-            <link rel="prev" href="{{page.previous.url}}" />
+            <link rel="prev" href="{{site.baseurl}}{{page.previous.url}}" />
         {% else %}
-            <link rel="prev" href="{{site.url}}" />
+            <link rel="prev" href="{{site.baseurl}}/" />
         {% endif %}
 
         {% if page.next %}
-            <link rel="next" href="{{page.next.url}}" />
+            <link rel="next" href="{{site.baseurl}}{{page.next.url}}" />
         {% endif %}
     </head>
     <body>
@@ -23,17 +23,17 @@
                 {%- include body.html -%}
 
                 {% if page.previous %}
-                    <a href="{{page.previous.url}}" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{page.previous.title}}">
+                    <a href="{{site.baseurl}}{{page.previous.url}}" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{page.previous.title}}">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 {% else %}
-                    <a href="{{site.url}}" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{site.title}}">
+                    <a href="{{site.baseurl}}/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{site.title}}">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 {% endif %}
 
                 {% if page.next %}
-                    <a href="{{page.next.url}}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{page.next.title}}">
+                    <a href="{{site.baseurl}}{{page.next.url}}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{page.next.title}}">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 {% endif %}

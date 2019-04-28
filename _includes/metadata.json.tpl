@@ -73,10 +73,10 @@
         "type": "markdown"
     },
     "gitbook": {
-        "version": "{{site.url}}",
+        "version": "{{site.gitbook_version}}",
         "time": "{{site.time}}"
     },
-    "basePath": "{{site.url}}",
+    "basePath": "{{site.baseurl}}",
     "book": {
         "language": ""
     }

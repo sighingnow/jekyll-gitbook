@@ -5,11 +5,11 @@
     <nav role="navigation">
         <ul class="summary">
             {% if page.url == "/index.html" or page.url == "/" %}
-            <li class="chapter active" data-level="1.1" data-path="{{site.url}}">
+            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
             {% else %}
-            <li class="chapter" data-level="1.1" data-path="{{site.url}}">
+            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
             {% endif %}
-                <a href="{{site.url}}">
+                <a href="{{site.baseurl}}">
                     {{ site.title | escape }}
                 </a>
             </li>
@@ -20,11 +20,11 @@
 
             {% for post in reversed_posts %}
                 {% if page.url == post.url %}
-                <li class="chapter active" data-level="1.2" data-path="{{post.url}}">
+                <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
                 {% else %}
-                <li class="chapter" data-level="1.1" data-path="{{post.url}}">
+                <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
                 {% endif %}
-                    <a href="{{post.url}}">
+                    <a href="{{site.baseurl}}{{post.url}}">
                         {{ post.title | escape }}
                     </a>
                 </li>

@@ -9,8 +9,8 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io/jekyll-gitbook'
-baseurl:          ''
+url:              'https://sighingnow.github.io'
+baseurl:          '/jekyll-gitbook'
 rss:              RSS
 
 # markdown render engine.
