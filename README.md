@@ -25,5 +25,11 @@ This theme can be used just as other [Jekyll themes][1].
 
 Fork this repository and add your markdown posts to the `_posts` folder.
 
+## License
+
+This work is open sourced under the Apache License, Version 2.0.
+
+Copyright 2019 Tao He.
+
 [2]: https://pages.github.com
 [2]: https://pages.github.com/themes
