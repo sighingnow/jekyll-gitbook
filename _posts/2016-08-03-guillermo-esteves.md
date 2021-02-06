@@ -5,7 +5,7 @@ permalink: /4-guillermo_esteves
 layout: post
 ---
 
-![Guillermo](/images/gesteves.jpg#floatleft)
+![Guillermo](/colofon-audio/assets/img/gesteves.jpg){: style="float: right"}
 
 
 Guillermo es Director de Ingeniería Front-End para [Vox Media](http://www.voxmedia.com/pages/about-vox-media) en Washington, DC. 
