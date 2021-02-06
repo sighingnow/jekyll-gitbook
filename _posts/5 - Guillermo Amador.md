@@ -2,6 +2,7 @@
 date: 2016-08-17T08:20:00-05:00  
 permalink: /5-guillermo_amador
 title: Guillermo Amador
+layout: post
 ---
 
 ![Modulor](/images/modulor.png#floatleft)

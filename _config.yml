@@ -30,6 +30,13 @@ markdown_ext:     markdown,mkdown,mkdn,mkd,md
 # Permalinks
 permalink:        /:categories/:year-:month-:day-:title:output_ext
 
+# Statics 
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+
 exclude:
   - _drafts
 

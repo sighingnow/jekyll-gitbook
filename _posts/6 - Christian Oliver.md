@@ -2,6 +2,7 @@
 date: 2016-08-24T07:20:00-05:00  
 permalink: /6-christian_oliver
 title: Christian Oliver
+layout: post
 ---
 
 ![Christian](/images/coliver.png#floatleft)

@@ -2,6 +2,7 @@
 date: 2017-02-05T01:05:42-07:00   
 title: Acerca
 permalink: /acerca
+layout: home
 ---
 
 
