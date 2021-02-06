@@ -5,7 +5,7 @@ title: Daniel Prol
 layout: post
 ---
 
-![Daniel](/colofon-audio/assets/img/danielp.jpg){: style="float: right"}
+![Daniel](https://colofonaudio.s3.us-east-1.amazonaws.com/img/danielp.jpg){: style="float: right"}
 
 Daniel trabaja en Product Marketing para [Platzi](https://courses.platzi.com).
 

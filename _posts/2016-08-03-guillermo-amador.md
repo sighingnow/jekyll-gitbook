@@ -5,7 +5,7 @@ title: Guillermo Amador
 layout: post
 ---
 
-![Modulor](/colofon-audio/assets/img/modulor.png){: style="float: right"}
+![Modulor](https://colofonaudio.s3.us-east-1.amazonaws.com/img/modulor.png){: style="float: right"}
 
 Guillermo es Director de [@dospuntouno](https://twitter.com/dospuntouno), editor de [@revistaelrobot](https://twitter.com/revistaelrobot) y productor de #Technights.
 
