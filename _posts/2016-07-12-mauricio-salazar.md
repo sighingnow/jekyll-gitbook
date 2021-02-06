@@ -1,7 +1,7 @@
 ---
 date: 2016-07-12 23:40:00-05:00  
 title: Mauricio Salazar
-permalink: /1-mauricio-salazar
+# permalink: /1-mauricio-salazar
 layout: post
 ---
 
