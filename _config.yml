@@ -8,7 +8,7 @@ description: Un podcast de entrevistas a personas creadoras y las herramientas q
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'http://colofon.mateu.me'
+url:              'https://colofon.mateu.me'
 baseurl:          '/'
 rss:              RSS
 
