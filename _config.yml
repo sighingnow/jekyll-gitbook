@@ -3,8 +3,7 @@ title:            Colofon Audio
 longtitle:        Colofon Audio
 author:           Roberto Mateu
 email:            rmateu@gmail.com
-description: >
-  Build Jekyll site with the GitBook style.
+description: Build Jekyll site with the GitBook style.
 
 version:          1.0
 gitbook_version:  3.2.3
