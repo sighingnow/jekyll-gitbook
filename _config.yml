@@ -9,7 +9,7 @@ version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://rmateu.github.io'
-baseurl:          '/colofon-audio'
+baseurl:          '/colofon-audio/'
 rss:              RSS
 
 # markdown render engine.
