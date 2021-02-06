@@ -13,7 +13,7 @@ baseurl:          '/'
 rss:              RSS
 
 # markdown render engine.
-markdown:         GFM
+markdown:         kramdown
 # kramdown:
 # auto_ids:               true
 # input:                  GFM
