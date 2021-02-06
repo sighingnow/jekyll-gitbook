@@ -8,8 +8,8 @@ description: Build Jekyll site with the GitBook style.
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://rmateu.github.io'
-baseurl:          '/colofon-audio/'
+url:              'https://rmateu.github.io/colofon-audio/'
+baseurl:          '/'
 rss:              RSS
 
 # markdown render engine.
