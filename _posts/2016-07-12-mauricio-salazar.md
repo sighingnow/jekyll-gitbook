@@ -5,7 +5,7 @@ permalink: /1-mauricio-salazar
 layout: post
 ---
 
-![Mauricio Salazar](https://colofonaudio.s3.us-east-1.amazonaws.com/img/mauricio-2.jpg){: style="float: right"}
+<img style="float: right;" src="/assets/img/mauricio-2.jpg">
 
 Mauricio es el CEO de [Secure](https://se.cr/#/), un innovador escáner de vulnerabilidades para páginas web. Mauricio actualmente vive en Barcelona, España.
 

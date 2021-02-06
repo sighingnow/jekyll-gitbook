@@ -289,3 +289,24 @@
   background: #252737;
   font-weight: 600;
 }
+
+
+/*
+ * MD Image Hack https://stackoverflow.com/a/39614958
+ */
+
+img[alt$=">"] {
+  float: right;
+}
+
+img[alt$="<"] {
+  float: left;
+}
+
+img[alt$="><"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  float: none!important;
+}

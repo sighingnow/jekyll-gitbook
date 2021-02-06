@@ -5,7 +5,8 @@ title: Christian Oliver
 layout: post
 ---
 
-![Christian](https://colofonaudio.s3.us-east-1.amazonaws.com/img/coliver.png){: style="float: right"}
+<img style="float: right;" src="/assets/img/coliver.png">
+
 
 Christian es Director Senior de Desarrollo de Audiencia y Analítica en CNN.
 

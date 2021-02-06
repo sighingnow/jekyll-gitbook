@@ -5,7 +5,7 @@ permalink: /3-belen_albeza
 layout: post
 ---
 
-![Belen](https://colofonaudio.s3.us-east-1.amazonaws.com/img/Belen.png){: style="float: right"}
+<img style="float: right;" src="/assets/img/Belen.png">
 
 
 Belén es evangelista web para [Mozilla](https://www.mozilla.org/en-US/), fanática de Mass Effect y  caricaturista. Vive en Barcelona, España.

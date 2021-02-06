@@ -5,7 +5,7 @@ permalink: /2-alvaro-andoin
 layout: post
 ---
 
-![Alvaro](https://colofonaudio.s3.us-east-1.amazonaws.com/img/Alvaro_Andoinbw-2.jpg){: style="float: right"}
+<img style="float: right;" src="/assets/img/Alvaro_Andoinbw-2.jpg">
 
 Álvaro es el fundador de [Filmatu](http://www.filmatu.com/), una agencia de Creación de contenidos para Medios Sociales en Bilbao, España.
 
