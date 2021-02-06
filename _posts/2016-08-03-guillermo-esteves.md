@@ -25,7 +25,7 @@ Guillermo en twitter: [@gesteves](https://twitter.com/gesteves), en la [web](htt
 
 ## Software
 * [Atom](https://atom.io/)
-* [Lightroom and Photoshop | Adobe Creative Cloud Photography plan](http://www.adobe.com/creativecloud/photography.html?sdid=KKTJE&mv=search&s_kwcid=AL!3085!3!115827841218!e!!g!!adobe%20lightroom&ef_id=Uz8XpAAAAWCgQyDK:20160803031540:s)
+* [Lightroom and Photoshop](http://www.adobe.com/creativecloud/photography.html?sdid=KKTJE&mv=search&s_kwcid=AL!3085!3!115827841218!e!!g!!adobe%20lightroom&ef_id=Uz8XpAAAAWCgQyDK:20160803031540:s)
 * [Safari](http://www.apple.com/safari/)
 * [Chrome Browser](https://www.google.com/chrome/browser/desktop/)
 * [Firefox](https://www.mozilla.org/en-US/firefox/new/)

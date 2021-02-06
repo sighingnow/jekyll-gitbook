@@ -21,7 +21,7 @@ Daniel en twitter: [@DannyProl](https://twitter.com/DannyProl), [LinkedIn](http:
 
 * [MacBook Pro with Retina display](http://www.apple.com/macbook-pro/specs-retina/)
 * [Music for everyone - Spotify](https://www.spotify.com/us/)
-* [Note Taking App - Add Text, Images, Audio, Checklist | Zoho Notebook](https://www.zoho.com/notebook/)
+* [Note Taking App - Add Text, Images, Audio, Checklist - Zoho Notebook](https://www.zoho.com/notebook/)
 * [Evernote Web - Chrome Web Store](https://chrome.google.com/webstore/detail/evernote-web/lbfehkoinhhcknnbdgnnmjhiladcgbol?hl=en)
 * [iCloud: Notes overview](https://support.apple.com/kb/ph12081?locale=en_US)
 * [Slack: Be less busy](https://slack.com/)

@@ -16,7 +16,7 @@ La inclusión de *geek* no se refiere al uso de tecnología, sino a un nivel de 
 
 ## Anfitrión
 
-![Roberto](https://colofonaudio.s3.us-east-1.amazonaws.com/img/rmateu.jpg){: style="float: right"}
+![Roberto](/assets/img/rmateu.jpg){: style="float: right"}
 Hola, mi nombre es Roberto F Mateu y Colofón es un mini-proyecto de verano. Aclaro la *F*, ya que pese a mis mejores esfuerzos en algunos episodios podrán oír a Roberto A Mateu. Pero el hecho que oigan a cualquiera de los dos Roberto es posible gracias a [Ana Schloeter](http://anitamarcela.com), quién tolera las necedades de ambos a diferentes — y similares — horas de la noche. 
 
 Me pueden seguir/comentar/corregir en twitter: [@rmateu](https://twitter.com/rmateu), y leer en mi blog: [5typos.net](http://5typos.net).

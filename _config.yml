@@ -1,15 +1,15 @@
 # Configurations
-title:            Colofon Audio
-longtitle:        Colofon Audio
+title:            Colofón Podcast
+longtitle:        Colofón Podcast
 author:           Roberto Mateu
 email:            rmateu@gmail.com
-description: Hello Jekyll site with the GitBook style.
+description: Un podcast de entrevistas a personas creadoras y las herramientas que usan para ser productivas.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://rmateu.github.io'
-baseurl:          '/colofon-audio'
+url:              'http://colofon.mateu.me'
+baseurl:          '/'
 rss:              RSS
 
 # markdown render engine.
@@ -19,7 +19,7 @@ kramdown:
   input:                  GFM
   math_engine:            mathjax
   smart_quotes:           lsquo,rsquo,ldquo,rdquo
-  toc_levels:             1..6
+  toc_levels:             1..6  
   syntax_highlighter:     rouge
   syntax_highlighter_opts:
     guess_lang:           true
