@@ -30,9 +30,9 @@ func();
 - 이미지도 한번 넣어보고.
   ![](./2021-07-11-first-post/image.jpg)
 
-음.. 잘나오네..
-_single asterisks_
-_single underscores_
-**double asterisks**
-**double underscores**
+음.. 잘나오네..  
+_single asterisks_  
+_single underscores_  
+**double asterisks**  
+**double underscores**  
 ~~cancel line~~
