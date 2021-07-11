@@ -1,0 +1,22 @@
+{
+  "name": "yangblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "./publish_gitbook.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KkukYang/yangblog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KkukYang/yangblog/issues"
+  },
+  "homepage": "https://github.com/KkukYang/yangblog#readme",
+  "dependencies": {}
+}
