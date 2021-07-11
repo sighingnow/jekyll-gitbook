@@ -1,15 +1,15 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            yangblog
+longtitle:        yangblog
+author:           KukHyun Yang
+email:            yangyk7364@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
+url:              'https://kkukyang.github.io'
 baseurl:          '/yangblog'
 rss:              RSS
 
@@ -39,5 +39,3 @@ regenerate:       true
 
 plugins:
   - jemoji
-
-theme: jekyll-theme-cayman
