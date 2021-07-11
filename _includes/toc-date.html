@@ -6,14 +6,12 @@
     <ul class="summary">
       {% if page.url == "/index.html" or page.url == "/" %}
       <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
-        Yang Kuk Hyun's Blog
+        {% else %}
       </li>
 
       <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
         {% endif %}
-        <a href="{{site.baseurl}}">
-          [{{ site.category | escape }}] {{ site.title | escape }}
-        </a>
+        <a href="{{site.baseurl}}"> Yang Kuk Hyun's Blog </a>
       </li>
 
       <li class="divider"></li>
@@ -34,21 +32,13 @@
         data-path="{{site.baseurl}}{{post.url}}"
       >
         {% endif %}
-        <a href="{{site.baseurl}}{{post.url}}"> {{ post.title | escape }} </a>
+        <a href="{{site.baseurl}}{{post.url}}">
+          [{{ post.category | escape }}] {{ post.title | escape }}
+        </a>
       </li>
       {% endfor %}
 
       <li class="divider"></li>
-
-      <li>
-        <a
-          href="https://github.com/sighingnow/jekyll-gitbook/fork"
-          target="blank"
-          class="gitbook-link"
-        >
-          Fork it Now!
-        </a>
-      </li>
     </ul>
   </nav>
 </div>
