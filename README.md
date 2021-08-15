@@ -27,6 +27,12 @@ This theme can be used just as other [Jekyll themes][1].
 
 [Fork][3] this repository and add your markdown posts to the `_posts` folder.
 
+### Deploy Locally with Jekyll Serve
+
+This theme can be ran locally using Ruby and Gemfiles.
+
+[Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
+
 ## How to generate TOC
 
 The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
