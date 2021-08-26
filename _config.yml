@@ -1,7 +1,7 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
+title:            Материалы
+longtitle:        Материалы
+author:           mozzir
 email:            sighingnow@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
