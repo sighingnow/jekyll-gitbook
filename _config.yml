@@ -2,15 +2,15 @@
 title:            Главная
 longtitle:        Главная
 author:           mozzir
-email:            sighingnow@gmail.com
+email:            none
 description: >
   Build Jekyll site with the GitBook style.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/ege'
+url:              'https://mozzgit.github.io/'
+baseurl:          ''
 rss:              RSS
 
 toc:
