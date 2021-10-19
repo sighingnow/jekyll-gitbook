@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            plexix's
+longtitle:        Yuxuan Bai's Homepage
+author:           plexix
+email:            byx1029@live.com
 description: >
   Build Jekyll site with the GitBook style.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://plexix.github.io'
+baseurl:          '/'
 rss:              RSS
 
 toc:
