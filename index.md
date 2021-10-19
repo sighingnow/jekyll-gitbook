@@ -2,4 +2,9 @@
 layout: home
 ---
 
-Make Jelly site have a GitBook look!
+# plexix's blog
+
+## About Me
+
+## Contact me
+
