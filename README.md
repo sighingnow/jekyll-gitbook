@@ -1,4 +1,4 @@
-# Jekyll GitBook
+# plexix's blog
 
 Make Jelly site have a GitBook look!
 
