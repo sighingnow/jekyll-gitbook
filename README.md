@@ -3,8 +3,8 @@
 Hi, welcome to the homepage of plexix (Yuxuan Bai, 白钰渲).
 
 [About Me][1]
-[Course Notes][2]
-[DM/ML][3]
+ | [Course Notes][2]
+ | [DM/ML][3]
 
 [1]: https://pages.github.com
 [2]: https://pages.github.com/themes
