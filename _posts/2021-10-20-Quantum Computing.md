@@ -31,12 +31,9 @@ $$$$
 + 所有量子操作对应于一个酉矩阵（幺正矩阵） *U*
 
 + 量子操作具有并行性
-$$
-U[|ψ\rang = \sum^{N-1}_{i=0}{a_i |i\rang}] = \sum^{N-1}_{i=0}{a_iU|i\rang}
-$$
+$$U[|ψ\rang = \sum^{N-1}_{i=0}{a_i |i\rang}] = \sum^{N-1}_{i=0}{a_iU|i\rang}$$
 
-+ 对量子比特最基本的操作称为**逻辑门**
-逻辑门的操作按照它对Hilbert空间基矢的作用来定义
++ 对量子比特最基本的操作称为**逻辑门**：逻辑门的操作按照它对Hilbert空间基矢的作用来定义
 
 
 ### 单量子比特门（一位门）
@@ -45,31 +42,21 @@ $$
 
 ##### 定义
 
-$$
-X = |0\rang\lang1| + |1\rang\lang0| = 
+$$X = |0\rang\lang1| + |1\rang\lang0| = 
 \begin{pmatrix}
 0 & 1 \\
 1 & 0
-\end{pmatrix},
-\quad
-X(α|0\rang+β|1\rang) = α|1\rang + β|0\rang
-$$$$
-Z = |0\rang\lang0| - |1\rang\lang1| = 
+\end{pmatrix},\quad X(α|0\rang+β|1\rang) = α|1\rang + β|0\rang$$
+$$Z = |0\rang\lang0| - |1\rang\lang1| = 
 \begin{pmatrix}
 1 & 0 \\
 0 & -1
-\end{pmatrix},
-\quad
-Z(α|0\rang+β|1\rang) = α|0\rang - β|1\rang
-$$$$
-Y = -i|0\rang\lang1| + i|1\rang\lang0| = 
+\end{pmatrix},\quad Z(α|0\rang+β|1\rang) = α|0\rang - β|1\rang$$
+$$Y = -i|0\rang\lang1| + i|1\rang\lang0| = 
 \begin{pmatrix}
 0 & -i \\
 i & 0
-\end{pmatrix},
-\quad
-Y(α|0\rang+β|1\rang) = iα|1\rang - iβ|0\rang
-$$
+\end{pmatrix},\quad Y(α|0\rang+β|1\rang) = iα|1\rang - iβ|0\rang$$
 
 $$
 Y=iXZ \qquad XYZ=i
