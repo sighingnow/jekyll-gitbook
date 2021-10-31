@@ -20,8 +20,8 @@ layout: post
 
 ## 基础知识
 
-$$|0 \rang = \binom{0}{1} \qquad |1 \rang = \binom{1}{0}$$
-$$\lang 0| = (0 \enspace 1) \qquad \lang 1| = (1 \enspace 0)$$
+$$\mid 0 \rang = \binom{0}{1} \qquad |1 \rang = \binom{1}{0}$$
+$$\lang 0 \mid = (0 \enspace 1) \qquad \lang 1| = (1 \enspace 0)$$
 
 ## 量子电路
 
@@ -41,7 +41,7 @@ $$U[|ψ\rang = \sum^{N-1}_{i=0}{a_i |i\rang}] = \sum^{N-1}_{i=0}{a_iU|i\rang}$$
 
 ##### 定义
 
-$$X = |0\rang\lang1| + |1\rang\lang0| = 
+$$X = \mid 0 \rang \lang 1 \mid + \mid 1\rang \lang 0 \mid = 
 \begin{pmatrix}
 0 & 1 \\
 1 & 0
@@ -154,15 +154,11 @@ $$
 
 因此，
 
-$$
-R_{X}(θ)\equiv e^{\frac{-iθX}{2}} = cos\frac{θ}{2}I-isin\frac{θ}{2}X
-$$$$
-R_{Y}(θ)\equiv e^{\frac{-iθZ}{2}} = cos\frac{θ}{2}I-isin\frac{θ}{2}Y
-$$$$
-R_{Z}(θ)\equiv e^{\frac{-iθY}{2}} = cos\frac{θ}{2}I-isin\frac{θ}{2}Z
-$$
+$$R_{X}(θ)\equiv e^{\frac{-iθX}{2}} = cos\frac{θ}{2}I-isin\frac{θ}{2}X$$
+$$R_{Y}(θ)\equiv e^{\frac{-iθZ}{2}} = cos\frac{θ}{2}I-isin\frac{θ}{2}Y$$
+$$R_{Z}(θ)\equiv e^{\frac{-iθY}{2}} = cos\frac{θ}{2}I-isin\frac{θ}{2}Z$$
 
-简单来说，旋转门 $R_X(θ)$ 作用在量子态 $|ψ\rang$ 上，在Bloch球上表现为 $|ψ\rang$ 所表示的向量绕x轴顺时针旋转θ角。
+简单来说，旋转门 $R_X(θ)$ 作用在量子态 $\mid ψ\rang$ 上，在Bloch球上表现为 $\mid ψ\rang$ 所表示的向量绕x轴顺时针旋转θ角。
 
 同理，$R_Y(θ)$ 和 $R_Z(θ)$ 分别表示绕y轴和z轴旋转。
 
