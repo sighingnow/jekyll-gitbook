@@ -20,9 +20,8 @@ layout: post
 
 ## 基础知识
 
-$$|0\rang = \binom{0}{1}\qquad|1\rang = \binom{1}{0}
-$$$$
-\lang0| = (0\enspace1)\qquad\lang1| = (1\enspace0)$$
+$$|0 \rang = \binom{0}{1} \qquad |1 \rang = \binom{1}{0}$$
+$$\lang 0| = (0 \enspace 1) \qquad \lang 1| = (1 \enspace 0)$$
 
 ## 量子电路
 
