@@ -32,3 +32,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{site.baseurl}}/gitbook/images/apple-touch-icon-precomposed-152.png">
 <link rel="shortcut icon" href="{{site.baseurl}}/gitbook/images/favicon.ico" type="image/x-icon">
+
+{% if page.tipue_search_active or layout.tipue_search_active -%}
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
+{% endif -%}

@@ -8,3 +8,9 @@
 <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
 <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
 <script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
+
+{% if page.tipue_search_active or layout.tipue_search_active -%}
+    <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
+    <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
+    <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
+{% endif -%}
