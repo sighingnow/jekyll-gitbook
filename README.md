@@ -33,19 +33,19 @@ This theme can be ran locally using Ruby and Gemfiles.
 
 [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
 
-## How to generate TOC
-
-The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
-The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
-configuration in `_config.yml`:
-
-## Search
+## Full-text search
 
 The jekyll-gitbook theme support a "Search" page that enables visitors to search contents
 from the whole site. The search functionality is powered by [jekyll-tipue-search][5] can you
 can try it from:
 
 [https://sighingnow.github.io/jekyll-gitbook/search/?q=generated](https://sighingnow.github.io/jekyll-gitbook/search/?q=generated)
+
+## How to generate TOC
+
+The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
+The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
+configuration in `_config.yml`:
 
 ```yaml
 toc:
