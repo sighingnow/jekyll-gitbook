@@ -39,6 +39,14 @@ The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* fo
 The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
 configuration in `_config.yml`:
 
+## Search
+
+The jekyll-gitbook theme support a "Search" page that enables visitors to search contents
+from the whole site. The search functionality is powered by [jekyll-tipue-search][5] can you
+can try it from:
+
+[https://sighingnow.github.io/jekyll-gitbook/search/?q=generated](https://sighingnow.github.io/jekyll-gitbook/search/?q=generated)
+
 ```yaml
 toc:
     enabled: true
@@ -54,3 +62,4 @@ Copyright 2019 Tao He.
 [2]: https://pages.github.com/themes
 [3]: https://github.com/sighingnow/jekyll-gitbook/fork
 [4]: https://github.com/allejo/jekyll-toc
+[5]: https://github.com/jekylltools/jekyll-tipue-search
