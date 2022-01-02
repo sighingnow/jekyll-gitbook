@@ -9,8 +9,7 @@
 <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
 <script src="../gitbook/gitbook-plugin-search/search.js"></script> -->
 
-{% if page.tipue_search_active or layout.tipue_search_active -%}
-    <script src="{{ "/assets/tipuesearch/tipuesearch_content.js" | relative_url }}"></script>
-    <script src="{{ "/assets/tipuesearch/tipuesearch_set.js" | relative_url }}"></script>
-    <script src="{{ "/assets/tipuesearch/tipuesearch.min.js" | relative_url }}"></script>
-{% endif -%}
+<script src="{{site.baseurl}}/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="{{site.baseurl}}/gitbook/gitbook-plugin-search-pro/search.js"></script>
+
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>

@@ -22,7 +22,7 @@
 
 <link rel="stylesheet" href="{{site.baseurl}}/gitbook/style.css">
 <link rel="stylesheet" href="{{site.baseurl}}/gitbook/gitbook-plugin-fontsettings/website.css">
-<!-- <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css"> -->
+<link rel="stylesheet" href="{{site.baseurl}}/gitbook/gitbook-plugin-search-pro/search.css">
 
 <link rel="stylesheet" href="{{site.baseurl}}/gitbook/rouge-highlight-colorful.css">
 
@@ -43,9 +43,3 @@
         }
     };
 </script>
-<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
-{% if page.tipue_search_active or layout.tipue_search_active -%}
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="{{ "/assets/tipuesearch/css/tipuesearch.css" | relative_url }}">
-{% endif -%}

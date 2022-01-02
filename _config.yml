@@ -18,13 +18,6 @@ toc:
   h_min: 1
   h_max: 3
 
-# Search settings
-tipue_search:
-  include:
-    pages: true
-  exclude:
-    files: [index.md, search.html]
-
 # markdown render engine.
 markdown:         kramdown
 kramdown:

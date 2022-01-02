@@ -1,13 +1,12 @@
 ---
-# Content index for Tipue Search
-# https://github.com/jekylltools/jekyll-tipue-search
-# v1.4
+# Content index for gitbook-plugin-search-pro
 layout: null
 ---
+
 {%- assign index = "" | split: "" -%}
-{%- assign excluded_files = site.tipue_search.exclude.files -%}
-{%- assign excluded_tags = site.tipue_search.exclude.tags | uniq -%}
-{%- assign excluded_categories = site.tipue_search.exclude.categories | uniq -%}
+{%- assign excluded_files = site.gitbook_search.exclude.files -%}
+{%- assign excluded_tags = site.gitbook_search.exclude.tags | uniq -%}
+{%- assign excluded_categories = site.gitbook_search.exclude.categories | uniq -%}
 {%- assign excluded_taxonomies = excluded_tags | concat: excluded_categories | uniq -%}
 {%- for post in site.posts -%}
   {%- unless post.exclude_from_search == true or excluded_files contains post.path -%}
@@ -27,7 +26,7 @@ layout: null
     {%- endunless -%}
   {%- endunless -%}
 {%- endfor -%}
-{%- if site.tipue_search.include.pages == true -%}
+{%- if site.gitbook_search.include.pages == true -%}
   {%- for page in site.html_pages -%}
     {%- unless page.exclude_from_search == true or excluded_files contains page.path -%}
       {%- assign has_excluded_taxonomy = false -%}
@@ -47,7 +46,7 @@ layout: null
     {%- endunless -%}
   {%- endfor -%}
 {%- endif -%}
-{%- for collection in site.tipue_search.include.collections -%}
+{%- for collection in site.gitbook_search.include.collections -%}
   {%- assign documents = site.documents | where:"collection",collection -%}
   {%- for document in documents -%}
     {%- unless document.exclude_from_search == true or excluded_files contains document.path -%}
@@ -68,16 +67,16 @@ layout: null
     {%- endunless -%}
   {%- endfor -%}
 {%- endfor -%}
-var tipuesearch = {"pages": [
+{
 {%- for document in index -%}
   {%- assign tags = document.tags | uniq -%}
   {%- assign categories = document.categories | uniq -%}
   {%- assign taxonomies = tags | concat: categories | uniq -%}
-  {
+  {{ document.url | relative_url | jsonify }}: {
     "title": {{ document.title | smartify | strip_html | normalize_whitespace | jsonify }},
-    "text": {{ document.content | strip_html | normalize_whitespace | jsonify }},
-    "tags": {{ taxonomies | join: " " | normalize_whitespace | jsonify }},
-    "url": {{ document.url | relative_url | jsonify }}
+    "keywords": {{ taxonomies | join: " " | normalize_whitespace | jsonify }},
+    "url": {{ document.url | relative_url | jsonify }},
+    "body": {{ document.content | strip_html | normalize_whitespace | jsonify }}
   }{%- unless forloop.last -%},{%- endunless -%}
 {%- endfor -%}
-]};
+}
