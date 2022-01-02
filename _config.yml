@@ -30,6 +30,8 @@ kramdown:
   syntax_highlighter_opts:
     guess_lang:           true
 
+syntax_highlighter_style: colorful
+
 markdown_ext:     markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
