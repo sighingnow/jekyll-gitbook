@@ -127,6 +127,16 @@ require([
     }
 
     function bindSearch() {
+        // Asynchronously load the index data
+        {
+            var url = state.basePath + "/search_plus_index.json";
+            $.getJSON(url).then(function(data) {
+                INDEX_DATA = data;
+                console.log('INDEX_DATA = ' + INDEX_DATA);
+                handleUpdate();
+            });
+        }
+
         // Bind DOM
         var $body = $('body');
 
@@ -157,7 +167,6 @@ require([
         $body.on('click', '#book-search-input input', function(e) {
             if (Object.keys(INDEX_DATA).length === 0) {
                 var url = state.basePath + "/search_plus_index.json";
-                console.log("start get json");
                 $.getJSON(url).then(function(data) {
                     INDEX_DATA = data;
                     console.log('INDEX_DATA = ' + INDEX_DATA);
