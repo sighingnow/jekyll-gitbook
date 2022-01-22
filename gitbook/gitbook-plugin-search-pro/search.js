@@ -59,7 +59,7 @@ require([
             var $title = $('<h3>');
 
             var $link = $('<a>', {
-                'href': gitbook.state.basePath + '/' + item.url + '?h=' + encodeURIComponent(res.query),
+                'href': item.url + '?h=' + encodeURIComponent(res.query),
                 'text': item.title,
                 'data-is-search': 1
             });
@@ -132,7 +132,6 @@ require([
             var url = state.basePath + "/search_plus_index.json";
             $.getJSON(url).then(function(data) {
                 INDEX_DATA = data;
-                console.log('INDEX_DATA = ' + INDEX_DATA);
                 handleUpdate();
             });
         }
@@ -169,7 +168,6 @@ require([
                 var url = state.basePath + "/search_plus_index.json";
                 $.getJSON(url).then(function(data) {
                     INDEX_DATA = data;
-                    console.log('INDEX_DATA = ' + INDEX_DATA);
                     handleUpdate();
                 });
             }
