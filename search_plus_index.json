@@ -8,23 +8,27 @@ layout: null
 {%- assign excluded_tags = site.gitbook_search.exclude.tags | uniq -%}
 {%- assign excluded_categories = site.gitbook_search.exclude.categories | uniq -%}
 {%- assign excluded_taxonomies = excluded_tags | concat: excluded_categories | uniq -%}
-{%- for post in site.posts -%}
-  {%- unless post.exclude_from_search == true or excluded_files contains post.path -%}
-    {%- assign has_excluded_taxonomy = false -%}
-    {%- for tag in post.tags -%}
-      {%- if excluded_taxonomies contains tag -%}
-        {%- assign has_excluded_taxonomy = true -%}
-      {%- endif -%}
+{%- for collection in site.collections -%}
+  {%- if collection.output -%}
+    {%- for post in site[collection.label] -%}
+      {%- unless post.exclude_from_search == true or excluded_files contains post.path -%}
+        {%- assign has_excluded_taxonomy = false -%}
+        {%- for tag in post.tags -%}
+          {%- if excluded_taxonomies contains tag -%}
+            {%- assign has_excluded_taxonomy = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for category in post.categories -%}
+          {%- if excluded_taxonomies contains category -%}
+            {%- assign has_excluded_taxonomy = true -%}
+          {%- endif -%}
+        {%- endfor -%}
+        {%- unless has_excluded_taxonomy == true -%}
+          {%- assign index = index | push: post | uniq -%}
+        {%- endunless -%}
+      {%- endunless -%}
     {%- endfor -%}
-    {%- for category in post.categories -%}
-      {%- if excluded_taxonomies contains category -%}
-        {%- assign has_excluded_taxonomy = true -%}
-      {%- endif -%}
-    {%- endfor -%}
-    {%- unless has_excluded_taxonomy == true -%}
-      {%- assign index = index | push: post | uniq -%}
-    {%- endunless -%}
-  {%- endunless -%}
+  {%- endif -%}
 {%- endfor -%}
 {%- if site.gitbook_search.include.pages == true -%}
   {%- for page in site.html_pages -%}

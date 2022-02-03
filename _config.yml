@@ -40,6 +40,11 @@ permalink:        /:categories/:year-:month-:day-:title:output_ext
 exclude:
   - _drafts
 
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:path/
+
 destination:      ./_site
 incremental:      false
 regenerate:       true
