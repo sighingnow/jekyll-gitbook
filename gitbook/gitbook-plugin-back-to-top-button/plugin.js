@@ -14,7 +14,7 @@ require([
             $(this).css('cursor', 'auto');
         });
     
-        $('.book-body,.body-inner').on('scroll', function () {
+        $('.book-body,.body-inner,.page-wrapper').on('scroll', function () {
             if ($(this).scrollTop() > 100) { 
                 $('.back-to-top').fadeIn();
             } else {

@@ -16,13 +16,27 @@
             {%- include toc-date.html -%}
 
             <div class="book-body">
-                {%- include body.html -%}
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        {% if page.title %}
+                            <a href="." >{{ page.title | escape }}</a>
+                        {% else %}
+                            <a href="." >{{ site.title | escape }}</a>
+                        {% endif %}
+                    </h1>
+                </div>
 
-                {% if reversed_posts %}
-                    <a href="{{site.baseurl}}{{reversed_posts.first.url}}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{reversed_posts.first.title}}">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-                {% endif %}
+                <div class="body-inner">
+                    {%- include body.html -%}
+
+                    {% if reversed_posts %}
+                        <a href="{{site.baseurl}}{{reversed_posts.first.url}}" class="navigation navigation-next navigation-unique" aria-label="Next page: {{reversed_posts.first.title}}">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    {% endif %}
+                </div>
             </div>
 
             <script>

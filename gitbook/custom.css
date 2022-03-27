@@ -1,0 +1,55 @@
+.book-body {
+    overflow-y: hidden;
+}
+
+.book-body .book-header {
+    position: fixed;
+    width: calc(100% - 300px);
+}
+
+.book-body .body-inner {
+    overflow-y: scroll;
+    margin-top: 50px;
+    height: calc(100% - 50px);
+    min-height: calc(100% - 50px);
+}
+
+.book-body .body-inner .page-wrapper {
+    min-height: calc(100% - 46px);
+}
+
+.book-body .body-inner .page-wrapper .page-inner {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1240px) {
+    .book-body .body-inner .navigation {
+        max-width: calc(50% - 3px);
+        width: calc(50% - 3px);
+    }
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+    /* background-color: rgba(125, 125, 125, 0.2); */
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+
+  height: 5px;
+  background-color: rgba(7, 17, 27, .2);
+  -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, 0.2);
+  -webkit-border-radius: 6px;
+}
