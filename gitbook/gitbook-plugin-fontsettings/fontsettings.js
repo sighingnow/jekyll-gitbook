@@ -104,16 +104,25 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         }
 
         var $book = gitbook.state.$book;
+        var $header = $('.book-body > .book-header');
 
         // Remove currently applied color theme
-        if (fontState.theme !== 0)
+        if (fontState.theme !== 0) {
             $book.removeClass('color-theme-'+fontState.theme);
+            if ($header.length !== 0) {
+                $header.removeClass('color-theme-'+fontState.theme);
+            }
+        }
 
         // Set new color theme
         var themeId = getThemeId(configName);
         fontState.theme = themeId;
-        if (fontState.theme !== 0)
+        if (fontState.theme !== 0) {
             $book.addClass('color-theme-'+fontState.theme);
+            if ($header.length !== 0) {
+                $header.addClass('color-theme-'+fontState.theme);
+            }
+        }
 
         saveFontSettings();
     }

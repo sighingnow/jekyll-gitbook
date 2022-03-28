@@ -1,5 +1,5 @@
 .book-body {
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .book-body .book-header {
@@ -8,9 +8,8 @@
 }
 
 .book-body .body-inner {
-    overflow-y: scroll;
+    /* position: absolute; */
     margin-top: 50px;
-    height: calc(100% - 50px);
     min-height: calc(100% - 50px);
 }
 
@@ -29,6 +28,17 @@
     }
 }
 
+.book .book-body .book-header {
+    background: #ffffff;
+}
+
+.book.color-theme-1 .book-body .book-header {
+    background: #f3eacb;
+}
+
+.book.color-theme-2 .book-body .book-header {
+    background: #1c1f2b;
+}
 
 /* scrollbar */
 ::-webkit-scrollbar {
