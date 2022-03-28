@@ -4,6 +4,11 @@
 
 .book-body .book-header {
     position: fixed;
+    width: 100%;
+}
+
+.book.with-summary .book-body .book-header {
+    position: fixed;
     width: calc(100% - 300px);
 }
 
