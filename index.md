@@ -65,6 +65,23 @@ toc:
     h_max: 3
 ```
 
+## Google Analytics, etc.
+
+The jekyll-gitboook theme supports embedding the [Google Analytics][7] and [CNZZ][8] website analytical tools with the following
+minimal configuration in `_config.yaml`:
+
+```yaml
+tracker:
+  google_analytics: "<YOUR GOOGLE ANALYTICS KEY, e.g, UA-xxxxxx-x>"
+```
+
+Similarly, CNZZ can be added with the following configuration in `_config.yaml`
+
+```yaml
+tracker:
+  cnzz: "<YOUR CNZZ ANALYTICS KEY, e.g., xxxxxxxx>"
+```
+
 ## License
 
 This work is open sourced under the Apache License, Version 2.0.
@@ -77,3 +94,5 @@ Copyright 2019 Tao He.
 [4]: https://github.com/allejo/jekyll-toc
 [5]: https://github.com/gitbook-plugins/gitbook-plugin-search-pro
 [6]: https://github.com/rouge-ruby/rouge/tree/master/lib/rouge/themes
+[7]: https://analytics.google.com/analytics/web/
+[8]: https://www.cnzz.com/
