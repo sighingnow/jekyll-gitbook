@@ -46,3 +46,13 @@
         }
     };
 </script>
+
+{%- if site.tracker -%}
+    <!-- trackers -->
+
+    {%- if site.tracker.application_insitghts -%}
+        <!-- google analytics -->
+        {%- include application-insitghts.html -%}
+    {%- endif -%}
+
+{%- endif -%}
