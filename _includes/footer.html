@@ -15,3 +15,19 @@
 <script src="{{site.baseurl}}/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+
+{%- if site.tracker -%}
+    <!-- trackers -->
+
+    {%- if site.tracker.google_analytics -%}
+        <!-- google analytics -->
+        {%- include google-analytics.html -%}
+    {%- endif -%}
+
+    {%- if site.tracker.cnzz -%}
+        <!-- cnzz -->
+        {%- include cnzz.html -%}
+    {%- endif -%}
+
+{%- endif -%}
