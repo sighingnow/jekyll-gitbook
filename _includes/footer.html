@@ -16,18 +16,25 @@
 
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
+{% if site.extra_footer_js %}
+    {%- for extra_js in site.extra_header_js -%}
+        {%- assign starts_with = extra_js | slice: 0,4  -%}
+        {% if starts_with == "http" %}
+<script src="{{ extra_js }}"></script>
+        {%- else -%}
+<script src="{{site.baseurl}}/{{ extra_js }}"></script>
+        {%- endif -%}
+    {%- endfor -%}
+{% endif %}
 
 {%- if site.tracker -%}
     <!-- trackers -->
-
     {%- if site.tracker.google_analytics -%}
         <!-- google analytics -->
         {%- include google-analytics.html -%}
     {%- endif -%}
-
     {%- if site.tracker.cnzz -%}
         <!-- cnzz -->
         {%- include cnzz.html -%}
     {%- endif -%}
-
 {%- endif -%}
