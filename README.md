@@ -65,7 +65,7 @@ toc:
 
 ## Google Analytics, etc.
 
-The jekyll-gitboook theme supports embedding the [Google Analytics][7] and [CNZZ][8] website analytical tools with the following
+The jekyll-gitboook theme supports embedding the [Google Analytics][7], [CNZZ][8] and [Application Insights][9] website analytical tools with the following
 minimal configuration in `_config.yaml`:
 
 ```yaml
@@ -80,6 +80,13 @@ tracker:
   cnzz: "<YOUR CNZZ ANALYTICS KEY, e.g., xxxxxxxx>"
 ```
 
+Application Insights can be added with the following configuration in `_config.yaml`
+
+```yaml
+tracker:
+  application_insitghts: "<YOUR APPLICATION INSIGHTS CONNECTION STRING>"
+```
+
 ## Extra StyleSheet or Javascript elements
 
 You can add extra CSS or JavaScript references using configuration collections:
@@ -87,7 +94,6 @@ You can add extra CSS or JavaScript references using configuration collections:
 - extra_css: for additional style sheets. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
 - extra_header_js: for additional scripts to be included in the `<head>` tag, after the `extra_css` has been added. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
 - extra_footer_js: for additional scripts to be included at the end of the HTML document, just before the site tracking script. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
-
 
 ## License
 
@@ -103,3 +109,4 @@ Copyright 2019 Tao He.
 [6]: https://github.com/rouge-ruby/rouge/tree/master/lib/rouge/themes
 [7]: https://analytics.google.com/analytics/web/
 [8]: https://www.cnzz.com/
+[9]: https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
