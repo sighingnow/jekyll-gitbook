@@ -36,6 +36,28 @@
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{site.baseurl}}/gitbook/images/apple-touch-icon-precomposed-152.png">
 <link rel="shortcut icon" href="{{site.baseurl}}/gitbook/images/favicon.ico" type="image/x-icon">
 
+{% if site.extra_css %}
+    {%- for extra_css in site.extra_css -%}
+        {%- assign starts_with = extra_css | slice: 0,4 -%}
+        {% if starts_with == "http" %}
+<link rel="stylesheet" href="{{ extra_css }}">
+        {%- else -%}
+<link rel="stylesheet" href="{{site.baseurl}}/{{ extra_css }}">
+        {%- endif -%}
+    {%- endfor -%}
+{% endif %}
+
+{% if site.extra_header_js %}
+    {%- for extra_js in site.extra_header_js -%}
+        {%- assign starts_with = extra_js | slice: 0,4  -%}
+        {% if starts_with == "http" %}
+<script src="{{ extra_js }}"></script>
+        {%- else -%}
+<script src="{{site.baseurl}}/{{ extra_js }}"></script>
+        {%- endif -%}
+    {%- endfor -%}
+{% endif %}
+
 <script>
     MathJax = {
         tex: {
