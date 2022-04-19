@@ -84,7 +84,7 @@ Application Insights can be added with the following configuration in `_config.y
 
 ```yaml
 tracker:
-  application_insitghts: "<YOUR APPLICATION INSIGHTS CONNECTION STRING>"
+  application_insights: "<YOUR APPLICATION INSIGHTS CONNECTION STRING>"
 ```
 
 ## Extra StyleSheet or Javascript elements
