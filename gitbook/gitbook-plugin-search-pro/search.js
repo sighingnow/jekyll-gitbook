@@ -126,7 +126,7 @@ require([
         $('#book-search-results').removeClass('open');
     }
 
-    function bindSearch() {
+    function bindSearch(target) {
         // Asynchronously load the index data
         {
             var url = state.basePath + "/search_plus_index.json";
@@ -141,7 +141,7 @@ require([
 
         // Launch query based on input content
         function handleUpdate() {
-            var $searchInput = $('#book-search-input input');
+            var $searchInput = $(target);
             var keyword = $searchInput.val();
 
             if (keyword.length == 0) {
@@ -151,7 +151,7 @@ require([
             }
         }
 
-        $body.on('keyup', '#book-search-input input', function(e) {
+        $body.on('keyup', target, function(e) {
             if (e.keyCode === 13) {
                 if (usePushState) {
                     var uri = updateQueryString('q', $(this).val());
@@ -163,7 +163,7 @@ require([
             handleUpdate();
         });
 
-        $body.on('click', '#book-search-input input', function(e) {
+        $body.on('click', target, function(e) {
             if (Object.keys(INDEX_DATA).length === 0) {
                 var url = state.basePath + "/search_plus_index.json";
                 $.getJSON(url).then(function(data) {
@@ -174,7 +174,7 @@ require([
         });
 
         // Push to history on blur
-        $body.on('blur', '#book-search-input input', function(e) {
+        $body.on('blur', target, function(e) {
             // Update history state
             if (usePushState) {
                 var uri = updateQueryString('q', $(this).val());
@@ -186,7 +186,9 @@ require([
     }
 
     gitbook.events.on('start', function() {
-        bindSearch();
+        bindSearch('#book-search-input input');
+        bindSearch('#book-search-input-inside input');
+
         showResult();
         closeSearch();
     });
@@ -218,6 +220,7 @@ require([
                 highLightPageInner(keyword);
             }
             $('#book-search-input input').val(keyword);
+            $('#book-search-input-inside input').val(keyword);
         }
     }
 

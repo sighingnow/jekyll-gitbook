@@ -2,7 +2,7 @@
     This CSS only styled the search results section, not the search input
     It defines the basic interraction to hide content when displaying results, etc
 */
-#book-search-input {
+  #book-search-input {
     background: inherit;
   }
   #book-search-results .search-results {
