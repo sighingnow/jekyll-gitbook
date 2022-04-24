@@ -9,8 +9,8 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://kkw5240.github.io'
+baseurl:          '/blog'
 rss:              RSS
 
 toc:
