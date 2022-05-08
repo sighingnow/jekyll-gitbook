@@ -144,7 +144,7 @@ require([
             var $searchInput = $(target);
             var keyword = $searchInput.val();
 
-            if (keyword.length == 0) {
+            if (keyword === undefined || keyword.length == 0) {
                 closeSearch();
             } else {
                 launchSearch(keyword);
