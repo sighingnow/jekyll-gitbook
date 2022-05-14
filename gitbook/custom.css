@@ -1,3 +1,6 @@
+---
+---
+
 .book-body {
     overflow-y: scroll;
 }
@@ -43,6 +46,14 @@
 
 .book.color-theme-2 .book-body .book-header {
     background: #1c1f2b;
+}
+
+.page-inner {
+    max-width: {{ site.page_width }};
+}
+
+.back-to-top {
+    right: calc((100% - 300px - min(100% - 300px, {{ site.page_width }})) / 2 + 25px);
 }
 
 /* scrollbar */
