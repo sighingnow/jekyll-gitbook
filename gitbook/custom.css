@@ -140,3 +140,13 @@
     padding: 7px 7px;
     color: inherit;
 }
+
+
+/* Custom font settings */
+
+.book.font-family-0 {
+    font-family: Georgia, serif;
+}
+.book.font-family-1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

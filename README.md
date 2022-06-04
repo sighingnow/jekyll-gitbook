@@ -95,6 +95,19 @@ You can add extra CSS or JavaScript references using configuration collections:
 - extra_header_js: for additional scripts to be included in the `<head>` tag, after the `extra_css` has been added. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
 - extra_footer_js: for additional scripts to be included at the end of the HTML document, just before the site tracking script. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
 
+## Customizing font settings
+
+The fonts can be customized by modifying the `.book.font-family-0` and `.book.font-family-1` entry in [`./gitbook/custom.css`][10],
+
+```css
+.book.font-family-0 {
+    font-family: Georgia, serif;
+}
+.book.font-family-1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+```
+
 ## Cover image inside pages
 
 The jekyll-gitbook theme supports adding a cover image to a specific page by adding
@@ -130,3 +143,4 @@ Copyright 2019 Tao He.
 [7]: https://analytics.google.com/analytics/web/
 [8]: https://www.cnzz.com/
 [9]: https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
+[10]: https://github.com/sighingnow/jekyll-gitbook/blob/master/gitbook/custom.css
