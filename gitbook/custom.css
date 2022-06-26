@@ -150,3 +150,9 @@
 .book.font-family-1 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+/* Render wide tables */
+
+.table-wrapper {
+    overflow-x: scroll;
+}
