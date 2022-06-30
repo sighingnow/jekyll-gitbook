@@ -110,6 +110,23 @@ The fonts can be customized by modifying the `.book.font-family-0` and `.book.fo
 }
 ```
 
+## Tips, Warnings and Dangers blocks
+
+The jekyll-gitbook theme supports customized kramdown attributes (`{: .block-tip }`, `{: .block-warning }`,
+`{: .block-danger }`) like that displayed in [the discord.js website][11]. The marker can be used like
+
+```markdown
+> ##### TIP
+>
+> This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
+> this or a similar version after installation.
+{: .block-tip }
+```
+
+Rendered page can be previewed from
+
+[https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html)
+
 ## Cover image inside pages
 
 The jekyll-gitbook theme supports adding a cover image to a specific page by adding
@@ -128,7 +145,7 @@ a `cover` field to the page metadata:
 
 The effect can be previewed from
 
-[A page with a cover image](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html)
+[https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html)
 
 ## License
 
@@ -146,3 +163,4 @@ Copyright 2019 Tao He.
 [8]: https://www.cnzz.com/
 [9]: https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
 [10]: https://github.com/sighingnow/jekyll-gitbook/blob/master/gitbook/custom.css
+[11]: https://discordjs.guide/popular-topics/canvas.html#setting-up-napi-rs-canvas

@@ -156,3 +156,114 @@
 .table-wrapper {
     overflow-x: scroll;
 }
+
+/* Tips, warnings, and dangers */
+
+.markdown-section blockquote.block-tip {
+    border-color: var(--c-tip);
+    background-color: var(--c-tip-bg);
+    color: var(--c-tip-text);
+    font-family: var(--font-family);
+}
+
+.markdown-section blockquote.block-tip h1 {
+    color: var(--c-tip-title);
+}
+
+.markdown-section blockquote.block-tip h2 {
+    color: var(--c-tip-title);
+}
+
+.markdown-section blockquote.block-tip h3 {
+    color: var(--c-tip-title);
+}
+
+.markdown-section blockquote.block-tip h4 {
+    color: var(--c-tip-title);
+}
+
+.markdown-section blockquote.block-tip h5 {
+    color: var(--c-tip-title);
+}
+
+.markdown-section blockquote.block-tip h6 {
+    color: var(--c-tip-title);
+}
+
+.markdown-section blockquote.block-warning {
+    border-color: var(--c-warning);
+    background-color: var(--c-warning-bg);
+    color: var(--c-warning-text);
+    font-family: var(--font-family);
+}
+
+.markdown-section blockquote.block-warning h1 {
+    color: var(--c-warning-title);
+}
+
+.markdown-section blockquote.block-warning h2 {
+    color: var(--c-warning-title);
+}
+
+.markdown-section blockquote.block-warning h3 {
+    color: var(--c-warning-title);
+}
+
+.markdown-section blockquote.block-warning h4 {
+    color: var(--c-warning-title);
+}
+
+.markdown-section blockquote.block-warning h5 {
+    color: var(--c-warning-title);
+}
+
+.markdown-section blockquote.block-warning h6 {
+    color: var(--c-warning-title);
+}
+
+.markdown-section blockquote.block-danger {
+    border-color: var(--c-danger);
+    background-color: var(--c-danger-bg);
+    color: var(--c-danger-text);
+    font-family: var(--font-family);
+}
+
+.markdown-section blockquote.block-danger h1 {
+    color: var(--c-danger-title);
+}
+
+.markdown-section blockquote.block-danger h2 {
+    color: var(--c-danger-title);
+}
+
+.markdown-section blockquote.block-danger h3 {
+    color: var(--c-danger-title);
+}
+
+.markdown-section blockquote.block-danger h4 {
+    color: var(--c-danger-title);
+}
+
+.markdown-section blockquote.block-danger h5 {
+    color: var(--c-danger-title);
+}
+
+.markdown-section blockquote.block-danger h6 {
+    color: var(--c-danger-title);
+}
+
+:root {
+    --c-tip: #42b983;
+    --c-tip-bg: #e2f5ec;
+    --c-tip-text: #215d42;
+    --c-tip-title: #359469;
+    --c-warning: #e7c000;
+    --c-warning-bg: rgba(255, 229, 100, .25);
+    --c-warning-text: #6b5900;
+    --c-warning-title: #b29400;
+    --c-danger: #c00;
+    --c-danger-bg: #ffe0e0;
+    --c-danger-text: #600;
+    --c-danger-title: #c00;
+    --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
