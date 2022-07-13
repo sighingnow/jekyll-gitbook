@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Jekyll Gitbook Theme
+permalink: /
 ---
 
 Make Jelly site have a GitBook look!
@@ -27,7 +28,7 @@ changes to the original repo.
 ## How to Get Started
 
 This theme can be used just as other [Jekyll themes][1] and support [remote theme][12],
-see the official guide][13] as well.
+see [the official guide][13] as well.
 
 You can introduce this jekyll theme into your own site by either
 
