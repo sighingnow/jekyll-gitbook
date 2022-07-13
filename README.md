@@ -1,4 +1,7 @@
-# Jekyll GitBook
+---
+layout: home
+title: Jekyll Gitbook Theme
+---
 
 Make Jelly site have a GitBook look!
 
@@ -23,9 +26,18 @@ changes to the original repo.
 
 ## How to Get Started
 
-This theme can be used just as other [Jekyll themes][1].
+This theme can be used just as other [Jekyll themes][1] and support [remote theme][12],
+see the official guide][13] as well.
 
-[Fork][3] this repository and add your markdown posts to the `_posts` folder.
+You can introduce this jekyll theme into your own site by either
+
+- [Fork][3] this repository and add your markdown posts to the `_posts` folder.
+- Use as a remote theme in your [`_config.yml`][14](just like what we do for this
+  site itself),
+
+```yaml
+remote_theme: sighingnow/jekyll-gitbook
+```
 
 ### Deploy Locally with Jekyll Serve
 
@@ -48,7 +60,7 @@ syntax_highlighter_style: colorful
 ```
 
 The default code highlight style is `colorful`, the full supported styles can be found from [the rouge repository][6]. Customized
-style can be added to [./gitbook/rouge/](./gitbook/rouge/).
+style can be added to [./assets/gitbook/rouge/](./assets/gitbook/rouge/).
 
 ## How to generate TOC
 
@@ -97,7 +109,7 @@ You can add extra CSS or JavaScript references using configuration collections:
 
 ## Customizing font settings
 
-The fonts can be customized by modifying the `.book.font-family-0` and `.book.font-family-1` entry in [`./gitbook/custom.css`][10],
+The fonts can be customized by modifying the `.book.font-family-0` and `.book.font-family-1` entry in [`./assets/gitbook/custom.css`][10],
 
 ```css
 .book.font-family-0 {
@@ -137,7 +149,7 @@ a `cover` field to the page metadata:
   date: 2022-05-24
   category: Jekyll
   layout: post
-+ cover: /jekyll-gitbook/dinosaur.gif
++ cover: /assets/jekyll-gitbook/dinosaur.gif
   ---
 ```
 
@@ -162,3 +174,6 @@ Copyright 2019 Tao He.
 [9]: https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
 [10]: https://github.com/sighingnow/jekyll-gitbook/blob/master/gitbook/custom.css
 [11]: https://discordjs.guide/popular-topics/canvas.html#setting-up-napi-rs-canvas
+[12]: https://rubygems.org/gems/jekyll-remote-theme
+[13]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
+[14]: https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml

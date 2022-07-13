@@ -4,7 +4,7 @@
             <input type="text" placeholder="Type to search" />
         </div>
         <div id="book-search-input-link" role="search">
-            <a href="{{site.baseurl}}/search.html">Click to Search</a>
+            <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
         </div>
         <ul class="summary">
             {% if page.url == "/index.html" or page.url == "/" %}
@@ -41,7 +41,9 @@
                         </li>
                     {% endfor %}
 
-                    <li class="divider"></li>
+                    {% if reversed_posts.size > 0 %}
+                        <li class="divider"></li>
+                    {% endif %}
                 {% endif %}
             {% endfor %}
 

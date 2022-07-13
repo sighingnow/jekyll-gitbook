@@ -129,7 +129,7 @@ require([
     function bindSearch(target) {
         // Asynchronously load the index data
         {
-            var url = state.basePath + "/search_plus_index.json";
+            var url = state.basePath + "/assets/search_plus_index.json";
             $.getJSON(url).then(function(data) {
                 INDEX_DATA = data;
                 handleUpdate();
@@ -165,7 +165,7 @@ require([
 
         $body.on('click', target, function(e) {
             if (Object.keys(INDEX_DATA).length === 0) {
-                var url = state.basePath + "/search_plus_index.json";
+                var url = state.basePath + "/assets/search_plus_index.json";
                 $.getJSON(url).then(function(data) {
                     INDEX_DATA = data;
                     handleUpdate();
