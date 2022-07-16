@@ -1,10 +1,10 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            DAOHaus Grant Seekers 
+longtitle:        Searchinbg for Web3 Grants
+author:           Chris Wylde aka BOILERrat
+email:            128boilerrat@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  Repo to keep all files organized for the grant seekers camp at DAOHaus
 
 version:          1.0
 gitbook_version:  3.2.3
