@@ -1,3 +1,4 @@
+[![hackmd-github-sync-badge](https://hackmd.io/-p1AssZBTvOxENTrNWWhUA/badge)](https://hackmd.io/-p1AssZBTvOxENTrNWWhUA)
 ###### tags: `Grants`
 
 # Radicle Grant Application
