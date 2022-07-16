@@ -4,6 +4,9 @@ tags: Grants
 
 # MolochDAO Magesmiths Grant, Aug 2022
 
+[![hackmd-github-sync-badge](https://hackmd.io/ndfEo63QTXeKO_Wcj0zPDQ/badge)](https://hackmd.io/ndfEo63QTXeKO_Wcj0zPDQ)
+
+
 ## Project Title
 
 DAOhaus: Magesmiths v3 Implementation
