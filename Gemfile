@@ -7,5 +7,6 @@ gem "jekyll"
 gem 'jekyll-feed'
 gem 'jemoji'
 gem 'webrick'
+# gem 'http_parser.rb', git: "https://github.com/tmm1/http_parser.rb.git"
 
 # gem "rails"
