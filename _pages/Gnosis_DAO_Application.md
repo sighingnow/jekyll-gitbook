@@ -5,6 +5,9 @@ title: GnosisDAO Grant Request Phase 1 Incentive Proposal
 
 # Should GnosisDAO Partner with DAOhaus to Support DAO tooling on Gnosis Chain?
 
+[![hackmd-github-sync-badge](https://hackmd.io/gguUGkaRSJ6JgdBKsFEw5Q/badge)](https://hackmd.io/gguUGkaRSJ6JgdBKsFEw5Q)
+
+
 `phase-1`
 
 # Summary
