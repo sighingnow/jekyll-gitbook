@@ -4,6 +4,9 @@ tags: Grants
 
 # Support DAOhaus Grants
 
+[![hackmd-github-sync-badge](https://hackmd.io/GLPhZrUhTRGBd8rOBCh18A/badge)](https://hackmd.io/GLPhZrUhTRGBd8rOBCh18A)
+
+
 If you would like to get involved in helping DAOhaus to obtain Grant Funding, this message is for you.
 
 We have created a simple spreadhseet that is open to members of Warcamp to fill out as they see fit, with information such as: 
