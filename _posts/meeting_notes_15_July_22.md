@@ -4,6 +4,9 @@ tags: Grants
 
 # Grants Meeting 15 July 22
 
+[![hackmd-github-sync-badge](https://hackmd.io/o8Uzh7ndSqqV-iq9dDe6Qw/badge)](https://hackmd.io/o8Uzh7ndSqqV-iq9dDe6Qw)
+
+
 ## Supporting Docs
 
 
