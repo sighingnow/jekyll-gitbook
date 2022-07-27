@@ -22,7 +22,11 @@
             {% for collection in site.collections %}
                 <!-- <p>{{ collection.label }}</p> -->
                 {% if collection.output %}
-                    {% assign reversed_posts = site[collection.label] | reverse %}
+                    {% if collection.label == "posts" %}
+                        {% assign reversed_posts = site[collection.label] | reverse %}
+                    {% else %}
+                        {% assign reversed_posts = site[collection.label] %}
+                    {% endif %}
 
                     {% for post in reversed_posts %}
                         {% if page.url == post.url %}

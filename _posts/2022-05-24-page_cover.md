@@ -4,7 +4,7 @@ author: Tao He
 date: 2022-05-24
 category: Jekyll
 layout: post
-cover: /assets/jekyll-gitbook/dinosaur.gif
+cover: https://sighingnow.github.io/jekyll-gitbook/assets/dinosaur.gif
 ---
 
 The jekyll-gitbook theme supports adding a cover image to a specific page by adding
