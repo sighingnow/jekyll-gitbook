@@ -16,6 +16,22 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                 window.open('http://twitter.com/home?status='+encodeURIComponent(document.title+' '+location.href));
             }
         },
+        'github': {
+            'label': 'Github',
+            'icon': 'fa fa-github',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open('https://github.com');
+            }
+        },
+        'telegram': {
+            'label': 'Telegram',
+            'icon': 'fa fa-telegram',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open('https://t.me');
+            }
+        },
         'google': {
             'label': 'Google+',
             'icon': 'fa fa-google-plus',
@@ -79,11 +95,26 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         $.each(SITES, function(sideId, site) {
             if (!opts[sideId]) return;
 
+            var onClick = site.onClick;
+
+            if (siteId === "github" && opts["github_link"] !== undefined && opts["github_link"] !== "") {
+                onClick = function(e) {
+                    e.preventDefault();
+                    window.open(opts["github_link"]);
+                }
+            }
+            if (siteId === "telegram" && opts["telegram_link"] !== undefined && opts["telegram_link"] !== "") {
+                onClick = function(e) {
+                    e.preventDefault();
+                    window.open(opts["telegram_link"]);
+                }
+            }
+
             gitbook.toolbar.createButton({
                 icon: site.icon,
                 label: site.text,
                 position: 'right',
-                onClick: site.onClick
+                onClick: onClick
             });
         });
     });

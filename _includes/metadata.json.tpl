@@ -21,15 +21,9 @@
                 "maxIndexSize": 1000000
             },
             "search": {},
-            "sharing": {
-                "all": ["facebook", "google", "twitter", "weibo", "instapaper"],
-                "facebook": true,
-                "google": false,
-                "instapaper": false,
-                "twitter": true,
-                "vk": false,
-                "weibo": false
-            },
+
+            {%- include gitbook-sharing.json.tpl -%}
+
             "theme-default": {
                 "showLevel": false,
                 "styles": {
