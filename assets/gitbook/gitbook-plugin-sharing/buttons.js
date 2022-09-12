@@ -97,13 +97,13 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
             var onClick = site.onClick;
 
-            if (siteId === "github" && opts["github_link"] !== undefined && opts["github_link"] !== "") {
+            if (sideId === "github" && opts["github_link"] !== undefined && opts["github_link"] !== "") {
                 onClick = function(e) {
                     e.preventDefault();
                     window.open(opts["github_link"]);
                 }
             }
-            if (siteId === "telegram" && opts["telegram_link"] !== undefined && opts["telegram_link"] !== "") {
+            if (sideId === "telegram" && opts["telegram_link"] !== undefined && opts["telegram_link"] !== "") {
                 onClick = function(e) {
                     e.preventDefault();
                     window.open(opts["telegram_link"]);
