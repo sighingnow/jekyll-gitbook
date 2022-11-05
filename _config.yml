@@ -14,7 +14,7 @@ baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
-remote_theme: Hotshot824/jekyll-gitbook
+remote_theme: Hotshot824
 
 toc:
   enabled: true
