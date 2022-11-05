@@ -9,6 +9,7 @@ fi
 # export JEKYLL_VERSION=3.8
 docker run \
   --volume="$WD:/srv/jekyll:Z" \
+  -p 4000:4000 \
   --name jekyll \
   -it jekyll/jekyll \
-  jekyll build
+  jekyll serve

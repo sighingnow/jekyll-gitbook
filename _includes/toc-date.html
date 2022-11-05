@@ -23,7 +23,7 @@
                 <!-- <p>{{ collection.label }}</p> -->
                 {% if collection.output %}
                     {% if collection.label == "posts" %}
-                        {% assign reversed_posts = site[collection.label] | reverse %}
+                        {% assign reversed_posts = site[collection.label] %}
                     {% else %}
                         {% assign reversed_posts = site[collection.label] %}
                     {% endif %}
