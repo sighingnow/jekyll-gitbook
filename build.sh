@@ -7,16 +7,8 @@ then
 fi
 
 # export JEKYLL_VERSION=3.8
-# docker run --rm \
-#   --volume="$WD:/srv/jekyll:Z" \
-#   -it jekyll/jekyll \
-#   bundle exec jekyll serve
-
-# docker run \
-#   -itd ubunut \
-#   --volume="$WD:/root/test" \
-#   /bin/bash
-
-docker run -itd \
-    -v $WD:/root/test \
-    jekyll/jekyll /bin/bash
+docker run \
+  --volume="$WD:/srv/jekyll:Z" \
+  --name jekyll \
+  -it jekyll/jekyll \
+  jekyll build
