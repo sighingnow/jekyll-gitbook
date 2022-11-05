@@ -19,4 +19,4 @@ fi
 
 docker run -itd \
     -v $WD:/root/test \
-    ubuntu /bin/bash
+    jekyll/jekyll /bin/bash
