@@ -45,6 +45,7 @@ permalink:        /:categories/:year-:month-:day-:title:output_ext
 
 exclude:
   - _drafts
+  - _pages
   - build.sh
 
 collections:
