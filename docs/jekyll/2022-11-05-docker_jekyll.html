@@ -95,7 +95,7 @@
                             </a>
                             
                                 
-                                    <ul><li><a href="#jekyll-themes">Jekyll themes</a></li><li><a href="#docker-jekyll">Docker Jekyll</a></li><li><a href="#customize">Customize</a></li></ul>
+                                    <ul><li><a href="#docker-jekyll">Docker Jekyll</a></li><li><a href="#customize">Customize</a></li></ul>
 
                                 
                             
@@ -143,7 +143,11 @@
                         <h1 id="/jekyll/docker_jekyll">Github Pages: 使用 Jekyll | Docker 建立</h1>
                     
 
-                    <p>之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
+                    <blockquote>
+  <p>說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。</p>
+</blockquote>
+
+<p>之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
 剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
 
 <p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
@@ -154,8 +158,6 @@
   <li>Docker image Jekyll/Jekyll</li>
   <li>Html, Javascript, CSS</li>
 </ul>
-
-<h3 id="jekyll-themes">Jekyll themes</h3>
 
 <p>剛開始就先找個模板來用，<a href="http://jekyllthemes.org/">Jekyll themes</a>上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
 找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。</p>
@@ -222,16 +224,13 @@
 </div></div>
     </div>
 </div>
-
-                        <a href="/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Home">
+<!-- customize line 38-50 swap next previous-->
+                    
+                        <a href="/jekyll/2022-11-05-linux_cmd.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
-                    
-                        <a href="/jekyll/2022-11-05-linux_cmd.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Linux: Common command">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
                     
                 </div>
             </div>
@@ -334,7 +333,7 @@
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2022-11-06 11:20:19 -0600"
+        "time": "2022-11-06 11:58:19 -0600"
     },
     "basePath": "",
     "book": {

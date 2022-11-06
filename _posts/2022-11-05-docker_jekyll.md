@@ -7,6 +7,9 @@ layout: post
 tags: [github, jekyll, tool]
 ---
 
+> 說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。
+
+
 之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
 剛好就趁這個機會把這次的內容當作第一篇紀錄。
 
@@ -16,8 +19,6 @@ Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾�
 Required:
 - Docker image Jekyll/Jekyll
 - Html, Javascript, CSS
-
-### Jekyll themes
 
 剛開始就先找個模板來用，[Jekyll themes]上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
 找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。
