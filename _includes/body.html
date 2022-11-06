@@ -10,10 +10,8 @@
 
     <div class="page-inner">
         <div class="normal">
-            {% if page.date %}
-                <section class="normal">{{ page.date | date: "%-d %B %Y"}}</section>
-            {% else %}
-                <section class="normal"></section>
+            {% if page.tags != empty %}
+                <section class="normal">{{ page.date | date: '%B %d, %Y'}}</section>
             {% endif %}
         </div>
         <div id="book-search-results">

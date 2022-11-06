@@ -4,6 +4,7 @@ author: Benson Hsu
 date: 2022-11-05
 category: Jekyll
 layout: post
+tags: [github, jekyll, tool]
 ---
 
 之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
@@ -58,7 +59,11 @@ docker start jekyll;
 - Add date in post: _layout/post.html
 - change sort method: _includes/toc-date.htnl
 
-之後有想到要修改的再回來更新吧，可能加入留言系統之類的，目前這樣的一個靜態網頁我就很滿意了。
+> ##### NOTE
+>
+> 之後有想到要修改的再回來更新吧，可能加入留言系統、標籤之類的，目前這樣的一個靜態網頁我就很滿意了。
+{: .block-tip }
+
 
 [Jekyll themes]: http://jekyllthemes.org/
 [Docker image]: https://hub.docker.com/r/jekyll/jekyll/
