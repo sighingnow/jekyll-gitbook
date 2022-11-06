@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-05T22:54:33-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-05T23:07:33-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
 </subtitle><author><name>Benson Hsu</name></author><entry><title type="html">使用 Jekyll | Docker 建立Github Pages</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html" rel="alternate" type="text/html" title="使用 Jekyll | Docker 建立Github Pages" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>http://0.0.0.0:4000/jekyll/docker_jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html"><![CDATA[<p>之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
 剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
 
@@ -19,8 +19,12 @@
 <h3 id="docker-jekyll">Docker Jekyll</h3>
 
 <p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 -v 到 container 裡面就可以執行 Jekyll 生成。
-我選擇使用 <code class="language-plaintext highlighter-rouge">jekyll serve</code>，這樣在 local 的時候還能檢查一下網頁內容，確認的時候用 local:4000 確認就好。第一次運行安裝套件等等會花一點時間，
-之後啟動容器速度就快很多了。</p>
+第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
+  <li><code class="language-plaintext highlighter-rouge">jekyll serve</code> 生成網頁後運行在 localhost:4000</li>
+</ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
   <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PWD</span><span class="s2">:/srv/jekyll:Z"</span> <span class="se">\</span>

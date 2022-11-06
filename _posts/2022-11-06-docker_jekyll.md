@@ -24,8 +24,10 @@ Required:
 ### Docker Jekyll
 
 Jekyll 官方有一個 [Docker image] 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 -v 到 container 裡面就可以執行 Jekyll 生成。
-我選擇使用 `jekyll serve`，這樣在 local 的時候還能檢查一下網頁內容，確認的時候用 local:4000 確認就好。第一次運行安裝套件等等會花一點時間，
-之後啟動容器速度就快很多了。
+第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
+
+- `jekyll build` 直接生成網頁
+- `jekyll serve` 生成網頁後運行在 localhost:4000 
 
 ```bash
 docker run \
