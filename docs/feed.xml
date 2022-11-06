@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-06T03:13:17-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
-</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">使用 Jekyll | Docker 建立Github Pages</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html" rel="alternate" type="text/html" title="使用 Jekyll | Docker 建立Github Pages" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>http://0.0.0.0:4000/jekyll/docker_jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html"><![CDATA[<p>之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://hotshot824.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://hotshot824.github.io/" rel="alternate" type="text/html" /><updated>2022-11-06T06:54:17-06:00</updated><id>https://hotshot824.github.io/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Github Pages: 使用 Jekyll | Docker 建立</title><link href="https://hotshot824.github.io/jekyll/2022-11-05-docker_jekyll.html" rel="alternate" type="text/html" title="Github Pages: 使用 Jekyll | Docker 建立" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>https://hotshot824.github.io/jekyll/docker_jekyll</id><content type="html" xml:base="https://hotshot824.github.io/jekyll/2022-11-05-docker_jekyll.html"><![CDATA[<p>之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
 剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
 
-<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，當是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
+<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
 之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
 
 <p>Required:</p>
@@ -18,8 +18,9 @@
 
 <h3 id="docker-jekyll">Docker Jekyll</h3>
 
-<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 -v 到 container 裡面就可以執行 Jekyll 生成。
-第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。</p>
+<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 volume 
+到 container 裡面就可以執行 Jekyll 生成。第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
+之後再簡單寫個 <a href="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/build.sh">bash script</a> 這樣一個能快速生成的 Jekyll 環境就搭建完成了。</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
@@ -27,22 +28,22 @@
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
-  <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PWD</span><span class="s2">:/srv/jekyll:Z"</span> <span class="se">\</span>
+  <span class="nt">-v</span> <span class="nv">$WD</span>:/srv/jekyll:z <span class="se">\</span>
+  <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro<span class="se">\</span>
   <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
   <span class="nt">--name</span> jekyll <span class="se">\</span>
   <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
-  jekyll serve <span class="o">||</span>
-docker start jekyll<span class="p">;</span>
+  jekyll serve <span class="o">||</span> docker start jekyll<span class="p">;</span>
 </code></pre></div></div>
 
 <h3 id="customize">Customize</h3>
 
-<p>之後應該就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
+<p>之後就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
 的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
-像我用的模板本來是舊的 post 優先，改預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
+像我用的模板本來是舊的 post 優先，稍微改排序，預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
 
 <ul>
-  <li>Default font size: gitbook-plugin-fontsettings</li>
+  <li>Change default font size: gitbook-plugin-fontsettings</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
@@ -61,4 +62,80 @@ docker start jekyll<span class="p">;</span>
   <h5 id="note">NOTE</h5>
 
   <p>之後想到要修改的再更新吧，可能加入留言系統、標籤之類的，目前這樣的靜態網頁我就很滿意了。</p>
-</blockquote>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="github" /><category term="jekyll" /><category term="tool" /><summary type="html"><![CDATA[之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄， 剛好就趁這個機會把這次的內容當作第一篇紀錄。]]></summary></entry></feed>
+</blockquote>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="github" /><category term="jekyll" /><category term="tool" /><summary type="html"><![CDATA[之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄， 剛好就趁這個機會把這次的內容當作第一篇紀錄。]]></summary></entry><entry><title type="html">Linux: Common command</title><link href="https://hotshot824.github.io/jekyll/2022-11-05-linux_cmd.html" rel="alternate" type="text/html" title="Linux: Common command" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>https://hotshot824.github.io/jekyll/linux_cmd</id><content type="html" xml:base="https://hotshot824.github.io/jekyll/2022-11-05-linux_cmd.html"><![CDATA[<p>Notes to Linux Common Commands</p>
+
+<h3 id="vboxmanage">vboxmanage</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Virtual box指令操作
+手動相關指令說明:
+ 新建一個名為「New VM」的虛擬機器
+VBoxManage createvm <span class="nt">-name</span> 「New VM」 <span class="nt">-register</span>
+
+ 設定「New VM」的記憶體是128MB並開啟acpi 設定第一開機碟為dvd 以及新增一個網路介面
+VBoxManage modifyvm 「New VM」 <span class="nt">-memory</span> 「128MB」 <span class="nt">-acpi</span> on <span class="nt">-boot1</span> dvd <span class="nt">-nic1</span> intnet
+
+ 建立一個虛擬硬碟名為「newhd.vdi」  大小為 4000MB
+VBoxManage createvdi <span class="nt">-filename</span> 「newhd.vdi」 <span class="nt">-size</span> 4000 <span class="nt">-register</span>
+
+ 將「New VM」的 hda 設定為「newhd.vdi」虛擬磁碟
+VBoxManage modifyvm 「New VM」 <span class="nt">-hda</span> 「newhd.vdi」
+
+ 將在<span class="s2">"/home/file/iso.iso"</span>的ISO映像檔 設定到 名為 dvd的光碟映像檔庫
+VBoxManage registerimage dvd /home/file/iso.iso
+
+ 設定名為「New VM」的 dvd裝置為 /home/file/iso.iso
+VBoxManage modifyvm 「New VM」 <span class="nt">-dvd</span> /home/file/iso.iso
+
+ 設定「New VM」所使用的 VRDP 的連接Port為 3390
+VBoxManage modifyvm 「New VM」 <span class="nt">-vrdpport</span> 3390
+
+ 啟動 VRDP
+VBoxVRDP <span class="nt">-startvm</span> 「New VM」
+
+<span class="nt">-----</span> List <span class="k">function
+
+ </span>查詢目前vbox上有設定多少個vm
+vboxmanage list vms
+
+ 查看支援的 OS Type
+vboxmanage list ostypes
+
+ 查看運行中的 VM
+vboxmanage list runningvms
+
+ 其它可以list的指令
+vboxmanage list hostdvds
+vboxmanage list hostinfo
+vboxmanage list hddbackends
+vboxmanage list systemproperties
+vboxmanage list dhcpservers
+vboxmanage list hdds
+vboxmanage list dvds
+
+ 指令啟動vm
+VBoxManage startvm <span class="s2">"VM name"</span> <span class="nt">--type</span> headless <span class="o">(</span>用背景啟動，不加上--type headless參數可能會有錯誤!!<span class="o">)</span>
+</code></pre></div></div>
+
+<h3 id="wifi-config">wifi config</h3>
+
+<p><code class="language-plaintext highlighter-rouge">$ sudo vim /etc/netplan/50-cloud-init.yaml</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            dhcp4: true
+            optional: true
+    version: 2
+    wifis:
+        wl0:
+            optional: true
+            access-points:
+                "SSID-NAME-HERE":
+                    password: "PASSWORD-HERE"
+            dhcp4: true
+</code></pre></div></div>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="linux" /><category term="tool" /><summary type="html"><![CDATA[Notes to Linux Common Commands]]></summary></entry></feed>

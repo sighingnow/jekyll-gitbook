@@ -8,9 +8,9 @@ fi
 
 # export JEKYLL_VERSION=3.8
 docker run \
-  --volume="$WD:/srv/jekyll:Z" \
+  -v $WD:/srv/jekyll:z \
+  -v /etc/localtime:/etc/localtime:ro\
   -p 4000:4000 \
   --name jekyll \
   -it jekyll/jekyll \
-  jekyll serve ||
-docker start jekyll;
+  jekyll serve || docker start jekyll;

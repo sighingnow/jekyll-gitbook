@@ -1,9 +1,7 @@
-<!-- Slightly Modified from _layouts/home.html -->
-
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Linux: Common command · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Build Jekyll site with the GitBook style.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Benson Hsu"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -35,9 +33,9 @@
         }
     };
 </script>
-
+            <link rel="prev" href="/jekyll/2022-11-05-docker_jekyll.html" />
         
-            <link rel="next" href="/jekyll/2022-11-05-docker_jekyll.html" />
+
         
     </head>
     <body>
@@ -100,12 +98,15 @@
 
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-05-linux_cmd.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-05-linux_cmd.html">
                         
                             <a href="/jekyll/2022-11-05-linux_cmd.html">
                                 Linux: Common command
                             </a>
                             
+                                
+                                    <ul><li><a href="#vboxmanage">vboxmanage</a></li><li><a href="#wifi-config">wifi config</a></li></ul>
+
                                 
                             
                         </li>
@@ -142,33 +143,107 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Home</a>
+                            <a href="." >Linux: Common command</a>
                         
                     </h1>
                 </div>
 
-                <div class="body-inner">
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            <section class="normal markdown-section">
-                                
-                                    <h1 id="">Home</h1>
-                                
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
 
-                                <br />
-                            </section>
+    <div class="page-inner">
+        <div class="normal">
+            
+                <section class="normal">November 05, 2022</section>
+            
+        </div>
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/jekyll/linux_cmd">Linux: Common command</h1>
+                    
 
-                            <!-- Slightly Modified from _layouts/home.html -->
+                    <p>Notes to Linux Common Commands</p>
 
-<div id="book-search-input-inside" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
+<h3 id="vboxmanage">vboxmanage</h3>
 
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Virtual box指令操作
+手動相關指令說明:
+ 新建一個名為「New VM」的虛擬機器
+VBoxManage createvm <span class="nt">-name</span> 「New VM」 <span class="nt">-register</span>
 
-                            <div id="book-search-results">
-                                <div class="search-noresults">
-                                    
-                                </div><div class="search-results">
+ 設定「New VM」的記憶體是128MB並開啟acpi 設定第一開機碟為dvd 以及新增一個網路介面
+VBoxManage modifyvm 「New VM」 <span class="nt">-memory</span> 「128MB」 <span class="nt">-acpi</span> on <span class="nt">-boot1</span> dvd <span class="nt">-nic1</span> intnet
+
+ 建立一個虛擬硬碟名為「newhd.vdi」  大小為 4000MB
+VBoxManage createvdi <span class="nt">-filename</span> 「newhd.vdi」 <span class="nt">-size</span> 4000 <span class="nt">-register</span>
+
+ 將「New VM」的 hda 設定為「newhd.vdi」虛擬磁碟
+VBoxManage modifyvm 「New VM」 <span class="nt">-hda</span> 「newhd.vdi」
+
+ 將在<span class="s2">"/home/file/iso.iso"</span>的ISO映像檔 設定到 名為 dvd的光碟映像檔庫
+VBoxManage registerimage dvd /home/file/iso.iso
+
+ 設定名為「New VM」的 dvd裝置為 /home/file/iso.iso
+VBoxManage modifyvm 「New VM」 <span class="nt">-dvd</span> /home/file/iso.iso
+
+ 設定「New VM」所使用的 VRDP 的連接Port為 3390
+VBoxManage modifyvm 「New VM」 <span class="nt">-vrdpport</span> 3390
+
+ 啟動 VRDP
+VBoxVRDP <span class="nt">-startvm</span> 「New VM」
+
+<span class="nt">-----</span> List <span class="k">function
+
+ </span>查詢目前vbox上有設定多少個vm
+vboxmanage list vms
+
+ 查看支援的 OS Type
+vboxmanage list ostypes
+
+ 查看運行中的 VM
+vboxmanage list runningvms
+
+ 其它可以list的指令
+vboxmanage list hostdvds
+vboxmanage list hostinfo
+vboxmanage list hddbackends
+vboxmanage list systemproperties
+vboxmanage list dhcpservers
+vboxmanage list hdds
+vboxmanage list dvds
+
+ 指令啟動vm
+VBoxManage startvm <span class="s2">"VM name"</span> <span class="nt">--type</span> headless <span class="o">(</span>用背景啟動，不加上--type headless參數可能會有錯誤!!<span class="o">)</span>
+</code></pre></div></div>
+
+<h3 id="wifi-config">wifi config</h3>
+
+<p><code class="language-plaintext highlighter-rouge">$ sudo vim /etc/netplan/50-cloud-init.yaml</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eth0:
+            dhcp4: true
+            optional: true
+    version: 2
+    wifis:
+        wl0:
+            optional: true
+            access-points:
+                "SSID-NAME-HERE":
+                    password: "PASSWORD-HERE"
+            dhcp4: true
+</code></pre></div></div>
+
+                </section>
+            </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
@@ -177,8 +252,15 @@
         <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div></div>
-                        </div>
-                    </div>
+    </div>
+</div>
+
+                        <a href="/jekyll/2022-11-05-docker_jekyll.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Github Pages: 使用 Jekyll | Docker 建立">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
                 </div>
             </div>
 
@@ -190,17 +272,6 @@
         "title": "Introduction",
         "level": "1.1",
         "depth": 1,
-        
-
-        
-        "next": {
-            "title": "Github Pages: 使用 Jekyll | Docker 建立",
-            "level": "1.2",
-            "depth": 1,
-            "path": "_posts/2022-11-05-docker_jekyll.md",
-            "ref": "_posts/2022-11-05-docker_jekyll.md",
-            "articles": []
-        },
         
         "dir": "ltr"
     },    "config": {
@@ -276,8 +347,8 @@
         "gitbook": "*"
     },
     "file": {
-        "path": "assets/search.html",
-        "mtime": "",
+        "path": "_posts/2022-11-06-linux_cmd.md",
+        "mtime": "2022-11-05 00:00:00 -0500",
         "type": "markdown"
     },
     "gitbook": {

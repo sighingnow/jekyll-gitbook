@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>使用 Jekyll | Docker 建立Github Pages · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Github Pages: 使用 Jekyll | Docker 建立 · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Build Jekyll site with the GitBook style.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Benson Hsu"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-search-pro/search.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
 
-<link rel="stylesheet" href="/assets/gitbook/rouge/colorful.css">
+<link rel="stylesheet" href="/assets/gitbook/rouge/github.css">
 
 <link rel="stylesheet" href="/assets/gitbook/custom.css">
 
@@ -36,6 +36,8 @@
             <link rel="prev" href="/" />
         
 
+        
+            <link rel="next" href="/jekyll/2022-11-05-linux_cmd.html" />
         
     </head>
     <body>
@@ -98,10 +100,21 @@
 
                     
                         
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-05-linux_cmd.html">
+                        
+                            <a href="/jekyll/2022-11-05-linux_cmd.html">
+                                Linux: Common command
+                            </a>
+                            
+                                
+                            
+                        </li>
+                    
+                        
                         <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-05-docker_jekyll.html">
                         
                             <a href="/jekyll/2022-11-05-docker_jekyll.html">
-                                使用 Jekyll | Docker 建立Github Pages
+                                Github Pages: 使用 Jekyll | Docker 建立
                             </a>
                             
                                 
@@ -132,7 +145,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >使用 Jekyll | Docker 建立Github Pages</a>
+                            <a href="." >Github Pages: 使用 Jekyll | Docker 建立</a>
                         
                     </h1>
                 </div>
@@ -150,13 +163,13 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/jekyll/docker_jekyll">使用 Jekyll | Docker 建立Github Pages</h1>
+                        <h1 id="/jekyll/docker_jekyll">Github Pages: 使用 Jekyll | Docker 建立</h1>
                     
 
                     <p>之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
 剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
 
-<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，當是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
+<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
 之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
 
 <p>Required:</p>
@@ -172,8 +185,9 @@
 
 <h3 id="docker-jekyll">Docker Jekyll</h3>
 
-<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 -v 到 container 裡面就可以執行 Jekyll 生成。
-第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。</p>
+<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 volume 
+到 container 裡面就可以執行 Jekyll 生成。第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
+之後再簡單寫個 <a href="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/build.sh">bash script</a> 這樣一個能快速生成的 Jekyll 環境就搭建完成了。</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
@@ -181,22 +195,22 @@
 </ul>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
-  <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PWD</span><span class="s2">:/srv/jekyll:Z"</span> <span class="se">\</span>
+  <span class="nt">-v</span> <span class="nv">$WD</span>:/srv/jekyll:z <span class="se">\</span>
+  <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro<span class="se">\</span>
   <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
   <span class="nt">--name</span> jekyll <span class="se">\</span>
   <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
-  jekyll serve <span class="o">||</span>
-docker start jekyll<span class="p">;</span>
+  jekyll serve <span class="o">||</span> docker start jekyll<span class="p">;</span>
 </code></pre></div></div>
 
 <h3 id="customize">Customize</h3>
 
-<p>之後應該就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
+<p>之後就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
 的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
-像我用的模板本來是舊的 post 優先，改預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
+像我用的模板本來是舊的 post 優先，稍微改排序，預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
 
 <ul>
-  <li>Default font size: gitbook-plugin-fontsettings</li>
+  <li>Change default font size: gitbook-plugin-fontsettings</li>
 </ul>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
@@ -237,6 +251,10 @@ docker start jekyll<span class="p">;</span>
                     
 
                     
+                        <a href="/jekyll/2022-11-05-linux_cmd.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Linux: Common command">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
                 </div>
             </div>
 
@@ -248,6 +266,15 @@ docker start jekyll<span class="p">;</span>
         "title": "Introduction",
         "level": "1.1",
         "depth": 1,
+        
+        "next": {
+            "title": "Linux: Common command",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_posts/2022-11-06-linux_cmd.md",
+            "ref": "_posts/2022-11-06-linux_cmd.md",
+            "articles": []
+        },
         
         "dir": "ltr"
     },    "config": {
@@ -274,14 +301,14 @@ docker start jekyll<span class="p">;</span>
             },
             "search": {},            "sharing": {
                 "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
-                "facebook": true,
+                "facebook": false,
                 "google": false,
                 "github": true,
-                "github_link": "https://github.com",
+                "github_link": "https://github.com/Hotshot824",
                 "telegram": false,
                 "telegram_link": "https://t.me",
                 "instapaper": false,
-                "twitter": true,
+                "twitter": false,
                 "vk": false,
                 "weibo": false
             },
@@ -323,13 +350,13 @@ docker start jekyll<span class="p">;</span>
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2022-11-06-docker_jekyll.md",
+        "path": "_posts/2022-11-05-docker_jekyll.md",
         "mtime": "2022-11-05 00:00:00 -0500",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2022-11-06 03:13:17 -0600"
+        "time": "2022-11-06 06:54:17 -0600"
     },
     "basePath": "",
     "book": {
