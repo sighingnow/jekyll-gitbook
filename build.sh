@@ -12,4 +12,5 @@ docker run \
   -p 4000:4000 \
   --name jekyll \
   -it jekyll/jekyll \
-  jekyll serve
+  jekyll serve ||
+docker start jekyll;

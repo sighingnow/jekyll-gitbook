@@ -72,7 +72,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     function enlargeFontSize(e) {
         e.preventDefault();
         if (fontState.size >= MAX_SIZE) return;
-
+        
         fontState.size++;
         saveFontSettings();
     }
@@ -170,9 +170,10 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
         var configFamily = getFontFamilyId(config.family),
             configTheme = getThemeId(config.theme);
 
+        console.log(config);
         // Instantiate font state object
         fontState = gitbook.storage.get('fontState', {
-            size:   config.size || 2,
+            size:   config.size || 1,
             family: configFamily,
             theme:  configTheme
         });

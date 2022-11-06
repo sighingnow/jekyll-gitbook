@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>使用 Jekyll | Docker 建立 Github Pages · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>使用 Jekyll | Docker 建立Github Pages · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Build Jekyll site with the GitBook style.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Benson Hsu"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
-<link rel="shortcut icon" href="//assets/gitbook/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/assets/gitbook/images/favicon.ico" type="image/x-icon">
 
 
 
@@ -101,11 +101,11 @@
                         <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-05-docker_jekyll.html">
                         
                             <a href="/jekyll/2022-11-05-docker_jekyll.html">
-                                使用 Jekyll | Docker 建立 Github Pages
+                                使用 Jekyll | Docker 建立Github Pages
                             </a>
                             
                                 
-                                    
+                                    <ul><li><a href="#jekyll-themes">Jekyll themes</a></li><li><a href="#docker-jekyll">Docker Jekyll</a></li><li><a href="#customize">Customize</a></li></ul>
 
                                 
                             
@@ -132,7 +132,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >使用 Jekyll | Docker 建立 Github Pages</a>
+                            <a href="." >使用 Jekyll | Docker 建立Github Pages</a>
                         
                     </h1>
                 </div>
@@ -150,34 +150,71 @@
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/jekyll/docker_jekyll">使用 Jekyll | Docker 建立 Github Pages</h1>
+                        <h1 id="/jekyll/docker_jekyll">使用 Jekyll | Docker 建立Github Pages</h1>
                     
 
-                    <p>The jekyll-gitbook theme can be used just as other <a href="https://pages.github.com/themes">Jekyll themes</a> and
-support <a href="https://github.com/sighingnow/jekyll-gitbook/fork">remote theme</a> on <a href="https://pages.github.com">Github Pages</a>, see <a href="https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll">the official guide</a>
-as well.</p>
+                    <p>之前就想找一個能用 Markdown 寫筆記的地方，之前都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
+剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
 
-<p>You can introduce this jekyll theme into your own site by either</p>
+<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，當是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
+這樣也方便我攜帶，之後只要每次跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
 
+<p>Required:</p>
 <ul>
-  <li><a href="https://github.com/sighingnow/jekyll-gitbook/fork">Fork</a> this repository and add your markdown posts to the <code class="language-plaintext highlighter-rouge">_posts</code> folder, then
-push to your own Github repository.</li>
-  <li>Use as a remote theme in your <a href="https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml"><code class="language-plaintext highlighter-rouge">_config.yml</code></a>(just like what we do for this
-site itself),</li>
+  <li>Docker image Jekyll/Jekyll</li>
+  <li>Html, Javascript, CSS</li>
 </ul>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Configurations</span>
-<span class="na">title</span><span class="pi">:</span>            <span class="s">Jekyll Gitbook</span>
-<span class="na">longtitle</span><span class="pi">:</span>        <span class="s">Jekyll Gitbook</span>
+<h3 id="jekyll-themes">Jekyll themes</h3>
 
-<span class="na">remote_theme</span><span class="pi">:</span>     <span class="s">sighingnow/jekyll-gitbook</span>
+<p>剛開始就先找個模板來用，<a href="http://jekyllthemes.org/">Jekyll themes</a>上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
+找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。</p>
+
+<h3 id="docker-jekyll">Docker Jekyll</h3>
+
+<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 -v 到 container 裡面就可以執行 Jekyll 生成。
+我選擇使用 <code class="language-plaintext highlighter-rouge">jekyll serve</code>，這樣在 local 的時候還能檢查一下網頁內容，確認的時候用 local:4000 確認就好。第一次運行安裝套件等等會花一點時間，
+之後啟動容器速度就快很多了。</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
+  <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PWD</span><span class="s2">:/srv/jekyll:Z"</span> <span class="se">\</span>
+  <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
+  <span class="nt">--name</span> jekyll <span class="se">\</span>
+  <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
+  jekyll serve <span class="o">||</span>
+docker start jekyll<span class="p">;</span>
 </code></pre></div></div>
 
-<blockquote class="block-tip">
-  <h5 id="tip">TIP</h5>
+<h3 id="customize">Customize</h3>
 
-  <p>No need to push generated HTML bundle.</p>
-</blockquote>
+<p>之後應該就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 Github.io 
+的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 js, html 就可以搞定。
+像我用的模板本來是舊的 post 優先，改預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
+
+<ul>
+  <li>Default font size: gitbook-plugin-fontsettings</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
+      "fontsettings": {
+          "size": 1,
+      }
+  }
+</code></pre></div></div>
+
+<ul>
+  <li>Add date in post: gitbook-plugin-fontsettings</li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-inner"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>
+            
+                <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>5 November 2022<span class="nt">&lt;/section&gt;</span>
+            
+        <span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>之後有想到要修改的再回來更新吧，可能加入留言系統之類的，目前這樣的一個靜態網頁我就很滿意了。</p>
 
 
                 </section>
@@ -225,7 +262,7 @@ site itself),</li>
         "pluginsConfig": {
             "fontsettings": {
                 "family": "sans",
-                "size": 2,
+                "size": "0",
                 "theme": "white"
             },
             "highlight": {},
@@ -291,7 +328,7 @@ site itself),</li>
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2022-11-05 12:39:13 -0500"
+        "time": "2022-11-05 22:44:56 -0500"
     },
     "basePath": "",
     "book": {
