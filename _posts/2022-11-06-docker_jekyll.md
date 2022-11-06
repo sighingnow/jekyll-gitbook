@@ -10,7 +10,7 @@ layout: post
 剛好就趁這個機會把這次的內容當作第一篇紀錄。
 
 Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，當是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
-這樣也方便我攜帶，之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。
+之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。
 
 Required:
 - Docker image Jekyll/Jekyll
