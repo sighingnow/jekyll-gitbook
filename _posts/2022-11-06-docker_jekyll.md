@@ -41,8 +41,8 @@ docker start jekyll;
 
 ### Customize
 
-之後應該就等文件生成好，同時記得設定 [Github pages publishing source], 把發布源改到生成的目錄。這樣 Github.io 
-的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 js, html 就可以搞定。
+之後應該就等文件生成好，同時記得設定 [Github pages publishing source], 把發布源改到生成的目錄。這樣 github.io 
+的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
 像我用的模板本來是舊的 post 優先，改預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。
 
 - Default font size: gitbook-plugin-fontsettings
@@ -55,18 +55,8 @@ docker start jekyll;
   }
 ```
 
-- Add date in post: gitbook-plugin-fontsettings
-
-```html
-    <div class="page-inner">
-        <div class="normal">
-            {% if page.date %}
-                <section class="normal">{{ page.date | date: "%-d %B %Y"}}</section>
-            {% else %}
-                <section class="normal"></section>
-            {% endif %}
-        </div>
-```
+- Add date in post: _layout/post.html
+- change sort method: _includes/toc-date.htnl
 
 之後有想到要修改的再回來更新吧，可能加入留言系統之類的，目前這樣的一個靜態網頁我就很滿意了。
 

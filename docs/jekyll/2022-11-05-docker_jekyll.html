@@ -17,7 +17,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
-<link rel="shortcut icon" href="/assets/gitbook/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="assets/gitbook/images/favicon.ico" type="image/x-icon">
 
 
 
@@ -191,8 +191,8 @@ docker start jekyll<span class="p">;</span>
 
 <h3 id="customize">Customize</h3>
 
-<p>之後應該就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 Github.io 
-的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 js, html 就可以搞定。
+<p>之後應該就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
+的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
 像我用的模板本來是舊的 post 優先，改預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
 
 <ul>
@@ -207,16 +207,9 @@ docker start jekyll<span class="p">;</span>
 </code></pre></div></div>
 
 <ul>
-  <li>Add date in post: gitbook-plugin-fontsettings</li>
+  <li>Add date in post: _layout/post.html</li>
+  <li>change sort method: _includes/toc-date.htnl</li>
 </ul>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-inner"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>
-            
-                <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>5 November 2022<span class="nt">&lt;/section&gt;</span>
-            
-        <span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
 
 <p>之後有想到要修改的再回來更新吧，可能加入留言系統之類的，目前這樣的一個靜態網頁我就很滿意了。</p>
 
@@ -332,7 +325,7 @@ docker start jekyll<span class="p">;</span>
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2022-11-05 23:07:33 -0500"
+        "time": "2022-11-05 23:21:06 -0500"
     },
     "basePath": "",
     "book": {
