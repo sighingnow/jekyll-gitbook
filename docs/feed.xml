@@ -1,71 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-06T12:07:33-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
-</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Github Pages: 使用 Jekyll | Docker 建立</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html" rel="alternate" type="text/html" title="Github Pages: 使用 Jekyll | Docker 建立" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>http://0.0.0.0:4000/jekyll/docker_jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html"><![CDATA[<blockquote>
-  <p>說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-07T11:18:31-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Communication: URAT</title><link href="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html" rel="alternate" type="text/html" title="Communication: URAT" /><published>2022-11-07T00:00:00-06:00</published><updated>2022-11-07T00:00:00-06:00</updated><id>http://0.0.0.0:4000/jekyll/network_urat</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html"><![CDATA[<blockquote>
+  <p>修網路實作的時候，給學弟妹講解 URAT 跟怎麼在 Arduino 上實作準備的一些教材</p>
 </blockquote>
 
-<p>之前就想找一個能用 Markdown 寫筆記的地方，過去都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
-剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
-
-<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
-之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
-
-<p>Required:</p>
-<ul>
-  <li>Docker image Jekyll/Jekyll</li>
-  <li>Html, Javascript, CSS</li>
-</ul>
-
-<p>剛開始就先找個模板來用，<a href="http://jekyllthemes.org/">Jekyll themes</a>上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
-找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。</p>
-
-<h3 id="docker-jekyll">Docker Jekyll</h3>
-
-<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 volume 
-到 container 裡面就可以執行 Jekyll 生成。第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
-之後再簡單寫個 <a href="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/build.sh">bash script</a> 這樣一個能快速生成的 Jekyll 環境就搭建完成了。</p>
+<h2 id="how-to-transfer-data-between-two-computers">How to transfer data between two computers?</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
-  <li><code class="language-plaintext highlighter-rouge">jekyll serve</code> 生成網頁後運行在 localhost:4000</li>
+  <li>5 Volts logic</li>
+  <li>Signal on transmission medium
+    <ul>
+      <li>Metal : Square wave &amp; Sine ware</li>
+      <li>Optical fiber : Light square ware</li>
+      <li>Wireless : Electromagnetic waves</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
-  <span class="nt">-v</span> <span class="nv">$WD</span>:/srv/jekyll:z <span class="se">\</span>
-  <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro<span class="se">\</span>
-  <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
-  <span class="nt">--name</span> jekyll <span class="se">\</span>
-  <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
-  jekyll serve 2&gt; /dev/null <span class="o">||</span> 
-  docker start jekyll <span class="o">&amp;&amp;</span> docker attach jekyll<span class="p">;</span>
-</code></pre></div></div>
+<p>5伏邏輯，怎麼傳遞資料？不同材料的波。</p>
 
-<h3 id="customize">Customize</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Waveforms.svg/600px-Waveforms.svg.png" alt="" height="50%" width="50%" /></p>
 
-<p>之後就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
-的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
-像我用的模板本來是舊的 post 優先，稍微改排序，預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
+<h2 id="the-universal-asynchronous-receivertransmitter-uart">The Universal Asynchronous Receiver/Transmitter (UART)</h2>
 
 <ul>
-  <li>Change default font size: gitbook-plugin-fontsettings</li>
+  <li>In a world where technology can become obsolete very quickly
+    <ul>
+      <li>Still enjoys immense popularity.</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
-      "fontsettings": {
-          "size": 1,
-      }
-  }
-</code></pre></div></div>
+<p>UART這種簡單的通訊方式已經存在了幾十年，依然廣受歡迎。</p>
+
+<h2 id="asynchronous-communication">Asynchronous communication</h2>
+
+<p>異步通訊，所代表的是通訊中兩個byte之間的空隙是不固定的，而一個byte中的bit間隔是固定的。</p>
+
+<h2 id="capabilities-and-characteristics">Capabilities and Characteristics</h2>
+
+<p>a basic UART system provides robust, moderate-speed, full-duplex communication with only three signals: Tx (transmitted serial data), Rx (received serial data), and ground.</p>
+
+<p>一個基本收送的UART傳輸，僅需要三個端口Tx, Rx, GND。</p>
+
+<p>但在這之前的前提是Rx, Tx, 在相同的數據傳輸頻率。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram1_2.JPG" alt="" height="50%" width="50%" /></p>
+
+<h2 id="key-terms">Key Terms</h2>
 
 <ul>
-  <li>Add date in post: _layout/post.html</li>
-  <li>change sort method: _includes/toc-date.htnl</li>
+  <li><code class="language-plaintext highlighter-rouge">Start bit</code>: The first bit of a one-byte UART transmission. It indicates that the data line is leaving its idle state. The idle state is typically logic high, so the start bit is logic low.
+    <ul>
+      <li>The start bit is an overhead bit; this means that it facilitates communication between receiver and transmitter but does not transfer meaningful data.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Stop bit</code>: The last bit of a one-byte UART transmission. Its logic level is the same as the signal’s idle state, i.e., logic high. This is another overhead bit.</li>
 </ul>
 
-<blockquote class="block-tip">
-  <h5 id="note">NOTE</h5>
+<p><code class="language-plaintext highlighter-rouge">Start bit</code>代表空閒的結束，Srart bit僅代表開始，不具實際數據。</p>
 
-  <p>之後想到要修改的再更新吧，可能加入留言系統、標籤之類的，目前這樣的靜態網頁我就很滿意了。</p>
-</blockquote>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="github" /><category term="jekyll" /><category term="tool" /><summary type="html"><![CDATA[說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。]]></summary></entry><entry><title type="html">Linux: Common command</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html" rel="alternate" type="text/html" title="Linux: Common command" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>http://0.0.0.0:4000/jekyll/linux_cmd</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html"><![CDATA[<p>Notes to Linux Common Commands</p>
+<p><code class="language-plaintext highlighter-rouge">Stop bit</code>代表傳輸結束，電位拉高等待下一次 Start。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram2_2.JPG" alt="" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Baud rate</code>: The approximate rate (in bits per second, or bps) at which data can be transferred.</li>
+</ul>
+
+<p>Example : 9600-baud system，即代表 1 bit 需要 1/(9600 bps) ≈ 104.2 µs，注意
+不是實際上每秒傳送 9600 資料，實際上有開銷bit的消耗。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram3_2.JPG" alt="" height="50%" width="50%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Parity bi</code>: An error-detection bit added to the end of the byte.
+    <ul>
+      <li>Odd or Even</li>
+    </ul>
+  </li>
+</ul>
+
+<p>如果要設定校正位，就多傳送一個Bit，並預先設計好Odd or Even。</p>
+
+<p>如今天要傳送 00001110 而 even 即 校正為 1 這樣就會有偶數個 1。</p>
+
+<p><img src="https://ithelp.ithome.com.tw/upload/images/20201010/20120093cFTF1aC2Wb.png" alt="" height="50%" width="50%" /></p>
+
+<h1 id="synchronizing-and-sampling">Synchronizing and Sampling</h1>
+
+<p>the UART interface does not use a clock signal to synchronize the Tx and Rx devices. So how does the receiver know when to sample the transmitter’s data signal?</p>
+
+<p>接收器的clock完全獨立於發送器clock。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram5_2.JPG" alt="" height="25%" width="25%" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>所以當今天要設計一個UART單方向傳輸，僅用一條線就可以完成。
+可以想像接收端的狀態，用程式的表示方式會不會是以迴圈進行，當接到0時，
+以預設的頻率收接下來的 8 bit，當電位拉高代表一次傳送的結束。等待下次開始。</p>
+
+<p><a href="https://www.allaboutcircuits.com/technical-articles/back-to-basics-the-universal-asynchronous-receiver-transmitter-uart/">Reference</a> Back to Basics: The Universal Asynchronous Receiver/Transmitter (UART)</p>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="communication" /><category term="protocol" /><summary type="html"><![CDATA[修網路實作的時候，給學弟妹講解 URAT 跟怎麼在 Arduino 上實作準備的一些教材]]></summary></entry><entry><title type="html">Linux: Common command</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html" rel="alternate" type="text/html" title="Linux: Common command" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>http://0.0.0.0:4000/jekyll/linux_cmd</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html"><![CDATA[<p>Notes to Linux Common Commands</p>
 
 <h3 id="vcgencmd">vcgencmd</h3>
 
@@ -292,4 +327,70 @@ network:
                 "SSID-NAME-HERE":
                     password: "PASSWORD-HERE"
             dhcp4: true
-</code></pre></div></div>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="linux" /><category term="tool" /><summary type="html"><![CDATA[Notes to Linux Common Commands]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="linux" /><category term="tool" /><summary type="html"><![CDATA[Notes to Linux Common Commands]]></summary></entry><entry><title type="html">Github Pages: 使用 Jekyll | Docker 建立</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html" rel="alternate" type="text/html" title="Github Pages: 使用 Jekyll | Docker 建立" /><published>2022-11-05T00:00:00-05:00</published><updated>2022-11-05T00:00:00-05:00</updated><id>http://0.0.0.0:4000/jekyll/docker_jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html"><![CDATA[<blockquote>
+  <p>說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。</p>
+</blockquote>
+
+<p>之前就想找一個能用 Markdown 寫筆記的地方，過去都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
+剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
+
+<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
+之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
+
+<p>Required:</p>
+<ul>
+  <li>Docker image Jekyll/Jekyll</li>
+  <li>Html, Javascript, CSS</li>
+</ul>
+
+<p>剛開始就先找個模板來用，<a href="http://jekyllthemes.org/">Jekyll themes</a>上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
+找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。</p>
+
+<h3 id="docker-jekyll">Docker Jekyll</h3>
+
+<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 volume 
+到 container 裡面就可以執行 Jekyll 生成。第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
+之後再簡單寫個 <a href="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/build.sh">bash script</a> 這樣一個能快速生成的 Jekyll 環境就搭建完成了。</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
+  <li><code class="language-plaintext highlighter-rouge">jekyll serve</code> 生成網頁後運行在 localhost:4000</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
+  <span class="nt">-v</span> <span class="nv">$WD</span>:/srv/jekyll:z <span class="se">\</span>
+  <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro<span class="se">\</span>
+  <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
+  <span class="nt">--name</span> jekyll <span class="se">\</span>
+  <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
+  jekyll serve 2&gt; /dev/null <span class="o">||</span> 
+  docker start jekyll <span class="o">&amp;&amp;</span> docker attach jekyll<span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="customize">Customize</h3>
+
+<p>之後就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
+的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
+像我用的模板本來是舊的 post 優先，稍微改排序，預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
+
+<ul>
+  <li>Change default font size: gitbook-plugin-fontsettings</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
+      "fontsettings": {
+          "size": 1,
+      }
+  }
+</code></pre></div></div>
+
+<ul>
+  <li>Add date in post: _layout/post.html</li>
+  <li>change sort method: _includes/toc-date.htnl</li>
+</ul>
+
+<blockquote class="block-tip">
+  <h5 id="note">NOTE</h5>
+
+  <p>之後想到要修改的再更新吧，可能加入留言系統、標籤之類的，目前這樣的靜態網頁我就很滿意了。</p>
+</blockquote>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="github" /><category term="jekyll" /><category term="tool" /><summary type="html"><![CDATA[說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。]]></summary></entry></feed>

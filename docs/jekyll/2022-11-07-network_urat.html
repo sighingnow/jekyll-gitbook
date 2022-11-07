@@ -1,10 +1,8 @@
-<!-- Slightly Modified from _layouts/home.html -->
-
 <!DOCTYPE HTML>
 <html lang="en" >
     <head><meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>Communication: URAT · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Build Jekyll site with the GitBook style.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Benson Hsu"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -36,9 +34,9 @@
         }
     };
 </script>
-
+            <link rel="prev" href="/jekyll/2022-11-05-linux_cmd.html" />
         
-            <link rel="next" href="/jekyll/2022-11-05-docker_jekyll.html" />
+
         
     </head>
     <body>
@@ -77,12 +75,15 @@
 
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-07-network_urat.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-07-network_urat.html">
                         
                             <a href="/jekyll/2022-11-07-network_urat.html">
                                 Communication: URAT
                             </a>
                             
+                                
+                                    <ul><li><a href="#how-to-transfer-data-between-two-computers">How to transfer data between two computers?</a></li><li><a href="#the-universal-asynchronous-receivertransmitter-uart">The Universal Asynchronous Receiver/Transmitter (UART)</a></li><li><a href="#asynchronous-communication">Asynchronous communication</a></li><li><a href="#capabilities-and-characteristics">Capabilities and Characteristics</a></li><li><a href="#key-terms">Key Terms</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
+
                                 
                             
                         </li>
@@ -130,33 +131,133 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >Home</a>
+                            <a href="." >Communication: URAT</a>
                         
                     </h1>
                 </div>
 
-                <div class="body-inner">
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            <section class="normal markdown-section">
-                                
-                                    <h1 id="">Home</h1>
-                                
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
 
-                                <br />
-                            </section>
+    <div class="page-inner">
+        <div class="normal">
+            
+                <section class="normal">November 07, 2022</section>
+            
+        </div>
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/jekyll/network_urat">Communication: URAT</h1>
+                    
 
-                            <!-- Slightly Modified from _layouts/home.html -->
+                    <blockquote>
+  <p>修網路實作的時候，給學弟妹講解 URAT 跟怎麼在 Arduino 上實作準備的一些教材</p>
+</blockquote>
 
-<div id="book-search-input-inside" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
+<h2 id="how-to-transfer-data-between-two-computers">How to transfer data between two computers?</h2>
+
+<ul>
+  <li>5 Volts logic</li>
+  <li>Signal on transmission medium
+    <ul>
+      <li>Metal : Square wave &amp; Sine ware</li>
+      <li>Optical fiber : Light square ware</li>
+      <li>Wireless : Electromagnetic waves</li>
+    </ul>
+  </li>
+</ul>
+
+<p>5伏邏輯，怎麼傳遞資料？不同材料的波。</p>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Waveforms.svg/600px-Waveforms.svg.png" alt="" height="50%" width="50%" /></p>
+
+<h2 id="the-universal-asynchronous-receivertransmitter-uart">The Universal Asynchronous Receiver/Transmitter (UART)</h2>
+
+<ul>
+  <li>In a world where technology can become obsolete very quickly
+    <ul>
+      <li>Still enjoys immense popularity.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>UART這種簡單的通訊方式已經存在了幾十年，依然廣受歡迎。</p>
+
+<h2 id="asynchronous-communication">Asynchronous communication</h2>
+
+<p>異步通訊，所代表的是通訊中兩個byte之間的空隙是不固定的，而一個byte中的bit間隔是固定的。</p>
+
+<h2 id="capabilities-and-characteristics">Capabilities and Characteristics</h2>
+
+<p>a basic UART system provides robust, moderate-speed, full-duplex communication with only three signals: Tx (transmitted serial data), Rx (received serial data), and ground.</p>
+
+<p>一個基本收送的UART傳輸，僅需要三個端口Tx, Rx, GND。</p>
+
+<p>但在這之前的前提是Rx, Tx, 在相同的數據傳輸頻率。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram1_2.JPG" alt="" height="50%" width="50%" /></p>
+
+<h2 id="key-terms">Key Terms</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Start bit</code>: The first bit of a one-byte UART transmission. It indicates that the data line is leaving its idle state. The idle state is typically logic high, so the start bit is logic low.
+    <ul>
+      <li>The start bit is an overhead bit; this means that it facilitates communication between receiver and transmitter but does not transfer meaningful data.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Stop bit</code>: The last bit of a one-byte UART transmission. Its logic level is the same as the signal’s idle state, i.e., logic high. This is another overhead bit.</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Start bit</code>代表空閒的結束，Srart bit僅代表開始，不具實際數據。</p>
+
+<p><code class="language-plaintext highlighter-rouge">Stop bit</code>代表傳輸結束，電位拉高等待下一次 Start。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram2_2.JPG" alt="" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Baud rate</code>: The approximate rate (in bits per second, or bps) at which data can be transferred.</li>
+</ul>
+
+<p>Example : 9600-baud system，即代表 1 bit 需要 1/(9600 bps) ≈ 104.2 µs，注意
+不是實際上每秒傳送 9600 資料，實際上有開銷bit的消耗。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram3_2.JPG" alt="" height="50%" width="50%" /></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Parity bi</code>: An error-detection bit added to the end of the byte.
+    <ul>
+      <li>Odd or Even</li>
+    </ul>
+  </li>
+</ul>
+
+<p>如果要設定校正位，就多傳送一個Bit，並預先設計好Odd or Even。</p>
+
+<p>如今天要傳送 00001110 而 even 即 校正為 1 這樣就會有偶數個 1。</p>
+
+<p><img src="https://ithelp.ithome.com.tw/upload/images/20201010/20120093cFTF1aC2Wb.png" alt="" height="50%" width="50%" /></p>
+
+<h1 id="synchronizing-and-sampling">Synchronizing and Sampling</h1>
+
+<p>the UART interface does not use a clock signal to synchronize the Tx and Rx devices. So how does the receiver know when to sample the transmitter’s data signal?</p>
+
+<p>接收器的clock完全獨立於發送器clock。</p>
+
+<p><img src="https://www.allaboutcircuits.com/uploads/articles/BBUART_diagram5_2.JPG" alt="" height="25%" width="25%" /></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>所以當今天要設計一個UART單方向傳輸，僅用一條線就可以完成。
+可以想像接收端的狀態，用程式的表示方式會不會是以迴圈進行，當接到0時，
+以預設的頻率收接下來的 8 bit，當電位拉高代表一次傳送的結束。等待下次開始。</p>
+
+<p><a href="https://www.allaboutcircuits.com/technical-articles/back-to-basics-the-universal-asynchronous-receiver-transmitter-uart/">Reference</a> Back to Basics: The Universal Asynchronous Receiver/Transmitter (UART)</p>
 
 
-                            <div id="book-search-results">
-                                <div class="search-noresults">
-                                    
-                                </div><div class="search-results">
+                </section>
+            </div><div class="search-results">
     <div class="has-results">
         <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
         <ul class="search-results-list"></ul>
@@ -165,8 +266,20 @@
         <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
     </div>
 </div></div>
-                        </div>
-                    </div>
+    </div>
+</div>
+<!-- customize line 38-50 swap next previous-->
+                    
+                        <a href="/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Home">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/jekyll/2022-11-05-linux_cmd.html" class="navigation navigation-next navigation-unique" aria-label="Next page: ">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
                 </div>
             </div>
 
@@ -178,17 +291,6 @@
         "title": "Introduction",
         "level": "1.1",
         "depth": 1,
-        
-
-        
-        "next": {
-            "title": "Github Pages: 使用 Jekyll | Docker 建立",
-            "level": "1.2",
-            "depth": 1,
-            "path": "_posts/2022-11-05-docker_jekyll.md",
-            "ref": "_posts/2022-11-05-docker_jekyll.md",
-            "articles": []
-        },
         
         "dir": "ltr"
     },    "config": {
@@ -264,8 +366,8 @@
         "gitbook": "*"
     },
     "file": {
-        "path": "assets/search.html",
-        "mtime": "",
+        "path": "_posts/2022-11-08-network_urat.md",
+        "mtime": "2022-11-07 00:00:00 -0600",
         "type": "markdown"
     },
     "gitbook": {
