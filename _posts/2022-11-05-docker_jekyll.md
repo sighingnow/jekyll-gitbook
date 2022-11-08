@@ -1,5 +1,5 @@
 ---
-title: "Github Pages: 使用 Jekyll | Docker 建立"
+title: "使用 Jekyll | Docker 建立 Github Pages"
 author: Benson Hsu
 date: 2022-11-05
 category: Jekyll

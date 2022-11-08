@@ -1,5 +1,5 @@
 ---
-title: "Communication: URAT"
+title: "Notes - UART"
 author: Benson Hsu
 date: 2022-11-07
 category: Jekyll
