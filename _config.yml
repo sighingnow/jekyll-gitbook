@@ -1,5 +1,5 @@
 # Configurations
-title:            Jekyll Gitbook
+title:            IMTechEd
 longtitle:        Jekyll Gitbook
 author:           HE Tao
 email:            sighingnow@gmail.com
@@ -9,8 +9,8 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://www.imteched.com'
+baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
