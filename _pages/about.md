@@ -1,7 +1,7 @@
 ---
 title: About
-author: Tao He
-date: 2022-02-04
+author: J. Austin Straley, DO
+date: 2022-11-11
 category: Jekyll
 layout: post
 ---
