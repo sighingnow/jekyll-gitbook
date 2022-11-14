@@ -28,7 +28,7 @@ layout: about
 h1 {
     display:none;
 }
-h2 {
+h3 {
     text-align: center;
     margin: 10px 0px;
     padding: 5px;
@@ -47,12 +47,12 @@ img {
 <body>
 <div class="row">
   <div class="column">
-    <img src="../assets/IMG_3414.jpg">
+    <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/IMG_3414.jpg?raw=true">
     <h4>J. Austin Straley, DO</h4>
     <p></p>
   </div>
   <div class="column">
-    <h2>About Me</h2>
+    <h3>About Me</h3>
     <p>
         Education
         <ul>

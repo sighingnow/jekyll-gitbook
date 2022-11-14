@@ -8,7 +8,6 @@ layout: post
 
 <html>
 <head>
-<title display="none"></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 h1 {
@@ -28,13 +27,17 @@ h4 {
 h5 {
     text-align: center;
 }
+h6 {
+    font-size: 200%;
+    text-align: center;
+    border: 1px solid #999;
+}
 </style>
 </head>
 
 <body>
 <div class="row">
-    <h1>How To: Internal Medicine 2023</h1>
-    <h3>By: J. Austin Straley, DO<h3>
+    <h5>By: J. Austin Straley, DO</h5>
     <h4>Disclaimer: This is not endorsed nor is it recommended by WVU/CAMC</h4>
     <h5>I also don’t recommend this guide, but it’s better than nothing</h5>
     <br>
