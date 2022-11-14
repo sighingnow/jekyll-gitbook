@@ -3,7 +3,7 @@ title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
 category: Jekyll
-layout: post
+layout: about
 ---
 
 <html>
@@ -25,13 +25,16 @@ layout: post
   display: table;
   clear: both;
 }
+h1 {
+    display:none;
+}
 h2 {
     text-align: center;
     margin: 10px 0px;
     padding: 5px;
     border: 1px solid #999;
 }
-h3 {
+h4 {
     text-align: center;
 }
 img {
@@ -41,12 +44,11 @@ img {
 </style>
 </head>
 
-
 <body>
 <div class="row">
   <div class="column">
-    <img src="/Users/jamesstraley/Documents/GitHub/jzstraley.github.io/assets/gitbook/images/IMG_3414.jpg">
-    <h3>J. Austin Straley, DO</h3>
+    <img src="../assets/IMG_3414.jpg">
+    <h4>J. Austin Straley, DO</h4>
     <p></p>
   </div>
   <div class="column">
@@ -78,6 +80,5 @@ img {
   </div>
 </div>
 </body>
-
 
 </html>
