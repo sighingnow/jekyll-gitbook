@@ -1,15 +1,15 @@
 ---
-title: ""
+title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
 category: Jekyll
 layout: post
-output: html_document
+output: html
 ---
 
-<!DOCTYPE html>
 <html>
 <head>
+<title display="none"></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -47,7 +47,7 @@ img {
 <body>
 <div class="row">
   <div class="column">
-    <img src="../assets/gitbook/images/IMG_3414.png">
+    <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/gitbook/images/IMG_3414.png">
     <h3>J. Austin Straley, DO</h3>
     <p></p>
   </div>
