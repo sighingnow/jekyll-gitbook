@@ -19,7 +19,7 @@ output: html_document
   float: left;
   width: 50%;
   padding: 0px;
-  height: 300px;
+  height: Auto;
 }
 .row:after {
   content: "";
@@ -28,7 +28,7 @@ output: html_document
 }
 h2 {
     text-align: center;
-    margin: 10px 0;
+    margin: 10px 0px;
     padding: 5px;
     border: 1px solid #999;
 }
@@ -47,7 +47,7 @@ img {
 <body>
 <div class="row">
   <div class="column">
-    <img src="../assets/gitbook/images/IMG_3414.png" loading="lazy">
+    <img src="../assets/gitbook/images/IMG_3414.png">
     <h3>J. Austin Straley, DO</h3>
     <p></p>
   </div>
