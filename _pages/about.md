@@ -38,8 +38,8 @@ h4 {
     text-align: center;
 }
 img {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 1px;
+    margin-right: 1px;
 }
 </style>
 </head>
@@ -47,9 +47,9 @@ img {
 <body>
 <div class="row">
   <div class="column">
-    <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/IMG_3414.jpg?raw=true">
+    <img src="../assets/IMG_3414.jpg" alt="" width=Auto height=Auto>
     <h4>J. Austin Straley, DO</h4>
-    <p></p>
+    <br>
   </div>
   <div class="column">
     <h3>About Me</h3>

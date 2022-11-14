@@ -43,7 +43,7 @@ h6 {
     <br>
     <ol>
         <h2><li>The Basics</li></h2>
-        <h2><li><a href="/_posts/2022-11-14-cerner.md">Cerner</a></li></h2>
+        <h2><li><a href="/_posts/2022-11-14-cerner.html">Cerner</a></li></h2>
             <ol><li>Dotphrases</li></ol>
             <ol><li>Cerner Shortcuts</li></ol>
         <h2><li>Day-to-Day on the Medicine Service</li></h2>
