@@ -4,7 +4,6 @@ author: J. Austin Straley, DO
 date: 2022-11-11
 category: Jekyll
 layout: post
-output: html
 ---
 
 <html>
@@ -36,7 +35,6 @@ h3 {
     text-align: center;
 }
 img {
-    display: block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -47,7 +45,7 @@ img {
 <body>
 <div class="row">
   <div class="column">
-    <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/gitbook/images/IMG_3414.png">
+    <img src="/Users/jamesstraley/Documents/GitHub/jzstraley.github.io/assets/gitbook/images/IMG_3414.jpg">
     <h3>J. Austin Straley, DO</h3>
     <p></p>
   </div>
