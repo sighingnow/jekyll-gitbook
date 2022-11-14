@@ -1,29 +1,85 @@
 ---
-title: About
+title: 
 author: J. Austin Straley, DO
 date: 2022-11-11
 category: Jekyll
 layout: post
+output: html_document
 ---
 
-## Column 1
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: content-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  height: 300px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h2 {
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #999;
+}
+h3 {
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+</head>
 
-![](gitbook/images/IMG_3414.png)
 
-## Column 2
-### Interests
-    Clinical
-        Cerner
-    Research
-        Heart Failure
-        Chronic Kidney Disease
-    Hobbies
-        Snowboarding
-        Golf
-### Education
-    Charleston Area Medical Center | Charleston, WV
-        Internal Medicine
-    Lincoln Memorial University DeBusk College of Osteopathic Medicine | Harrogate, TN
-        Doctor of Osteopathy (DO)
-    University of Tennessee | Knoxville, TN
-        Mathematics
+<body>
+<div class="row">
+  <div class="column">
+    <img src="../assets/gitbook/images/IMG_3414.png" loading="lazy">
+    <h3>J. Austin Straley, DO</h3>
+    <p></p>
+  </div>
+  <div class="column">
+    <h2>About Me</h2>
+    <p>
+        Education
+        <ul>
+            <li>Charleston Area Medical Center | Charleston, WV</li>
+                <ul><li>Internal Medicine</li></ul>
+            <li>Lincoln Memorial University DeBusk College of Osteopathic Medicine | Harrogate, TN</li>
+                <ul><li>Doctor of Osteopathy (DO)</li></ul>
+            <li>University of Tennessee | Knoxville, TN</li>
+                <ul><li>Mathematics</li></ul>
+        </ul>
+    </p>
+    <p>
+        Intrests
+        <ul>
+            <li>Clinical</li>
+                <ul><li>Cerner</li></ul>
+            <li>Research</li>
+                <ul><li>Heart Failure</li></ul>
+                <ul><li>Chronic Kidney Disease</li></ul>
+            <li>Hobbies</li>
+                <ul><li>Snowboarding</li></ul>
+                <ul><li>Golf</li></ul>
+        </ul>
+    </p>
+  </div>
+</div>
+</body>
+
+
+</html>
