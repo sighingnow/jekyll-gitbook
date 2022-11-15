@@ -1,9 +1,8 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <style>
-      body {   
+      body {
         background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
-        background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;
@@ -17,7 +16,7 @@
     <body>
         <div class="book">
             {%- include toc-date.html -%}
-            <div class="book-body"> <a href="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true">
+            <div class="book-body">
                 <div class="book-header" role="navigation">
                     <!-- Title -->
                     <h1>
@@ -26,25 +25,7 @@
                     </h1>
                 </div>
                 <div class="body-inner">
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            <div id="book-search-results">
-                                <div class="search-noresults">
-                                    <section class="normal markdown-section">
-                                        {% if page.title %}
-                                            <h1 id="{{ page.id }}">{{ page.title | escape }}</h1>
-                                        {% else %}
-                                            <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
-                                        {% endif %}
-                                        {{ content }}
-                                    </section>
-                                </div>
-
-                                {%- include search.html -%}
-                            </div>
-                        </div>
-                    </div>
-                    {% include mathjax.html %}
+                    {%- include body.html -%}
                 </div>
             </div>
             <script>
