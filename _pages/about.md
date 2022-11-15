@@ -19,7 +19,7 @@ layout: about
         cursor: default;
       }
       .leftcolumn {
-        float: left; 
+        float: center; 
         width: 45%;
         height: 700px;
         width: 300px;
