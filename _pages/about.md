@@ -33,11 +33,6 @@ layout: about
         background-color: rgba(0, 0, 0, .55);
         padding: 20px;
       }
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
       h1 {
         display:none;
       }
