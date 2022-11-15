@@ -29,7 +29,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-telegram',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://t.me');
+                window.open('https://www.linkedin.com/in/jamesstraley');
             }
         },
         'google': {
