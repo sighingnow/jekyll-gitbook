@@ -6,12 +6,13 @@ category: posts
 layout: post
 ---
 
-- <mark>Favorite Orders</mark>
-1. Huge time saver if you know how to structure them
-2. First start in Orders and right click on the yellow favorites star
-3. Select organize favorites <br><br>
+## Favorite Orders
 
-    ![Shortcut 1.1](/assets/internguide/cerner_shortcuts_1.png)
+> - Huge time saver if you know how to structure them<br>
+> - First start in Orders and right click on the yellow favorites star<br>
+> - Select organize favorites <br>
+
+![Shortcut 1.1](/assets/internguide/cerner_shortcuts_1.png)
         <br><br>
 4. Create a new folder called “Home” and then close this subwindow <br>
 

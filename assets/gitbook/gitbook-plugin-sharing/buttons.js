@@ -1,3 +1,18 @@
+
+
+//Enter Social Links
+// { platform: CAMC,           user_url: "https://www.camcmedicine.edu/academic-departments/department-internal-medicine/internal-medicine-residency-program/our-current"}
+// { platform: facebook,       user_url: "https://www.facebook.com/Straley/" }
+// { platform: github,         user_url: "https://github.com/jzstraley" }
+// { platform: google_scholar, user_url: "" }
+// { platform: instagram,      user_url: "" }
+// { platform: linkedin,       user_url: "https://www.linkedin.com/in/jamesstraley" }
+// { platform: orcid,          user_url: "https://orcid.org/0000-0002-5441-9515" }
+// { platform: pinterest,      user_url: "" }
+// { platform: twitter,        user_url: "" }
+// { platform: youtube,        user_url: "https://www.youtube.com/channel/UCAAanG5A04oCXc2JnTjjLRQ" }
+
+
 require(['gitbook', 'jquery'], function(gitbook, $) {
     var SITES = {
         'facebook': {
@@ -5,7 +20,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-facebook',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://www.facebook.com/sharer/sharer.php?s=100&p[url]='+encodeURIComponent(location.href));
+                window.open('https://www.facebook.com/Straley/');
             }
         },
         'twitter': {
