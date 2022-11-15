@@ -28,7 +28,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-github',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://github.com');
+                window.open('https://https://github.com/jzstraley');
             }
         },
         'google': {
@@ -78,10 +78,10 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                     window.open(opts["github_link"]);
                 }
             }
-            if (sideId === "telegram" && opts["telegram_link"] !== undefined && opts["telegram_link"] !== "") {
+            if (sideId === "facebook" && opts["facebook_link"] !== undefined && opts["facebook_link"] !== "") {
                 onClick = function(e) {
                     e.preventDefault();
-                    window.open(opts["telegram_link"]);
+                    window.open(opts["facebook_link"]);
                 }
             }
 
