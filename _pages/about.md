@@ -2,7 +2,7 @@
 title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
-layout: about
+layout: post
 ---
 
 <html lang="en" >
@@ -10,7 +10,8 @@ layout: about
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
       body {   
-        position: relative;
+        background-image: unset;
+        background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background-size: cover;
         background-position: center center;
