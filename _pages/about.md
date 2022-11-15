@@ -2,8 +2,7 @@
 title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
-layout: none
-output: html_document
+layout: about
 ---
 
 <html lang="en" >
@@ -17,7 +16,6 @@ output: html_document
         color: #000000;
       }
       body {   
-        box-sizing: border-box;
         background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/Background.png?raw=true');
         background-repeat: no-repeat;
         background-size: cover;
@@ -25,14 +23,14 @@ output: html_document
       .leftcolumn {
         float:left; 
         width: 45%;
-        height: 600px;
+        height: 700px;
         width: 300px;
         margin-right: 20px;
       }
       .rightcolumn {
         float:right; 
         width: 45%;
-        height: 600px;
+        height: 700px;
         padding-left: 20px;
       }
       .row:after {

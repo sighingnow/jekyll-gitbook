@@ -16,11 +16,15 @@
             {%- include toc-date.html -%}
 
             <div class="book-body">
-                <div class="book-header" role="navigation" style="background-color: rbg(255, 255, 255);">
+                <div class="book-header" role="navigation">
                     <!-- Title -->
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
+                        {% if page.title %}
+                            <a href="." >{{ page.title | escape }}</a>
+                        {% else %}
                             <a href="." >{{ site.title | escape }}</a>
+                        {% endif %}
                     </h1>
                 </div>
 

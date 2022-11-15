@@ -2,26 +2,29 @@
 <html lang="en" >
     <head>
         {%- include head.html -%}
-        <title display="none"></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="book">
-
             {%- include toc-date.html -%}
-
             <div class="book-body">
                 <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                            <a href="." >{{ site.title | escape }}</a>
+                    </h1>
                 </div>
-
                 <div class="body-inner">
-                    {%- include aboutbody.html -%}
+                    {%- include body.html -%}
                 </div>
             </div>
-
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({%- include metadata-post.json.tpl -%});
+            });
+            </script>
         </div>
-
         {%- include footer.html -%}
-
     </body>
 </html>

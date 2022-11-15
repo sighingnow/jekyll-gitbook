@@ -2,11 +2,10 @@
 title: Special
 author: J. Austin Straley, DO
 date: 2022-11-14
-layout: none
+layout: about
 output: html_document
 ---
 
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">

@@ -2,14 +2,11 @@
 title: Cover
 author: J. Austin Straley, DO
 date: 2022-11-14
-layout: none
+layout: about
 output: html_document
 ---
-
-<!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -32,9 +29,9 @@ body, html {height: 100%}
     IMTechEd
   </div>
   <div class="w3-display-middle">
-      <h1 class="w3-jumbo w3-animate-top w3-center">
+      <h4 class="w3-jumbo w3-animate-top w3-center">
         COMING SOON
-      </h1>
+      </h4>
       <hr class="w3-border-grey" style="margin:auto;width:40%">
       <p class="w3-large w3-center">By Austin</p>
   </div>
