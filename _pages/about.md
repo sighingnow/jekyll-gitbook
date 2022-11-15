@@ -2,7 +2,7 @@
 title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
-layout: post
+layout: none
 output: html_document
 ---
 
@@ -71,7 +71,7 @@ output: html_document
   <body>
     <div class="row">
       <div class="leftcolumn">
-        <img src="../assets/profilepic.jpg" alt="Me"/>
+        <img src="../assets/profilepic.jpg" style="width:100%" alt="Avatar">
         <h4>J. Austin Straley, DO</h4>
       </div>
       <div class="rightcolumn">
