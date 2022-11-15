@@ -1,19 +1,20 @@
 <!DOCTYPE HTML>
 <html lang="en" >
+    <style>
+      body {   
+        position: relative;
+        background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
+        background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: #FFFFFF;
+        cursor: default;
+      }
+      </style>
     <head>
         {%- include head.html -%}
     </head>
-    <style>
-    .bg-image {
-        background-image: url("https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true");
-        background-color: #cccccc;
-        height: 500px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-    }
-    </style>
     <body>
         <div class="book">
             {%- include toc-date.html -%}
@@ -26,12 +27,16 @@
                     </h1>
                 </div>
                 <div class="body-inner">
-                <section>
                     <div class="page-wrapper" tabindex="-1" role="main">
+                        {% if page.cover %}
                             <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true"
                                 width="100%"
-                                height="{{ page.height | default: '100%' }}"
+                                height="{{ page.cover_height | default: '100%' }}"
+                                alt="{{ page.title | escape }}"
+                                style="object-fit: cover;"
                             />
+                        {% endif %}
+
                         <div class="page-inner">
                             <div id="book-search-results">
                                 <div class="search-noresults">
@@ -41,7 +46,12 @@
                                         {% else %}
                                             <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
                                         {% endif %}
-
+                                        <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true"
+                                            width="100%"
+                                            height="{{ page.cover_height | default: '100%' }}"
+                                            alt="{{ page.title | escape }}"
+                                            style="object-fit: cover;"
+                                        />
                                         {{ content }}
                                     </section>
                                 </div>
@@ -51,7 +61,6 @@
                         </div>
                     </div>
                     {% include mathjax.html %}
-                </section>
                 </div>
             </div>
             <script>
