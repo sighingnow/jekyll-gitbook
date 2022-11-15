@@ -21,6 +21,8 @@
                                 width="100%"
                                 height="{{ page.height | default: '100%' }}"
                             />
+
+                                        {{ content }}
                         <div class="page-inner">
                             <div id="book-search-results">
                                 <div class="search-noresults">
@@ -30,8 +32,6 @@
                                         {% else %}
                                             <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
                                         {% endif %}
-
-                                        {{ content }}
                                     </section>
                                 </div>
 
