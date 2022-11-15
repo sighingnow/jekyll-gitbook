@@ -8,9 +8,6 @@ layout: about
 <html lang="en" >
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
       body {   
         position: relative;
@@ -32,8 +29,9 @@ layout: about
         float: right; 
         width: 45%;
         height: 700px;
-        color: black;
-        background-color: rgba(255, 255, 255, .75);
+        color: white;
+        background-color: rgba(0, 0, 0, .55);
+        padding: 20px;
       }
       .row:after {
         content: "";
@@ -48,7 +46,7 @@ layout: about
         font-size: 150%;
         margin: 15px;
         padding: 10px;
-        border: 1px solid #000000;
+        border: 2px solid;
       }
       h4 {
         text-align: center;
