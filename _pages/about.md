@@ -2,7 +2,7 @@
 title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
-layout: about
+layout: post
 ---
 
 <html>
@@ -15,7 +15,7 @@ layout: about
 }
 body {   
   box-sizing: border-box;
-  background-image: url('/Users/jamesstraley/Documents/GitHub/jzstraley.github.io/assets/Background.png');
+  background-image: url('../assets/Background.png');
   background-repeat: no-repeat;
   background-size: cover;
   }
@@ -26,7 +26,8 @@ body {
   float:left; 
   width: 45%;
   height: 400px;
-  padding-left: 20px;
+  width: 300px;
+  margin-right: 20px;
 }
 .rightcolumn {
   float:left; 
@@ -44,8 +45,8 @@ h1 {
 }
 h3 {
     text-align: center;
-    margin: 10px 0px;
-    padding: 5px;
+    margin: 15px;
+    padding: 10px;
     border: 1px solid #000000;
 }
 h4 {
@@ -54,11 +55,9 @@ h4 {
     padding: 5px;
 }
 img {
-    margin-left: Auto;
     display: block;
-    height: 600px;
-    width: 300px;
-    margin-right: Auto;
+    height: 380px;
+    width: 280px;
     padding: 10px;
     border: 4px solid #222;
 }
@@ -77,7 +76,7 @@ img {
 </div>
 <div class="row">
   <div class="leftcolumn">
-    <img src="../assets/IMG_3414.jpg" alt="">
+    <img src="../assets/IMG_3414.jpg" alt="Me">
     <h4>J. Austin Straley, DO</h4>
   </div>
   <div class="rightcolumn">

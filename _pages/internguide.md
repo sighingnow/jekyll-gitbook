@@ -16,6 +16,11 @@ h1 {
     padding: 5px;
     border: 1px solid #999;
 }
+h2{
+    font-size: 100%;
+    padding: none;
+    border: none;
+}
 h3 {
     text-align: center;
 }
@@ -44,18 +49,48 @@ h6 {
     <ol>
         <h2><li>The Basics</li></h2>
         <h2><li><a href="/posts/2022-11-14-cerner.html">Cerner</a></li></h2>
-            <ol><li>Dotphrases</li></ol>
-            <ol><li>Cerner Shortcuts</li></ol>
+            <ul><li>Dotphrases</li></ul>
+            <ul><li><a href="/posts/2022-11-15-cerner-shortcuts.html">Cerner Shortcuts</a></li></ul>
         <h2><li>Day-to-Day on the Medicine Service</li></h2>
-            <ol><li>Dotphrases</li></ol>
+            <ul><li>How to Write a Progress Note</li></ul>
+            <ul><li>Cap Rules</li></ul>
+            <ul><li>Staying Organized</li></ul>
+            <ul><li>How to Present on IM Rounds</li></ul>
         <h2><li>How to Admit a Patient</li></h2>
-            <ul><li>Cerner</li></ul>
-        <h2><li>Research</li></h2>
-            <ul><li>Heart Failure</li></ul>
-            <ul><li>Chronic Kidney Disease</li></ul>
-        <h2><li>Hobbies</li></h2>
-            <ul><li>Snowboarding</li></ul>
-            <ul><li>Golf</li></ul>
+            <ul><li>How to Write an Admission Note</li></ul>
+            <ul><li>Transfers</li></ul>
+        <h2><li>How to Discharge a Patient</li></h2>
+            <ul><li>Medication Reconciliation</li></ul>
+            <ul><li>Patient Instructions/Follow-Ups/Education</li></ul>
+            <ul><li>Discharge Instructions</li></ul>
+            <ul><li>Discharge Order</li></ul>
+            <ul><li>Discharge Summary</li></ul>
+        <h2><li>Nights</li></h2>
+        <h2><li>How to Morning Report</li></h2>
+        <h2><li>Ambulatory Clinic</li></h2>
+            <ul><li>Patient Specific Tasks</li></ul>
+            <ul><li>Medicare Wellness Visits</li></ul>
+            <ul><li>Admin Days</li></ul>
+            <ul><li>HealtheIntent</li></ul>
+            <ul><li>Johns Hopkins/NEJM</li></ul>
+            <ul><li>Charts</li></ul>
+            <ul><li>CHF Clinic*</li></ul>
+            <ul><li>GYN Clinic*</li></ul>
+            <ul><li>INR Clinic*</li></ul>
+            <ul><li>Termination Guidelines</li></ul>
+            <ul><li>Diabetic Foot Exams</li></ul>
+            <ul><li>Cerner Help</li></ul>
+        <h2><li>The ICU</li></h2>
+            <ul><li>Day-to-Day on the ICU</li></ul>
+            <ul><li>Presenting on the ICU</li></ul>
+        <h2><li>Off-Service Rotations</li></h2>
+        <h2><li>Other</li></h2>
+            <ul><li>Death Pronouncement</li></ul>
+            <ul><li>Research</li></ul>
+            <ul><li>Important Websites</li></ul>
+        <h2><li>Onboarding Checklist</li></h2>
+        <h2><li>Referenced Material</li></h2>
+        <h2><li>Licensing</li></h2>
     </ol>
 </div>
 </body>
