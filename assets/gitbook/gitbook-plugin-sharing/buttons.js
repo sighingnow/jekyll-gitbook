@@ -21,7 +21,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-github',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://github.com');
+                window.open('https://github.com/jzstraley');
             }
         },
         'telegram': {

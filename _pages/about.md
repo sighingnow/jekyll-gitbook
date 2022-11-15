@@ -18,7 +18,7 @@ output: html_document
       }
       body {   
         box-sizing: border-box;
-        background-image: url('../assets/Background.png');
+        background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/Background.png?raw=true');
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -71,7 +71,7 @@ output: html_document
   <body>
     <div class="row">
       <div class="leftcolumn">
-        <img src="../assets/profilepic.jpg" style="width:100%" alt="Avatar">
+        <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/profilepic.jpg?raw=true" style="width:100%" alt="Avatar">
         <h4>J. Austin Straley, DO</h4>
       </div>
       <div class="rightcolumn">

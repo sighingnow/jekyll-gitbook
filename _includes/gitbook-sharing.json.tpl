@@ -1,9 +1,13 @@
             "sharing": {
-                "all": ["facebook", "google", "twitter", "github", "youtube"],
-                "facebook": "https://www.facebook.com/Straley/",
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "facebook": true,
                 "google": false,
                 "github": true,
-                "github_link": "https://github.com/jzstraley",
+                "github_link": "https://github.com",
+                "telegram": false,
+                "telegram_link": "https://t.me",
+                "instapaper": false,
                 "twitter": true,
-                "youtube": "https://www.youtube.com/channel/UCAAanG5A04oCXc2JnTjjLRQ"
+                "vk": false,
+                "weibo": false
             },

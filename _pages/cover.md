@@ -18,23 +18,25 @@ output: html_document
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-  background-image: url('../assets/snowy-exit.jpg');
+  background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
   min-height: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 </style>
 </head>
 <body>
-
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    Logo
+    IMTechEd
   </div>
   <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">By Austin</p>
+      <h1 class="w3-jumbo w3-animate-top w3-center">
+        COMING SOON
+      </h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center">By Austin</p>
   </div>
 </div>
 

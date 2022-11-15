@@ -7,16 +7,16 @@ layout: post
 ---
 
 |![AMION](/assets/internguide/amionapppic.png)|[AMION][1]|
-| --- | --- |
+| ------- | ------- |
 - “AM”-“I”-“ON”, like am I on shift?
 - Use: Resident Schedule
     - Can be used to see who is on call, who is on nights, etc.
     - Can be downloaded and synced: follow link
-- [Finding Your Schedule on AMION][7]
+- Tutorial: [Finding Your Schedule on AMION][7]
 - Password (case sensitive): wvu CAMC<br><br>
 
 |![AMS](/assets/internguide/amsapppic.png)|[AMS Connect][2]|
-| --- | --- |
+| ------- | ------- |
 - Purpose: HIPPA Complaint Messaging System
 - Download the AMSConnect App from the app store
 - AMS will Email you a link to activate your account
@@ -25,51 +25,51 @@ layout: post
 - See the AMSConnect Quick Start Guide for more information<br><br>
 
 |![WVBOP](/assets/internguide/wvbopapppic.png)|[CSAPP/RxDataTrack/WV Board of Pharmacy][3]|
-| --- | --- |
+| ------- | ------- |
 - Purpose: Controlled Substance Monitoring Program
-- Tutorial: Accessing WV Board of Pharmacy<br><br>
+- Tutorial: [Accessing WV Board of Pharmacy][30]<br><br>
 
 |![DAVE](/assets/internguide/daveapppic.png)|[DAVE (Database Application for Vital Events) System][4]|
-| --- | --- |
+| ------- | ------- |
 - Purpose: Death Pronouncement
-- [Tutorials][29]<br><br>
+- [Tutorial][29]<br><br>
 
 |![Excel](/assets/internguide/excelapppic.jpeg)|[Excel Team Lists][5]|
-| --- | --- |
+| ------- | ------- |
+- Requires login information
 - Purpose: Handoff Lists, Continuity of care<br><br>
 
 |![GoodRx](/assets/internguide/goodrxapppic.png)|GoodRx|
 | --- | --- |
-- Just download the App<br><br>
+- Just download the App phone app for Providers<br><br>
 
 |![EMCRIT](/assets/internguide/emcritapppic.png)|[Internet Book of Critical Care (IBCC)][6]|
-| --- | --- |
+| ------- | ------- |
 - Use: Critical Care/EM notes<br><br>
 
 |![MDCalc](/assets/internguide/mdcalapppic.png)|[MdCalc][28]|
-| --- | --- |
+| ------- | ------- |
 - Many useful calculators<br><br>
 
 |![NewInnov](/assets/internguide/newinnovapppic.png)|[New Innovations][8]|
-| --- | --- |
+| ------- | ------- |
 - Use: Onboarding Material Location, Login for Morning Report and Noon Didactics, Logging Duty Hours and Procedures, Evaluations
-- Tutorial: Logging Duty Hours on New Innovations<br><br>
+- Tutorial: [Logging Duty Hours on New Innovation][31]<br><br>
 
 |![Outlook](/assets/internguide/outlookapppic.png)|[Outlook][9]|
-| --- | --- |
-- Email
+| ------- | ------- |
+- Email, requires login information
 - Tutorial: [Microsoft Office/Outlook/OneDrive/SharePoint][11]<br><br>
 
 |![OneDrive](/assets/internguide/onedriveapppic.jpeg)|[OneDrive][10]|
-| --- | --- |
+| ------- | ------- |
 - Calendar, SharePoint, Microsoft Office (Microsoft Word, Microsoft PowerPoint, Microsoft Excel)
 - Tutorial: [Microsoft Office/Outlook/OneDrive/SharePoint][11]<br><br>
 
 |![Supplementary Resources](/assets/internguide/otherapppic.png)|Supplementary Resources|
-| --- | --- |
+| ------- | ------- |
 - Podcasts
     - The Curbsiders Internal Medicine
-    - EMCRIT
     - Louisville Lectures (IM Lecture Series)
     - Core IM
 - Blogs
@@ -78,17 +78,17 @@ layout: post
     - Pbfluids.com<br><br>
 
 |![UpToDate](/assets/internguide/uptotdateapppic.png)|[Uptodate][12]|
-| --- | --- |
+| ------- | ------- |
 - Purpose: Looking stuff up (I hate it but its most people's go to resource)<br><br>
 
 |![Duo](/assets/internguide/duoapppic.png)|[WVU DUO][13]|
-| --- | --- |
+| ------- | ------- |
 - Super Important
 - Purpose: Dual Authentication Service for Prescriptions
 - See: Onboarding -> [“Duo Enrollment & New Hire Paperwork”][14]<br><br>
 
 |![WVU](/assets/internguide/wvuapppic.jpeg)|[WVU Library][27]|
-| --- | --- |
+| ------- | ------- |
 - [MAIN LIBRARY LINK][26]
 - [Annals of Internal Medicine][25]
 - [Clinical Key][24]
@@ -102,12 +102,12 @@ layout: post
     - Your password expires often, use this link to reset your password<br><br>
 
 |![WVUMED](/assets/internguide/wvumedapppic.jpeg)|[WVU Medicine][15]|
-| --- | --- |
+| ------- | ------- |
 - Purpose: WVU account
 - Click the link, “Claim Account” and follow the instructions.<br><br>
 
 |![WVHIN](/assets/internguide/wvhinapppic.png)|[WVHIN][16]|
-| --- | --- |
+| ------- | ------- |
 - Use: See hospital records from participating facilities around WV
 - Email: info@wvhin.org
     - Title: WVHIN Access
@@ -115,7 +115,7 @@ layout: post
     - You will be sent a link in the next 24-72 hours. Follow said link and you’ll be granted access within the next few days after that.<br><br>
 
 |![Zoom](/assets/internguide/zoomapppic.jpeg)|[Zoom][17]|
-| --- | --- |
+| ------- | ------- |
 - Link if you are unable to attend in person
 - Meeting ID: 768 440 2271<br><br>
 
@@ -151,3 +151,5 @@ layout: post
 [27]: https://login.www.libproxy.wvu.edu/login?qurl=https%3a%2f%2fwww.ncbi.nlm.nih.gov%2fpubmed%3fholding%3dwvuhsclib_fft_ndi%26otool%3dwvuhsclib
 [28]: https://www.mdcalc.com/
 [29]: https://sites.google.com/wv.gov/davetraining/home
+[30]: https://youtu.be/PkuhbUnTKi4
+[31]: https://youtu.be/dkpLhmxxwpU
