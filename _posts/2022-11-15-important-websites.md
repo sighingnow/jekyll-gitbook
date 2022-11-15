@@ -10,6 +10,7 @@ layout: post
 
 | ![AMION](/assets/internguide/amionapppic.png) | [AMION][1] |
 | ------- | ------- |
+
 - “AM”-“I”-“ON”, like am I on shift?
 - Use: Resident Schedule
     - Can be used to see who is on call, who is on nights, etc.
@@ -19,6 +20,7 @@ layout: post
 
 |![AMS](/assets/internguide/amsapppic.png)|[AMS Connect][2]|
 | ------- | ------- |
+
 - Purpose: HIPPA Complaint Messaging System
 - Download the AMSConnect App from the app store
 - AMS will Email you a link to activate your account

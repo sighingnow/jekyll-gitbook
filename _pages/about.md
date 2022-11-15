@@ -12,27 +12,28 @@ layout: about
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-      * {
-        color: #000000;
-      }
       body {   
-        background-image: url('assets/Background.png');
-        style="width:100%"
-        background-repeat: no-repeat;
+        position: relative;
+        background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: #FFFFFF;
+        cursor: default;
       }
       .leftcolumn {
-        float:left; 
+        float: left; 
         width: 45%;
         height: 700px;
         width: 300px;
         margin-right: 20px;
       }
       .rightcolumn {
-        float:right; 
+        float: right; 
         width: 45%;
         height: 700px;
-        padding-left: 20px;
+        color: black;
+        background-color: rgba(255, 255, 255, .75);
       }
       .row:after {
         content: "";
@@ -57,7 +58,7 @@ layout: about
       img {
         display: block;
         padding: 10px;
-        border: 4px solid #222;
+        border: 4px solid #FFFFFF;
       }
       .footer {
         background-color: #F1F1F1;

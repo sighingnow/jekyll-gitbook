@@ -20,6 +20,7 @@ h2{
     font-size: 100%;
     padding: none;
     border: none;
+    line-height: 15px;
 }
 h3 {
     text-align: center;
