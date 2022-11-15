@@ -16,7 +16,7 @@ layout: about
         color: #000000;
       }
       body {   
-        background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/Background.png?raw=true');
+        background-image: url('_site/assets/Background.png');
         background-repeat: no-repeat;
         background-size: cover;
       }
