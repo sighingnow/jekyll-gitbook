@@ -15,9 +15,11 @@
                     </h1>
                 </div>
                 <div class="body-inner">
+                <section>
                     <div class="page-wrapper" tabindex="-1" role="main">
                             <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true"
-                                alt="{{ page.title | escape }}"
+                                width="100%"
+                                height="{{ page.height | default: '100%' }}"
                             />
                         <div class="page-inner">
                             <div id="book-search-results">
@@ -38,6 +40,7 @@
                         </div>
                     </div>
                     {% include mathjax.html %}
+                </section>
                 </div>
             </div>
             <script>
