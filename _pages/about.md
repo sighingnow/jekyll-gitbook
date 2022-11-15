@@ -16,7 +16,8 @@ layout: about
         color: #000000;
       }
       body {   
-        background-image: url('_site/assets/Background.png');
+        background-image: url('assets/Background.png');
+        style="width:100%"
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -101,7 +102,7 @@ layout: about
       </div>
     </div>
     <div class="footer">
-      <h5></h5>
+      <h6></h6>
     </div>
   </body>
 </html>

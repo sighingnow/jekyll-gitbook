@@ -6,7 +6,9 @@ category: posts
 layout: post
 ---
 
-|![AMION](/assets/internguide/amionapppic.png)|[AMION][1]|
+
+
+| ![AMION](/assets/internguide/amionapppic.png) | [AMION][1] |
 | ------- | ------- |
 - “AM”-“I”-“ON”, like am I on shift?
 - Use: Resident Schedule
