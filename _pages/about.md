@@ -24,6 +24,7 @@ layout: about
         height: 700px;
         width: 300px;
         margin-right: 20px;
+        position: absolute;
       }
       .rightcolumn {
         float: right; 
@@ -32,6 +33,7 @@ layout: about
         color: white;
         background-color: rgba(0, 0, 0, .55);
         padding: 20px;
+        position: absolute;
       }
       h1 {
         display:none;
