@@ -11,91 +11,136 @@ layout: post
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <body>
   <table>
-  <tr>
-    <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/amionapppic.png?raw=true" alt="AMION"><br>
-    <a href="https://www.amion.com/cgi-bin/ocs">AMION</a>
-    </td>
-    <td><p>
-        - “AM”-“I”-“ON”, like am I on shift?<br>
-        - Use: Resident Schedule<br>
-        - Can be used to see who is on call, who is on nights, etc.<br>
-        - Can be downloaded and synced: follow link<br>
-        - Tutorial: <a href="https://youtu.be/hWwKKWS5No0">Finding Your Schedule on AMION</a><br>
-        - Password (case sensitive): wvu CAMC
-        <br></p></td>
-  </tr>
-  <tr>
-    <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/amsapppic.png?raw=true" alt="AMS Connect"><br>
-    <a href="https://account.amsconnectapp.com/login">AMS Connect</a>
-    </td>
-    <td><p>
-        - Purpose: HIPPA Complaint Messaging System<br>
-        - Download the AMSConnect App from the app store<br>
-        - AMS will Email you a link to activate your account<br>
-            - Set your password, agree to the terms of service<br>
-        - Sign into the app on your phone<br>
-        - See the AMSConnect Quick Start Guide for more information
-        <br></p></td>
-  </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/amionapppic.png?raw=true" alt="AMION"><br>
+        <a href="https://www.amion.com/cgi-bin/ocs">AMION</a>
+        </td>
+        <td><p>
+            - “AM”-“I”-“ON”, like am I on shift?<br>
+            - Use: Resident Schedule<br>
+            - Can be used to see who is on call, who is on nights, etc.<br>
+            - Can be downloaded and synced: follow link<br>
+            - Tutorial: <a href="https://youtu.be/hWwKKWS5No0">Finding Your Schedule on AMION</a><br>
+            - Password (case sensitive): wvu CAMC
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/amsapppic.png?raw=true" alt="AMS Connect"><br>
+        <a href="https://account.amsconnectapp.com/login">AMS Connect</a>
+        </td>
+        <td><p>
+            - Purpose: HIPPA Complaint Messaging System<br>
+            - Download the AMSConnect App from the app store<br>
+            - AMS will Email you a link to activate your account<br>
+                - Set your password, agree to the terms of service<br>
+            - Sign into the app on your phone<br>
+            - See the AMSConnect Quick Start Guide for more information
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/wvbopapppic.png?raw=true" alt="WVBOP"><br>
+        <a href="https://www.csappwv.com/Account/Login.aspx?ReturnUrl=%2f">CSAPP/RxDataTrack/WV Board of Pharmacy</a>
+        </td>
+        <td><p>
+            - Purpose: Controlled Substance Monitoring Program<br>
+            - Tutorial: <a href="https://youtu.be/PkuhbUnTKi4">Accessing WV Board of Pharmacy</a>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/daveapppic.png?raw=true" alt="DAVE"><br>
+        <a href="https://davewv.vitalchek.com/web/Logon.aspx">DAVE (Database Application for Vital Events) System</a>
+        </td>
+        <td><p>
+            - Purpose: Death Pronouncement<br>
+            - <a href="https://sites.google.com/wv.gov/davetraining/home">Tutorial</a>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/excelapppic.jpeg?raw=true" alt="Excel"><br>
+        <a href="https://camcorg.sharepoint.com/:f:/r/sites/DPT_IAM_Internal_Medicine_Program_26296/Shared%20Documents/Med%20Service-ICU%20Team%20Lists?csf=1&web=1&e=4v9oTJ">Excel Teams</a>
+        </td>
+        <td><p>
+            - Requires login information<br>
+            - Purpose: Handoff Lists, Continuity of care<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/goodrxapppic.png?raw=true" alt="GoodRx"><br>
+        GoodRx
+        </td>
+        <td><p>
+            - Just download the App phone app for Providers<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/emcritapppic.png?raw=true" alt="EMCRIT"><br>
+        <a href="https://emcrit.org/ibcc/toc/">EMCRIT - Internet Book of Critical Care (IBCC)</a>
+        </td>
+        <td><p>
+            - Use: Critical Care/EM notes<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/mdcalapppic.png?raw=true" alt="MDCalc"><br>
+        <a href="https://www.mdcalc.com/">MDCalc</a>
+        </td>
+        <td><p>
+            - Many useful calculators<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/newinnovapppic.png?raw=true" alt="New Innovations"><br>
+        <a href="https://www.new-innov.com/login/Login.aspx">New Innovations</a>
+        </td>
+        <td><p>
+            - Use: Onboarding Material Location, Login for Morning Report and Noon Didactics, Logging Duty Hours and Procedures, Evaluations<br>
+            - Tutorial: <a href="https://youtu.be/dkpLhmxxwpU">Logging Duty Hours on New Innovation</a>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/outlookapppic.png?raw=true" alt="Outlook"><br>
+        <a href="https://outlook.office.com/mail/">Outlook</a>
+        </td>
+        <td><p>
+            - Email, requires login information <br>
+            - Tutorial: <a href="https://youtu.be/p6yKzWvLs74">Microsoft Office/Outlook/OneDrive/SharePoint</a>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/onedriveapppic.jpeg?raw=true" alt="OneDrive"><br>
+        <a href="https://login.microsoftonline.com/">OneDrive</a>
+        </td>
+        <td><p>
+            - Calendar, SharePoint, Microsoft Office (Microsoft Word, Microsoft PowerPoint, Microsoft Excel)<br>
+            - Tutorial: <a href="https://youtu.be/p6yKzWvLs74">Microsoft Office/Outlook/OneDrive/SharePoint</a>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/otherapppic.png?raw=true" alt="Supplementary Resources"><br>
+        Supplementary Resources
+        </td>
+        <td><p>
+            - Podcasts<br>
+                - The Curbsiders Internal Medicine<br>
+                - Louisville Lectures (IM Lecture Series)<br>
+                - Core IM<br>
+            - Blogs<br>
+                - Newyorker.com by Atul Gawande<br>
+                - Medrants.com<br>
+                - Pbfluids.com<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/uptotdateapppic.png?raw=true" alt="UpToDate"><br>
+        <a href="https://www.uptodate.com/login">UpToDate</a>
+        </td>
+        <td><p>
+        - Purpose: Looking stuff up (I hate it but its most people's go to resource)
+            <br></p></td>
+    </tr>
 </table>
 
 
-|![WVBOP](/assets/internguide/wvbopapppic.png)|[CSAPP/RxDataTrack/WV Board of Pharmacy][3]|
-| ------- | ------- |
-- Purpose: Controlled Substance Monitoring Program
-- Tutorial: [Accessing WV Board of Pharmacy][30]<br><br>
-
-|![DAVE](/assets/internguide/daveapppic.png)|[DAVE (Database Application for Vital Events) System][4]|
-| ------- | ------- |
-- Purpose: Death Pronouncement
-- [Tutorial][29]<br><br>
-
-|![Excel](/assets/internguide/excelapppic.jpeg)|[Excel Team Lists][5]|
-| ------- | ------- |
-- Requires login information
-- Purpose: Handoff Lists, Continuity of care<br><br>
-
-|![GoodRx](/assets/internguide/goodrxapppic.png)|GoodRx|
-| --- | --- |
-- Just download the App phone app for Providers<br><br>
-
-|![EMCRIT](/assets/internguide/emcritapppic.png)|[Internet Book of Critical Care (IBCC)][6]|
-| ------- | ------- |
-- Use: Critical Care/EM notes<br><br>
-
-|![MDCalc](/assets/internguide/mdcalapppic.png)|[MdCalc][28]|
-| ------- | ------- |
-- Many useful calculators<br><br>
-
-|![NewInnov](/assets/internguide/newinnovapppic.png)|[New Innovations][8]|
-| ------- | ------- |
-- Use: Onboarding Material Location, Login for Morning Report and Noon Didactics, Logging Duty Hours and Procedures, Evaluations
-- Tutorial: [Logging Duty Hours on New Innovation][31]<br><br>
-
-|![Outlook](/assets/internguide/outlookapppic.png)|[Outlook][9]|
-| ------- | ------- |
-- Email, requires login information
-- Tutorial: [Microsoft Office/Outlook/OneDrive/SharePoint][11]<br><br>
-
-|![OneDrive](/assets/internguide/onedriveapppic.jpeg)|[OneDrive][10]|
-| ------- | ------- |
-- Calendar, SharePoint, Microsoft Office (Microsoft Word, Microsoft PowerPoint, Microsoft Excel)
-- Tutorial: [Microsoft Office/Outlook/OneDrive/SharePoint][11]<br><br>
-
-|![Supplementary Resources](/assets/internguide/otherapppic.png)|Supplementary Resources|
-| ------- | ------- |
-- Podcasts
-    - The Curbsiders Internal Medicine
-    - Louisville Lectures (IM Lecture Series)
-    - Core IM
-- Blogs
-    - Newyorker.com by Atul Gawande
-    - Medrants.com
-    - Pbfluids.com<br><br>
-
-|![UpToDate](/assets/internguide/uptotdateapppic.png)|[Uptodate][12]|
-| ------- | ------- |
-- Purpose: Looking stuff up (I hate it but its most people's go to resource)<br><br>
 
 |![Duo](/assets/internguide/duoapppic.png)|[WVU DUO][13]|
 | ------- | ------- |
