@@ -10,6 +10,7 @@ layout: about
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
       body {   
+        background: unset;
         background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background-size: cover;
         background-position: center center;
