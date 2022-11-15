@@ -2,12 +2,16 @@
 title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
-layout: about
-output: html
+layout: post
+output: html_document
 ---
 
-<!DOCTYPE HTML>
 <html lang="en" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
       * {
         color: #000000;
@@ -20,14 +24,14 @@ output: html
       }
       .leftcolumn {
         float:left; 
-        width: 50%;
+        width: 45%;
         height: 600px;
         width: 300px;
         margin-right: 20px;
       }
       .rightcolumn {
         float:right; 
-        width: 50%;
+        width: 45%;
         height: 600px;
         padding-left: 20px;
       }
@@ -39,8 +43,9 @@ output: html
       h1 {
         display:none;
       }
-      h3 {
+      h5 {
         text-align: center;
+        font-size: 150%;
         margin: 15px;
         padding: 10px;
         border: 1px solid #000000;
@@ -66,11 +71,11 @@ output: html
   <body>
     <div class="row">
       <div class="leftcolumn">
-        <img src="../assets/profilepic.jpg" alt="Me" width="280" height="380">
+        <img src="../assets/profilepic.jpg" alt="Me"/>
         <h4>J. Austin Straley, DO</h4>
       </div>
       <div class="rightcolumn">
-        <h3>About Me</h3>
+        <h5>About Me</h5>
         <p>
             Education
             <ul>

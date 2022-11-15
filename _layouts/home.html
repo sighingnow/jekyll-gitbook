@@ -16,15 +16,30 @@
             {%- include toc-date.html -%}
 
             <div class="book-body">
-                <div class="book-header" role="navigation">
+                <div class="book-header" role="navigation" style="background-color: rbg(255, 255, 255);">
                     <!-- Title -->
+                    <div class="dropdown pull-right js-toolbar-action">
+                        <a class="btn toggle-dropdown" aria-label="Share" title="Share" href="#">
+                            <i class="fa fa-share-alt"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-left">
+                            <div class="dropdown-caret">
+                                <span class="caret-outer"></span>
+                                <span class="caret-inner"></span></div>
+                            <div class="buttons">
+                                <button class="button size-5 ">Facebook</button>
+                                <button class="button size-5 ">Twitter</button>
+                                <button class="button size-5 ">LinkedIn</button>
+                                <button class="button size-5 ">Weibo</button>
+                                <button class="button size-5 ">Instapaper</button>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn pull-right js-toolbar-action" aria-label="Github" title="Github" href="#">
+                        <i class="fa fa-github"></i></a>
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
-                        {% if page.title %}
-                            <a href="." >{{ page.title | escape }}</a>
-                        {% else %}
                             <a href="." >{{ site.title | escape }}</a>
-                        {% endif %}
                     </h1>
                 </div>
 
