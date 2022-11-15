@@ -2,7 +2,7 @@
 title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
-layout: post
+layout: about
 ---
 
 <html lang="en" >
