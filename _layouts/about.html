@@ -3,6 +3,17 @@
     <head>
         {%- include head.html -%}
     </head>
+    <style>
+    .bg-image {
+        background-image: url("https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true");
+        background-color: #cccccc;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    </style>
     <body>
         <div class="book">
             {%- include toc-date.html -%}
@@ -21,8 +32,6 @@
                                 width="100%"
                                 height="{{ page.height | default: '100%' }}"
                             />
-
-                                        {{ content }}
                         <div class="page-inner">
                             <div id="book-search-results">
                                 <div class="search-noresults">
@@ -32,6 +41,8 @@
                                         {% else %}
                                             <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
                                         {% endif %}
+
+                                        {{ content }}
                                     </section>
                                 </div>
 
