@@ -6,28 +6,39 @@ category: posts
 layout: post
 ---
 
+<html lang="en" >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <body>
+  <table>
+  <tr>
+    <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/amionapppic.png?raw=true" alt="AMION"><br>
+    <a href="https://www.amion.com/cgi-bin/ocs">AMION</a>
+    </td>
+    <td><p>
+        - “AM”-“I”-“ON”, like am I on shift?<br>
+        - Use: Resident Schedule<br>
+        - Can be used to see who is on call, who is on nights, etc.<br>
+        - Can be downloaded and synced: follow link<br>
+        - Tutorial: <a href="https://youtu.be/hWwKKWS5No0">Finding Your Schedule on AMION</a><br>
+        - Password (case sensitive): wvu CAMC
+        <br></p></td>
+  </tr>
+  <tr>
+    <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/amsapppic.png?raw=true" alt="AMS Connect"><br>
+    <a href="https://account.amsconnectapp.com/login">AMS Connect</a>
+    </td>
+    <td><p>
+        - Purpose: HIPPA Complaint Messaging System<br>
+        - Download the AMSConnect App from the app store<br>
+        - AMS will Email you a link to activate your account<br>
+            - Set your password, agree to the terms of service<br>
+        - Sign into the app on your phone<br>
+        - See the AMSConnect Quick Start Guide for more information
+        <br></p></td>
+  </tr>
+</table>
 
-
-| ![AMION](/assets/internguide/amionapppic.png) | [AMION][1] |
-| ------- | ------- |
-|   |   |
-
-- “AM”-“I”-“ON”, like am I on shift?
-- Use: Resident Schedule
-    - Can be used to see who is on call, who is on nights, etc.
-    - Can be downloaded and synced: follow link
-- Tutorial: [Finding Your Schedule on AMION][7]
-- Password (case sensitive): wvu CAMC<br><br>
-
-|![AMS](/assets/internguide/amsapppic.png)|[AMS Connect][2]|
-| ------- | ------- |
-
-- Purpose: HIPPA Complaint Messaging System
-- Download the AMSConnect App from the app store
-- AMS will Email you a link to activate your account
-    - Set your password, agree to the terms of service
-- Sign into the app on your phone
-- See the AMSConnect Quick Start Guide for more information<br><br>
 
 |![WVBOP](/assets/internguide/wvbopapppic.png)|[CSAPP/RxDataTrack/WV Board of Pharmacy][3]|
 | ------- | ------- |

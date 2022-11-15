@@ -11,7 +11,7 @@ layout: about
   <style>
       body {   
         position: relative;
-        background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
+        background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background-size: cover;
         background-position: center center;
         background-attachment: fixed;

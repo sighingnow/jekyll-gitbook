@@ -12,7 +12,7 @@
 // { platform: twitter,        user_url: "" }
 // { platform: youtube,        user_url: "https://www.youtube.com/channel/UCAAanG5A04oCXc2JnTjjLRQ" }
 
-
+//side panel
 require(['gitbook', 'jquery'], function(gitbook, $) {
     var SITES = {
         'facebook': {
@@ -28,7 +28,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-github',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://https://github.com/jzstraley');
+                window.open('https://github.com/jzstraley');
             }
         },
         'google': {
@@ -36,7 +36,15 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-google-plus',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://plus.google.com/share?url='+encodeURIComponent(location.href));
+                window.open('');
+            }
+        },
+        'linkedin': {
+            'label': 'LinkedIn',
+            'icon': 'fa fa-linkedin',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open('https://www.linkedin.com/in/jamesstraley');
             }
         },
     };
