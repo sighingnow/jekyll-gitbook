@@ -3,9 +3,66 @@ title: About
 author: J. Austin Straley, DO
 date: 2022-11-11
 layout: about
+output: html
 ---
 
-<html>
+<!DOCTYPE HTML>
+<html lang="en" >
+  <style>
+      * {
+        color: #000000;
+      }
+      body {   
+        box-sizing: border-box;
+        background-image: url('../assets/Background.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .leftcolumn {
+        float:left; 
+        width: 50%;
+        height: 600px;
+        width: 300px;
+        margin-right: 20px;
+      }
+      .rightcolumn {
+        float:right; 
+        width: 50%;
+        height: 600px;
+        padding-left: 20px;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      h1 {
+        display:none;
+      }
+      h3 {
+        text-align: center;
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid #000000;
+      }
+      h4 {
+        text-align: center;
+        display: block;
+        padding: 5px;
+      }
+      img {
+        display: block;
+        padding: 10px;
+        border: 4px solid #222;
+      }
+      .footer {
+        background-color: #F1F1F1;
+        text-align: center;
+        padding: 10px;
+        height: 800px;
+        width: auto;
+      }
+  </style>
   <body>
     <div class="row">
       <div class="leftcolumn">
@@ -44,5 +101,4 @@ layout: about
       <h5></h5>
     </div>
   </body>
-
 </html>
