@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <style>
-      book-body {   
+      body {   
         background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
         background-size: cover;
@@ -17,7 +17,7 @@
     <body>
         <div class="book">
             {%- include toc-date.html -%}
-            <div class="book-body" href="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true">
+            <div class="book-body"> <a href="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true">
                 <div class="book-header" role="navigation">
                     <!-- Title -->
                     <h1>
@@ -36,7 +36,7 @@
                                         {% else %}
                                             <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
                                         {% endif %}
-                                                                                {{ content }}
+                                        {{ content }}
                                     </section>
                                 </div>
 
