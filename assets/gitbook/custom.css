@@ -48,13 +48,13 @@
     background: #1c1f2b;
 }
 
-.page-inner {
+/* .page-inner {
     max-width: {{ site.page_width | default: '800px' }};
-}
+} */
 
-.back-to-top {
+/* .back-to-top {
     right: calc((100% - 300px - min(100% - 300px, {{ site.page_width | default: '800px' }})) / 2 + 25px);
-}
+}*/
 
 /* scrollbar */
 ::-webkit-scrollbar {
