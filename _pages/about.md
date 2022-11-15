@@ -8,6 +8,7 @@ layout: post
 <html>
 <head>
 <title display="none"></title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
@@ -24,14 +25,14 @@ body {
 }}
 .leftcolumn {
   float:left; 
-  width: 45%;
-  height: 400px;
+  width: 50%;
+  height: 600px;
   width: 300px;
   margin-right: 20px;
 }
 .rightcolumn {
-  float:left; 
-  width: 45%;
+  float:right; 
+  width: 50%;
   height: 600px;
   padding-left: 20px;
 }
@@ -70,13 +71,13 @@ img {
 }
 </style>
 </head>
-
+<meta charset="UTF-8">
 <body>
 <div class="header">
 </div>
 <div class="row">
   <div class="leftcolumn">
-    <img src="../assets/IMG_3414.jpg" alt="Me">
+    <img src="../assets/profilepic.jpg" alt="Me" width="280" height="380">
     <h4>J. Austin Straley, DO</h4>
   </div>
   <div class="rightcolumn">

@@ -8,6 +8,7 @@ layout: post
 
 <html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 h1 {
@@ -87,7 +88,7 @@ h6 {
         <h2><li>Other</li></h2>
             <ul><li>Death Pronouncement</li></ul>
             <ul><li>Research</li></ul>
-            <ul><li>Important Websites</li></ul>
+            <ul><li><a href="/posts/2022-11-15-important-websites.html">Important Websites</a></li></ul>
         <h2><li>Onboarding Checklist</li></h2>
         <h2><li>Referenced Material</li></h2>
         <h2><li>Licensing</li></h2>
