@@ -1,7 +1,7 @@
             "sharing": {
                 "all": ["facebook", "google", "github", "linkedin"],
                 "facebook": true,
-                "facebook_link": "https://github.com/jzstraley",
+                "facebook_link": "https://www.facebook.com/Straley/",
                 "google": false,
                 "github": true,
                 "github_link": "https://github.com/jzstraley",

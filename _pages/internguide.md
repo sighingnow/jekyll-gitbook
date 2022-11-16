@@ -52,9 +52,9 @@ h6 {
     <br>
     <ol>
         <h2><li>The Basics</li></h2>
-        <h2><li><a href="/posts/2022-11-14-cerner.html">Cerner</a></li></h2>
+        <h2><li><a href="/internguidepages/2022-11-14-cerner.html">Cerner</a></li></h2>
             <ul><li>Dotphrases</li></ul>
-            <ul><li><a href="/posts/2022-11-15-cerner-shortcuts.html">Cerner Shortcuts</a></li></ul>
+            <ul><li><a href="/internguidepages/2022-11-15-cerner-shortcuts.html">Cerner Shortcuts</a></li></ul>
         <h2><li>Day-to-Day on the Medicine Service</li></h2>
             <ul><li>How to Write a Progress Note</li></ul>
             <ul><li>Cap Rules</li></ul>
@@ -91,7 +91,7 @@ h6 {
         <h2><li>Other</li></h2>
             <ul><li>Death Pronouncement</li></ul>
             <ul><li>Research</li></ul>
-            <ul><li><a href="/posts/2022-11-15-important-websites.html">Important Websites</a></li></ul>
+            <ul><li><a href="/internguidepages/2022-11-15-important-websites.html">Important Websites</a></li></ul>
         <h2><li>Onboarding Checklist</li></h2>
         <h2><li>Referenced Material</li></h2>
         <h2><li>Licensing</li></h2>

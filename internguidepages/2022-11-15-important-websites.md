@@ -2,7 +2,6 @@
 title: Important Websites
 author: J. Austin Straley, DO
 date: 2022-11-15
-category: posts
 layout: post
 ---
 

@@ -46,7 +46,7 @@ h6 {
 <div class="row">
     <h5>By: J. Austin Straley, DO</h5>
     <ol type="I">
-        <h2><li>Cards and <a href="../docs/vascular.html">Vascular</a></li></h2>
+        <h2><li>Cards and <a href="/worddocs/2022-11-15-vascular.html">Vascular</a></li></h2>
         <h2><li>Pulm and ICU</li></h2>
         <h2><li>GI and Hepatobiliary</li></h2>
         <h2><li>Nephrology, Urology, and Male GU</li></h2>

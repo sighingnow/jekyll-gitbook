@@ -1,31 +1,196 @@
 <!DOCTYPE HTML>
 <html lang="en" >
-    <style>
-      body {
-        background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        color: #FFFFFF;
-        cursor: default;
-      }
-      </style>
+    
     <head>
-        {%- include head.html -%}
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+        {%- if page.title -%}
+            <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
+        {%- else -%}
+            <title>{{ site.title | escape }}</title>
+        {%- endif -%}
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="{{site.description}}">
+
+        {%- if site.gitbook_version -%}
+            <meta name="generator" content="Jekyll (using style of GitBook {{ site.gitbook_version | escape }})">
+        {%- else -%}
+            <meta name="generator" content="Jekyll (using style of GitBook)">
+        {%- endif -%}
+
+        {%- if site.author -%}
+            <meta name="author" content="{{ site.author | escape }}">
+        {%- endif -%}
+
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/style.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/gitbook-plugin-search-pro/search.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/rouge/{{ site.syntax_highlighter_style | default: 'colorful' }}.css">
+
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/custom.css">
+
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{site.baseurl}}/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="{{site.baseurl}}/{{site.favicon_path}}" type="image/x-icon">
+
+        {% if site.extra_css %}
+            {%- for extra_css in site.extra_css -%}
+                {%- assign starts_with = extra_css | slice: 0,4 -%}
+                {% if starts_with == "http" %}
+        <link rel="stylesheet" href="{{ extra_css }}">
+                {%- else -%}
+        <link rel="stylesheet" href="{{site.baseurl}}/{{ extra_css }}">
+                {%- endif -%}
+            {%- endfor -%}
+        {% endif %}
+
+        {% if site.extra_header_js %}
+            {%- for extra_js in site.extra_header_js -%}
+                {%- assign starts_with = extra_js | slice: 0,4  -%}
+                {% if starts_with == "http" %}
+        <script src="{{ extra_js }}"></script>
+                {%- else -%}
+        <script src="{{site.baseurl}}/{{ extra_js }}"></script>
+                {%- endif -%}
+            {%- endfor -%}
+        {% endif %}
+
+        {%- if site.tracker -%}
+            <!-- trackers -->
+
+            {%- if site.tracker.application_insights -%}
+                <!-- application insights -->
+                {%- include application-insights.html -%}
+            {%- endif -%}
+
+        {%- endif -%}
     </head>
+    <style>
+        div {
+            background-image: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; 
+        }
+        nav {
+            background-image: inherit;
+            }
+        .leftcolumn {
+            float: left;
+            position: absolute; 
+            width: 45%;
+            height: 700px;
+            width: 300px;
+            margin-right: 20px;
+        }
+        .rightcolumn {
+            float: right; 
+            width: 45%;
+            height: 700px;
+            color: white;
+            background-color: rgba(0, 0, 0, .55);
+            padding: 20px;
+        }
+    </style>
     <body>
         <div class="book">
-            {%- include toc-date.html -%}
+            <div class="book-summary">
+                <nav role="navigation">
+                    <div id="book-search-input" role="search">
+                        <!-- Search bar -->
+                        <input type="text" placeholder="Type to search" />
+                    </div>
+                    <div id="book-search-input-link" role="search">
+                        <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
+                    </div>
+                    <ul class="summary">
+                        {% if page.url == "/index.html" or page.url == "/" %}
+                        <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
+                        {% else %}
+                        <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
+                        {% endif %}
+                            <a href="{{site.baseurl}}/">
+                                {{ site.title | escape }}
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        {% for collection in site.collections %}
+                            <!-- <p>{{ collection.label }}</p> -->
+                            {% if collection.output %}
+                                {% if collection.label == "posts" %}
+                                    {% assign reversed_posts = site[collection.label] | reverse %}
+                                {% else %}
+                                    {% assign reversed_posts = site[collection.label] %}
+                                {% endif %}
+
+                                {% for post in reversed_posts %}
+                                    {% if page.url == post.url %}
+                                    <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                                    {% else %}
+                                    <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
+                                    {% endif %}
+                                        <a href="{{site.baseurl}}{{post.url}}">
+                                            {{ post.title | escape }}
+                                        </a>
+                                        {% if site.toc.enabled %}
+                                            {% if page.url == post.url %}
+                                                {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                            {% endif %}
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+
+                                {% if reversed_posts.size > 0 %}
+                                    <li class="divider"></li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
             <div class="book-body">
                 <div class="book-header" role="navigation">
-                    <!-- Title -->
+                    <!-- NavBar Title -->
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
-                            <a href="." >{{ site.title | escape }}</a>
+                            <a href="https://www.imteched.com/" >{{ site.title | escape }}</a>
                     </h1>
                 </div>
                 <div class="body-inner">
-                    {%- include body.html -%}
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        {% if page.cover %}
+                            <img src="{{ page.cover }}"
+                                width="100%"
+                                height="{{ page.cover_height | default: '100%' }}"
+                                alt="{{ page.title | escape }}"
+                                style="object-fit: cover;"
+                            />
+                        {% endif %}
+
+                        <div class="page-inner">
+                            <div id="book-search-results">
+                                <div class="search-noresults">
+                                    <section class="normal markdown-section">
+                                        {{ content }}
+                                    </section>
+                                </div>
+
+                                {%- include search.html -%}
+                            </div>
+                        </div>
+                    </div>
+
+                    {% include mathjax.html %}
                 </div>
             </div>
             <script>
@@ -35,6 +200,43 @@
             });
             </script>
         </div>
-        {%- include footer.html -%}
+            <footer class="site-footer h-card">
+                <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+                <div class="wrapper">
+
+                    <div class="footer-col-wrapper">
+                    <div class="footer-col">
+                        <p class="feed-subscribe">
+                        <a href="{{ 'feed.xml' | relative_url }}">
+                            <svg class="svg-icon orange">
+                            <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+                            </svg><span>Subscribe</span>
+                        </a>
+                        </p>
+                    {%- if site.author %}
+                        <ul class="contact-list">
+                        {% if site.author.name -%}
+                            <li class="p-name">{{ site.author.name | escape }}</li>
+                        {% endif -%}
+                        {% if site.author.email -%}
+                            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+                        {%- endif %}
+                        </ul>
+                    {%- endif %}
+                    </div>
+                    <div class="footer-col">
+                        <p>{{ site.description | escape }}</p>
+                    </div>
+                    </div>
+
+                    <div class="social-links">
+                    {%- include social.html -%}
+                    </div>
+
+                </div>
+
+            </footer>
+
     </body>
 </html>

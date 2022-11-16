@@ -5,38 +5,8 @@ date: 2022-11-11
 layout: about
 ---
 
-<html lang="en" >
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
   <style>
-      body {   
-        background: unset;
-        background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        color: #FFFFFF;
-        cursor: default;
-      }
-      .leftcolumn {
-        float: left;
-        position: absolute; 
-        width: 45%;
-        height: 700px;
-        width: 300px;
-        margin-right: 20px;
-      }
-      .rightcolumn {
-        float: right; 
-        width: 45%;
-        height: 700px;
-        color: white;
-        background-color: rgba(0, 0, 0, .55);
-        padding: 20px;
-      }
-      h1 {
-        display:none;
-      }
       h5 {
         text-align: center;
         font-size: 150%;
