@@ -138,79 +138,62 @@ layout: post
         - Purpose: Looking stuff up (I hate it but its most people's go to resource)
             <br></p></td>
     </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/duoapppic.png?raw=true" alt="Duo"><br>
+        <a href="https://api-30013422.duosecurity.com/portal?code=21b4d5751036bfe5&akey=DA6CSOIIKNS6NKKMM3RG">WV DUO</a>
+        </td>
+        <td><p>
+            - Super Important<br>
+            - Purpose: Dual Authentication Service for Prescriptions<br>
+            - See: Onboarding -> <a href="https://guide.duo.com/enrollment">Duo Enrollment & New Hire Paperwork</a>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/wvuapppic.jpeg?raw=true" alt="WVUlib"><br>
+        <a href="https://login.www.libproxy.wvu.edu/login?qurl=https%3a%2f%2fwww.ncbi.nlm.nih.gov%2fpubmed%3fholding%3dwvuhsclib_fft_ndi%26otool%3dwvuhsclib">WVU Library</a>
+        </td>
+        <td><p>
+            - <a href="https://login.www.libproxy.wvu.edu/menu">MAIN LIBRARY LINK</a><br>
+            - <a href="https://annals-org.www.libproxy.wvu.edu/aim">Annals of Internal Medicine</a><br>
+            - <a href="https://www-clinicalkey-com.www.libproxy.wvu.edu/#!/">Clinical Key</a><br>
+                - ^^ Go to “Books” to see books we have access to<br>
+            - <a href="https://lib.wvu.edu/databases/connect.php?1236803193=INVS">Harrison’s</a><br>
+            - <a href="https://www-nejm-org.www.libproxy.wvu.edu/">New England Journal of Medicine</a><br>
+            - <a href="https://www-clinicalkey-com.www.libproxy.wvu.edu/#!/browse/procedures">Procedures Consult</a><br>
+            - <a href="https://login.www.libproxy.wvu.edu/login?qurl=https%3a%2f%2fwww.ncbi.nlm.nih.gov%2fpubmed%3fholding%3dwvuhsclib_fft_ndi%26otool%3dwvuhsclib">Pubmed</a><br>
+            - <a href="https://lib.wvu.edu/databases/connect.php?1444228039=INVS">Visual DX</a><br>
+            - <a href="https://login.wvu.edu/self-service">WVU PASSWORD RESET LINK</a><br>
+                - Your password expires often, use this link to reset your password<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/wvumedapppic.jpeg?raw=true" alt="WVMED"><br>
+        <a href="https://wvumedicine.org/login/">WVU Medicine</a>
+        </td>
+        <td><p>
+            - Purpose: WVU account<br>
+            - Click the link, “Claim Account” and follow the instructions.<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/wvhinapppic.png?raw=true" alt="WVHIN"><br>
+        <a href="https://idp.crisphealth.org/#login">WV Health Information Network (WVHIN)</a>
+        </td>
+        <td><p>
+            - Use: See hospital records from participating facilities around WV<br>
+            - Email: info@wvhin.org<br>
+            - Title: WVHIN Access<br>
+                - Ex. “To whom this may concern, I am a resident physician at CAMC and I am requesting access to the WVHIN”<br>
+            - You will be sent a link in the next 24-72 hours. Follow said link and you’ll be granted access within the next few days after that.<br>
+            <br></p></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;"><img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/internguide/zoomapppic.jpeg?raw=true" alt="Zoom"><br>
+        <a href="https://wvumdtv.zoom.us/j/7684402271?pwd=M3lnR25sY0lRaFIzTjFaZ1AveCtDQT09">Zoom</a>
+        </td>
+        <td><p>
+            - Link if you are unable to attend in person<br>
+            - Meeting ID: 768 440 2271<br>
+            <br></p></td>
+    </tr>
 </table>
-
-
-
-|![Duo](/assets/internguide/duoapppic.png)|[WVU DUO][13]|
-| ------- | ------- |
-- Super Important
-- Purpose: Dual Authentication Service for Prescriptions
-- See: Onboarding -> [“Duo Enrollment & New Hire Paperwork”][14]<br><br>
-
-|![WVU](/assets/internguide/wvuapppic.jpeg)|[WVU Library][27]|
-| ------- | ------- |
-- [MAIN LIBRARY LINK][26]
-- [Annals of Internal Medicine][25]
-- [Clinical Key][24]
-    - ^^ Go to “Books” to see books we have access to
-- [Harrison’s][23]
-- [New England Journal of Medicine][22]
-- [Procedures Consult][21]
-- [Pubmed][20]
-- [Visual DX][19]
-- [WVU PASSWORD RESET LINK][18]
-    - Your password expires often, use this link to reset your password<br><br>
-
-|![WVUMED](/assets/internguide/wvumedapppic.jpeg)|[WVU Medicine][15]|
-| ------- | ------- |
-- Purpose: WVU account
-- Click the link, “Claim Account” and follow the instructions.<br><br>
-
-|![WVHIN](/assets/internguide/wvhinapppic.png)|[WVHIN][16]|
-| ------- | ------- |
-- Use: See hospital records from participating facilities around WV
-- Email: info@wvhin.org
-    - Title: WVHIN Access
-    - Ex. “To whom this may concern, I am a resident physician at CAMC and I am requesting access to the WVHIN”
-    - You will be sent a link in the next 24-72 hours. Follow said link and you’ll be granted access within the next few days after that.<br><br>
-
-|![Zoom](/assets/internguide/zoomapppic.jpeg)|[Zoom][17]|
-| ------- | ------- |
-- Link if you are unable to attend in person
-- Meeting ID: 768 440 2271<br><br>
-
-
-
-
-[1]: https://www.amion.com/cgi-bin/ocs
-[2]: https://account.amsconnectapp.com/login
-[3]: https://www.csappwv.com/Account/Login.aspx?ReturnUrl=%2f
-[4]: https://davewv.vitalchek.com/web/Logon.aspx
-[5]: https://camcorg.sharepoint.com/:f:/r/sites/DPT_IAM_Internal_Medicine_Program_26296/Shared%20Documents/Med%20Service-ICU%20Team%20Lists?csf=1&web=1&e=4v9oTJ
-[6]: https://emcrit.org/ibcc/toc/
-[7]: https://youtu.be/hWwKKWS5No0
-[8]: https://www.new-innov.com/login/Login.aspx
-[9]: https://outlook.office.com/mail/
-[10]: https://login.microsoftonline.com/
-[11]: https://youtu.be/p6yKzWvLs74
-[12]: https://www.uptodate.com/login
-[13]: https://api-30013422.duosecurity.com/portal?code=21b4d5751036bfe5&akey=DA6CSOIIKNS6NKKMM3RG
-[14]: https://guide.duo.com/enrollment
-[15]: https://wvumedicine.org/login/
-[16]: https://idp.crisphealth.org/#login
-[17]: https://wvumdtv.zoom.us/j/7684402271?pwd=M3lnR25sY0lRaFIzTjFaZ1AveCtDQT09
-[18]: https://login.wvu.edu/self-service
-[19]: https://lib.wvu.edu/databases/connect.php?1444228039=INVS 
-[20]: https://login.www.libproxy.wvu.edu/login?qurl=https%3a%2f%2fwww.ncbi.nlm.nih.gov%2fpubmed%3fholding%3dwvuhsclib_fft_ndi%26otool%3dwvuhsclib 
-[21]: https://www-clinicalkey-com.www.libproxy.wvu.edu/#!/browse/procedures 
-[22]: https://www-nejm-org.www.libproxy.wvu.edu/ 
-[23]: https://lib.wvu.edu/databases/connect.php?1236803193=INVS 
-[24]: https://www-clinicalkey-com.www.libproxy.wvu.edu/#!/ 
-[25]: https://annals-org.www.libproxy.wvu.edu/aim 
-[26]: https://login.www.libproxy.wvu.edu/menu 
-[27]: https://login.www.libproxy.wvu.edu/login?qurl=https%3a%2f%2fwww.ncbi.nlm.nih.gov%2fpubmed%3fholding%3dwvuhsclib_fft_ndi%26otool%3dwvuhsclib
-[28]: https://www.mdcalc.com/
-[29]: https://sites.google.com/wv.gov/davetraining/home
-[30]: https://youtu.be/PkuhbUnTKi4
-[31]: https://youtu.be/dkpLhmxxwpU

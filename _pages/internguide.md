@@ -10,6 +10,9 @@ layout: post
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+.row{
+    padding-left:40px;
+}
 h1 {
     text-align: center;
     margin: 10px 0px;
