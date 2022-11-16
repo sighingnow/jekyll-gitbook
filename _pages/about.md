@@ -7,6 +7,22 @@ layout: about
 
 <html>
   <style>
+      .leftcolumn {
+        float: left;
+        position: absolute; 
+        width: 45%;
+        height: 700px;
+        width: 300px;
+        margin-right: 20px;
+      }
+      .rightcolumn {
+        float: right; 
+        width: 45%;
+        height: 700px;
+        color: white;
+        background-color: rgba(0, 0, 0, .55);
+        padding: 20px;
+      }
       h5 {
         text-align: center;
         font-size: 150%;
