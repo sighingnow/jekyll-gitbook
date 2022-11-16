@@ -6,7 +6,17 @@ layout: about
 ---
 
 <html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+      body {   
+        background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #FFFFFF;
+        cursor: default;
+      }
       .leftcolumn {
         float: left;
         position: absolute; 

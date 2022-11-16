@@ -6,7 +6,7 @@ permalink: /
 
 /* no longer used*/
 
-A website detailing my past, present, and future work.
+*A website detailing my past, present, and future work.*
 
 ## License
 

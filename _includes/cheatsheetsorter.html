@@ -1,29 +1,20 @@
-<div class="book-summary">
-    <nav role="navigation">
-        <div id="book-search-input" role="search">
-            <input type="text" placeholder="Type to search" />
-        </div>
-        <div id="book-search-input-link" role="search">
-            <a href="{{site.baseurl}}/assets/search.html">Click to Search</a>
-        </div>
-                    <!-- IMTechEd Title in Navbar-->
-        <ul class="summary">
+
+            <!-- IMTechEd (index.html) Title in Navbar-->
             {% if page.url == "/index.html" or page.url == "/" %}
-            <li class="chapter active" data-level="1.1" data-path="{{site.baseurl}}">
-            {% else %}
-            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
+            <li class="chapter" data-level data-path="{{site.baseurl}}">
             {% endif %}
                 <a href="{{site.baseurl}}/">
                     {{ site.title | escape }}
                 </a>
             </li>
 
-            <li class="divider"></li>
-
             {% for collection in site.collections %}
+                <!-- <p>{{ collection.label }}</p> -->
                 {% if collection.output %}
                     {% if collection.label == "posts" %}
                         {% assign reversed_posts = site[collection.label] | reverse %}
+                    {% if collection.label == "worddocs" %}
+                        {% assign reversed_posts = site[collection.label] %}
                     {% else %}
                         {% assign reversed_posts = site[collection.label] %}
                     {% endif %}
@@ -34,7 +25,7 @@
                         {% else %}
                         <li class="chapter" data-level="1" data-path="{{site.baseurl}}{{post.url}}">
                         {% endif %}
-                            <a href="{{site.baseurl}}{{post.url}}">
+                            <a href="{{post.html}}">
                                 {{ post.title | escape }}
                             </a>
                             {% if site.toc.enabled %}

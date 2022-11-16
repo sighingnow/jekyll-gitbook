@@ -37,7 +37,7 @@
             }
         },
         "theme": "default",
-        "author": "Tao He",
+        "author": "James A Straley, DO",
         "pdf": {
             "pageNumbers": true,
             "fontSize": 12,
