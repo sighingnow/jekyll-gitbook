@@ -15,6 +15,14 @@
 //side panel
 require(['gitbook', 'jquery'], function(gitbook, $) {
     var SITES = {
+        'camc': {
+            'label': 'CAMC',
+            'icon': 'fa fa-circle-h',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open('ttps://www.camcmedicine.edu/academic-departments/department-internal-medicine/internal-medicine-residency-program/our-current');
+            }
+        },
         'facebook': {
             'label': 'Facebook',
             'icon': 'fa fa-facebook',
