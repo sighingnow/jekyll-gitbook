@@ -62,7 +62,3 @@ plugins:
   - jekyll-readme-index
   - jemoji
   - jekyll-remote-theme
-
-feed:
-  collections:
-    - news
