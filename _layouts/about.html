@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link href="{{site.baseurl}}/assets/grid/bootstrap-grid.min.css" rel="stylesheet">
+        <link href="{{site.baseurl}}/assets/grid/grid.css" rel="stylesheet">
 
         {%- if page.title -%}
             <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
@@ -30,8 +32,9 @@
         <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
 
         <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/rouge/{{ site.syntax_highlighter_style | default: 'colorful' }}.css">
-
-        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/custom.css">
+        
+        <!-- Custom about copy -->
+        <link rel="stylesheet" href="{{site.baseurl}}/assets/gitbook/custom_about_copy.css">
 
         <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -140,7 +143,7 @@
                 </nav>
             </div>
             <div class="book-body">
-                <div class="book-header" style="background-color: rgba(255, 255, 255, .80);" role="navigation">
+                <div class="book-header" role="navigation">
                     <!-- NavBar Title --> <!-- Navbar changed colors-->
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>

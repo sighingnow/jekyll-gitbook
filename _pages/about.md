@@ -9,132 +9,81 @@ layout: about
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-      .book {   
-        background: url('https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/snowy-exit.jpg?raw=true');
-        background-color: rgba(0, 0, 0, .75);
-        color: #FFFFFF;
-        position: absolute;
-        cursor: default;
-        background-repeat: no-repeat;
-      }
-      .fa{
-        font-size: 20px;
-        color: black;
-        -webkit-tap-highlight-color: none;
-      }
-      .chapter{
-        color:black;
-      }
-      .book-summary {
-        background: rgba(255, 255, 255, .80);
-      }  /* side panel opacity */
-      .book-body {
-        background: rgba(0, 0, 0, .01);
-      } 
-      .book-header {
-        background: inherit;
-        position:sticky;
-      }
-      .markdown-section{
-        color:black;
-        background: rgba(255, 255, 255, .80);
-      }
-      /* body pale */
-      .leftcolumn {
-        float: left;
-        position: sticky center;
-        width: 50%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-        padding: 16px;
-        text-align: center;
-        background-color: rgba(255, 255, 255, .80);
-      }
-      .rightcolumn {
-        position: sticky; 
-        float: right;
-        color: white;
-        width: 50%;
-        background-color: rgba(0, 0, 0, .80);
-        padding: 10px;
-      }
-      h5 {
-        text-align: center;
-        font-size: 300%;
-        margin: 10px;
-        padding: 10px;
-        border: 2px solid white;
-      }
-      h4 {
-        text-align: center;
-        display: block;
-        padding: 5px;
-        color: #000000;
-        font-size: 150%;
+    .container-fluid {
+    }
+    .bd-placeholder-img {
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+    }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+      font-size: 3.5rem;
         }
-      h6 {
-        text-align: center;
-        color: black;
-        font-size: 150%;
-        margin: 15px;
-        padding: 10px;
-        border: 2px solid black;
       }
-      h1 {
-        color: #000000;
+    h5 {
+      text-align: center;
+      font-size: 275%;
+      margin: 10px;
+      padding: 10px;
+      border: 2px solid white;
+    }
+    h4 {
+      text-align: center;
+      display: block;
+      padding: 5px;
+      color: #000000;
+      font-size: 150%;
       }
-      img {
-        padding: 10px;
-        border: 4px solid;
-      }
-      .footer {
-        position: sticky;
-        bottom: 0px;
-        width: 100%;
-        background-color: rgba(255, 255, 255, .90);
-        text-align: center;
-        padding: 10px;
-        height: 0px;  
-      }
-      #page-container {
-        position: relative;
-        min-height: 60vh;
-        background-color: rgba(255, 255, 255, 0);
-        font-language-override: normal;
-      }
-      #content-wrap {
-        font-language-override: normal;
-        padding-bottom: 5rem;    /* Footer height */
-      }
-      ul {
-        padding: 10px 5 5 0;
-        margin: 5px 0;
-        line-height: 10px;
-      }
+    h6 {
+      text-align: center;
+      color: black;
+      font-size: 170%;
+      margin: 15px;
+      padding: 10px;
+      border: 2px solid black;
+    }
+    h1 {
+      color: #000000;
+    }
+    li {
+      flex-wrap: nowrap;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .row > [class*='col-'] {
+      display: flex;
+      flex-direction: column;
+    }
+    .img {
+      min-width: 120%;
+      min-height: 120%;
+    }
   </style>
   <body>
-    <div id="page-container">
-      <div id="content-wrap">
-        <div class="row">
-          <div class="leftcolumn">
-            <img src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/profilepic.jpg?raw=true" style="width:100%" alt="Avatar">
-          </div>
-          <div class="rightcolumn">
+    <div class="container-fluid">
+      <div class="row no-gutters mb-2 ">
+        <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+            <img style="min-width: 101%; min-height: 100%;" src="https://github.com/jzstraley/jzstraley.github.io/blob/master/assets/profilepic.jpg?raw=true" alt="Avatar">
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6" style= "background-color:rgba(0, 0, 0, .80)">
           <br>
-            <h5 style="font-size:170%">J. Austin Straley, DO</h5>
-            <br>
-            <p style="text-align:center;"> Valuing accessible and timely care, I'm passionate about the integration and effective utilization of technology in medicine. My commitment to improvement is evident in my teachability, diligence, and love of quality improvement. Having spent my undergraduate coursework in mathematics and aquiring a knack for computer science, I offer a unique and applicable skillset for an increasingly technology driven profession.</p><br>
-          </div>
+          <h5 style="font-size:160%; color: #F5F5F5">J. Austin Straley, DO</h5>
+          <br>
+          <p style="text-align:center; color: #F5F5F5"> Valuing accessible and timely care, I'm passionate about the integration and effective utilization of technology in medicine. My commitment to improvement is evident in my teachability, diligence, and love of quality improvement. Having spent my undergraduate coursework in mathematics and aquiring a knack for computer science, I offer a unique and applicable skillset for an increasingly technology driven profession.</p><br>
         </div>
       </div>
     </div>
-        <footer id="footer" style="font-language-override: revert;font-stretch: normal; font-size-adjust: .5; font-optical-sizing: auto; padding:10px; line-height: 90%;letter-spacing: 2px; font-kerning:normal;line-height:16px;position:relative;margin:0px 0;padding:0px 0 0 0;">
+      <footer id="footer">
           <h6 style="color:black;">Education</h6><br>
             <ul>
               <li>Internal Medicine Residency</li><br>
                 <ul><li>Charleston Area Medical Center (CAMC) | Charleston, WV</li></ul><br>
                 <ul><li>May 2021 – Present</li></ul><br>
               <li>Doctor of Osteopathic Medicine (DO)</li><br>
-                <ul><li>Lincoln Memorial University - DeBusk College of Osteopathic Medicine (LMU-DCOM) | Harrogate, Tennessee</li></ul><br>
+                <ul><li>LMU-DCOM | Harrogate, Tennessee</li></ul><br>
                 <ul><li>July 2017 – May 2021</li></ul><br>	
               <li>Undergraduate Coursework</li><br>
                 <ul><li>University of Tennessee – Knoxville | Knoxville, TN</li></ul><br>
@@ -152,24 +101,25 @@ layout: about
                 <ul><li>Fall 2012, 2013, and 2014, Spring 2015 and 2016</li></ul><br>	
               <li>Dobyns-Bennett Quarterback Club Scholarship</li><br>
                 <ul><li>Dobyns-Bennett Highschool | Kingsport, TN</li></ul><br>
-                <ul><li>Single year college scholarship for my position as a team captain and my academic record.	Fall 2012 – Spring 201</li></ul><br>	
+                <ul><li>Single year college scholarship for my position as a team captain and my academic record.</li></ul><br>	
+                <ul><li>Fall 2012 – Spring 201</li></ul><br>	
             </ul><br>
           <h6 style="color:black;">Licensure, Certification, and Training</h6><br>
             <ul>
-              <li>WV DO Board License</li><li>November 2022</li><br>
-              <li>American Heart Association: BLS/ACLS</li><li>July 2021</li><br>
-              <li>COMLEX – Level 3</li><li>October 2021</li><br>
-              <li>COMLEX – Level 2 CE</li><li>August 2020</li><br>
-              <li>COMLEX – Level 1</li><li>July 2019</li><br>
+              <li>WV DO Board License - November 2022</li><br>
+              <li>American Heart Association: BLS/ACLS - July 2021</li><br>
+              <li>COMLEX – Level 3 - October 2021</li><br>
+              <li>COMLEX – Level 2 CE - August 2020</li><br>
+              <li>COMLEX – Level 1 - July 2019</li><br>
             </ul><br>
           <h6 style="color:black;">Research Experience</h6><br>
-            <ul>
+            <ul style="font-size: 90%">
               <li>Cross-Sectional Observational Study – IRB Approved - Completed</li><br>
                 <ul><li>Charleston Area Medical Center | Charleston, WV</li></ul><br>
                 <ul><li>Co-Investigator</li></ul><br>
                 <ul><li>Project: Words Matter: The Impact of Language on Healthcare Provider Clinical Judgment</li></ul><br>
                 <ul><li>Department of Internal Medicine/Psychiatry</li></ul><br>	
-                <ul><li>PI: Dr. Adina Bowe, MD, Psychiatry, Director of Comprehensive Opioid Addiction Treatment Clinic and Assistant Professor</li></ul><br>
+                <ul><li>PI: Dr. Adina Bowe, MD, Psychiatry, Comprehensive Opioid Addiction Treatment Clinic Director</li></ul><br>
                 <ul><li>04/2022 – Present</li></ul><br>	
               <li>Prospective Study – Pending IRB Approved - Ongoing</li><br>
                 <ul><li>Charleston Area Medical Center | Charleston, WV</li></ul><br>
@@ -187,27 +137,27 @@ layout: about
               <li>Research Day Poster – Case Report</li><br>
                 <ul><li>Charleston Area Medical Center | Charleston, WV</li></ul><br>
                 <ul><li>Co-Investigator/Presenter</li></ul><br>
-                <ul><li>Case: The Confused Crab: Hyperammonemic Encephalopathy as an initial presentation of Multiple Myeloma</li></ul><br>	
+                <ul><li>The Confused Crab: Hyperammonemic Encephalopathy as an initial presentation of Multiple Myeloma</li></ul><br>	
                 <ul><li>CAMC Department of Internal Medicine</li></ul><br>	
                 <ul><li>PI: Dr. R. Scott Morehead, MD, Pulmonology and Critical Care</li></ul><br>
                 <ul><li>April 19, 2022</li></ul><br>
             </ul><br>
           <h6 style="color:black;">Work Experience</h6><br>
-            <ul>
+            <ul style="font-size: 90%">
               <li>Ophthalmic Assistant</li><br>
                 <ul><li>Regional Eye Center | Kingsport, TN</li></ul><br>
                 <ul><li>CWorked independently to prepare patients for their visit by performing preliminary eye exams</li></ul><br>
-                <ul><li>Conducted additional diagnostic testing via fundus photography, topography, and visual field assessment</li></ul><br>
+                <ul><li>Conducted diagnostic testing via fundus photography, topography, and visual field assessment</li></ul><br>
                 <ul><li>Assisted physicians as a scribe by properly documenting exam findings</li></ul><br>	
                 <ul><li>P5/2015 – 08/2015, 12/2015 – 01/2016, 07/2016 – 07/2017</li></ul><br>	
               <li>Teaching Assistant/Peer Mentor, First Year Studies 101</li><br>
                 <ul><li>University of Tennessee | Knoxville, TN</li></ul><br>
-                <ul><li>A semester-long course for incoming freshmen created to provide guidance and the means to thrive while at UT</li></ul><br>
-                <ul><li>Graded assignments, led extra-curricular class activities, and served as an in-class liaison between students and instructor</li></ul><br>	
+                <ul><li>Semester-long course for incoming freshmen created to provide guidance and the means to thrive while at UT</li></ul><br>
+                <ul><li>Graded assignments, assisted class activities, and served as an in-class liaison</li></ul><br>	
                 <ul><li>Fall 2013, 2014, and 2015</li></ul><br>		
             </ul><br>
           <h6 style="color:black;">Volunteer Experience and Community Activities</h6><br>
-            <ul>
+            <ul style="font-size: 90%">
               <li>Orientation to Presenting on Rounds</li><br>
                 <ul><li>WVUSOM | Charleston, WV</li></ul><br>
                 <ul><li>Taught upcoming 3rd year medical students the components of an oral presentation on hospital rounds</li></ul><br>
@@ -221,23 +171,23 @@ layout: about
               <li>Hospital Flu Shot and COVID-19 Contact Tracing Volunteer</li><br>
                 <ul><li>Tennova Turkey Creek Medical Center | Knoxville, TN</li></ul><br>
                 <ul><li>Assist pharmacy staff by administering flu shots to hospital staff on a weekly basis</li></ul><br>
-                <ul><li>Assist the human resources department by contact tracing COVID-19 positive patients within the hospital</li></ul><br>	
+                <ul><li>Assist the human resources department by contact tracing COVID-19 positive patients</li></ul><br>	
                 <ul><li>October 2020</li></ul><br>		
               <li>Clinical Rotations Student Assessment Team Volunteer</li><br>
                 <ul><li>LMU-DCOM | Knoxville, TN</li></ul><br>
-                <ul><li>Met with clinical rotation staff and classmates from multiple rotation sites to assess the current third year curriculum</li></ul><br>
+                <ul><li>Met with rotation staff from multiple rotation sites to assess the current third year curriculum</li></ul><br>
                 <ul><li>Received feedback from peers to adjust current curriculum</li></ul><br>	
                 <ul><li>Created and submitted recommended changes to the assessment staff</li></ul><br>	
                 <ul><li>February 2020</li></ul><br>
               <li>Clean-up Crew Volunteer</li><br>
                 <ul><li>Girls Inc. | Kingsport, TN</li></ul><br>
                 <ul><li>General facility maintenance in preparation for after school activities</li></ul><br>
-                <ul><li>Repainted and resurfaced the schoolyard, cleared brush and debris from the surrounding lawn, and improved the facility’s exterior</li></ul><br>	
+                <ul><li>Repainted and resurfaced the schoolyard, cleared brush and improved the facility’s exterior</li></ul><br>	
                 <ul><li>Fall 2014, Fall 2019</li></ul><br>	
                 <ul><li>February 2020</li></ul><br>
               <li>Student Peer Mentor</li><br>
                 <ul><li>LMU-DCOM | Harrogate, TN</li></ul><br>
-                <ul><li>Provided guidance and served as a source of answers to an incoming medical student on how to be successful during their first year</li></ul><br>
+                <ul><li>Provided guidance and served as a source of answers to an incoming medical student</li></ul><br>
                 <ul><li>Attended regular meetings and mentoring events</li></ul><br>	
                 <ul><li>Recommended resources tailored to each course</li></ul><br>	
                 <ul><li>2018, 2019</li></ul><br>
