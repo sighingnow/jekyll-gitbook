@@ -4,8 +4,6 @@ title: IMTechEd
 permalink: /
 ---
 
-/* no longer used*/
-
 *A website detailing my past, present, and future work.*
 
 ## License
