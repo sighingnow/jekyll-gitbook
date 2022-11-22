@@ -2,7 +2,7 @@
 <html lang="en" >
     <head><meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>使用 Jekyll | Docker 建立 Github Pages · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>AI - Machine Learning · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Build Jekyll site with the GitBook style.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Benson Hsu"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -34,11 +34,9 @@
         }
     };
 </script>
-            <link rel="prev" href="/" />
+            <link rel="prev" href="/jekyll/2022-11-08-ai_csp.html" />
         
 
-        
-            <link rel="next" href="/jekyll/2022-11-05-linux_cmd.html" />
         
     </head>
     <body>
@@ -77,12 +75,15 @@
 
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-22-weka.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-22-weka.html">
                         
                             <a href="/jekyll/2022-11-22-weka.html">
                                 AI - Machine Learning
                             </a>
                             
+                                
+                                    
+
                                 
                             
                         </li>
@@ -121,15 +122,12 @@
                         </li>
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-05-docker_jekyll.html">
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-05-docker_jekyll.html">
                         
                             <a href="/jekyll/2022-11-05-docker_jekyll.html">
                                 使用 Jekyll | Docker 建立 Github Pages
                             </a>
                             
-                                
-                                    <ul><li><a href="#docker-jekyll">Docker Jekyll</a></li><li><a href="#customize">Customize</a></li></ul>
-
                                 
                             
                         </li>
@@ -155,7 +153,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >使用 Jekyll | Docker 建立 Github Pages</a>
+                            <a href="." >AI - Machine Learning</a>
                         
                     </h1>
                 </div>
@@ -166,84 +164,28 @@
     <div class="page-inner">
         <div class="normal">
             
-                <section class="normal">November 05, 2022</section>
+                <section class="normal">November 22, 2022</section>
             
         </div>
         <div id="book-search-results">
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/jekyll/docker_jekyll">使用 Jekyll | Docker 建立 Github Pages</h1>
+                        <h1 id="/jekyll/weka">AI - Machine Learning</h1>
                     
 
-                    <blockquote>
-  <p>說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。</p>
-</blockquote>
-
-<p>之前就想找一個能用 Markdown 寫筆記的地方，過去都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
-剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
-
-<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
-之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
-
-<p>Required:</p>
-<ul>
-  <li>Docker image Jekyll/Jekyll</li>
-  <li>Html, Javascript, CSS</li>
-</ul>
-
-<p>剛開始就先找個模板來用，<a href="http://jekyllthemes.org/">Jekyll themes</a>上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
-找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。</p>
-
-<h3 id="docker-jekyll">Docker Jekyll</h3>
-
-<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 volume 
-到 container 裡面就可以執行 Jekyll 生成。第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
-之後再簡單寫個 <a href="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/build.sh">bash script</a> 這樣一個能快速生成的 Jekyll 環境就搭建完成了。</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
-  <li><code class="language-plaintext highlighter-rouge">jekyll serve</code> 生成網頁後運行在 localhost:4000</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
-  <span class="nt">-v</span> <span class="nv">$WD</span>:/srv/jekyll:z <span class="se">\</span>
-  <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro<span class="se">\</span>
-  <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
-  <span class="nt">--name</span> jekyll <span class="se">\</span>
-  <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
-  jekyll serve 2&gt; /dev/null <span class="o">||</span> 
-  docker start jekyll <span class="o">&amp;&amp;</span> docker attach jekyll<span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="customize">Customize</h3>
-
-<p>之後就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
-的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
-像我用的模板本來是舊的 post 優先，稍微改排序，預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
-
-<ul>
-  <li>Change default font size: gitbook-plugin-fontsettings</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
-      "fontsettings": {
-          "size": 1,
-      }
-  }
-</code></pre></div></div>
-
-<ul>
-  <li>Add date in post: _layout/post.html</li>
-  <li>change sort method: _includes/toc-date.htnl</li>
-</ul>
-
-<blockquote class="block-tip">
-  <h5 id="note">NOTE</h5>
-
-  <p>之後想到要修改的再更新吧，可能加入留言系統、標籤之類的，目前這樣的靜態網頁我就很滿意了。</p>
-</blockquote>
-
+                    <ol>
+  <li>
+    <p>Training phase 
+ 黑盒子，x進y出。</p>
+  </li>
+  <li>
+    <p>Prediction phase
+ 如一公式，<code class="language-plaintext highlighter-rouge">y=ax+b</code><br />
+ var, a &amp; b 如何求解，當 a 和 b 的值被估計出來即為白盒子，即可做 Predict.
+ train的基本概念。</p>
+  </li>
+</ol>
 
                 </section>
             </div><div class="search-results">
@@ -259,11 +201,15 @@
 </div>
 <!-- customize line 38-50 swap next previous-->
                     
-                        <a href="/jekyll/2022-11-05-linux_cmd.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ">
+                        <a href="/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Home">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
+                    
+                        <a href="/jekyll/2022-11-08-ai_csp.html" class="navigation navigation-next navigation-unique" aria-label="Next page: ">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
                     
                 </div>
             </div>
@@ -276,15 +222,6 @@
         "title": "Introduction",
         "level": "1.1",
         "depth": 1,
-        
-        "next": {
-            "title": "Notes - Linux common command",
-            "level": "1.2",
-            "depth": 1,
-            "path": "_posts/2022-11-06-linux_cmd.md",
-            "ref": "_posts/2022-11-06-linux_cmd.md",
-            "articles": []
-        },
         
         "dir": "ltr"
     },    "config": {
@@ -360,8 +297,8 @@
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2022-11-05-docker_jekyll.md",
-        "mtime": "2022-11-05 00:00:00 +0800",
+        "path": "_posts/2022-11-22-weka.md",
+        "mtime": "2022-11-22 00:00:00 +0800",
         "type": "markdown"
     },
     "gitbook": {

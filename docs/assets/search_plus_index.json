@@ -1,4 +1,9 @@
-{"/jekyll/2022-11-08-ai_csp.html": {
+{"/jekyll/2022-11-22-weka.html": {
+    "title": "AI - Machine Learning",
+    "keywords": "ai algorithm Jekyll",
+    "url": "/jekyll/2022-11-22-weka.html",
+    "body": "Training phase 黑盒子，x進y出。 Prediction phase 如一公式，y=ax+b var, a &amp; b 如何求解，當 a 和 b 的值被估計出來即為白盒子，即可做 Predict. train的基本概念。"
+  },"/jekyll/2022-11-08-ai_csp.html": {
     "title": "AI - Constraint Satisfaction Problem",
     "keywords": "ai algorithm Jekyll",
     "url": "/jekyll/2022-11-08-ai_csp.html",
