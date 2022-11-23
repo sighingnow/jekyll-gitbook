@@ -2,7 +2,7 @@
 <html lang="en" >
     <head><meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>AI - Machine Learning · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>Git - Commit message 格式 · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Build Jekyll site with the GitBook style.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Benson Hsu"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -34,7 +34,7 @@
         }
     };
 </script>
-            <link rel="prev" href="/jekyll/2022-11-08-ai_csp.html" />
+            <link rel="prev" href="/jekyll/2022-11-22-ai_ml_introduction.html" />
         
 
         
@@ -75,15 +75,26 @@
 
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-22-weka.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-24-git_commit.html">
                         
-                            <a href="/jekyll/2022-11-22-weka.html">
-                                AI - Machine Learning
+                            <a href="/jekyll/2022-11-24-git_commit.html">
+                                Git - Commit message 格式
                             </a>
                             
                                 
-                                    
+                                    <ul><li><a href="#commit-message-format">Commit Message format：</a></li><li><a href="#commit-message-example">Commit message example:</a></li></ul>
 
+                                
+                            
+                        </li>
+                    
+                        
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-22-ai_ml_introduction.html">
+                        
+                            <a href="/jekyll/2022-11-22-ai_ml_introduction.html">
+                                AI - Machine Learning
+                            </a>
+                            
                                 
                             
                         </li>
@@ -153,7 +164,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >AI - Machine Learning</a>
+                            <a href="." >Git - Commit message 格式</a>
                         
                     </h1>
                 </div>
@@ -164,28 +175,101 @@
     <div class="page-inner">
         <div class="normal">
             
-                <section class="normal">November 22, 2022</section>
+                <section class="normal">November 24, 2022</section>
             
         </div>
         <div id="book-search-results">
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/jekyll/weka">AI - Machine Learning</h1>
+                        <h1 id="/jekyll/git_commit">Git - Commit message 格式</h1>
                     
 
-                    <ol>
-  <li>
-    <p>Training phase 
- 黑盒子，x進y出。</p>
-  </li>
-  <li>
-    <p>Prediction phase
- 如一公式，<code class="language-plaintext highlighter-rouge">y=ax+b</code><br />
- var, a &amp; b 如何求解，當 a 和 b 的值被估計出來即為白盒子，即可做 Predict.
- train的基本概念。</p>
-  </li>
-</ol>
+                    <blockquote>
+  <p>說明 Git 提交時應注意的 Commit message format，建立良好的規範才能有效的合作</p>
+</blockquote>
+
+<ul>
+  <li>做 issue 的時候不應該一次 Commit 所有變動！應該獨立每個 Commit 不同意義的異動，這樣才能使 Commit 快速閱讀與程式碼間的關係。</li>
+  <li>每次 Commit 都是針對異動做說明，Why &amp; What。</li>
+  <li>每次 Commit 加上 issue 編號，方便追蹤後續問題。</li>
+</ul>
+
+<h3 id="commit-message-format">Commit Message format：</h3>
+
+<p><strong>Header:</strong></p>
+<ul>
+  <li>type: 代表 commit 的類別：feat, fix, docs, style, refactor, test, chore，必要欄位。</li>
+  <li>scope 代表 commit 影響的範圍，例如資料庫、控制層、模板層等等，視專案不同而不同，為可選欄位。</li>
+  <li>subject 代表此 commit 的簡短描述，不要超過 50 個字元，結尾不要加句號，為必要欄位。</li>
+</ul>
+
+<p><strong>Body:</strong></p>
+<ul>
+  <li>Body 部份是對本次 Commit 的詳細描述，可以分成多行，每一行不要超過 72 個字元。</li>
+  <li>說明程式碼變動的項目與原因，還有與先前行為的對比。</li>
+</ul>
+
+<p><strong>Footer:</strong></p>
+<ul>
+  <li>填寫任務編號（如果有的話）.</li>
+  <li>BREAKING CHANGE（可忽略），記錄不兼容的變動，以 BREAKING CHANGE: 開頭，後面是對變動的描述、
+以及變動原因和遷移方法。</li>
+</ul>
+
+<p>type 需規範好有哪些類別（如下）：</p>
+<ul>
+  <li>feat: 新增/修改功能 (feature)。</li>
+  <li>fix: 修補 bug (bug fix)。</li>
+  <li>docs: 文件 (documentation)。</li>
+  <li>style: 格式 (不影響程式碼運行的變動 white-space, formatting, missing semi colons, etc)。</li>
+  <li>refactor: 重構 (既不是新增功能，也不是修補 bug 的程式碼變動)。</li>
+  <li>perf: 改善效能 (A code change that improves performance)。</li>
+  <li>test: 增加測試 (when adding missing tests)。</li>
+  <li>chore: 建構程序或輔助工具的變動 (maintain)。</li>
+  <li>revert: 撤銷回覆先前的 commit 例如：revert: type(scope): subject (回覆版本：xxxx)。</li>
+</ul>
+
+<h3 id="commit-message-example">Commit message example:</h3>
+
+<ul>
+  <li>一個簡單的 feat 範例</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Feat Example
+feat: message 信件通知功能
+
+因應新需求做調整：
+ 通知和 message 都要寄發每日信件，
+ 通知和 message 都用放在同一封信裡面就好，
+ 不然信件太多可能也不會有人想去看。
+
+調整項目：
+1. mail_template.php，新增 message 區塊。
+2. Send_today_notify_mail.php，新增 取得每日 Message 邏輯。
+3. Message_model_api.php，新增 $where 參數，以便取得每日訊息。
+4. Message_api.php、Message_group_user_model_api.php，新增 *取得訊息使用者* 邏輯，以便撈取每日訊息。
+
+issue #863
+feat: 表單統計，多顯示計畫名稱欄位
+
+因應需求做調整：
+1. 列表資訊多加「計畫名稱」欄位，以利後續匯出資料處理。
+
+調整項目：
+1. Assessment_form.php，匯出表單統計時，新增訓練計畫名欄位。
+2. customize.php，表單統計查詢時，多顯示訓練計畫名欄位。
+3. Complex_assessment_form_api.php、Complex_assessment_form_model_api.php：
+  - 取得表單統計資料時，多取得計畫名稱。
+
+issue #1200
+</code></pre></div></div>
+
+<blockquote class="block-tip">
+  <h5 id="note">NOTE</h5>
+
+  <p>只會寫程式只能代表你是一個會寫程式的人，能跟一群人一起寫程式才是一個好的工程師。</p>
+</blockquote>
 
                 </section>
             </div><div class="search-results">
@@ -207,7 +291,7 @@
                     
 
                     
-                        <a href="/jekyll/2022-11-08-ai_csp.html" class="navigation navigation-next navigation-unique" aria-label="Next page: ">
+                        <a href="/jekyll/2022-11-22-ai_ml_introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page: ">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -297,13 +381,13 @@
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2022-11-22-weka.md",
-        "mtime": "2022-11-22 00:00:00 +0800",
+        "path": "_posts/2022-11-24-git_commit.md",
+        "mtime": "2022-11-24 00:00:00 +0800",
         "type": "markdown"
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2022-11-22 10:05:34 +0800"
+        "time": "2022-11-24 02:53:12 +0800"
     },
     "basePath": "",
     "book": {
