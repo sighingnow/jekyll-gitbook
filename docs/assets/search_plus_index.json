@@ -12,7 +12,7 @@
     "title": "AI - Constraint Satisfaction Problem",
     "keywords": "ai algorithm Jekyll",
     "url": "/jekyll/2022-11-08-ai_csp.html",
-    "body": "Introduction to Artificial Intelligence Week 6 Notes CSPs Introduction Constraint Satisfaction Problem 其定義為一組物件，而這些物件需要滿足一定的限制或條件，而這個問題可能有很多的解。CSP 問題經常表現出高複雜性，需要結合啟發式搜尋和搜尋方法來在一個合理的時間內解決問題。 主要解法：通過識別違反約束的變量與值的組合消除大規模的搜索空間。 CSP related Linear programming Nonlinear progaramming Numerical analysis CSP application Operations research Network flows optimization problems CSPs Define: 定義一個 3-tuple(X, D, C) 其中 X = {X1, …, Xn} Finite set of variables. D = {D1, …, Dn} Nonempty domain of possible values for each variable. C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the values that variables can take."
+    "body": "Introduction to Artificial Intelligence Week 6 Notes CSPs Introduction Constraint Satisfaction Problem 其定義為一組物件，而這些物件需要滿足一定的限制或條件，而這個問題可能有很多的解。CSP 問題經常表現出高複雜性，需要結合啟發式搜尋和搜尋方法來在一個合理的時間內解決問題。 主要解法：通過識別違反約束的變量與值的組合消除大規模的搜索空間。 CSP related Linear programming Nonlinear progaramming Numerical analysis CSP application Operations research Network flows optimization problems CSPs Define: 定義一個 3-tuple(X, D, C) 其中 X = {X1, …, Xn} Finite set of variables. D = {D1, …, Dn} Nonempty domain of possible values for each variable. C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the values that variables can take. Map coloring 就是一個經典的 CSP。每個區域即是變數，顏色便是值域，相鄰區域顏色不同是約束。 NOTE 待更新"
   },"/jekyll/2022-11-07-network_urat.html": {
     "title": "Notes - UART",
     "keywords": "communication protocol Jekyll",

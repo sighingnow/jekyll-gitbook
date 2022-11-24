@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T16:10:47+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T16:21:07+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
 </subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Git - Commit message 格式</title><link href="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html" rel="alternate" type="text/html" title="Git - Commit message 格式" /><published>2022-11-24T00:00:00+08:00</published><updated>2022-11-24T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/git_commit</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html"><![CDATA[<blockquote>
   <p>說明 Git 提交時應注意的 Commit message format，建立良好的規範才能有效的合作</p>
 </blockquote>
@@ -143,6 +143,16 @@ issue #1200
 X = {X1, …, Xn} Finite set of variables.<br />
 D = {D1, …, Dn} Nonempty domain of possible values for each variable.<br />
 C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the values that variables can take.</p>
+
+<p><img src="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/_image/ai_csp_1.png?raw=true" alt="" height="80%" width="80%" /></p>
+
+<p>Map coloring 就是一個經典的 CSP。每個區域即是變數，顏色便是值域，相鄰區域顏色不同是約束。</p>
+
+<blockquote class="block-tip">
+  <h5 id="note">NOTE</h5>
+
+  <p>待更新</p>
+</blockquote>
 
 <!-- **Example** (Map coloring to CSP)
 
