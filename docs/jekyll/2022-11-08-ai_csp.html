@@ -106,7 +106,7 @@
                             </a>
                             
                                 
-                                    
+                                    <ul><li><a href="#csps-introduction">CSPs Introduction</a></li></ul>
 
                                 
                             
@@ -187,12 +187,15 @@
                         <h1 id="/jekyll/ai_csp">AI - Constraint Satisfaction Problem</h1>
                     
 
-                    <blockquote>
+                    <blockquote class="block-warning">
   <p>Introduction to Artificial Intelligence Week 6 Notes</p>
 </blockquote>
 
-<p><em>Constraint Satisfaction Problem</em> 約束滿足問題其定義為一組物件，而這些物件需要滿足一定的限制或條件，而這個問題可能有很多的解。CSP 問題經常表現出高複雜性，需要結合啟發式搜尋和搜尋方法來在一個合理的時間內解決問題。</p>
+<h3 id="csps-introduction">CSPs Introduction</h3>
 
+<p><em>Constraint Satisfaction Problem</em> 其定義為一組物件，而這些物件需要滿足一定的限制或條件，而這個問題可能有很多的解。CSP 問題經常表現出高複雜性，需要結合啟發式搜尋和搜尋方法來在一個合理的時間內解決問題。</p>
+
+<p>主要解法：通過識別違反約束的變量與值的組合消除大規模的搜索空間。</p>
 <ul>
   <li>CSP related
     <ul>
@@ -210,36 +213,25 @@
   </li>
 </ul>
 
-<p><strong>CSP Define</strong></p>
+<p><strong>CSPs Define:</strong></p>
 
-<p>CSP定義一個3-tuple(X, D, C), 其中</p>
-
-<p>X = {X1, …, Xn} Finite set of variables.<br />
+<p>定義一個 3-tuple(X, D, C) 其中<br />
+X = {X1, …, Xn} Finite set of variables.<br />
 D = {D1, …, Dn} Nonempty domain of possible values for each variable.<br />
 C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the values that variables can take.</p>
 
-<p><strong>Example</strong> (Map coloring to CSP)</p>
+<!-- **Example** (Map coloring to CSP)
 
-<ul>
-  <li>我們將各區域定義成變數(Variables)
-    <ul>
-      <li>Variables : V={WA,NT,Q,NSW,V,SA,T}</li>
-    </ul>
-  </li>
-  <li>每個變數的值域(Domains)
-    <ul>
-      <li>Domains : Di={red,green,blue}</li>
-    </ul>
-  </li>
-  <li>將值賦予變數時的限制(Constraints)相鄰區域必須不同顏色, WA≠NT
-    <ul>
-      <li>(WA,NT)={(red,green),(red,blue),(green,red),…}</li>
-    </ul>
-  </li>
-</ul>
+- 我們將各區域定義成變數(Variables)
+    - Variables : V={WA,NT,Q,NSW,V,SA,T}
+- 每個變數的值域(Domains)
+    - Domains : Di={red,green,blue}
+- 將值賦予變數時的限制(Constraints)相鄰區域必須不同顏色, WA≠NT
+    - (WA,NT)={(red,green),(red,blue),(green,red),…}
 
-<p><img src="https://slideplayer.com/slide/10791455/38/images/25/Minimum+remaining+values+%28MRV%29.jpg" alt="" height="50%" width="50%" /></p>
+![](https://slideplayer.com/slide/10791455/38/images/25/Minimum+remaining+values+%28MRV%29.jpg){:height="50%" width="50%"}
 
+[ref]: https://mropengate.blogspot.com/2015/03/constraint-satisfaction-problems-csp.html -->
 
                 </section>
             </div><div class="search-results">
@@ -366,7 +358,7 @@ C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the value
     },
     "gitbook": {
         "version": "3.2.3",
-        "time": "2022-11-24 02:53:12 +0800"
+        "time": "2022-11-24 16:10:47 +0800"
     },
     "basePath": "",
     "book": {

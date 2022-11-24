@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T02:53:12+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T16:10:47+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
 </subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Git - Commit message 格式</title><link href="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html" rel="alternate" type="text/html" title="Git - Commit message 格式" /><published>2022-11-24T00:00:00+08:00</published><updated>2022-11-24T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/git_commit</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html"><![CDATA[<blockquote>
   <p>說明 Git 提交時應注意的 Commit message format，建立良好的規範才能有效的合作</p>
 </blockquote>
@@ -111,12 +111,15 @@ issue #1200
 
 <p>sepal 花萼</p>
 
-<p>petal 花瓣</p>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="ai" /><category term="algorithm" /><summary type="html"><![CDATA[Training phase 黑盒子，x進y出。]]></summary></entry><entry><title type="html">AI - Constraint Satisfaction Problem</title><link href="http://0.0.0.0:4000/jekyll/2022-11-08-ai_csp.html" rel="alternate" type="text/html" title="AI - Constraint Satisfaction Problem" /><published>2022-11-08T00:00:00+08:00</published><updated>2022-11-08T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/ai_csp</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-08-ai_csp.html"><![CDATA[<blockquote>
+<p>petal 花瓣</p>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="ai" /><category term="algorithm" /><summary type="html"><![CDATA[Training phase 黑盒子，x進y出。]]></summary></entry><entry><title type="html">AI - Constraint Satisfaction Problem</title><link href="http://0.0.0.0:4000/jekyll/2022-11-08-ai_csp.html" rel="alternate" type="text/html" title="AI - Constraint Satisfaction Problem" /><published>2022-11-08T00:00:00+08:00</published><updated>2022-11-08T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/ai_csp</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-08-ai_csp.html"><![CDATA[<blockquote class="block-warning">
   <p>Introduction to Artificial Intelligence Week 6 Notes</p>
 </blockquote>
 
-<p><em>Constraint Satisfaction Problem</em> 約束滿足問題其定義為一組物件，而這些物件需要滿足一定的限制或條件，而這個問題可能有很多的解。CSP 問題經常表現出高複雜性，需要結合啟發式搜尋和搜尋方法來在一個合理的時間內解決問題。</p>
+<h3 id="csps-introduction">CSPs Introduction</h3>
 
+<p><em>Constraint Satisfaction Problem</em> 其定義為一組物件，而這些物件需要滿足一定的限制或條件，而這個問題可能有很多的解。CSP 問題經常表現出高複雜性，需要結合啟發式搜尋和搜尋方法來在一個合理的時間內解決問題。</p>
+
+<p>主要解法：通過識別違反約束的變量與值的組合消除大規模的搜索空間。</p>
 <ul>
   <li>CSP related
     <ul>
@@ -134,35 +137,25 @@ issue #1200
   </li>
 </ul>
 
-<p><strong>CSP Define</strong></p>
+<p><strong>CSPs Define:</strong></p>
 
-<p>CSP定義一個3-tuple(X, D, C), 其中</p>
-
-<p>X = {X1, …, Xn} Finite set of variables.<br />
+<p>定義一個 3-tuple(X, D, C) 其中<br />
+X = {X1, …, Xn} Finite set of variables.<br />
 D = {D1, …, Dn} Nonempty domain of possible values for each variable.<br />
 C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the values that variables can take.</p>
 
-<p><strong>Example</strong> (Map coloring to CSP)</p>
+<!-- **Example** (Map coloring to CSP)
 
-<ul>
-  <li>我們將各區域定義成變數(Variables)
-    <ul>
-      <li>Variables : V={WA,NT,Q,NSW,V,SA,T}</li>
-    </ul>
-  </li>
-  <li>每個變數的值域(Domains)
-    <ul>
-      <li>Domains : Di={red,green,blue}</li>
-    </ul>
-  </li>
-  <li>將值賦予變數時的限制(Constraints)相鄰區域必須不同顏色, WA≠NT
-    <ul>
-      <li>(WA,NT)={(red,green),(red,blue),(green,red),…}</li>
-    </ul>
-  </li>
-</ul>
+- 我們將各區域定義成變數(Variables)
+    - Variables : V={WA,NT,Q,NSW,V,SA,T}
+- 每個變數的值域(Domains)
+    - Domains : Di={red,green,blue}
+- 將值賦予變數時的限制(Constraints)相鄰區域必須不同顏色, WA≠NT
+    - (WA,NT)={(red,green),(red,blue),(green,red),…}
 
-<p><img src="https://slideplayer.com/slide/10791455/38/images/25/Minimum+remaining+values+%28MRV%29.jpg" alt="" height="50%" width="50%" /></p>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="ai" /><category term="algorithm" /><summary type="html"><![CDATA[Introduction to Artificial Intelligence Week 6 Notes]]></summary></entry><entry><title type="html">Notes - UART</title><link href="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html" rel="alternate" type="text/html" title="Notes - UART" /><published>2022-11-07T00:00:00+08:00</published><updated>2022-11-07T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/network_urat</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html"><![CDATA[<blockquote>
+![](https://slideplayer.com/slide/10791455/38/images/25/Minimum+remaining+values+%28MRV%29.jpg){:height="50%" width="50%"}
+
+[ref]: https://mropengate.blogspot.com/2015/03/constraint-satisfaction-problems-csp.html -->]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="ai" /><category term="algorithm" /><summary type="html"><![CDATA[Introduction to Artificial Intelligence Week 6 Notes]]></summary></entry><entry><title type="html">Notes - UART</title><link href="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html" rel="alternate" type="text/html" title="Notes - UART" /><published>2022-11-07T00:00:00+08:00</published><updated>2022-11-07T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/network_urat</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html"><![CDATA[<blockquote>
   <p>修網路實作的時候，給學弟妹講解 URAT 跟怎麼在 Arduino 上實作準備的一些教材</p>
 </blockquote>
 
