@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T16:21:07+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
-</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Git - Commit message 格式</title><link href="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html" rel="alternate" type="text/html" title="Git - Commit message 格式" /><published>2022-11-24T00:00:00+08:00</published><updated>2022-11-24T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/git_commit</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T19:44:29+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Git - Commit message format</title><link href="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html" rel="alternate" type="text/html" title="Git - Commit message format" /><published>2022-11-24T00:00:00+08:00</published><updated>2022-11-24T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/git_commit</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html"><![CDATA[<blockquote>
   <p>說明 Git 提交時應注意的 Commit message format，建立良好的規範才能有效的合作</p>
 </blockquote>
 
@@ -9,7 +9,7 @@
   <li>每次 Commit 加上 issue 編號，方便追蹤後續問題。</li>
 </ul>
 
-<h3 id="commit-message-format">Commit Message format：</h3>
+<h3 id="basic-format">Basic format</h3>
 
 <p><strong>Header:</strong></p>
 <ul>
@@ -31,7 +31,7 @@
 以及變動原因和遷移方法。</li>
 </ul>
 
-<p>type 需規範好有哪些類別（如下）：</p>
+<p><strong>type</strong> 需規範好有哪些類別：</p>
 <ul>
   <li>feat: 新增/修改功能 (feature)。</li>
   <li>fix: 修補 bug (bug fix)。</li>
@@ -44,7 +44,7 @@
   <li>revert: 撤銷回覆先前的 commit 例如：revert: type(scope): subject (回覆版本：xxxx)。</li>
 </ul>
 
-<h3 id="commit-message-example">Commit message example:</h3>
+<h3 id="example">Example</h3>
 
 <ul>
   <li>一個簡單的 feat 範例</li>
@@ -65,18 +65,6 @@ feat: message 信件通知功能
 4. Message_api.php、Message_group_user_model_api.php，新增 *取得訊息使用者* 邏輯，以便撈取每日訊息。
 
 issue #863
-feat: 表單統計，多顯示計畫名稱欄位
-
-因應需求做調整：
-1. 列表資訊多加「計畫名稱」欄位，以利後續匯出資料處理。
-
-調整項目：
-1. Assessment_form.php，匯出表單統計時，新增訓練計畫名欄位。
-2. customize.php，表單統計查詢時，多顯示訓練計畫名欄位。
-3. Complex_assessment_form_api.php、Complex_assessment_form_model_api.php：
-  - 取得表單統計資料時，多取得計畫名稱。
-
-issue #1200
 </code></pre></div></div>
 
 <blockquote class="block-tip">
@@ -144,9 +132,13 @@ X = {X1, …, Xn} Finite set of variables.<br />
 D = {D1, …, Dn} Nonempty domain of possible values for each variable.<br />
 C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the values that variables can take.</p>
 
-<p><img src="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/_image/ai_csp_1.png?raw=true" alt="" height="80%" width="80%" /></p>
+<p><br /></p>
+
+<p><strong>Example</strong> (Map coloring to CSP)</p>
 
 <p>Map coloring 就是一個經典的 CSP。每個區域即是變數，顏色便是值域，相鄰區域顏色不同是約束。</p>
+
+<p><img src="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/_image/ai_csp_1.jpg?raw=true" alt="" height="80%" width="80%" /></p>
 
 <blockquote class="block-tip">
   <h5 id="note">NOTE</h5>
@@ -154,16 +146,14 @@ C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the value
   <p>待更新</p>
 </blockquote>
 
-<!-- **Example** (Map coloring to CSP)
-
-- 我們將各區域定義成變數(Variables)
+<!-- - 我們將各區域定義成變數(Variables)
     - Variables : V={WA,NT,Q,NSW,V,SA,T}
 - 每個變數的值域(Domains)
     - Domains : Di={red,green,blue}
 - 將值賦予變數時的限制(Constraints)相鄰區域必須不同顏色, WA≠NT
     - (WA,NT)={(red,green),(red,blue),(green,red),…}
 
-![](https://slideplayer.com/slide/10791455/38/images/25/Minimum+remaining+values+%28MRV%29.jpg){:height="50%" width="50%"}
+![](https://slideplayer.com/slide/10791455/38/images/25/Minimum+remaining+values+%28MRV%29.jpg){:height="80%" width="80%"}
 
 [ref]: https://mropengate.blogspot.com/2015/03/constraint-satisfaction-problems-csp.html -->]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="ai" /><category term="algorithm" /><summary type="html"><![CDATA[Introduction to Artificial Intelligence Week 6 Notes]]></summary></entry><entry><title type="html">Notes - UART</title><link href="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html" rel="alternate" type="text/html" title="Notes - UART" /><published>2022-11-07T00:00:00+08:00</published><updated>2022-11-07T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/network_urat</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-07-network_urat.html"><![CDATA[<blockquote>
   <p>修網路實作的時候，給學弟妹講解 URAT 跟怎麼在 Arduino 上實作準備的一些教材</p>

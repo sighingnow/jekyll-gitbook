@@ -1,5 +1,5 @@
 ---
-title: "Git - Commit message 格式"
+title: "Git - Commit message format"
 author: Benson Hsu
 date: 2022-11-24
 category: Jekyll
@@ -13,7 +13,7 @@ tags: [github, tool]
 - 每次 Commit 都是針對異動做說明，Why & What。
 - 每次 Commit 加上 issue 編號，方便追蹤後續問題。
 
-### Commit Message format：  
+### Basic format
 
 **Header:**
 - type: 代表 commit 的類別：feat, fix, docs, style, refactor, test, chore，必要欄位。
@@ -29,7 +29,7 @@ tags: [github, tool]
 - BREAKING CHANGE（可忽略），記錄不兼容的變動，以 BREAKING CHANGE: 開頭，後面是對變動的描述、
 以及變動原因和遷移方法。  
 
-type 需規範好有哪些類別（如下）：
+**type** 需規範好有哪些類別：
 - feat: 新增/修改功能 (feature)。
 - fix: 修補 bug (bug fix)。
 - docs: 文件 (documentation)。
@@ -40,7 +40,7 @@ type 需規範好有哪些類別（如下）：
 - chore: 建構程序或輔助工具的變動 (maintain)。
 - revert: 撤銷回覆先前的 commit 例如：revert: type(scope): subject (回覆版本：xxxx)。
 
-### Commit message example:
+### Example
 
 - 一個簡單的 feat 範例
 
@@ -60,18 +60,6 @@ feat: message 信件通知功能
 4. Message_api.php、Message_group_user_model_api.php，新增 *取得訊息使用者* 邏輯，以便撈取每日訊息。
 
 issue #863
-feat: 表單統計，多顯示計畫名稱欄位
-
-因應需求做調整：
-1. 列表資訊多加「計畫名稱」欄位，以利後續匯出資料處理。
-
-調整項目：
-1. Assessment_form.php，匯出表單統計時，新增訓練計畫名欄位。
-2. customize.php，表單統計查詢時，多顯示訓練計畫名欄位。
-3. Complex_assessment_form_api.php、Complex_assessment_form_model_api.php：
-  - 取得表單統計資料時，多取得計畫名稱。
-
-issue #1200
 ```
 
 > ##### NOTE
