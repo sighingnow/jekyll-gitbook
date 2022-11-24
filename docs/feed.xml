@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T19:44:29+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T20:56:47+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
 </subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Git - Commit message format</title><link href="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html" rel="alternate" type="text/html" title="Git - Commit message format" /><published>2022-11-24T00:00:00+08:00</published><updated>2022-11-24T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/git_commit</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html"><![CDATA[<blockquote>
   <p>說明 Git 提交時應注意的 Commit message format，建立良好的規範才能有效的合作</p>
 </blockquote>
@@ -125,20 +125,91 @@ issue #863
   </li>
 </ul>
 
-<p><strong>CSPs Define:</strong></p>
+<p><strong>CSP Define</strong></p>
 
 <p>定義一個 3-tuple(X, D, C) 其中<br />
 X = {X1, …, Xn} Finite set of variables.<br />
 D = {D1, …, Dn} Nonempty domain of possible values for each variable.<br />
 C = {C1, …, Cn} Finite set of constraints, Each constraint Ci limits the values that variables can take.</p>
 
-<p><br /></p>
-
-<p><strong>Example</strong> (Map coloring to CSP)</p>
+<p><strong>Example</strong></p>
 
 <p>Map coloring 就是一個經典的 CSP。每個區域即是變數，顏色便是值域，相鄰區域顏色不同是約束。</p>
 
+<p>其中關於 Constraint 可被劃分為:</p>
+<ul>
+  <li>unary constraint: 只約束單個 variable 的取值。如 SA 不能被染成綠色。</li>
+  <li>binary constraint: 兩個 variable 相關的約束。如 SA 不能與 WA 的顏色相同。</li>
+  <li>global constraint: 全局約束。如 Alldiff, 即約束中所有 variable 皆需取不同的值。</li>
+</ul>
+
 <p><img src="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/_image/ai_csp_1.jpg?raw=true" alt="" height="80%" width="80%" /></p>
+
+<p><strong><a href="https://medium.com/swlh/how-to-solve-constraint-satisfaction-problems-csps-with-ac-3-algorithm-in-python-f7a9be538cfe">Arc Consistency example</a></strong></p>
+
+<h3 id="backtracking-search-for-csps">Backtracking search for CSPs</h3>
+
+<p>回朔搜索，用於 DFS 中。他每次為 Single variable 進行取值，當沒有合法的值可給某個 variable 時就進行回朔。</p>
+<ul>
+  <li>為使 search 變的高效，須解決以下問題:
+    <ol>
+      <li>下一步應該給哪個 variable 取值? 按照什麼順序取值?</li>
+      <li>每步 search 應該做怎樣的推理?</li>
+    </ol>
+  </li>
+</ul>
+
+<p><strong>Variable select: Minimum remaining values (MRV)</strong></p>
+
+<p>最少剩餘值啟發式: 選擇<em>合法取值最少的 variable</em> 開始。這樣選擇的 variable 可能很快地導致失敗，從而進行回朔。
+<img src="https://1.bp.blogspot.com/-T4GOGoV6rwY/VRj6JLmgOJI/AAAAAAAAnsA/XruZvjnw4RU/s1600/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%2B2015-03-30%2B%E4%B8%8B%E5%8D%883.03.36.png" alt="" height="50%" width="50%" /></p>
+
+<p><strong>Degree heuristic</strong><br />
+鄰接度啟發式: <em>選擇與其他未取值 variable 約束最多的 variable</em> 來試圖降低未來可能的分支。<br />
+<img src="https://3.bp.blogspot.com/-rjmvY3Vk-LM/VRj6PQz4BkI/AAAAAAAAnsI/AMLsxDX1e2I/s1600/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%2B2015-03-30%2B%E4%B8%8B%E5%8D%883.03.14.png" alt="" height="50%" width="50%" /></p>
+
+<p><strong>Value order</strong><br />
+Least constraining value (最少限制值): 選擇 value 時優先選擇給鄰居 variable 留下最多選擇的分支。</p>
+
+<p><img src="https://1.bp.blogspot.com/-TK2n4EuROlE/VRj6pJvBGHI/AAAAAAAAnsQ/OzilSPyBSxQ/s1600/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%2B2015-03-30%2B%E4%B8%8B%E5%8D%883.25.58.png" alt="" height="50%" width="50%" /></p>
+
+<h3 id="inference-in-csps">Inference in CSPs</h3>
+
+<p>在 CSP 問題中，Algorithm 可以進行搜索，也可以做<a href="https://www.ibm.com/docs/zh-tw/icos/12.8.0.0?topic=constraints-constraint-propagation-algorithm">約束傳播</a> (The constraint propagation) 的推理</p>
+
+<p><em>約束傳播:</em> 使用約束來減少一個 variable 的合法取值範圍，從而影響與此 variable 有約束關係的另一個 variable 的取值。 <em>(局部相容性)</em></p>
+
+<p><strong>Node Consistency (節點相容)</strong></p>
+
+<p>Single variable (In CSP Single node) 值域中的所有取值滿足他的 unary constraint.</p>
+
+<blockquote class="block-tip">
+  <p>if SA = NA = {Red, Blue, Green};<br />
+SA != Blue, NA != Red, SA = {Green, Red}, NA = {Blue, Green};</p>
+</blockquote>
+
+<p><strong>Arc Consistency (弧相容)</strong></p>
+
+<p>CSP 中某 variable range 所有取值滿足該 variable 的所有 binary constraint.</p>
+
+<p>最常用的算法為 AC-3, 算法流程大致如下:</p>
+<blockquote class="block-tip">
+  <ol>
+    <li>Get all the constraint and turn each one into two arcs.<br />
+ Expmale: A &gt; B becomes A &gt; B and B &lt; A.</li>
+    <li>Add all the arcs to a queue.</li>
+    <li>Repeat until the queue is empty:<br />
+ 3.1. Take the first arc (𝑥, 𝑦), off the queue (dequeue).<br />
+ 3.2. For every value in the 𝑥 domain, there must be some value of the 𝑦 domain.<br />
+ 3.3. Make 𝑥 arc consistent with 𝑦. To do so, remove values from 𝑥 domain for which there is no possible corresponding value for 𝑦 domain.<br />
+ 3.4. If the 𝑥 domain has changed, add all arcs of the form (𝑘, 𝑥) to the queue (enqueue). Here 𝑘 is another variable different from 𝑦 that has a relation to 𝑥.</li>
+  </ol>
+</blockquote>
+
+<p><strong>Forward Checking</strong></p>
+
+<p>向前檢驗是最簡單的推理形式，只要 X variable 被賦值了，就向前檢驗過程對他做 Arc Consistency. 檢查對於每個通過約束與 X 相關的, 未賦予值的 Y variable,
+從 Y 的 range 中消去與 X 不相容的值。</p>
 
 <blockquote class="block-tip">
   <h5 id="note">NOTE</h5>
