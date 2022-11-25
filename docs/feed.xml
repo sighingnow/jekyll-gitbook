@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-24T20:56:47+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
-</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Git - Commit message format</title><link href="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html" rel="alternate" type="text/html" title="Git - Commit message format" /><published>2022-11-24T00:00:00+08:00</published><updated>2022-11-24T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/git_commit</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2022-11-25T11:37:46+08:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Home</title><subtitle>Build Jekyll site with the GitBook style.
+</subtitle><author><name>Benson Hsu</name></author><entry><title type="html">Leetcode - 365. Water and Jug Problem</title><link href="http://0.0.0.0:4000/jekyll/2022-11-25-leetcode_365.html" rel="alternate" type="text/html" title="Leetcode - 365. Water and Jug Problem" /><published>2022-11-25T00:00:00+08:00</published><updated>2022-11-25T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/leetcode_365</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-25-leetcode_365.html"><![CDATA[<blockquote>
+  <p>經典的人工製智慧問題，即給定若干個不同容量罐子，沒有其他要求下得出水容量問題。</p>
+</blockquote>
+
+<h2 id="bfs-solution">BFS solution</h2>
+
+<p>先試著用 BFS 來解，首先瓶子只會有以下三種操作。</p>
+
+<ul>
+  <li>任意一水瓶裝滿水</li>
+  <li>任意一水瓶的水倒出</li>
+  <li>將水瓶1中的水倒入水瓶2直到裝滿</li>
+</ul>
+
+<p><img src="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/_image/leetcode_365.jpg?raw=true" alt="" height="80%" width="80%" /></p>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="leetcode" /><category term="medium" /><summary type="html"><![CDATA[經典的人工製智慧問題，即給定若干個不同容量罐子，沒有其他要求下得出水容量問題。]]></summary></entry><entry><title type="html">Git - Commit message format</title><link href="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html" rel="alternate" type="text/html" title="Git - Commit message format" /><published>2022-11-24T00:00:00+08:00</published><updated>2022-11-24T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/git_commit</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-24-git_commit.html"><![CDATA[<blockquote>
   <p>說明 Git 提交時應注意的 Commit message format，建立良好的規範才能有效的合作</p>
 </blockquote>
 
@@ -327,7 +341,73 @@ SA != Blue, NA != Red, SA = {Green, Red}, NA = {Blue, Green};</p>
 可以想像接收端的狀態，用程式的表示方式會不會是以迴圈進行，當接到0時，
 以預設的頻率收接下來的 8 bit，當電位拉高代表一次傳送的結束。等待下次開始。</p>
 
-<p><a href="https://www.allaboutcircuits.com/technical-articles/back-to-basics-the-universal-asynchronous-receiver-transmitter-uart/">Reference</a> Back to Basics: The Universal Asynchronous Receiver/Transmitter (UART)</p>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="communication" /><category term="protocol" /><summary type="html"><![CDATA[修網路實作的時候，給學弟妹講解 URAT 跟怎麼在 Arduino 上實作準備的一些教材]]></summary></entry><entry><title type="html">Notes - Linux common command</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html" rel="alternate" type="text/html" title="Notes - Linux common command" /><published>2022-11-05T00:00:00+08:00</published><updated>2022-11-05T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/linux_cmd</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html"><![CDATA[<blockquote>
+<p><a href="https://www.allaboutcircuits.com/technical-articles/back-to-basics-the-universal-asynchronous-receiver-transmitter-uart/">Reference</a> Back to Basics: The Universal Asynchronous Receiver/Transmitter (UART)</p>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="communication" /><category term="protocol" /><summary type="html"><![CDATA[修網路實作的時候，給學弟妹講解 URAT 跟怎麼在 Arduino 上實作準備的一些教材]]></summary></entry><entry><title type="html">使用 Jekyll | Docker 建立 Github Pages</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html" rel="alternate" type="text/html" title="使用 Jekyll | Docker 建立 Github Pages" /><published>2022-11-05T00:00:00+08:00</published><updated>2022-11-05T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/docker_jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html"><![CDATA[<blockquote>
+  <p>說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。</p>
+</blockquote>
+
+<p>之前就想找一個能用 Markdown 寫筆記的地方，過去都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
+剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
+
+<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
+之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
+
+<p>Required:</p>
+<ul>
+  <li>Docker image Jekyll/Jekyll</li>
+  <li>Html, Javascript, CSS</li>
+</ul>
+
+<p>剛開始就先找個模板來用，<a href="http://jekyllthemes.org/">Jekyll themes</a>上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
+找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。</p>
+
+<h3 id="docker-jekyll">Docker Jekyll</h3>
+
+<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 volume 
+到 container 裡面就可以執行 Jekyll 生成。第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
+之後再簡單寫個 <a href="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/build.sh">bash script</a> 這樣一個能快速生成的 Jekyll 環境就搭建完成了。</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
+  <li><code class="language-plaintext highlighter-rouge">jekyll serve</code> 生成網頁後運行在 localhost:4000</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
+  <span class="nt">-v</span> <span class="nv">$WD</span>:/srv/jekyll:z <span class="se">\</span>
+  <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro<span class="se">\</span>
+  <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
+  <span class="nt">--name</span> jekyll <span class="se">\</span>
+  <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
+  jekyll serve 2&gt; /dev/null <span class="o">||</span> 
+  docker start jekyll <span class="o">&amp;&amp;</span> docker attach jekyll<span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="customize">Customize</h3>
+
+<p>之後就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
+的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
+像我用的模板本來是舊的 post 優先，稍微改排序，預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
+
+<ul>
+  <li>Change default font size: gitbook-plugin-fontsettings</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
+      "fontsettings": {
+          "size": 1,
+      }
+  }
+</code></pre></div></div>
+
+<ul>
+  <li>Add date in post: _layout/post.html</li>
+  <li>change sort method: _includes/toc-date.htnl</li>
+</ul>
+
+<blockquote class="block-tip">
+  <h5 id="note">NOTE</h5>
+
+  <p>之後想到要修改的再更新吧，可能加入留言系統、標籤之類的，目前這樣的靜態網頁我就很滿意了。</p>
+</blockquote>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="github" /><category term="jekyll" /><category term="tool" /><summary type="html"><![CDATA[說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。]]></summary></entry><entry><title type="html">Notes - Linux common command</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html" rel="alternate" type="text/html" title="Notes - Linux common command" /><published>2022-11-05T00:00:00+08:00</published><updated>2022-11-05T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/linux_cmd</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-linux_cmd.html"><![CDATA[<blockquote>
   <p>Notes to Linux Common Commands</p>
 </blockquote>
 
@@ -556,70 +636,4 @@ network:
                 "SSID-NAME-HERE":
                     password: "PASSWORD-HERE"
             dhcp4: true
-</code></pre></div></div>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="linux" /><category term="tool" /><summary type="html"><![CDATA[Notes to Linux Common Commands]]></summary></entry><entry><title type="html">使用 Jekyll | Docker 建立 Github Pages</title><link href="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html" rel="alternate" type="text/html" title="使用 Jekyll | Docker 建立 Github Pages" /><published>2022-11-05T00:00:00+08:00</published><updated>2022-11-05T00:00:00+08:00</updated><id>http://0.0.0.0:4000/jekyll/docker_jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/jekyll/2022-11-05-docker_jekyll.html"><![CDATA[<blockquote>
-  <p>說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。</p>
-</blockquote>
-
-<p>之前就想找一個能用 Markdown 寫筆記的地方，過去都是寫在 Github 的 Repositories 裡面但是檔案一多起來想整理也不方便，那就自己寫個 Blog 當作紀錄，
-剛好就趁這個機會把這次的內容當作第一篇紀錄。</p>
-
-<p>Jekyll 是一個用 Ruby 寫的簡單靜態網頁生成器，但是目前我幾乎都是用 Lab 的電腦做事，平時也是遠端到上面，所以很直覺的就想用 Docker 來處理環境，
-之後跑腳本把生成好的文件在推上 Github 就可以做好一次更新了。</p>
-
-<p>Required:</p>
-<ul>
-  <li>Docker image Jekyll/Jekyll</li>
-  <li>Html, Javascript, CSS</li>
-</ul>
-
-<p>剛開始就先找個模板來用，<a href="http://jekyllthemes.org/">Jekyll themes</a>上就有很多可以用的模板來用，像我用的就是使用 GitBook 風格的模板，同時有搜尋功能之後文章的找尋也會比較方便。
-找到模板之後去把他 forks 到自己的儲存庫，clone 下來就可以開始修改了。</p>
-
-<h3 id="docker-jekyll">Docker Jekyll</h3>
-
-<p>Jekyll 官方有一個 <a href="https://hub.docker.com/r/jekyll/jekyll/">Docker image</a> 所以拉這個 image 就可以了，裡面 Readme 教學寫得還蠻詳細的，只要把模板 volume 
-到 container 裡面就可以執行 Jekyll 生成。第一次運行安裝套件等等會花一點時間，之後啟動容器速度就快很多了。
-之後再簡單寫個 <a href="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/build.sh">bash script</a> 這樣一個能快速生成的 Jekyll 環境就搭建完成了。</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">jekyll build</code> 直接生成網頁</li>
-  <li><code class="language-plaintext highlighter-rouge">jekyll serve</code> 生成網頁後運行在 localhost:4000</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="se">\</span>
-  <span class="nt">-v</span> <span class="nv">$WD</span>:/srv/jekyll:z <span class="se">\</span>
-  <span class="nt">-v</span> /etc/localtime:/etc/localtime:ro<span class="se">\</span>
-  <span class="nt">-p</span> 4000:4000 <span class="se">\</span>
-  <span class="nt">--name</span> jekyll <span class="se">\</span>
-  <span class="nt">-it</span> jekyll/jekyll <span class="se">\</span>
-  jekyll serve 2&gt; /dev/null <span class="o">||</span> 
-  docker start jekyll <span class="o">&amp;&amp;</span> docker attach jekyll<span class="p">;</span>
-</code></pre></div></div>
-
-<h3 id="customize">Customize</h3>
-
-<p>之後就等文件生成好，同時記得設定 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Github pages publishing source</a>, 把發布源改到生成的目錄。這樣 github.io 
-的內容就直接指向這個目錄。然後就是一些自定義的小修改，這裡只要會一點 Js, Html 就可以搞定。
-像我用的模板本來是舊的 post 優先，稍微改排序，預設字體，加入時間註記，這樣一個簡單的靜態網頁就完成了。</p>
-
-<ul>
-  <li>Change default font size: gitbook-plugin-fontsettings</li>
-</ul>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "pluginsConfig": {
-      "fontsettings": {
-          "size": 1,
-      }
-  }
-</code></pre></div></div>
-
-<ul>
-  <li>Add date in post: _layout/post.html</li>
-  <li>change sort method: _includes/toc-date.htnl</li>
-</ul>
-
-<blockquote class="block-tip">
-  <h5 id="note">NOTE</h5>
-
-  <p>之後想到要修改的再更新吧，可能加入留言系統、標籤之類的，目前這樣的靜態網頁我就很滿意了。</p>
-</blockquote>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="github" /><category term="jekyll" /><category term="tool" /><summary type="html"><![CDATA[說明如何使用 Jekyll docker image 在不用熟悉 Ruby 與相關套件管理下，生成靜態文件。]]></summary></entry></feed>
+</code></pre></div></div>]]></content><author><name>Benson Hsu</name></author><category term="Jekyll" /><category term="linux" /><category term="tool" /><summary type="html"><![CDATA[Notes to Linux Common Commands]]></summary></entry></feed>

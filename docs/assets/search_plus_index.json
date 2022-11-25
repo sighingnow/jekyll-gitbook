@@ -1,4 +1,9 @@
-{"/jekyll/2022-11-24-git_commit.html": {
+{"/jekyll/2022-11-25-leetcode_365.html": {
+    "title": "Leetcode - 365. Water and Jug Problem",
+    "keywords": "leetcode medium Jekyll",
+    "url": "/jekyll/2022-11-25-leetcode_365.html",
+    "body": "經典的人工製智慧問題，即給定若干個不同容量罐子，沒有其他要求下得出水容量問題。 BFS solution 先試著用 BFS 來解，首先瓶子只會有以下三種操作。 任意一水瓶裝滿水 任意一水瓶的水倒出 將水瓶1中的水倒入水瓶2直到裝滿"
+  },"/jekyll/2022-11-24-git_commit.html": {
     "title": "Git - Commit message format",
     "keywords": "github tool Jekyll",
     "url": "/jekyll/2022-11-24-git_commit.html",

@@ -2,7 +2,7 @@
 <html lang="en" >
     <head><meta charset="UTF-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>AI - Machine Learning · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="google-site-verification" content="MrJpPCJ8htzZlGpC1wo97QA1_XWns05Ez0LBsW3wj3I" /><title>Leetcode - 365. Water and Jug Problem · Home</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="description" content="Build Jekyll site with the GitBook style.
 "><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="Benson Hsu"><link rel="stylesheet" href="/assets/gitbook/style.css">
 <link rel="stylesheet" href="/assets/gitbook/gitbook-plugin-fontsettings/website.css">
@@ -34,11 +34,9 @@
         }
     };
 </script>
-            <link rel="prev" href="/jekyll/2022-11-08-ai_csp.html" />
+            <link rel="prev" href="/jekyll/2022-11-24-git_commit.html" />
         
 
-        
-            <link rel="next" href="/jekyll/2022-11-24-git_commit.html" />
         
     </head>
     <body>
@@ -77,12 +75,15 @@
 
                     
                         
-                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-25-leetcode_365.html">
+                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-25-leetcode_365.html">
                         
                             <a href="/jekyll/2022-11-25-leetcode_365.html">
                                 Leetcode - 365. Water and Jug Problem
                             </a>
                             
+                                
+                                    <ul><li><a href="#bfs-solution">BFS solution</a></li></ul>
+
                                 
                             
                         </li>
@@ -99,15 +100,12 @@
                         </li>
                     
                         
-                        <li class="chapter active" data-level="1.2" data-path="/jekyll/2022-11-22-ai_ml_introduction.html">
+                        <li class="chapter" data-level="1.1" data-path="/jekyll/2022-11-22-ai_ml_introduction.html">
                         
                             <a href="/jekyll/2022-11-22-ai_ml_introduction.html">
                                 AI - Machine Learning
                             </a>
                             
-                                
-                                    <ul><li><a href="#iris">iris</a></li></ul>
-
                                 
                             
                         </li>
@@ -177,7 +175,7 @@
                     <h1>
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                         
-                            <a href="." >AI - Machine Learning</a>
+                            <a href="." >Leetcode - 365. Water and Jug Problem</a>
                         
                     </h1>
                 </div>
@@ -188,45 +186,31 @@
     <div class="page-inner">
         <div class="normal">
             
-                <section class="normal">November 22, 2022</section>
+                <section class="normal">November 25, 2022</section>
             
         </div>
         <div id="book-search-results">
             <div class="search-noresults">
                 <section class="normal markdown-section">
                     
-                        <h1 id="/jekyll/ai_ml_introduction">AI - Machine Learning</h1>
+                        <h1 id="/jekyll/leetcode_365">Leetcode - 365. Water and Jug Problem</h1>
                     
 
-                    <ol>
-  <li>
-    <p>Training phase<br />
- 黑盒子，x進y出。</p>
-  </li>
-  <li>
-    <p>Prediction phase<br />
- 如一公式，<code class="language-plaintext highlighter-rouge">y=ax+b</code><br />
- var, a &amp; b 如何求解，當 a 和 b 的值被估計出來即為白盒子，即可做 Predict.
- train的基本概念。</p>
-  </li>
-</ol>
+                    <blockquote>
+  <p>經典的人工製智慧問題，即給定若干個不同容量罐子，沒有其他要求下得出水容量問題。</p>
+</blockquote>
 
-<p>instamce, record, case, observation, row.</p>
+<h2 id="bfs-solution">BFS solution</h2>
 
-<p>attribute, field, cloumn.</p>
+<p>先試著用 BFS 來解，首先瓶子只會有以下三種操作。</p>
 
-<p>-0.006 = a
-10.0314 = b</p>
+<ul>
+  <li>任意一水瓶裝滿水</li>
+  <li>任意一水瓶的水倒出</li>
+  <li>將水瓶1中的水倒入水瓶2直到裝滿</li>
+</ul>
 
-<p>Root mean squared error 1.0317.</p>
-
-<h1 id="iris">iris</h1>
-
-<p>three-type iris.</p>
-
-<p>sepal 花萼</p>
-
-<p>petal 花瓣</p>
+<p><img src="https://github.com/Hotshot824/Hotshot824.github.io/blob/master/_image/leetcode_365.jpg?raw=true" alt="" height="80%" width="80%" /></p>
 
                 </section>
             </div><div class="search-results">
@@ -242,13 +226,13 @@
 </div>
 <!-- customize line 38-50 swap next previous-->
                     
-                        <a href="/jekyll/2022-11-24-git_commit.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: AI - Constraint Satisfaction Problem">
+                        <a href="/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Home">
                             <i class="fa fa-angle-left"></i>
                         </a>
                     
 
                     
-                        <a href="/jekyll/2022-11-08-ai_csp.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Git - Commit message format">
+                        <a href="/jekyll/2022-11-24-git_commit.html" class="navigation navigation-next navigation-unique" aria-label="Next page: ">
                             <i class="fa fa-angle-right"></i>
                         </a>
                     
@@ -263,15 +247,6 @@
         "title": "Introduction",
         "level": "1.1",
         "depth": 1,
-        
-        "next": {
-            "title": "Git - Commit message format",
-            "level": "1.2",
-            "depth": 1,
-            "path": "_posts/2022-11-24-git_commit.md",
-            "ref": "_posts/2022-11-24-git_commit.md",
-            "articles": []
-        },
         
         "dir": "ltr"
     },    "config": {
@@ -347,8 +322,8 @@
         "gitbook": "*"
     },
     "file": {
-        "path": "_posts/2022-11-22-ai_ml_introduction.md",
-        "mtime": "2022-11-22 00:00:00 +0800",
+        "path": "_posts/2022-11-25-leetcode_365.md",
+        "mtime": "2022-11-25 00:00:00 +0800",
         "type": "markdown"
     },
     "gitbook": {
