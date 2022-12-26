@@ -20,7 +20,7 @@
             <li class="divider"></li>
 
             {% for collection in site.collections %}
-                <!-- <p>{{ collection.label }}</p> -->
+                <li><h2>{{ collection.label }}</h2>
                 {% if collection.output %}
                     {% if collection.label == "posts" %}
                         {% assign reversed_posts = site[collection.label] | reverse %}
@@ -49,6 +49,7 @@
                         <li class="divider"></li>
                     {% endif %}
                 {% endif %}
+                </li>
             {% endfor %}
 
             <li>
