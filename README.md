@@ -6,14 +6,14 @@ permalink: /
 <img align="middle" src="/assets/gitbook/images/Home.jpeg" width="1000" />
 
 
-Welcome to the Lab Guide Library. Here you will find the step-by-step guides on how to setup Webex Contact Center features.
+Welcome to the Lab Guide Library. Here you will find the step-by-step guides on how to enable and configure the Webex Contact Center features.
 
 
 ## Lab Content
 
 | Lab ID | Lab Details                                                               |
 | ------ | ------------------------------------------------------------------------- |
-| Lab 0  | [Provisioning (Trials & Production) ](Provisioning.md){:target="\_blank"} |
+| Lab 0  | [Provisioning (Trials & Production) ](\_pages\Provisioning.md) |
 | Lab 1  | [Admin Experience](CH.md){:target="\_blank"}                              |
 | Lab 2  | [IVR Contact Routing](IVR.md){:target="\_blank"}                          |
 | Lab 3  | [Agent Desktop](Agent.md){:target="\_blank"}                              |
