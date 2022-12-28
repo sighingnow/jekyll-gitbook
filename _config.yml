@@ -22,6 +22,7 @@ toc:
   enabled: true
   h_min: 1
   h_max: 1
+  ordered: true
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path:     /assets/gitbook/images/favicon.ico
