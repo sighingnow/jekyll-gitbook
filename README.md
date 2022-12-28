@@ -29,19 +29,11 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 
 
 
-<center><img src="/assets/gitbook/images/webex.png" alt="what image shows" height="150" width="200"></center>
+<center><img src="/assets/gitbook/images/webex.png" width="100"></center>
 
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 <img src="/assets/gitbook/images/webex.png" class="center" width="100" /> 
 
-![webex](/assets/gitbook/images/webex-small.png){text-align:center}
+![webex](/assets/gitbook/images/webex-small.png){style="text-align:center"}
 
-<img src="/assets/gitbook/images/webex.png" margin-left="auto" margin-right="auto" display="block" width="100" /> 
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
