@@ -1,6 +1,6 @@
             "sharing": {
                 "facebook": true,
-                "facebook_link": "https://www.facebook.com/webex/",
+                "facebook_link": "webex",
                 "google": false,
                 "github": false,
                 "github_link": "",
@@ -8,6 +8,6 @@
                 "telegram_link": "wxcclabs@cisco.com",                
                 "instapaper": false,
                 "twitter": true,
-                "twitter_link": "https://twitter.com/Webex",                
+                "twitter_link": "Webex",                
                 "vk": false
             },
