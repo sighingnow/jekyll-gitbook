@@ -13,7 +13,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-twitter',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open(encodeURIComponent(location.href));
+                window.open('http://twitter.com/home?status='+encodeURIComponent(document.title+' '+location.href));
             }
         },
         'github': {
@@ -24,12 +24,12 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                 window.open('https://github.com');
             }
         },
-        'email': {
-            'label': 'email',
+        'telegram': {
+            'label': 'Telegram',
             'icon': 'fa fa-telegram',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open(encodeURIComponent(location.href));
+                window.open('https://t.me');
             }
         },
         'google': {
@@ -103,10 +103,10 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                     window.open(opts["github_link"]);
                 }
             }
-            if (sideId === "email" && opts["email_link"] !== undefined && opts["email_link"] !== "") {
+            if (sideId === "telegram" && opts["telegram_link"] !== undefined && opts["telegram_link"] !== "") {
                 onClick = function(e) {
                     e.preventDefault();
-                    window.open(opts["email_link"]);
+                    window.open(opts["telegram_link"]);
                 }
             }
 
