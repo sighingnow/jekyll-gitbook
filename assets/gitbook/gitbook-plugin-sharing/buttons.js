@@ -5,7 +5,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-facebook',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://www.facebook.com/'+encodeURIComponent(location.href));
+                window.open('https://www.facebook.com/webex');
             }
         },
         'twitter': {
