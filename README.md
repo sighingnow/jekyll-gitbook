@@ -30,6 +30,15 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 
 <img align="center" src="/assets/gitbook/images/webex.png" width="100" />
 
-<img src="/assets/gitbook/images/webex.png" class="center" width="100" /> {: .fa-align-center}
+<img src="/assets/gitbook/images/webex.png" class="center" width="100" /> 
 
 ![webex](/assets/gitbook/images/webex-small.png){text-align:center}
+
+<img src="/assets/gitbook/images/webex.png" margin-left="auto" margin-right="auto" display="block" width="100" /> 
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
