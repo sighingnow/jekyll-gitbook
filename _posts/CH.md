@@ -1,5 +1,5 @@
 ---
-title: Lab 1: Control Hub And Admin Portal
+title: Lab 1 - Control Hub And Admin Portal
 author: Dmitry Bokatov & Mike Turnbow 
 date: 2022-12-27
 layout: post
