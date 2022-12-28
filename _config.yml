@@ -1,8 +1,8 @@
 # Configurations
-title:            Labs
+title:            Home
 longtitle:        Webex CC Lab Guides
-author:           HE Tao
-email:            sighingnow@gmail.com
+#author:           HE Tao
+email:            wxcclabs@cisco.com
 description: >
   Build Jekyll site with the GitBook style.
 
