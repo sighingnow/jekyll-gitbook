@@ -33,7 +33,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > It is assumed that the attendee has already an access to the tenant.**
 {: .block-danger }
 
-# Table of Contents
+## Table of Contents
 
 - [Part 1: Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) 
   * [1. Add an agent and a supervisor users and configure the calling extension](#1-add-an-agent-and-a-supervisor-users-and-configure-the-calling-extension)
@@ -54,7 +54,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - [Part 5: BONUS Tenant Creation Walkthrough](#part-5-bonus-tenant-creation-walkthrough)
 - [Part 6: Bonus Video Only Trial Tenant Setup](#part-6-bonus-trial-tenant-setup-video)
 
-# Introduction
+## Introduction
 
 ### Lab Objective
 
@@ -74,19 +74,18 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > Webex Calling app **[https://settings.webex.com/](https://settings.webex.com/){:target="_blank"}**
 
 
-# Lab Section
+## Lab Section
 
-## Part 1: Control Hub User Management Admin Task
+# Control Hub User Management Tasks
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles. 
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/0p37TL5wtCY?rel=0" title="WxCC Lab #1 Part 1: Control Hub User Management Admin Task" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-| **User Role** | **User email**      | **User Extension**                   |
-| ----------- | ----------------- | -------------------------------- |
-| Agent        | agent1<@youremail.com> | <assign a DN> |
-| Supervisor         | supervisor1<@youremail.com>  | <assign a DN> |
-
+| **User Role** | **User email**              | **User Extension** |
+| ------------- | --------------------------- | ------------------ |
+| Agent         | agent1<@youremail.com>      | <assign a DN>      |
+| Supervisor    | supervisor1<@youremail.com> | <assign a DN>      |
 
 
 ### 1. Add an agent and a supervisor users and configure the calling extension
@@ -133,7 +132,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 [To top of this lab](#table-of-contents)
 
 
-## Part 2: Admin Portal Multimedia Profile, Site and Team Configuration
+# Managment Portal User Configuration
 
 > The following video outlines how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user. We will also see how to navigate to the Webex Contact Center Management Portal from Control Hub UI.
 
@@ -200,9 +199,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Please follow the same steps as above to add an extra Team as `Team2_2022_TS`. Later we will use this team to assign a custom Desktop Layout.
 
-[To top of this lab](#table-of-contents)
 
-## Part 3: Admin Portal User Configuration
 
 > The following video outlines how to configure the users in Admin Portal that were added first in Control Hub. This is a very critical task from the Contact Center perspective. We also would take a look at how to associate customer-created Site, Team, and Multi-Media Profile with those users. After this, we should be able to login as an agent.
 
@@ -236,9 +233,8 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
 
-[To top of this lab](#table-of-contents)
 
-## Part 4: Access to the Agent Desktop
+# Access to the Agent Desktop
 >The following video explains the process to access the Agent Desktop. Following the steps, you will log in with your credentials and indicate the number where you want to receive the calls. 
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/2bmoiAfxpTU?rel=0" title="WxCC Lab #2 Part 4: Access to the Agent Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -314,20 +310,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
 
-[To top of this lab](#table-of-contents)
-
-## Part 5: **BONUS** Tenant Creation Walkthrough
-This is a supportive video that does not require any actions since your tenant is already provisioned. The video demonstrates the initial provisioning task for New Webex Contact Center. The initial walkthrough assumes that a new partner is creating both Webex Control Hub and Webex Contact Center Gold Tenant. This process you will use in the feature for setting up your GOLD tenant using Webex Calling. 
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/SYY4yOogBC0?rel=0" title="WxCC Lab #1 Part 5: Tenant Creation Walkthrough - BONUS Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-## Part 6 **BONUS** Trial Tenant Setup Video
-
-> The bonus video shows how to set up a Trial Tenant. The steps are similar but since this is a trial tenant it is not necessary to go through the ordering process. Trial tenants are a great option for partners who are willing to start with the configuration before billing started. 
-> **Please note, by default the trial feature is not available in the Partner's CH. It can be activated only after approval. Please contact your PSM/CSM**.
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/m9QamZh4LwI?rel=0" title="WxCC Lab #1 Part 6: Trial Tenant Setup - BONUS Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# Bulk Configuration
 
 
 ---

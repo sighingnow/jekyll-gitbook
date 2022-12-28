@@ -13,7 +13,7 @@ Welcome to the Lab Guide Library. Here you will find the step-by-step guides on 
 
 | Lab ID | Lab Details                                                               |
 | ------ | ------------------------------------------------------------------------- |
-| Lab 0  | [Provisioning (Trials & Production) ](\_pages\Provisioning.md) |
+| Lab 0  | [Provisioning (Trials & Production) ](/pages/Provisioning/)|
 | Lab 1  | [Admin Experience](CH.md){:target="\_blank"}                              |
 | Lab 2  | [IVR Contact Routing](IVR.md){:target="\_blank"}                          |
 | Lab 3  | [Agent Desktop](Agent.md){:target="\_blank"}                              |
