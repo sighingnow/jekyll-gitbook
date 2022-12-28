@@ -3,7 +3,7 @@ layout: home
 title: 'Webex CC Lab guides'
 permalink: /
 ---
-<img align="middle" src="/images/Home.jpeg" width="1000" />
+<img align="middle" src="/assets/gitbook/images/Home.jpeg" width="1000" />
 
 
 Welcome to the Lab Guide Library. Here you will find the step-by-step guides on how to setup Webex Contact Center features.
