@@ -11,7 +11,7 @@ Welcome to the Lab Guide Library. Here you will find the step-by-step guides on 
 
 ## Lab Content
 
-| # | Lab Details                                                               |
+| Lab ID | Lab Details                                                               |
 | ------ | ------------------------------------------------------------------------- |
 | Lab 0  | [Provisioning (Trials & Production) ](Provisioning.md){:target="\_blank"} |
 | Lab 1  | [Admin Experience](CH.md){:target="\_blank"}                              |
