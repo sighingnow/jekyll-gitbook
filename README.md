@@ -28,3 +28,5 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab 12 | [Digital Channels](/pages/Digital/)                            |
 
 <img align="center" src="/assets/gitbook/images/webex.png" width="100" />
+
+<img src="/assets/gitbook/images/webex.png" class="center" width="100" />
