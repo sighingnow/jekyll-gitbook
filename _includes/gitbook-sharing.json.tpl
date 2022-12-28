@@ -3,10 +3,8 @@
                 "google": false,
                 "github": false,
                 "github_link": "",
-                "telegram": true,
-                "telegram_link": "wxcclabs@cisco.com",                
+                "telegram": true,                
                 "instapaper": false,
-                "twitter": true,
-                "twitter_link": "Webex",                
+                "twitter": true,            
                 "vk": false
             },
