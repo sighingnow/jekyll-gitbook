@@ -16,6 +16,23 @@ In this Lab, we will go through the tasks that are required to complete the gene
 ```
 
 
+> ##### TIP
+>
+> It is assumed that the attendee has already an access to the tenant.**
+{: .block-tip }
+
+
+> ##### TIP
+>
+> It is assumed that the attendee has already an access to the tenant.**
+{: .block-warning }
+
+
+> ##### TIP
+>
+> It is assumed that the attendee has already an access to the tenant.**
+{: .block-danger }
+
 # Table of Contents
 
 - [Part 1: Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) 
