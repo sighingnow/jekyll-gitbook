@@ -28,6 +28,9 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab 12 |      [Digital Channels](Digital.md){:target="\_blank"}       |
 
 
+
+<center><img src="/assets/gitbook/images/webex.png" alt="what image shows" height="150" width="200"></center>
+
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 <img src="/assets/gitbook/images/webex.png" class="center" width="100" /> 
