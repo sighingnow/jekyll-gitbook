@@ -315,9 +315,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ---
 
-### Congratulations, you have completed Lab1 tasks! 
-### We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete the short survey.
+### Congratulations, you have completed this lab! You can continue with the next one.
 
-
-
+<center><img src="/assets/gitbook/images/webex.png" width="100"></center>
 
