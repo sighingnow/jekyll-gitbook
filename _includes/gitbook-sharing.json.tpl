@@ -1,13 +1,15 @@
             "sharing": {
-                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"],
+                "all": ["facebook", "google", "twitter", "email", "instapaper", "github", "telegram"],
                 "facebook": true,
+                "facebook_link": "https://www.facebook.com/webex/",
                 "google": false,
-                "github": true,
-                "github_link": false,
+                "github": false,
+                "github_link": "",
                 "telegram": false,
-                "telegram_link": "https://t.me",
                 "instapaper": false,
                 "twitter": true,
+                "twitter_link": "https://twitter.com/Webex",                
                 "vk": false,
-                "weibo": false
+                "email": true,
+                "email_link": "wxcclabs@cisco.com"
             },
