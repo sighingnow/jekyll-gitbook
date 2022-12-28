@@ -1,6 +1,5 @@
             "sharing": {
                 "facebook": true,
-                "facebook_link": "webex",
                 "google": false,
                 "github": false,
                 "github_link": "",
