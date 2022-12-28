@@ -13,7 +13,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-twitter',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://twitter.com/Webex);
+                window.open('https://twitter.com/Webex');
             }
         },
         'github': {
