@@ -12,8 +12,7 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 ## Lab Content
 <div class="table-wrapper" markdown="block">
 | Lab ID | Lab Details                                                               |
-| ------ | ------------------------------------------------------------------------- |
-|:-:|:-:|
+|:------:|:-------------------------------------------------------------------------:|
 | Lab 0  | [Provisioning (Trials & Production) ](/pages/Provisioning/)|
 | Lab 1  | [Admin Experience](/pages/CH/)                             |
 | Lab 2  | [IVR Contact Routing](/pages/IVR/)                          |
@@ -31,6 +30,6 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 
 <img align="center" src="/assets/gitbook/images/webex.png" width="100" />
 
-<img src="/assets/gitbook/images/webex.png" class="center" width="100" />
+<img src="/assets/gitbook/images/webex.png" class="center" width="100" /> {: .align-center}
 
 ![webex](/assets/gitbook/images/webex.png){: .align-center}
