@@ -5,7 +5,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-facebook',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://www.facebook.com/sharer/sharer.php?s=100&p[url]='+encodeURIComponent(location.href));
+                window.open(encodeURIComponent(location.href));
             }
         },
         'twitter': {
@@ -13,7 +13,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-twitter',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://twitter.com/home?status='+encodeURIComponent(document.title+' '+location.href));
+                window.open(encodeURIComponent(location.href));
             }
         },
         'github': {
@@ -24,12 +24,12 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                 window.open('https://github.com');
             }
         },
-        'telegram': {
-            'label': 'Telegram',
+        'email': {
+            'label': 'email',
             'icon': 'fa fa-telegram',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('https://t.me');
+                window.open(encodeURIComponent(location.href));
             }
         },
         'google': {
@@ -103,10 +103,10 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                     window.open(opts["github_link"]);
                 }
             }
-            if (sideId === "telegram" && opts["telegram_link"] !== undefined && opts["telegram_link"] !== "") {
+            if (sideId === "email" && opts["email_link"] !== undefined && opts["email_link"] !== "") {
                 onClick = function(e) {
                     e.preventDefault();
-                    window.open(opts["telegram_link"]);
+                    window.open(opts["email_link"]);
                 }
             }
 
