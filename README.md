@@ -10,9 +10,10 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 
 
 ## Lab Content
-
+<div class="table-wrapper" markdown="block">
 | Lab ID | Lab Details                                                               |
 | ------ | ------------------------------------------------------------------------- |
+|:-:|:-:|
 | Lab 0  | [Provisioning (Trials & Production) ](/pages/Provisioning/)|
 | Lab 1  | [Admin Experience](/pages/CH/)                             |
 | Lab 2  | [IVR Contact Routing](/pages/IVR/)                          |
@@ -22,11 +23,14 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab 6  | [CRM Integration](/pages/CRM/)                             |
 | Lab 7  | [Google CCAI & TTS Integration](/pages/CCAI/)              |
 | Lab 8  | [XM Next](/pages/WxM/)                                     |
-| Lab 9  | [Automated Outbound Solution](/pages/Acqueon/)                 |
-| Lab 10 | [QM/WFO - Calabrio](/pages/Calabrio/)                            |
-| Lab 11 | [Webex CC APIs](/pages/API/)                                          |
-| Lab 12 | [Digital Channels](/pages/Digital/)                            |
+| Lab 9  | [Automated Outbound Solution](/pages/Acqueon/)             |
+| Lab 10 | [QM/WFO - Calabrio](/pages/Calabrio/)                      |
+| Lab 11 | [Webex CC APIs](/pages/API/)                               |
+| Lab 12 | [Digital Channels](/pages/Digital/)                        |
+</div>
 
 <img align="center" src="/assets/gitbook/images/webex.png" width="100" />
 
 <img src="/assets/gitbook/images/webex.png" class="center" width="100" />
+
+![webex](/assets/gitbook/images/webex.png){: .align-center}
