@@ -3,7 +3,7 @@ title: Support & Feedback
 layout: home
 ---
 
-Lab Support Email: wxcclabs@cisco.com
+**Lab Support Email:** mailto:wxcclabs@cisco.com
 
 For bug reports, feature request, data questions, or general product feedback, please submit using this form.
 
