@@ -22,7 +22,7 @@ Welcome to the Lab Guide Library. Here you will find the step-by-step guides on 
 | Lab 6  | [CRM Integration](CRM.md){:target="\_blank"}                              |
 | Lab 7  | [Google CCAI & TTS Integration](CCAI.md){:target="\_blank"}               |
 | Lab 8  | [XM Next](WxM.md){:target="\_blank"}                                      |
-| Lab 9  | [Automated Outbound Solution](WxM.md){:target="\_blank"}                  |
-| Lab 10 | [QM/WFO - Calabrio](WxM.md){:target="\_blank"}                            |
-| Lab 11 | [API](API.md){:target="\_blank"}                                          |
-| Lab 12 | [Digital Channels](WxM.md){:target="\_blank"}                             |
+| Lab 9  | [Automated Outbound Solution](Acqueon.md){:target="\_blank"}                  |
+| Lab 10 | [QM/WFO - Calabrio](Calabrio.md){:target="\_blank"}                            |
+| Lab 11 | [Webex CC APIs](API.md){:target="\_blank"}                                          |
+| Lab 12 | [Digital Channels](Digital.md){:target="\_blank"}                             |
