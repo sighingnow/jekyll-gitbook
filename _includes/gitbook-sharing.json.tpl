@@ -1,5 +1,4 @@
             "sharing": {
-                "all": ["facebook", "google", "twitter", "instapaper", "github", "telegram"],
                 "facebook": true,
                 "facebook_link": "https://www.facebook.com/webex/",
                 "google": false,
