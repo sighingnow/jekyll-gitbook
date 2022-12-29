@@ -315,7 +315,9 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ---
 
-### Congratulations, you have completed this lab! You can continue with the next one.
 
-<center><img src="/assets/gitbook/images/webex.png" width="100"></center>
+<p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
+	
 
