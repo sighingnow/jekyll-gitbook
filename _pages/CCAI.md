@@ -7,7 +7,7 @@ layout: post
 
 ### Overview of the lab:
 
-In this Lab, we will go through the tasks that are required to setup **Contact Center AI with the Voice Bot and Text-to-Speech (TTS) capabilities**.
+In this Lab, we will go through the tasks that are required to setup **Contact Center AI with the Voice Bot and Text-to-Speech (TTS) capabilities**. 
 
 # Table of Contents
 
