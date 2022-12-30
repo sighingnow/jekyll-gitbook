@@ -49,7 +49,7 @@
 }
 
 .page-inner {
-    max-width: {{ site.page_width | default: '960px' }};
+    max-width: {{ site.page_width | default: '800px' }};
 }
 
 .back-to-top {
