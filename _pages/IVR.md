@@ -1,5 +1,5 @@
 ---
-title: Lab 2 - IVR and Contact Routing
+title: Lab 2 - IVR Contact Routing
 author: Kevin Simpson & Krishna Tyagi & Chandramouli Vaithiyanathan
 date: 2022-02-02
 category: Jekyll
