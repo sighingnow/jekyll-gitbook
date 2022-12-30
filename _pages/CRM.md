@@ -667,5 +667,12 @@ Then choose Language, enter new Password and click on **Complete trial signup**.
 - Click on "Views" item of the vertical menu bar on the left. Then click on "All unresolved tickets" and make sure you see both records created after test calls.
 
 
-### **Congratulations! CRM Integration lab is now complete!**
+
+---
+
+
+<p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
+
 

@@ -567,10 +567,13 @@ https://rest.wxcc-us1.cisco.com/aws/api/cars/74d98c29-39b4-4e1e-81fa-0ce0ae5aebb
 - Every CAR has a reference to the CSR, which is in the `session` attribute within the object.
 -
 
+---
 
 
-### Congratulations, you have completed **ALL section**. Well done!!!
-### We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete the short survey.
+<p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
+
 
 
 

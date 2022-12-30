@@ -275,11 +275,11 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 
 - In the agent dashboard click the **Auto Refresh** button and make sure the agent appears.
 
-[To top of this lab](#table-of-contents)
 
 
 ---
 
-### Congratulations, you have compleated Lab 3 tasks! 
-### We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete the short survey.
 
+<p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
