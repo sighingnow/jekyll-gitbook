@@ -22,7 +22,7 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab 6  |         [CRM Integration](/pages/CRM/)         |
 | Lab 7  | [Google CCAI & TTS Integration](/pages/CCAI/)  |
 | Lab 8  |             [Feedback and Journey](/pages/WxM/)             |
-| Lab 9  | [Automated Outbound Solution - Acqueon](/pages/Acqueon/) |
+| Lab 9  | [Outbound Campaign - Acqueon](/pages/Acqueon/) |
 | Lab 10 |     [QM/WFO - Calabrio](/pages/Calabrio/)      |
 | Lab 11 |          [Webex CC APIs](/pages/API/)          |
 | Lab 12 |      [Digital Channels](/pages/Digital/)       |
