@@ -1,5 +1,5 @@
 ---
-title: Lab 7 - Google CCAI & TTS Integration
+title: Lab 7 - Google CCAI & TTS 
 author: Chandramouli Vaithiyanathan & Kevin Simpson
 date: 2022-07-07
 layout: post
