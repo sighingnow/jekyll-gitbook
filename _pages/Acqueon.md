@@ -1,5 +1,5 @@
 ---
-title: Lab 9 - Automated Outbound Solution
+title: Lab 9 - Outbound Campaign
 author: Gagarin Sathiyanarayanan & David Lezcano Martinez
 date: 2022-09-09
 layout: post
