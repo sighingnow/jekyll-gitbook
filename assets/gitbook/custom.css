@@ -258,7 +258,7 @@
     --c-tip-text: #06100b;
     --c-tip-title: #359469;
     --c-warning: #e7c000;
-    --c-warning-bg: rgb(242 227 151 / 62%)
+    --c-warning-bg: rgba(255, 229, 100, .65);
     --c-warning-text: #010100;
     --c-warning-title: #b29400;
     --c-danger: #c00;
