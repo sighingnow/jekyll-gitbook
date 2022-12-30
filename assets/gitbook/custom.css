@@ -254,7 +254,7 @@
 
 :root {
     --c-tip: #42b983;
-    --c-tip-bg: #c1d5cb;
+    --c-tip-bg: #c1d5cbd1;
     --c-tip-text: #06100b;
     --c-tip-title: #359469;
     --c-warning: #e7c000;
