@@ -1,6 +1,6 @@
 ---
 title: Lab 12 - Digital Channels
-author: Davide
+author: Davide Telari & Yurii Ulianov & Iranthi Ulluwishewa & David Ng & Naveen Kumar Narasimhan Almeti
 date: 2022-12-12
 layout: post 
 ---

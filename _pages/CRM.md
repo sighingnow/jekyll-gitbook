@@ -1,6 +1,6 @@
 ---
 title: Lab 6 - CRM Integration
-author: Yurii
+author: Neha Wuthoo & Pawan Kumar & Arunabh Bhattacharjee
 date: 2022-06-06
 layout: post
 ---

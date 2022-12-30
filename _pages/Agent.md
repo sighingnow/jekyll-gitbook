@@ -1,6 +1,6 @@
 ---
 title: Lab 3 - Agent Desktop
-author: Gorka
+author: Gorka Antona Santamaria & Neha Wuthoo
 date: 2022-03-03
 layout: post
 ---

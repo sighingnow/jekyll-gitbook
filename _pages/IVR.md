@@ -1,6 +1,6 @@
 ---
 title: Lab 2 - IVR and Contact Routing
-author: Tao He
+author: Kevin Simpson & Krishna Tyagi & Chandramouli Vaithiyanathan
 date: 2022-02-02
 category: Jekyll
 layout: post

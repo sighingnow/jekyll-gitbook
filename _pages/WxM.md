@@ -1,6 +1,6 @@
 ---
 title: Lab 8 - XM Next
-author: Ankan
+author: Ankan Dutta & Gagarin Sathiyanarayanan & Niko Theologitis
 date: 2022-08-08
 layout: post
 ---

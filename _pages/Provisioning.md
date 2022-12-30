@@ -1,6 +1,6 @@
 ---
 title: Lab 0 - Provisioning
-author: Yaroslav Bondar
+author: Yaroslav Bondar & Abdul Iraqi
 date: 2022-01-01
 layout: post
 ---

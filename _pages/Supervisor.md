@@ -1,6 +1,6 @@
 ---
 title: Lab 4 - Supervisor Desktop
-author: Gagarin
+author: Benjamin Bollaert & Yurii Ulianov & Iranthi Ulluwishewa
 date: 2022-04-04
 layout: post
 ---

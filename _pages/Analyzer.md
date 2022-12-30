@@ -1,6 +1,6 @@
 ---
 title: Lab 5 - Analyzer Deep Dive
-author: Yaroslav
+author: Krishna Tyagi & Mike Turnbow & George Kovanis
 date: 2022-05-05
 layout: post
 ---

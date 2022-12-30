@@ -1,6 +1,6 @@
 ---
 title: Lab 10 - QM/WFO - Calabrio
-author: Gagarin
+author: Carles Duz Palau & Susan Quick
 date: 2022-10-10
 layout: post
 ---

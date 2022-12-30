@@ -1,6 +1,6 @@
 ---
 title: Lab 9 - Automated Outbound Solution
-author: Carles
+author: Gagarin Sathiyanarayanan & David Lezcano Martinez
 date: 2022-09-09
 layout: post
 ---
