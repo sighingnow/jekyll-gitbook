@@ -254,16 +254,16 @@
 
 :root {
     --c-tip: #42b983;
-    --c-tip-bg: #e2f5ec;
-    --c-tip-text: #215d42;
+    --c-tip-bg: #c1d5cb;
+    --c-tip-text: #06100b;
     --c-tip-title: #359469;
     --c-warning: #e7c000;
-    --c-warning-bg: rgba(255, 229, 100, .25);
-    --c-warning-text: #6b5900;
+    --c-warning-bg: rgb(242 227 151 / 62%)
+    --c-warning-text: #010100;
     --c-warning-title: #b29400;
     --c-danger: #c00;
-    --c-danger-bg: #ffe0e0;
-    --c-danger-text: #600;
+    --c-danger-bg: #dfacac9c;
+    --c-danger-text: #060303;
     --c-danger-title: #c00;
     --font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
