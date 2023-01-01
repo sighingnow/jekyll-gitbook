@@ -85,6 +85,41 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <ul id="atendee"></ul>
 <br>
 
+<script  type="text/javascript">
+  function store(){
+	const atendeeForm = document.getElementById("atendee-form");
+        const atendeeInput = document.getElementById("atendee-input");
+	const atendeeSubmit = document.getElementById("atendee-submit");
+	const atendee = document.getElementById("atendee");
+
+        let atendeeStorage = localStorage.getItem("atendee")
+        ? JSON.parse(localStorage.getItem("atendee"))
+        : [];
+	
+	atendeeForm.addEventListener("submit", (e) => {
+	e.preventDefault();
+	notesStorage.push(atendeeInput.value);
+	localStorage.setItem("atendee", JSON.stringify(atendeeStorage));
+	listBuilder(atendeeInput.value);
+	atendeeInput.value = "";
+	});
+	
+	const listBuilder = (text) => {
+  	const atendeeID = document.createElement("li");
+	atendeeID.innerHTML = text + ' <button onclick="deleteatendee(this)">x</button>';
+  	atendee.appendChild(atendee);
+	};
+	
+	const getatendee = JSON.parse(localStorage.getItem("atendee"));
+	getatendee.forEach((atendeeID) => {
+  	listBuilder(atendeeID);
+	});
+	
+    }
+</script>
+
+
+
 <form>
   
   <label for="context">Type your attendee ID</label><br>
