@@ -1,11 +1,11 @@
 // form.js
-const formId = "save-attendee-form"; // ID of the form
-const url = location.href; //  href for the page
+const formId = "attendee-form"; // ID of the form
 const formIdentifier = `${formId}`; // Identifier used to identify the form
 const saveButton = document.querySelector("#save"); // select save button
 const alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${formId}`); // select form
 let formElements = form.elements; // get the elements in the form
+let formElement = "attendee-id";
 
 /**
  * This function gets the values in the form
@@ -14,10 +14,10 @@ let formElements = form.elements; // get the elements in the form
  * @returns {Object}
  */
 const getFormData = () => {
-  let data = { [formIdentifier]: {} };
+  let data;
   for (const element of formElements) {
     if (element.name.length > 0) {
-      data[formIdentifier][element.name] = element.value;
+      data = element.value;
     }
   }
   return data;
@@ -26,7 +26,7 @@ const getFormData = () => {
 saveButton.onclick = event => {
   event.preventDefault();
   data = getFormData();
-  localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+  localStorage.setItem(formIdentifier, data);
   const message = "Attendee ID has been saved!";
   displayAlert(message);
 };
@@ -52,10 +52,10 @@ const displayAlert = message => {
  */
 const populateForm = () => {
   if (localStorage.key(formIdentifier)) {
-    const savedData = JSON.parse(localStorage.getItem(formIdentifier)); // get and parse the saved data from localStorage
-    for (const element of formElements) {
-      if (element.name in savedData) {
-        element.value = savedData[element.name];
+    const savedData = localStorage.getItem(formIdentifier); // get and parse the saved data from localStorage
+    for (const element of formElements) {      
+      if (element.name == formElement) {
+        element.value = savedData;        
       }
     }
     const message = "Form has been refilled with saved data!";
@@ -63,10 +63,7 @@ const populateForm = () => {
   }
 };
 
-function myFunction() {
-  const savedAttendy = JSON.parse(localStorage.getItem(formIdentifier));
-  document.getElementById("attendee").innerHTML = savedAttendy;
-}
 
 document.onload = populateForm(); // populate the form when the document is loaded
-window.onload = populateForm()
+window.onload = populateForm(); // populate the form when the window is loaded
+document.ready() = populateForm();
