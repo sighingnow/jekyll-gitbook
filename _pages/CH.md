@@ -78,6 +78,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 # Control Hub User Management Tasks
 
+<form id="atendee-form">
+  <input id="atendee-input" type="text" placeholder="+ Type your Atendee ID" required />
+  <button id="atendee-submit">Save</button>
+</form>
+<ul id="atendee"></ul>
+<br>
+
 <form>
   
   <label for="context">Type your attendee ID</label><br>
