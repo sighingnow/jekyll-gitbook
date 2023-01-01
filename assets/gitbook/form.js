@@ -63,4 +63,9 @@ const populateForm = () => {
   }
 };
 
+function myFunction() {
+  const savedAttendy = JSON.parse(localStorage.getItem(formIdentifier));
+  document.getElementById("attendee").innerHTML = savedAttendy;
+}
+
 document.onload = populateForm(); // populate the form when the document is loaded
