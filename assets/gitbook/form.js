@@ -1,12 +1,12 @@
 // form.js
-const formId = "save-attendee-form"; // ID of the form
+const formId = "attendee-form"; // ID of the form
 const url = location.href; //  href for the page
 const formIdentifier = `${formId}`; // Identifier used to identify the form
 const saveButton = document.querySelector("#save"); // select save button
 const alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${formId}`); // select form
 let formElements = form.elements; // get the elements in the form
-
+const element = "attendee-id";
 /**
  * This function gets the values in the form
  * and returns them as an object with the
@@ -15,11 +15,9 @@ let formElements = form.elements; // get the elements in the form
  */
 const getFormData = () => {
   let data = { [formIdentifier]: {} };
-  for (const element of formElements) {
     if (element.name.length > 0) {
-      data[formIdentifier][element.name] = element.value;
+      data[formIdentifier] = element.value;
     }
-  }
   return data;
 };
 
