@@ -15,9 +15,7 @@ const element = "attendee-id";
  */
 const getFormData = () => {
   let data = { [formIdentifier]: {} };
-    if (element.name.length > 0) {
-      data[formIdentifier] = element.value;
-    }
+  data[formIdentifier] = element.value;
   return data;
 };
 
