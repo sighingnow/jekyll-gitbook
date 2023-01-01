@@ -7,6 +7,13 @@ layout: post
 
 ### Overview of the lab:
 
+<form id="save-later-form">
+      <label for="full-name">Full Name</label>
+      <input type="text" name="full-name" id="full-name" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="form.js"></script>
+
 In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 ```
 > ##### TIP
