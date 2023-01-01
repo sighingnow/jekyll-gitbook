@@ -27,7 +27,7 @@ saveButton.onclick = event => {
   event.preventDefault();
   data = getFormData();
   localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
-  const message = "Form draft has been saved!";
+  const message = "Attendee ID has been saved!";
   displayAlert(message);
 };
 
