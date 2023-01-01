@@ -81,9 +81,11 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <form id="note-form">
       <input id="note-input" type="text" placeholder="+ Add Note" required />
       <button id="note-submit">Save</button>
-    </form>
-    <ul id="notes"></ul>
-    <script>
+</form>
+
+<ul id="notes"></ul>
+
+<script  type="text/javascript">
       const noteForm = document.getElementById("note-form");
       const noteInput = document.getElementById("note-input");
       const noteSubmit = document.getElementById("note-submit");
@@ -119,7 +121,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
         localStorage.setItem("notes", JSON.stringify(notesStorage));
         el.remove();
       };
-      </script>
+</script>
 
 
 
