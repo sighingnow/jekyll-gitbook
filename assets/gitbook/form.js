@@ -22,7 +22,7 @@ const getFormData = () => {
 saveButton.onclick = event => {
   event.preventDefault();
   data = getFormData();
-  localStorage.setItem(formIdentifier, JSON.stringify(data[formIdentifier]));
+  localStorage.setItem(formIdentifier, element.value);
   const message = "Attendee ID has been saved!";
   displayAlert(message);
 };
