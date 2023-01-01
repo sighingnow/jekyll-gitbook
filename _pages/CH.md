@@ -78,7 +78,16 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 # Control Hub User Management Tasks
 
+<form>
+  
+  <label for="context">Type your attendee ID</label><br>
+  <input type="text" id="attendeeID" name="attendeeID"><br>
+  
+<br>
+
 <button onclick="store()" type="button">Store Attendee ID</button>
+</form>
+
 
 <script  type="text/javascript">
   function store(){
