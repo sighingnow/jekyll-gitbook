@@ -7,13 +7,6 @@ layout: post
 
 ### Overview of the lab:
 
-<form id="save-later-form">
-      <label for="full-name">Full Name</label>
-      <input type="text" name="full-name" id="full-name" />
-      <button type="submit" id="save">SAVE</button>
-</form>
-<script src="/assets/gitbook/form.js"></script>
-
 In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 ```
 > ##### TIP
@@ -85,70 +78,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 # Control Hub User Management Tasks
 
-<form id="note-form">
-      <input id="note-input" type="text" placeholder="+ Add Note" required />
-      <button id="note-submit">Save</button>
-</form>
-
-<ul id="notes"></ul>
-
-<script  type="text/javascript">
-      const noteForm = document.getElementById("note-form");
-      const noteInput = document.getElementById("note-input");
-      const noteSubmit = document.getElementById("note-submit");
-      const notes = document.getElementById("notes");
-
-      let notesStorage = localStorage.getItem("notes")
-        ? JSON.parse(localStorage.getItem("notes"))
-        : [];
-
-      noteForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        notesStorage.push(noteInput.value);
-        localStorage.setItem("notes", JSON.stringify(notesStorage));
-        listBuilder(noteInput.value);
-        noteInput.value = "";
-      });
-
-      const listBuilder = (text) => {
-        const note = document.createElement("li");
-        note.innerHTML = text + ' <button onclick="deleteNote(this)">x</button>';
-        notes.appendChild(note);
-      };
-
-      const getNotes = JSON.parse(localStorage.getItem("notes"));
-      getNotes.forEach((note) => {
-        listBuilder(note);
-      });
-
-      const deleteNote = (btn) => {
-        let el = btn.parentNode;
-        const index = [...el.parentElement.children].indexOf(el);
-        notesStorage.splice(index, 1);
-        localStorage.setItem("notes", JSON.stringify(notesStorage));
-        el.remove();
-      };
-</script>
-
-
-
-<form>
-  
-  <label for="context">Type your attendee ID</label><br>
-  <input type="text" id="attendeeID" name="attendeeID"><br>
-  
-<br>
-
-<button onclick="store()" type="button">Store Attendee ID</button>
-</form>
-
-
-<script  type="text/javascript">
-  function store(){
-     var inputAttendeeID= document.getElementById("attendeeID");
-     localStorage.setItem("attendeeID", inputAttendeeID.value);
-    }
-</script>
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles. 
 
@@ -159,6 +88,15 @@ In this Lab, we will go through the tasks that are required to complete the gene
 | Agent         | agent1<@youremail.com>      | <assign a DN>      |
 | Supervisor    | supervisor1<@youremail.com> | <assign a DN>      |
 
+
+### 1. Define your Attendee ID
+
+<form id="save-later-form">
+      <label for="full-name">Attendee ID</label>
+      <input type="text" name="full-name" id="full-name" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="/assets/gitbook/form.js"></script>
 
 ### 1. Add an agent and a supervisor users and configure the calling extension
 
