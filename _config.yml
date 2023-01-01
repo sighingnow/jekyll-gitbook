@@ -11,7 +11,6 @@ gitbook_version:  3.2.3
 
 url:              'https://webexcc.github.io'
 baseurl:          ''
-#baseurl:          '/guides'
 
 rss:              RSS
 
@@ -24,7 +23,7 @@ toc:
   h_max: 1
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path:     /assets/gitbook/images/favicon.ico
+favicon_path:     webexcc.github.io/assets/gitbook/images/favicon.ico
 
 # markdown render engine.
 markdown:         kramdown
