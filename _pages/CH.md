@@ -7,7 +7,7 @@ layout: post
 
 ### Overview of the lab:
 
-<form method="post">
+<form method="form">
 	<label for="attendee-id">Attendee ID</label>
 	<input name="attendee-id" type="text" size="20">		
 	<button type="submit" name="save">SAVE</button>
