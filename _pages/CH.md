@@ -88,7 +88,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 | Agent         | agent1<@youremail.com>      | <assign a DN>      |
 | Supervisor    | supervisor1<@youremail.com> | <assign a DN>      |
 
-<p id="attendee" ></p>
 
 ### 1. Define your Attendee ID
 <div class="alert"></div>
