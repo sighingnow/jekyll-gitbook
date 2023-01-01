@@ -88,13 +88,14 @@ In this Lab, we will go through the tasks that are required to complete the gene
 | Agent         | agent1<@youremail.com>      | <assign a DN>      |
 | Supervisor    | supervisor1<@youremail.com> | <assign a DN>      |
 
+<p id="attendee" agent1></p>
 
 ### 1. Define your Attendee ID
 <div class="alert"></div>
 <form id="save-attendee-form">
       <label for="attendee-id">Attendee ID</label>
       <input type="text" name="attendee-id" id="attendee-id" />
-      <button type="submit" id="save">SAVE</button>
+      <button onclick="myFunction()" type="submit" id="save">SAVE</button>
 </form>
 <script src="/assets/gitbook/form.js"></script>
 	
