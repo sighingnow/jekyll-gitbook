@@ -6,11 +6,20 @@ let form = document.querySelector(`#${formId}`); // select form
 let formElements = form.elements; // get the elements in the form
 const formElement = "attendee-id";
 
+const getFormData = () => {
+  let data = { [formIdentifier]: {} };
+  for (const element of formElements) {
+    if (element.name.length > 0) {
+      data[formIdentifier][element.name] = element.value;
+    }
+  }
+  return data;
+};
 
 saveButton.onclick = event => {
   event.preventDefault();
-  let inputAttendee= document.getElementById(formElement);
-  localStorage.setItem(formId, inputAttendee.value);
+  data = getFormData();
+  localStorage.setItem(formId, data[formIdentifier]);
   const message = "Attendee ID has been saved!";
   displayAlert(message);
 };
