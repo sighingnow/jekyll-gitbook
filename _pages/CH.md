@@ -90,13 +90,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 
 ### 1. Define your Attendee ID
-<form method="form">
-	<label for="attendee-id">Attendee ID</label>
-	<input name="attendee-id" type="text" size="20">		
-	<button type="submit" name="save">SAVE</button>
-</form>  
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="/assets/gitbook/form.js"></script>
+<div class="alert"></div>
+<form id="save-attendee-form">
+      <label for="attendee-id">Attendee ID</label>
+      <input type="text" name="attendee-id" id="attendee-id" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="/assets/gitbook/form.js"></script>
 	
 ### 1. Add an agent and a supervisor users and configure the calling extension
 
