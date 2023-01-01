@@ -7,15 +7,6 @@ layout: post
 
 ### Overview of the lab:
 
-<form method="form">
-	<label for="attendee-id">Attendee ID</label>
-	<input name="attendee-id" type="text" size="20">		
-	<button type="submit" name="save">SAVE</button>
-</form>  
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="/assets/gitbook/form.js"></script>
-
-
 In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 ```
 > ##### TIP
@@ -100,12 +91,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ### 1. Define your Attendee ID
 <div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" />
-      <button type="submit" id="save">SAVE</button>
-</form>
-<script src="/assets/gitbook/form.js"></script>
+<form method="form">
+	<label for="attendee-id">Attendee ID</label>
+	<input name="attendee-id" type="text" size="20">		
+	<button type="submit" name="save">SAVE</button>
+</form>  
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="/assets/gitbook/form.js"></script>
 	
 ### 1. Add an agent and a supervisor users and configure the calling extension
 
