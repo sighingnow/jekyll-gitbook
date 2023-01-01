@@ -13,7 +13,7 @@ layout: post
 	<button type="submit" name="save">SAVE</button>
 </form>  
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="form.js"></script>
+<script type="text/javascript" src="/assets/gitbook/form.js"></script>
 
 
 In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
