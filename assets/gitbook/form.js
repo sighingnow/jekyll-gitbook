@@ -37,7 +37,7 @@ const displayAlert = message => {
 const populateForm = () => {
   if (localStorage.key(formId)) {
     const savedData = localStorage.getItem(formId); 
-    formElement.value = savedData[formElement.name];
+    formElement.value = savedData;
       }
     }
     const message = "Form has been refilled with saved data!";
