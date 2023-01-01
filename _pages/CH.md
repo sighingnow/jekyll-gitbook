@@ -91,6 +91,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ### 1. Define your Attendee ID
 
+<link rel="stylesheet" href="/assets/gitbook/form.css" />
 <form id="save-attendee-form">
       <label for="attendee-id">Attendee ID</label>
       <input type="text" name="attendee-id" id="attendee-id" />
