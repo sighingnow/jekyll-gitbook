@@ -12,7 +12,7 @@ layout: post
 	<input name="attendee-id" type="text" size="20">		
 	<button type="submit" name="save">SAVE</button>
 </form>  
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="/assets/gitbook/form.js"></script>
 
 
