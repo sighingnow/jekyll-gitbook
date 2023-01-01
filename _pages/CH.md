@@ -93,7 +93,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <div class="alert"></div>
 <form id="save-attendee-form">
       <label for="attendee-id">Attendee ID</label>
-      <input type="text" id="attendee-id" />
+      <input type="text" name="attendee-id" id="attendee-id" />
       <button type="submit" id="save">SAVE</button>
 </form>
 <script src="/assets/gitbook/form.js"></script>
