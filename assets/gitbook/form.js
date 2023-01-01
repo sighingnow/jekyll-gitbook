@@ -1,7 +1,7 @@
 // form.js
 const formId = "save-attendee-form"; // ID of the form
 const url = location.href; //  href for the page
-const formIdentifier = `${url} ${formId}`; // Identifier used to identify the form
+const formIdentifier = `${formId}`; // Identifier used to identify the form
 const saveButton = document.querySelector("#save"); // select save button
 const alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${formId}`); // select form
