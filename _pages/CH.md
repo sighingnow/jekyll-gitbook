@@ -90,7 +90,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 
 ### 1. Define your Attendee ID
-<div class="alert"></div>
 <form method="form">
 	<label for="attendee-id">Attendee ID</label>
 	<input name="attendee-id" type="text" size="20">		
