@@ -78,45 +78,48 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 # Control Hub User Management Tasks
 
-<form id="atendee-form">
-  <input id="atendee-input" type="text" placeholder="+ Type your Atendee ID" required />
-  <button id="atendee-submit">Save</button>
-</form>
-<ul id="atendee"></ul>
-<br>
+<form id="note-form">
+      <input id="note-input" type="text" placeholder="+ Add Note" required />
+      <button id="note-submit">Save</button>
+    </form>
+    <ul id="notes"></ul>
+    <script>
+      const noteForm = document.getElementById("note-form");
+      const noteInput = document.getElementById("note-input");
+      const noteSubmit = document.getElementById("note-submit");
+      const notes = document.getElementById("notes");
 
-<script  type="text/javascript">
-  function store(){
-	const atendeeForm = document.getElementById("atendee-form");
-        const atendeeInput = document.getElementById("atendee-input");
-	const atendeeSubmit = document.getElementById("atendee-submit");
-	const atendee = document.getElementById("atendee");
-
-        let atendeeStorage = localStorage.getItem("atendee")
-        ? JSON.parse(localStorage.getItem("atendee"))
+      let notesStorage = localStorage.getItem("notes")
+        ? JSON.parse(localStorage.getItem("notes"))
         : [];
-	
-	atendeeForm.addEventListener("submit", (e) => {
-	e.preventDefault();
-	notesStorage.push(atendeeInput.value);
-	localStorage.setItem("atendee", JSON.stringify(atendeeStorage));
-	listBuilder(atendeeInput.value);
-	atendeeInput.value = "";
-	});
-	
-	const listBuilder = (text) => {
-  	const atendeeID = document.createElement("li");
-	atendeeID.innerHTML = text + ' <button onclick="deleteatendee(this)">x</button>';
-  	atendee.appendChild(atendee);
-	};
-	
-	const getatendee = JSON.parse(localStorage.getItem("atendee"));
-	getatendee.forEach((atendeeID) => {
-  	listBuilder(atendeeID);
-	});
-	
-    }
-</script>
+
+      noteForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        notesStorage.push(noteInput.value);
+        localStorage.setItem("notes", JSON.stringify(notesStorage));
+        listBuilder(noteInput.value);
+        noteInput.value = "";
+      });
+
+      const listBuilder = (text) => {
+        const note = document.createElement("li");
+        note.innerHTML = text + ' <button onclick="deleteNote(this)">x</button>';
+        notes.appendChild(note);
+      };
+
+      const getNotes = JSON.parse(localStorage.getItem("notes"));
+      getNotes.forEach((note) => {
+        listBuilder(note);
+      });
+
+      const deleteNote = (btn) => {
+        let el = btn.parentNode;
+        const index = [...el.parentElement.children].indexOf(el);
+        notesStorage.splice(index, 1);
+        localStorage.setItem("notes", JSON.stringify(notesStorage));
+        el.remove();
+      };
+      </script>
 
 
 
