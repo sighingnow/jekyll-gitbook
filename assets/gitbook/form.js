@@ -43,9 +43,6 @@ saveButton.onclick = event => {
   updateAllClasses(data);
 };
 
-addEventListener("navigate", (event) => {
-  populateForm();
-});
 
 
 /**
@@ -85,6 +82,5 @@ const populateForm = () => {
 
 
 document.onload = populateForm(); // populate the form when the document is loaded
-window.onhashchange = populateForm();
 
 
