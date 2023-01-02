@@ -43,6 +43,11 @@ saveButton.onclick = event => {
   updateAllClasses(data);
 };
 
+addEventListener("navigate", (event) => {
+  populateForm();
+});
+
+
 /**
  * This function displays a message
  * on the page for 1 second
@@ -80,5 +85,6 @@ const populateForm = () => {
 
 
 document.onload = populateForm(); // populate the form when the document is loaded
+window.onhashchange = populateForm();
 
 
