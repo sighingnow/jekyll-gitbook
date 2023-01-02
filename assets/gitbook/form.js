@@ -1,17 +1,28 @@
 // form.js
 const formId = "attendee-form"; // ID of the form
+const className = ".attendee-class";
 const formIdentifier = `${formId}`; // Identifier used to identify the form
 const saveButton = document.querySelector("#save"); // select save button
 const alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${formId}`); // select form
 let formElements = form.elements; // get the elements in the form
 let formElement = "attendee-id";
+  
+//Function which updates all "attendee-class" 
+const updateAllClasses = (data) => {
+  // Get a NodeList of all .demo elements
+  const demoClasses = document.querySelectorAll(className);
+
+  // Change the text of multiple elements with a loop
+  demoClasses.forEach(element => {
+  element.textContent = data;
+  });  
+  };
 
 /**
  * This function gets the values in the form
- * and returns them as an object with the
- * [formIdentifier] as the object key
- * @returns {Object}
+ * and returns them as a string with the
+ * [formIdentifier] as the key
  */
 const getFormData = () => {
   let data;
@@ -29,6 +40,7 @@ saveButton.onclick = event => {
   localStorage.setItem(formIdentifier, data);
   const message = "Attendee ID has been saved!";
   displayAlert(message);
+  updateAllClasses(data);
 };
 
 /**
@@ -59,11 +71,14 @@ const populateForm = () => {
       }
     }
     const message = "Form has been refilled with saved data!";
-    displayAlert(message);
+    displayAlert(message);    
+
+    updateAllClasses(savedData); 
+    
   }
 };
 
 
 document.onload = populateForm(); // populate the form when the document is loaded
-window.onload = populateForm(); // populate the form when the window is loaded
-document.ready() = populateForm();
+
+
