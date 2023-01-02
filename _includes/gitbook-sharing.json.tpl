@@ -1,9 +1,8 @@
             "sharing": {
                 "facebook": true,
                 "google": false,
-                "github": false,
-                "github_link": "",
-                "telegram": true,                
+                "github": true,
+                "telegram": false,                
                 "instapaper": false,
                 "twitter": true,            
                 "vk": false
