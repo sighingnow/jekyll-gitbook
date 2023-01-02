@@ -85,8 +85,8 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 | **User Role** | **User email**              | **User Extension** |
 | ------------- | --------------------------- | ------------------ |
-| Agent         | <w class = "attendee-class">/<ID></w>_agent1@mailinator.com      | /<assign a DN/>      |
-| Supervisor    | <w class = "attendee-class">/<ID></w>_supervisor1@mailinator.com | /<assign a DN/>      |
+| Agent         | <w class = "attendee-class">your_attendee_ID</w>_agent1@mailinator.com      | \<your assign DN\>      |
+| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>_supervisor1@mailinator.com | \<your assign DN\>      |
 
 
 ### 1. Define your Attendee ID
