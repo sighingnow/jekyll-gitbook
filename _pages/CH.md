@@ -35,24 +35,14 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ## Table of Contents
 
-- [Part 1: Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) 
-  * [1. Add an agent and a supervisor users and configure the calling extension](#1-add-an-agent-and-a-supervisor-users-and-configure-the-calling-extension)
-  * [2. Optionally, add the rest of the users](#2-optionally-add-the-rest-of-the-users)
-- [Part 2: Admin Portal Multimedia Profile, Site and Team Configuration](#part-2-admin-portal-multimedia-profile-site-and-team-configuration)
-  * [1. Create new MultiMedia Profile](#1-create-new-multimedia-profile)
-  * [2. Create new Site](#2-create-new-site)
-  * [3. Create new Team 1](#3-create-new-team-1)
-  * [4. Create new Team 2](#4-create-new-team-2)
-- [Part 3: Admin Portal User Configuration](#part-3-admin-portal-user-configuration)
-  * [1. Synchronize Webex Contact Center Users](#1-synchronize-webex-contact-center-users)
-  * [2. Manage settings for existing user](#2-manage-settings-for-existing-user)
-- [Part 4: Access to the Agent Desktop](#part-4-access-to-the-agent-desktop)
-  * [1. Activate Webex Calling](#1-activate-webex-calling)
-  * [2. Download and Login in the Webex Calling app for PC or Mac](#2-download-and-login-in-the-webex-calling-app-for-pc-or-mac)
-  * [3. Download and Login in the Webex Calling app for mobile](#3-download-and-login-in-the-webex-calling-app-for-mobile)
-  * [4. Agent Desktop Login](#4-agent-desktop-login)
-- [Part 5: BONUS Tenant Creation Walkthrough](#part-5-bonus-tenant-creation-walkthrough)
-- [Part 6: Bonus Video Only Trial Tenant Setup](#part-6-bonus-trial-tenant-setup-video)
+
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) | Practical Lab | EASY            | 15 min           |
+| [Managment Portal User Configuration](#managment-portal-user-configuration)              | Practical Lab | EASY            | 10 min           |
+| [Access to the Agent Desktop](#part-4-access-to-the-agent-desktop)                       | Practical Lab | EASY            | 5 min            |
+| [Bulk Configuration](#bulk-configuration)                                                | Practical Lab | EASY            | 5 min            |
+
 
 ## Introduction
 
