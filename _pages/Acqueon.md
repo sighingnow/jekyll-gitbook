@@ -6,9 +6,7 @@ layout: post
 ---
 
 This page is under development
-TEST
-
----
+TEST1
 
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
