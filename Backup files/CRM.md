@@ -48,7 +48,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - [8. Create new contact record in MS Dynamics](#8-create-new-contact-record-in-ms-dynamics)
   - [9. Make inbound test calls](#9-make-inbound-test-calls)
 
-[6.3 Zendesk integration](#43-zendesk-integration)
+[6.3 Zendesk integration](#64-zendesk-integration)
 
 - [Optional: Start Zendesk Trial](#optional-start-zendesk-trial)
 - [Part 1: Install Webex Contact Center application on Zendesk instance](#part-1-install-webex-contact-center-application-on-zendesk-instance)
