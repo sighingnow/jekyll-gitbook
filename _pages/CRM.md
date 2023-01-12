@@ -500,7 +500,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 <br/>
 
-> ##### NOTE
+> ##### NOTE :
 >
 > Zendesk free trial is valid for 14 days only. So, you need to complete the configuration and all tests within this time frame.
 > {: .block-tip }
