@@ -500,6 +500,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 <br/>
 
+> ##### TIP
+>
+> Zendesk free trial is valid for 14 days only. So, you need to complete the configuration and all tests within this time frame.\*\*
+> {: .block-tip }
+
 > **Note:** Zendesk free trial is valid for 14 days only. So, you need to complete the configuration and all tests within this time frame.
 
 - Navigate to [Zendesk](https://www.zendesk.com/) website.
@@ -515,7 +520,8 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - On the last step of the wizard fill in the following fields:
   _ Company Name
   _ Number of employees
-  \_ Purpose of the account
+  _ Purpose of the account
+  _ Zendesk subdomain
   Then choose Language, enter new Password and click on **Complete trial signup**.
 
 - You should receive an email saying **Welcome to Zendesk: Verify your email**. Click on **Verify your account**.
