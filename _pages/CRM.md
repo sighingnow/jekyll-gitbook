@@ -521,7 +521,8 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - Number of employees
   - Purpose of the account
   - Zendesk subdomain
-    Then choose Language, enter new Password and click on **Complete trial signup**.
+
+  Then choose Language, enter new Password and click on **Complete trial signup**.
 
 - You should receive an email saying **Welcome to Zendesk: Verify your email**. Click on **Verify your account**.
 
