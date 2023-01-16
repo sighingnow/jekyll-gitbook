@@ -7,7 +7,7 @@ layout: post
 
 This page is under development
 
-# Digital Channels Architecture Overview and Provisioning
+# Lab.1 - Digital Channels Architecture Overview and Provisioning
 
 ## **Table of Contents**
 
@@ -110,7 +110,7 @@ Description automatically generated](file:////Users/dtelari/Library/Group%20Cont
 **We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
-# Connect GUI overview
+# Lab.2 - Connect GUI overview
 
 ## **Table of Contents**
 
@@ -210,7 +210,7 @@ The Settings session allows the administrator to review and manage users and tea
 **We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
-# Engage GUI overview
+# Lab.3 - Engage GUI overview
 
 ## **Table of Contents**
 
@@ -298,7 +298,7 @@ Within the setting section the administrator can control some additional useful 
 **We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
-# User Management in Connect
+# Lab.4 - User Management in Connect
 
 ## **Table of Contents**
 
@@ -378,7 +378,7 @@ Description automatically generated](file:////Users/dtelari/Library/Group%20Cont
 **We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
-# Digital Channel required configuration
+# Lab.5 - Digital Channel required configuration
 
 ## Table of Contents
 
