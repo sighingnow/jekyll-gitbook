@@ -5,7 +5,7 @@ date: 2022-12-12
 layout: post 
 ---
 
-This page is under development
+This page is under developments
 
 # Lab.1 - Digital Channels Architecture Overview and Provisioning
 
