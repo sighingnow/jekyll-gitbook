@@ -292,6 +292,8 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > **Note:** Make sure that you give access to the phone's microphone for the calling app.
 
 ![WxCallingAndroid](../assets/images/wxcallingandroid.png)
+> TEST
+![WxCallingAndroid](/assets/images/wxcallingandroid.png)
 
 ### 4. Agent Desktop Login
 > **Note**: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
