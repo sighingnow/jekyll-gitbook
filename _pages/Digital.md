@@ -7,23 +7,25 @@ layout: post
 
 This page is under development
 
-**Table of Contents**
+# Digital Channels Architecture Overview and Provisioning
+
+## **Table of Contents**
 
 1.  Webex Connect architecture
 2.  Webex Connect Provisioning
 3.  Webex Connect Provisioning verification
 
-**Introduction**
+## **Introduction**
 
-**Lab Objective**
+#### **Lab Objective**
 
 This lab is designed to introduce the audience to the digital channels (Webex Connect) platform, its architecture and its provisioning. In addition this lab will provide the instructions to verify if Webex Connect has been provisioned successfully.
 
-**Pre-requisite**
+#### **Pre-requisite**
 
 1.  Admin credentials to login to Control Hub and Webex Contact Center administration portal.
 
-**1. Webex Connect architecture**
+## **1. Webex Connect architecture**
 
 Webex Connect consists of 2 main components, Connect and Engage, which are directly integrated with the Webex Contact Center platform (as per the drawing).  
 The access to Webex Connect is restricted to Administrators only.
@@ -39,7 +41,7 @@ Users in Connect are added and managed locally.
 The access to Engage happens via a dedicated icon inside the Webex Contact Center Management Portal.  
 Users in Engage are automatically synchronized with Webex Control Hub.
 
-**2. Webex Connect Provisioning**
+## **2. Webex Connect Provisioning**
 
 -   Go to https://admin.webex.com
 -   Login with tenant administrator credentials
@@ -76,7 +78,7 @@ Description automatically generated](file:////Users/dtelari/Library/Group%20Cont
 
 _For security reason, the activation is only valid for 24 hours since its delivery. Please activate your account immediately. In case you don’t receive the activation email, or not use it within 24 hours, will need to reach out Cisco for support._
 
-**3. Webex Connect Provisioning verification**
+## **3. Webex Connect Provisioning verification**
 
 -   Go to https://admin.webex.com
 -   Login with tenant administrator credentials
