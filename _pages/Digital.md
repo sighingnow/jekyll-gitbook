@@ -17,9 +17,12 @@ This page is under developments
 
 ## **Table of Contents**
 
-1.  Webex Connect architecture
-2.  Webex Connect Provisioning
-3.  Webex Connect Provisioning verification
+| Topic                                                      |
+| ---------------------------------------------------------- |
+| [Webex Connect architecture](1-Webex-Connect-architecture) |
+| [Webex Connect Provisioning](2-Webex-Connect-Provisioning) |
+| [Webex Connect Provisioning verification](3-Webex-Connect-Provisioning-verification) |
+
 
 ## **Introduction**
 
