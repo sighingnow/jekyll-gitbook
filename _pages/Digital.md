@@ -453,7 +453,7 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 ![DC_Lab.12.7_Gmail_account_configuration_2](/assets/images/DC_Lab.12.7_Gmail_account_configuration_2.png)
 
 
-### 2. Create a project at Google API Console 
+#### 2. Create a project at Google API Console 
 We need to activate API if we want to use Gmail account for outbound emails. 
 
 - Login to [Google Developers Console](https://console.developers.google.com/){:target="_blank"} with the credentials above. The password is the same as for Webex CC admin account.
@@ -466,7 +466,7 @@ We need to activate API if we want to use Gmail account for outbound emails.
 
 ![DC_Lab.12.7_Create_new_project_at_Google_API_Console_2](/assets/images/DC_Lab.12.7_Create_new_project_at_Google_API_Console_2.png)
 
-### 3. Enable Gmail API (for outgoing emails)
+#### 3. Enable Gmail API (for outgoing emails)
 
 - Enter `Gmail API` in the search bar and click on it once found.
 
@@ -476,7 +476,7 @@ We need to activate API if we want to use Gmail account for outbound emails.
 
 ![DC_Lab.12.7_Enable_Gmail_API_2](/assets/images/DC_Lab.12.7_Enable_Gmail_API_2.png)
 
-### 4. Configure OAuth Consent Screen and Scopes
+#### 4. Configure OAuth Consent Screen and Scopes
 
 - Once the API is enabled, you’ll be taken to a nice dashboard that says, `"To use this API, you may need credentials"`.
 
@@ -499,7 +499,7 @@ We need to activate API if we want to use Gmail account for outbound emails.
 ![DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_5](/assets/images/DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_5.png)
 
 
-### 5. Credentials and authentication with OAuth 2.0
+#### 5. Credentials and authentication with OAuth 2.0
 
 Now create a new client ID that will be used to identify your application to Google’s OAuth servers.
 
@@ -522,7 +522,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 2. Create Email Asset and Register to WebexCC
 
-### 1. Create Email Asset
+#### 1. Create Email Asset
 
 - As an admin, login to Webex Connect UI using the provided URL https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number).
 
@@ -562,7 +562,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ![DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC](/assets/images/DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC_3.gif)
 
-### 2. Add forwarding Address
+#### 2. Add forwarding Address
 
 - Copy the forwarding address from the created asset in previous step and in Gmail account. 
  
@@ -596,7 +596,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 3. Email Entry Point and Queue creation
 
-### 1. Create Entry Point in Management Portal 
+#### 1. Create Entry Point in Management Portal 
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
 
@@ -616,7 +616,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ![DC_Lab.12.7_Email_Entry_Point_and_Queue_creation](/assets/images/DC_Lab.12.7_Email_Entry_Point_and_Queue_creation_1.png)
 
-### 2. Create Two Queues in Management Portal 
+#### 2. Create Two Queues in Management Portal 
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
 
@@ -726,20 +726,20 @@ Now create a new client ID that will be used to identify your application to Goo
 
 # Introduction
 
-### Lab Objective
+#### Lab Objective
 
 In this Lab, we will go through the tasks that are required to complete the basic Facebook Messenger (FBM) integration. You will be able to initiate a Facebook contact to the Contact Center from Facebook Messenger and be able to accept/respond to the contact by logging in as an agent.  
 
 In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, Website Settings, and corresponding workflows.
 
 
-### Pre-requisite
+#### Pre-requisite
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You have successfully completed the previous Lab **Preconfiguration**
 3. You have a Facebook Account
 
-### Quick Links
+#### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
@@ -813,7 +813,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ## Step 3. Create Entry Point and Queue
 
-### 1. Create Entry Point in Management Portal 
+#### 1. Create Entry Point in Management Portal 
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
 
@@ -833,7 +833,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ![DC_Lab_12.9_Create_Entry_Point_and_Queue](/assets/images/DC_Lab_12.9_Create_Entry_Point_and_Queue1.jpg)
 
-### 2. Create Queue in Management Portal 
+#### 2. Create Queue in Management Portal 
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
 
@@ -861,7 +861,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ## Step 4. Create/Upload Facebook Messenger flow
 
-### 1. Initial flow loading
+#### 1. Initial flow loading
 
 - Download the default Facebook Inbound flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}.
 
@@ -881,7 +881,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ![DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow](/assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow2.jpg)
 
-### 2. Start node and Custom Variables
+#### 2. Start node and Custom Variables
 
 - A page will load with the imported workflow. We must make some changes to the default inbound flow based on our setup.
   
@@ -902,7 +902,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Click `Save`
 
-### 3. Edit Queue Task node
+#### 3. Edit Queue Task node
 
 - In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **FBM_Q** and click on **SAVE**.
 
@@ -974,13 +974,13 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
  
 # Introduction
 
-### Lab Objective
+#### Lab Objective
 
 In this Lab, we will go through the tasks that are required to complete the basic WhatsApp integration. You will be able to initiate a WhatsApp contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.  
 
 In this lab you will be configuring **WhatsApp** number settings, Assets, Entry Point and corresponding workflows. All these steps are required for integrating WhatsApp with our application.  
 
-### Pre-requisite
+#### Pre-requisite
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received the WhatsApp number associated with your tenant.
