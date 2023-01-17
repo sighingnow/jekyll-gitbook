@@ -446,15 +446,11 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 
 - Enable POP3/IMAP setting by clicking on settings icon on top right corner and selecting **See all settings**.
 
-![DC_Lab.12.7_Gmail account configuration 1](/assets/images/DC_Lab.12.7_DC_Lab.12.7_Gmail account configuration 1.png)
-
+![DC_Lab.12.7_Gmail_account_configuration_1](/assets/images/DC_Lab.12.7_Gmail_account_configuration_1.png)
 
 - Now Click on **Forwarding and POP/IMAP**, enable the `POP Download` and `IMAP access` then click **Save Changes**.
 
-
-<img align="middle" src="images/Lab2_NewGmail1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Gmail_account_configuration_2](/assets/images/DC_Lab.12.7_Gmail_account_configuration_2.png)
 
 
 ### 2. Create a project at Google API Console 
@@ -464,61 +460,43 @@ We need to activate API if we want to use Gmail account for outbound emails.
 
 - You will have to agree with the Terms of Service and pick their Country of residence. Then click **Select a project** and create a **NEW PROJECT**.
 
-<img align="middle" src="images/Lab2_NewGmail1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create_new_project_at_Google_API_Console_1](/assets/images/DC_Lab.12.7_Create_new_project_at_Google_API_Console_1.png)
 
 - Keep the default project's name and press **Create** at the bottom. Make sure that now you have selected this project. 
 
-<img align="middle" src="images/Lab2_NewGmail2.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create_new_project_at_Google_API_Console_2](/assets/images/DC_Lab.12.7_Create_new_project_at_Google_API_Console_2.png)
 
 ### 3. Enable Gmail API (for outgoing emails)
 
 - Enter `Gmail API` in the search bar and click on it once found.
 
-<img align="middle" src="images/Lab2_NewGmail3.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Enable_Gmail_API_1](/assets/images/DC_Lab.12.7_Enable_Gmail_API_1.png)
 
 - You need to enable the API for your project by clicking on **ENABLE** button.
 
-<img align="middle" src="images/Lab2_NewGmail4.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Enable_Gmail_API_2](/assets/images/DC_Lab.12.7_Enable_Gmail_API_2.png)
 
 ### 4. Configure OAuth Consent Screen and Scopes
 
 - Once the API is enabled, you’ll be taken to a nice dashboard that says, `"To use this API, you may need credentials"`.
 
-<img align="middle" src="images/Lab2_NewGmail5.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_1](/assets/images/DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_1.png)
 
 - To create an OAuth client ID, you must first configure your consent screen. Under the APIs and Services section, click on **OAuth Consent Screen**, set the user type as `External` and click **CREATE** button.
 
-<img align="middle" src="images/Lab2_NewGmail6.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_2](/assets/images/DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_2.png)
 
 -  It will bring you to a page with many fields. Just enter the **App name** as `WebexCCEmails`, choose your **User support email** and enter the same email in the **Developer contact information**. In the end press **SAVE AND CONTINUE**.
 
-<img align="middle" src="images/Lab2_NewGmail7.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_3](/assets/images/DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_3.png)
 
 - On the next screen, you need to provide Auth 2.0 Scopes for Google APIs. Click the **Add Or Remove Scopes** button and add https://www.googleapis.com/auth/gmail.send to the list of scopes since we only want to send emails from Gmail and not read any user data. Click **SAVE AND CONTINUE**.
 
-<img align="middle" src="images/Lab2_NewGmail8.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_4](/assets/images/DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_4.png)
 
 - On the test user page, click **ADD USERS** and enter your Gmail address. Click **Save and Continue**.
 
-<img align="middle" src="images/Lab2_NewGmail9.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_5](/assets/images/DC_Lab.12.7_Configure_OAuth_Consent_Screen_and_Scopes_5.png)
 
 
 ### 5. Credentials and authentication with OAuth 2.0
@@ -527,9 +505,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - In the APIs & Services section, click on **Credentials** and then pick **OAuth client ID** from the drop-down list of the **CREATE CREDENTIALS** button. 
 
-<img align="middle" src="images/Lab2_NewGmail10.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_1](/assets/images/DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_1.png)
 
 - Select `Web application` in the **Application type**
 
@@ -537,15 +513,11 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - In the **Authorized redirect URIs** section click **ADD URI** button and set `https://cl1pod\<ID\>.imiconnect.io/callback` where \<ID\> is your tenant number. Click **CREATE** button in the end.
 
-<img align="middle" src="images/Lab2_NewGmail11.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_2](/assets/images/DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_2.png)
 
 - Download a JSON file with your credentials – you’ll need it later.
 
-<img align="middle" src="images/Lab2_NewGmail12.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_3](/assets/images/DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_3.png)
 
 
 ## Step 2. Create Email Asset and Register to WebexCC
@@ -606,47 +578,33 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Copy the forwarding address from the created asset in previous step and in Gmail account. 
  
-<img align="middle" src="images/Lab2_Assest4.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Add_forwarding_Address_1](/assets/images/DC_Lab.12.7_Add_forwarding_Address_1.png)
 
 - Go back to the Gmail account and click on settings icon on top right corner -> Select **See all settings**.
 
-<img align="middle" src="images/Lab2_Gmail1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Add_forwarding_Address_2](/assets/images/DC_Lab.12.7_Add_forwarding_Address_2.png)
 
 - Click on **Forwarding and POP/IMAP** -> click on **Add a forwarding address** -> Paste the copied forwarding address from the created asset. Then click on **Next**. In a new pop up tab click **Proceed** and then click **OK** when it prompts.
 
-<img align="middle" src="images/Lab2_Gmail6.gif" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Add_forwarding_Address_3](/assets/images/DC_Lab.12.7_Add_forwarding_Address_3.gif)
 
 - Go back to Webex Connect and click on **Tools** -> **Export Logs**. 
 
 - Under Inbound logs, Select the App that was created -> Select Channel Event as `Incoming Email` -> Select the period as `Today`. Wait until status is changed to **Ready for download** and click **Download** icon. 
 
-<img align="middle" src="images/Lab2_ExportLog1.gif" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Add_forwarding_Address_4](/assets/images/DC_Lab.12.7_Add_forwarding_Address_4.gif)
 
 - Once a log file is downloaded, open the log file, under the **Subject** column, copy the confirmation code. 
 
-<img align="middle" src="images/Lab2_ExportLog2.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Add_forwarding_Address](/assets/images/DC_Lab.12.7_Add_forwarding_Address_5.png)
 
 - Go back to the Gmail account, paste the code in the email account verification section and click verify.
 
-<img align="middle" src="images/Lab2_Gmail8.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Add_forwarding_Address](/assets/images/DC_Lab.12.7_Add_forwarding_Address_6.png)
 
 - Select **Forward a copy of incoming mail to** the verified address and click **Save Changes**.
 
-<img align="middle" src="images/Lab2_Gmail9.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Add_forwarding_Address](/assets/images/DC_Lab.12.7_Add_forwarding_Address_7.png)
 
 ## Step 3. Email Entry Point and Queue creation
 
@@ -668,9 +626,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Click on **Save** after comparing your values with the screenshot below.
 
-<img align="middle" src="images/Lab2_Email_EP.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Email_Entry_Point_and_Queue_creation](/assets/images/DC_Lab.12.7_Email_Entry_Point_and_Queue_creation_1.png)
 
 ### 2. Create Two Queues in Management Portal 
 
@@ -694,9 +650,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Click on **Save** after comparing your values with the screenshot below.
 
-<img align="middle" src="images/Lab2_Email_Q.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Email_Entry_Point_and_Queue_creation](/assets/images/DC_Lab.12.7_Email_Entry_Point_and_Queue_creation_2.png)
 
 - Create a second queue by repeating the same steps as above.
 
@@ -706,9 +660,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - In the the **_Email Distribution_** click on **Add Group** and select `Team2`.
 
-<img align="middle" src="images/Lab2_Email_Q2.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Email_Entry_Point_and_Queue_creation](/assets/images/DC_Lab.12.7_Email_Entry_Point_and_Queue_creation_3.png)
 
 ## Step 4. Create/Upload Email flow
 
@@ -726,27 +678,19 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Drag and drop the **Email Inbound Flow.workflow** flow that is downloaded in zip file, click **CREATE** and then click **SAVE**.
 
-<img align="middle" src="images/Lab2_WF1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_1.png)
 
 - Click **Save** and in the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Email_Q** and click on **SAVE**.
 
-<img align="middle" src="images/Lab2_WF2.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_2.png)
 
 - Click **Settings** on top right corner and switch to **Custom variables** tab. Here in the **bizemailid** row, update the default value with your email address of the Gmail account. Click **SAVE**.
 
-<img align="middle" src="images/Lab2_WF3.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_3.png)
 
 - Finally click on Make Live on top right corner -> Select the Application/Asset that we have created and click Make Live.
 
-<img align="middle" src="images/Lab2_WF4.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_4.png)
 
 [To top of this lab](#table-of-contents)
 
@@ -756,15 +700,11 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Go to the Agent Desktop and make the agent Available. 
 
-<img align="middle" src="images/Lab2_Agent1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_1.png)
 
 - The Email will be offered to the agent. Click **Accept** to handle the email. Click "Reply" or Reply All" to the email and hit send button.
 
-<img align="middle" src="images/Lab2_Agent2.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_2.png)
 
 - Add wrap up and close the task.
 
