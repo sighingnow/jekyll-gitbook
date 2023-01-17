@@ -410,7 +410,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received Email account credentials.
-3. You have successfully compleated the previous Lab1 **Preconfiguration**.
+3. You have successfully completed the previous Lab1 **Preconfiguration**.
 
 #### Quick Links
 
@@ -425,9 +425,8 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 # Lab Section
 
 #### Configuration Order
-<img align="middle" src="images/Lab2_ConfigOrder.png" width="1000" />
-<br/>
-<br/>
+
+![DC_Lab.12.7_Email_ConfigurationOrder](/assets/images/DC_Lab.12.7_Email_ConfigurationOrder.png)
 
 ## Step 1. Gmail account configuration
 Starting from May 30 the **Less Secure Apps** feature was disabled on all Google accounts. As long as this setting was enabled, it was possible to send emails via Gmail SMTP. In this lab, we will be using new OAuth 2.0 authentication for outbound email functionality.
@@ -447,19 +446,18 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 
 - Enable POP3/IMAP setting by clicking on settings icon on top right corner and selecting **See all settings**.
 
-<img align="middle" src="images/Lab2_Gmail1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Gmail account configuration 1](/assets/images/DC_Lab.12.7_DC_Lab.12.7_Gmail account configuration 1.png)
+
 
 - Now Click on **Forwarding and POP/IMAP**, enable the `POP Download` and `IMAP access` then click **Save Changes**.
 
-<img align="middle" src="images/Lab2_Gmail2.png" width="1000" />
+<img align="middle" src="images/Lab2_NewGmail1.png" width="1000" />
 <br/>
 <br/>
 
 
 ### 2. Create a project at Google API Console 
-We need to activate API if we want to use Gmail accont for outbound emails. 
+We need to activate API if we want to use Gmail account for outbound emails. 
 
 - Login to [Google Developers Console](https://console.developers.google.com/){:target="_blank"} with the credentials above. The password is the same as for Webex CC admin account.
 
@@ -483,7 +481,7 @@ We need to activate API if we want to use Gmail accont for outbound emails.
 <br/>
 <br/>
 
-- You need to enable the API for your project by clickin **ENABLE** button.
+- You need to enable the API for your project by clicking on **ENABLE** button.
 
 <img align="middle" src="images/Lab2_NewGmail4.png" width="1000" />
 <br/>
@@ -503,7 +501,7 @@ We need to activate API if we want to use Gmail accont for outbound emails.
 <br/>
 <br/>
 
--  It will bring you to a page with many fields. Just enter the **App name** as `WebexApp`, choose your **User support email** and enter the same email in the **Developer contact information**. In the end press **SAVE AND CONTINUE**.
+-  It will bring you to a page with many fields. Just enter the **App name** as `WebexCCEmails`, choose your **User support email** and enter the same email in the **Developer contact information**. In the end press **SAVE AND CONTINUE**.
 
 <img align="middle" src="images/Lab2_NewGmail7.png" width="1000" />
 <br/>
@@ -515,7 +513,7 @@ We need to activate API if we want to use Gmail accont for outbound emails.
 <br/>
 <br/>
 
-- On the test user page, click **ADD USERS** and enter your gmail address. Click **Save and Continue**.
+- On the test user page, click **ADD USERS** and enter your Gmail address. Click **Save and Continue**.
 
 <img align="middle" src="images/Lab2_NewGmail9.png" width="1000" />
 <br/>
@@ -536,7 +534,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - You can leave the default name. The name of your OAuth 2.0 client is only used to identify the client in the Google Cloud console and will not be shown to application users. 
 
-- In the **Authorized redirect URIs** section click **ADD URL** button and set `https://cl1pod\<ID\>.imiconnect.io/callback` where \<ID\> is your tenant number. Click **CREATE** button in the end.
+- In the **Authorized redirect URIs** section click **ADD URI** button and set `https://cl1pod\<ID\>.imiconnect.io/callback` where \<ID\> is your tenant number. Click **CREATE** button in the end.
 
 <img align="middle" src="images/Lab2_NewGmail11.png" width="1000" />
 <br/>
@@ -551,7 +549,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 2. Create Email Asset and Register to WebexCC
 
-### 1. Create Email Assest
+### 1. Create Email Asset
 
 - As an admin, login to Webex Connect UI using the provided URL https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number).
 
@@ -577,7 +575,7 @@ Now create a new client ID that will be used to identify your application to Goo
 | Authorization URL | https://accounts.google.com/o/oauth2/auth |
 | Scope | https://mail.google.com/ https://www.googleapis.com/auth/gmail.send |
 | Access Token URL | https://oauth2.googleapis.com/token |
-| Refresh Token URL | https://oauth2.googleapis.com/token |
+| Refresh Token URL | [https://accounts.google.com/o/oauth2/auth](https://accounts.google.com/o/oauth2/auth) |
 
 > where \<ID\> is your POD ID
 
@@ -661,7 +659,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Select `Email` in the **_Channel Type_** section.
 
-- Leave the **_Asset Name_** as appered value `EmailASSET`.
+- Leave the **_Asset Name_** as appeared value `EmailASSET`.
 
 - Set **_Service Level Threshold_** as `2` hours.
 
@@ -673,7 +671,7 @@ Now create a new client ID that will be used to identify your application to Goo
 <br/>
 <br/>
 
-### 2. Create 2 Queues in Management Portal 
+### 2. Create Two Queues in Management Portal 
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
 
@@ -685,7 +683,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Leave the **_Queue Routing Type_** as default value `Longest Available Agent`.
 
-- In the the **_Chat Distribution_** click on **Add Group** and select `Team1`.
+- In the **_Email Distribution_** click on **Add Group** and select `Team1`.
 
 - Set **_Service Level Threshold_** as `2` hours.
 
@@ -705,7 +703,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Select `Email` in the **_Channel Type_** section.
 
-- In the the **_Chat Distribution_** click on **Add Group** and select `Team2`.
+- In the the **_Email Distribution_** click on **Add Group** and select `Team2`.
 
 <img align="middle" src="images/Lab2_Email_Q2.png" width="1000" />
 <br/>
