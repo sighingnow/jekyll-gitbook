@@ -451,6 +451,7 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 
 - Now Click on **Forwarding and POP/IMAP**, enable the `POP Download` and `IMAP access` then click **Save Changes**.
 
+
 <img align="middle" src="images/Lab2_NewGmail1.png" width="1000" />
 <br/>
 <br/>
