@@ -359,16 +359,14 @@ Connect allows the Owner to create local users in container groups called Groups
 
 -   Please contact the Partner Success team (PSM) if there are any challenges identifying the Connect Owner details
 
-![Graphical user interface
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
+![UserLogin](assets/images/DC_Login.png)
 
 ## **4. Add new users with administrator role**
 
 -   Once logged in to Connect, go to ‘Settings’ > ‘Teammates’
 -   Add a new user (must be a working emailID) and select ‘Full access’ role and click ‘Invite user’
 
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
+![AddUser](assets/images/DC_AddUser.png)
 
 ## **5. New user activation**
 
@@ -378,8 +376,7 @@ Description automatically generated](file:////Users/dtelari/Library/Group%20Cont
 -   The user will automatically login into the Connect portal.
 -   The user will have to inform the tenant Owner about the successful creation of the account > the Owner will go to ‘Settings’ > ‘Teammates’ > click ‘Edit’ for the specified user > mark the checkbox for Decrypt Logs > click ‘Save’
 
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
+![UserActivation](assets/images/DC_UserActivation.png)
 
 
 ---
@@ -393,7 +390,12 @@ Description automatically generated](file:////Users/dtelari/Library/Group%20Cont
 
 ## Table of Contents
 
-ADD IT HERE
+| Topic                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------- |
+| [Configuring your Tenant](#Configuring-your-Tenant)                                                               |
+| [Node Authorization for Webex CC Task and Engage nodes](#1-Node-Authorization-for-Webex-CC-Task-and-Engage-nodes) |
+| [Download and upload CA flows in Connect](#2-Download-and-upload-CA-flows-in-Connect)                             |
+|                                                                                                                   |
 
 ## Introduction
 
@@ -420,7 +422,7 @@ Webex Connect: https://cl1pod**<ID>**.imiconnect.io/ (where **<ID>** is your POD
 ![A picture containing graphical user interface
 Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
 
-#### Step 1. Node Authorization for Webex CC Task and Engage nodes
+## 1. Node Authorization for Webex CC Task and Engage nodes
 
 Webex Connect is required to provide a valid access token for using various Webex Contact Center and Webex Engage APIs. The access token is generated using the authorization details configured within the ‘Node Runtime Authorization’ field that Webex Contact Center users are required to provide during flow configuration.
 
@@ -461,7 +463,7 @@ Description automatically generated](file:////Users/dtelari/Library/Group%20Cont
 -   Click back button for being redirected back to **Integrations** page. Verify that the status of the authorizations is changed to **Authorized**. ![A picture containing graphical user interface
     Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.gif)
 
-## Step 2. Download and upload CA flows in Connect
+## 2. Download and upload CA flows in Connect
 
 Every tenant must include CA flows. CA flows can be imported from the template folder in this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels). CA flow can be added only once and will be automatically be used by all existing channel specific flows in the tenant when needed. Recommended to add these flow in a dedicated Service named “Agnostic Flows - DO NOT MODIFY”
 
