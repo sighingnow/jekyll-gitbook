@@ -9,8 +9,8 @@ This page is under developments
 
 | Topic                                                                                                                        | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Digital Channels Architecture Overview and Provisioning](#Lab.12.1-Digital-Channels-Architecture-Overview-and-Provisioning) | Practical Lab | EASY            | 15 min           |
-| [Connect GUI overview](#Lab.12.2-Connect-GUI-overview)  | Practical Lab | EASY            | 15 min           |                                                                                                                             |               |                 |                  |
+| [Digital Channels Architecture Overview and Provisioning](#Lab.12.1---Digital-Channels-Architecture-Overview-and-Provisioning) | Practical Lab | EASY            | 15 min           |
+| [Connect GUI overview](#Lab.12.2---Connect-GUI-overview)  | Practical Lab | EASY            | 15 min           |                                                                                                                             |               |                 |                  |
 
 
 # Lab.12.1 - Digital Channels Architecture Overview and Provisioning
