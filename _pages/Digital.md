@@ -414,12 +414,12 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Gmail: **[https://mail.google.com](https://mail.google.com){:target="_blank"}**\
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}**\
-> Webex Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**\
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)**\
+> Gmail: **[https://mail.google.com](https://mail.google.com)**\
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
+> Webex Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number) 
 
 
 # Lab Section
