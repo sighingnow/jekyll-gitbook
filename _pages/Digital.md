@@ -556,9 +556,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Verify that the **ACCESS TOKEN** and **REFRESH TOKEN** are generated and click **SAVE**.
 
-<img align="middle" src="images/Lab2_As3.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC](/assets/images/DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC.png)
 
 - Click on **REGISTER TO WEBEX CC** and Select the service **My First Service**. In the end click **REGISTER**.
 
