@@ -528,9 +528,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Select **Assets** -> **Apps** -> **CONFIGURE NEW APP** -> **Email**.
 
-<img align="middle" src="images/Lab2_Assest1.gif" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC](/assets/images/DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC_1.gif)
 
 - Set the settings according to the table below:
 
@@ -552,15 +550,9 @@ Now create a new client ID that will be used to identify your application to Goo
 
 > where \<ID\> is your POD ID
 
-<img align="middle" src="images/Lab2_As1.gif" width="1000" />
-<br/>
-<br/>
-
 - Click **GENERATE TOKEN** and follow the step on the screenshot:
 
-<img align="middle" src="images/Lab2_As2.gif" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC](/assets/images/DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC_2.gif)
 
 - Verify that the **ACCESS TOKEN** and **REFRESH TOKEN** are generated and click **SAVE**.
 
@@ -570,9 +562,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Click on **REGISTER TO WEBEX CC** and Select the service **My First Service**. In the end click **REGISTER**.
 
-<img align="middle" src="images/Lab2_As4.gif" width="1000" />
-<br/>
-<br/>
+![DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC](/assets/images/DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC_3.gif)
 
 ### 2. Add forwarding Address
 
