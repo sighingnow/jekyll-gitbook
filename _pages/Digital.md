@@ -995,54 +995,38 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Navigate to Assets > App and verify that the tenant you are using has a SMS number assigned 
 
-<img align="middle" src="images/Lab6_1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verify_Whatsapp_Number_Assignment](/assets/images/DC_Lab_12.11_Verify_Whatsapp_Number_Assignment1.png)
 
 
 - Identify and make note of the APP ID (We will need this later in the flow configuration)
 
-<img align="middle" src="images/Lab6_1_a.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verify_Whatsapp_Number_Assignment](/assets/images/DC_Lab_12.11_Verify_Whatsapp_Number_Assignment2.png)
 
 - Select actions and click **Manage**
 
-<img align="middle" src="images/Lab6_1_b.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verify_Whatsapp_Number_Assignment](/assets/images/DC_Lab_12.11_Verify_Whatsapp_Number_Assignment3.png)
 
 - Identify and make a note of the **Number** and **WABA ID** (We will need this later in the flow configuration)
 
-<img align="middle" src="images/Lab6_1_c.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verify_Whatsapp_Number_Assignment](/assets/images/DC_Lab_12.11_Verify_Whatsapp_Number_Assignment4.png)
 
 ## Step 2. WhatsApp Asset registration to WebexCC
 
 - In the WhatsApp number assigned, under actions select the 'Manage' option 
 
-<img align="middle" src="images/Lab6_2.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC1](/assets/images/DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC1.png)
 
 - Click 'Register to WebexCC option' 
 
-<img align="middle" src="images/Lab6_3.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC1](/assets/images/DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC2.png)
 
 - In the resulting window, select a service under which this asset would be managed
 
-<img align="middle" src="images/Lab6_4.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC1](/assets/images/DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC3.png)
 
 - Verify that the 'Register to Webex CC' option is now disabled and there is a message indicating the time when the asset was registered along with the service to which it is assigned. 
 
-<img align="middle" src="images/Lab6_5.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC1](/assets/images/DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC4.png)
 
 ## Step 3. WhatsApp Entry Point and Queue creation
 
@@ -1052,9 +1036,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Click on `New Entry Point`.
 
-<img align="middle" src="images/Lab5_6.jpg" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation1.jpg)
 
 - Input **_Name_** as `WhatsApp_EP`.
 
@@ -1068,17 +1050,13 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Click on **Save** after comparing your values with the screenshot below.
 
-<img align="middle" src="images/Lab6_7.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation2.png)
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
 
 - Click on `New Queue`.
 
-<img align="middle" src="images/Lab5_8.jpg" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation3.jpg)
 
 - Input **_Name_** as `WhatsApp_Queue`.
 
@@ -1086,15 +1064,11 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Click `Add Group` in the **_Conversation distribution_** section.
 
-<img align="middle" src="images/Lab6_9.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation4.png)
 
 - Select the Agent based teams created in the previous lab and click `Save` . Once saved, click `Close` to exit this window. 
 
-<img align="middle" src="images/Lab6_10.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation5.png)
 
 - Input **_Maximum Time in Queue_** as `300`.
 
@@ -1102,9 +1076,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Click on **Save** after comparing your values with the screenshot below.
 
-<img align="middle" src="images/Lab6_11.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation6.png)
 
 ## Step 4. Create/Upload WhatsApp flow
 
@@ -1112,9 +1084,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Navigate to **Webex Connect Flows** -> **v2.1** -> **WAB Inbound Flow.workflow.zip**, select the zip file and click download.
 
-<img align="middle" src="images/Lab6_12.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow1.png)
 
 - Unzip the downloaded file.
 
@@ -1126,39 +1096,27 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Drag and drop the **WAB Inbound Flow.workflow** flow that is downloaded in zip file, click **CREATE**
 
-<img align="middle" src="images/Lab6_13.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow2.png)
 
 - Once the flow is saved, the 'Configure WhatsApp Event' node will open. Select incoming message as trigger and click **Save**
 
-<img align="middle" src="images/Lab6_14.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow3.png)
 
 - Open Custom variables and update the value for **WANumber** , **WANumber_Countrycode** and **appid** (These are the values that were identified in Step-1)
 
-<img align="middle" src="images/Lab6_15.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow4.png)
 
 - In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **WhatsApp_Queue** and click on **SAVE**.
 
-<img align="middle" src="images/Lab6_16.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow5.png)
 
 - Finally click on Make Live on top right corner and click Make Live.
 
-<img align="middle" src="images/Lab6_17.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow6.png)
 
 - Wait for 2 minutes and verify that the flow is published successfully. 
 
-<img align="middle" src="images/Lab6_18.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow7.png)
 
 [To top of this lab](#table-of-contents)
 
@@ -1166,51 +1124,35 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 - Login to the Agent Desktop and make the agent Available. 
 
-<img align="middle" src="images/Lab2_Agent1.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request1.png)
 
 - In your personal mobile phone, add the WhatsApp number configured in the previous step as a new contact. (The screenshot is for reference. Please use the number assigned to your pod)
 
-<img align="middle" src="images/Lab6_23.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request2.png)
 
 - Open WhatsApp and look up the contact created in the previous step
 
-<img align="middle" src="images/Lab6_24.png" width="500" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request3.png)
 
 - Send a message to the contact identified in the previous step to initiate the conversation. 
 
-<img align="middle" src="images/Lab6_25.png" width="500" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request4.png)
 
 - The WhatsApp contact will be offered to the agent. Click "Accept" to handle the contact.
 
-<img align="middle" src="images/Lab6_19.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request5.png)
 
 - Type a response and hit send button.
 
-<img align="middle" src="images/Lab6_20.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request6.png)
 
 - End the contact
 
-<img align="middle" src="images/Lab6_21.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request7.png)
 
 - Add wrap up and close the task. 
 
-<img align="middle" src="images/Lab6_22.png" width="1000" />
-<br/>
-<br/>
+![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request8.png)
 
 
 
