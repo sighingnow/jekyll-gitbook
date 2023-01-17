@@ -414,7 +414,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**|
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
 > Gmail: **[https://mail.google.com](https://mail.google.com){:target="_blank"}**\
