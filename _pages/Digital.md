@@ -419,7 +419,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)**\
 > Gmail: **[https://mail.google.com](https://mail.google.com)**\
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number) 
+> Webex Connect: https://cl1pod\<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
 
 
 # Lab Section
