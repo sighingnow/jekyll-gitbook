@@ -48,8 +48,7 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 
 -   Verify under ‘Service Details’ > ‘Digital Channel’ is set to ‘IMI Digital’
 
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
+![Provisioning1](/assets/images/DC_Provisioning1.png)
 
 _In case the ‘Digital Channel’ section prompts a different value you will need to reach out Cisco for support to get this setting corrected before proceeding further._
 
@@ -57,20 +56,17 @@ _In case the ‘Digital Channel’ section prompts a different value you will ne
 
 -   Select the button ‘Provision Digital Channels’
 
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
+![Provisioning1](/assets/images/DC_Provisioning2.png)
 
 -   Then select from the list of administrators the account who will become the Owner of the new Webex Connect Tenant > Click on ‘Select
 
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png)
+![Provisioning1](/assets/images/DC_Provisioning3.png)
 
 -   Wait approximately 5 minute for the automated provisioning process to complete. After this time, the selected administrator will receive an activation email.
 
 -   Open the email and click on ‘JOIN THE TEAM’
 
-![Graphical user interface, application, Teams
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.png)
+![Provisioning1](/assets/images/DC_Invite.png)
 
 -   Follow the instructions to activate your account and set a local password.
 -   Once the activation is completed you will access the Connect portal > bookmark the website URL
@@ -85,22 +81,20 @@ _For security reason, the activation is only valid for 24 hours since its delive
 
 -   Verify Digital channels setup for Webex Contact Center is completed.
 
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.png)
+![Provisioning1](/assets/images/DC_Provisioned1.png)
 
 -   Return to ‘Services’ select ‘Contact Center’ > ‘Settings’ > ‘General’ > ‘Advanced Configuration’ > Select ‘Go to Webex Contact Center Management Portal’ to cross launch to administration portal
 -   In Administration portal, select ‘New Digital Channels’ to cross launch into the new component ‘Engage’
 
 -   No additional login(or credentials) are required. The login to Engage portal should be seamless
 
-![Graphical user interface, application, Teams
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.png)
+![Provisioning1](/assets/images/DC_Provisioned2.png)
 
 -   In Engage portal, select Users > Search
 -   Verify that users with Administrator and Premium Agent previleges are replicated with role type ‘Administrative’ and ‘Customer Care’ roles
 -   Please note that the user account with which you have logged in will not show up in the engage user list. This is expected behaviour.
 
-![Banner](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.jpg)
+![Provisioning1](/assets/images/DC_Provisioned3.png)
 
 ---
 
