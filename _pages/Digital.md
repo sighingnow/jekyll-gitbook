@@ -770,7 +770,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 
 ---
-title: 'Lab 4: Facebook Messenger Configuration'
+# Lab.12.7 Facebook Messenger Configuration
 ---
 
 
@@ -824,7 +824,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Customer/Partner should have a Facebook account to create a Facebook Business page
 
-- Login to Facebook and create a business page that can be used in WxCC for polling and handling the messenger chats Additional details of facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up){:target="_blank"}
+- Login to Facebook and create a business page that can be used in WxCC for polling and handling the messenger chats Additional details of Facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up){:target="_blank"}
 
 - Click on `Create a Page` button
 
@@ -840,7 +840,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 [Back to top](#table-of-contents)
 
-## Step 2. Facebook Messenger Asset creation & register to Webex CC
+## Step 2. Facebook Messenger Asset creation & Register to Webex CC
 
 - Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
 
@@ -880,7 +880,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 <br/>
 
--  Click `Register to Webex CC`  in the ‘Configure New App-Messenger’ window ->  In the resulting window select the service and click `Register`.
+-  Click `Register to Webex Engage`  in the ‘Configure New App-Messenger’ window ->  In the resulting window select the service and click `Register`.
 
 <img align="middle" src="images/Lab4_11.jpg" width="600" />
 <br/>
@@ -892,7 +892,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 <br/>
 <br/>
 
-- Scroll down and take note of the M.ne link in the `Page Discovery Addons` section. We will use that link to trigger the Facebook Messenger interaction from the Customer end. Also take note of the numeric string paramenter in the m.me link. That's the `Facebook Page ID` which we will also need later when configuring the flow.
+- Scroll down and take note of the M.Me link in the `Page Discovery Addons` section. We will use that link to trigger the Facebook Messenger interaction from the Customer end. Also take note of the numeric string parameter in the M.Me link. That's the `Facebook Page ID` which we will also need later when configuring the flow.
 
 <img align="middle" src="images/Lab4_16.jpg" width="600" />
 <br/>
@@ -922,8 +922,6 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 - 
 - Leave the **_Asset Name_** as the configured value earlier.
 
-- Set **_Service Level Threshold_** as `300` seconds.
-
 - The **_Time Zone_** can stay as default value.
 
 - Click on **Save** after comparing your values with the screenshot below.
@@ -941,6 +939,8 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 - Input **_Name_** as `FBM_Q`.
 
 - Select `Social Channel` in the **_Channel Type_** section.
+
+- Set Queue Routing Type to Longest Available Agent
 
 - Click `Add Group` in the **_Conversation distribution_** section.
 
@@ -1013,7 +1013,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ### 3. Edit Queue Task node
 
-- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **FBM_Q** and add Skill requirement for Sales to be True and click on **SAVE**.
+- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **FBM_Q** and click on **SAVE**.
 
 <img align="middle" src="images/Lab4_18.jpg" width="1000" />
 <br/>
@@ -1086,8 +1086,8 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 
 ---
-title: 'Lab 6: Whatsapp Configuration'
----
+# Lab.12.7 WhatsApp Configuration
+
 
 # Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -1095,11 +1095,11 @@ title: 'Lab 6: Whatsapp Configuration'
     - [Lab Objective](#lab-objective)
     - [Pre-requisite](#pre-requisite)
 - [Lab Section](#lab-section)
-  - [Step 1. Verify Whatsapp Number Assignment](#step-1-verify-whatsapp-number-assignment)
-  - [Step 2. Whatsapp Asset registration to WebexCC](#step-2-whatsapp-asset-registration-to-webexcc)
-  - [Step 3. Whatsapp Entry Point and Queue creation](#step-3-whatsapp-entry-point-and-queue-creation)
-  - [Step 4. Create/Upload Whatsapp flow](#step-4-createupload-whatsapp-flow)
-  - [Verification - send Whatsapp message and accept the request](#verification---send-whatsapp-message-and-accept-the-request)
+  - [Step 1. Verify WhatsApp Number Assignment](#step-1-verify-WhatsApp-number-assignment)
+  - [Step 2. WhatsApp Asset registration to WebexCC](#step-2-WhatsApp-asset-registration-to-webexcc)
+  - [Step 3. WhatsApp Entry Point and Queue creation](#step-3-WhatsApp-entry-point-and-queue-creation)
+  - [Step 4. Create/Upload WhatsApp flow](#step-4-createupload-WhatsApp-flow)
+  - [Verification - send WhatsApp message and accept the request](#verification---send-WhatsApp-message-and-accept-the-request)
   - [Back to top](#back-to-top)
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
  
@@ -1107,29 +1107,29 @@ title: 'Lab 6: Whatsapp Configuration'
 
 ### Lab Objective
 
-In this Lab, we will go through the tasks that are required to complete the basic whatsapp integration. You will be able to initiate a Whatsapp contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.  
+In this Lab, we will go through the tasks that are required to complete the basic WhatsApp integration. You will be able to initiate a WhatsApp contact to the Contact Center and be able to accept/respond to the contact by logging in as an agent.  
 
-In this lab you will be configuring **Whatsapp** number settings, Assets, Entry Point and corresponding workflows. All these steps are required for integrating Whatsapp with our application.  
+In this lab you will be configuring **WhatsApp** number settings, Assets, Entry Point and corresponding workflows. All these steps are required for integrating WhatsApp with our application.  
 
 ### Pre-requisite
 
-1. You recived an admin credentials to configure in Managment Portal and Webex Connect.
-2. You recived the Whatsapp number associated with your tenant.
+1. You received an admin credentials to configure in Management Portal and Webex Connect.
+2. You received the WhatsApp number associated with your tenant.
 3. You have successfully completed the previous Lab **Preconfiguration**
+4. **Note**: WhatsApp Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.
 
 # Lab Section
 
-## Step 1. Verify Whatsapp Number Assignment
+## Step 1. Verify WhatsApp Number Assignment
 
 - Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
 
-- Navigate to Assets > Numbers and verify that the tenant you are using has a SMS number assigned 
+- Navigate to Assets > App and verify that the tenant you are using has a SMS number assigned 
 
 <img align="middle" src="images/Lab6_1.png" width="1000" />
 <br/>
 <br/>
 
->**Note**: Whatsapp Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable Whatsapp and get numbers assigned to the tenant.
 
 - Identify and make note of the APP ID (We will need this later in the flow configuration)
 
@@ -1149,9 +1149,9 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-## Step 2. Whatsapp Asset registration to WebexCC
+## Step 2. WhatsApp Asset registration to WebexCC
 
-- In the Whatsapp number assigned, under actions select the 'Manage' option 
+- In the WhatsApp number assigned, under actions select the 'Manage' option 
 
 <img align="middle" src="images/Lab6_2.png" width="1000" />
 <br/>
@@ -1175,7 +1175,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-## Step 3. Whatsapp Entry Point and Queue creation
+## Step 3. WhatsApp Entry Point and Queue creation
 
 - Login to Webex Contact Centre administration portal 
 
@@ -1187,13 +1187,13 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Input **_Name_** as `Whatsapp_EP`.
+- Input **_Name_** as `WhatsApp_EP`.
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
-- Select `Whatsapp` in the **_Social Channel Type_** section.
+- Select `WhatsApp` in the **_Social Channel Type_** section.
 
-- Leave the **_Asset Name_** as appered value `Whatsapp Asset assigned in your Connect tenant`.
+- Leave the **_Asset Name_** as appeared value `WhatsApp Asset assigned in your Connect tenant`.
 
 - The **_Time Zone_** can stay as default value.
 
@@ -1211,7 +1211,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Input **_Name_** as `Whatsapp_Queue`.
+- Input **_Name_** as `WhatsApp_Queue`.
 
 - Select `Social Channel` in the **_Channel Type_** section.
 
@@ -1237,9 +1237,9 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-## Step 4. Create/Upload Whatsapp flow
+## Step 4. Create/Upload WhatsApp flow
 
-- Download the Whatsapp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}.
+- Download the WhatsApp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}.
 
 - Navigate to **Webex Connect Flows** -> **v2.1** -> **WAB Inbound Flow.workflow.zip**, select the zip file and click download.
 
@@ -1253,7 +1253,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 
 - In the service click on **FLOWS** -> **CREATE FLOW** 
 
-- Enter the **FLOW NAME** as **Whatsapp Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
+- Enter the **FLOW NAME** as **WhatsApp Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
 
 - Drag and drop the **WAB Inbound Flow.workflow** flow that is downloaded in zip file, click **CREATE**
 
@@ -1261,19 +1261,19 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- Once the flow is saved, the 'Configure Whatsapp Event' node will open. Select incoming message as trigger and click **Save**
+- Once the flow is saved, the 'Configure WhatsApp Event' node will open. Select incoming message as trigger and click **Save**
 
 <img align="middle" src="images/Lab6_14.png" width="1000" />
 <br/>
 <br/>
 
-- Open Custom variables and update the value for **WANNumber** , **WANumber_Countrycode** and **appid** (These are the values that were identified in Step-1)
+- Open Custom variables and update the value for **WANumber** , **WANumber_Countrycode** and **appid** (These are the values that were identified in Step-1)
 
 <img align="middle" src="images/Lab6_15.png" width="1000" />
 <br/>
 <br/>
 
-- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **Whatsapp_Queue** and click on **SAVE**.
+- In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **WhatsApp_Queue** and click on **SAVE**.
 
 <img align="middle" src="images/Lab6_16.png" width="1000" />
 <br/>
@@ -1293,7 +1293,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 
 [To top of this lab](#table-of-contents)
 
-## Verification - send Whatsapp message and accept the request
+## Verification - send WhatsApp message and accept the request
 
 - Login to the Agent Desktop and make the agent Available. 
 
@@ -1301,13 +1301,13 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- In your personal mobile phone, add the Whatsapp number configured in the previous step as a new contact. (The screenshot is for reference. Please use the number assigned to your pod)
+- In your personal mobile phone, add the WhatsApp number configured in the previous step as a new contact. (The screenshot is for reference. Please use the number assigned to your pod)
 
 <img align="middle" src="images/Lab6_23.png" width="1000" />
 <br/>
 <br/>
 
-- Open Whatsapp and look up the contact created in the previous step
+- Open WhatsApp and look up the contact created in the previous step
 
 <img align="middle" src="images/Lab6_24.png" width="500" />
 <br/>
@@ -1319,7 +1319,7 @@ In this lab you will be configuring **Whatsapp** number settings, Assets, Entry 
 <br/>
 <br/>
 
-- The Whatsapp contact will be offered to the agent. Click "Accept" to handle the contact.
+- The WhatsApp contact will be offered to the agent. Click "Accept" to handle the contact.
 
 <img align="middle" src="images/Lab6_19.png" width="1000" />
 <br/>
