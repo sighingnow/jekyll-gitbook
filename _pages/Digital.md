@@ -30,8 +30,7 @@ This lab is designed to introduce the audience to the digital channels (Webex Co
 Webex Connect consists of 2 main components, Connect and Engage, which are directly integrated with the Webex Contact Center platform (as per the drawing).  
 The access to Webex Connect is restricted to Administrators only.
 
-![Diagram
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
+![Architecture](/assets/images/DC_Architecture.png)
 
 **Connect** serves as the entry point for all the messages received through any digital channel (email, chat, SMS, Messenger Facebook, WhatsApp) and as the intelligence for routing them. It hosts most of the configuration the Admin will create: flows, assets, bots, scheduled events and webhooks.  
 The access to Connect happens via a dedicated URL which is generated and provided to the administrator at the time of the initial provisioning.  
