@@ -20,8 +20,8 @@ This page is under developments
 | Topic                                                      |
 | ---------------------------------------------------------- |
 | [Webex Connect architecture](#1-Webex-Connect-architecture) |
-| [Webex Connect Provisioning](#2-Webex-Connect-Provisioning) |
-| [Webex Connect Provisioning verification](#3-Webex-Connect-Provisioning-verification) |
+| [Webex Connect provisioning](#2-Webex-Connect-Provisioning) |
+| [Webex Connect provisioning verification](#3-Webex-Connect-Provisioning-verification) |
 
 
 ## **Introduction**
@@ -49,7 +49,7 @@ Users in Connect are added and managed locally.
 The access to Engage happens via a dedicated icon inside the Webex Contact Center Management Portal.  
 Users in Engage are automatically synchronized with Webex Control Hub.
 
-## **2. Webex Connect Provisioning**
+## **2. Webex Connect provisioning**
 
 -   Go to https://admin.webex.com
 -   Login with tenant administrator credentials
@@ -82,7 +82,7 @@ _In case the ‘Digital Channel’ section prompts a different value you will ne
 
 _For security reason, the activation is only valid for 24 hours since its delivery. Please activate your account immediately. In case you don’t receive the activation email, or not use it within 24 hours, will need to reach out Cisco for support._
 
-## **3. Webex Connect Provisioning verification**
+## **3. Webex Connect provisioning verification**
 
 -   Go to https://admin.webex.com
 -   Login with tenant administrator credentials
@@ -116,7 +116,10 @@ _For security reason, the activation is only valid for 24 hours since its delive
 
 ## **Table of Contents**
 
-ADD IT HERE
+| Topic                                                             |
+| ----------------------------------------------------------------- |
+| [Overview of Connect menu items](#Overview–of-Connect–menu-items) |
+
 
 #### **Introduction**
 
@@ -216,7 +219,9 @@ The Settings session allows the administrator to review and manage users and tea
 
 ## **Table of Contents**
 
-ADD IT HERE
+| Topic |
+| ----- |
+| [Overview of Engage menu items](#Overview-of-Engage-menu-items)      |
 
 ## **Introduction**
 
@@ -304,9 +309,13 @@ Within the setting section the administrator can control some additional useful 
 
 ## **Table of Contents**
 
-1.  User Roles and Permissions
-2.  Users organization New user activation
-3.  ADD MORE HERE
+| Topics                                                                           |
+| -------------------------------------------------------------------------------- |
+| [User Roles and Permissions](1-User-Roles–and-Permissions)                       |
+| [Users organization](2-Users-organization)                                       |
+| [Login to Connect portal](3-Login-to-Connect-portal)                             |
+| [Add new users with administrator role](4-Add-new-users-with-administrator-role) |
+| [New user activation](5-New-user-activation)                                     |
 
 ## **Introduction**
 
