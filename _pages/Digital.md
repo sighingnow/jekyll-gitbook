@@ -1781,7 +1781,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ·       From left column, navigate to “Integrations”
 
-![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
+![Lab12.20_CustomNodeIntegrations](/assets/images/Lab12.20_CustomNodeIntegrations.png)
 
 ### 2.     Add Custom Node
 
@@ -1789,11 +1789,11 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ·       Select ‘Custom Node’
 
-![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
+![Lab12.20_CustomNodeAddIntegrations](/assets/images/Lab12.20_CustomNodeAddIntegrations.png)
 
 ·       Name your Custom Node, select ‘Custom Nodes’ under Node Category and click OK
 
-![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
+![Lab12.20_CustomNodeCreateNew](/assets/images/Lab12.20_CustomNodeCreateNew.png)
 
 ### 3.     Configure REST API under Settings tab. These settings are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
 
