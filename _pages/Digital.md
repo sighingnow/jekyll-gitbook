@@ -699,7 +699,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 
 ---
-# Lab.12.7 Facebook Messenger Configuration
+# Lab.12.9 Facebook Messenger Configuration
 ---
 
 
@@ -741,10 +741,10 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}**\
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**\
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)**\
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
 
 # Lab Section
@@ -955,7 +955,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 
 ---
-# Lab.12.7 WhatsApp Configuration
+# Lab.12.11 WhatsApp Configuration
 
 
 # Table of Contents
