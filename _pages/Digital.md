@@ -1744,7 +1744,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
 
 
-# Lab.12.5 - Creating Custom Nodes
+# Lab.12.20 - Creating Custom Nodes
 ## Table of Contents
 
 o   Navigate to Integrations in Webex Connect
@@ -1775,7 +1775,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 <iframe width="1024" height="576" src="[https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53](https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-1. Navigate to Engage
+### 1.     Navigate to Engage
 
 ·       Login in to Webex CC administration portal
 
@@ -1783,7 +1783,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
 
-2. Add Custom Node
+### 2.     Add Custom Node
 
 ·       In Integrations, click ‘Add Integration’
 
@@ -1795,7 +1795,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
 
-3. Configure REST API under Settings tab. These settings are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
+### 3.     Configure REST API under Settings tab. These settings are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
 
 ·       Step 1: Configure Authorization
 
@@ -1805,11 +1805,11 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ·       Step 4: Configure Response
 
-4. Configure Node UI tab (optional)
+### 4.     Configure Node UI tab (optional)
 
 ·       This setting are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
 
-5. Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
+### 5. Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
 
 <iframe width="1024" height="576" src="[https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873](https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
