@@ -1747,23 +1747,17 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 # Lab.12.20 - Creating Custom Nodes
 ## Table of Contents
 
-o   Navigate to Integrations in Webex Connect
-
-o   Add a custom node
-
+o   Navigate to Integrations in Webex ConnectAdd a custom node
 o   Configure REST API under Settings tab
-
--   Step 1: Configure Authorization
--   Step 2: Configure Headers
--   Step 3: Configure Body
--   Step 4: Configure Response
+	-   Step 1: Configure Authorization
+	-   Step 2: Configure Headers
+	-   Step 3: Configure Body
+	-   Step 4: Configure Response
 
 o   Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
-
 o   Resources:
-
--   [https://help.imiconnect.io/docs/custom-nodes](https://help.imiconnect.io/docs/custom-nodes)
--   [https://help.imiconnect.io/docs/configure-custom-integration-node](https://help.imiconnect.io/docs/configure-custom-integration-node)
+	-   [https://help.imiconnect.io/docs/custom-nodes](https://help.imiconnect.io/docs/custom-nodes)
+	-   [https://help.imiconnect.io/docs/configure-custom-integration-node](https://help.imiconnect.io/docs/configure-custom-integration-node)
 
 ## Lab Objective
 
@@ -1798,11 +1792,8 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 ### 3.     Configure REST API under Settings tab. These settings are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
 
 ·       Step 1: Configure Authorization
-
 ·       Step 2: Configure Headers
-
 ·       Step 3: Configure Body
-
 ·       Step 4: Configure Response
 
 ### 4.     Configure Node UI tab (optional)
