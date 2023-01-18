@@ -1742,3 +1742,75 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 <p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
+
+
+# Lab.12.5 - Creating Custom Nodes
+Table of Contents
+
+o   Navigate to Integrations in Webex Connect
+
+o   Add a custom node
+
+o   Configure REST API under Settings tab
+
+-   Step 1: Configure Authorization
+-   Step 2: Configure Headers
+-   Step 3: Configure Body
+-   Step 4: Configure Response
+
+o   Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
+
+o   Resources:
+
+-   [https://help.imiconnect.io/docs/custom-nodes](https://help.imiconnect.io/docs/custom-nodes)
+-   [https://help.imiconnect.io/docs/configure-custom-integration-node](https://help.imiconnect.io/docs/configure-custom-integration-node)
+
+Lab Objective
+
+This lab walks you through the creation of custom node and a demo of its usage. Custom nodes allow you to configure reusable integrations with your existing business system or with third-party applications using REST/SOAP APIs. In this sample example, we are going to show how you can integrate with WxCC and update Site name via calling into Entry Point.
+
+Pre-requisite
+
+·       Admin credentials to login to Webex Connect portal
+
+<iframe width="1024" height="576" src="https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+1. Navigate to Engage
+
+·       Login in to Webex CC administration portal
+
+·       From left column, navigate to “Integrations”
+
+![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
+
+2. Add Custom Node
+
+·       In Integrations, click ‘Add Integration’
+
+·       Select ‘Custom Node’
+
+![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
+
+·       Name your Custom Node, select ‘Custom Nodes’ under Node Category and click OK
+
+![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
+
+3. Configure REST API under Settings tab. These settings are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
+
+·       Step 1: Configure Authorization
+
+·       Step 2: Configure Headers
+
+·       Step 3: Configure Body
+
+·       Step 4: Configure Response
+
+4. Configure Node UI tab (optional)
+
+·       This setting are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
+
+5. Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
+
+<iframe width="1024" height="576" src="https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png)
