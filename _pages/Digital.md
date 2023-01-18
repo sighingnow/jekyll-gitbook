@@ -1775,7 +1775,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 <iframe width="1024" height="576" src="[https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53](https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### 1.     Navigate to Assets in Webex Connect portal
+### 1.     Navigate to Integrations in Webex Connect portal
 
 ·       Login in to Webex Connect portal
 
