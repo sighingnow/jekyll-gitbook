@@ -442,7 +442,7 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 
 > **Note:** Your \<ID\> was provided to you personally.  \<ID\> is the unique number equal to your POD.
 
-- Login to the Gmail account with the credentials above [https://mail.google.com](https://mail.google.com){:target="_blank"}. The password is the same as for Webex admin account. During first login select **Turn off smart features** 
+- Login to the Gmail account with the credentials above [https://mail.google.com](https://mail.google.com). The password is the same as for Webex admin account. During first login select **Turn off smart features** 
 
 - Enable POP3/IMAP setting by clicking on settings icon on top right corner and selecting **See all settings**.
 
@@ -456,7 +456,7 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 #### 2. Create a project at Google API Console 
 We need to activate API if we want to use Gmail account for outbound emails. 
 
-- Login to [Google Developers Console](https://console.developers.google.com/){:target="_blank"} with the credentials above. The password is the same as for Webex CC admin account.
+- Login to [Google Developers Console](https://console.developers.google.com/) with the credentials above. The password is the same as for Webex CC admin account.
 
 - You will have to agree with the Terms of Service and pick their Country of residence. Then click **Select a project** and create a **NEW PROJECT**.
 
@@ -652,7 +652,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Step 4. Create/Upload Email flow
 
-- Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}.
+- Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
 
 - Navigate to **Webex Connect Flows** -> **v2.1** -> **Email Inbound Flow.workflow.zip**, select the zip file and click download.
 
@@ -753,7 +753,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Customer/Partner should have a Facebook account to create a Facebook Business page
 
-- Login to Facebook and create a business page that can be used in WxCC for polling and handling the messenger chats Additional details of Facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up){:target="_blank"}
+- Login to Facebook and create a business page that can be used in WxCC for polling and handling the messenger chats Additional details of Facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up)
 
 - Click on `Create a Page` button
 
@@ -863,7 +863,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 #### 1. Initial flow loading
 
-- Download the default Facebook Inbound flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}.
+- Download the default Facebook Inbound flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
 
 - Navigate to **Webex Connect Flows** -> **v2.1** -> **Facebook Inbound Flow.workflow.zip**, select the zip file and click download.
 
@@ -1080,7 +1080,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Step 4. Create/Upload WhatsApp flow
 
-- Download the WhatsApp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels){:target="_blank"}.
+- Download the WhatsApp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
 
 - Navigate to **Webex Connect Flows** -> **v2.1** -> **WAB Inbound Flow.workflow.zip**, select the zip file and click download.
 
