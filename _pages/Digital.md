@@ -1745,7 +1745,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 
 
 # Lab.12.5 - Creating Custom Nodes
-Table of Contents
+## Table of Contents
 
 o   Navigate to Integrations in Webex Connect
 
@@ -1769,7 +1769,7 @@ o   Resources:
 
 This lab walks you through the creation of custom node and a demo of its usage. Custom nodes allow you to configure reusable integrations with your existing business system or with third-party applications using REST/SOAP APIs. In this sample example, we are going to show how you can integrate with WxCC and update Site name via calling into Entry Point.
 
-Pre-requisite
+## Pre-requisite
 
 ·       Admin credentials to login to Webex Connect portal
 
@@ -1813,7 +1813,7 @@ Pre-requisite
 
 <iframe width="1024" height="576" src="[https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873](https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-![](file:////Users/davng2/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png)
+![Lab12.20_CustomNodeDemo](/assets/images/Lab12.20_CustomNodeDemo.png)
 
 
 <p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
