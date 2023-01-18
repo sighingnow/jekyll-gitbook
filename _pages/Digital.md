@@ -456,7 +456,7 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 #### 2. Create a project at Google API Console 
 We need to activate API if we want to use Gmail account for outbound emails. 
 
-- Login to [Google Developers Console](https://console.developers.google.com/) with the credentials above. The password is the same as for Webex CC admin account.
+- Login to [Google Developers Console](https://console.developers.google.com/) with the credentials above. The password is the same as for Webex Contact Center admin account.
 
 - You will have to agree with the Terms of Service and pick their Country of residence. Then click **Select a project** and create a **NEW PROJECT**.
 
@@ -753,7 +753,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Customer/Partner should have a Facebook account to create a Facebook Business page
 
-- Login to Facebook and create a business page that can be used in WxCC for polling and handling the messenger chats Additional details of Facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up)
+- Login to Facebook and create a business page that can be used in Webex Contact Center for polling and handling the messenger chats Additional details of Facebook page setup is available here: [Facebook Business page setup](https://www.facebook.com/business/pages/set-up)
 
 - Click on `Create a Page` button
 
@@ -930,7 +930,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request2.jpg)
 
-- Start chatting and that should trigger a contact into Webex CC that will get routed according to the flow we configured in Step 4. A notification should appear that should help you switch to the agent desktop tab to accept the contact
+- Start chatting and that should trigger a contact into Webex Contact Center that will get routed according to the flow we configured in Step 4. A notification should appear that should help you switch to the agent desktop tab to accept the contact
 
 ![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request3.jpg)
 
@@ -985,7 +985,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received the WhatsApp number associated with your tenant.
 3. You have successfully completed the previous Lab **Preconfiguration**
-4. **Note**: WhatsApp Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.
+4. **Note**: WhatsApp Numbers cannot be procured directly from the Webex Contact Center integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.
 
 # Lab Section
 
