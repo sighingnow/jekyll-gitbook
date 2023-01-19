@@ -1750,7 +1750,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Navigate to BOT Builder and Create bot | MID          | 5 min           |
+| Navigate to BOT Builder and Create bot | Practical Lab | MID          | 5 min           |
 | Preview | Practical Lab | MID          | 5 min           |
 | Bot testing | Practical Lab | MID        | 10 min           |
 | Curation | Practical Lab | MID         | 15 min           |
@@ -1768,7 +1768,7 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 -   Admin credentials to complete configurations in WxCC portal and IMI connect.
 -   Agent Credentials to Handle FBM digital contact
 
-### 1. Navigate to BOT Builder and Create bot
+### 1.     Navigate to BOT Builder and Create bot
 
 -   Log on to Connect portal and navigate to BOT Builder
     
@@ -1779,7 +1779,7 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 -   Give name and enable agent handoff option
     
 
-### 2. Preview
+### 2.     Preview
 
 -   Navigate to Article -> click on 3 dot -> import from catalogue
     
@@ -1788,7 +1788,7 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 -   Click on Session to check to user input matching with Article
     
 
-### 3. Bot testing
+### 3.     Bot testing
 
 -   Open BOT Builder
     
@@ -1803,7 +1803,7 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 -   Click on session to validate the test case
     
 
-### 4. Curation
+### 4.     Curation
 
 -   Make sure feedback to BOT is enabled under sessions
     
