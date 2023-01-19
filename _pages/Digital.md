@@ -1744,7 +1744,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
 
 
-# Lab.12.20 - Creating Custom Nodes
+# Lab 12.20 - Creating Custom Nodes
 ## Table of Contents
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
@@ -1813,7 +1813,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 
-# Lab.12.24 - Global and Flow variable support in Digital channels
+# Lab 12.24 - Global and Flow variable support in Digital channels
 
 ## Table of Contents
 
