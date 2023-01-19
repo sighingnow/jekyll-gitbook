@@ -1752,7 +1752,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 | Add a Custom Node | Practical Lab | MID           | 15 min           |
 | Demo via calling EP into Webhook to invoke Custom Node | Demo | NA          | 15 min           |
 
-## Quick Links:
+## Quick Links
 
 -   [https://help.imiconnect.io/docs/custom-nodes](https://help.imiconnect.io/docs/custom-nodes)
 -   [https://help.imiconnect.io/docs/configure-custom-integration-node](https://help.imiconnect.io/docs/configure-custom-integration-node)
@@ -1823,7 +1823,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 | Configuring Flow variable| Practical Lab | MID           | 15 min           |
 | Transfer Global and Flow variable values between Webex Connect flows | Practical Lab | MID           | 15 min           |
 
-## Quick Links:
+## Quick Links
 [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
 
 ## Lab Objective
