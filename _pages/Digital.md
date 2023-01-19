@@ -1908,7 +1908,7 @@ Reporting GV vidcast: [https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6
 
 Vidcast: [https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3](https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3)
 
-### 1.     Login in to Webex Connect portal and open your inbound chat flow
+### Login in to Webex Connect portal and open your inbound chat flow
 
 -   Click “Edit” on the top right of the flow
 
@@ -1946,7 +1946,7 @@ Vidcast: [https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513](htt
 
 To transfer chat form input and Global variable values from inbound chat flow to channel-agnostic routed flow for Agent Desktop screen pop
 
-### 1.     Login in to Webex Connect portal and open your routed flow
+### Login in to Webex Connect portal and open your routed flow
 
 -   Click “Edit” on the top right of the flow
 
