@@ -1744,6 +1744,82 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
 
 
+# Lab 12.15 - Q&A BOT
+
+## Table of Contents
+
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| Navigate to BOT Builder and Create bot | MID          | 5 min           |
+| Preview | Practical Lab | MID          | 5 min           |
+| Bot testing | Practical Lab | MID        | 10 min           |
+| Curation | Practical Lab | MID         | 15 min           |
+| Demo | Demo | NA          | 15 min           |
+
+## Introduction
+
+## Lab Objective
+
+This lab is designed to complete a new QnA bot creation, new article creation and previewing the same. We will also test the bot, add new test cases and learn about curation.
+
+## Pre-requisite
+
+-   WxCC Portal, Agent Desktop and IMI connect URL.
+-   Admin credentials to complete configurations in WxCC portal and IMI connect.
+-   Agent Credentials to Handle FBM digital contact
+
+### 1. Navigate to BOT Builder and Create bot
+
+-   Log on to Connect portal and navigate to BOT Builder
+    
+-   On the top right you have 2 options QnA BOT and Task BOT
+    
+-   Create new QnA Bot
+    
+-   Give name and enable agent handoff option
+    
+
+### 2. Preview
+
+-   Navigate to Article -> click on 3 dot -> import from catalogue
+    
+-   Once the Article is added, click on preview on top right and test the BOT
+    
+-   Click on Session to check to user input matching with Article
+    
+
+### 3. Bot testing
+
+-   Open BOT Builder
+    
+-   Log on to Connect portal and navigate to BOT Builder
+    
+-   Click on the BOT created on Lab 1
+    
+-   Click on Testing and add test case
+    
+-   Execute the test case
+    
+-   Click on session to validate the test case
+    
+
+### 4. Curation
+
+-   Make sure feedback to BOT is enabled under sessions
+    
+-   Open preview option and run few input to test the article
+    
+-   If BOT is not giving expected response, click on red down thumb to downvote the article
+    
+-   Open curation menu
+    
+-   BOT Admin has an option to change response, add new article or attach response with an existing Article
+
+<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+
+
 # Lab 12.20 - Creating Custom Nodes
 ## Table of Contents
 
