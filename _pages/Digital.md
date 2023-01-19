@@ -1854,6 +1854,7 @@ Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c
 ### 1.     Login in to Webex CC administration portal
 
 -   From left column, navigate to “Global Variables”
+![Lab12.24.1_GVFirst](/assets/images/Lab12.24.1_GVFirst.png)
 
 -   Create a new OR select an existing Global Variable with the following configurations:
 
@@ -1869,6 +1870,7 @@ Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c
 -   Click “Edit” on the top right of the flow
 -   Delete connection between “Queue Task” and “Update Conversation”
 -   Drag the “Set Variable” from the left panel and drop between “Queue Task” and “Update Conversation” nodes and connect them as shown in the video
+![Lab12.24.1_GVSecond](/assets/images/Lab12.24.1_GVSecond.png)
 
 -   Configure “Set Variable” with the following:
 
@@ -1887,6 +1889,7 @@ Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c
 Reporting GV vidcast: [https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043](https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043)
 
 -   Navigate to “Reporting and Analytics” at the left column of WxCC portal
+![Lab12.24.1_GVThird](/assets/images/Lab12.24.1_GVThird.png)
 
 -   Create a new visualization with the following fields:
 
@@ -1945,9 +1948,10 @@ To transfer chat form input and Global variable values from inbound chat flow to
 
 -   Click “Edit” on the top right of the flow
 -   Click on the gear icon at the top right of the screen and navigate to Custom Variables
+![Lab12.24.3_TxFirst](/assets/images/Lab12.24.3_TxFirst.png)
 
 -   Add the Global variable and Flow variable specific to your configuration (Note that the variables are case-sensitive)
-
+![Lab12.24.3_TxSecond](/assets/images/Lab12.24.3_TxSecond.png)
 -   Next, double-click on the “Extract Task Variables” node and insert the following Javascript under Configuration tab just before the last line (Note: the italized words are specific to your variable name):
 
 // function to extract fields into flow usable variables
@@ -1975,6 +1979,7 @@ var _natureOfRequest_ = extractVariable("_NatureOfRequest_");
 var _davidGV1_ = extractVariable("_DavidGV1_");
 
 -   Within the same “Extract Task Variables” node, navigate to the second option “Transition Actions (Optional)” and add the Custom variables under “Time: On-leave” and “Action: Set variable” created above to the extracted Global and Flow variables:
+![Lab12.24.3_TxThird](/assets/images/Lab12.24.3_TxThird.png)
 
 -   Scroll down the same page and add both variables to the Debug Log for troubleshooting purposes if required.
 -   Save the settings and double-click on the Screen Pop node
