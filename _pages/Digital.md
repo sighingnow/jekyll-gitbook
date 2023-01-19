@@ -1746,9 +1746,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 
 # Lab 12.15 - QnA BOT
 
-https://youtu.be/X2HnaG3PVeo
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/Xa4j9TVQZKg?rel=0" title="Part1: Agent Desktop Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/X2HnaG3PVeo" title="Part1: Agent Desktop Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Table of Contents
 
