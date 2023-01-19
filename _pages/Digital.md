@@ -1826,7 +1826,7 @@ Vidcast: [https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873](htt
 | Transfer Global and Flow variable values between Webex Connect flows | Practical Lab | MID           | 15 min           |
 
 ## Quick Links
-[https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
+-   [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
 
 ## Lab Objective
 
@@ -1876,6 +1876,7 @@ Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c
 	-   Task ID: $(flid)
 	-   Select the Global Variable configured earlier in WxCC Portal
 	-   Set Variable: _Leave as default value configured_
+
 
 -   Save and make the flow live
 
