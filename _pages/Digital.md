@@ -1955,7 +1955,7 @@ To transfer chat form input and Global variable values from inbound chat flow to
 
 -   Add the Global variable and Flow variable specific to your configuration (Note that the variables are case-sensitive)
 
-![Lab12.24.3_TxSecond](/assets/images/Lab12.24.3_TxSecond.png)
+![Lab12.24.3_TxBetweenFirstSecond](/assets/images/Lab12.24.3_TxBetweenFirstSecond.png)
 
 -   Next, double-click on the “Extract Task Variables” node and insert the following Javascript under Configuration tab just before the last line (Note: the italized words are specific to your variable name):
 
@@ -1985,15 +1985,19 @@ var _davidGV1_ = extractVariable("_DavidGV1_");
 
 
 
+
 -   Within the same “Extract Task Variables” node, navigate to the second option “Transition Actions (Optional)” and add the Custom variables under “Time: On-leave” and “Action: Set variable” created above to the extracted Global and Flow variables:
-![Lab12.24.3_TxThird](/assets/images/Lab12.24.3_TxThird.png)
+![Lab12.24.3_TxSecond](/assets/images/Lab12.24.3_TxSecond.png)
 
 -   Scroll down the same page and add both variables to the Debug Log for troubleshooting purposes if required.
 
 -   Save the settings and double-click on the Screen Pop node
+
 -   Add the following under “Query Parameters”:
+![Lab12.24.3_TxThird](/assets/images/Lab12.24.3_TxThird.png)
 
 -   Save and make the flow live.
+
 -   Start a new chat session and observe the Screen Pop address bar upon Agent Desktop accepting the chat session.
 
 
