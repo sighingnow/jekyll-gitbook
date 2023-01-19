@@ -1825,19 +1825,14 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ## Table of Contents
 
-Fetching and Reporting Global variable
-Configuring Flow variable
-Transfer Global and Flow variable values between Webex Connect flows
--   Resources:
-
--   [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
-
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | Fetching and Reporting Global variable | Practical Lab | MID           | 15 min           |
 | Configuring Flow variable| Practical Lab | MID           | 15 min           |
-| Transfer Global and Flow variable values between Webex Connect flows | MID           | 15 min           |
+| Transfer Global and Flow variable values between Webex Connect flows | Practical Lab | MID           | 15 min           |
 
+-   Resources:
+[https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
 ## Lab Objective
 
 This lab walks through the configuration of Global and Flow variables for digital channels. The behaviour of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
