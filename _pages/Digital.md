@@ -1825,13 +1825,18 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ## Table of Contents
 
--   Fetching and Reporting Global variable
--   Configuring Flow variable
--   Transfer Global and Flow variable values between Webex Connect flows
+Fetching and Reporting Global variable
+Configuring Flow variable
+Transfer Global and Flow variable values between Webex Connect flows
 -   Resources:
 
 -   [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
 
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| Fetching and Reporting Global variable | Practical Lab | MID           | 15 min           |
+| Configuring Flow variable| Practical Lab | MID           | 15 min           |
+| Transfer Global and Flow variable values between Webex Connect flows | MID           | 15 min           |
 
 ## Lab Objective
 
