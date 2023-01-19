@@ -1747,28 +1747,15 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 # Lab.12.20 - Creating Custom Nodes
 ## Table of Contents
 
-o   
-
-o   Add a custom node
-
-o   Configure REST API under Settings tab
-
--   Step 1: Configure Authorization
--   Step 2: Configure Headers
--   Step 3: Configure Body
--   Step 4: Configure Response
-
-o   
-
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | Add a Custom Node | Practical Lab | MID           | 15 min           |
 | Demo via calling EP into Webhook to invoke Custom Node | Demo | NA          | 15 min           |
 
--   Quick Links:
+## Quick Links:
 
-[https://help.imiconnect.io/docs/custom-nodes](https://help.imiconnect.io/docs/custom-nodes)
-[https://help.imiconnect.io/docs/configure-custom-integration-node](https://help.imiconnect.io/docs/configure-custom-integration-node)
+-   [https://help.imiconnect.io/docs/custom-nodes](https://help.imiconnect.io/docs/custom-nodes)
+-   [https://help.imiconnect.io/docs/configure-custom-integration-node](https://help.imiconnect.io/docs/configure-custom-integration-node)
 
 ## Lab Objective
 
@@ -1836,8 +1823,9 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 | Configuring Flow variable| Practical Lab | MID           | 15 min           |
 | Transfer Global and Flow variable values between Webex Connect flows | Practical Lab | MID           | 15 min           |
 
--   Quick Links:
+## Quick Links:
 [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
+
 ## Lab Objective
 
 This lab walks through the configuration of Global and Flow variables for digital channels. The behaviour of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
