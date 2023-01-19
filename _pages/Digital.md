@@ -2062,6 +2062,7 @@ var _natureOfRequest_ = extractVariable("_NatureOfRequest_");
 
 var _davidGV1_ = extractVariable("_DavidGV1_");`
 
+![Lab12.24.3_TxAftBetweenFirstSecond](/assets/images/Lab12.24.3_TxAftBetweenFirstSecond.png)
 
 -   Within the same “Extract Task Variables” node, navigate to the second option “Transition Actions (Optional)” and add the Custom variables under “Time: On-leave” and “Action: Set variable” created above to the extracted Global and Flow variables:
 ![Lab12.24.3_TxSecond](/assets/images/Lab12.24.3_TxSecond.png)
