@@ -1819,3 +1819,171 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 <p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+
+
+# Lab.12.24 - Global and Flow variable support in Digital channels
+
+## Table of Contents
+
+-   Fetching and Reporting Global variable
+-   Configuring Flow variable
+-   Transfer Global and Flow variable values between Webex Connect flows
+-   Resources:
+
+-   [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
+
+
+## Lab Objective
+
+This lab walks through the configuration of Global and Flow variables for digital channels. The behaviour of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
+
+Both variables are transferable between flows. In the second part of this lab in 12.24.3, we will configure the transfer of chat form entries received in the inbound chat flow to routed flow when agent accepts the inbound chat.
+
+## Pre-requisite
+
+·       Admin credentials to login to WxCC and Webex Connect portal
+
+·       Working inbound chat and routed flow
+
+·       Knowledge of WxCC Global variables and Analyzer
+
+## Lab 12.24.1 – Fetching and Reporting Global Variable
+
+Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813](https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813)
+
+### 1.     Login in to Webex CC administration portal
+
+-   From left column, navigate to “Global Variables”
+
+-   Create a new OR select an existing Global Variable with the following configurations:
+
+-   Variable Type: String
+-   Default Value: <your free choice>
+-   Make Reportable: Yes
+-   Make Agent Viewable: Yes
+-   Desktop Label: <your free choice>
+-   Agent Editable: Yes
+
+### 2.     Next, login to Webex Connect portal and open your inbound chat flow
+
+-   Click “Edit” on the top right of the flow
+-   Delete connection between “Queue Task” and “Update Conversation”
+-   Drag the “Set Variable” from the left panel and drop between “Queue Task” and “Update Conversation” nodes and connect them as shown in the video
+
+-   Configure “Set Variable” with the following:
+
+-   Method Name: Select Global Variable
+-   Node Runtime Authorization: <Configured for your tenant>
+-   Task ID: **$(flid)**
+-   **Select the Global Variable configured earlier in WxCC Portal**
+-   **Set Variable: _Leave as default value configured_**
+
+-   **Save and make the flow live**
+-   **Start a new chat session and observe the Global variable value appearing in the interaction panel of Agent Desktop**
+-   **Capture the Session ID appearing at the address bar of the Agent Desktop upon accepting the chat session**
+
+### 3.     Configure Analyzer to report the Global Variables configured in Webex Connect flow
+
+Reporting GV vidcast: [https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043](https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043)
+
+-   Navigate to “Reporting and Analytics” at the left column of WxCC portal
+
+-   Create a new visualization with the following fields:
+
+-   Session ID
+-   <Global Variable defined in WxCC portal>
+-   Create a report filter with the captured Session ID
+
+-   Run the report and observe the Global variable value
+
+### 4.     Repeat a new chat sessions with the following scenario:
+
+-   Chat session 2 use case: Prior to starting the chat session, open the specific flow again in Webex Connect. Edit the “Set Variable” value of the Global variable in the “Set Variable” node to something other than the default. Capture the Session ID for Analyzer report filter.
+-   Re-run the Anayzer report after adding the Session ID and observe the reported value of the Global variable.
+
+## Lab 12.24.2 – Configuring Flow Variables
+
+Vidcast: [https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3](https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3)
+
+### 1.     Login in to Webex Connect portal and open your inbound chat flow
+
+-   Click “Edit” on the top right of the flow
+-   Delete connection between “Set Variable” and “Update Conversation”
+
+·       Drag a second “Set Variable” from the left panel and drop between the earlier “Set Variable” and “Update Conversation” nodes and connect them as shown in the video
+
+-   Configure “Set Variable” with the following:
+
+-   Method Name: Select Flow Variable
+-   Node Runtime Authorization: <Configured for your tenant>
+-   Task ID: **$(flid)**
+-   **Set Variable:**
+
+-   **Name: <Your free text>**
+-   **Type: String**
+-   **Value:**
+-   **Enable “Make agent viewable”**
+-   **Description: <Your free text>**
+-   **Desktop Label: <Your free text>**
+-   **Check “Agent Editable”**
+
+-   **Click Save**
+
+-   **Save and make the flow live.**
+-   **Start a new chat session and observe the Flow variable value appearing in the interaction panel of Agent Desktop.**
+-   **Note that Flow variables are not reportable in Analyzer.**
+
+## Lab 12.24.3 – Transfer Global and Flow variable values between Webex Connect flows
+
+Vidcast: [https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513](https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513)
+
+## Lab Objective
+
+To transfer chat form input and Global variable values from inbound chat flow to channel-agnostic routed flow for Agent Desktop screen pop
+
+### 1.     Login in to Webex Connect portal and open your routed flow
+
+-   Click “Edit” on the top right of the flow
+-   Click on the gear icon at the top right of the screen and navigate to Custom Variables
+
+-   Add the Global variable and Flow variable specific to your configuration (Note that the variables are case-sensitive)
+
+-   Next, double-click on the “Extract Task Variables” node and insert the following Javascript under Configuration tab just before the last line (Note: the italized words are specific to your variable name):
+
+// function to extract fields into flow usable variables
+
+function extractVariable(varname) {
+
+    for (var i = 0; i < responseArray.length; i++) {
+
+        var object = responseArray[i];
+
+        if (object.name == varname) {
+
+            return object.value;
+
+        }
+
+    }
+
+}
+
+//Extracting _NatureOfRequest_ and _DavidGV1_ variables set in the live chat inbound flow
+
+var _natureOfRequest_ = extractVariable("_NatureOfRequest_");
+
+var _davidGV1_ = extractVariable("_DavidGV1_");
+
+-   Within the same “Extract Task Variables” node, navigate to the second option “Transition Actions (Optional)” and add the Custom variables under “Time: On-leave” and “Action: Set variable” created above to the extracted Global and Flow variables:
+
+-   Scroll down the same page and add both variables to the Debug Log for troubleshooting purposes if required.
+-   Save the settings and double-click on the Screen Pop node
+-   Add the following under “Query Parameters”:
+
+-   **Save and make the flow live.**
+-   **Start a new chat session and observe the Screen Pop address bar upon Agent Desktop accepting the chat session.**
+
+
+<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
