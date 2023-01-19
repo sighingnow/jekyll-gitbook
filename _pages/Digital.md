@@ -1749,7 +1749,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Add a Custom Node | Practical Lab | MID           | 15 min           |
+| Adding a Custom Node | Practical Lab | MID           | 15 min           |
 | Demo via calling EP into Webhook to invoke Custom Node | Demo | NA          | 15 min           |
 
 ## Quick Links
@@ -1766,6 +1766,8 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 ·       Admin credentials to login to Webex Connect portal
 
 Vidcast: [https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53](https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53)
+
+## Adding a Custom Node
 
 ### 1.     Navigate to Integrations in Webex Connect
 
@@ -1801,7 +1803,7 @@ Vidcast: [https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53](htt
 
 ·       This setting are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
 
-### 5. Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
+## Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
 
 Vidcast: [https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873](https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873)
 
@@ -1840,7 +1842,7 @@ Both variables are transferable between flows. In the second part of this lab in
 
 ·       Knowledge of WxCC Global variables and Analyzer
 
-## Lab 12.24.1 – Fetching and Reporting Global Variable
+## Fetching and Reporting Global Variable
 
 Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813](https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813)
 
@@ -1899,7 +1901,7 @@ Reporting GV vidcast: [https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6
 -   Chat session 2 use case: Prior to starting the chat session, open the specific flow again in Webex Connect. Edit the “Set Variable” value of the Global variable in the “Set Variable” node to something other than the default. Capture the Session ID for Analyzer report filter.
 -   Re-run the Anayzer report after adding the Session ID and observe the reported value of the Global variable.
 
-## Lab 12.24.2 – Configuring Flow Variables
+## Configuring Flow Variables
 
 Vidcast: [https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3](https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3)
 
@@ -1931,7 +1933,7 @@ Vidcast: [https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3](htt
 -   **Start a new chat session and observe the Flow variable value appearing in the interaction panel of Agent Desktop.**
 -   **Note that Flow variables are not reportable in Analyzer.**
 
-## Lab 12.24.3 – Transfer Global and Flow variable values between Webex Connect flows
+## Transfer Global and Flow variable values between Webex Connect flows
 
 Vidcast: [https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513](https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513)
 
