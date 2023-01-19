@@ -2075,8 +2075,9 @@ var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 -   Save and make the flow live.
 
--   Start a new chat session and observe the Screen Pop address bar upon Agent Desktop accepting the chat session.
+-   Start a new chat session and observe the Screen Pop address bar upon Agent Desktop accepting the chat session. Both Global and Flow variables from the channel specific inbound chat flow are transfered to the routed flow.
 
+![Lab12.24.3_TxLast](/assets/images/Lab12.24.3_TxLast.png)
 
 <p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
 		
