@@ -1847,6 +1847,7 @@ Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c
 ### 1.     Login in to Webex CC administration portal
 
 -   From left column, navigate to “Global Variables”
+
 ![Lab12.24.1_GVFirst](/assets/images/Lab12.24.1_GVFirst.png)
 
 -   Create a new OR select an existing Global Variable with the following configurations:
@@ -1863,6 +1864,7 @@ Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c
 -   Click “Edit” on the top right of the flow
 -   Delete connection between “Queue Task” and “Update Conversation”
 -   Drag the “Set Variable” from the left panel and drop between “Queue Task” and “Update Conversation” nodes and connect them as shown in the video
+
 ![Lab12.24.1_GVSecond](/assets/images/Lab12.24.1_GVSecond.png)
 
 -   Configure “Set Variable” with the following:
