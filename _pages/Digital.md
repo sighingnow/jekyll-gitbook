@@ -1960,7 +1960,7 @@ To transfer chat form input and Global variable values from inbound chat flow to
 
 -   Next, double-click on the “Extract Task Variables” node and insert the following Javascript under Configuration tab just before the last line (Note: the italized words are specific to your variable name):
 
-// function to extract fields into flow usable variables
+`// function to extract fields into flow usable variables
 
 function extractVariable(varname) {
 
@@ -1982,9 +1982,7 @@ function extractVariable(varname) {
 
 var _natureOfRequest_ = extractVariable("_NatureOfRequest_");
 
-var _davidGV1_ = extractVariable("_DavidGV1_");
-
-
+var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 
 -   Within the same “Extract Task Variables” node, navigate to the second option “Transition Actions (Optional)” and add the Custom variables under “Time: On-leave” and “Action: Set variable” created above to the extracted Global and Flow variables:
