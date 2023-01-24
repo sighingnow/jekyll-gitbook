@@ -720,6 +720,20 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 #### 1. \[Optional\] Create a service 
 
+>**Note**: This step should be performed only if "My First Service" does not exist in Webex Connect.
+
+-   Log in to Webex Connect UI using provided URL _https://cl1pod**\<ID\>**.imiconnect.io/_ (where **\<ID\>** is your POD number).
+-   Go to **_Services_** and press **_Create New Service_** button ar the right top corner.
+-   Provide the name **_My First Service_** and press **_Create_** button.
+
+#### 2. Chat Asset configuration and Register to Webex CC in IMI Connect
+
+-   Log in to Webex Connect UI using using provided URL _https://cl1pod**\<ID\>**.imiconnect.io/_ (where **\<ID\>** is your POD number).
+-   Go to **_Assets_** -> **_Apps_**, press **_Configure New App_** and select **_Mobile / Web_** option.
+-   Enter **_ChatAsset_** as **_Name_**
+-   Toggle/enable **_Live Chat / In-AppMessaging_** to **_ON_** and choose “PRIMARY TRANSPORT PROTOCOL as MQTT” & “SECONDARY TRANSPORT PROTOCOL as Web Socket” and enable “Use Secured Port” and SAVE.
+-   Select “REGISTER TO WEBEX CC” and choose the Service you have created and REGISTER
+
 
 
 ---
