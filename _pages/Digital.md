@@ -728,17 +728,31 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Input the name **`My First Service`** and press **_Create_** button.
 
+![DC_Lab.12.8_Create_Service](/assets/images/DC_Lab_12.8._Create_Service.png)
+
 #### 2. Chat Asset configuration and Register to Webex CC in Webex Connect
 
 -  Log into Webex Connect UI using using provided URL **_https://cl1pod\<ID\>.imiconnect.io/_** (where **\<ID\>** is your POD number).
 
 -  Go to **_Assets_** -> **_Apps_**, press **_Configure New App_** and select **_Mobile / Web_** option.
 
+![DC_Lab.12.8_Create_Asset_1](/assets/images/DC_Lab_12.8._Create_Asset_1.png)
+
 -  Input **_Name_** as **`ChatAsset`**.
 
 -  Toggle/enable **_Live Chat / In-AppMessaging_** to **_ON_** and choose **_Primary Transport Protocol_** as **`MQTT`** & **_Secondary Transport Protocol_** as **`Web Socket`** then tick **_Use Secured Port_** checkbox and press **_Save_** button.
 
--  Once asset is saved, press **_Register To Webex Engage_** at the top, choose **_My First Service_** service and press **_Register_** button.
+>**Note**: If there is an error that your request cannot be processed, please press **_Save_** button one more time.
+
+![DC_Lab.12.8_Create_Asset_2](/assets/images/DC_Lab_12.8._Create_Asset_2.png)
+
+-  Once asset is saved, press **_Register To Webex Engage_** at the top, choose **_My First Service_** service from the drop-down list and press **_Register_** button.
+
+![DC_Lab.12.8_Create_Asset_3](/assets/images/DC_Lab_12.8._Create_Asset_3.png)
+
+-  Check and make sure the asset has been succesfully registered to the service and  **_Register To Webex Engage_** button was greyed out.
+
+![DC_Lab.12.8_Create_Asset_4](/assets/images/DC_Lab_12.8._Create_Asset_4.png)
 
 ### 3. Create Entry Point for Chat
 
@@ -780,7 +794,19 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Click on **Save** after comparing your values with the screenshot below.
 
+### 5. Chat Template Creation
 
+-   Login to IMI connect, goto TOOLS=> Templates=> ADD NEW TEMPLATE
+
+-   Provide a Name and choose CHANNEL as “Live Chat / In-APP Messaging”
+
+-   MESSAGE TYPE as “Form”.
+
+-   Provide the TITLE “Welcome to WxCC IMI Chat Demo” as per your business requirement and this will be the welcome message.
+
+-   Add few fields which ever are required as per your business requirement.
+
+-   SAVE
 
 ---
 # Lab.12.9 Facebook Messenger Configuration
