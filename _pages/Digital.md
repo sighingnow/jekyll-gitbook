@@ -702,7 +702,25 @@ Now create a new client ID that will be used to identify your application to Goo
 # Lab.12.8 Chat Configuration
 ---
 
-Test from Obsidian
+## Introduction
+
+#### Lab Objective
+
+In this Lab, we will go through the tasks that are required to complete the basic web chat configuration. You will be able to initiate a chat to the Contact Center and be able to accept/respond to the chat by logging in as an agent. 
+
+We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, Website Settings, and corresponding workflows.
+
+#### Pre-requisite
+
+1. Webex CC Portal, Agent Desktop and Webex Connect URL.
+2. Admin credentials to complete configurations in Webex CC portal and Webex Connect.
+3. Agent Credentials to handle the Chat.
+
+## Step 1. Create an asset
+
+#### 1. \[Optional\] Create a service 
+
+
 
 ---
 # Lab.12.9 Facebook Messenger Configuration
