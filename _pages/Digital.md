@@ -732,7 +732,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 #### 2. Chat Asset configuration and Register to Webex CC in Webex Connect
 
--  Log into Webex Connect UI using using provided URL **_https://cl1pod\<ID\>.imiconnect.io/_** (where **\<ID\>** is your POD number).
+-  Log into Webex Connect UI.
 
 -  Go to **_Assets_** -> **_Apps_**, press **_Configure New App_** and select **_Mobile / Web_** option.
 
@@ -750,7 +750,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Asset_3](/assets/images/DC_Lab_12.8._Create_Asset_3.png)
 
--  Check and make sure the asset has been succesfully registered to the service and  **_Register To Webex Engage_** button was greyed out.
+-  Check and make sure the asset has been succesfully registered to the service and  **_Register To Webex Engage_** button has been greyed out.
 
 ![DC_Lab.12.8_Create_Asset_4](/assets/images/DC_Lab_12.8._Create_Asset_4.png)
 
@@ -760,23 +760,29 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Press **_New Entry Point_** button.
 
+![DC_Lab.12.8_Create_Entry_Point_1](/assets/images/DC_Lab_12.8._Create_Entry_Point_1.png)
+
 -  Input **_Name_** as **`Chat_EP`**.
 
 -  Select **`Chat`** from the **_Channel Type_** drop-down list.
 
 -  Select **`ChatAsset`** as an **_Asset Name_**.
 
--  Set **_Service Level Threshold_** as **`2`** hours.
+-  Set **_Service Level Threshold_** as **`7200`** seconds (2 hours).
 
 -  The **_Time Zone_** can stay as default value.
 
 -  Click on **Save** after comparing your values with the screenshot below.
+
+![DC_Lab.12.8_Create_Entry_Point_2](/assets/images/DC_Lab_12.8._Create_Entry_Point_2.png)
 
 ### 4. Create Queue for Chat
 
 -  On Webex CC Management Portal access the menu **_Provisioning_** -> **_Entry Point/Queues_** -> **_Queue_**.
 
 -  Click on **_New Queue_**.
+
+![DC_Lab.12.8_Create_Queue_1](/assets/images/DC_Lab_12.8._Create_Queue_1.png)
 
 -  Input **_Name_** as **`Chat_Q`**.
 
@@ -786,27 +792,70 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  In the **_Chat Distribution_** click on **_Add Group_** and select `Team1`.
 
--  Set **_Service Level Threshold_** as **`2`** hours.
+![DC_Lab.12.8_Create_Queue_2](/assets/images/DC_Lab_12.8._Create_Queue_2.png)
 
--  Set **_Maximum Time in Queue_** as **`3`** hours.
+-  Set **_Service Level Threshold_** as **`7200`** seconds (2 hours).
+
+-  Set **_Maximum Time in Queue_** as **`10800`** seconds (2 hours).
 
 -  The **_Time Zone_** can stay as default value.
 
 -  Click on **Save** after comparing your values with the screenshot below.
 
-### 5. Chat Template Creation
+![DC_Lab.12.8_Create_Queue_3](/assets/images/DC_Lab_12.8._Create_Queue_3.png)
 
--   Login to IMI connect, goto TOOLS=> Templates=> ADD NEW TEMPLATE
+### 5. Create Chat Template
 
--   Provide a Name and choose CHANNEL as “Live Chat / In-APP Messaging”
+-  Login to Webex Connect UI.
 
--   MESSAGE TYPE as “Form”.
+-  Go to **_Tools_** -> **_Templates_** and press **_Add new Template_** button.
 
--   Provide the TITLE “Welcome to WxCC IMI Chat Demo” as per your business requirement and this will be the welcome message.
+![DC_Lab.12.8_Create_Template_1](/assets/images/DC_Lab_12.8._Create_Template_1.png)
 
--   Add few fields which ever are required as per your business requirement.
+-   Provide **_Name_** as **`Chat_Template`** and choose **_Channel_** as **_Live Chat / In-App Messaging_**
 
--   SAVE
+-   Select **_Message Type_** as **_Form_**.
+
+-   Provide the **_Title_** as **`Welcome to Webex CC Chat`** and this will be the welcome message.
+
+-   Click on **_Add Field_** and add ***First Name*** field with the following parameters into the form:
+
+| **Parameter Name**  | **Parameter Value** |
+| --------------- | --------------- |
+| Type            | Text            |
+| Name            | firstName       |
+| Label           | First Name      |
+| Mandatory Field | On              |
+
+![DC_Lab.12.8_Create_Template_2](/assets/images/DC_Lab_12.8._Create_Template_2.png)
+
+-   Click on **_Add Field_** and add ***Last Name*** field with the following parameters into the form:
+
+| **Parameter Name**  | **Parameter Value** |
+| --------------- | --------------- |
+| Type            | Text            |
+| Name            | lastName        |
+| Label           | Last Name       |
+| Mandatory Field | On              |
+
+![DC_Lab.12.8_Create_Template_3](/assets/images/DC_Lab_12.8._Create_Template_3.png)
+
+-   Click on **_Add Field_** button and add ***Email*** field with the following parameters into the form:
+
+| **Parameter Name**  | **Parameter Value** |
+| --------------- | --------------- |
+| Type            | Email           |
+| Name            | email           |
+| Label           | Email           |
+| Mandatory Field | On              |
+
+![DC_Lab.12.8_Create_Template_4](/assets/images/DC_Lab_12.8._Create_Template_4.png)
+
+-   Click on **Save** after comparing your values with the screenshot below.
+
+![DC_Lab.12.8_Create_Template_5](/assets/images/DC_Lab_12.8._Create_Template_5.png)
+
+
 
 ---
 # Lab.12.9 Facebook Messenger Configuration
