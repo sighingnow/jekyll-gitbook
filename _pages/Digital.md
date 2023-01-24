@@ -716,23 +716,69 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 2. Admin credentials to complete configurations in Webex CC portal and Webex Connect.
 3. Agent Credentials to handle the Chat.
 
-## Step 1. Create an asset
+## Step 1. Create Chat Asset
 
 #### 1. \[Optional\] Create a service 
 
->**Note**: This step should be performed only if "My First Service" does not exist in Webex Connect.
+>**Note**: This step should be performed only if **_My First Service_** service does not exist in Webex Connect.
 
--   Log in to Webex Connect UI using provided URL _https://cl1pod**\<ID\>**.imiconnect.io/_ (where **\<ID\>** is your POD number).
--   Go to **_Services_** and press **_Create New Service_** button ar the right top corner.
--   Provide the name **_My First Service_** and press **_Create_** button.
+-  Log into Webex Connect UI using provided URL **_https://cl1pod\<ID\>.imiconnect.io/_** (where **\<ID\>** is your POD number).
 
-#### 2. Chat Asset configuration and Register to Webex CC in IMI Connect
+-  Go to **_Services_** and press **_Create New Service_** button ar the right top corner.
 
--   Log in to Webex Connect UI using using provided URL _https://cl1pod**\<ID\>**.imiconnect.io/_ (where **\<ID\>** is your POD number).
--   Go to **_Assets_** -> **_Apps_**, press **_Configure New App_** and select **_Mobile / Web_** option.
--   Enter **_ChatAsset_** as **_Name_**
--   Toggle/enable **_Live Chat / In-AppMessaging_** to **_ON_** and choose “PRIMARY TRANSPORT PROTOCOL as MQTT” & “SECONDARY TRANSPORT PROTOCOL as Web Socket” and enable “Use Secured Port” and SAVE.
--   Select “REGISTER TO WEBEX CC” and choose the Service you have created and REGISTER
+-  Input the name **`My First Service`** and press **_Create_** button.
+
+#### 2. Chat Asset configuration and Register to Webex CC in Webex Connect
+
+-  Log into Webex Connect UI using using provided URL **_https://cl1pod\<ID\>.imiconnect.io/_** (where **\<ID\>** is your POD number).
+
+-  Go to **_Assets_** -> **_Apps_**, press **_Configure New App_** and select **_Mobile / Web_** option.
+
+-  Input **_Name_** as **`ChatAsset`**.
+
+-  Toggle/enable **_Live Chat / In-AppMessaging_** to **_ON_** and choose **_Primary Transport Protocol_** as **`MQTT`** & **_Secondary Transport Protocol_** as **`Web Socket`** then tick **_Use Secured Port_** checkbox and press **_Save_** button.
+
+-  Once asset is saved, press **_Register To Webex Engage_** at the top, choose **_My First Service_** service and press **_Register_** button.
+
+### 3. Create Entry Point for Chat
+
+-  Log into Webex CC Management Portal URL with the credentials and access the menu **_Provisioning_** -> **_Entry Point/Queues_** -> **_Entry Point_**.
+
+-  Press **_New Entry Point_** button.
+
+-  Input **_Name_** as **`Chat_EP`**.
+
+-  Select **`Chat`** from the **_Channel Type_** drop-down list.
+
+-  Select **`ChatAsset`** as an **_Asset Name_**.
+
+-  Set **_Service Level Threshold_** as **`2`** hours.
+
+-  The **_Time Zone_** can stay as default value.
+
+-  Click on **Save** after comparing your values with the screenshot below.
+
+### 4. Create Queue for Chat
+
+-  On Webex CC Management Portal access the menu **_Provisioning_** -> **_Entry Point/Queues_** -> **_Queue_**.
+
+-  Click on **_New Queue_**.
+
+-  Input **_Name_** as **`Chat_Q`**.
+
+-  Select **`Chat`** in the **_Channel Type_** section.
+
+-  Leave the **_Queue Routing Type_** as default value **`Longest Available Agent`**.
+
+-  In the **_Chat Distribution_** click on **_Add Group_** and select `Team1`.
+
+-  Set **_Service Level Threshold_** as **`2`** hours.
+
+-  Set **_Maximum Time in Queue_** as **`3`** hours.
+
+-  The **_Time Zone_** can stay as default value.
+
+-  Click on **Save** after comparing your values with the screenshot below.
 
 
 
