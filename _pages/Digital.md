@@ -9,7 +9,7 @@ This page is under developments
 
 | Topic                                                                                                                        | Lab Type          | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Practical Lab     | EASY            | 15 min           |
+| [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Read & Understand + Practical Lab     | EASY            | 15 min           |
 | [Connect GUI overview](#lab122---connect-gui-overview) | Practical Lab     | EASY            | 15 min           |
 | [Engage GUI overview](#lab123---) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---) | Read & Understand | EASY            | 15 min           |
@@ -39,11 +39,11 @@ This page is under developments
 
 ## **Table of Contents**
 
-| Topic                                                      |
-| ---------------------------------------------------------- |
-| [Webex Connect architecture](#1-Webex-Connect-architecture) |
-| [Webex Connect provisioning](#2-Webex-Connect-Provisioning) |
-| [Webex Connect provisioning verification](#3-Webex-Connect-Provisioning-verification) |
+| Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
+| ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [Webex Connect architecture](#1-Webex-Connect-architecture)                           | Read & Understand         | EASY                | 5 min                 |
+| [Webex Connect provisioning](#2-Webex-Connect-Provisioning)                           | Practical Lab         | EASY                | 5 min                 |
+| [Webex Connect provisioning verification](#3-Webex-Connect-Provisioning-verification) | Practical Lab         | EASY                | 5 min                 |
 
 
 ## **Introduction**
@@ -76,15 +76,13 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 -   Go to https://admin.webex.com
 -   Login with tenant administrator credentials
 -   Under ‘Services’ select ‘Contact Center’ > ‘Settings’ > ‘General’
-
 -   Verify under ‘Service Details’ > ‘Digital Channel’ is set to ‘IMI Digital’
 
 ![Provisioning1](/assets/images/DC_Provisioning1.png)
 
-_In case the ‘Digital Channel’ section prompts a different value you will need to reach out Cisco for support to get this setting corrected before proceeding further._
+> In case the ‘Digital Channel’ section prompts a different value you will need to reach out Cisco for support to get this setting corrected before proceeding further.
 
 -   Under ‘Services’ select ‘Contact Center’ > ‘Settings’ > ‘Digital’
-
 -   Select the button ‘Provision Digital Channels’
 
 ![Provisioning1](/assets/images/DC_Provisioning2.png)
@@ -94,7 +92,6 @@ _In case the ‘Digital Channel’ section prompts a different value you will ne
 ![Provisioning1](/assets/images/DC_Provisioning3.png)
 
 -   Wait approximately 5 minute for the automated provisioning process to complete. After this time, the selected administrator will receive an activation email.
-
 -   Open the email and click on ‘JOIN THE TEAM’
 
 ![Provisioning1](/assets/images/DC_Invite.png)
@@ -102,21 +99,19 @@ _In case the ‘Digital Channel’ section prompts a different value you will ne
 -   Follow the instructions to activate your account and set a local password.
 -   Once the activation is completed you will access the Connect portal > bookmark the website URL
 
-_For security reason, the activation is only valid for 24 hours since its delivery. Please activate your account immediately. In case you don’t receive the activation email, or not use it within 24 hours, will need to reach out Cisco for support._
+> For security reason, the activation is only valid for 24 hours since its delivery. Please activate your account immediately. In case you don’t receive the activation email, or not use it within 24 hours, will need to reach out Cisco for support.
 
 ## **3. Webex Connect provisioning verification**
 
 -   Go to https://admin.webex.com
 -   Login with tenant administrator credentials
 -   Under ‘Services’ select ‘Contact Center’ > ‘Settings’ > ‘Digital’
-
 -   Verify Digital channels setup for Webex Contact Center is completed.
 
 ![Provisioning1](/assets/images/DC_Provisioned1.png)
 
 -   Return to ‘Services’ select ‘Contact Center’ > ‘Settings’ > ‘General’ > ‘Advanced Configuration’ > Select ‘Go to Webex Contact Center Management Portal’ to cross launch to administration portal
 -   In Administration portal, select ‘New Digital Channels’ to cross launch into the new component ‘Engage’
-
 -   No additional login(or credentials) are required. The login to Engage portal should be seamless
 
 ![Provisioning1](/assets/images/DC_Provisioned2.png)
@@ -138,9 +133,9 @@ _For security reason, the activation is only valid for 24 hours since its delive
 
 ## **Table of Contents**
 
-| Topic                                                             |
-| ----------------------------------------------------------------- |
-| [Overview of Connect menu items](#Overview–of-Connect–menu-items) |
+| Topic                                                             | Lab Type | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [Overview of Connect menu items](#Overview–of-Connect–menu-items) | Read & Understand         | EASY                | 15 min                 |
 
 
 #### **Introduction**
@@ -241,9 +236,9 @@ The Settings session allows the administrator to review and manage users and tea
 
 ## **Table of Contents**
 
-| Topic |
-| ----- |
-| [Overview of Engage menu items](#Overview-of-Engage-menu-items)      |
+| Topic                                                           | Lab Type | Dificulty Level | Estimated length |
+| --------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [Overview of Engage menu items](#Overview-of-Engage-menu-items) | Read & Understand         | EASY                | 15 min                 |
 
 ## **Introduction**
 
@@ -331,13 +326,13 @@ Within the setting section the administrator can control some additional useful 
 
 ## **Table of Contents**
 
-| Topics                                                                           |
-| -------------------------------------------------------------------------------- |
-| [User Roles and Permissions](1-User-Roles–and-Permissions)                       |
-| [Users organization](2-Users-organization)                                       |
-| [Login to Connect portal](3-Login-to-Connect-portal)                             |
-| [Add new users with administrator role](4-Add-new-users-with-administrator-role) |
-| [New user activation](5-New-user-activation)                                     |
+| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [User Roles and Permissions](1-User-Roles–and-Permissions)                       | Read & Understand         | EASY                | 4 min                 |
+| [Users organization](2-Users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
+| [Login to Connect portal](3-Login-to-Connect-portal)                             | Practical Lab         | EASY                | 1 min                 |
+| [Add new users with administrator role](4-Add-new-users-with-administrator-role) | Practical Lab         | EASY                | 2 min                 |
+| [New user activation](5-New-user-activation)                                     | Practical Lab         | EASY                | 2 min                 |
 
 ## **Introduction**
 
@@ -368,7 +363,7 @@ Connect shall be accessed only by system administrators and not by agents or sup
 
 ## **2. Users organization**
 
-Connect allows the Owner to create local users in container groups called Groups and Teams. Users created within a Group or a Team will be able to access the configuration created within such container and below, but not to the configuration created at levels above. Users can be create in one of the following containers:
+Connect allows the Owner to create local users in containers called **Groups** and **Teams**. Users created within a Group or a Team will be able to access the configuration created within such container and below, but not to the configuration created at levels above. Users can be create in one of the following containers:
 
 -   Tenant level – can contain users and Groups
 -   Group – can contain users and Teams
@@ -379,7 +374,7 @@ Connect allows the Owner to create local users in container groups called Groups
 -   Access Connect URL (this is specific to the tenant you are using)
 -   Login the provided credentials
 
--   Please contact the Partner Success team (PSM) if there are any challenges identifying the Connect Owner details
+> Please contact the Partner Success team (PSM) if there are any challenges identifying the Connect Owner details
 
 ![UserLogin](assets/images/DC_Login.png)
 
