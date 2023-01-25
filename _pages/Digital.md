@@ -1422,6 +1422,142 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 # Lab.12.16 - Task BOTs
 # Lab.12.17 - Event Scheduler
 # Lab.12.18 - Inbound Webhooks
+
+## Table of Contents
+
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| Creating an Inbound webhook flow | Practical Lab | MID           | 15 min           |
+| Creating a voice flow in flow control| Practical Lab | MID           | 15 min           |
+| Test the Inbound Webhook  | Practical Lab | EASY          | 5 min           |
+
+
+## Quick Links
+
+[https://help.imiconnect.io/docs/inbound-webhooks](https://help.imiconnect.io/docs/inbound-webhooks)
+
+
+## Lab Objective
+
+Inbound Webhooks generate a unique endpoint that can be embedded into your applications to notify Webex Connect of events occurring on business systems.This lab is designed to showcase the capabilities of an inbound Webhook in Webex Connect.
+
+In this lab, we will explore how an Inbound Webhook can be used to generate an email to a customer that initiated the contact through a voice call.
+
+![12.18.1.png](/assets/images/12.18.1.png)
+
+
+## Pre-requisite
+
+-   Admin credentials to login to WxCC and Webex Connect portal
+
+-   Knowledge of WxCC Connect flows and basic troubleshooting
+-
+
+
+### 1.     Create an Inbound Webhook
+
+-   Click on Assets ---> Integrations from the left navigation pane 
+
+![12.18.2.png](/assets/images/12.18.2.png)
+
+
+-   Click on the Add Integration button and select Inbound Webhook
+
+
+![12.18.3.png](/assets/images/12.18.3.png)
+
+
+- Enter a unique name for the Inbound Webhook and enter the JSON data as follows. Click on Parse and Save.
+
+*Note: Save the Webhook URL for future reference*
+
+{
+    "outage":"outage notification",
+    "maintenance":"maintenance notification"
+}
+
+
+![12.18.4.png](/assets/images/12.18.4.png)
+
+
+- Navigate to the Service you created earlier on in the labs and click on Create blank Flow.
+
+
+![12.18.5.png](/assets/images/12.18.5.png)
+
+
+- Give the flow a unique name and click on create flow button.
+
+
+- Select the Trigger Category as Webhook
+
+
+![12.18.6.png](/assets/images/12.18.6.png)
+
+
+- Select the Webhook you created in a previous step and click Save.
+
+
+![12.18.7.png](/assets/images/12.18.7.png)
+
+
+- Drag and drop the Email node from the left pane and connect the two nodes.
+
+
+![12.18.8.png](/assets/images/12.18.8.png)
+
+
+- Double click on the Email node to access the settings and details as shown below. Click Save.
+
+
+![12.18.9.png](/assets/images/12.18.9.png)
+
+
+- Save the flow and make the flow Live.
+
+
+### 2.     Creating a voice flow in flow control
+
+
+- Login to the Webex Contact Centre management portal and navigate to flow control.
+
+- Create a simple flow that sends out Outage details as an email. The main menu prompt takes the caller to a http request node when they press 1.
+
+- The http request node then triggers the Webhook along with the message that needs to be sent out in the request body .
+
+Request Body:
+
+{
+"outage": "Current power outages are applicable for the suburbs 2118, 2456, 2761, 2229"
+}
+
+
+![12.18.10.png](/assets/images/12.18.10.png)
+
+
+![12.18.11.png](/assets/images/12.18.11.png)
+
+
+-Save and publish the flow.
+
+
+### 3.     Testing the Inbound Webhook
+
+- Make a call to the Entry point associated with the voice call flow that you created in the previous step.
+
+- After making the selection and the call should get disconnected.
+
+- Check the email box of the Destination Email address that was entered in the Webex Connect flow to ensure the email has been received.
+
+
+![12.18.12.png](/assets/images/12.18.12.png)
+
+
+
+<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+
 # Lab.12.19 - Troubleshooting
 # Lab 12.20 - Creating Custom Nodes
 ## Table of Contents
@@ -1495,6 +1631,125 @@ Vidcast: [https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873](htt
 
 
 # Lab.12.21 - Event and Triggers
+
+## Table of Contents
+
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| Creating an Inbound webhook flow | Practical Lab | MID           | 15 min           |
+| Creating an Event in Webex Engage Portal| Practical Lab | MID           | 15 min           |
+| Test the Event Trigger | Practical Lab | EASY          | 5 min           |
+
+## Quick Links
+-   https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Generic_Topic.dita_47ceb6a2-e47c-4639-9a2c-dcde742cec2f-4
+
+
+## Lab Objective
+
+This lab walks through the configuration of Events and Triggers in the Webex Contact Centre Engage Portal. Once configured, these can be invoked by an agent handling digital interactions to achieve the required use case.
+
+## Pre-requisite
+
+-   Admin credentials to login to WxCC and Webex Connect portal
+
+-   Working inbound chat and routed flow
+
+-   Knowledge of WxCC Connect flows and basic troubleshooting
+
+### 1.    Login to Webex Connect portal
+
+-   From Left column, navigate to Assets--> Integrations
+
+![12.21_1](/assets/images/12.21_1.png)
+
+- Click on Add Integration-->Inbound Webhook
+
+![12.21_2.png](/assets/images/12.21_2.png)
+
+- Give the Webhook a Unique name , and copy the Webhook URL and keep it aside for future reference. Click Save.
+
+![12.21_3.png](/assets/images/12.21_3.png)
+
+- Navigate to the relevant Service from the Left Pane and click on Create Blank Flow.
+
+![12.21_4.png](/assets/images/12.21_4.png)
+
+- Give the flow a name and click Create. Select the Webhook as the Trigger category.
+
+![12.21_5.png](/assets/images/12.21_5.png)
+
+- Select the Webhook name from the dropdown and paste the below Json data and click Parse. Save the changes
+
+{
+
+"email": "xxx@cisco.com",
+
+"url": "https://www.cisco.com/"
+
+}
+
+![12.21_6.png](/assets/images/12.21_6.png)
+
+- Drag the Email node from the left pane on to the canvas and connect the two nodes.
+
+![12.21_7.png](/assets/images/12.21_7.png)
+
+- Open the Email node and enter the Destination ID, From Name, Message and Subject. Click Save.
+
+![12.21_8.png](/assets/images/12.21_8.png)
+
+- Save the flow and make live.
+
+
+### 2.     Creating an Event in Webex Engage Portal
+
+- Login to Webex Contact Centre Management Portal and cross launch Webex Engage from the left side pane.
+
+![12.21_10.png](/assets/images/12.21_10.png)
+
+- Click on Groups- --> Default
+
+![12.21_11.png](/assets/images/12.21_11.png)
+
+- Click on the Default Team
+
+![12.21_12.png](/assets/images/12.21_12.png)
+
+-  Click on Events and Rules and click Add new event.
+
+![12.21_13.png](/assets/images/12.21_13.png)
+
+- Enter a unique name, Method, Webhook URL, payload as Key Value pair .
+
+![12.21_14.png](/assets/images/12.21_14.png)
+
+- To enter the key Value pair, click on Add Param and enter parameters as shown below.
+
+![12.21_15.png](/assets/images/12.21_15.png)
+
+- Repeat the above step to create the url parameter
+
+![12.21_16.png](/assets/images/12.21_16.png)
+
+### 3.     Test the Event Trigger
+
+- Login to the agent desktop and initiate a chat session. After accepting the chat session click on the lightning bolt icon to select the trigger and click Next.
+
+![12.21_17.png](/assets/images/12.21_17.png)
+
+![12.21_18.png](/assets/images/12.21_18.png)
+
+- Enter the email address you want to send the Email to and the url and press Trigger.
+
+![12.21_19.png](/assets/images/12.21_19.png)
+
+- Check the recipient’s mailbox to validate the Email has been received successfully.
+
+
+<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
+		
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+
 # Lab 12.22 - Global and Flow variable support in Digital channels
 
 ## Table of Contents
