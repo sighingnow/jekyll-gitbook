@@ -12,7 +12,7 @@ This page is under developments
 | [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Read & Understand + Practical Lab     | EASY            | 15 min           |
 | [Connect GUI overview](#lab122---connect-gui-overview) | Practical Lab     | EASY            | 15 min           |
 | [Engage GUI overview](#lab123---) | Read & Understand | EASY            | 15 min           |
-| [User Management in Connect](#lab124---) | Read & Understand | EASY            | 15 min           |
+| [User Management in Connect](#lab124---) | Read & Understand + Practical Lab | EASY            | 10 min           |
 | [Digital Channels Pre-configuration](#lab125---) | Read & Understand | EASY            | 15 min           |
 | [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
 | [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
