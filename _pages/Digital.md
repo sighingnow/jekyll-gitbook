@@ -11,10 +11,10 @@ This page is under developments
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Read & Understand + Practical Lab     | EASY            | 15 min           |
 | [Connect GUI overview](#lab122---connect-gui-overview) | Practical Lab     | EASY            | 15 min           |
-| [Engage GUI overview](#lab123---) | Read & Understand | EASY            | 15 min           |
-| [User Management in Connect](#lab124---) | Read & Understand + Practical Lab | EASY            | 10 min           |
-| [Digital Channels Pre-configuration](#lab125---) | Read & Understand | EASY            | 15 min           |
-| [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
+| [Engage GUI overview](#lab123---Engage-GUI-overview) | Read & Understand | EASY            | 15 min           |
+| [User Management in Connect](#lab124---User–Management-in-Connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
+| [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Read & Understand | EASY            | 20 min           |
+| [Flow Builder](#lab126---Flow-Builder) | Read & Understand | EASY            | 15 min           |
 | [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
 | [Chat Channel Configuration](#lab128---) | Practical Lab | EASY            | 15 min           |
 | [Facebook Messenger Channel Configuration](#lab129---) | Practical Lab | EASY            | 15 min           |
@@ -410,10 +410,10 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Node Authorization for Webex CC Task and Engage nodes](1-Node-Authorization-for-Webex-CC-Task-and-Engage-nodes)                       | Practical Lab         | EASY                | 4 min                 |
-| [Retrieve and upload CA flows in Connect](2-Retrieve-and-upload-CA-flows-in-Connect)                                       | Practical Lab         | EASY                | 1 min                 |
-| [Setup agents in the Management Portal (Agents, Team, MMP)](3-Setup-agents-in-the–Management-Portal-Agents-Team-MMP)                             | Practical Lab         | EASY                | 1 min                 |
-| [Setup RONA timers](4-Setup-RONA-timers) | Practical Lab         | EASY                | 2 min                 |
+| [Node Authorization for Webex CC Task and Engage nodes](1-Node-Authorization-for-Webex-CC-Task-and-Engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
+| [Retrieve and upload CA flows in Connect](2-Retrieve-and-upload-CA-flows-in-Connect)                                       | Practical Lab         | EASY                | 5 min                 |
+| [Setup agents in the Management Portal (Agents, Team, MMP)](3-Setup-agents-in-the–Management-Portal-Agents-Team-MMP)                             | Practical Lab         | EASY                | 5 min                 |
+| [Setup RONA timers](4-Setup-RONA-timers) | Practical Lab         | EASY                | 5 min                 |
 
 ## Introduction
 
