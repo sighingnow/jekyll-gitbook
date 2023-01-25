@@ -7,13 +7,35 @@ layout: post
 
 This page is under developments
 
-| Topic                                                                                                                        | Lab Type      | Dificulty Level | Estimated length |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Digital Channels Architecture Overview and Provisioning](#lab121---digital-channels-architecture-overview-and-provisioning) | Practical Lab | EASY            | 15 min           |
-| [Connect GUI overview](#lab122---connect-gui-overview)  | Practical Lab | EASY            | 15 min           |                                                                                                                             |               |                 |                  |
+| Topic                                                                                                                        | Lab Type          | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Practical Lab     | EASY            | 15 min           |
+| [Connect GUI overview](#lab122---connect-gui-overview) | Practical Lab     | EASY            | 15 min           |
+| [Engage GUI overview](#lab123---) | Read & Understand | EASY            | 15 min           |
+| [User Management in Connect](#lab124---) | Read & Understand | EASY            | 15 min           |
+| [Digital Channels Pre-configuration](#lab125---) | Read & Understand | EASY            | 15 min           |
+| [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
+| [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
+| [Chat Channel Configuration](#lab128---) | Practical Lab | EASY            | 15 min           |
+| [Facebook Messenger Channel Configuration](#lab129---) | Practical Lab | EASY            | 15 min           |
+| [SMS Channel Configuration](#lab1210---) | Practical Lab | EASY            | 15 min           |
+| [WhatsApp Channel Configuration](#lab1211---) | Practical Lab | EASY            | 15 min           |
+| [Connect Templates](#lab1212---) | Practical Lab | EASY            | 15 min           |
+| [Engage Templates](#lab1213---) | Practical Lab | EASY            | 15 min           |
+| [Introduction to BOTs](#lab1214---) | Practical Lab | MID            | 15 min           |
+| [Q&A BOTs](#lab1215---) | Practical Lab | MID            | 15 min           |
+| [Task BOTs](#lab1216---) | Practical Lab | HARD            | 15 min           |
+| [Event Scheduler](#lab1217---) | Practical Lab | MID            | 15 min           |
+| [Inbound Webhooks](#lab1218---) | Practical Lab | HARD            | 15 min           |
+| [Troubleshooting](#lab1219---) | Practical Lab | MID            | 15 min           |
+| [Custom Nodes](#lab1220---) | Practical Lab | HARD            | 15 min           |
+| [Events and Triggers](#lab1221---) | Practical Lab | MID            | 15 min           |
+| [Flow and Global variables](#lab1222---) | Practical Lab | MID            | 15 min           |
 
 
-# Lab.12.1 - Digital Channels Architecture Overview and Provisioning
+
+
+# Lab.12.1 - Architecture Overview and Provisioning
 
 ## **Table of Contents**
 
