@@ -405,6 +405,163 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 ---
 # Lab.12.5 - Digital Channels Pre-configuration
+
+## Table of Contents
+
+| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [Node Authorization for Webex CC Task and Engage nodes](1-Node-Authorization-for-Webex-CC-Task-and-Engage-nodes)                       | Practical Lab         | EASY                | 4 min                 |
+| [Retrieve and upload CA flows in Connect](2-Retrieve-and-upload-CA-flows-in-Connect)                                       | Practical Lab         | EASY                | 1 min                 |
+| [Setup agents in the Management Portal (Agents, Team, MMP)](3-Setup-agents-in-the–Management-Portal-Agents-Team-MMP)                             | Practical Lab         | EASY                | 1 min                 |
+| [Setup RONA timers](4-Setup-RONA-timers) | Practical Lab         | EASY                | 2 min                 |
+
+## Introduction
+
+#### Lab Objective
+
+In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant with Digital Channels. These tasks are to be undertaken by an administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. The lab contains multiple exercises to make you familiar with Control Hub, Management portal UI and Webex Connect. At the end of the lab, you should be able to log in to an agent interface.
+
+#### Pre-requisites
+
+- You have received the access credentials with a full admin access
+- You have received the access to the agent and supervisor account.
+
+#### Quick Links
+
+- Control Hub: https://admin.webex.com
+- Portal: https://portal.wxcc-us1.cisco.com/portal
+- Agent Desktop: https://desktop.wxcc-us1.cisco.com
+- Webex Connect: https://cl1podXXX.imiconnect.io/ (where XXX is your POD number)
+ 
+## 1. Node Authorization for Webex CC Task and Engage nodes
+
+Webex Connect is required to provide a valid access token for using various Webex Contact Center and Webex Engage APIs. The access token is generated using the authorization details configured within the ‘Node Runtime Authorization’ field that Webex Contact Center users are required to provide during flow configuration.
+- To authorize a pre-built integration go to Assets -> Integrations. The integrations which are not yet authorized show the status as Authorization Pending.
+- In front of Webex CC Engage Click Actions -> Manage.
+ 
+- On the Manage Integrations page, scroll down to the Node Authorizations section. This section lists all the authorizations mapped to this integration.
+- Click Action → Add Authorization associated with the WxCC Engage Authorisation, where Auth Type is oauth2 and Status is Authorization Pending.
+ 
+- Enter the Authorization Name and click Authorize. In that example we use WxCC Engage Authorisation.
+ 
+- Click on the back button for being redirected back to Integrations page and in front of Webex CC Task Click Actions → Manage.
+ 
+- On the Manage Integrations page, scroll down to the Node Authorizations section. This section lists all the authorizations mapped to this integration. Click Action → Add Authorization associated with the WxCC Authorisation, where Auth Type is oauth2 and Status is Authorization Pending.
+ 
+- Enter the Authorization Name (for example: WxCC Authorisation) and click Authorize. As the result the pop-up appears where you need to enter your Cisco admin email address (cl1adminXXX@email.carehybrid.com) and click Sign in.
+ 
+- Click back button for being redirected back to Integrations page. Verify that the status of the authorizations is changed to Authorized.  
+
+## 2. Retrieve and upload CA flows in Connect
+
+Every tenant must include Channel Agnostic (CA) flows. CA flows can be imported from the template folder in this GitHub page. CA flow can be added only once and will be automatically be used by all existing channel specific flows in the tenant when needed. Recommended to add these flow in a dedicated Service named “Agnostic Flows - DO NOT MODIFY”
+The agnostic flows consist of:
+- Task Routed - Adding an agent participant to a conversation;
+- Task Modified - Adding an agent to or removing an agent from an ongoing conversation (e.g., for chat transfer or conference);
+- Task Close - Closing the conversation;
+1. Download all flows from the GitHub page.
+2. Navigate to Webex Connect Flows -> v2.1.
+ 
+3. Unzip All Files.
+4. Login to the Webex Connect portal with the admin account.
+5. Navigate to Services and click on CREATE NEW SERVICE.
+ 
+6. Set your name Agnostic Flows DO NOT MODIFY in the Service Name and press on CREATE button. This will create a new service.
+Note You can choose a different Service name. It is just an example.
+7. In the service click on FLOWS -> CREATE FLOW.
+ 
+8. In the FLOW NAME section set Task Close Flow.
+9. In the METHOD select Upload a flow. In ATTACHMENT click on CHOOSE FILE and select the Task Close Flow.workflow file.
+10. Now you can click on CREATE button.
+ 
+11. In the new menu click SAVE and then MAKE LIVE. On pop up window click on MAKE LIVE again.
+ 
+12. Go back and repeat steps 7 - 11 for Task Routed flow and Task Modified Flow. Select the corresponding names.
+
+## 3. Setup agents in the Management Portal (Agents, Team, MMP)
+
+This step shows how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user.
+Users
+The users have the following pre-configuration
+User Role	User email
+Agent	cl1agentXXX@email.carehybrid.com
+Supervisor	cl1supXXX@email.carehybrid.com
+Note: Your XXX was provided to you personally. XXX is the unique number equal to your POD.
+User Settings
+Entity	Name
+Multimedia Profiles	MMP
+Site	Site
+Team1	Team1
+Team2	Team2
+1. Create new MultiMedia Profile
+- Login to Management Portal by accessing https://portal.wxcc-us1.cisco.com/portal.
+- Enter the admin email address (cl1adminXXX@email.carehybrid.com) and click Sign in.
+- Click on Provisioning and select Multimedia Profiles.
+- Click on + New Multimedia Profile to open Multimedia Profile configuration page.
+- Input Name as MMP.
+- In the Media Details section, select the blended multimedia profile and input 1 for Voice, 3 for Chat, 3 for Email, , 3 for Social Channel and click on Save button.
+ 
+2. Create new Site
+- Navigate to Provisioning and select Site.
+- Click on + New Site button and provide the Name as Site.
+- Select MMP in the Multimedia Profile drop down and hit Save.
+ 
+3. Create new Teams
+- Navigate to Provisioning and select Team.
+- Click on + New Team.
+- Select Site from the Site drop-down.
+- Input Name as Team1.
+- Use the default Type Agent Based.
+- Select MMP in the Multimedia Profile drop-down.
+- Left as a default value Global Layout in the Desktop Layout drop-down and hit Save.
+ 
+- Please follow the same steps as above to add an extra Team as Team2.
+To top of this lab
+4. User Configuration
+- Click on Provisioning and select Users.
+- Click on ... for the Agent user, to launch the Edit view for a particular User configuration.
+- Make sure that the User Profile is set as Premium Agent User Profile.
+- Click on Contact Center Enabled toggle to move it to On.
+- In the Agent Settings section, select Site in the Site drop-down.
+- Click the Teams area and select Team1 and Team2.
+- Select Agent Profile in the Agent Profile drop-down list.
+- Select MMP in the Multimedia Profile drop-down and hit Save.
+- Make sure that the user are now shown with the Contact Center Enabled flag as Yes and Status as Active.
+ 
+- Please follow the same steps for Supervisor user.
+To top of this lab
+
+## 4. Setup RONA timers
+If an agent doesn’t answer a contact request, the contact request will return to the queue and the agent state will change to Redirection on No Answer (RONA). In this task, you will play with the feature that allows administrators to override the default RONA timeout values at the tenant level for every channel type to suit the business needs of the organization. The available channels are:
+- Telephony
+- Chat
+- Email
+- Social (Facebook and WhatsApp)
+- Log in to the Control Hub at https://admin.webex.com
+- Navigate to Services -> Contact Center -> Settings -> Desktop -> RONA Timeouts.  
+- Modify the existing timers by putting the values from the tables below:
+Channel	New Values	Limitations
+Telephony	18	1 - 120 seconds
+Chat	60	1 - 6000 seconds
+Email	90	1 - 6000 seconds
+Social	60	1 - 6000 seconds
+Verification: Access to the Agent Desktop
+Note: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
+- Navigate to https://desktop.wxcc-us1.cisco.com/ in a new browser or in incognito mode.
+- Enter the agent’s email ID cl1agent**\<ID\>**@email.carehybrid.com.
+- Enter the Password for the appropriate Username.
+- In the Station Login pane, select “Extension” and put any number, for instance 1000.
+Note: The Webex Calling service is not activated at this tenant we need to set a dummy extension only once during the login.
+- Select the Team1 and click Submit. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the Next Lab.
+ 
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+
+---
 # Lab.12.6 - Flow Builder
 # Lab.12.7 - Email Channel Configuration
 ---
