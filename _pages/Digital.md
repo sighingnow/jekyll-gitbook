@@ -404,7 +404,9 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 
 ---
-# Lab.12.7 Email Configuration
+# Lab.12.5 - Digital Channels Pre-configuration
+# Lab.12.6 - Flow Builder
+# Lab.12.7 - Email Channel Configuration
 ---
 
 ## Table of Contents
@@ -439,7 +441,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 > Webex Connect: https://cl1pod<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
 
 
-# Lab Section
+## Lab Section
 
 #### Configuration Order
 
@@ -716,7 +718,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 
 ---
-# Lab.12.8 Chat Configuration
+# Lab.12.8 - Chat Channel Configuration
 ---
 
 ## Introduction
@@ -875,11 +877,11 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 
 ---
-# Lab.12.9 Facebook Messenger Configuration
+# Lab.12.9 - Facebook Messenger Channel Configuration
 ---
 
 
-# Table of Contents
+## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
     - [Lab Objective](#lab-objective)
@@ -900,7 +902,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
 
 
-# Introduction
+## Introduction
 
 #### Lab Objective
 
@@ -923,7 +925,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
 
-# Lab Section
+## Lab Section
 
 ## Step 1 Facebook Page configuration
 
@@ -1131,10 +1133,11 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 
 ---
-# Lab.12.11 WhatsApp Configuration
+# Lab.12.10 - SMS Channel Configuration
+# Lab.12.11 - WhatsApp Channel Configuration
 
 
-# Table of Contents
+## Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Introduction](#introduction)
     - [Lab Objective](#lab-objective)
@@ -1148,7 +1151,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
   - [Back to top](#back-to-top)
     - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
  
-# Introduction
+## Introduction
 
 #### Lab Objective
 
@@ -1163,7 +1166,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 3. You have successfully completed the previous Lab **Preconfiguration**
 4. **Note**: WhatsApp Numbers cannot be procured directly from the Webex Contact Center integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.
 
-# Lab Section
+## Lab Section
 
 ## Step 1. Verify WhatsApp Number Assignment
 
@@ -1335,592 +1338,10 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 
 
-# Lab.12.5 - Digital Channel required configuration
-
-## Table of Contents
-
-| Topic                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------- |
-| [Configuring your Tenant](#Configuring-your-Tenant)                                                               |
-| [Node Authorization for Webex CC Task and Engage nodes](#1-Node-Authorization-for-Webex-CC-Task-and-Engage-nodes) |
-| [Download and upload CA flows in Connect](#2-Download-and-upload-CA-flows-in-Connect)                             |
-|                                                                                                                   |
-
-## Introduction
-
-#### Lab Objective
-
-In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by an administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. The lab contains multiple exercises to make you familiar with Control Hub, Management portal UI and Webex Connect. At the end of the lab, you should be able to log in to an agent interface.
-
-#### Pre-requisites
-
--   You have received the access credentials with a full admin access
--   You have received the access to the agent and supervisor account.
-
-#### Quick Links
-
-Control Hub: [**https://admin.webex.com**](https://admin.webex.com)  
-Portal: [**https://portal.wxcc-us1.cisco.com/portal**](https://portal.wxcc-us1.cisco.com/portal)  
-Agent Desktop: [**https://desktop.wxcc-us1.cisco.com**](https://desktop.wxcc-us1.cisco.com)  
-Webex Connect: https://cl1pod**<ID>**.imiconnect.io/ (where **<ID>** is your POD number)
-
-## Configuring your Tenant
-
-#### Configuration Order
-
-![A picture containing graphical user interface
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
-
-## 1. Node Authorization for Webex CC Task and Engage nodes
-
-Webex Connect is required to provide a valid access token for using various Webex Contact Center and Webex Engage APIs. The access token is generated using the authorization details configured within the ‘Node Runtime Authorization’ field that Webex Contact Center users are required to provide during flow configuration.
-
-·       To authorize a pre-built integration go to **Assets** -> **Integrations**. The integrations which are not yet authorized show the status as **Authorization Pending**.
-
-·       In front of **Webex CC Engage** Click **Actions** -> **Manage**.
-
-![Graphical user interface, text, application, email
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.gif)
-
-·       On the Manage Integrations page, scroll down to the **Node Authorizations** section. This section lists all the authorizations mapped to this integration.
-
-·       Click **Action** → **Add Authorization** associated with the **WxCC Engage Authorisation**, where Auth Type is oauth2 and Status is Authorization Pending.
-
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.png)
-
--   Enter the Authorization Name and click **Authorize**. In that example we use **WxCC Engage Authorisation**.
-
-![Graphical user interface, application, Teams
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.png)
-
--   Click on the back button for being redirected back to **Integrations** page and in front of **Webex CC Task** Click **Actions** → **Manage**.
-
-![Table
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.gif)
-
--   On the Manage Integrations page, scroll down to the **Node Authorizations** section. This section lists all the authorizations mapped to this integration. Click **Action** → **Add Authorization** associated with the **WxCC Authorisation**, where Auth Type is oauth2 and Status is Authorization Pending.
-
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.png)
-
--   Enter the **Authorization Name** (for example: **WxCC Authorisation**) and click **Authorize**. As the result the pop-up appears where you need to enter your Cisco admin email address (cl1admin**<ID>**@email.carehybrid.com) and click **Sign in**.
-
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.png)
-
--   Click back button for being redirected back to **Integrations** page. Verify that the status of the authorizations is changed to **Authorized**. ![A picture containing graphical user interface
-    Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.gif)
-
-## 2. Download and upload CA flows in Connect
-
-Every tenant must include CA flows. CA flows can be imported from the template folder in this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels). CA flow can be added only once and will be automatically be used by all existing channel specific flows in the tenant when needed. Recommended to add these flow in a dedicated Service named “Agnostic Flows - DO NOT MODIFY”
-
-The agnostic flows consist of:  
-• Task Routed - Adding an agent participant to a conversation;  
-• Task Modified - Adding an agent to or removing an agent from an ongoing conversation (e.g., for chat transfer or conference);  
-• Task Close - Closing the conversation;
-
-1) Download all flows from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
-
-2) Navigate to **Webex Connect Flows** -> **v2.1**.
-
-![](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image009.gif)
-
-3) Unzip All Files.
-
-4) Login to the **Webex Connect** portal with the admin account.
-
-5) Navigate to **Services** and click on **CREATE NEW SERVICE**.
-
-![Graphical user interface, text, application, Teams
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image010.png)
-
-6) Set your name **Agnostic Flows DO NOT MODIFY** in the Service Name and press on **CREATE** button. This will create a new service.
-
-**Note** You can choose a different Service name. It is just an example.
-
-7) In the service click on **FLOWS** -> **CREATE FLOW**.
-
-![Graphical user interface, text, application, email
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image011.png)
-
-8) In the **FLOW NAME** section set **Task Close Flow**.
-
-9) In the **METHOD** select **Upload a flow**. In **ATTACHMENT** click on **CHOOSE FILE** and select the **Task Close Flow.workflow** file.
-
-10) Now you can click on **CREATE** button.
-
-![Graphical user interface, text, application, email
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image012.png)
-
-11) In the new menu click **SAVE** and then **MAKE LIVE**. On pop up window click on **MAKE LIVE** again.
-
-![Graphical user interface, text, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image013.gif)
-
-12) Go back and repeat steps 7 - 11 for **Task Routed flow** and **Task Modified Flow**. Select the corresponding names.
-
-## Step 3. Setup agents in Portal (Agents, Team, MMP)
-
-This step shows how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user.
-
-### Users
-
-The users have the following pre-configuration
-
-**User Role**
-
-**User email**
-
-Agent
-
-cl1agent**<ID>**@email.carehybrid.com
-
-Supervisor
-
-cl1sup**<ID>**@email.carehybrid.com
-
-**Note:** Your <ID> was provided to you personally. <ID> is the unique number equal to your POD.
-
-### User Settings
-
-**Entity**
-
-**Name**
-
-Multimedia Profiles
-
-MMP
-
-Site
-
-Site
-
-Team1
-
-Team1
-
-Team2
-
-Team2
-
-### 1. Create new MultiMedia Profile
-
-·       Login to Management Portal by accessing [https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal).
-
-·       Enter the admin email address (cl1admin<ID>@email.carehybrid.com) and click **Sign in**.
-
-·       Click on _**Provisioning**_ and select _**Multimedia Profiles**_.
-
-·       Click on `+ New Multimedia Profile` to open Multimedia Profile configuration page.
-
-·       Input Name as `MMP`.
-
-·       In the Media Details section, select the blended multimedia profile and input `1` for _**Voice**_, `3` for _**Chat**_, `3` for _**Email**_, , `3` for _**Social Channel**_ and click on _**Save**_ button.
-
-![Graphical user interface, text, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image014.png)
-
-### 2. Create new Site
-
-·       Navigate to _**Provisioning**_ and select _**Site**_.
-
-·       Click on `+ New Site` button and provide the Name as `Site`.
-
-·       Select `MMP` in the _**Multimedia Profile**_ drop down and hit _**Save**_.
-
-![Graphical user interface, text, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image015.png)
-
-### 3. Create new Teams
-
-·       Navigate to _**Provisioning**_ and select _**Team**_.
-
-·       Click on `+ New Team`.
-
-·       Select `Site` from the _**Site**_ drop-down.
-
-·       Input _**Name**_ as `Team1`.
-
-·       Use the default _**Type**_ `Agent Based`.
-
-·       Select `MMP` in the _**Multimedia Profile**_ drop-down.
-
-·       Left as a default value _**Global Layout**_ in the _**Desktop Layout**_ drop-down and hit _**Save**_.
-
-![Graphical user interface, text, application, chat or text message
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image016.png)
-
--   Please follow the same steps as above to add an extra Team as `Team2`.
-
-[To top of this lab](https://wxcctechsummit.github.io/wxcclabguides/LTRCCT-2013/Lab1_Preconfiguration.html#table-of-contents)
-
-### 4. User Configuration
-
-·       Click on _**Provisioning**_ and select _**Users**_.
-
-·       Click on `...` for the **Agent** user, to launch the _**Edit**_ view for a particular User configuration.
-
-·       Make sure that the _**User Profile**_ is set as _**Premium Agent User Profile**_.
-
-·       Click on _**Contact Center Enabled**_ toggle to move it to _**On**_.
-
-·       In the _**Agent Settings**_ section, select `Site` in the _**Site**_ drop-down.
-
-·       Click the _**Teams**_ area and select `Team1` and `Team2`.
-
-·       Select `Agent Profile` in the _**Agent Profile**_ drop-down list.
-
-·       Select `MMP` in the _**Multimedia Profile**_ drop-down and hit _**Save**_.
-
-·       Make sure that the user are now shown with the _**Contact Center Enabled**_ flag as `Yes` and _**Status**_ as `Active`.
-
-![Graphical user interface, text, application, email
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image017.png)
-
--   Please follow the same steps for **Supervisor** user.
-
-[To top of this lab](https://wxcctechsummit.github.io/wxcclabguides/LTRCCT-2013/Lab1_Preconfiguration.html#table-of-contents)
-
-## Step 4. Setup RONA timers
-
-If an agent doesn’t answer a contact request, the contact request will return to the queue and the agent state will change to **Redirection on No Answer (RONA)**. In this task, you will play with the feature that allows administrators to override the default RONA timeout values at the tenant level for every channel type to suit the business needs of the organization. The available channels are:
-
--   Telephony
--   Chat
--   Email
-
-·       Social (Facebook and WhatsApp)
-
-·       Log in to the Control Hub at [https://admin.webex.com](https://admin.webex.com)
-
-·       Navigate to **Services** -> **Contact Center** -> **Settings** -> **Desktop** -> **RONA Timeouts**. ![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image018.png)
-
--   Modify the existing timers by putting the values from the tables below:
-
-**Channel**
-
-**New Values**
-
-**Limitations**
-
-Telephony
-
-18
-
-1 - 120 seconds
-
-Chat
-
-60
-
-1 - 6000 seconds
-
-Email
-
-90
-
-1 - 6000 seconds
-
-Social
-
-60
-
-1 - 6000 seconds
-
-## Verification: Access to the Agent Desktop
-
-**Note**: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
-
-·       Navigate to [**https://desktop.wxcc-us1.cisco.com/**](https://desktop.wxcc-us1.cisco.com/) in a new browser or in incognito mode.
-
-·       Enter the agent’s **email ID** `cl1agent**\<ID\>**@email.carehybrid.com`.
-
-·       Enter the **Password** for the appropriate Username.
-
-·       In the _**Station Login**_ pane, select **“Extension”** and put any number, for instance 1000.
-
-**Note:** The Webex Calling service is not activated at this tenant we need to set a dummy extension only once during the login.
-
--   Select the `Team1` and click _**Submit**_. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the Next Lab.
-
-![Graphical user interface, application
-Description automatically generated](file:////Users/dtelari/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image019.gif)
-
-
----
-
-**Congratulations, you have completed this section!**
-
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
-
-
-# Lab.6 Flow Builder Overview
-
-## Table of Contents
-
-
-## Introduction
-
-#### Lab Objective
-
-This lab is designed to introduce the logic and methodology behind building flows that will handle incoming conversation via digital channels. Throughout this lab you will learn how to navigate the flow designer, understand how to read and configure nodes and how flows are being executed. In this lab you will not find configuration steps, the goal is to understand how to approach the build of a new flow.
-
-#### Pre-requisites
-
-1.  Connect URL for browser access.
-2.  Admin credentials to login to Connect administration portal.
-
-## Understanding Connect Flows
-
-#### 1. Flow Types
-
-Inside connect there are two types of flows:
-
-·      Channel Agnostics (CA) Flows
-
-o   Every tenant must include the following CA flows:
-
-§  **Task Routed** – The flow is invoked automatically by the agent when accepting an incoming conversation on the agent desktop.
-
-§  **Task Modified** - The flow is invoked automatically by the agent when adding or removing an agent from an ongoing conversation on the agent desktop (e.g., for chat transfer or conference).
-
-§  **Close Task** - The flow is invoked automatically by the agent when closing an ongoing conversation on the agent desktop.
-
-o   These three CA flows are required to be added only once per tenant. Recommendation: Create and reserve a dedicated Service named “Agnostic Flows – DO NOT MODIFY” specifically for these 3 flows. Once the flows are added lock the service (from the Settings section) to avoid any accidental changes.
-
-o   The latest version of the CA flows can be collected from CA flows can be imported from this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v2.1).
-
-·      Channel Specific (CS) Flows
-
-o   CS flows can be freely build by the admin following customers’ requirement
-
-o   CS flows can be located in any Service, the Admin is free to organize Flows and Services following the desired order and naming convention.
-
-o   CS flows can be triggered by Assets, Events or Webhooks.
-
-o   Every time a customer sends a new message, the associated Asset and CS Flow are triggered from their starting node.
-
-o   CS flows do not automatically associate incoming messages from the same users as part of the same thread.
-
-o   As reference, CS sample flows for each digital channel can be imported from this GitHub page.
-
-#### 2. Create new flows
-
-You can create a new flow from scratch to explore the flow designer interface and its nodes. To create a new flow:
-
-·      Access your Connect tenant
-
-·      Navigate to Service > select or create your service >  select the Flows tab > click on any of the two ‘Create Flow’ buttons
-
-·      Enter the a name inside the ‘Flow Name’ > under Type select ‘Work Flow’ > under Method select ‘New Flow’ > Select the ‘Start From Scratch’ icon > click on Create
-
-·      From the ‘Select Trigger Category’ select any of the channels (i.e. Email)
-
-·      You will be redirected to the flow canvas, already inside the first node in the flow > click on Cancel
-
-#### 3. Flow designer and node navigation
-
-The flow designer is divided in three main section:
-
-·      Toolbar on top – containing the flow name and status, the settings, save and ‘make live’ buttons.
-
-·      Canvas in the middle – where the administrator can arrange the node to execute the desired workflow.
-
-·      Node menu on the left – containing all the nodes the admin can use (by dragging them inside the Canvas)
-
-Nodes are categorized between Utilities, Channels and Integrations depending on their use but they all follow the same structure. To check a node simply drag and drop it into the canvas and double click on it. Inside each node you will find the:
-
-·      Node Name – Can be edited by clicking on the pencil icon.
-
-·      Configuration tab – Every node needs to be properly configured to be executed. Each node has its own set of required Variables to be set. The details about how to configure each parameter can be found in the nodes’ specific documentation inside the Connect Help page.
-
-·      Transition Actions tab – use to configure additional activities before or after the node is executed (i.e. set desired values to additional variables).
-
-·      Node ID – Indicates the unique number identifier for this node.
-
-·      Input Variables section – Click on it to expand the section. You will see a list of all the Output and Custom Variables (grouped by node of origin) from the previously connected nodes.
-
-·      Output Variables section – Click on it to expand the section. You will see a list of variables (and their names) the node generates when successfully executed.
-
-·      Node Outcomes section – Click on it to expand the section. You will see a list of which and how many outcomes (exit connections) the node has. When closing the node configuration you will notice coloured dots on the right side of the node indicating the Outcomes. Drag those dots onto other nodes to connect them together, or into an empty point of the canvas if no further actions are needed.
-
-When using nodes’ Output Variables inside the configuration of other nodes, administrator will have to use the following syntax: $(nX.outputvariablename), where X is the node ID that has generated that variable.
-
-#### 4. Building a new Channel Specific flow
-
-As for any contact center flow, before proceeding building a new flow it’s always recommended to collect all the requirements as well as a draft of the intended workflow.  
-In addition to this, for the digital channels it’s crucial to distinguish the type of use for the flow: as mentioned in the chapter 1, Connect flows are executed from their starting node any time they are triggered [excepts when using a Receive Node inside the flow itself, beyond the scope of this lab].  
-For this reason the administrator should initially clarify if the flow shall be always triggered by distinct and unrelated sources or if multiple messages could come from the same source as part of a unique conversation. For most of the cases, when customers need to interact with your services, especially when expecting to connect with an agent, all their messages must be grouped into a uniquely identifiable thread. In Connect this is called **Conversation ID**.  
-For all the flows where you expect to have an ongoing conversation, your flow shall be built with an initial check, ideally after the starting node, where you will need to check if the incoming message is part, or not of an existing conversation, so to appropriately manage and route it accordingly. Here below a recommended flow structure:
-
-1.     Accept incoming message via dedicated channel node.
-
-2.     Check (using the ‘Search Conversation’ node) if the incoming message
-
-a.     Is part to an active/ongoing conversation with an agent. If so, use the ‘Append Conversation’ node to add the incoming message at the bottom of the appropriate ongoing conversation.
-
-b.     Comes from a customer who is reaching the flow for the first time. If so, Create a new Conversation ID using the ‘Create Conversation’ node, and eventually route it to an agent.
-
-c.     Comes from a customer who was in a past and terminated conversation. If so, restart the previous conversation by using the ‘Re-open Conversation’ node, and eventually route it again to an agent.
-
-Before sending a new conversation to the desired queue, you have to create a Task ID: while the Conversation ID is used by Connect to group all incoming massage in a unique thread, the Task ID is used for the Webex Contact Center to map that conversation with a specific queue and then an agent. Use the Create Task node to create such ID and then connect it to the Queue Task node.
-
-When building a flow it is also recommend to appropriately handle the potential failure of each node by:
-
-·      Including messages back to the customer informing them about an ongoing issue.
-
-·      Terminating (Closing) any active conversation or task.
-
-#### 5. Activating a flow
-
-When a flow is being edited, its status appear as ‘Working Draft’ on the top-left of the browser window. Once the editing has been completed and you wish to start using the flow, you can click the Save button to save the latest changes. If there’s any missing or incorrect connection between nodes, a prompt will appear on the right side, listing all the occurring issue (misconfiguration inside each node won’t be detected here).  
-Once all the issues have been addressed, the Admin shall click on the ‘Make Live’ button to activate a flow in Working Draft status. A new pop-up will appear: select or modify the Application that will be triggering this flow, optionally add comments, and click ‘Make Live’.  
-Once a flow is set to go live, it will take approx. 2 minute before showing the correct ‘LIVE’ status on the top-left. In the meantime, it will show the ‘Publishing’ status, meaning that any messages received in the meantime will either be handled through the previous flow version or be rejected if no previous version is available.
-
-
----
-
-**Congratulations, you have completed this section!**
-
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
-
-
-# Flow Builder Overview
-
-## Table of Contents
-
-UPDATE
-
-## Introduction
-
-#### Lab Objective
-
-This lab is designed to introduce the logic and methodology behind building flows that will handle incoming conversation via digital channels. Throughout this lab you will learn how to navigate the flow designer, understand how to read and configure nodes and how flows are being executed. In this lab you will not find configuration steps, the goal is to understand how to approach the build of a new flow.
-
-#### Pre-requisites
-
-1.  Connect URL for browser access.
-2.  Admin credentials to login to Connect administration portal.
-
-## Understanding Connect Flows
-
-#### 1. Flow Types
-
-Inside connect there are two types of flows:
-
-·      Channel Agnostics (CA) Flows
-
-o   Every tenant must include the following CA flows:
-
-§  **Task Routed** – The flow is invoked automatically by the agent when accepting an incoming conversation on the agent desktop.
-
-§  **Task Modified** - The flow is invoked automatically by the agent when adding or removing an agent from an ongoing conversation on the agent desktop (e.g., for chat transfer or conference).
-
-§  **Close Task** - The flow is invoked automatically by the agent when closing an ongoing conversation on the agent desktop.
-
-o   These three CA flows are required to be added only once per tenant. Recommendation: Create and reserve a dedicated Service named “Agnostic Flows – DO NOT MODIFY” specifically for these 3 flows. Once the flows are added lock the service (from the Settings section) to avoid any accidental changes.
-
-o   The latest version of the CA flows can be collected from CA flows can be imported from this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v2.1).
-
-·      Channel Specific (CS) Flows
-
-o   CS flows can be freely build by the admin following customers’ requirement
-
-o   CS flows can be located in any Service, the Admin is free to organize Flows and Services following the desired order and naming convention.
-
-o   CS flows can be triggered by Assets, Events or Webhooks.
-
-o   Every time a customer sends a new message, the associated Asset and CS Flow are triggered from their starting node.
-
-o   CS flows do not automatically associate incoming messages from the same users as part of the same thread.
-
-o   As reference, CS sample flows for each digital channel can be imported from this GitHub page.
-
-#### 2. Create new flows
-
-You can create a new flow from scratch to explore the flow designer interface and its nodes. To create a new flow:
-
-·      Access your Connect tenant
-
-·      Navigate to Service > select or create your service >  select the Flows tab > click on any of the two ‘Create Flow’ buttons
-
-·      Enter the a name inside the ‘Flow Name’ > under Type select ‘Work Flow’ > under Method select ‘New Flow’ > Select the ‘Start From Scratch’ icon > click on Create
-
-·      From the ‘Select Trigger Category’ select any of the channels (i.e. Email)
-
-·      You will be redirected to the flow canvas, already inside the first node in the flow > click on Cancel
-
-#### 3. Flow designer and node navigation
-
-The flow designer is divided in three main section:
-
-·      Toolbar on top – containing the flow name and status, the settings, save and ‘make live’ buttons.
-
-·      Canvas in the middle – where the administrator can arrange the node to execute the desired workflow.
-
-·      Node menu on the left – containing all the nodes the admin can use (by dragging them inside the Canvas)
-
-Nodes are categorized between Utilities, Channels and Integrations depending on their use but they all follow the same structure. To check a node simply drag and drop it into the canvas and double click on it. Inside each node you will find the:
-
-·      Node Name – Can be edited by clicking on the pencil icon.
-
-·      Configuration tab – Every node needs to be properly configured to be executed. Each node has its own set of required Variables to be set. The details about how to configure each parameter can be found in the nodes’ specific documentation inside the Connect Help page.
-
-·      Transition Actions tab – use to configure additional activities before or after the node is executed (i.e. set desired values to additional variables).
-
-·      Node ID – Indicates the unique number identifier for this node.
-
-·      Input Variables section – Click on it to expand the section. You will see a list of all the Output and Custom Variables (grouped by node of origin) from the previously connected nodes.
-
-·      Output Variables section – Click on it to expand the section. You will see a list of variables (and their names) the node generates when successfully executed.
-
-·      Node Outcomes section – Click on it to expand the section. You will see a list of which and how many outcomes (exit connections) the node has. When closing the node configuration you will notice coloured dots on the right side of the node indicating the Outcomes. Drag those dots onto other nodes to connect them together, or into an empty point of the canvas if no further actions are needed.
-
-When using nodes’ Output Variables inside the configuration of other nodes, administrator will have to use the following syntax: $(nX.outputvariablename), where X is the node ID that has generated that variable.
-
-#### 4. Building a new Channel Specific flow
-
-As for any contact center flow, before proceeding building a new flow it’s always recommended to collect all the requirements as well as a draft of the intended workflow.  
-In addition to this, for the digital channels it’s crucial to distinguish the type of use for the flow: as mentioned in the chapter 1, Connect flows are executed from their starting node any time they are triggered [excepts when using a Receive Node inside the flow itself, beyond the scope of this lab].  
-For this reason the administrator should initially clarify if the flow shall be always triggered by distinct and unrelated sources or if multiple messages could come from the same source as part of a unique conversation. For most of the cases, when customers need to interact with your services, especially when expecting to connect with an agent, all their messages must be grouped into a uniquely identifiable thread. In Connect this is called **Conversation ID**.  
-For all the flows where you expect to have an ongoing conversation, your flow shall be built with an initial check, ideally after the starting node, where you will need to check if the incoming message is part, or not of an existing conversation, so to appropriately manage and route it accordingly. Here below a recommended flow structure:
-
-1.     Accept incoming message via dedicated channel node.
-
-2.     Check (using the ‘Search Conversation’ node) if the incoming message
-
-a.     Is part to an active/ongoing conversation with an agent. If so, use the ‘Append Conversation’ node to add the incoming message at the bottom of the appropriate ongoing conversation.
-
-b.     Comes from a customer who is reaching the flow for the first time. If so, Create a new Conversation ID using the ‘Create Conversation’ node, and eventually route it to an agent.
-
-c.     Comes from a customer who was in a past and terminated conversation. If so, restart the previous conversation by using the ‘Re-open Conversation’ node, and eventually route it again to an agent.
-
-Before sending a new conversation to the desired queue, you have to create a Task ID: while the Conversation ID is used by Connect to group all incoming massage in a unique thread, the Task ID is used for the Webex Contact Center to map that conversation with a specific queue and then an agent. Use the Create Task node to create such ID and then connect it to the Queue Task node.
-
-When building a flow it is also recommend to appropriately handle the potential failure of each node by:
-
-·      Including messages back to the customer informing them about an ongoing issue.
-
-·      Terminating (Closing) any active conversation or task.
-
-#### 5. Activating a flow
-
-When a flow is being edited, its status appear as ‘Working Draft’ on the top-left of the browser window. Once the editing has been completed and you wish to start using the flow, you can click the Save button to save the latest changes. If there’s any missing or incorrect connection between nodes, a prompt will appear on the right side, listing all the occurring issue (misconfiguration inside each node won’t be detected here).  
-Once all the issues have been addressed, the Admin shall click on the ‘Make Live’ button to activate a flow in Working Draft status. A new pop-up will appear: select or modify the Application that will be triggering this flow, optionally add comments, and click ‘Make Live’.  
-Once a flow is set to go live, it will take approx. 2 minute before showing the correct ‘LIVE’ status on the top-left. In the meantime, it will show the ‘Publishing’ status, meaning that any messages received in the meantime will either be handled through the previous flow version or be rejected if no previous version is available.
-
----
-
-
-<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
-		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
-
-
-# Lab 12.15 - QnA BOT
+# Lab.12.12 - Connect Templates
+# Lab.12.13 - Engage Templates
+# Lab.12.14 - Introduction to BOTs
+# Lab 12.15 - QnA BOTs
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/X2HnaG3PVeo" title="Part1: Agent Desktop Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -1998,6 +1419,10 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 
+# Lab.12.16 - Task BOTs
+# Lab.12.17 - Event Scheduler
+# Lab.12.18 - Inbound Webhooks
+# Lab.12.19 - Troubleshooting
 # Lab 12.20 - Creating Custom Nodes
 ## Table of Contents
 
@@ -2069,7 +1494,8 @@ Vidcast: [https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873](htt
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 
-# Lab 12.24 - Global and Flow variable support in Digital channels
+# Lab.12.21 - Event and Triggers
+# Lab 12.22 - Global and Flow variable support in Digital channels
 
 ## Table of Contents
 
