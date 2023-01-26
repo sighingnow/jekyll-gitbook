@@ -1,8 +1,7 @@
 // form.js
 console.log("TRIGGER1");
-const formId = "attendee-form"; // ID of the form
+const formId = "attendee-form"; // ID of the form, used to identify the form
 const className = ".attendee-class";
-const formIdentifier = `${formId}`; // Identifier used to identify the form
 const saveButton = document.querySelector("#save"); // select save button
 const alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${formId}`); // select form
@@ -25,7 +24,7 @@ const updateAllClasses = (data) => {
 /**
  * This function gets the values in the form
  * and returns them as a string with the
- * [formIdentifier] as the key
+ * [formId] as the key
  */
 const getFormData = () => {
   let data;
@@ -40,7 +39,7 @@ const getFormData = () => {
 saveButton.onclick = event => {
   event.preventDefault();
   data = getFormData();
-  localStorage.setItem(formIdentifier, data);
+  localStorage.setItem(formId, data);
   const message = "Attendee ID has been saved!";
   displayAlert(message);
   updateAllClasses(data);
@@ -68,8 +67,8 @@ const displayAlert = message => {
  *
  */
 const populateForm = () => {
-  if (localStorage.key(formIdentifier)) {
-    const savedData = localStorage.getItem(formIdentifier); // get and parse the saved data from localStorage
+  if (localStorage.key(formId)) {
+    const savedData = localStorage.getItem(formId); // get and parse the saved data from localStorage
     for (const element of formElements) {      
       if (element.name == formElement) {
         element.value = savedData;        
