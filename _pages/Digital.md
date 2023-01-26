@@ -1035,7 +1035,6 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Asset_1](/assets/images/DC_Lab_12.8._Create_Asset_1.png)
 
 -  Input ***Name*** as **`Chat_Asset`**.
-
 -  Toggle/enable ***Live Chat / In-AppMessaging*** to ***ON*** and choose ***Primary Transport Protocol*** as **`MQTT`** & ***Secondary Transport Protocol*** as **`Web Socket`** then tick ***Use Secured Port*** checkbox and press ***Save*** button.
 
 >**Note**: If there is an error that your request cannot be processed, please press ***Save*** button one more time.
@@ -1287,8 +1286,24 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ## 10. Verification: Initiate chat and accept the task
 
+-  Login to the Agent Desktop and make the agent ***Not Ready***. 
 -  Click on chat widget icon in the right bottom corner of [HTML TryIt Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro) window and press ***Start Chat*** button.
--  Go to the Agent Desktop and make the agent Available. 
+
+![DC_Lab.12.8_Verify_1](/assets/images/DC_Lab_12.8._Verify_1.png)
+
+-  Provide Name and Email to start chat.
+
+![DC_Lab.12.8_Verify_2](/assets/images/DC_Lab_12.8._Verify_2.png)
+
+-  Go to the Agent Desktop and make the agent Available. Then accept incoming chat conversation by pressing ***Accept*** button on the chat card on the left pane.
+
+![DC_Lab.12.8_Verify_3](/assets/images/DC_Lab_12.8._Verify_3.png)
+
+-  Make sure end user is able to exchange messages with the agent. Then you can close the chat.
+
+![DC_Lab.12.8_Verify_4](/assets/images/DC_Lab_12.8._Verify_4.png)
+
+![DC_Lab.12.8_Verify_5](/assets/images/DC_Lab_12.8._Verify_5.png)
 
 ---
 
