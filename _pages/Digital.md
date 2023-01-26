@@ -22,15 +22,15 @@ This page is under developments
 | [WhatsApp Channel Configuration](#lab1211---) | Practical Lab | EASY            | 15 min           |
 | [Connect Templates](#lab1212---) | Practical Lab | EASY            | 15 min           |
 | [Engage Templates](#lab1213---) | Practical Lab | EASY            | 15 min           |
-| [Introduction to BOTs](#lab1214---) | Read & Understand | MID            | 15 min           |
-| [Q&A BOTs](#lab1215---) | Practical Lab | MID            | 15 min           |
-| [Task BOTs](#lab1216---) | Practical Lab | HARD            | 15 min           |
-| [Event Scheduler](#lab1217---) | Read & Understand | MID            | 15 min           |
+| [Introduction to BOTs](#lab1214---) | Read & Understand | MED            | 20 min           |
+| [Q&A BOTs](#lab1215---) | Practical Lab | MED            | 15 min           |
+| [Task BOTs](#lab1216---) | Practical Lab | HARD            | 30 min           |
+| [Event Scheduler](#lab1217---) | Read & Understand | MED            | 15 min           |
 | [Inbound Webhooks](#lab1218---) | Practical Lab | HARD            | 15 min           |
-| [Troubleshooting](#lab1219---) | Practical Lab | MID            | 15 min           |
+| [Troubleshooting](#lab1219---) | Practical Lab | MED            | 15 min           |
 | [Custom Nodes](#lab1220---) | Practical Lab | HARD            | 15 min           |
-| [Events and Triggers](#lab1221---) | Practical Lab | MID            | 15 min           |
-| [Flow and Global variables](#lab1222---) | Practical Lab | MID            | 15 min           |
+| [Events and Triggers](#lab1221---) | Practical Lab | MED            | 15 min           |
+| [Flow and Global variables](#lab1222---) | Practical Lab | MED            | 15 min           |
 
 
 
@@ -973,19 +973,24 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ---
 
----
 # Lab.12.8 - Chat Channel Configuration
 ---
 
 ## Table of Contents
 
-| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
-| -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [\[Optional\] Create a service](#1-Optional-Create–a-service ) | Practical Lab | EASY | 5 min |
-| [Configure and Register Chat Asset](#2-Configure-and-Register-Chat-Asset)  | Practical Lab | EASY | 5 min |
-| [Create Entry Point for Chat](#3-Create–Entry-Point-for-Chat)  | Practical Lab | EASY | 5 min |
-| [Create Queue for Chat](#4-Create-Queue-for-Chat) | Practical Lab | EASY | 5 min |
-| [Create Chat Template](#5-Create-Chat-Template)  | Practical Lab | EASY | 5 min |
+| Topic                                                                     | Lab Type      | Dificulty Level | Estimated length |
+| ------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [\[Optional\] - Create a service](#1-Optional-Create–a-service )            | Practical Lab | EASY            | 2 min            |
+| [Configure and Register Chat Asset](#2-Configure-and-Register-Chat-Asset) | Practical Lab | EASY            | 5 min            |
+| [Create Entry Point for Chat](#3-Create–Entry-Point-for-Chat)             | Practical Lab | EASY            | 5 min            |
+| [Create Queue for Chat](#4-Create-Queue-for-Chat)                         | Practical Lab | EASY            | 5 min            |
+| [Create Chat Template](#5-Create-Chat-Template)                           | Practical Lab | EASY            | 5 min            |
+| [Website Widget Configuration](#6-Website-Widget-Configuration)           | Practical Lab | EASY            | 5 min            |
+| [Create Chat Inbound flow](#7-Create-Chat-Inbound-flow)           | Practical Lab | EASY            | 5 min            |
+| [Create Chat Close flow](#8-Create-Chat-Close-flow)           | Practical Lab | EASY            | 5 min            |
+| [Publish Chat Widget](#9-Publish-Chat-Widget)           | Practical Lab | EASY            | 5 min            |
+| [Verification: Initiate chat and accept the task](#10-Verification-Initiate-chat-and-accept-the-task)           | Practical Lab | EASY            | 5 min            |
+
 
 
 ## Introduction
@@ -1282,10 +1287,14 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 -  Click on chat widget icon in the right bottom corner of [HTML TryIt Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro) window and press ***Start Chat*** button.
 -  Go to the Agent Desktop and make the agent Available. 
 
+---
 
+**Congratulations, you have completed this section!**
 
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
+
 # Lab.12.9 - Facebook Messenger Channel Configuration
 ---
 
@@ -1734,6 +1743,178 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 # Lab.12.12 - Connect Templates
 # Lab.12.13 - Engage Templates
 # Lab.12.14 - Introduction to BOTs
+
+## Table of Contents
+
+| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Understanding Connect Bots](#1-Understanding-Connect-Bots)             | Read & Understand | MED            | 5 min            |
+| [Access and navigation](#2-Access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
+| [Understand and navigate Q&A Bots](#3-Understand-and-navigate-Q&A-Bots) | Read & Understand     | MED            | 5 min            |
+| [Understand and navigate Task Bots](#3-Understand-and-navigate-Task-Bots) | Read & Understand     | MED            | 5 min            |
+
+## Introduction
+
+#### Lab Objective
+
+This lab is designed to introduce the Bot Builder interface, which is used for the configuration and orchestration Bots within Connect. In this lab you will not find configuration steps, the goal is to understand the purpose and use of each menu item.
+
+#### Pre-requisites
+
+1.  Connect URL for browser access.
+2.  Admin credentials to login to Connect administration portal.
+
+## 1. Understanding Connect Bots
+
+Bot Builder is a cloud-based bot platform that allows enterprises to create bots. It includes Bot creation, testing, hosting, analysing, and editing capabilities. The key features of Bot Builder include:
+
+- Rules for handling flows
+- Ability to retain context
+- Omni-channel deployment
+- Live agent handover
+- Bot orchestration framework
+- One-click bot testing
+- Integration with business systems
+- Enterprise-grade data security and privacy
+- Analytics
+- Custom reports
+
+There are three types of Bots that can be integrated within a Connect flow:
+
+- **Q&A Bots** – are knowledge-driven bots whose knowledge base consists of a series of possible questions (with their alternative syntax) and related answers.
+- **Task Bots** – enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand.
+- **NLP Pipelines** – is a solution to build customised bots by defining the desired behaviours, without using the features already provided by Q&A and Task bots.
+
+## 2. Access and navigation
+
+Bot Builder is a dedicated portal which can be accessed via Connect:
+
+- Access your Connect tenant
+- Navigate to App Tray > Bot Builder
+
+The interface, similarly to Connect, is divided in two main parts: the main menu on the left side and the configuration of the selected object in the center-right side.  
+Move your mouse pointer on each icon of the menu to see its name and the available options:
+
+- Dashboard – On the dashboard, the admin can review or create bots, which are then represented by cards that have basic information visible on them. There are 3 sections for each type of bot, by selecting each of them the admin can create new ones as the “+ New” button will update accordingly.
+- Analytics – this section allows the administrator to collect and review statistics over bots utilization and performances. It’s a powerful tool to obtain an holistic view about volume and efficiency of configured bots.
+- Help – the help icon will automatically open a new browser tab and redirect the admin to [https://help.imiconnect.io/](https://help.imiconnect.io/). On the home page scroll down until the ‘APP TRAY’ section and select ‘Bot Builder’ to read an in-depth explanation for all features and functionalities that bots can offer.
+
+## 3. Understand and navigate Q&A Bots
+
+First let’s start reviewing the interface as a new Q&A Bot gets created:
+
+- Access your Connect tenant
+- Navigate to App Tray > Bot Builder
+- From the Dashboard > Select ‘Q&A bots’ > Click on ‘+ New Q&A Bot’
+- Enter the Name and the Unique Name following your desired naming convention
+- Select the text orientation as how the chat interface (within the Bot Builder) will position the text.
+- \[OPTIONAL\] Toggle the option ‘Allow feedback’ to allow users to give a ‘thumb up’ or ‘thumb down’ to the answers the bot will prompt when consulted
+- \[OPTIONAL\] Toggle the option ‘Allow agent handover’ to allow this bot to stop processing the incoming messages and handover the conversation to a different branch in your Connect flow.
+- Click on ‘Done’ button to save and create the Q&A Bot.
+
+Once opening a Q&A Bot a dedicated option menu appears on the left side and additional options on top
+
+#### 3.1 Settings
+
+- Profile – in this section the admin can change the bot name, its description and the text alignment.
+- Management – in this section the admin can change the Bot status and disable it (without deleting it) and change the ‘Allow Feedback’ option set when it was created.
+- Handover – in this section the admin can change the ‘Allow agent handover’ option set when the bot was created, and change specific handover options.
+
+#### 3.2 Articles
+
+Articles are containers of questions (in their possible variations), for which the answer to be provided will be the same. The questions are called ‘Utterances’. Here the key information about Articles:
+
+- When creating a new Article the admin must provide a Default Utterance, which will be then displayed as ‘Title’ in the list. Then add possible alternative containing different key words and phrases the system will then use to recognize and match what will be provided by the user.
+- Articles contain both the question (and its alternatives) and the related answer.
+- Admin can create Categories and assign articles to them, so to have better control of existing configuration.
+- When editing an Article, the admin can also edit the response (text, format and conditions).
+- After any changes, the Q&A bot needs to be ‘Trained’ first, and then moved to ‘Live’.
+
+> Any new Q&A bot will be created with a default Articles list.
+
+**3.3 Testing**
+
+Bot Builder platform provides a built-in one-click bot testing framework that is extremely helpful in testing a large set of test cases easily and quickly. It helps to validate the use cases listed will trigger the expected behaviour.
+
+#### 3.4 Curation
+
+Curation console helps users in optimizing their bot's performance over time through human-in-the-loop learning. It facilitates users in reviewing cases where their bot performance was underwhelming. These can be curated to improve current articles/intents or to create new articles/intents
+
+#### 3.5 Session
+
+Displays the history of all sessions established with the customers. Each session is displayed as a record that contains all sent/received messages. Messages from a specific session or from multiples sessions can be downloaded as CSV file. Reviewing sessions in detail is extremely useful to audit, analyse, and improve the bot performances and customer satisfaction.
+
+#### 3.6 History
+
+Provide version control over all changes the administrator applies on that specific bot. Any admin can review which changes were applied on specific version and revert to previous ones where needed.
+
+## 4. Understand and navigate Task Bots
+
+First let’s start reviewing the interface as a new Q&A Bot gets created:
+
+- Access your Connect tenant.
+- Navigate to App Tray > Bot Builder.
+- From the Dashboard > Select ‘Task bots’ > Click on ‘+ New Task Bot’.
+- Enter the Name and the Unique Name following your desired naming convention
+- Select the text orientation as how the chat interface (within the Bot Builder) will position the text.
+- \[OPTIONAL\] Toggle the option ‘Allow feedback’ to allow users to give a ‘thumb up’ or ‘thumb down’ to the answers the bot will prompt when consulted.
+- Click on ‘Done’ button to save and create the Q&A Bot.
+
+Once opening a Task Bot a dedicated option menu appears on the left side and additional options on top
+
+#### 4.1 Settings
+
+- Profile – in this section the admin can change the bot name, its description and the text alignment.
+- Management – in this section the admin can change the Bot status and disable it (without deleting it) and change the ‘Allow Feedback’ option set when it was created.
+- Handover – in this section the admin can change the ‘Allow agent handover’ option set when the bot was created, and change specific handover options.
+
+#### 4.2 Training
+
+Similar to articles, the Training section allows the admin to define containers for customer queries, called Intents, and to identify specific words in those messages with objects called Entities. Here the key information about Articles:
+
+- Entities only contain the questions and they are mapped to the desired response. The response is defined separately.
+- The admin will first need to define the desired Entities with the desired type (List, Time, Date, etc.).
+- The Intent Name is just descriptive. The list of messages coming from the customer, and alternatives, will be listed under Utterances.
+- When creating the Intent (adding the desired Utterances), the system will automatically recognize the specific words and map them to the respective Entity.
+- In case any word is not automatically mapped, the admin can select the desired text in an Utterance and manually map it to an Entity
+- Any Entity that is mapped in the defined Utterances will be listed inside the Slots section. This allows to trigger specific actions for each Entities before the bot provides the desired Response for that Intent.
+- Entities can be used across multiple Intents, and their value can be stored and used in the Responses.
+- After any changes in the Training section, the Training bot needs to be ‘Trained’ first, and then moved to ‘Live’.
+
+#### 4.3 Responses
+
+Answers for the Intents specified inside the Training section are defined within the respective Templates. Here the key information about Responses:
+
+- The layouts of each response within the Templates can be edited (text, format and conditions).
+- Different responses, depending on the used channel, can be defined within the same template.
+- Conditions can be configured so to trigger a different response following predefined criteria
+- After any changes in the Response section, the Training bot needs to be ‘Updated’ first, and then moved to ‘Live’.
+- The Agent Handover Response template it’s the default response that allows the Task Bot Node inside the Connect Flow Designer to escalate the chat through a different route.
+
+#### 4.4 Testing
+
+Bot Builder platform provides a built-in one-click bot testing framework that is extremely helpful in testing a large set of test cases easily and quickly. It helps to validate the use cases listed will trigger the expected behaviour.
+
+#### 4.5 Curation
+
+Curation console helps users in optimizing their bot's performance over time through human-in-the-loop learning. It facilitates users in reviewing cases where their bot performance was underwhelming. These can be curated to improve current articles/intents or to create new articles/intents
+
+#### 4.6 Session
+
+Displays the history of all sessions established with the customers. Each session is displayed as a record that contains all sent/received messages. Messages from a specific session or from multiples sessions can be downloaded as CSV file. Reviewing sessions in detail is extremely useful to audit, analyse, and improve the bot performances and customer satisfaction.
+
+#### 4.7 History
+
+Provide version control over all changes the administrator applies on that specific bot. Any admin can review which changes were applied on specific version and revert to previous ones where needed.
+
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
+
 # Lab 12.15 - QnA BOTs
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/X2HnaG3PVeo" title="Part1: Agent Desktop Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1813,6 +1994,141 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 
 
 # Lab.12.16 - Task BOTs
+
+## Table of Contents
+
+| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Create a new Task Bot](#1-Create-a-new-Task-Bot)             | Practical Lab | HARD            | 10 min            |
+| [Add the Task Bot to your flow](#2-Add-the-Task-Bot-to-your-flow)                       | Practical Lab     | HARD            | 15 min            |
+| [Testing](#3-Testing) | Practical Lab     | EASY            | 5 min            |
+
+## Introduction
+
+#### Lab Objective
+
+In this lab we will be creating a Task Bot using the Bot Builder in Webex Connect. We will collect information from the customer and pass the information to our chat agent so that they can assist the customer. Once the Task Bot configuration is completed we will incorporate the bot inside a Connect flow.
+
+#### Pre-requisites
+
+1.  Connect URL for browser access.
+2.  Admin credentials to login to Connect administration portal.
+3.  A Connect flow (previously built and successfully tested).
+4.  Test agent credentials.
+
+
+## 1. Create a new Task Bot
+
+- Access your Connect tenant
+- Navigate to App Tray > Bot Builder
+- From the Dashboard > Select ‘Q&A bots’ > Click on ‘+ New Q&A Bot’
+- Enter the Name and the Unique Name following your desired naming convention
+- Leave the other settings as they are.
+- Click on ‘Done’ button to save and create the Q&A Bot.
+- Select Training > click on Entities > click on ‘+ Create entity’
+- Provide a Name and select the respective Entity Type in the list > Click on Save
+- Repeat the step above for as many intent you wish to add
+- Select Training > click on Intents > click on ‘+ Create Intent’
+- Insert a descriptive Intent Name
+- Insert the utterances in the way you expect the customer to message your bot, including words you defined inside the Entities
+	- When adding utterances with Entities, those will be automatically highlighted and will appear in the Slot section
+	- You can decide to make Entities mandatory by selecting the respective checkbox. By doing so you will need to set the number of times the bot will keep asking for that value (Retries). The bot will ask for it using the corresponding Template Key (in the Responses).
+	- When using Entities it is recommended to add at least 3 alternative Utterances containing them.
+- Select the Response which will be prompted as final message when all the required Entities will be collected. You can select ‘+ Create New’ at the bottom of the list to create a new dedicated response.
+	- When typing the response text, the syntax ${} will allow the admin to use system variables as part of the text to be presented as response to the customer. Use ${entity.YOURENTITYNAME} to use the value stored in an existing entity. It is recommended to use this only for Entities which are set as Required in the Intents to avoid empty messages being provided to customers.
+- Click on Save (top-right) > Click on the ‘backward arrow’ (top-left) to return to the Training menu > Click on Train (top-right) > Leave a comment (mandatory) > Click on Continue > Click on Make Live (top-right) > Leave a comment (optional) > Click on Make Live.
+- \[OPTIONAL\] Click on Preview (top-right) > In the chat widget that will appear you can start testing your bot by chatting with it.
+
+## 2. Add the Task Bot to your flow
+
+The recommendation in the Connect flow designer is to create a loop on the Task Bot node where any input from the customer will be received and answered by the bot. The loop can be interrupted either by checking the bot response through a Branch node (so to create different paths based on the responses) or when the bot itself will determine the Agent Handover condition. A Task Bot node can also be used without creating a loop, meaning that after the first execution the admin will need to define static subsequent actions. The Task Bot node should be added only after the Create/Re-open Conversation ID and Task nodes. For any nodes in the loop, the admin needs to ensure the Timeout and Failure Outcomes will be pointed to a Close Conversation and Close Task nodes.
+
+- Access your Connect tenant.
+- Navigate to Service > Select and open your existing working service.
+- Click on Edit (top-right).
+- Navigate to Settings > Custom Variables > Create a new Custom Variable and name it BotInputMessage.
+- Edit the Incoming Message (first node) > select Transition Actions > in Action 1 section select ‘+ Add’ > select BotInputMessage > assign the value $(n2.messenger.message) > Save
+- Create some space between the Create Conversation node and the next by moving the subsequent nodes > Remove the Successful Outcome link (green) coming out the Create Conversation node.
+- From the node menu (left) select the Task Bot node and drag it in the flo
+- Connect the Create Conversation node from the Successful Outcome to the Task Bot node
+- Edit the Task Bot node
+	- From the BOT drop-down menu select the Bot name we previously created
+	- In the message field enter $(BotInputMessage)
+	- From the channel drop-down menu select the channel this flow is using
+	- In the PS ID field enter $(n2.messenger.psId)
+	- Save the node configuratiom
+- Connect the Timeout and Failure Outcomes from the Task not node to the Close Conversation node
+- From the node menu (left) select the Channel node (depending on the channel in use in the flow, i.e. SMS) and drag it in the flow
+- Connect the Task Bot node from the Successful Outcome to the Channel node > a pop-up window will appear > select OnSuccess and click OK
+- Edit the Channel node
+	- Copy the configuration from another pre-existing Channel node in the flow
+	- In the Message field enter $(nX.taskbot.text_response) (replace the X with the node ID from the Task Bot node)
+	- Save the node configuration
+- Connect the Failure Outcomes from the Channel node to the Close Conversation node
+- From the node menu (left) select the Branch node and drag it in the flow
+- Connect the Channel node from the Successful Outcome to the Branch node
+- Edit the Branch node
+	- In the Branch 1 VARIABLE field enter $(nX.taskbot.text_response) (replace the X with the node ID from the Task Bot node).
+	- From the Condition drop-down menu select ‘Equals’.
+	- In the VALUE field enter the same text defines in the Goodbye Response Template from the Bot Builder (customize it if needed).
+	- Save the node configuration.
+- Connect the Failure Outcomes from Branch node to the Close Conversation node > Connect the Successful Outcomes to the Close Conversation node > a pop-up window will appear > select Branch 1 and click OK.
+- From the node menu (left) select the Receive node and drag it in the flow
+- Edit the Receive node
+	-  In the SELECT INCOMING MESSAGE/EVENT list select the option corresponding to your channel.
+	- Edit the MAX TIMEOUT with the preferred duration (in seconds) for the time the flow will allow the customer to add a response (i.e. 120)
+	- Enter the corresponding ID for your channel.
+	- From the EVENT NAME drop-down menu select ‘Incoming Message’.
+	- Click on Transaction Actions
+		- Click on ‘+ Add Action’.
+		- in TIME select On-leave.
+		- Action – Set Variable.
+		- Variable – BotInputMessage.
+		- Value – $(nX.receive.message) (replace the X with the node ID from this Receive node).
+	- Save the node configuration
+- Connect the Failure Outcomes from the Receive node to the Close Conversation node > Connect the Successful Outcomes back to the Task Bot node
+- From the node menu (left) select the Channel node and drag it in the flow
+- Edit the Channel node
+	- Copy the configuration from another pre-existing Channel node in the flow
+	- From the MESSAGE TYPE drop-down menu select ‘Text’.
+	- In the Message field enter the following message “Sorry we didn’t hear back from you, please contact us again later”.
+	- Save the node configuration.
+- Connect all Failure and Successful Outcomes from the Messenger node to the Close Conversation node.
+- From the node menu (left) select the Channel node and drag it in the flow
+- Edit the Channel node
+	- Copy the configuration from another pre-existing Channel node in the flow.
+	- From the MESSAGE TYPE drop-down menu select ‘Text’.
+	- In the Message field enter $(nX.taskbot.text_response) (replace the X with the node ID from the Task Bot node).
+	- Save the node configuration.
+- Connect the Failure Outcomes from the Messenger node to the Close Conversation node > Connect the Successful Outcome from the Task Bot node to the Messenger node (the ‘onAgentHandover’ outcome event will be automatically selected)
+- From the node menu (left) select the Append Conversation node and drag it in the flow.
+- Edit the Append Conversation node
+	- METHOD NAME = Append.
+	- NODE RUNTIME AUTH = Select your predefined authorization.
+	- CHANNEL = Select the channel in use.
+	- CONVERSATION ID = $(conversationId)
+	- DIRECTION –Inbound
+	- TEXT = enter $(nX.taskbot.text_response) (replace the X with the node ID from the Task Bot node).
+	- TIMESTAMP = $(n2.messenger.ts)
+	- ATTACHMENTS = $(parseDataAttachment)
+	- Save the node configuration
+- Connect the Timeout and Failure Outcomes from the Append Conversation node to the Close Conversation node > Connect the Successful Outcome to the Create Task node.
+- Connect the Successful Outcome of the Channel node to the Append Conversation node.
+- Save and publish the flow (Make Live).
+
+> In this lab, when the conversation is escalated to the agent, the agent will only receive the last response from the Bot to the customer, and for this reason earlier we recommended to add the Entities’ values in the Agent Handover Response (so the agent can understand which values where entered and will not have to ask for them again). If you prefer to provide the entire transcript of all messages exchanged between customer and Bot, you will need to add an Append Conversation node after each Channel and Receive node.
+
+## 3. Testing
+
+Time to test your new configuration:
+
+- Access the agent desktop using your test agent credentials.
+- Using the preferred channel, send a message in.
+- Continue your conversation with the bot and provide the Entities you defined.
+- Get your conversation escalated to the agent.
+- Have your agent conversating with the customer.
+
+
 # Lab.12.17 - Event Scheduler
 # Lab.12.18 - Inbound Webhooks
 
