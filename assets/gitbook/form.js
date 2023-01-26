@@ -7,6 +7,8 @@ const alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${formId}`); // select form
 let formElements = form.elements; // get the elements in the form
 let formElement = "attendee-id";
+console.log("TRIGGER1");
+
   
 //Function which updates all "attendee-class" 
 const updateAllClasses = (data) => {
@@ -82,18 +84,5 @@ const populateForm = () => {
 
 
 document.onload = populateForm(); // populate the form when the document is loaded
-
-// add event listener to trigger your function when DOMContentLoaded
-if(document.readyState==='loading')
-{
-  document.addEventListener('DOMContentLoaded',populateForm);
-  console.log("TRIGGER1");
-} else {
-// DOMContentLoaded already loaded, so better trigger your function
-  populateForm();
-  console.log("TRIGGER2");
-}
-
-window.onDomReady() = populateForm(); // populate the form when the document is loaded
-
+window.onload = populateForm(); // populate the form when the document is loaded
 
