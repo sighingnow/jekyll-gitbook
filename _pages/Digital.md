@@ -13,7 +13,7 @@ This page is under developments
 | [Connect GUI overview](#lab122---connect-gui-overview) | Practical Lab     | EASY            | 15 min           |
 | [Engage GUI overview](#lab123---Engage-GUI-overview) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---User–Management-in-Connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
-| [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Read & Understand | EASY            | 20 min           |
+| [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Practical Lab | EASY            | 20 min           |
 | [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
 | [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
 | [Chat Channel Configuration](#lab128---) | Practical Lab | EASY            | 15 min           |
@@ -22,10 +22,10 @@ This page is under developments
 | [WhatsApp Channel Configuration](#lab1211---) | Practical Lab | EASY            | 15 min           |
 | [Connect Templates](#lab1212---) | Practical Lab | EASY            | 15 min           |
 | [Engage Templates](#lab1213---) | Practical Lab | EASY            | 15 min           |
-| [Introduction to BOTs](#lab1214---) | Practical Lab | MID            | 15 min           |
+| [Introduction to BOTs](#lab1214---) | Read & Understand | MID            | 15 min           |
 | [Q&A BOTs](#lab1215---) | Practical Lab | MID            | 15 min           |
 | [Task BOTs](#lab1216---) | Practical Lab | HARD            | 15 min           |
-| [Event Scheduler](#lab1217---) | Practical Lab | MID            | 15 min           |
+| [Event Scheduler](#lab1217---) | Read & Understand | MID            | 15 min           |
 | [Inbound Webhooks](#lab1218---) | Practical Lab | HARD            | 15 min           |
 | [Troubleshooting](#lab1219---) | Practical Lab | MID            | 15 min           |
 | [Custom Nodes](#lab1220---) | Practical Lab | HARD            | 15 min           |
@@ -428,10 +428,10 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 #### Quick Links
 
-- Control Hub: https://admin.webex.com
-- Portal: https://portal.wxcc-us1.cisco.com/portal
-- Agent Desktop: https://desktop.wxcc-us1.cisco.com
-- Webex Connect: https://cl1podXXX.imiconnect.io/ (where XXX is your POD number)
+> Control Hub: https://admin.webex.com
+> Portal: https://portal.wxcc-us1.cisco.com/portal
+> Agent Desktop: https://desktop.wxcc-us1.cisco.com
+> Webex Connect: https://cl1podXXX.imiconnect.io/ (where XXX is your POD number)
 
 ## Configuration Order
 
@@ -597,6 +597,7 @@ This lab is designed to introduce the logic and methodology behind building flow
 1.  Connect URL for browser access.
 2.  Admin credentials to login to Connect administration portal.
 
+
 ## Understanding Connect Flows
 
 #### 1. Flow Types
@@ -624,68 +625,53 @@ Inside connect there are two types of flows:
 
 You can create a new flow from scratch to explore the flow designer interface and its nodes. To create a new flow:
 
-·      Access your Connect tenant
-
-·      Navigate to Service > select or create your service >  select the Flows tab > click on any of the two ‘Create Flow’ buttons
-
-·      Enter the a name inside the ‘Flow Name’ > under Type select ‘Work Flow’ > under Method select ‘New Flow’ > Select the ‘Start From Scratch’ icon > click on Create
-
-·      From the ‘Select Trigger Category’ select any of the channels (i.e. Email)
-
-·      You will be redirected to the flow canvas, already inside the first node in the flow > click on Cancel
+- Access your Connect tenant
+- Navigate to Service > select or create your service >  select the Flows tab > click on any of the two ‘Create Flow’ buttons
+- Enter the a name inside the ‘Flow Name’ > under Type select ‘Work Flow’ > under Method select ‘New Flow’ > Select the ‘Start From Scratch’ icon > click on Create
+- From the ‘Select Trigger Category’ select any of the channels (i.e. Email)
+- You will be redirected to the flow canvas, already inside the first node in the flow > click on Cancel
 
 #### 3. Flow designer and node navigation
 
 The flow designer is divided in three main section:
 
-·      Toolbar on top – containing the flow name and status, the settings, save and ‘make live’ buttons.
-
-·      Canvas in the middle – where the administrator can arrange the node to execute the desired workflow.
-
-·      Node menu on the left – containing all the nodes the admin can use (by dragging them inside the Canvas)
+- Toolbar on top – containing the flow name and status, the settings, save and ‘make live’ buttons.
+- Canvas in the middle – where the administrator can arrange the node to execute the desired workflow.
+- Node menu on the left – containing all the nodes the admin can use (by dragging them inside the Canvas)
 
 Nodes are categorized between Utilities, Channels and Integrations depending on their use but they all follow the same structure. To check a node simply drag and drop it into the canvas and double click on it. Inside each node you will find the:
 
-·      Node Name – Can be edited by clicking on the pencil icon.
-
-·      Configuration tab – Every node needs to be properly configured to be executed. Each node has its own set of required Variables to be set. The details about how to configure each parameter can be found in the nodes’ specific documentation inside the Connect Help page.
-
-·      Transition Actions tab – use to configure additional activities before or after the node is executed (i.e. set desired values to additional variables).
-
-·      Node ID – Indicates the unique number identifier for this node.
-
-·      Input Variables section – Click on it to expand the section. You will see a list of all the Output and Custom Variables (grouped by node of origin) from the previously connected nodes.
-
-·      Output Variables section – Click on it to expand the section. You will see a list of variables (and their names) the node generates when successfully executed.
-
-·      Node Outcomes section – Click on it to expand the section. You will see a list of which and how many outcomes (exit connections) the node has. When closing the node configuration you will notice coloured dots on the right side of the node indicating the Outcomes. Drag those dots onto other nodes to connect them together, or into an empty point of the canvas if no further actions are needed.
+- Node Name – Can be edited by clicking on the pencil icon.
+- Configuration tab – Every node needs to be properly configured to be executed. Each node has its own set of required Variables to be set. The details about how to configure each parameter can be found in the nodes’ specific documentation inside the Connect Help page.
+- Transition Actions tab – use to configure additional activities before or after the node is executed (i.e. set desired values to additional variables).
+- Node ID – Indicates the unique number identifier for this node.
+- Input Variables section – Click on it to expand the section. You will see a list of all the Output and Custom Variables (grouped by node of origin) from the previously connected nodes.
+- Output Variables section – Click on it to expand the section. You will see a list of variables (and their names) the node generates when successfully executed.
+- Node Outcomes section – Click on it to expand the section. You will see a list of which and how many outcomes (exit connections) the node has. When closing the node configuration you will notice coloured dots on the right side of the node indicating the Outcomes. Drag those dots onto other nodes to connect them together, or into an empty point of the canvas if no further actions are needed.
 
 When using nodes’ Output Variables inside the configuration of other nodes, administrator will have to use the following syntax: $(nX.outputvariablename), where X is the node ID that has generated that variable.
 
 #### 4. Building a new Channel Specific flow
 
 As for any contact center flow, before proceeding building a new flow it’s always recommended to collect all the requirements as well as a draft of the intended workflow.  
-In addition to this, for the digital channels it’s crucial to distinguish the type of use for the flow: as mentioned in the chapter 1, Connect flows are executed from their starting node any time they are triggered [excepts when using a Receive Node inside the flow itself, beyond the scope of this lab].  
+In addition to this, for the digital channels it’s crucial to distinguish the type of use for the flow: as mentioned in the chapter 1, Connect flows are executed from their starting node any time they are triggered
+> excepts when using a Receive Node inside the flow itself, beyond the scope of this lab.
+
 For this reason the administrator should initially clarify if the flow shall be always triggered by distinct and unrelated sources or if multiple messages could come from the same source as part of a unique conversation. For most of the cases, when customers need to interact with your services, especially when expecting to connect with an agent, all their messages must be grouped into a uniquely identifiable thread. In Connect this is called **Conversation ID**.  
 For all the flows where you expect to have an ongoing conversation, your flow shall be built with an initial check, ideally after the starting node, where you will need to check if the incoming message is part, or not of an existing conversation, so to appropriately manage and route it accordingly. Here below a recommended flow structure:
 
-1.     Accept incoming message via dedicated channel node.
-
-2.     Check (using the ‘Search Conversation’ node) if the incoming message
-
-a.     Is part to an active/ongoing conversation with an agent. If so, use the ‘Append Conversation’ node to add the incoming message at the bottom of the appropriate ongoing conversation.
-
-b.     Comes from a customer who is reaching the flow for the first time. If so, Create a new Conversation ID using the ‘Create Conversation’ node, and eventually route it to an agent.
-
-c.     Comes from a customer who was in a past and terminated conversation. If so, restart the previous conversation by using the ‘Re-open Conversation’ node, and eventually route it again to an agent.
+1. Accept incoming message via dedicated channel node.
+2. Check (using the ‘Search Conversation’ node) if the incoming message
+	1. Is part to an active/ongoing conversation with an agent. If so, use the ‘Append Conversation’ node to add the incoming message at the bottom of the appropriate ongoing conversation.
+	2. Comes from a customer who is reaching the flow for the first time. If so, Create a new Conversation ID using the ‘Create Conversation’ node, and eventually route it to an agent.
+	3. Comes from a customer who was in a past and terminated conversation. If so, restart the previous conversation by using the ‘Re-open Conversation’ node, and eventually route it again to an agent.
 
 Before sending a new conversation to the desired queue, you have to create a Task ID: while the Conversation ID is used by Connect to group all incoming massage in a unique thread, the Task ID is used for the Webex Contact Center to map that conversation with a specific queue and then an agent. Use the Create Task node to create such ID and then connect it to the Queue Task node.
 
 When building a flow it is also recommend to appropriately handle the potential failure of each node by:
 
-·      Including messages back to the customer informing them about an ongoing issue.
-
-·      Terminating (Closing) any active conversation or task.
+- Including messages back to the customer informing them about an ongoing issue.
+- Terminating (Closing) any active conversation or task.
 
 #### 5. Activating a flow
 
@@ -705,11 +691,14 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 ---
 
 ## Table of Contents
-- [Step 1. Gmail account configuration](#step-1-gmail-account-configuration)
-- [Step 2. Create Email Asset and Register to WebeXCC](#step-2-create-email-asset-and-register-to-webexcc)
-- [Step 3. Email Entry Point and Queue creation](#step-3-email-entry-point-and-queue-creation)
-- [Step 4. Create/Upload Email flow](#step-4-createupload-email-flow)
-- [Verification: Send an Email and accept the task](#verification-send-an-email-and-accept-the-task)
+
+| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [Gmail account configuration](#1-gmail-account-configuration) | Practical Lab | EASY | 5 min |
+| [Create Email Asset and Register to WebeXCC](#2-create-email-asset-and-register-to-webexcc)  | Practical Lab | EASY | 5 min |
+| [Email Entry Point and Queue creation](#3-email-entry-point-and-queue-creation)  | Practical Lab | EASY | 5 min |
+| [Create/Upload Email flow](#4-createupload-email-flow) | Practical Lab | EASY | 5 min |
+| [Verification: Send an Email and accept the task](#5-verification-send-an-email-and-accept-the-task)  | Practical Lab | EASY | 5 min |
 
 
 ## Introduction
@@ -736,13 +725,12 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 > Webex Connect: https://cl1pod<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
 
 
-## Lab Section
-
-#### Configuration Order
+## Configuration Order
 
 ![DC_Lab.12.7_Email_ConfigurationOrder](/assets/images/DC_Lab.12.7_Email_ConfigurationOrder.png)
 
-## Step 1. Gmail account configuration
+## 1. Gmail account configuration
+
 Starting from May 30 the **Less Secure Apps** feature was disabled on all Google accounts. As long as this setting was enabled, it was possible to send emails via Gmail SMTP. In this lab, we will be using new OAuth 2.0 authentication for outbound email functionality.
 
 >**Note**: For this lab, we have created a Gmail account. Optionally, use your own account for polling and handling the emails. It can be a Gmail account or Office 365 account or any account which has email forwarding. The instructions below are applicable only for the Gmail accounts.
@@ -757,7 +745,6 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 > **Note:** Your \<ID\> was provided to you personally.  \<ID\> is the unique number equal to your POD.
 
 - Login to the Gmail account with the credentials above [https://mail.google.com](https://mail.google.com). The password is the same as for Webex admin account. During first login select **Turn off smart features** 
-
 - Enable POP3/IMAP setting by clicking on settings icon on top right corner and selecting **See all settings**.
 
 ![DC_Lab.12.7_Gmail_account_configuration_1](/assets/images/DC_Lab.12.7_Gmail_account_configuration_1.png)
@@ -771,7 +758,6 @@ Starting from May 30 the **Less Secure Apps** feature was disabled on all Google
 We need to activate API if we want to use Gmail account for outbound emails. 
 
 - Login to [Google Developers Console](https://console.developers.google.com/) with the credentials above. The password is the same as for Webex Contact Center admin account.
-
 - You will have to agree with the Terms of Service and pick their Country of residence. Then click **Select a project** and create a **NEW PROJECT**.
 
 ![DC_Lab.12.7_Create_new_project_at_Google_API_Console_1](/assets/images/DC_Lab.12.7_Create_new_project_at_Google_API_Console_1.png)
@@ -822,9 +808,7 @@ Now create a new client ID that will be used to identify your application to Goo
 ![DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_1](/assets/images/DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_1.png)
 
 - Select `Web application` in the **Application type**
-
 - You can leave the default name. The name of your OAuth 2.0 client is only used to identify the client in the Google Cloud console and will not be shown to application users. 
-
 - In the **Authorized redirect URIs** section click **ADD URI** button and set `https://cl1pod\<ID\>.imiconnect.io/callback` where \<ID\> is your tenant number. Click **CREATE** button in the end.
 
 ![DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_2](/assets/images/DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_2.png)
@@ -834,12 +818,11 @@ Now create a new client ID that will be used to identify your application to Goo
 ![DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_3](/assets/images/DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_3.png)
 
 
-## Step 2. Create Email Asset and Register to WebexCC
+## 2. Create Email Asset and Register to WebexCC
 
 #### 1. Create Email Asset
 
 - As an admin, login to Webex Connect UI using the provided URL https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number).
-
 - Select **Assets** -> **Apps** -> **CONFIGURE NEW APP** -> **Email**.
 
 ![DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC](/assets/images/DC_Lab.12.7_Create_Email_Asset_and_Register_to_WebexCC_1.gif)
@@ -908,24 +891,17 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ![DC_Lab.12.7_Add_forwarding_Address](/assets/images/DC_Lab.12.7_Add_forwarding_Address_7.png)
 
-## Step 3. Email Entry Point and Queue creation
+## 3. Email Entry Point and Queue creation
 
 #### 1. Create Entry Point in Management Portal 
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
-
 - Click on `New Entry Point`.
-
 - Input **_Name_** as `Email_EP`.
-
 - Select `Email` in the **_Channel Type_** section.
-
 - Leave the **_Asset Name_** as appeared value `EmailASSET`.
-
 - Set **_Service Level Threshold_** as `2` hours.
-
 - The **_Time Zone_** can stay as default value.
-
 - Click on **Save** after comparing your values with the screenshot below.
 
 ![DC_Lab.12.7_Email_Entry_Point_and_Queue_creation](/assets/images/DC_Lab.12.7_Email_Entry_Point_and_Queue_creation_1.png)
@@ -933,51 +909,33 @@ Now create a new client ID that will be used to identify your application to Goo
 #### 2. Create Two Queues in Management Portal 
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
-
 - Click on `New Queue`.
-
 - Input **_Name_** as `Email_Q`.
-
 - Select `Email` in the **_Channel Type_** section.
-
 - Leave the **_Queue Routing Type_** as default value `Longest Available Agent`.
-
 - In the **_Email Distribution_** click on **Add Group** and select `Team1`.
-
 - Set **_Service Level Threshold_** as `2` hours.
-
 - Set **_Maximum Time in Queue_** as `3` hours.
-
 - The **_Time Zone_** can stay as default value.
-
 - Click on **Save** after comparing your values with the screenshot below.
 
 ![DC_Lab.12.7_Email_Entry_Point_and_Queue_creation](/assets/images/DC_Lab.12.7_Email_Entry_Point_and_Queue_creation_2.png)
 
 - Create a second queue by repeating the same steps as above.
-
 - Input **_Name_** as `Email_Q2`.
-
 - Select `Email` in the **_Channel Type_** section.
-
 - In the the **_Email Distribution_** click on **Add Group** and select `Team2`.
 
 ![DC_Lab.12.7_Email_Entry_Point_and_Queue_creation](/assets/images/DC_Lab.12.7_Email_Entry_Point_and_Queue_creation_3.png)
 
-## Step 4. Create/Upload Email flow
+## 4. Create/Upload Email flow
 
 - Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
-
 - Navigate to **Webex Connect Flows** -> **v2.1** -> **Email Inbound Flow.workflow.zip**, select the zip file and click download.
-
 - Unzip the downloaded file.
-
 - Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
-
 - In the service click on **FLOWS** -> **CREATE FLOW** .
-
 - Enter the **FLOW NAME** as **Email Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
-
 - Drag and drop the **Email Inbound Flow.workflow** flow that is downloaded in zip file, click **CREATE** and then click **SAVE**.
 
 ![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_1.png)
@@ -994,12 +952,9 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_4.png)
 
-[To top of this lab](#table-of-contents)
-
-## Verification: Send an Email and accept the task
+## 5. Verification: Send an Email and accept the task
 
 - Go to personal email account and send an email to the support email address that was initially configured in the Email Asset.
-
 - Go to the Agent Desktop and make the agent Available. 
 
 ![DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_1.png)
@@ -1010,11 +965,28 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Add wrap up and close the task.
 
+---
 
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 ---
 # Lab.12.8 - Chat Channel Configuration
 ---
+
+## Table of Contents
+
+| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [\[Optional\] Create a service](#1-Optional-Create–a-service ) | Practical Lab | EASY | 5 min |
+| [Configure and Register Chat Asset](#2-Configure-and-Register-Chat-Asset)  | Practical Lab | EASY | 5 min |
+| [Create Entry Point for Chat](#3-Create–Entry-Point-for-Chat)  | Practical Lab | EASY | 5 min |
+| [Create Queue for Chat](#4-Create-Queue-for-Chat) | Practical Lab | EASY | 5 min |
+| [Create Chat Template](#5-Create-Chat-Template)  | Practical Lab | EASY | 5 min |
+
 
 ## Introduction
 
@@ -1040,31 +1012,25 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 > Webex Connect: https://cl1pod<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
 
 
-## Lab Section
-
-## Step 1. \[Optional\] Create a service 
+## 1. \[Optional\] Create a service 
 
 >**Note**: This step should be performed only if ***My First Service*** does not exist in Webex Connect.
 
 -  Login to Connect Portal using provided URL ***https://cl1pod\<ID\>.imiconnect.io/*** (where ***\<ID\>*** is your POD number).
-
 -  Go to ***Services*** and press ***Create New Service*** button ar the right top corner.
-
 -  Input the name **`My First Service`** and press ***Create*** button.
 
 ![DC_Lab.12.8_Create_Service](/assets/images/DC_Lab_12.8._Create_Service.png)
 
 
-## Step 2. Configure and Register Chat Asset
+## 2. Configure and Register Chat Asset
 
 -  Login to Connect Portal.
-
 -  Go to ***Assets*** -> ***Apps***, press ***Configure New App*** and select ***Mobile / Web*** option.
 
 ![DC_Lab.12.8_Create_Asset_1](/assets/images/DC_Lab_12.8._Create_Asset_1.png)
 
 -  Input ***Name*** as **`ChatAsset`**.
-
 -  Toggle/enable ***Live Chat / In-AppMessaging*** to ***ON*** and choose ***Primary Transport Protocol*** as **`MQTT`** & ***Secondary Transport Protocol*** as **`Web Socket`** then tick ***Use Secured Port*** checkbox and press ***Save*** button.
 
 >**Note**: If there is an error that your request cannot be processed, please press ***Save*** button one more time.
@@ -1084,72 +1050,55 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Asset_5](/assets/images/DC_Lab_12.8._Create_Asset_5.png)
 
 
-## Step 3. Create Entry Point for Chat
+## 3. Create Entry Point for Chat
 
 -  Login to Webex CC Management Portal URL with the credentials and access the menu ***Provisioning*** -> ***Entry Point/Queues*** -> ***Entry Point***.
-
 -  Press ***New Entry Point*** button.
 
 ![DC_Lab.12.8_Create_Entry_Point_1](/assets/images/DC_Lab_12.8._Create_Entry_Point_1.png)
 
 -  Input ***Name*** as **`Chat_EP`**.
-
 -  Select **`Chat`** from the ***Channel Type*** drop-down list.
-
 -  Select **`ChatAsset`** as an ***Asset Name***.
-
 -  Set ***Service Level Threshold*** as **`7200`** seconds (2 hours).
-
 -  The ***Time Zone*** can stay as default value.
-
 -  Click on ***Save*** after comparing your values with the screenshot below.
 
 ![DC_Lab.12.8_Create_Entry_Point_2](/assets/images/DC_Lab_12.8._Create_Entry_Point_2.png)
 
 
-## Step 4. Create Queue for Chat
+## 4. Create Queue for Chat
 
 -  On Webex CC Management Portal access the menu ***Provisioning*** -> ***Entry Point/Queues*** -> ***Queue***.
-
 -  Click on ***New Queue***.
 
 ![DC_Lab.12.8_Create_Queue_1](/assets/images/DC_Lab_12.8._Create_Queue_1.png)
 
 -  Input ***Name*** as **`Chat_Q`**.
-
 -  Select **`Chat`** in the ***Channel Type*** section.
-
 -  Leave the ***Queue Routing Type*** as default value **`Longest Available Agent`**.
-
 -  In the ***Chat Distribution*** click on ***Add Group*** and select `Team1`.
 
 ![DC_Lab.12.8_Create_Queue_2](/assets/images/DC_Lab_12.8._Create_Queue_2.png)
 
 -  Set ***Service Level Threshold*** as **`7200`** seconds (2 hours).
-
 -  Set ***Maximum Time in Queue*** as **`10800`** seconds (2 hours).
-
 -  The ***Time Zone*** can stay as default value.
-
 -  Click on ***Save*** after comparing your values with the screenshot below.
 
 ![DC_Lab.12.8_Create_Queue_3](/assets/images/DC_Lab_12.8._Create_Queue_3.png)
 
 
-## Step 5. Create Chat Template
+## 5. Create Chat Template
 
 -  Login to Webex Connect UI.
-
 -  Go to ***Tools*** -> ***Templates*** and press ***Add new Template*** button.
 
 ![DC_Lab.12.8_Create_Template_1](/assets/images/DC_Lab_12.8._Create_Template_1.png)
 
 -  Provide **_Name_** as **`Chat_Template`** and choose **_Channel_** as **_Live Chat / In-App Messaging_**
-
 -  Select ***Message Type*** as ***Form****.
-
 -  Provide the ***Title*** as **`Welcome to Webex CC Chat`** and this will be the welcome message.
-
 -  Click on ***Add Field*** and add ***First Name*** field with the following parameters into the form:
 
 | **Parameter Name**  | **Parameter Value** |
@@ -1187,7 +1136,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Template_5](/assets/images/DC_Lab_12.8._Create_Template_5.png)
 
-## Step 6. Website Widget Configuration
+## 6. Website Widget Configuration
 
 -  Login to WxCC Management Portal access the menu and cross launch Engage Portal by choosing ***New Digital Channels***.
 
@@ -1198,9 +1147,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Website_2](/assets/images/DC_Lab_12.8._Create_Website_2.png)
 
 -  Scroll down and click on ***Save Changes*** button.
- 
 -  Scroll to top of the page and choose ***Websites*** tab.
-
 -  Click on ***ADD Website***.
 
 ![DC_Lab.12.8_Create_Website_3](/assets/images/DC_Lab_12.8._Create_Website_3.png)
@@ -1233,7 +1180,6 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 	- \[Optional\[ Logo
 	- Enable Emojis
 	- Enable Attachments
-
 -  Press ***Save changes*** button at the bottom of the page.
 
 ![DC_Lab.12.8_Create_Website_7](/assets/images/DC_Lab_12.8._Create_Website_7.png)
@@ -1254,26 +1200,20 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
  
 -  Paste copied script into a text editor and save it. We will paste it on web site later.
 
-## Step 7. Create Chat Inbound flow
+## 7. Create Chat Inbound flow
 
 >***Note***: Chat Inbound Flow is triggered whenever end user started new chat session or sent a message via existing one.
 
 -  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
-
 -  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Inbound Flow.workflow.zip*** and click ***Download***.
-
 -  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download***.
-
 -  Unzip both downloaded files.
-
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
-
 -  In the service click on **Flows** -> **Create Flow** .
 
 ![DC_Lab.12.8_Create_Flow_1](/assets/images/DC_Lab_12.8._Create_Flow_1.png)
 
 -  Enter the ***Flow Name*** as **`Email Inbound Flow`**, select the ***Type*** as ***Work Flow*** and under ***Method*** select ***Upload a flow***.
-
 -  Drag and drop unzipped ***Live Chat Inbound Flow.workflow*** flow, click ***Create***.
 
 ![DC_Lab.12.8_Create_Flow_2](/assets/images/DC_Lab_12.8._Create_Flow_2.png)
@@ -1299,7 +1239,6 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Flow_7](/assets/images/DC_Lab_12.8._Create_Flow_7.png)
 
 -  Click on ***Save*** button on top right corner to save the entire flow.
-
 -  Finally click on ***Make Live*** on top right corner then select the ***Application*** as ***ChatAsset*** and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
 >***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
@@ -1307,16 +1246,13 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Flow_8](/assets/images/DC_Lab_12.8._Create_Flow_8.png)
 
 
-## Step 8. Create Chat Close flow
+## 8. Create Chat Close flow
 
 >***Note***: Chat Close Flow is triggered every time whenever the end user closed the conversation thread from the widget.
 
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
-
 -  In the service click on **Flows** -> **Create Flow**.
-
 -  Enter the ***Flow Name*** as **`Chat Close Flow`**, select the ***Type*** as ***Work Flow*** and under ***Method*** select ***Upload a flow***.
-
 -  Drag and drop unzipped ***Live Chat Close Flow.workflow*** flow, click ***Create***.
 
 ![DC_Lab.12.8_Create_Closed_Flow_1](/assets/images/DC_Lab_12.8._Create_Closed_Flow_1.png)
@@ -1326,7 +1262,6 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Closed_Flow_2](/assets/images/DC_Lab_12.8._Create_Closed_Flow_2.png)
 
 -  Click on ***Save*** button on top right corner to save the entire flow.
-
 -  Finally click on ***Make Live*** on top right corner then select the ***Application*** as ***ChatAsset*** and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
 >***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
@@ -1334,21 +1269,17 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Closed_Flow_3](/assets/images/DC_Lab_12.8._Create_Closed_Flow_3.png)
 
 
-## Step 9. Publish Chat Widget
+## 9. Publish Chat Widget
 
--  Go to [HTML TryIt Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro)
-
+-  Go to [HTML w3school Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro)
 -  Paste the script which you copied in step 6 just above the ```</body>``` tag in the left window and click on ***Run***. You should see chat widget icon in the right bottom corner of the window.
 
 ![DC_Lab.12.8_Publish_Widget_1](/assets/images/DC_Lab_12.8._Publish_Widget_1.png)
 
 
-## Step 10. Verification: Initiate chat and accept the task
+## 10. Verification: Initiate chat and accept the task
 
 -  Click on chat widget icon in the right bottom corner of [HTML TryIt Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro) window and press ***Start Chat*** button.
-
-
-
 -  Go to the Agent Desktop and make the agent Available. 
 
 
@@ -1360,24 +1291,8 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-    - [Lab Objective](#lab-objective)
-    - [Pre-requisite](#pre-requisite)
-    - [Quick Links](#quick-links)
-- [Lab Section](#lab-section)
-  - [Step 1 Facebook Page configuration](#step-1-facebook-page-configuration)
-  - [Step 2. Facebook Messenger Asset creation & register to Webex CC](#step-2-facebook-messenger-asset-creation--register-to-webex-cc)
-  - [Step 3. Create Entry Point and Queue](#step-3-create-entry-point-and-queue)
-    - [1. Create Entry Point in Management Portal](#1-create-entry-point-in-management-portal)
-    - [2. Create Queue in Management Portal](#2-create-queue-in-management-portal)
-  - [Step 4. Create/Upload Facebook Messenger flow](#step-4-createupload-facebook-messenger-flow)
-    - [1. Initial flow loading](#1-initial-flow-loading)
-    - [2. Start node and Custom Variables](#2-start-node-and-custom-variables)
-    - [3. Edit Queue Task node](#3-edit-queue-task-node)
-  - [Step 5. Verification - start Facebook Chat and accept the request](#step-5-verification---start-facebook-chat-and-accept-the-request)
-  - [Back to top](#back-to-top)
-    - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
+
+
 
 
 ## Introduction
