@@ -83,4 +83,15 @@ const populateForm = () => {
 
 document.onload = populateForm(); // populate the form when the document is loaded
 
+// add event listener to trigger your function when DOMContentLoaded
+if(document.readyState==='loading')
+{
+  document.addEventListener('DOMContentLoaded',populateForm());
+} else {
+// DOMContentLoaded already loaded, so better trigger your function
+  populateForm();
+}
+
+window.onDomReady() = populateForm(); // populate the form when the document is loaded
+
 
