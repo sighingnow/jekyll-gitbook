@@ -577,9 +577,130 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 **We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
-
 ---
 # Lab.12.6 - Flow Builder
+
+## Table of Contents
+
+| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [Understanding Connect Flows](Understanding-Connect-Flows)                       | Read & Understand         | EASY                | 15 min                 |
+
+## Introduction
+
+#### Lab Objective
+
+This lab is designed to introduce the logic and methodology behind building flows that will handle incoming conversation via digital channels. Throughout this lab you will learn how to navigate the flow designer, understand how to read and configure nodes and how flows are being executed. In this lab you will not find configuration steps, the goal is to understand how to approach the build of a new flow.
+
+#### Pre-requisites
+
+1.  Connect URL for browser access.
+2.  Admin credentials to login to Connect administration portal.
+
+## Understanding Connect Flows
+
+#### 1. Flow Types
+
+Inside connect there are two types of flows:
+
+- Channel Agnostics (CA) Flows
+	- Every tenant must include the following CA flows:
+		- **Task Routed** – The flow is invoked automatically by the agent when accepting an incoming conversation on the agent desktop.
+		- **Task Modified** - The flow is invoked automatically by the agent when adding or removing an agent from an ongoing conversation on the agent desktop (e.g., for chat transfer or conference).
+		- **Close Task** - The flow is invoked automatically by the agent when closing an ongoing conversation on the agent desktop.
+	- These three CA flows are required to be added only once per tenant. 
+	   > Recommendation: Create and reserve a dedicated Service named “Agnostic Flows – DO NOT MODIFY” specifically for these 3 flows. Once the flows are added lock the service (from the Settings section) to avoid any accidental changes.
+	
+	- The latest version of the CA flows can be collected from CA flows can be imported from this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v2.1).
+- Channel Specific (CS) Flows
+	- CS flows can be freely build by the admin following customers’ requirement
+	- CS flows can be located in any Service, the Admin is free to organize Flows and Services following the desired order and naming convention.
+	- CS flows can be triggered by Assets, Events or Webhooks.
+	- Every time a customer sends a new message, the associated Asset and CS Flow are triggered from their starting node.
+	- CS flows do not automatically associate incoming messages from the same users as part of the same thread.
+	- As reference, CS sample flows for each digital channel can be imported from this GitHub page.
+
+#### 2. Create new flows
+
+You can create a new flow from scratch to explore the flow designer interface and its nodes. To create a new flow:
+
+·      Access your Connect tenant
+
+·      Navigate to Service > select or create your service >  select the Flows tab > click on any of the two ‘Create Flow’ buttons
+
+·      Enter the a name inside the ‘Flow Name’ > under Type select ‘Work Flow’ > under Method select ‘New Flow’ > Select the ‘Start From Scratch’ icon > click on Create
+
+·      From the ‘Select Trigger Category’ select any of the channels (i.e. Email)
+
+·      You will be redirected to the flow canvas, already inside the first node in the flow > click on Cancel
+
+#### 3. Flow designer and node navigation
+
+The flow designer is divided in three main section:
+
+·      Toolbar on top – containing the flow name and status, the settings, save and ‘make live’ buttons.
+
+·      Canvas in the middle – where the administrator can arrange the node to execute the desired workflow.
+
+·      Node menu on the left – containing all the nodes the admin can use (by dragging them inside the Canvas)
+
+Nodes are categorized between Utilities, Channels and Integrations depending on their use but they all follow the same structure. To check a node simply drag and drop it into the canvas and double click on it. Inside each node you will find the:
+
+·      Node Name – Can be edited by clicking on the pencil icon.
+
+·      Configuration tab – Every node needs to be properly configured to be executed. Each node has its own set of required Variables to be set. The details about how to configure each parameter can be found in the nodes’ specific documentation inside the Connect Help page.
+
+·      Transition Actions tab – use to configure additional activities before or after the node is executed (i.e. set desired values to additional variables).
+
+·      Node ID – Indicates the unique number identifier for this node.
+
+·      Input Variables section – Click on it to expand the section. You will see a list of all the Output and Custom Variables (grouped by node of origin) from the previously connected nodes.
+
+·      Output Variables section – Click on it to expand the section. You will see a list of variables (and their names) the node generates when successfully executed.
+
+·      Node Outcomes section – Click on it to expand the section. You will see a list of which and how many outcomes (exit connections) the node has. When closing the node configuration you will notice coloured dots on the right side of the node indicating the Outcomes. Drag those dots onto other nodes to connect them together, or into an empty point of the canvas if no further actions are needed.
+
+When using nodes’ Output Variables inside the configuration of other nodes, administrator will have to use the following syntax: $(nX.outputvariablename), where X is the node ID that has generated that variable.
+
+#### 4. Building a new Channel Specific flow
+
+As for any contact center flow, before proceeding building a new flow it’s always recommended to collect all the requirements as well as a draft of the intended workflow.  
+In addition to this, for the digital channels it’s crucial to distinguish the type of use for the flow: as mentioned in the chapter 1, Connect flows are executed from their starting node any time they are triggered [excepts when using a Receive Node inside the flow itself, beyond the scope of this lab].  
+For this reason the administrator should initially clarify if the flow shall be always triggered by distinct and unrelated sources or if multiple messages could come from the same source as part of a unique conversation. For most of the cases, when customers need to interact with your services, especially when expecting to connect with an agent, all their messages must be grouped into a uniquely identifiable thread. In Connect this is called **Conversation ID**.  
+For all the flows where you expect to have an ongoing conversation, your flow shall be built with an initial check, ideally after the starting node, where you will need to check if the incoming message is part, or not of an existing conversation, so to appropriately manage and route it accordingly. Here below a recommended flow structure:
+
+1.     Accept incoming message via dedicated channel node.
+
+2.     Check (using the ‘Search Conversation’ node) if the incoming message
+
+a.     Is part to an active/ongoing conversation with an agent. If so, use the ‘Append Conversation’ node to add the incoming message at the bottom of the appropriate ongoing conversation.
+
+b.     Comes from a customer who is reaching the flow for the first time. If so, Create a new Conversation ID using the ‘Create Conversation’ node, and eventually route it to an agent.
+
+c.     Comes from a customer who was in a past and terminated conversation. If so, restart the previous conversation by using the ‘Re-open Conversation’ node, and eventually route it again to an agent.
+
+Before sending a new conversation to the desired queue, you have to create a Task ID: while the Conversation ID is used by Connect to group all incoming massage in a unique thread, the Task ID is used for the Webex Contact Center to map that conversation with a specific queue and then an agent. Use the Create Task node to create such ID and then connect it to the Queue Task node.
+
+When building a flow it is also recommend to appropriately handle the potential failure of each node by:
+
+·      Including messages back to the customer informing them about an ongoing issue.
+
+·      Terminating (Closing) any active conversation or task.
+
+#### 5. Activating a flow
+
+When a flow is being edited, its status appear as ‘Working Draft’ on the top-left of the browser window. Once the editing has been completed and you wish to start using the flow, you can click the Save button to save the latest changes. If there’s any missing or incorrect connection between nodes, a prompt will appear on the right side, listing all the occurring issue (misconfiguration inside each node won’t be detected here).  
+Once all the issues have been addressed, the Admin shall click on the ‘Make Live’ button to activate a flow in Working Draft status. A new pop-up will appear: select or modify the Application that will be triggering this flow, optionally add comments, and click ‘Make Live’.  
+Once a flow is set to go live, it will take approx. 2 minute before showing the correct ‘LIVE’ status on the top-left. In the meantime, it will show the ‘Publishing’ status, meaning that any messages received in the meantime will either be handled through the previous flow version or be rejected if no previous version is available.
+
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
+
 # Lab.12.7 - Email Channel Configuration
 ---
 
