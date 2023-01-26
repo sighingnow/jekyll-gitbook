@@ -1,6 +1,6 @@
 // form.js
 console.log("TRIGGER1");
-let formId = "attendee-form"; // ID of the form, used to identify the form
+//let formId = "attendee-form"; // ID of the form, used to identify the form
 let className = ".attendee-class";
 let saveButton = document.querySelector("#save"); // select save button
 let alertBox = document.querySelector(".alert"); // select alert display div
