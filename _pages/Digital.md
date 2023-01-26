@@ -14,7 +14,7 @@ This page is under developments
 | [Engage GUI overview](#lab123---Engage-GUI-overview) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---User–Management-in-Connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
 | [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Read & Understand | EASY            | 20 min           |
-| [Flow Builder](#lab126---Flow-Builder) | Read & Understand | EASY            | 15 min           |
+| [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
 | [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
 | [Chat Channel Configuration](#lab128---) | Practical Lab | EASY            | 15 min           |
 | [Facebook Messenger Channel Configuration](#lab129---) | Practical Lab | EASY            | 15 min           |
