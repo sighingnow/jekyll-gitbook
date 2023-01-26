@@ -1012,34 +1012,27 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Provide the ***Title*** as **`Welcome to Webex CC Chat`** and this will be the welcome message.
 
--  Click on ***Add Field*** and add ***First Name*** field with the following parameters into the form:
-
-| **Parameter Name**  | **Parameter Value** |
-| --------------- | --------------- |
-| Type            | Text            |
-| Name            | firstName       |
-| Label           | First Name      |
-| Mandatory Field | On              |
+-  Click on ***Add Field***  to start adding the fields into the template.
 
 ![DC_Lab.12.8_Create_Template_2](/assets/images/DC_Lab_12.8._Create_Template_2.png)
 
--  Click on ***Add Field*** and add ***Last Name*** field with the following parameters into the form:
+-  Add ***Name*** field with the following parameters into the form:
 
 | **Parameter Name**  | **Parameter Value** |
 | --------------- | --------------- |
 | Type            | Text            |
-| Name            | lastName        |
-| Label           | Last Name       |
+| Name            | Name            |
+| Label           | Name            |
 | Mandatory Field | On              |
 
 ![DC_Lab.12.8_Create_Template_3](/assets/images/DC_Lab_12.8._Create_Template_3.png)
 
--  Click on ***Add Field**** button and add ***Email*** field with the following parameters into the form:
+-  Click on ***Add Field*** button and add ***Email*** field with the following parameters into the form:
 
 | **Parameter Name**  | **Parameter Value** |
 | --------------- | --------------- |
 | Type            | Email           |
-| Name            | email           |
+| Name            | Email           |
 | Label           | Email           |
 | Mandatory Field | On              |
 
