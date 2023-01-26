@@ -1018,7 +1018,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ## 1. \[Optional\] Create a service 
 
->**Note**: This step should be performed only if ***My First Service*** does not exist in Webex Connect.
+>**Note**: This step should be performed only if ***My First Service*** does not exist in Connect Portal.
 
 -  Login to Connect Portal using provided URL ***https://cl1pod\<ID\>.imiconnect.io/*** (where ***\<ID\>*** is your POD number).
 -  Go to ***Services*** and press ***Create New Service*** button ar the right top corner.
@@ -1086,7 +1086,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Queue_2](/assets/images/DC_Lab_12.8._Create_Queue_2.png)
 
 -  Set ***Service Level Threshold*** as **`7200`** seconds (2 hours).
--  Set ***Maximum Time in Queue*** as **`10800`** seconds (2 hours).
+-  Set ***Maximum Time in Queue*** as **`10800`** seconds (3 hours).
 -  The ***Time Zone*** can stay as default value.
 -  Click on ***Save*** after comparing your values with the screenshot below.
 
@@ -1139,7 +1139,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Website_1](/assets/images/DC_Lab_12.8._Create_Website_1.png)
 
--  Go to ***Assets*** -> search and edit ***ChatAsset*** which you have created in Connect Portal.
+-  Go to ***Assets*** -> search and edit ***Chat_Asset*** which you have created in Connect Portal.
 
 ![DC_Lab.12.8_Create_Website_2](/assets/images/DC_Lab_12.8._Create_Website_2.png)
 
@@ -1181,7 +1181,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Website_7](/assets/images/DC_Lab_12.8._Create_Website_7.png)
  
--  Scroll up, select ***Widget Visibility*** tab and make sure that ***Force Turn Off Widget*** switch is deisabled.  Then select ***Widget Visibility*** as ***Show without any restrictions*** and save changes.
+-  Scroll up, select ***Widget Visibility*** tab and make sure that ***Force Turn Off Widget*** switch is disabled.  Then select ***Widget Visibility*** as ***Show without any restrictions*** and save changes.
 
 ![DC_Lab.12.8_Create_Website_8](/assets/images/DC_Lab_12.8._Create_Website_8.png)
 
@@ -1203,8 +1203,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
 -  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Inbound Flow.workflow.zip*** and click ***Download***.
--  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download.***
--  Unzip both downloaded files.
+-  Unzip the file.
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
 -  In the service click on **Flows** -> **Create Flow** .
 
@@ -1229,6 +1228,8 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  In ***Create Task*** node check and make sure the values of parameters in ***Customer Details*** section corresponds to the values of the same parameters under ***Receive*** -> ***InApp - Form Response*** section. Then save the node.
 
+>***Note:*** If you need to modify values in ***Customer Details*** section, please do it manually by copying them from the table below. Please ***DO NOT*** modify the values in ***Customer Details*** section by clicking on parameters under ***Receive*** -> ***InApp - Form Response*** section.
+
 | **Parameter Name**   | **Parameter Value**                        |
 | ---------------- | -------------------------------------- |
 | Customer ID      | $(n38.inappmessaging.formFields.Email) |
@@ -1237,6 +1238,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Flow_6](/assets/images/DC_Lab_12.8._Create_Flow_6.png)
 
+-  After ***Create Task*** node is saved, please open it again and check that the parameters in ***Customer Details*** section are not empty. If they are empty, please correct them manually and save the node one more time.
 -  In ***Queue Task*** node select ***Queue Name*** as ***Chat_Q*** created in Webex CC Management Portal in step 4 above and save changes.
 
 ![DC_Lab.12.8_Create_Flow_7](/assets/images/DC_Lab_12.8._Create_Flow_7.png)
@@ -1257,6 +1259,9 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 >***Note***: Chat Close Flow is triggered every time whenever the end user closed the conversation thread from the widget.
 
+-  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
+-  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download.***
+-  Unzip the file.
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
 -  In the service click on **Flows** -> **Create Flow**.
 -  Enter the ***Flow Name*** as **`Chat Close Flow`**, select the ***Type*** as ***Work Flow*** and under ***Method*** select ***Upload a flow***.
@@ -1299,7 +1304,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Verify_3](/assets/images/DC_Lab_12.8._Verify_3.png)
 
--  Make sure end user is able to exchange messages with the agent. Then you can close the chat.
+-  Make sure end user and agent are able to exchange messages with each other. Then you can close the chat.
 
 ![DC_Lab.12.8_Verify_4](/assets/images/DC_Lab_12.8._Verify_4.png)
 
