@@ -2289,7 +2289,11 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 -   Admin credentials to login to Webex Connect portal
 
-Vidcast: [https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53](https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53)
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+
+<iframe src="https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+
+</div>
 
 ## Adding a Custom Node
 
@@ -2329,7 +2333,11 @@ Vidcast: [https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53](htt
 
 ## Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
 
-Vidcast: [https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873](https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873)
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+
+<iframe src="https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+
+</div>
 
 ![Lab12.20_CustomNodeDemo](/assets/images/Lab12.20_CustomNodeDemo.png)
 
@@ -2488,8 +2496,6 @@ Both variables are transferable between flows. In the second part of this lab in
 
 ## Fetching and Reporting Global Variable
 
-Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813](https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813)
-
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 
 <iframe src="https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -2536,7 +2542,12 @@ Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c
 
 ### 3.     Configure Analyzer to report the Global Variables configured in Webex Connect flow
 
-Reporting GV vidcast: [https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043](https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043)
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+
+<iframe src="https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+
+</div>
+
 
 -   Navigate to “Reporting and Analytics” at the left column of WxCC portal
 ![Lab12.24.1_GVThird](/assets/images/Lab12.24.1_GVThird.png)
@@ -2557,7 +2568,11 @@ Reporting GV vidcast: [https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6
 
 ## Configuring Flow Variables
 
-Vidcast: [https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3](https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3)
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+
+<iframe src="https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+
+</div>
 
 ### Login in to Webex Connect portal and open your inbound chat flow
 
@@ -2591,7 +2606,11 @@ Vidcast: [https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3](htt
 
 ## Transfer Global and Flow variable values between Webex Connect flows
 
-Vidcast: [https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513](https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513)
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+
+<iframe src="https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+
+</div>
 
 ## Lab Objective
 
