@@ -1,5 +1,7 @@
 // form.js
 console.log("TRIGGER1");
+try {
+
 //let formId = "attendee-form"; // ID of the form, used to identify the form
 //let className = ".attendee-class";
 //let saveButton = document.querySelector("#save"); // select save button
@@ -7,7 +9,7 @@ let alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${"attendee-form"}`); // select form
 let formElements = form.elements; // get the elements in the form
 let formElement = "attendee-id";
-
+} catch (err) {console.log("TRIGGER2");}
 
   
 //Function which updates all "attendee-class" 
