@@ -1127,7 +1127,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Flow_1](/assets/images/DC_Lab_12.8._Create_Flow_1.png)
 
--  Enter the ***Flow Name*** as **`Email Inbound Flow`**, select the ***Type*** as ***Work Flow*** and under ***Method*** select ***Upload a flow***.
+-  Enter the ***Flow Name*** as **`Chat Inbound Flow`**, select the ***Type*** as ***Work Flow*** and under ***Method*** select ***Upload a flow***.
 
 -  Drag and drop unzipped ***Live Chat Inbound Flow.workflow*** flow, click ***Create***.
 
@@ -1145,21 +1145,31 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Flow_5](/assets/images/DC_Lab_12.8._Create_Flow_5.png)
 
--  In ***Queue task*** node select ***Queue Name*** as ***Chat_Q*** created in Webex CC Management Portal in step 4 above and save changes.
+-  In ***Create Task*** node check and make sure the values of parameters in ***Customer Details*** section corresponds to the values of the same parameters under ***Receive*** -> ***InApp - Form Response*** section. Then save the node.
+
+| **Parameter Name**   | **Parameter Value**                        |
+| ---------------- | -------------------------------------- |
+| Customer ID      | $(n38.inappmessaging.formFields.Email) |
+| Customer Name    | $(n38.inappmessaging.formFields.Name)  |
+| LIVECHAT USER ID | $(n38.inappmessaging.formFields.Email) |
 
 ![DC_Lab.12.8_Create_Flow_6](/assets/images/DC_Lab_12.8._Create_Flow_6.png)
 
--  Click on ***Settings*** (gear icon) on top right corner of flow builder window and go to ***Custom variables*** tab. Here enter ***appid*** as the ***App ID*** of the asset created in step 2 above. In addition. enter ***liveChatDomain*** as **`www.w3schools.com`** and save changes.
+-  In ***Queue Task*** node select ***Queue Name*** as ***Chat_Q*** created in Webex CC Management Portal in step 4 above and save changes.
 
 ![DC_Lab.12.8_Create_Flow_7](/assets/images/DC_Lab_12.8._Create_Flow_7.png)
 
+-  Click on ***Settings*** (gear icon) on top right corner of flow builder window and go to ***Custom variables*** tab. Here enter ***appid*** as the ***App ID*** of the asset created in step 2 above. In addition. enter ***liveChatDomain*** as **`www.w3schools.com`** and save changes.
+
+![DC_Lab.12.8_Create_Flow_8](/assets/images/DC_Lab_12.8._Create_Flow_8.png)
+
 -  Click on ***Save*** button on top right corner to save the entire flow.
 
--  Finally click on ***Make Live*** on top right corner then select the ***Application*** as ***ChatAsset*** and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
+-  Finally click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
 >***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
 
-![DC_Lab.12.8_Create_Flow_8](/assets/images/DC_Lab_12.8._Create_Flow_8.png)
+![DC_Lab.12.8_Create_Flow_9](/assets/images/DC_Lab_12.8._Create_Flow_9.png)
 
 
 ## Step 8. Create Chat Close flow
