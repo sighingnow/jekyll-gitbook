@@ -888,113 +888,131 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 #### Pre-requisite
 
-1. Webex CC Portal, Agent Desktop and Webex Connect URL.
-2. Admin credentials to complete configurations in Webex CC portal and Webex Connect.
-3. Agent Credentials to handle the Chat.
+1. Webex CC Portal, Agent Desktop and Webex Connect URL .
+2. Admin credentials to complete configurations in Webex CC Management Portal and Engage Portal.
+3. Admin credentials to complete configurations in Connect Portal.
+4. Agent Credentials to handle the Chat.
 
-## Step 1. Create Chat Asset
+#### Quick Links
 
-#### 1. \[Optional\] Create a service 
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**\
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)**\
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
+> Webex Connect: https://cl1pod<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
 
->**Note**: This step should be performed only if **_My First Service_** service does not exist in Webex Connect.
 
--  Log into Webex Connect UI using provided URL **_https://cl1pod\<ID\>.imiconnect.io/_** (where **\<ID\>** is your POD number).
+## Lab Section
 
--  Go to **_Services_** and press **_Create New Service_** button ar the right top corner.
+## Step 1. \[Optional\] Create a service 
 
--  Input the name **`My First Service`** and press **_Create_** button.
+>**Note**: This step should be performed only if ***My First Service*** does not exist in Webex Connect.
+
+-  Login to Connect Portal using provided URL ***https://cl1pod\<ID\>.imiconnect.io/*** (where ***\<ID\>*** is your POD number).
+
+-  Go to ***Services*** and press ***Create New Service*** button ar the right top corner.
+
+-  Input the name **`My First Service`** and press ***Create*** button.
 
 ![DC_Lab.12.8_Create_Service](/assets/images/DC_Lab_12.8._Create_Service.png)
 
-#### 2. Chat Asset configuration and Register to Webex CC in Webex Connect
 
--  Log into Webex Connect UI.
+## Step 2. Configure and Register Chat Asset
 
--  Go to **_Assets_** -> **_Apps_**, press **_Configure New App_** and select **_Mobile / Web_** option.
+-  Login to Connect Portal.
+
+-  Go to ***Assets*** -> ***Apps***, press ***Configure New App*** and select ***Mobile / Web*** option.
 
 ![DC_Lab.12.8_Create_Asset_1](/assets/images/DC_Lab_12.8._Create_Asset_1.png)
 
--  Input **_Name_** as **`ChatAsset`**.
+-  Input ***Name*** as **`ChatAsset`**.
 
--  Toggle/enable **_Live Chat / In-AppMessaging_** to **_ON_** and choose **_Primary Transport Protocol_** as **`MQTT`** & **_Secondary Transport Protocol_** as **`Web Socket`** then tick **_Use Secured Port_** checkbox and press **_Save_** button.
+-  Toggle/enable ***Live Chat / In-AppMessaging*** to ***ON*** and choose ***Primary Transport Protocol*** as **`MQTT`** & ***Secondary Transport Protocol*** as **`Web Socket`** then tick ***Use Secured Port*** checkbox and press ***Save*** button.
 
->**Note**: If there is an error that your request cannot be processed, please press **_Save_** button one more time.
+>**Note**: If there is an error that your request cannot be processed, please press ***Save*** button one more time.
 
 ![DC_Lab.12.8_Create_Asset_2](/assets/images/DC_Lab_12.8._Create_Asset_2.png)
 
--  Once asset is saved, press **_Register To Webex Engage_** at the top, choose **_My First Service_** service from the drop-down list and press **_Register_** button.
+-  Once asset is saved, press ***Register To Webex Engage*** at the top, choose ***My First Service*** from the drop-down list and press ***Register*** button.
 
 ![DC_Lab.12.8_Create_Asset_3](/assets/images/DC_Lab_12.8._Create_Asset_3.png)
 
--  Check and make sure the asset has been succesfully registered to the service and  **_Register To Webex Engage_** button has been greyed out.
+-  Check and make sure the asset has been succesfully registered to the service and  ***Register To Webex Engage*** button has been greyed out.
 
 ![DC_Lab.12.8_Create_Asset_4](/assets/images/DC_Lab_12.8._Create_Asset_4.png)
 
-### 3. Create Entry Point for Chat
+*  Return to ***Assets*** -> ***Apps***, find ***ChatAsset***, copy ***App ID***, paste it into the text file and save. We will use it when configuring chat flow later.
 
--  Log into Webex CC Management Portal URL with the credentials and access the menu **_Provisioning_** -> **_Entry Point/Queues_** -> **_Entry Point_**.
+![DC_Lab.12.8_Create_Asset_5](/assets/images/DC_Lab_12.8._Create_Asset_5.png)
 
--  Press **_New Entry Point_** button.
+
+## Step 3. Create Entry Point for Chat
+
+-  Login to Webex CC Management Portal URL with the credentials and access the menu ***Provisioning*** -> ***Entry Point/Queues*** -> ***Entry Point***.
+
+-  Press ***New Entry Point*** button.
 
 ![DC_Lab.12.8_Create_Entry_Point_1](/assets/images/DC_Lab_12.8._Create_Entry_Point_1.png)
 
--  Input **_Name_** as **`Chat_EP`**.
+-  Input ***Name*** as **`Chat_EP`**.
 
--  Select **`Chat`** from the **_Channel Type_** drop-down list.
+-  Select **`Chat`** from the ***Channel Type*** drop-down list.
 
--  Select **`ChatAsset`** as an **_Asset Name_**.
+-  Select **`ChatAsset`** as an ***Asset Name***.
 
--  Set **_Service Level Threshold_** as **`7200`** seconds (2 hours).
+-  Set ***Service Level Threshold*** as **`7200`** seconds (2 hours).
 
--  The **_Time Zone_** can stay as default value.
+-  The ***Time Zone*** can stay as default value.
 
--  Click on **Save** after comparing your values with the screenshot below.
+-  Click on ***Save*** after comparing your values with the screenshot below.
 
 ![DC_Lab.12.8_Create_Entry_Point_2](/assets/images/DC_Lab_12.8._Create_Entry_Point_2.png)
 
-### 4. Create Queue for Chat
 
--  On Webex CC Management Portal access the menu **_Provisioning_** -> **_Entry Point/Queues_** -> **_Queue_**.
+## Step 4. Create Queue for Chat
 
--  Click on **_New Queue_**.
+-  On Webex CC Management Portal access the menu ***Provisioning*** -> ***Entry Point/Queues*** -> ***Queue***.
+
+-  Click on ***New Queue***.
 
 ![DC_Lab.12.8_Create_Queue_1](/assets/images/DC_Lab_12.8._Create_Queue_1.png)
 
--  Input **_Name_** as **`Chat_Q`**.
+-  Input ***Name*** as **`Chat_Q`**.
 
--  Select **`Chat`** in the **_Channel Type_** section.
+-  Select **`Chat`** in the ***Channel Type*** section.
 
--  Leave the **_Queue Routing Type_** as default value **`Longest Available Agent`**.
+-  Leave the ***Queue Routing Type*** as default value **`Longest Available Agent`**.
 
--  In the **_Chat Distribution_** click on **_Add Group_** and select `Team1`.
+-  In the ***Chat Distribution*** click on ***Add Group*** and select `Team1`.
 
 ![DC_Lab.12.8_Create_Queue_2](/assets/images/DC_Lab_12.8._Create_Queue_2.png)
 
--  Set **_Service Level Threshold_** as **`7200`** seconds (2 hours).
+-  Set ***Service Level Threshold*** as **`7200`** seconds (2 hours).
 
--  Set **_Maximum Time in Queue_** as **`10800`** seconds (2 hours).
+-  Set ***Maximum Time in Queue*** as **`10800`** seconds (2 hours).
 
--  The **_Time Zone_** can stay as default value.
+-  The ***Time Zone*** can stay as default value.
 
--  Click on **Save** after comparing your values with the screenshot below.
+-  Click on ***Save*** after comparing your values with the screenshot below.
 
 ![DC_Lab.12.8_Create_Queue_3](/assets/images/DC_Lab_12.8._Create_Queue_3.png)
 
-### 5. Create Chat Template
+
+## Step 5. Create Chat Template
 
 -  Login to Webex Connect UI.
 
--  Go to **_Tools_** -> **_Templates_** and press **_Add new Template_** button.
+-  Go to ***Tools*** -> ***Templates*** and press ***Add new Template*** button.
 
 ![DC_Lab.12.8_Create_Template_1](/assets/images/DC_Lab_12.8._Create_Template_1.png)
 
--   Provide **_Name_** as **`Chat_Template`** and choose **_Channel_** as **_Live Chat / In-App Messaging_**
+-  Provide **_Name_** as **`Chat_Template`** and choose **_Channel_** as **_Live Chat / In-App Messaging_**
 
--   Select **_Message Type_** as **_Form_**.
+-  Select ***Message Type*** as ***Form****.
 
--   Provide the **_Title_** as **`Welcome to Webex CC Chat`** and this will be the welcome message.
+-  Provide the ***Title*** as **`Welcome to Webex CC Chat`** and this will be the welcome message.
 
--   Click on **_Add Field_** and add ***First Name*** field with the following parameters into the form:
+-  Click on ***Add Field*** and add ***First Name*** field with the following parameters into the form:
 
 | **Parameter Name**  | **Parameter Value** |
 | --------------- | --------------- |
@@ -1005,7 +1023,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Template_2](/assets/images/DC_Lab_12.8._Create_Template_2.png)
 
--   Click on **_Add Field_** and add ***Last Name*** field with the following parameters into the form:
+-  Click on ***Add Field*** and add ***Last Name*** field with the following parameters into the form:
 
 | **Parameter Name**  | **Parameter Value** |
 | --------------- | --------------- |
@@ -1016,7 +1034,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Template_3](/assets/images/DC_Lab_12.8._Create_Template_3.png)
 
--   Click on **_Add Field_** button and add ***Email*** field with the following parameters into the form:
+-  Click on ***Add Field**** button and add ***Email*** field with the following parameters into the form:
 
 | **Parameter Name**  | **Parameter Value** |
 | --------------- | --------------- |
@@ -1027,9 +1045,174 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Template_4](/assets/images/DC_Lab_12.8._Create_Template_4.png)
 
--   Click on **Save** after comparing your values with the screenshot below.
+-   Click on ***Save*** after comparing your values with the screenshot below.
 
 ![DC_Lab.12.8_Create_Template_5](/assets/images/DC_Lab_12.8._Create_Template_5.png)
+
+## Step 6. Website Widget Configuration
+
+-  Login to WxCC Management Portal access the menu and cross launch Engage Portal by choosing ***New Digital Channels***.
+
+![DC_Lab.12.8_Create_Website_1](/assets/images/DC_Lab_12.8._Create_Website_1.png)
+
+-  Go to ***Assets*** -> search and edit ***ChatAsset*** which you have created in Connect Portal.
+
+![DC_Lab.12.8_Create_Website_2](/assets/images/DC_Lab_12.8._Create_Website_2.png)
+
+-  Scroll down and click on ***Save Changes*** button.
+ 
+-  Scroll to top of the page and choose ***Websites*** tab.
+
+-  Click on ***ADD Website***.
+
+![DC_Lab.12.8_Create_Website_3](/assets/images/DC_Lab_12.8._Create_Website_3.png)
+
+-  Fill in the respective fields as per the table below:
+
+| **Parameter Name**  | **Parameter Value** |
+| --------------- | --------------- |
+| Chat Widget Language            | English-US            |
+| Display Name            | Webex CC Chat Demo       |
+| Byline Text           | Web chat of the future      |
+| Button Text | Start Chat |
+| First message | Hello! Welcome to the chat. Please share your contact details below to start a chat with an agent. |
+| PCI Compliance Banner Message | This chat is PCI compliant |
+| Domain | www.w3schools.com |
+| Set wait time | Disabled |
+| Set Chat Announcement | Enabled | 
+
+-  Scroll down and click on ***Save changes*** button after comparing your values with the screenshot below.
+
+![DC_Lab.12.8_Create_Website_4](/assets/images/DC_Lab_12.8._Create_Website_4.png)
+
+![DC_Lab.12.8_Create_Website_5](/assets/images/DC_Lab_12.8._Create_Website_5.png)
+
+![DC_Lab.12.8_Create_Website_6](/assets/images/DC_Lab_12.8._Create_Website_6.png)
+
+-  Scroll up, select ***Appearance*** and change the settings:
+	- \[Optional\] Widget Color
+	- \[Optional\] Widget Button Type
+	- \[Optional\[ Logo
+	- Enable Emojis
+	- Enable Attachments
+
+-  Press ***Save changes*** button at the bottom of the page.
+
+![DC_Lab.12.8_Create_Website_7](/assets/images/DC_Lab_12.8._Create_Website_7.png)
+ 
+-  Scroll up, select ***Widget Visibility*** tab and make sure widget visibility feature is disabled.
+
+![DC_Lab.12.8_Create_Website_8](/assets/images/DC_Lab_12.8._Create_Website_8.png)
+
+-  Now click on ***<*** link near ***Website Settings*** and go-back to edit your chat asset.
+
+![DC_Lab.12.8_Create_Website_9](/assets/images/DC_Lab_12.8._Create_Website_9.png)
+
+- Select ***Installation*** then click on ***Copy*** to copy the chat script to clipboard.
+
+![DC_Lab.12.8_Create_Website_10](/assets/images/DC_Lab_12.8._Create_Website_10.png)
+
+![DC_Lab.12.8_Create_Website_10](/assets/images/DC_Lab_12.8._Create_Website_11.png)
+ 
+-  Paste copied script into a text editor and save it. We will paste it on web site later.
+
+## Step 7. Create Chat Inbound flow
+
+>***Note***: Chat Inbound Flow is triggered whenever end user started new chat session or sent a message via existing one.
+
+-  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
+
+-  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Inbound Flow.workflow.zip*** and click ***Download***.
+
+-  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download***.
+
+-  Unzip both downloaded files.
+
+-  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
+
+-  In the service click on **Flows** -> **Create Flow** .
+
+![DC_Lab.12.8_Create_Flow_1](/assets/images/DC_Lab_12.8._Create_Flow_1.png)
+
+-  Enter the ***Flow Name*** as **`Email Inbound Flow`**, select the ***Type*** as ***Work Flow*** and under ***Method*** select ***Upload a flow***.
+
+-  Drag and drop unzipped ***Live Chat Inbound Flow.workflow*** flow, click ***Create***.
+
+![DC_Lab.12.8_Create_Flow_2](/assets/images/DC_Lab_12.8._Create_Flow_2.png)
+
+-  You will be redirected to the new flow opened in the flow builder. Click ***Save*** to save the changes.
+
+![DC_Lab.12.8_Create_Flow_3](/assets/images/DC_Lab_12.8._Create_Flow_3.png)
+
+-  In the ***Pre-chat form*** node the ***Form Template*** needs to be selected as ***Chat_Template*** created in step 5 above. Press ***Save*** button to save changes in node configuration.
+
+![DC_Lab.12.8_Create_Flow_4](/assets/images/DC_Lab_12.8._Create_Flow_4.png)
+
+-  In the ***Receive*** node also, select the same ***Chat_Template*** in ***Form Template*** drop-down list and save changes.
+
+![DC_Lab.12.8_Create_Flow_5](/assets/images/DC_Lab_12.8._Create_Flow_5.png)
+
+-  In ***Queue task*** node select ***Queue Name*** as ***Chat_Q*** created in Webex CC Management Portal in step 4 above and save changes.
+
+![DC_Lab.12.8_Create_Flow_6](/assets/images/DC_Lab_12.8._Create_Flow_6.png)
+
+-  Click on ***Settings*** (gear icon) on top right corner of flow builder window and go to ***Custom variables*** tab. Here enter ***appid*** as the ***App ID*** of the asset created in step 2 above. In addition. enter ***liveChatDomain*** as **`www.w3schools.com`** and save changes.
+
+![DC_Lab.12.8_Create_Flow_7](/assets/images/DC_Lab_12.8._Create_Flow_7.png)
+
+-  Click on ***Save*** button on top right corner to save the entire flow.
+
+-  Finally click on ***Make Live*** on top right corner then select the ***Application*** as ***ChatAsset*** and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
+
+>***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
+
+![DC_Lab.12.8_Create_Flow_8](/assets/images/DC_Lab_12.8._Create_Flow_8.png)
+
+
+## Step 8. Create Chat Close flow
+
+>***Note***: Chat Close Flow is triggered every time whenever the end user closed the conversation thread from the widget.
+
+-  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
+
+-  In the service click on **Flows** -> **Create Flow**.
+
+-  Enter the ***Flow Name*** as **`Chat Close Flow`**, select the ***Type*** as ***Work Flow*** and under ***Method*** select ***Upload a flow***.
+
+-  Drag and drop unzipped ***Live Chat Close Flow.workflow*** flow, click ***Create***.
+
+![DC_Lab.12.8_Create_Closed_Flow_1](/assets/images/DC_Lab_12.8._Create_Closed_Flow_1.png)
+
+-  You will be redirected to the new flow opened in the flow builder. Click ***Save*** to save the changes.
+
+![DC_Lab.12.8_Create_Closed_Flow_2](/assets/images/DC_Lab_12.8._Create_Closed_Flow_2.png)
+
+-  Click on ***Save*** button on top right corner to save the entire flow.
+
+-  Finally click on ***Make Live*** on top right corner then select the ***Application*** as ***ChatAsset*** and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
+
+>***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
+
+![DC_Lab.12.8_Create_Closed_Flow_3](/assets/images/DC_Lab_12.8._Create_Closed_Flow_3.png)
+
+
+## Step 9. Publish Chat Widget
+
+-  Go to [HTML TryIt Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro)
+
+-  Paste the script which you copied in step 6 just above the ```</body>``` tag in the left window and click on ***Run***. You should see chat widget icon in the right bottom corner of the window.
+
+![DC_Lab.12.8_Publish_Widget_1](/assets/images/DC_Lab_12.8._Publish_Widget_1.png)
+
+
+## Step 10. Verification: Initiate chat and accept the task
+
+-  Click on chat widget icon in the right bottom corner of [HTML TryIt Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro) window and press ***Start Chat*** button.
+
+
+
+-  Go to the Agent Desktop and make the agent Available. 
+
 
 
 
