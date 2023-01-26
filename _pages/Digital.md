@@ -1938,6 +1938,12 @@ Both variables are transferable between flows. In the second part of this lab in
 
 Fetching GV Vidcast: [https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813](https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813)
 
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+
+<iframe src="https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+
+</div>
+
 ### 1.     Login in to Webex CC administration portal
 
 -   From left column, navigate to “Global Variables”
