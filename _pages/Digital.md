@@ -369,7 +369,7 @@ Connect allows the Owner to create local users in containers called **Groups** a
 -   Group – can contain users and Teams
 -   Team – can contain users only
 
-To create new groups or teams go to ‘Settings’ > 'Groups/Teams'
+> To create new groups or teams go to ‘Settings’ > 'Groups/Teams'
 
 ## **3. Login to Connect portal**
 
