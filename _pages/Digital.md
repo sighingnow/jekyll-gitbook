@@ -925,7 +925,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Asset_1](/assets/images/DC_Lab_12.8._Create_Asset_1.png)
 
--  Input ***Name*** as **`ChatAsset`**.
+-  Input ***Name*** as **`Chat_Asset`**.
 
 -  Toggle/enable ***Live Chat / In-AppMessaging*** to ***ON*** and choose ***Primary Transport Protocol*** as **`MQTT`** & ***Secondary Transport Protocol*** as **`Web Socket`** then tick ***Use Secured Port*** checkbox and press ***Save*** button.
 
@@ -958,7 +958,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Select **`Chat`** from the ***Channel Type*** drop-down list.
 
--  Select **`ChatAsset`** as an ***Asset Name***.
+-  Select **`Chat_Asset`** as an ***Asset Name***.
 
 -  Set ***Service Level Threshold*** as **`7200`** seconds (2 hours).
 
@@ -1069,17 +1069,17 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Fill in the respective fields as per the table below:
 
-| **Parameter Name**  | **Parameter Value** |
-| --------------- | --------------- |
-| Chat Widget Language            | English-US            |
-| Display Name            | Webex CC Chat Demo       |
-| Byline Text           | Web chat of the future      |
-| Button Text | Start Chat |
-| First message | Hello! Welcome to the chat. Please share your contact details below to start a chat with an agent. |
+| **Parameter Name**                | **Parameter Value**            |
+| ----------------------------- | -------------------------- |
+| Chat Widget Language          | English-US                 |
+| Display Name                  | Webex CC Chat Demo         |
+| Byline Text                   | Web chat of the future     |
+| Button Text                   | Start Chat                 |
+| First message                 | Hello! Welcome to the chat |
 | PCI Compliance Banner Message | This chat is PCI compliant |
-| Domain | www.w3schools.com |
-| Set wait time | Disabled |
-| Set Chat Announcement | Enabled | 
+| Domain                        | www.w3schools.com          |
+| Set wait time                 | Disabled                   |
+| Set Chat Announcement         | Enabled                    | 
 
 -  Scroll down and click on ***Save changes*** button after comparing your values with the screenshot below.
 
@@ -1100,11 +1100,11 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Website_7](/assets/images/DC_Lab_12.8._Create_Website_7.png)
  
--  Scroll up, select ***Widget Visibility*** tab and make sure widget visibility feature is disabled.
+-  Scroll up, select ***Widget Visibility*** tab and make sure that ***Force Turn Off Widget*** switch is deisabled.  Then select ***Widget Visibility*** as ***Show without any restrictions*** and save changes.
 
 ![DC_Lab.12.8_Create_Website_8](/assets/images/DC_Lab_12.8._Create_Website_8.png)
 
--  Now click on ***<*** link near ***Website Settings*** and go-back to edit your chat asset.
+-  Now click on ***<*** arrow near ***Website Settings*** and go-back to edit your chat asset.
 
 ![DC_Lab.12.8_Create_Website_9](/assets/images/DC_Lab_12.8._Create_Website_9.png)
 
@@ -1189,7 +1189,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  Click on ***Save*** button on top right corner to save the entire flow.
 
--  Finally click on ***Make Live*** on top right corner then select the ***Application*** as ***ChatAsset*** and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
+-  Finally click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click on ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
 >***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
 
