@@ -1764,7 +1764,147 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 
 # Lab.12.12 - Connect Templates
+
+## Introduction
+
+
 # Lab.12.13 - Engage Templates
+
+## Table of Contents
+
+| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Understanding Engage Templates](#1-Understanding-Engage-Templates)             | Read & Understand | EASY            | 5 min            |
+| [\[Optional\] Create Engage Template Group](#2-\[Optional\]-Create-Engage-Template-Group)                       | Read & Understand     | EASY            | 5 min            |
+| [Create Engage Templates](#3-Create-Engage-Templates) | Read & Understand     | EASY            | 5 min            |
+| [Bulk Upload of Engage Templates](#4-Bulk-Upload-of-Engage-Templates) | Read & Understand     | EASY            | 5 min            |
+| [Verify Engage Template in Agent Desktop](#5-Verify-Engage-Template-in-Agent-Desktop) | Read & Understand     | EASY            | 5 min            |
+
+## Introduction
+
+This section is designed to introduce Engage templates, which are used for quick reply from the agent desktop to end user through various digital channels. In this section you will find configuration steps and examples of use. The goal is to understand the purpose of each template.
+
+## 1. Understanding Engage Templates
+
+Engage templates makes agent's job easier by providing the possiblity to use some standard quick replies to the end-user in the agent desktop during the conversation ove any digital channel.
+There are few key items about Engage templates which provides better understanding of the feature:
+- Agent can use a template in the agent desktop only after accepting the conversation initiated via digital channel.
+- Agent can edit the text of the template before sending the message unless it is prohibited by template settings.
+- Engage administrator can create various template groups to organanize templates.
+- Each template should be added into the group.
+- Each teamplate can be created for for one or many digital channels.
+- Many templates can be uploaded to Engage Portal in a bulk.
+- One or more of the following categories can be assigned to each template brings more flexibility when using it:
+	- Start Template
+	- End Template
+	- Followup Template  
+- Engage administrator can use variables to customize the same template for each end user. For example:
+	- system.customer_name
+	- system.customer_id
+	- system.customer.mobile_no
+	- system.asset
+	- system.customer_email_address
+
+
+## 2. \[Optional\] Create Engage Template Group
+
+>***Note:*** This step should be completed if you want to create template group. There is no need to create new group if you want to add a template into an existing one. 
+
+-  Login to WxCC Management Portal access the menu and cross launch Engage Portal by choosing ***New Digital Channels***.
+
+![DC_Lab.12.8_Create_Website_1](/assets/images/DC_Lab_12.8._Create_Website_1.png)
+
+* Go to ***Assets*** -> ***Templates*** and press **''+"** button near ***TEMPLATE GROUPS*** section.
+
+![DC_Lab.12.13_Create_Engage_1](/assets/images/DC_Lab_12.13._Create_Engage_1.png)
+
+- Provide ***Template Group name*** and press ***Add*** button to save it.
+
+![DC_Lab.12.13_Create_Engage_2](/assets/images/DC_Lab_12.13._Create_Engage_2.png)
+
+- You can delet existing template group by clicking on bin icon near the template name in ***TEMPLATE GROUPS*** section.
+
+![DC_Lab.12.13_Create_Engage_3](/assets/images/DC_Lab_12.13._Create_Engage_3.png)
+
+
+## 3. Create Engage Templates
+
+- Go to ***Assets*** -> ***Templates***, click on template group name in ***TEMPLATE GROUPS*** section. Then press ***Add template*** button.
+
+![DC_Lab.12.13_Create_Engage_4](/assets/images/DC_Lab_12.13._Create_Engage_4.png)
+
+- Let's create start template for web chat channel. Please click on ***Livechat*** in template header and provide necessary template details:
+
+| **Parameter Name**    | **Parameter Value**                                           |
+| ----------------- | --------------------------------------------------------- |
+| Template DI       | HelloTemplate                                             |
+| Is Start Template | Enabled                                                   |
+| Template Text     | Hello @@system.customer_name@@, How can I help you today? |
+| Lock Template     | Disabled                                                  |
+| Shared across     | Default                                                   |
+
+>***Note:*** Please pay your attention that we used ***system.customer_name*** variable in ***Template Text*** field. You can see the list of all supported variables and select the required one when typing @@ in the field.  
+
+>***Note:*** You can lock the template by enabling ***Lock Template*** toggle. In this case agent will not be allowed to modify the text of the template before sending the message to the end user.
+
+![DC_Lab.12.13_Create_Engage_5](/assets/images/DC_Lab_12.13._Create_Engage_5.png)
+
+- You can edit or delete the template by clicing on corresponding icon in the ***Actions*** column in the table with template details.
+
+![DC_Lab.12.13_Create_Engage_6](/assets/images/DC_Lab_12.13._Create_Engage_6.png)
+
+
+## 4. Bulk Upload of Engage Templates
+
+- Go to ***Assets*** -> ***Templates***, click on ***Upload template*** button.
+
+![DC_Lab.12.13_Bulk_Engage_1](/assets/images/DC_Lab_12.13._Bulk_Engage_1.png)
+
+- Click on ***Download sample file here*** link to download CSV sample file.
+
+![DC_Lab.12.13_Bulk_Engage_2](/assets/images/DC_Lab_12.13._Bulk_Engage_2.png)
+
+- Open sample file, provide necessary values according to ***Help Notes*** section. Then delete ***Help Notes*** section and save changes.
+
+![DC_Lab.12.13_Bulk_Engage_3](/assets/images/DC_Lab_12.13._Bulk_Engage_3.png)
+
+- Return to ***Upload Template*** window, press ***upload file*** button and select the file you created above.
+
+![DC_Lab.12.13_Bulk_Engage_4](/assets/images/DC_Lab_12.13._Bulk_Engage_4.png)
+
+- Check and make sure there were no conflicts found. Then click on ***Proceed*** button.
+
+![DC_Lab.12.13_Bulk_Engage_5](/assets/images/DC_Lab_12.13._Bulk_Engage_5.png)
+
+- Make sure your file is being processed and press ***OK*** button in pop-up window.
+
+![DC_Lab.12.13_Bulk_Engage_6](/assets/images/DC_Lab_12.13._Bulk_Engage_6.png)
+
+- Click on pencil icon in ***Actions*** column of the row with uploaded template to edit it and assign the category.
+
+![DC_Lab.12.13_Bulk_Engage_7](/assets/images/DC_Lab_12.13._Bulk_Engage_7.png)
+
+- Set ***Is End Template*** toggle and save changes.
+
+![DC_Lab.12.13_Bulk_Engage_8](/assets/images/DC_Lab_12.13._Bulk_Engage_8.png)
+
+- Check and make sure that proper gategory has been successfully assigned to the uploaded template.
+
+![DC_Lab.12.13_Bulk_Engage_9](/assets/images/DC_Lab_12.13._Bulk_Engage_9.png)
+
+
+## 5. Verify Engage Template in Agent Desktop
+
+- Start web chat with the end user and make sure you are able to select the template in agent desktop and send the message.
+
+![DC_Lab.12.13_Validate_1](/assets/images/DC_Lab_12.13._Validate_1.png)
+
+![DC_Lab.12.13_Validate_2](/assets/images/DC_Lab_12.13._Validate_2.png)
+
+![DC_Lab.12.13_Validate_3](/assets/images/DC_Lab_12.13._Validate_3.png)
+
+
+
 # Lab.12.14 - Introduction to BOTs
 
 ## Table of Contents
