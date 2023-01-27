@@ -1892,12 +1892,43 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 
 
-
-
-
 # Lab.12.12 - Connect Templates
 
+## Table of Contents
+
+| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Understanding Connect Templates](#1-understanding-connect-templates)             | Read & Understand | EASY            | 5 min            |
+| [Create Chat Templates in Connect](#2-create-chat-templates-in-connect)                       | Read & Understand     | EASY            | 5 min            |
+| [Create Email Templates in Connect](#3-create-email-templates-in-connect) | Read & Understand     | EASY            | 5 min            |
+| [Create SMS Templates in Connect](#4-create-sms-templates-in-connect) | Read & Understand     | EASY            | 5 min            |
+
 ## Introduction
+
+This section is designed to introduce Connect templates, which can be used for sending notifications from flows to the end user through various digital channels. In this section you will find configuration steps and examples of use. The goal is to understand the purpose of the most popular templates.
+
+## 1. Understanding Connect Templates
+
+Connect templates can be configured on the platform and used within flows. Here are few key points to note about Connect templates which provide better understanding of the feature:
+-  Templates can be referenced in various flows.
+-  Templates can be used to send messages from flow to the end users through various digital channels.
+-  Template text can include simple text, URLs or forms.
+
+To create a template for any kind of digital channel, login to Connect Portal, then go to ***Tools*** -> ***Templates*** and press ***Add new Template*** button.
+
+![DC_Lab.12.12_Create_Connect](/assets/images/DC_Lab_12.12._Create_Connect.png)
+
+
+## 2. Create Chat Templates in Connect
+
+
+
+## 3. Create Email Templates in Connect
+
+
+
+## 4. Create SMS Templates in Connect
+
 
 
 
@@ -1915,12 +1946,12 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Introduction
 
-This section is designed to introduce Engage templates, which are used for quick reply from the agent desktop to end user through various digital channels. In this section you will find configuration steps and examples of use. The goal is to understand the purpose of each template.
+This section is designed to introduce Engage templates, which can be used for quick reply from the agent desktop to the end user through various digital channels. In this section you will find configuration steps and examples of use. The goal is to understand the purpose of each template.
 
 ## 1. Understanding Engage Templates
 
 Engage templates makes agent's job easier by providing the possiblity to use some standard quick replies to the end-user in the agent desktop during the conversation ove any digital channel.
-There are few key items about Engage templates which provides better understanding of the feature:
+Here are few key points to note about Engage templates which provide better understanding of the feature:
 - Agent can use a template in the agent desktop only after accepting the conversation initiated via digital channel.
 - Agent can edit the text of the template before sending the message unless it is prohibited by template settings.
 - Engage administrator can create various template groups to organanize templates.
