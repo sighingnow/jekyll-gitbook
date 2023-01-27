@@ -16,12 +16,12 @@ This page is under developments
 | [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Practical Lab | EASY            | 20 min           |
 | [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
 | [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
-| [Chat Channel Configuration](#lab128---) | Practical Lab | EASY            | 15 min           |
+| [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 15 min           |
 | [Facebook Messenger Channel Configuration](#lab129---) | Practical Lab | EASY            | 15 min           |
 | [SMS Channel Configuration](#lab1210---) | Practical Lab | EASY            | 15 min           |
 | [WhatsApp Channel Configuration](#lab1211---) | Practical Lab | EASY            | 15 min           |
-| [Connect Templates](#lab1212---) | Practical Lab | EASY            | 15 min           |
-| [Engage Templates](#lab1213---) | Practical Lab | EASY            | 15 min           |
+| [Connect Templates](#lab1212---connect-templates) | Practical Lab | EASY            | 15 min           |
+| [Engage Templates](#lab1213---engage-templates) | Practical Lab | EASY            | 15 min           |
 | [Introduction to BOTs](#lab1214---) | Read & Understand | MED            | 20 min           |
 | [Q&A BOTs](#lab1215---) | Practical Lab | MED            | 15 min           |
 | [Task BOTs](#lab1216---) | Practical Lab | HARD            | 30 min           |
@@ -1900,17 +1900,18 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 ## Introduction
 
 
+
 # Lab.12.13 - Engage Templates
 
 ## Table of Contents
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Understanding Engage Templates](#1-Understanding-Engage-Templates)             | Read & Understand | EASY            | 5 min            |
-| [\[Optional\] Create Engage Template Group](#2-\[Optional\]-Create-Engage-Template-Group)                       | Read & Understand     | EASY            | 5 min            |
-| [Create Engage Templates](#3-Create-Engage-Templates) | Read & Understand     | EASY            | 5 min            |
-| [Bulk Upload of Engage Templates](#4-Bulk-Upload-of-Engage-Templates) | Read & Understand     | EASY            | 5 min            |
-| [Verify Engage Template in Agent Desktop](#5-Verify-Engage-Template-in-Agent-Desktop) | Read & Understand     | EASY            | 5 min            |
+| [Understanding Engage Templates](#1-understanding-engage-templates)             | Read & Understand | EASY            | 5 min            |
+| [\[Optional\] Create Engage Template Group](#2-\[optional\]-create-engage-template-group)                       | Read & Understand     | EASY            | 5 min            |
+| [Create Engage Templates](#3-create-engage-templates) | Read & Understand     | EASY            | 5 min            |
+| [Bulk Upload of Engage Templates](#4-bulk-upload-of-engage-templates) | Read & Understand     | EASY            | 5 min            |
+| [Verify Engage Template in Agent Desktop](#5-verify-engage-template-in-agent-desktop) | Read & Understand     | EASY            | 5 min            |
 
 ## Introduction
 
