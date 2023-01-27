@@ -980,16 +980,16 @@ Now create a new client ID that will be used to identify your application to Goo
 
 | Topic                                                                     | Lab Type      | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [\[Optional\] - Create a service](#1-Optional-Create–a-service )            | Practical Lab | EASY            | 2 min            |
-| [Configure and Register Chat Asset](#2-Configure-and-Register-Chat-Asset) | Practical Lab | EASY            | 5 min            |
-| [Create Entry Point for Chat](#3-Create–Entry-Point-for-Chat)             | Practical Lab | EASY            | 5 min            |
-| [Create Queue for Chat](#4-Create-Queue-for-Chat)                         | Practical Lab | EASY            | 5 min            |
-| [Create Chat Template](#5-Create-Chat-Template)                           | Practical Lab | EASY            | 5 min            |
-| [Website Widget Configuration](#6-Website-Widget-Configuration)           | Practical Lab | EASY            | 5 min            |
-| [Create Chat Inbound flow](#7-Create-Chat-Inbound-flow)           | Practical Lab | EASY            | 5 min            |
-| [Create Chat Close flow](#8-Create-Chat-Close-flow)           | Practical Lab | EASY            | 5 min            |
-| [Publish Chat Widget](#9-Publish-Chat-Widget)           | Practical Lab | EASY            | 5 min            |
-| [Verification: Initiate chat and accept the task](#10-Verification-Initiate-chat-and-accept-the-task)           | Practical Lab | EASY            | 5 min            |
+| [\[Optional\] - Create a service](#1-optional-create–a-service)            | Practical Lab | EASY            | 2 min            |
+| [Configure and Register Chat Asset](#2-configure-and-register-chat-asset) | Practical Lab | EASY            | 5 min            |
+| [Create Entry Point for Chat](#3-create–entry-point-for-chat)             | Practical Lab | EASY            | 5 min            |
+| [Create Queue for Chat](#4-create-queue-for-chat)                         | Practical Lab | EASY            | 5 min            |
+| [Create Chat Template](#5-create-chat-template)                           | Practical Lab | EASY            | 5 min            |
+| [Website Widget Configuration](#6-website-widget-configuration)           | Practical Lab | EASY            | 5 min            |
+| [Create Chat Inbound Flow](#7-create-chat-inbound-flow)           | Practical Lab | EASY            | 5 min            |
+| [Create Chat Close Flow](#8-create-chat-close-flow)           | Practical Lab | EASY            | 5 min            |
+| [Publish Chat Widget](#9-publish-chat-widget)           | Practical Lab | EASY            | 5 min            |
+| [Verification: Initiate and Accept the Chat](#10-verification-initiate-and-accept-the-chat)           | Practical Lab | EASY            | 5 min            |
 
 
 ## Introduction
@@ -1016,7 +1016,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 > Webex Connect: https://cl1pod<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
 
 
-## 1. \[Optional\] Create a service 
+## 1. \[Optional\] Create a service
 
 >**Note**: This step should be performed only if ***My First Service*** does not exist in Connect Portal.
 
@@ -1197,7 +1197,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
  
 -  Paste copied script into a text editor and save it. We will paste it on web site later.
 
-## 7. Create Chat Inbound flow
+## 7. Create Chat Inbound Flow
 
 >***Note***: Chat Inbound Flow is triggered whenever end user started new chat session or sent a message via existing one.
 
@@ -1255,7 +1255,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Flow_9](/assets/images/DC_Lab_12.8._Create_Flow_9.png)
 
 
-## 8. Create Chat Close flow
+## 8. Create Chat Close Flow
 
 >***Note***: Chat Close Flow is triggered every time whenever the end user closed the conversation thread from the widget.
 
@@ -1289,7 +1289,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Publish_Widget_1](/assets/images/DC_Lab_12.8._Publish_Widget_1.png)
 
 
-## 10. Verification: Initiate chat and accept the task
+## 10. Verification: Initiate and Accept the Chat
 
 -  Login to the Agent Desktop and make the agent ***Not Ready***. 
 -  Click on chat widget icon in the right bottom corner of [HTML TryIt Editor](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_intro) window and press ***Start Chat*** button.
@@ -1908,7 +1908,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding Engage Templates](#1-understanding-engage-templates)             | Read & Understand | EASY            | 5 min            |
-| [\[Optional\] Create Engage Template Group](#2-\[optional\]-create-engage-template-group)                       | Read & Understand     | EASY            | 5 min            |
+| [\[Optional\] Create Engage Template Group](#2-optional-create-engage-template-group)                       | Read & Understand     | EASY            | 5 min            |
 | [Create Engage Templates](#3-create-engage-templates) | Read & Understand     | EASY            | 5 min            |
 | [Bulk Upload of Engage Templates](#4-bulk-upload-of-engage-templates) | Read & Understand     | EASY            | 5 min            |
 | [Verify Engage Template in Agent Desktop](#5-verify-engage-template-in-agent-desktop) | Read & Understand     | EASY            | 5 min            |
