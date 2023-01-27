@@ -1610,25 +1610,25 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 
 From the left side pane, click on Assets ---> Numbers
 
-![[12.10.1.png]]
+![12.10.1](/assets/images/12.10.1.png)
 
 -Select the number from the list. Click on Manage and Register to Webex Engage.In the subsequent window select the service and click register.
 
-![[12.10.2.png]]
+![12.10.2](/assets/images/12.10.2.png)
 
 -Login to the Contact Centre Management Portal . Click on Provisioning ---> Entry Points. Click on New entry Point.
 
 
-![[12.10.3.png]]
+![12.10.3](/assets/images/12.10.3.png)
 
 -Enter a unique name, select the channel type as social, Social Channel Type as SMS and select the Asset that was created in Webex Connect as the Asset name. Click Save.
 
-![[12.10.4.png]]
+![12.10.4](/assets/images/12.10.4.png)
 
 -Click on Provisioning---->Queue’s from the Left pane and click New Queue.Enter a unique name and select the Channel Type as Social Channel. Add the other required details and click Save.
 
 
-![[12.10.5.png]]
+![12.10.5](/assets/images/12.10.5.png)
 
 ### 3.     Workflow Association
 
@@ -1636,7 +1636,7 @@ From the left side pane, click on Assets ---> Numbers
 
 -Navigate to webexcc-digital-channels/Webex Connect Flows/v2.1/SMS Inbound Flow.workflow.zip select the zip file and click download.
 
-![[12.10.6.png]]
+![12.10.6](/assets/images/12.10.6.png)
 
 -Unzip the downloaded file.
 
@@ -1648,32 +1648,32 @@ From the left side pane, click on Assets ---> Numbers
 
 -Drag and drop the SMS Inbound Flow.workflow flow that is downloaded in zip file, click CREATE
 
-![[12.10.7.png]]
+![12.10.7](/assets/images/12.10.7.png)
 
 -In the resulting window select the Incoming number from the dropdown list and click Save
-![[12.10.12.png]]
+![12.10.12](/assets/images/12.10.12.png)
 
 
 ### 4.     Modifying the Flow
 
 -Open the Queue Task Node in the flow. Select the Queue that you created in an earlier step and click Save.
 
-![[12.10.8.png]]
+![12.10.8](/assets/images/12.10.8.png)
 
 -Open up an SMS node in the flow and enter the from Number variable selected from the right side pane as shown below.Click Save
 
 -Repeat the above step for all the SMS nodes in the flow.
 
-![[12.10.9.png]]
+![12.10.9](/assets/images/12.10.9.png)
 
 -Save the flow and Make Live
 
 
-![[12.10.10.png]]
+![12.10.10](/assets/images/12.10.10.png)
 
 -Login to the agent desktop, initiate an SMS to the configured number. Once the interaction pops up on the agent desktop, accept the conversation
 
-![[12.10.11 1.png]]
+![12.10.11](/assets/images/12.10.11.png)
 
 -Test the conversation between the agent and the customer.
 
