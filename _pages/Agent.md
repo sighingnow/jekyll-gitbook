@@ -279,6 +279,16 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 
 ---
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded OKOK')
+    })
+
+    window.addEventListener('load', () => {
+      console.log('window load OK')
+    })
+  </script>
+
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
