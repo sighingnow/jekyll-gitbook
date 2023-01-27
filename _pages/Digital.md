@@ -980,9 +980,9 @@ Now create a new client ID that will be used to identify your application to Goo
 
 | Topic                                                                     | Lab Type      | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [\[Optional\] - Create a service](#1-optional-create–a-service)            | Practical Lab | EASY            | 2 min            |
+| [\[Optional\] Create a service](#1-optional-create-a-service)            | Practical Lab | EASY            | 2 min            |
 | [Configure and Register Chat Asset](#2-configure-and-register-chat-asset) | Practical Lab | EASY            | 5 min            |
-| [Create Entry Point for Chat](#3-create–entry-point-for-chat)             | Practical Lab | EASY            | 5 min            |
+| [Create Entry Point for Chat](#3-create-entry-point-for-chat)             | Practical Lab | EASY            | 5 min            |
 | [Create Queue for Chat](#4-create-queue-for-chat)                         | Practical Lab | EASY            | 5 min            |
 | [Create Chat Template](#5-create-chat-template)                           | Practical Lab | EASY            | 5 min            |
 | [Website Widget Configuration](#6-website-widget-configuration)           | Practical Lab | EASY            | 5 min            |
