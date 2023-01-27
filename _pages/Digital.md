@@ -1559,6 +1559,138 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ---
 # Lab.12.10 - SMS Channel Configuration
+
+## Table of Contents
+
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| Creating Assets, EntryPoint,Queue and other config| Practical Lab | EASY           | 10 min           |
+| Workflow Association | Practical Lab          |EASY           |10 min
+
+
+
+## Quick Links
+
+https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Task.dita_14c9a756-8032-4b6a-8c95-3addb2825c8d
+
+
+## Lab Objective
+
+This lab is designed to complete required SMS configurations in Webex Connect. You will be able to initiate a contact from a mobile number (SMS) and will be able to accept and respond to the SMS contact by logging in as an agent.
+
+## Pre-requisite
+
+-WxCC Portal, Agent Desktop and Webex connect URL
+
+-Admin credentials to complete configurations in WxCC portal and Webex connect.
+
+-Agent Credentials to Handle the Chat
+
+-SMS number procurement process should be completed (Please work with your PSAM)
+
+-SMS number should be assigned in your Webex Conenct tenant
+
+
+### 1.     SMS number procurement
+
+-SMS Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant
+
+-SMS Numbers are not assigned by default to any of the WxCC tenants.
+
+-Please note that Partners have to go through a procurement process and work with your respective PSAM to enable SMS and get numbers assigned to the gold tenant
+
+-Once the procurement process is completed, SMS Numbers are assigned to the tenant by the backend operations team
+
+-Pleae complete this step before proceeding further.
+
+
+### 2.     Create SMS Asset and Register to WebexCC
+
+-Login to Webex Connect  tenant using your credentials.
+
+From the left side pane, click on Assets ---> Numbers
+
+
+![12.10.1](/assets/images/12.10.1.png)
+
+
+-Select the number from the list. Click on Manage and Register to Webex Engage.In the subsequent window select the service and click register.
+
+![12.10.2](/assets/images/12.10.2.png)
+
+-Login to the Contact Centre Management Portal . Click on Provisioning ---> Entry Points. Click on New entry Point.
+
+
+![12.10.3](/assets/images/12.10.3.png)
+
+-Enter a unique name, select the channel type as social, Social Channel Type as SMS and select the Asset that was created in Webex Connect as the Asset name. Click Save.
+
+
+![12.10.4](/assets/images/12.10.4.png)
+
+
+-Click on Provisioning---->Queue’s from the Left pane and click New Queue.Enter a unique name and select the Channel Type as Social Channel. Add the other required details and click Save.
+
+
+![12.10.5](/assets/images/12.10.5.png)
+
+### 3.     Workflow Association
+
+-Download the SMS flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)
+
+-Navigate to webexcc-digital-channels/Webex Connect Flows/v2.1/SMS Inbound Flow.workflow.zip select the zip file and click download.
+
+
+![12.10.6](/assets/images/12.10.6.png)
+
+-Unzip the downloaded file.
+
+-Go to Webex Connect, click on Services and select the service in which the Asset is created in.
+
+-In the service click on FLOWS -> CREATE FLOW
+
+-Enter the FLOW NAME as SMS Inbound Flow, select the TYPE as Work Flow and under METHOD select Upload a flow.
+
+-Drag and drop the SMS Inbound Flow.workflow flow that is downloaded in zip file, click CREATE
+
+
+![12.10.7](/assets/images/12.10.7.png)
+
+-In the resulting window select the Incoming number from the dropdown list and click Save
+
+
+![12.10.12](/assets/images/12.10.12.png)
+
+
+### 4.     Modifying the Flow
+
+-Open the Queue Task Node in the flow. Select the Queue that you created in an earlier step and click Save.
+
+![12.10.8](/assets/images/12.10.8.png)
+
+-Open up an SMS node in the flow and enter the from Number variable selected from the right side pane as shown below.Click Save
+
+-Repeat the above step for all the SMS nodes in the flow.
+
+
+![12.10.9](/assets/images/12.10.9.png)
+
+-Save the flow and Make Live
+
+
+![12.10.10](/assets/images/12.10.10.png)
+
+
+-Login to the agent desktop, initiate an SMS to the configured number. Once the interaction pops up on the agent desktop, accept the conversation
+
+![12.10.11](/assets/images/12.10.11.png)
+
+-Test the conversation between the agent and the customer.
+
+-End the conversation and add a Wrapup Code.
+
+
+
 # Lab.12.11 - WhatsApp Channel Configuration
 
 
@@ -2323,7 +2455,7 @@ In this lab, we will explore how an Inbound Webhook can be used to generate an e
 -   Admin credentials to login to WxCC and Webex Connect portal
 
 -   Knowledge of WxCC Connect flows and basic troubleshooting
--
+
 
 
 ### 1.     Create an Inbound Webhook

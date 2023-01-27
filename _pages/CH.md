@@ -87,6 +87,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
       <button type="submit" id="save">SAVE</button>
 </form>
 <script src="/assets/gitbook/form.js"></script>
+
 	
 ### 1. Add an agent and a supervisor users and configure the calling extension
 

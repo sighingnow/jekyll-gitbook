@@ -1,4 +1,5 @@
 // form.js
+console.log("TRIGGER1");
 const formId = "attendee-form"; // ID of the form
 const className = ".attendee-class";
 const formIdentifier = `${formId}`; // Identifier used to identify the form
@@ -7,6 +8,8 @@ const alertBox = document.querySelector(".alert"); // select alert display div
 let form = document.querySelector(`#${formId}`); // select form
 let formElements = form.elements; // get the elements in the form
 let formElement = "attendee-id";
+
+
   
 //Function which updates all "attendee-class" 
 const updateAllClasses = (data) => {
@@ -82,5 +85,5 @@ const populateForm = () => {
 
 
 document.onload = populateForm(); // populate the form when the document is loaded
-
+//window.onload = populateForm(); // populate the form when the document is loaded
 
