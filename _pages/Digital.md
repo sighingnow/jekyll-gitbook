@@ -1610,7 +1610,9 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 
 From the left side pane, click on Assets ---> Numbers
 
+
 ![12.10.1](/assets/images/12.10.1.png)
+
 
 -Select the number from the list. Click on Manage and Register to Webex Engage.In the subsequent window select the service and click register.
 
@@ -1623,7 +1625,9 @@ From the left side pane, click on Assets ---> Numbers
 
 -Enter a unique name, select the channel type as social, Social Channel Type as SMS and select the Asset that was created in Webex Connect as the Asset name. Click Save.
 
+
 ![12.10.4](/assets/images/12.10.4.png)
+
 
 -Click on Provisioning---->Queue’s from the Left pane and click New Queue.Enter a unique name and select the Channel Type as Social Channel. Add the other required details and click Save.
 
@@ -1635,6 +1639,7 @@ From the left side pane, click on Assets ---> Numbers
 -Download the SMS flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)
 
 -Navigate to webexcc-digital-channels/Webex Connect Flows/v2.1/SMS Inbound Flow.workflow.zip select the zip file and click download.
+
 
 ![12.10.6](/assets/images/12.10.6.png)
 
@@ -1648,9 +1653,12 @@ From the left side pane, click on Assets ---> Numbers
 
 -Drag and drop the SMS Inbound Flow.workflow flow that is downloaded in zip file, click CREATE
 
+
 ![12.10.7](/assets/images/12.10.7.png)
 
 -In the resulting window select the Incoming number from the dropdown list and click Save
+
+
 ![12.10.12](/assets/images/12.10.12.png)
 
 
@@ -1664,12 +1672,14 @@ From the left side pane, click on Assets ---> Numbers
 
 -Repeat the above step for all the SMS nodes in the flow.
 
+
 ![12.10.9](/assets/images/12.10.9.png)
 
 -Save the flow and Make Live
 
 
 ![12.10.10](/assets/images/12.10.10.png)
+
 
 -Login to the agent desktop, initiate an SMS to the configured number. Once the interaction pops up on the agent desktop, accept the conversation
 
