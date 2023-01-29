@@ -1318,6 +1318,8 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ---
 
+
+
 # Lab.12.9 - Facebook Messenger Channel Configuration
 ---
 
@@ -1914,9 +1916,13 @@ Connect templates can be configured on the platform and used within flows. Here 
 -  Templates can be used to send messages from flow to the end users through various digital channels.
 -  Template text can include simple text, URLs or forms.
 
-To create a template for any kind of digital channel, login to Connect Portal, then go to ***Tools*** -> ***Templates*** and press ***Add new Template*** button.
+- To create a template for any kind of digital channel, login to Connect Portal, then go to ***Tools*** -> ***Templates*** and press ***Add new Template*** button.
 
-![DC_Lab.12.12_Create_Connect](/assets/images/DC_Lab_12.12._Create_Connect.png)
+![DC_Lab.12.12_Create_Connect_1](/assets/images/DC_Lab_12.12._Create_Connect_1.png)
+
+*  You will be redirected to ***Manage Template*** window where you can select ***Channel*** and then provide other parameters of the template.
+
+![DC_Lab.12.12_Create_Connect_2](/assets/images/DC_Lab_12.12._Create_Connect_2.png)
 
 
 ## 2. Create Chat Templates in Connect
@@ -1929,6 +1935,25 @@ To create a template for any kind of digital channel, login to Connect Portal, t
 
 ## 4. Create SMS Templates in Connect
 
+Let's create SMS template which notifies end user after incoming request over SMS has been accepted and ququed in Webex CC.
+
+- Select ***Channel*** as ***SMS*** in ***Manage Template*** window to create SMS template. Then provide ***Name***, ***Message Type***, ***Message***, ***Template Type*** and save changes.
+
+![DC_Lab.12.12_Create_Connect_7](/assets/images/DC_Lab_12.12._Create_Connect_7.png)
+
+- Insert SMS node into the corresponding flow just after Queue Task node. Provide necessary details including ***Template***, save changes and make the flow live.
+
+![DC_Lab.12.12_Create_Connect_8](/assets/images/DC_Lab_12.12._Create_Connect_8.png)
+
+- After the flow is triggered and SMS request is queued, the end user will be notified over SMS.
+
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 
 
@@ -1952,13 +1977,13 @@ This section is designed to introduce Engage templates, which can be used for qu
 
 Engage templates makes agent's job easier by providing the possiblity to use some standard quick replies to the end-user in the agent desktop during the conversation ove any digital channel.
 Here are few key points to note about Engage templates which provide better understanding of the feature:
-- Agent can use a template in the agent desktop only after accepting the conversation initiated via digital channel.
-- Agent can edit the text of the template before sending the message unless it is prohibited by template settings.
-- Engage administrator can create various template groups to organanize templates.
-- Each template should be added into the group.
-- Each teamplate can be created for for one or many digital channels.
-- Many templates can be uploaded to Engage Portal in a bulk.
-- One or more of the following categories can be assigned to each template brings more flexibility when using it:
+-  Agent can use a template in the agent desktop only after accepting the conversation initiated via digital channel.
+-  Agent can edit the text of the template before sending the message unless it is prohibited by template settings.
+-  Engage administrator can create various template groups to organanize templates.
+-  Each template should be added into the group.
+-  Each teamplate can be created for for one or many digital channels.
+-  Many templates can be uploaded to Engage Portal in a bulk.
+-  One or more of the following categories can be assigned to each template brings more flexibility when using it:
 	- Start Template
 	- End Template
 	- Followup Template  
@@ -2066,6 +2091,14 @@ Here are few key points to note about Engage templates which provide better unde
 ![DC_Lab.12.13_Validate_2](/assets/images/DC_Lab_12.13._Validate_2.png)
 
 ![DC_Lab.12.13_Validate_3](/assets/images/DC_Lab_12.13._Validate_3.png)
+
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 
 
