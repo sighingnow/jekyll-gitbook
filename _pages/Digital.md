@@ -1916,6 +1916,7 @@ Connect templates can be configured on the platform and used within flows. Here 
 -  Templates can be used to send messages from flow to the end users through various digital channels.
 -  Template text can include simple text, URLs or forms.
 
+Each kind of template has different set of parameters depending on the type of digital channel which it is intended for.
 - To create a template for any kind of digital channel, login to Connect Portal, then go to ***Tools*** -> ***Templates*** and press ***Add new Template*** button.
 
 ![DC_Lab.12.12_Create_Connect_1](/assets/images/DC_Lab_12.12._Create_Connect_1.png)
@@ -1927,25 +1928,57 @@ Connect templates can be configured on the platform and used within flows. Here 
 
 ## 2. Create Chat Templates in Connect
 
+Let's create Chat Form template which can be used to request initial information about the end user just after chat is initiated. This process is decribed in details in ***Create Chat Flow*** lab.
+
+-  Select ***Channel*** as ***Live Chat / In-App Messaging*** in ***Manage Template*** window to create chat template. Then provide ***Name***, ***Message Type*** as ***Form***, ***Title***, and press ***Add Field*** button to add fields to the form. Once all necessary fields have been added, you can see the entire form in ***Preview*** section on the right. Save the template after the form is constructed.
+
+![DC_Lab.12.12_Create_Connect_2](/assets/images/DC_Lab_12.12._Create_Connect_3.png)
+
+-  After chat template has been created, you can use it in ***Pre-chat form*** and ***Receive*** nodes of the chat flow to get necessary details from the end user which initiated the chat. After selecting the template save changes and make the flow live.
+
+![DC_Lab.12.12_Create_Connect_2](/assets/images/DC_Lab_12.12._Create_Connect_4.png)
+
+-  The end user will get the form created in the template within chat widget.
+
+![DC_Lab.12.12_Create_Connect_2](/assets/images/DC_Lab_12.12._Create_Connect_4_1.png)
+
+-  The details eneterd by the user in the form will be forwarded to the agent which accepted chat request.
+
+![DC_Lab.12.12_Create_Connect_2](/assets/images/DC_Lab_12.12._Create_Connect_4_2.png)
 
 
 ## 3. Create Email Templates in Connect
 
+Let's create Email template which notifies end user after incoming request over email has been accepted and ququed in Webex CC.
+
+-  Select ***Channel*** as ***Email*** in ***Manage Template*** window to create email template. Then provide ***Name***, ***Reference ID***, ***Template Type***, ***Subject*** and save changes.
+
+![DC_Lab.12.12_Create_Connect_5](/assets/images/DC_Lab_12.12._Create_Connect_5.png)
+
+-  You will be redirected to Email Composer. Please build the email using the canvas in the center and building blocks on the left-hand side. After email template is ready, press ***Save & Exit*** at the top right corner.
+
+![DC_Lab.12.12_Create_Connect_6_1](/assets/images/DC_Lab_12.12._Create_Connect_6_1.png)
+
+-  Insert Email node into the corresponding flow just after Queue Task node. Provide necessary details including ***Email Type***, ***Template Type***, ***Template***, save changes and make the flow live.
+
+![DC_Lab.12.12_Create_Connect_6_2](/assets/images/DC_Lab_12.12._Create_Connect_6_2.png)
+
+-  After the flow is triggered and email request is queued, the end user will be notified over email.
 
 
 ## 4. Create SMS Templates in Connect
 
 Let's create SMS template which notifies end user after incoming request over SMS has been accepted and ququed in Webex CC.
 
-- Select ***Channel*** as ***SMS*** in ***Manage Template*** window to create SMS template. Then provide ***Name***, ***Message Type***, ***Message***, ***Template Type*** and save changes.
+-  Select ***Channel*** as ***SMS*** in ***Manage Template*** window to create SMS template. Then provide ***Name***, ***Message Type***, ***Message***, ***Template Type*** and save changes.
 
 ![DC_Lab.12.12_Create_Connect_7](/assets/images/DC_Lab_12.12._Create_Connect_7.png)
 
-- Insert SMS node into the corresponding flow just after Queue Task node. Provide necessary details including ***Template***, save changes and make the flow live.
+-  Insert SMS node into the corresponding flow just after Queue Task node. Provide necessary details including ***Template***, save changes and make the flow live.
 
 ![DC_Lab.12.12_Create_Connect_8](/assets/images/DC_Lab_12.12._Create_Connect_8.png)
 
-- After the flow is triggered and SMS request is queued, the end user will be notified over SMS.
+-  After the flow is triggered and SMS request is queued, the end user will be notified over SMS.
 
 ---
 
@@ -2003,26 +2036,26 @@ Here are few key points to note about Engage templates which provide better unde
 
 ![DC_Lab.12.8_Create_Website_1](/assets/images/DC_Lab_12.8._Create_Website_1.png)
 
-* Go to ***Assets*** -> ***Templates*** and press **''+"** button near ***TEMPLATE GROUPS*** section.
+*  Go to ***Assets*** -> ***Templates*** and press **''+"** button near ***TEMPLATE GROUPS*** section.
 
 ![DC_Lab.12.13_Create_Engage_1](/assets/images/DC_Lab_12.13._Create_Engage_1.png)
 
-- Provide ***Template Group name*** and press ***Add*** button to save it.
+-  Provide ***Template Group name*** and press ***Add*** button to save it.
 
 ![DC_Lab.12.13_Create_Engage_2](/assets/images/DC_Lab_12.13._Create_Engage_2.png)
 
-- You can delet existing template group by clicking on bin icon near the template name in ***TEMPLATE GROUPS*** section.
+-  You can delet existing template group by clicking on bin icon near the template name in ***TEMPLATE GROUPS*** section.
 
 ![DC_Lab.12.13_Create_Engage_3](/assets/images/DC_Lab_12.13._Create_Engage_3.png)
 
 
 ## 3. Create Engage Templates
 
-- Go to ***Assets*** -> ***Templates***, click on template group name in ***TEMPLATE GROUPS*** section. Then press ***Add template*** button.
+-  Go to ***Assets*** -> ***Templates***, click on template group name in ***TEMPLATE GROUPS*** section. Then press ***Add template*** button.
 
 ![DC_Lab.12.13_Create_Engage_4](/assets/images/DC_Lab_12.13._Create_Engage_4.png)
 
-- Let's create start template for web chat channel. Please click on ***Livechat*** in template header and provide necessary template details:
+-  Let's create start template for web chat channel. Please click on ***Livechat*** in template header and provide necessary template details:
 
 | **Parameter Name**    | **Parameter Value**                                           |
 | ----------------- | --------------------------------------------------------- |
@@ -2038,53 +2071,53 @@ Here are few key points to note about Engage templates which provide better unde
 
 ![DC_Lab.12.13_Create_Engage_5](/assets/images/DC_Lab_12.13._Create_Engage_5.png)
 
-- You can edit or delete the template by clicing on corresponding icon in the ***Actions*** column in the table with template details.
+-  You can edit or delete the template by clicing on corresponding icon in the ***Actions*** column in the table with template details.
 
 ![DC_Lab.12.13_Create_Engage_6](/assets/images/DC_Lab_12.13._Create_Engage_6.png)
 
 
 ## 4. Bulk Upload of Engage Templates
 
-- Go to ***Assets*** -> ***Templates***, click on ***Upload template*** button.
+-  Go to ***Assets*** -> ***Templates***, click on ***Upload template*** button.
 
 ![DC_Lab.12.13_Bulk_Engage_1](/assets/images/DC_Lab_12.13._Bulk_Engage_1.png)
 
-- Click on ***Download sample file here*** link to download CSV sample file.
+-  Click on ***Download sample file here*** link to download CSV sample file.
 
 ![DC_Lab.12.13_Bulk_Engage_2](/assets/images/DC_Lab_12.13._Bulk_Engage_2.png)
 
-- Open sample file, provide necessary values according to ***Help Notes*** section. Then delete ***Help Notes*** section and save changes.
+-  Open sample file, provide necessary values according to ***Help Notes*** section. Then delete ***Help Notes*** section and save changes.
 
 ![DC_Lab.12.13_Bulk_Engage_3](/assets/images/DC_Lab_12.13._Bulk_Engage_3.png)
 
-- Return to ***Upload Template*** window, press ***upload file*** button and select the file you created above.
+-  Return to ***Upload Template*** window, press ***upload file*** button and select the file you created above.
 
 ![DC_Lab.12.13_Bulk_Engage_4](/assets/images/DC_Lab_12.13._Bulk_Engage_4.png)
 
-- Check and make sure there were no conflicts found. Then click on ***Proceed*** button.
+-  Check and make sure there were no conflicts found. Then click on ***Proceed*** button.
 
 ![DC_Lab.12.13_Bulk_Engage_5](/assets/images/DC_Lab_12.13._Bulk_Engage_5.png)
 
-- Make sure your file is being processed and press ***OK*** button in pop-up window.
+-  Make sure your file is being processed and press ***OK*** button in pop-up window.
 
 ![DC_Lab.12.13_Bulk_Engage_6](/assets/images/DC_Lab_12.13._Bulk_Engage_6.png)
 
-- Click on pencil icon in ***Actions*** column of the row with uploaded template to edit it and assign the category.
+-  Click on pencil icon in ***Actions*** column of the row with uploaded template to edit it and assign the category.
 
 ![DC_Lab.12.13_Bulk_Engage_7](/assets/images/DC_Lab_12.13._Bulk_Engage_7.png)
 
-- Set ***Is End Template*** toggle and save changes.
+-  Set ***Is End Template*** toggle and save changes.
 
 ![DC_Lab.12.13_Bulk_Engage_8](/assets/images/DC_Lab_12.13._Bulk_Engage_8.png)
 
-- Check and make sure that proper gategory has been successfully assigned to the uploaded template.
+-  Check and make sure that proper gategory has been successfully assigned to the uploaded template.
 
 ![DC_Lab.12.13_Bulk_Engage_9](/assets/images/DC_Lab_12.13._Bulk_Engage_9.png)
 
 
 ## 5. Verify Engage Template in Agent Desktop
 
-- Start web chat with the end user and make sure you are able to select the template in agent desktop and send the message.
+-  Start web chat with the end user and make sure you are able to select the template in agent desktop and send the message.
 
 ![DC_Lab.12.13_Validate_1](/assets/images/DC_Lab_12.13._Validate_1.png)
 
