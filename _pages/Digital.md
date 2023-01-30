@@ -2524,7 +2524,7 @@ Time to test your new configuration:
 
 # Lab.12.17 - Event Scheduler
 
-Table of Contents
+## Table of Contents
 
 -   [Lab Objective](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#lab-objective)
 -   [Pre-requisite](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#pre-requisite)
@@ -2533,7 +2533,7 @@ Table of Contents
 		2. Option 1 - Schedule SMS Event
 		3. Option 2 - Schedule Custom Event
 
-Lab Objective
+## Lab Objective
 
 In this Lab, we will learn about what is Event Scheduler, how it works & the various configuration options it provides. Please note, Event Scheduler mainly provides two configuration options i.e. SMS Event & Custom Event. You may choose to try either one or both of them.
 
@@ -2541,29 +2541,28 @@ Option 1:  SMS Event– Allows you to send SMS messages simply by processing th
 
 Option 2: Custom Event – Allows you to trigger rules or flows associated with the selected custom event. The variables required to trigger the custom event and for the successful execution of concerned flows/rules should be available in the file.
 
-Pre-requisite
+## Pre-requisite
 
 1.  You've received Administrator credentials to configure in Management Portal and Webex Connect.
 2.  At least one SMS number is already provisioned in Webex Connect.
 3.  Access to MS Excel or any other CSV file editor
 4.  You have successfully completed the previous Labs Pre-configuration, Email Configuration
 
-Lab Section
+## Lab Section
 
-1. Introduction to Event Scheduler
+### 1. Introduction to Event Scheduler
 
 Event Scheduler allows Webex Connect users to send SMS messages or schedule execution of Webex Connect rules/live flows, by uploading a file (on the UI or via an SFTP location) with required information in the relevant format. From Webex Connect select the App Tray & then click on Event Scheduler (Event Scheduler will open in a new browser tab).
 
 The Event Scheduler page gives access to:
-
-• Scheduler – to create new or manage existing scheduled tasks
-• Logs – to review all trigger executions in the last 6 months
-• SFTP – to manage external data sources to feed the scheduled tasks
-• Settings – to manage Social Hours (business hours) and holidays
+	• Scheduler – to create new or manage existing scheduled tasks
+	• Logs – to review all trigger executions in the last 6 months
+	• SFTP – to manage external data sources to feed the scheduled tasks
+	• Settings – to manage Social Hours (business hours) and holidays
 
 ![DC_Lab.12.17_Introduction_EventScheduler](/assets/images/DC_Lab.12.17_Introduction_EventScheduler.png)
 
-2. Schedule SMS Event
+### 2. Schedule SMS Event
 
 Configuring scheduled outbound SMS campaign only require the setup inside the Event Scheduler. SMS uses source files containing data that will be used by the scheduler to determine the destination numbers as well as building custom messages (i.e. names, dates, addresses, etc.)
 
@@ -2599,7 +2598,6 @@ Configuring scheduled outbound SMS campaign only require the setup inside the Ev
 
 ![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event5.png)
 
-
 -   Once the file is imported, the scheduler will validate the file and its content. As Recipient Variable select the column containing the Destination numbers for your message.
 
 ![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event6.png)
@@ -2616,15 +2614,15 @@ Configuring scheduled outbound SMS campaign only require the setup inside the Ev
 
 ![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event9.png)
 
-3. Schedule Custom Event
+### 3. Schedule Custom Event
 
-Configuration sequence for Custom Events is as below.
+Configuration sequence for Custom Event is as below.
 
-Create new Integration --> Create a new Flow --> Create a new Schedule
+#### Create new Integration --> Create a new Flow --> Create a new Schedule
 
 Custom Events use source files containing data that will be used by flows when sending out the desired messages (i.e. destination addresses, names, dates). This section will take a ‘Appointment Reminder’ use case Scenario as reference, to describe the process administrator will have to follow when sending reminders via SMS or Email to a list of customers
 
-1.  Create new Integration
+#### 1.  Create new Integration
 
 -   Inside Webex Connect portal, click on Assets & then click on Integrations.
 
@@ -2644,10 +2642,9 @@ Custom Events use source files containing data that will be used by flows when s
 
 -   Leave rest of the config unchanged & Click on the Save button.
 
-2.  Create a new Flow
+#### 2.  Create a new Flow
 
 -   Inside Webex Connect portal, navigate to Services > Select the desired service > Click on Flows > Click on Create Flow.
-
 -   Enter Flow name (e.g., “AppointmentReminder”). In the ‘Method’ select New Flow, Select Start from Scratch & Click Create.
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event4.png)
@@ -2707,27 +2704,27 @@ Custom Events use source files containing data that will be used by flows when s
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event10.png)
 
 -   Edit the first SMS node as described below & click Save.
-	• In Destination Type select msisdn
-	• In Destination enter $(n2.customEvent.destination)
-	• In From Number drop-down menu select the SMS number from where you wish to send the SMS
-	• In Message Type select Text
-	• In Message enter “Hi $(n2.customEvent.name), we would like to remind you that your appointment is tomorrow!”
+		• In Destination Type select msisdn
+		• In Destination enter $(n2.customEvent.destination)
+		• In From Number drop-down menu select the SMS number from where you wish to send the SMS
+		• In Message Type select Text
+		• In Message enter “Hi $(n2.customEvent.name), we would like to remind you that your appointment is tomorrow!”
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event11.png)
 
 -   Edit the second Email node as described below & click Save.
 
-• In Destination Type select Email Id
-• In Destination enter the email address from an administrator (who will be notified in case of issues)
-• In From Name enter “Booking Error”
-• In Email Type select Text
-• In Subject enter “Error message from AppointmentReminder flow”
-• In Message enter 
-	“Something went wrong with the scheduled message that contained following data:
-			Type = $(n2.customEvent.type)
-			Name = $(n2.customEvent.name)
-			Destination = $(n2.customEvent.destination)
-			The message has not been delivered.”
+	• In Destination Type select Email Id
+	• In Destination enter the email address from an administrator (who will be notified in case of issues)
+	• In From Name enter “Booking Error”
+	• In Email Type select Text
+	• In Subject enter “Error message from AppointmentReminder flow”
+	• In Message enter 
+		“Something went wrong with the scheduled message that contained following data:
+				Type = $(n2.customEvent.type)
+				Name = $(n2.customEvent.name)
+				Destination = $(n2.customEvent.destination)
+				The message has not been delivered.”
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event12.png)
 
@@ -2769,7 +2766,7 @@ Custom Events use source files containing data that will be used by flows when s
 
 -   Save the file.
 
-3.  Create a new Schedule
+#### 3.  Create a new Schedule
 
 -   Inside Webex Connect portal navigate to App Tray & click on Event Scheduler
 
@@ -2798,13 +2795,6 @@ Custom Events use source files containing data that will be used by flows when s
 -   Choose ‘Immediate’ as the execution schedule for this event (the event will be actually executed 2 minutes later). Click Save.
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event25.png)
-
-
-
-
-
-
-
 
 
 
