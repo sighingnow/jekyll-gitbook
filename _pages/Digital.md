@@ -2523,6 +2523,293 @@ Time to test your new configuration:
 
 
 # Lab.12.17 - Event Scheduler
+
+Table of Contents
+
+-   [Lab Objective](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#lab-objective)
+-   [Pre-requisite](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#pre-requisite)
+-   [Lab Section](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#lab-section)
+		1. Introduction to Event Scheduler
+		2. Option 1 - Schedule SMS Event
+		3. Option 2 - Schedule Custom Event
+
+Lab Objective
+
+In this Lab, we will learn about what is Event Scheduler, how it works & the various configuration options it provides. Please note, Event Scheduler mainly provides two configuration options i.e. SMS Event & Custom Event. You may choose to try either one or both of them.
+
+Option 1:  SMS Event– Allows you to send SMS messages simply by processing the file. One of the columns in the uploaded file must contain the recipients' phone number(s).
+
+Option 2: Custom Event – Allows you to trigger rules or flows associated with the selected custom event. The variables required to trigger the custom event and for the successful execution of concerned flows/rules should be available in the file.
+
+Pre-requisite
+
+1.  You've received Administrator credentials to configure in Management Portal and Webex Connect.
+2.  At least one SMS number is already provisioned in Webex Connect.
+3.  Access to MS Excel or any other CSV file editor
+4.  You have successfully completed the previous Labs Pre-configuration, Email Configuration
+
+Lab Section
+
+1. Introduction to Event Scheduler
+
+Event Scheduler allows Webex Connect users to send SMS messages or schedule execution of Webex Connect rules/live flows, by uploading a file (on the UI or via an SFTP location) with required information in the relevant format. From Webex Connect select the App Tray & then click on Event Scheduler (Event Scheduler will open in a new browser tab).
+
+The Event Scheduler page gives access to:
+
+• Scheduler – to create new or manage existing scheduled tasks
+• Logs – to review all trigger executions in the last 6 months
+• SFTP – to manage external data sources to feed the scheduled tasks
+• Settings – to manage Social Hours (business hours) and holidays
+
+![DC_Lab.12.17_Introduction_EventScheduler](/assets/images/DC_Lab.12.17_Introduction_EventScheduler.png)
+
+2. Schedule SMS Event
+
+Configuring scheduled outbound SMS campaign only require the setup inside the Event Scheduler. SMS uses source files containing data that will be used by the scheduler to determine the destination numbers as well as building custom messages (i.e. names, dates, addresses, etc.)
+
+-   Inside Webex Connect portal, click on App Tray & then click on Event Scheduler.
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event1.png)
+
+-  From the Scheduler menu click on Add Schedule
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event2.png)
+
+-   Click on SMS
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event3.png)
+
+-   Select options as described below & click Next
+	- • Select Service : The Service you've setup.
+	- • SMS Type : TEXT
+	- • Sender ID :  Select the number from where the SMS will be sent out
+	- • Extra Parameters : are only required in case of specific in-country regulation
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event4.png)
+
+-   Open MS Excel or any other CSV file editor & Add the following column names:
+
+	• MessageType – In this column add at least one entry as ‘SMS’ and at least one entry as ‘email’
+	• Destination - In this column add the respective SMS numbers and Email addresses to perform the test with
+	• CustomerName – in this column add the Name (and/or Surname) for everyone added to the list
+
+-   Save the file.
+
+-   Choose if to upload a file created in previous step or use an existing SFTP connection. For this lab, we'll choose Upload File.
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event5.png)
+
+
+-   Once the file is imported, the scheduler will validate the file and its content. As Recipient Variable select the column containing the Destination numbers for your message.
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event6.png)
+
+-   Build the custom message in the Message Body and use $(ColumnName) to add the values from the desired column as part of the text & Click Next.
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event7.png)
+
+-   Add a name for this Event & Click Next.
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event8.png)
+
+-   Choose a schedule for this event to be executed & Click Save.
+
+![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event9.png)
+
+3. Schedule Custom Event
+
+Configuration sequence for Custom Events is as below.
+
+Create new Integration --> Create a new Flow --> Create a new Schedule
+
+Custom Events use source files containing data that will be used by flows when sending out the desired messages (i.e. destination addresses, names, dates). This section will take a ‘Appointment Reminder’ use case Scenario as reference, to describe the process administrator will have to follow when sending reminders via SMS or Email to a list of customers
+
+1.  Create new Integration
+
+-   Inside Webex Connect portal, click on Assets & then click on Integrations.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event1.png)
+
+-   Click on Add Integrations & then click on Custom Event
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event2.png)
+
+-   Name the event (i.e. “EVENT Appointment Reminder”)
+-   Add the following parameters:
+		• type (String)
+		• name (String)
+		• destination (String)
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event3.png)
+
+-   Leave rest of the config unchanged & Click on the Save button.
+
+2.  Create a new Flow
+
+-   Inside Webex Connect portal, navigate to Services > Select the desired service > Click on Flows > Click on Create Flow.
+
+-   Enter Flow name (e.g., “AppointmentReminder”). In the ‘Method’ select New Flow, Select Start from Scratch & Click Create.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event4.png)
+
+-   On the Select Trigger Category page, click Custom Event
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event5.png)
+
+-   Once the flow editor loads the Configure Custom Event node will automatically open. From Select Event dropdown, select ‘EVENT Appointment Reminder’ & the list of Parameters will automatically populate. Click Save.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event6.png)
+
+-   From node menu (left) select Branch node and drag it in to flow canvas (right).
+-   Connect Configure Custom Event node to Branch node
+-   Edit Branch node (double click on the node)
+-   Click in the Branch 1 VARIABLE field (on left), select from the Input Variables list (on right ) ‘Start’ > customEvent.type
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event7.1.png)
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event7.2.png)
+
+• From the Condition drop-down menu select ‘Equals’
+• In the VALUE field enter “email” (without quotes)
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event7.3.png)
+
+• Rename Branch 1 into ‘EMAIL’
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event7.4.png)
+
+• Click on Add Branch
+• Click in the Branch 2 VARIABLE field (on left), select from the Input Variables list (on right ) ‘Start’ > customEvent.type
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event8.1.png)
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event8.2.png)
+
+• From the Condition drop-down menu select ‘Equals’
+• In the VALUE field enter “SMS” (without quotes)
+• Rename Branch 2 into ‘SMS’
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event8.3.png)
+
+-   Click Save.
+-   From the node menu (left) select the Email node and drag it in the flow. Repeat this step so to have 2x Email nodes in the flow. Also do the same for getting one SMS node.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event9.png)
+
+-   Edit the first Email node as described below & click Save.
+	- • In Destination Type select Email Id
+	- • In Destination enter $(n2.customEvent.destination)
+	- • In From Name enter “Booking Reminder”
+	- • In Email Type select Text
+	- • In Subject enter “Gentle reminder about your booking”
+	- • In Message enter “Hi $(n2.customEvent.name), we would like to remind you that your appointment is tomorrow!”
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event10.png)
+
+-   Edit the first SMS node as described below & click Save.
+	• In Destination Type select msisdn
+	• In Destination enter $(n2.customEvent.destination)
+	• In From Number drop-down menu select the SMS number from where you wish to send the SMS
+	• In Message Type select Text
+	• In Message enter “Hi $(n2.customEvent.name), we would like to remind you that your appointment is tomorrow!”
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event11.png)
+
+-   Edit the second Email node as described below & click Save.
+
+• In Destination Type select Email Id
+• In Destination enter the email address from an administrator (who will be notified in case of issues)
+• In From Name enter “Booking Error”
+• In Email Type select Text
+• In Subject enter “Error message from AppointmentReminder flow”
+• In Message enter 
+	“Something went wrong with the scheduled message that contained following data:
+			Type = $(n2.customEvent.type)
+			Name = $(n2.customEvent.name)
+			Destination = $(n2.customEvent.destination)
+			The message has not been delivered.”
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event12.png)
+
+-   Click on the Settings icon (near the Save button on the top-right) & enable the Descriptive logs toggle, put 60 in "Enabled for" field to enable Descriptive logs for an hour. Click on Save
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event13.png)
+
+-   Click on Save (on the top-right of the flow canvas).
+-   Drag the Successful Outcome from the SMS and Email nodes to any empty point of the flow canvas. On the screen that opens, as Node Event, select OnSuccess & as Flow Result, select 101 –…[ Success ]. Click Save
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event14.png)
+
+-   Drag the Error Outcome from the SMS and Email nodes to any empty point of the flow canvas. On the screen that opens, as Node Event, select OnError & as Flow Result, select 102 –…[ Error ]. Click Save
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event15.png)
+
+-    Drag the Error Outcome from the SMS and Email nodes to any empty point of the flow canvas. On the screen that opens, as Node Event, select OnPolicyFail & as Flow Result, select 102 –…[ Error ]. Click Save
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event16.png)
+
+-   Connect the Branch node from the Successful Outcome to the first Email node & Select EMAIL from the drop-down menu that will pop-up.
+-   Connect the Branch node from the Successful Outcome to the SMS node & Select SMS from the drop-down menu that will pop-up.
+-   Connect the Branch node from the Successful Outcome to the second Email node (the ‘None of the above’ option will be automatically selected).
+-   Connect the Branch node from the Error Outcome to the second Email node.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event17.png)
+
+-   Click on MAKE LIVE (near the Save button on the top-right), Select the preconfigured Email Application (from where outbound emails will be sent) & Click on Make Live.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event18.1.png)
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event18.2.png)
+
+-   Open MS Excel or any other CSV file editor & Add the following column names:
+
+	• MessageType – In this column add at least one entry as ‘SMS’ and at least one entry as ‘email’
+	• Destination - In this column add the respective SMS numbers and Email addresses to perform the test with
+	• CustomerName – in this column add the Name (and/or Surname) for everyone added to the list
+
+-   Save the file.
+
+3.  Create a new Schedule
+
+-   Inside Webex Connect portal navigate to App Tray & click on Event Scheduler
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event19.png)
+
+-   On Scheduler page, click on Add Schedule button.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event20.png)
+
+-   Click Custom Event
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event21.png)
+
+-   Select the Service containing the AppointmentReminder flow & Select EVENT Appointment Reminder from the ‘Select Event / Inbound Webhook’ drop-down menu. Click Next.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event22.png)
+
+-   Select ‘Upload File’, Drag and drop the previously created spreadsheet in the marked area for file drop. The page will automatically refresh and will request the admin to map the Custom Event Integration parameters with the Column Names in the loaded file. Map the FILE HEADERS as the name indicates. The page will automatically refresh and will notify about Total, Valid, Invalid and Duplicate Rows from the file (for additional validation). Click on Next button
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event23.png)
+
+-   Add “Appointment Reminder Schedule” as name for this Event & Click on Next button
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event24.png)
+
+-   Choose ‘Immediate’ as the execution schedule for this event (the event will be actually executed 2 minutes later). Click Save.
+
+![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event25.png)
+
+
+
+
+
+
+
+
+
+
+
+
 # Lab.12.18 - Inbound Webhooks
 
 ## Table of Contents
