@@ -2725,9 +2725,9 @@ Custom Events use source files containing data that will be used by flows when s
 	“Something went wrong with the scheduled message that contained following data:
 	 
 	 Type = $(n2.customEvent.type)
-         Name = $(n2.customEvent.name)
-         Destination = $(n2.customEvent.destination)
-         The message has not been delivered.”
+	 Name = $(n2.customEvent.name)
+	 Destination = $(n2.customEvent.destination)
+	 The message has not been delivered.”
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event12.png)
 
@@ -2768,7 +2768,7 @@ Custom Events use source files containing data that will be used by flows when s
 	- CustomerName – in this column add the Name (and/or Surname) for everyone added to the list
 
 
--   Save the file.
+- Save the file.
 
 #### 3.3 Create a new Schedule
 
