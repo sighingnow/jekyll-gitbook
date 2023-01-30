@@ -12,7 +12,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > ##### TIP
 >
 > It is assumed that the attendee has already an access to the tenant.**
-{: .block-tip }
 ```
 
 
