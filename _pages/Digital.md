@@ -2704,28 +2704,29 @@ Custom Events use source files containing data that will be used by flows when s
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event10.png)
 
 - Edit the first SMS node as described below & click Save.
-	  - In Destination Type select msisdn
-	  - In Destination enter $(n2.customEvent.destination)
-	  - In From Number drop-down menu select the SMS number from where you wish to send the SMS.
-	  - In Message Type select Text.
-	  - In Message enter “Hi $(n2.customEvent.name), we would like to remind you that your appointment is tomorrow!”
+
+	- In Destination Type select msisdn
+	- In Destination enter $(n2.customEvent.destination)
+	- In From Number drop-down menu select the SMS number from where you wish to send the SMS.
+	- In Message Type select Text.
+	- In Message enter “Hi $(n2.customEvent.name), we would like to remind you that your appointment is tomorrow!”
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event11.png)
 
 - Edit the second Email node as described below & click Save.
 
-- In Destination Type select Email Id.
-- In Destination enter the email address from an administrator (who will be notified in case of issues). 
-- In From Name enter “Booking Error”
-- In Email Type select Text
-- In Subject enter “Error message from AppointmentReminder flow”
-- In Message enter 
+	- In Destination Type select Email Id.
+	- In Destination enter the email address from an administrator (who will be notified in case of issues). 
+	- In From Name enter “Booking Error”
+	- In Email Type select Text
+	- In Subject enter “Error message from AppointmentReminder flow”
+	- In Message enter.
 
-		“Something went wrong with the scheduled message that contained following data:
-				Type = $(n2.customEvent.type)
-				Name = $(n2.customEvent.name)
-				Destination = $(n2.customEvent.destination)
-				The message has not been delivered.”
+	“Something went wrong with the scheduled message that contained following data:
+	 Type = $(n2.customEvent.type)
+	 Name = $(n2.customEvent.name)
+	 Destination = $(n2.customEvent.destination)
+	 The message has not been delivered.”
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event12.png)
 
@@ -2764,6 +2765,7 @@ Custom Events use source files containing data that will be used by flows when s
 	- MessageType – In this column add at least one entry as ‘SMS’ and at least one entry as ‘email’.
 	- Destination - In this column add the respective SMS numbers and Email addresses to perform the test with.
 	- CustomerName – in this column add the Name (and/or Surname) for everyone added to the list
+
 
 -   Save the file.
 
