@@ -9,7 +9,7 @@ layout: post
 
 In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
 ```
-> ##### TIP
+> ##### Comment
 >
 > It is assumed that the attendee has already an access to the tenant.**
 ```
@@ -21,13 +21,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 {: .block-tip }
 
 
-> ##### TIP
+> ##### Warning
 >
 > It is assumed that the attendee has already an access to the tenant.**
 {: .block-warning }
 
 
-> ##### TIP
+> ##### Danger
 >
 > It is assumed that the attendee has already an access to the tenant.**
 {: .block-danger }
