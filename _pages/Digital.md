@@ -2622,7 +2622,7 @@ Configuration sequence for Custom Event is as below.
 
 Custom Events use source files containing data that will be used by flows when sending out the desired messages (i.e. destination addresses, names, dates). This section will take a ‘Appointment Reminder’ use case Scenario as reference, to describe the process administrator will have to follow when sending reminders via SMS or Email to a list of customers
 
-#### 1.  Create new Integration
+#### 3.1 Create new Integration
 
 -  Inside Webex Connect portal, click on Assets & then click on Integrations.
 
@@ -2642,7 +2642,7 @@ Custom Events use source files containing data that will be used by flows when s
 
 -   Leave rest of the config unchanged & Click on the Save button.
 
-#### 2.  Create a new Flow
+#### 3.2 Create a new Flow
 
 -   Inside Webex Connect portal, navigate to Services > Select the desired service > Click on Flows > Click on Create Flow.
 -   Enter Flow name (e.g., “AppointmentReminder”). In the ‘Method’ select New Flow, Select Start from Scratch & Click Create.
@@ -2769,7 +2769,7 @@ Custom Events use source files containing data that will be used by flows when s
 
 -   Save the file.
 
-#### 3.  Create a new Schedule
+#### 3.3 Create a new Schedule
 
 - Inside Webex Connect portal navigate to App Tray & click on Event Scheduler
 
