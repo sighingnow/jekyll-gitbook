@@ -22,8 +22,8 @@ layout: post
     * [1. Creating a Site with "Create Sites" API](#1-creating-a-site-with-create-sites-api)
     * [2. Changing the Site name with "Update Site By ID" API](#2-changing-the-site-name-with-update-site-by-id-api)
     * [3. Practicing with Bulk Upload](#3-practicing-with-bulk-upload)
-  - [Part 5: Search API](#Part-5-Search-API)
-    * [1. Search endpoint in developer portal.](#1-Search-endpoint-in-developer-portal.)
+  - [Part 5: Search API](#part-5-Search-API)
+    * [1. Search endpoint in developer portal.](#1-Search-endpoint-in-developer-portal)
     * [2. Forming a graphQL query.](#2-Forming-a-graphQL-query.)
     * [3. Running the query.](#3-Running-the-query.)
   - [Part 6: Agent Desktop APIs](#part-6-Agent-Desktop-APIs)
@@ -313,7 +313,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 
 <iframe width="1024" height="576" src="https://app.vidcast.io/share/c8c778c5-6659-4145-891a-bafcece29863" title="Part 5: Search API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### 1. Search endpoint in developer portal.
+### 1. Search endpoint in developer portal
 
  - Go to - **[Search endpoint on Developer Portal](https://developer.webex-cx.com/documentation/search)**
  - Click on -> Try out -> Expand try out window by clicking box icon on right hand side top section.
