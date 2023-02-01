@@ -1000,7 +1000,7 @@ In this Lab, we will go through the tasks that are required to complete the basi
 
 We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, Website Settings, and corresponding workflows.
 
-#### Pre-requisites
+#### Pre-requisite
 
 1. You received Webex CC Portal, Agent Desktop and Webex Connect URL .
 2. You have admin credentials to complete configurations in Webex CC Management Portal and Engage Portal.
@@ -2949,7 +2949,7 @@ Request Body:
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Understanding of Webex Connect troubleshooting capabilities](#1...)             | Read & Understand | MID            | 5 min            |
+| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 5 min            |
 | [Troubleshooting flows](#2...)                       | Read & Understand     | MID            | 5 min            |
 | [Issue #1 - Engage Asset not linked to Entry Point in Webex CC](#3...) | Read & Understand     | MID            | 5 min            |
 | [Issue #2 - Engage authentication not working](#2...)  | Read & Understand     | MID            | 5 min     |
@@ -2969,12 +2969,51 @@ This section is designed to introduce troubleshooting capabilites available for 
 3. You have admin credentials for Connect Portal.
 4. You have at least one flow created and published in Webex Connect.
 
+
 ## 1. Understanding of Webex Connect troubleshooting capabilities
 
+>**Note:** Please check and make sure all configuration steps for digital channel have been completed succesfully before start troubleshooting it.
 
+There are the following troubleshooting capabilities available for the administrator to troubleshoot issues in digital channels empowered by Webex Connect:
+-  Export Logs tool
+-  The debugger built into the flow builder
+Let's consider how we can use both of them.
 
+#### Export Logs tool
 
+This tool allows Webex Connect admin to download inbound and outbound log events as XLSX file for any Service / Asset / Digital Channel for desired timefrrame. The we can inspect this file to check, for example, whether the message was received or sent by corresponding component of Webex Connect platform.
 
+Please login to Connect Portal, then go to ***Tools*** -> ***Export Logs*** to access the tool.
+
+![DC_Lab.12.19_Export_Logs_1](/assets/images/DC_Lab_12.19._Export_Logs_1.png)
+
+Let's download all incoming messages received via ***Chat_Asset*** for the last 7 days. We need to provide the following details and press ***Download*** button:
+
+| Parameter Name | Parameter Value  |
+| -------------- | ---------------- |
+| Number or App  | Chat_asset       |
+| Channel Event  | Incoming Message |
+| Period         | Last 7 days      |
+
+![DC_Lab.12.19_Export_Logs_2](/assets/images/DC_Lab_12.19._Export_Logs_2.png)
+
+After the log file has been downloaded, we can open the file and see all inbound events, incliding timestamps, IDs and message text. We can use the file to check whether specific message rom the end user has been received by Webex Connect via selected Number or App (asset).
+
+![DC_Lab.12.19_Export_Logs_3](/assets/images/DC_Lab_12.19._Export_Logs_3.png)
+
+Now, let's download all outbound messages for ***My First Service*** for the last 7 days. We need to provide the following details and press ***Download*** button:
+
+| Parameter Name | Parameter Value              |
+| -------------- | ---------------------------- |
+| Service        | My First Sertvice            |
+| Channel        | Live Chat / In-App Messaging |
+| Period         | Last 7 days                  |
+
+![DC_Lab.12.19_Export_Logs_4](/assets/images/DC_Lab_12.19._Export_Logs_4.png)
+
+After the log file has been downloaded, we can open the file and see all outbound events, incliding timestamps, IDs and message text. We can use this log to check whether exact message has been sent to the end user by Webex Connect via selected Service / Channel.
+
+![DC_Lab.12.19_Export_Logs_5](/assets/images/DC_Lab_12.19._Export_Logs_5.png)
 
 
 
