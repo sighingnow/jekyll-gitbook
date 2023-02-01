@@ -119,7 +119,7 @@ We will also be creating two new reports (one for Call and one for agent) to cap
 15. Congratulations on finishing `Lab 1 Exercises`.  This exercise was high level to reinforce Analyzer concepts.
 
 ## Next Lab is Lab 2: Stock Reports
-> * [Lab 5: Analyzer Exercises 2](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/analyzerlab2.html)
+> * [Lab 5: Analyzer Exercises 2](https://wxcctechsummit.github.io/pages/analyzerlab2.html)
 
 [Back to top](#webex-cc-partner-summit-lab5-analyzer-lab)
 
