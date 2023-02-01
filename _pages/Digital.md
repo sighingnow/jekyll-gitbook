@@ -27,7 +27,7 @@ This page is under developments
 | [Task BOTs](#lab1216---) | Practical Lab | HARD            | 30 min           |
 | [Event Scheduler](#lab1217---) | Read & Understand | MED            | 15 min           |
 | [Inbound Webhooks](#lab1218---) | Practical Lab | HARD            | 15 min           |
-| [Troubleshooting](#lab1219---) | Practical Lab | MED            | 15 min           |
+| [Troubleshooting](#lab1219---troubleshooting) | Practical Lab | MED            | 15 min           |
 | [Custom Nodes](#lab1220---) | Practical Lab | HARD            | 15 min           |
 | [Events and Triggers](#lab1221---) | Practical Lab | MED            | 15 min           |
 | [Flow and Global variables](#lab1222---) | Practical Lab | MED            | 15 min           |
@@ -1000,12 +1000,13 @@ In this Lab, we will go through the tasks that are required to complete the basi
 
 We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, Website Settings, and corresponding workflows.
 
-#### Pre-requisite
+#### Pre-requisites
 
-1. Webex CC Portal, Agent Desktop and Webex Connect URL .
-2. Admin credentials to complete configurations in Webex CC Management Portal and Engage Portal.
-3. Admin credentials to complete configurations in Connect Portal.
-4. Agent Credentials to handle the Chat.
+1. You received Webex CC Portal, Agent Desktop and Webex Connect URL .
+2. You have admin credentials to complete configurations in Webex CC Management Portal and Engage Portal.
+3. You have admin credentials to complete configurations in Connect Portal.
+4. You have agent Credentials to handle the Chat.
+5. You have successfully completed the previous Lab1 **Preconfiguration**.
 
 #### Quick Links
 
@@ -2942,6 +2943,41 @@ Request Body:
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 # Lab.12.19 - Troubleshooting
+
+
+## Table of Contents
+
+| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Understanding of Webex Connect troubleshooting capabilities](#1...)             | Read & Understand | MID            | 5 min            |
+| [Troubleshooting flows](#2...)                       | Read & Understand     | MID            | 5 min            |
+| [Issue #1 - Engage Asset not linked to Entry Point in Webex CC](#3...) | Read & Understand     | MID            | 5 min            |
+| [Issue #2 - Engage authentication not working](#2...)  | Read & Understand     | MID            | 5 min     |
+| [Issue #3 - Connect authentication not working](#3...)  | Read & Understand     | MID            | 5 min     |
+| [Issue #4 - Missed/empty Value](#3...) | Read & Understand     | MID            | 5 min            |
+| [Issue #5 - Wrong value](#4...) | Read & Understand     | MID            | 5 min            |
+
+## Introduction
+
+This section is designed to introduce troubleshooting capabilites available for digital channels in Webex Connect platform. In addition there examples of the most common issues and the ways of how to fix them.
+
+
+## Pre-requisite
+
+1. You received Webex CC Management Portal, Agent Desktop and Webex Connect URL .
+2. You have admin credentials for Webex CC Management Portal and Engage Portal.
+3. You have admin credentials for Connect Portal.
+4. You have at least one flow created and published in Webex Connect.
+
+## 1. Understanding of Webex Connect troubleshooting capabilities
+
+
+
+
+
+
+
+
 # Lab 12.20 - Creating Custom Nodes
 ## Table of Contents
 
