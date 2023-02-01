@@ -28,7 +28,7 @@ layout: post
     * [3. Running the query.](#3-Running-the-query.)
   - [Part 6: Agent Desktop APIs](#part-6-Agent-Desktop-APIs)
     * [1. Useful links.](#1-Useful-links.)
-    * [2. 2. Importing postman collection and setting up oauth2.](#2-Importing-postman-collection-and-setting-up-oauth2.)
+    * [2. Importing postman collection and setting up oauth2.](#2-Importing-postman-collection-and-setting-up-oauth2.)
     * [3. Establish a websocket connection.](#3-Establish-a-websocket-connection.)
 	* [4. Login an agent.](#4-Login-an-agent.)
 	* [5. Change state of an agent.](#5-Change-state-of-an-agent.)
@@ -83,9 +83,9 @@ Here is a summary:
 
 - The New  Webex Contact Center APIs are accessed by using Webex OAuth2
 
-- Watch this video to create an integration and run APIs on postman **[Here](https://app.vidcast.io/share/b8b4de22-7322-45d3-ab9c-070b3a8ec1f3)**
+- Watch this **[video](https://app.vidcast.io/share/b8b4de22-7322-45d3-ab9c-070b3a8ec1f3)** to create an integration and run APIs on postman.
 
-- Steps to create an integration and use on postman **[Here](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)**
+- **[Steps](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)** to create an integration and use on postman 
 
 - OAuth2 by design, requires a client ID, clinet secret, callback URL(Redirect URL)
 
@@ -342,19 +342,19 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 - **[Web socket subscription API](https://developer.webex-cx.com/documentation/notification)**
 - **[Login](https://developer.webex-cx.com/documentation/agents/v1/login)**
 - **[Logout](https://developer.webex-cx.com/documentation/agents/v1/logout)**
-- **[Reload](ttps://developer.webex-cx.com/documentation/agents/v1/reload)**
+- **[Reload](https://developer.webex-cx.com/documentation/agents/v1/reload)**
 - **[State change](https://developer.webex-cx.com/documentation/agents/v1/state-change)**
 
 ### 2. Importing postman collection and setting up oauth2.
 
-- As shown in the video Import the desktop postman collection from - **[Here](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/desktop-api-sample)**
+- As shown in the **[video](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/desktop-api-sample/WebexCC%20Desktop%20APIs%20-%20Sample.postman_collection.json)** Import the desktop postman collection.
 - Postman -> Import -> Raw Text -> Continue
-- Setup Oauth2 connection on postman collection as mentioned in section 1 **[Here](https://app.vidcast.io/share/b8b4de22-7322-45d3-ab9c-070b3a8ec1f3)**
+- Setup Oauth2 connection on postman collection as mentioned in **[section 1](https://app.vidcast.io/share/b8b4de22-7322-45d3-ab9c-070b3a8ec1f3)**
 
 
 ### 3. Establish a websocket connection.
 
-- Establish a web socket connection from postman as shown in the video. **[Web socket subscription API](https://developer.webex-cx.com/documentation/notification)
+- Establish a web socket connection from postman as shown in this **[video](https://developer.webex-cx.com/documentation/notification)**
 - Collection -> Agent -> Register Web socket Subscription.
 - Run the request. A websocket URL will be generated.
 - Copy the web socket notification URL received in the above step.
@@ -364,7 +364,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 ### 4. Login an agent.
 
 - Collection -> Agent -> Station login.
-- Change the request body as mentioned **[Here](https://developer.webex-cx.com/documentation/agents/v1/login)**
+- Change the request body as mentioned in this **[document](https://developer.webex-cx.com/documentation/agents/v1/login)**
 - Click on send.
 - Agent will be successfully logged in and will be in idle state.
 - Click on web socket established in step 5 and notice that an event is received on web socket for successful login.
@@ -372,7 +372,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 ### 5. Change state of an agent.
 
 - Collection -> Agent -> Change state.
-- Change the request body as mentioned here (To available) **[Here](https://developer.webex-cx.com/documentation/agents/v1/state-change)**
+- Change the request body as mentioned in this (To available) **[document](https://developer.webex-cx.com/documentation/agents/v1/state-change)**
 - Click on send.
 - Agent state will be successfully changed to Available.
 - Click on web socket established in step 3 and notice that an event is received on web socket for successful state change.
@@ -380,7 +380,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 ### 6. Reload an agent.
 
 - Collection -> Agent -> Reload Agent.
-- Reload API explanation **[Here](https://developer.webex-cx.com/documentation/agents/v1/reload)** 
+- Reload API **[documentation](https://developer.webex-cx.com/documentation/agents/v1/reload)** 
 - Click on send.
 - Agent state data will be successfully received on web socket. this will include the config details aswell as task agent is handling.
 - Click on web socket established in step 3 and notice that an event is received on web socket for successful agent reload.
@@ -388,7 +388,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 ### 7. Logout an agent.
 
 - Collection -> tasks -> Logout Task.
-- Change the request body as mentioned **[Here](https://developer.webex-cx.com/documentation/agents/v1/logout)** 
+- Change the request body as in this **[document](https://developer.webex-cx.com/documentation/agents/v1/logout)** 
 - Click on send.
 - Agent will be successfully logged out.
 - Click on web socket established in step 3 and notice that an event is received on web socket for successful agent reload.
