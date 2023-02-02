@@ -335,7 +335,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 
 ## Part 6: Agent Desktop APIs
 
-<iframe width="1024" height="576" src="https://app.vidcast.io/share/49fce72a-de94-449a-809e-822ed061d2e3" title="Part 6: Agent Desktop APIs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%"> <iframe src="https://app.vidcast.io/share/embed/49fce72a-de94-449a-809e-822ed061d2e3" width="100%" height="100%" title="Agent desktop APIs" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe> </div>
 
 ### 1. Useful links.
 
