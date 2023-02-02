@@ -2333,17 +2333,18 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 
 -   WxCC Portal, Agent Desktop and IMI connect URL.
 -   Admin credentials to complete configurations in WxCC portal and IMI connect.
--   Agent Credentials to Handle FBM digital contact
+-   Agent Credentials to Handle FBM digital contact.
 
 ### 1.     Navigate to BOT Builder and Create bot
 
--   Log on to Connect portal and navigate to BOT Builder
+-   Log on to Connect portal and navigate to BOT Builder.
     
--   On the top right you have 2 options QnA BOT and Task BOT
+-   On the top right you have 2 options QnA BOT and Task BOT.
     
--   Create new QnA Bot
+-   Create new QnA Bot.
     
--   Give name and enable agent handoff option
+-   Give name and enable Agent handover and Allow feedback options. For easy tracking of configurations, please use the Attendee ID as part of your Bot name. For example:
+	Bot Name: AttendeeID_QnA_Bot
     
 
 ### 2.     Preview
@@ -3090,7 +3091,8 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ![Lab12.20_CustomNodeAddIntegrations](/assets/images/Lab12.20_CustomNodeAddIntegrations.png)
 
--   Name your Custom Node, select ‘Custom Nodes’ under Node Category and click OK
+-   Name your Custom Node, select ‘Custom Nodes’ under Node Category and click OK. For easy tracking of configurations, please use the Attendee ID as part of your node name. For example:
+	Node Name: AttendeeID_CustomNode
 
 ![Lab12.20_CustomNodeCreateNew](/assets/images/Lab12.20_CustomNodeCreateNew.png)
 
@@ -3285,8 +3287,10 @@ Both variables are transferable between flows. In the second part of this lab in
 
 ![Lab12.24.1_GVFirst](/assets/images/Lab12.24.1_GVFirst.png)
 
--   Create a new OR select an existing Global Variable with the following configurations:
+-   Create a new OR select an existing Global Variable with the following configurations. For easy tracking of configurations, please use the Attendee ID as part of your global variable name. For example:
+	Name: AttendeeID_GV
 
+	-   Name: AttendeeID_GV
 	-   Variable Type: String
 	-   Default Value: _your prefered value_
 	-   Make Reportable: Yes
@@ -3366,7 +3370,7 @@ Both variables are transferable between flows. In the second part of this lab in
 	-   Task ID: $(flid)
 	-   Set Variable:
 	
-		-   Name: _your prefered value_
+		-   Name: AttendeeID_FV (For easy tracking, please prepend your Attendee ID)
 		-   Type: String
 		-   Value:
 		-   Enable “Make agent viewable”
