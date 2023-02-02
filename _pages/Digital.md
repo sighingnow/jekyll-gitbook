@@ -2974,12 +2974,12 @@ This section is designed to introduce troubleshooting capabilites available for 
 
 >**Note:** Please check and make sure all configuration steps for digital channel have been completed succesfully before start troubleshooting it.
 
-There are the following troubleshooting capabilities available for the administrator to troubleshoot issues in digital channels empowered by Webex Connect:
+There are the following troubleshooting capabilities available for the administrator to troubleshoot issues in digital channels provided by Webex Connect:
 -  Export Logs tool
 -  The debugger built into the flow builder
 Let's consider how we can use both of them.
 
-#### Export Logs tool
+### 1.1. Export Logs tool
 
 This tool allows Webex Connect admin to download inbound and outbound log events as XLSX file for any Service / Asset / Digital Channel for desired timefrrame. The we can inspect this file to check, for example, whether the message was received or sent by corresponding component of Webex Connect platform.
 
@@ -3014,6 +3014,34 @@ Now, let's download all outbound messages for ***My First Service*** for the las
 After the log file has been downloaded, we can open the file and see all outbound events, incliding timestamps, IDs and message text. We can use this log to check whether exact message has been sent to the end user by Webex Connect via selected Service / Channel.
 
 ![DC_Lab.12.19_Export_Logs_5](/assets/images/DC_Lab_12.19._Export_Logs_5.png)
+
+### 1.2. Flow Debugger 
+
+This tool allows Webex Connect admin to track flow execution from the beginning till the end. Flow debugger has the following capabilities:
+-  search for exact flow execution event based on the timestamp or Transaction ID
+-  briefly shows the result of exectuting each node of the flow in the form of a list
+-  adds unique ID to each node on flow canvas to simplify the mapping between the nodes and items in the list
+-  shows all the parameters used when calling each flow node
+-  shows the responce returned by each flow node after it had been called
+-  shows the values of the variables created by admin for troubleshooting purpose
+
+>**Note:** By default, debugging details are encrypted in Flow Debugger. Webex Connect admin account should have ***Decryption Access*** permission to be able to decrypt the details.
+>- Admin account with ***Owner*** permission has ***Decryption Access*** by default.
+>- Admin accoun without ***Owner*** permission has no ***Decryption Access*** by default - it can be granted by the owner.
+
+Login to ConnectPortal and go to ***Settings*** -> ***Teammates*** and loot at ***Decryption Access*** column to check which accounts on Connect Portal have log decryption permission. For example:
+
+![DC_Lab.12.19_Flow_Debugger_1](/assets/images/DC_Lab_12.19._Flow_Debugger_1.png)
+
+To grant ***Decryption Access*** permission to some admin account, check and make sure you are logged in under admin account with ***Owner*** permission. Then click ***Edit*** button next to the desired admin account, tick ***Decrypt Logs*** check box in the pop-up window with account details and save changes.
+
+![DC_Lab.12.19_Flow_Debugger_2](/assets/images/DC_Lab_12.19._Flow_Debugger_2.png)
+
+Check and make sure ***Decryption Access*** permission is visible next to the desired admin account in the list of users.
+
+![DC_Lab.12.19_Flow_Debugger_3](/assets/images/DC_Lab_12.19._Flow_Debugger_3.png)
+
+
 
 
 
