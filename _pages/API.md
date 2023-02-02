@@ -22,6 +22,18 @@ layout: post
     * [1. Creating a Site with "Create Sites" API](#1-creating-a-site-with-create-sites-api)
     * [2. Changing the Site name with "Update Site By ID" API](#2-changing-the-site-name-with-update-site-by-id-api)
     * [3. Practicing with Bulk Upload](#3-practicing-with-bulk-upload)
+  - [Part 5: Search API](#part-5-Search-API)
+    * [1. Search endpoint in developer portal.](#1-Search-endpoint-in-developer-portal)
+    * [2. Forming a graphQL query.](#2-Forming-a-graphQL-query)
+    * [3. Running the query.](#3-Running-the-query)
+  - [Part 6: Agent Desktop APIs](#part-6-Agent-Desktop-APIs)
+    * [1. Useful links.](#1-Useful-links)
+    * [2. Importing postman collection and setting up oauth2.](#2-Importing-postman-collection-and-setting-up-oauth2)
+    * [3. Establish a websocket connection.](#3-Establish-a-websocket-connection)
+	* [4. Login an agent.](#4-Login-an-agent)
+	* [5. Change state of an agent.](#5-Change-state-of-an-agent)
+	* [6. Reload an agent.](#6-Reload-an-agent)
+	* [7. Logout an agent.](#7-Logout-an-agent)
 
 - [APIv1 (Legacy version)](#apiv1-legacy-version)
   - [Part 1: Legacy 1.0 APIs: CSR, CSR Query](#part-1-legacy-10-apis-csr-csr-query)
@@ -67,18 +79,15 @@ layout: post
 
 Here is a summary: 
 
-
-**API Access- Registering an Application(Early Access)**
-
-Submit a Request to Obtain Access
+**API Access- create an Integration**
 
 - The New  Webex Contact Center APIs are accessed by using Webex OAuth2
 
+- Watch this **[video](https://app.vidcast.io/share/b8b4de22-7322-45d3-ab9c-070b3a8ec1f3)** to create an integration and run APIs on postman.
+
+- **[Steps](https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/218418-configure-webex-contact-center-apis-with.html)** to create an integration and use on postman 
+
 - OAuth2 by design, requires a client ID, clinet secret, callback URL(Redirect URL)
-
-- Fill up the **[API App Request Form](https://app.smartsheet.com/b/form/7af787e752834bbfba604bfc85a5eff1)** with your details to register your app with webex contact center. We will provide you with a Client ID and Client Secret.
-
-**Note:** `This is a temporary form for Early Access. The Automated Sign up and App Management & Integration is coming soon to the developer portal.`
 
 - Use the Client ID, Client Secret, Redirect URI (callback URL) to obtain access_token for your Org. Use the Access token to hit the API inside of the Authorization header. 
 
@@ -260,7 +269,6 @@ To try this out in Postman follow the steps outlined in the previous example
 To try this out in Postman follow the steps outlined in the previous example
 
 
-
 ## Part 4: Configuration APIs
 
 > This is the bonus section of New WxCC APIs where you will be able to create/change settings in the Webex Contact Center by using the Configuration APIs.
@@ -299,7 +307,92 @@ To try this out in Postman follow the steps outlined in the previous example
 
 ### 3. Practicing with Bulk Upload
 
-Follow the instructions in the vdeo to use Postman and create mutiple sites using a csv file
+Follow the instructions in the video to use Postman and create mutiple sites using a csv file
+
+## Part 5: Search API
+
+<iframe width="1024" height="576" src="https://app.vidcast.io/share/c8c778c5-6659-4145-891a-bafcece29863" title="Part 5: Search API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### 1. Search endpoint in developer portal
+
+ - Go to - **[Search endpoint on Developer Portal](https://developer.webex-cx.com/documentation/search)**
+ - Click on -> Try out -> Expand try out window by clicking box icon on right hand side top section.
+
+### 2. Forming a graphQL query.
+
+ - In the interactive editor paste the query from github sample **[link](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/simple.graphql)**
+ - NOTE : To and From should be changed accoring to your needs, it has to be epoch time in miliseconds, use this **[link](- https://www.epochconverter.com/)** to convert.
+
+### 3. Running the query.
+
+- Click on run - notice that you will receive all the interaction ID's between that timeframe.
+- Run the query **[- https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/totalCallsByAni.graphql](- https://www.epochconverter.com/)** to aggregate calls from a specific phone number.
+- NOTE : Change the line 11 to the ANI from your tenant.
+- Refer to docs section as shown in video to find explaination for each fields in the schema.
+- You can also run all the graphQL samples **[here](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/graphql-sample)** 
+  
+  NOTE : Change filters and aggregation values according to your tenant.
+
+## Part 6: Agent Desktop APIs
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%"> <iframe src="https://app.vidcast.io/share/embed/49fce72a-de94-449a-809e-822ed061d2e3" width="100%" height="100%" title="Agent desktop APIs" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe> </div>
+
+### 1. Useful links.
+
+- **[Web socket subscription API](https://developer.webex-cx.com/documentation/notification)**
+- **[Login](https://developer.webex-cx.com/documentation/agents/v1/login)**
+- **[Logout](https://developer.webex-cx.com/documentation/agents/v1/logout)**
+- **[Reload](https://developer.webex-cx.com/documentation/agents/v1/reload)**
+- **[State change](https://developer.webex-cx.com/documentation/agents/v1/state-change)**
+
+### 2. Importing postman collection and setting up oauth2.
+
+- As shown in the **[video](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/desktop-api-sample/WebexCC%20Desktop%20APIs%20-%20Sample.postman_collection.json)** Import the desktop postman collection.
+- Postman -> Import -> Raw Text -> Continue
+- Setup Oauth2 connection on postman collection as mentioned in **[section 1](https://app.vidcast.io/share/b8b4de22-7322-45d3-ab9c-070b3a8ec1f3)**
+
+
+### 3. Establish a websocket connection.
+
+- Establish a web socket connection from postman as shown in this **[video](https://developer.webex-cx.com/documentation/notification)**
+- Collection -> Agent -> Register Web socket Subscription.
+- Run the request. A websocket URL will be generated.
+- Copy the web socket notification URL received in the above step.
+- On Postman Click on New -> WebSocket Request -> Paste the URL -> Click connect.
+- At this point a WebSocket will be established successfully.
+
+### 4. Login an agent.
+
+- Collection -> Agent -> Station login.
+- Change the request body as mentioned in this **[document](https://developer.webex-cx.com/documentation/agents/v1/login)**
+- Click on send.
+- Agent will be successfully logged in and will be in idle state.
+- Click on web socket established in step 5 and notice that an event is received on web socket for successful login.
+
+### 5. Change state of an agent.
+
+- Collection -> Agent -> Change state.
+- Change the request body as mentioned in this (To available) **[document](https://developer.webex-cx.com/documentation/agents/v1/state-change)**
+- Click on send.
+- Agent state will be successfully changed to Available.
+- Click on web socket established in step 3 and notice that an event is received on web socket for successful state change.
+
+### 6. Reload an agent.
+
+- Collection -> Agent -> Reload Agent.
+- Reload API **[documentation](https://developer.webex-cx.com/documentation/agents/v1/reload)** 
+- Click on send.
+- Agent state data will be successfully received on web socket. this will include the config details aswell as task agent is handling.
+- Click on web socket established in step 3 and notice that an event is received on web socket for successful agent reload.
+
+### 7. Logout an agent.
+
+- Collection -> tasks -> Logout Task.
+- Change the request body as in this **[document](https://developer.webex-cx.com/documentation/agents/v1/logout)** 
+- Click on send.
+- Agent will be successfully logged out.
+- Click on web socket established in step 3 and notice that an event is received on web socket for successful agent reload.
+
 
 
 
