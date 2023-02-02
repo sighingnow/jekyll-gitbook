@@ -2951,7 +2951,7 @@ Request Body:
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 5 min            |
-| [Troubleshooting flows](#2...)                       | Read & Understand     | MID            | 5 min            |
+| [Debugging a flow](#2debugging-a-flow)                       | Read & Understand     | MID            | 5 min            |
 | [Issue #1 - Engage Asset not linked to Entry Point in Webex CC](#3...) | Read & Understand     | MID            | 5 min            |
 | [Issue #2 - Engage authentication not working](#2...)  | Read & Understand     | MID            | 5 min     |
 | [Issue #3 - Connect authentication not working](#3...)  | Read & Understand     | MID            | 5 min     |
@@ -3030,7 +3030,7 @@ This tool allows Webex Connect admin to track flow execution from the beginning 
 >- Admin account with ***Owner*** permission has ***Decryption Access*** by default.
 >- Admin accoun without ***Owner*** permission has no ***Decryption Access*** by default - it can be granted by the owner.
 
-Login to ConnectPortal and go to ***Settings*** -> ***Teammates*** and loot at ***Decryption Access*** column to check which accounts on Connect Portal have log decryption permission. For example:
+Login to Connect Portal and go to ***Settings*** -> ***Teammates*** and loot at ***Decryption Access*** column to check which accounts on Connect Portal have log decryption permission. For example:
 
 ![DC_Lab.12.19_Flow_Debugger_1](/assets/images/DC_Lab_12.19._Flow_Debugger_1.png)
 
@@ -3041,6 +3041,41 @@ To grant ***Decryption Access*** permission to some admin account, check and mak
 Check and make sure ***Decryption Access*** permission is visible next to the desired admin account in the list of users.
 
 ![DC_Lab.12.19_Flow_Debugger_3](/assets/images/DC_Lab_12.19._Flow_Debugger_3.png)
+
+
+## 2. Debugging a flow
+
+Flow debugger is embedded into Webex Connect flow builedr. Let's have a look how to use it. 
+
+-  Login to Connect Portal and go to ***Services***. Then go to the service, switch to ***Flows*** tab and double-click on the flow which you are going to debug. 
+-  Once the flow is loaded, click on ***Debug*** button on the right pane. Flow debugger window will
+appear at the bottom. This window is scalable, so we can adjust its size to make troublehooting process more convenient.
+
+![DC_Lab.12.19_Debugging_Flow_1](/assets/images/DC_Lab_12.19._Debugging_Flow_1.png)
+
+-  Provide proper time frame or ***Transaction ID*** (if you know it) and press ***Search*** button to find corresponding flow events. You will see all found flow events as a list in debugger window. Each line of the list represents single flow execution.
+
+![DC_Lab.12.19_Debugging_Flow_2](/assets/images/DC_Lab_12.19._Debugging_Flow_2.png)
+
+-  Click on the corresponding hyperlink in ***Transaction ID*** column to see the details of exact flow execution. Those details will be displayed as a list at a separate tab in the same debugger window. The title of the tab will be the value of the Transaction ID.
+
+![DC_Lab.12.19_Debugging_Flow_3](/assets/images/DC_Lab_12.19._Debugging_Flow_3.png)
+
+-  Select one item from the list to see its details on the right-hand side of debugging window. All details of the event are encrypted by default. Click on ***DECRYPT LOGS*** button in the title of debuggin screen to see decrypted log messages.
+
+![DC_Lab.12.19_Debugging_Flow_4](/assets/images/DC_Lab_12.19._Debugging_Flow_4.png)
+
+-  Decrypted log messages will be displayed on the right-hand side of debuggin window. Those log messages include the parameters used when calling the node as well as the results returned by the node after the request was processed. You can copy the value of any debug message by pressing copy icon next to the message on the right-hand side of debugging window.
+
+![DC_Lab.12.19_Debugging_Flow_5](/assets/images/DC_Lab_12.19._Debugging_Flow_5.png)
+
+-  All items in the list have ***Node ID*** and ***Node*** which matches the same values for each node on flow canvas.
+
+![DC_Lab.12.19_Debugging_Flow_6](/assets/images/DC_Lab_12.19._Debugging_Flow_6.png)
+
+-  So, every time you click on any item in the list in debugging window the log messages of this node are displayed on the righ-hand side. In addition, corresponding node is highlighted with a blue border on flow canvas, which simplifies troubleshhoting.
+
+![DC_Lab.12.19_Debugging_Flow_7](/assets/images/DC_Lab_12.19._Debugging_Flow_7.png)
 
 
 
