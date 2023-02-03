@@ -22,18 +22,18 @@ layout: post
     * [1. Creating a Site with "Create Sites" API](#1-creating-a-site-with-create-sites-api)
     * [2. Changing the Site name with "Update Site By ID" API](#2-changing-the-site-name-with-update-site-by-id-api)
     * [3. Practicing with Bulk Upload](#3-practicing-with-bulk-upload)
-  - [Part 5: Search API](#part-5-Search-API)
-    * [1. Search endpoint in developer portal](#1-Search-endpoint-in-developer-portal)
-    * [2. Forming a graphQL query](#2-Forming-a-graphQL-query)
-    * [3. Running the query](#3-Running-the-query)
-  - [Part 6: Agent Desktop APIs](#part-6-Agent-Desktop-APIs)
-    * [1. Useful links](#1-Useful-links)
-    * [2. Importing postman collection and setting up oauth2](#2-Importing-postman-collection-and-setting-up-oauth2)
-    * [3. Establish a websocket connection](#3-Establish-a-websocket-connection)
-	* [4. Login an agent](#4-Login-an-agent)
-	* [5. Change state of an agent](#5-Change-state-of-an-agent)
-	* [6. Reload an agent](#6-Reload-an-agent)
-	* [7. Logout an agent](#7-Logout-an-agent)
+  - [Part 5: Search API](#part-5-search-api)
+    * [1. Search endpoint in developer portal](#1-search-endpoint-in-developer-portal)
+    * [2. Forming a graphQL query](#2-forming-a-graphql-query)
+    * [3. Running the query](#3-running-the-query)
+  - [Part 6: Agent Desktop APIs](#part-6-agent-desktop-api)
+    * [1. Useful links](#1-useful-links)
+    * [2. Importing postman collection and setting up oauth2](#2-importing-postman-collection-and-setting-up-oauth2)
+    * [3. Establish a websocket connection](#3-establish-a-websocket-connection)
+	* [4. Login an agent](#4-login-an-agent)
+	* [5. Change state of an agent](#5-change-state-of-an-agent)
+	* [6. Reload an agent](#6-reload-an-agent)
+	* [7. Logout an agent](#7-logout-an-agent)
 
 - [APIv1 (Legacy version)](#apiv1-legacy-version)
   - [Part 1: Legacy 1.0 APIs: CSR, CSR Query](#part-1-legacy-10-apis-csr-csr-query)
@@ -55,7 +55,7 @@ layout: post
 
 **Important:** Changes to the API Lab.
 
-- The New Webex Contact Center APIs are now available on **[developer.webex-cx.com](https://developer.webex-cx.com)** and use OAuth2 as opposed to One-time API Keys.
+- The New Webex Contact Center APIs are now available on **[developer.webex-cx.com](https://developer.webex-cx.com){:target="_blank"}** and use OAuth2 as opposed to One-time API Keys.
 - The Legacy APIs (v1) are still available and are documented in the later section of this lab.
 - The lab assumes that you will use the All New Webex Contact Center APIs which are documented below.
 - For a quick start and overview, refer to the Overview / Quick start section.
@@ -323,12 +323,12 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 ### 2. Forming a graphQL query
 
  - In the interactive editor paste the query from github sample **[link](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/simple.graphql)**
- - NOTE : To and From should be changed accoring to your needs, it has to be epoch time in miliseconds, use this **[link](- https://www.epochconverter.com/)** to convert.
+ - NOTE : To and From should be changed according to your needs, it has to be epoch time in miliseconds, use this **[link](https://www.epochconverter.com/)** to convert.
 
 ### 3. Running the query
 
 - Click on run - notice that you will receive all the interaction ID's between that timeframe.
-- Run the query **[- https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/totalCallsByAni.graphql](- https://www.epochconverter.com/)** to aggregate calls from a specific phone number.
+- Run the query **[- https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/totalCallsByAni.graphql](https://www.epochconverter.com/)** to aggregate calls from a specific phone number.
 - NOTE : Change the line 11 to the ANI from your tenant.
 - Refer to docs section as shown in video to find explaination for each fields in the schema.
 - You can also run all the graphQL samples **[here](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/graphql-sample)** 
