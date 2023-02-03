@@ -26,7 +26,7 @@ layout: post
     * [1. Search endpoint in developer portal](#1-search-endpoint-in-developer-portal)
     * [2. Forming a graphQL query](#2-forming-a-graphql-query)
     * [3. Running the query](#3-running-the-query)
-  - [Part 6: Agent Desktop APIs](#part-6-agent-desktop-api)
+  - [Part 6: Agent Desktop APIs](#part-6-agent-desktop-apis)
     * [1. Useful links](#1-useful-links)
     * [2. Importing postman collection and setting up oauth2](#2-importing-postman-collection-and-setting-up-oauth2)
     * [3. Establish a websocket connection](#3-establish-a-websocket-connection)
@@ -335,7 +335,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
   
   NOTE : Change filters and aggregation values according to your tenant.
 
-## Part 6: Agent Desktop APIs
+### Part 6: Agent Desktop APIs
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%"> <iframe src="https://app.vidcast.io/share/embed/49fce72a-de94-449a-809e-822ed061d2e3" width="100%" height="100%" title="Agent desktop APIs" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe> </div>
 
