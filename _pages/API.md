@@ -311,7 +311,9 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 
 ## Part 5: Search API
 
-<iframe width="1024" height="576" src="https://app.vidcast.io/share/c8c778c5-6659-4145-891a-bafcece29863" title="Part 5: Search API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/c8c778c5-6659-4145-891a-bafcece29863" width="100%" height="100%" title="WebexCC Search API: Getting Started with GraphQL" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div> 
 
 ### 1. Search endpoint in developer portal
 
