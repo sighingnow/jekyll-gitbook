@@ -56,7 +56,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 | Agent         | <w class = "attendee-class">your_attendee_ID</w>_agent1@\<your domain\> | \<your assign DN\> |
 | Supervisor    | <w class = "attendee-class">your_attendee_ID</w>_supervisor1@\<your domain\> | \<your assign DN\> |
 
-> Don't use the domain **mailinator.com** for the user accounts in Control Hub. From the security reasons, such accounts will be automatically removed. 
+> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted.
 {: .block-danger }
 
 ### 1.  Define your Attendee ID
@@ -69,6 +69,8 @@ In this Lab, we will go through the tasks that are required to complete the gene
 </form>
 <script src="/assets/gitbook/form.js"></script>
 
+>**NOTE:** the **Attendee ID** was provided in the email with the admin credentionals. You can share your tenant with your colleagues, in that case the **Attendee ID** should be the same for all, but you can use a sub prefix with the number. Ex: attendeeID_agent1_1, attendeeID_agent1_2, etc.
+{: .block-tip }
 	
 ### 2.  Add agent and supervisor users and set the calling extensions
 
@@ -109,19 +111,20 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 # Managment Portal User Configuration
 
-> The following video outlines how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user. We will also see how to navigate to the Webex Contact Center Management Portal from Control Hub UI.
+> The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users. 
 {: .block-tip }
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/92ou5Yias-8?rel=0" title="WxCC Lab #1 Part 2: Admin Portal Multimedia Profile, Site and Team Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 | **Entity**          | **Name** |
 | ------------------- | -------- |
-| Multimedia Profiles | MMP_2022_TS   |
-| Site                | Site_2022_TS  |
-| Team1               | Team1_2022_TS |
-| Team2               | Team2_2022_TS |
+| Multimedia Profiles | <w class = "attendee-class">your_attendee_ID</w>_MMP   |
+| Site                | <w class = "attendee-class">your_attendee_ID</w>_MMP  |
+| Team1               | <w class = "attendee-class">your_attendee_ID</w>_MMP |
+| Team2               | <w class = "attendee-class">your_attendee_ID</w>_MMP |
 
-> **NOTE:** Multiple \<ID\> were provided in the email in the **"Attendee ID"** line. You can share your tenant with the multiple administrators in your organization, in that case the ID should be unique for each user.
+> **NOTE:** the **Attendee ID** was provided in the email with the admin credentionals. You can share your tenant with your colleagues, in that case the **Attendee ID** should be the same for all, but you can use a sub prefix with the number. Ex: attendeeID_MMP_1, attendeeID2_MMP_2, etc.
+{: .block-tip }
 
 ### 1. Create new MultiMedia Profile
 
@@ -171,10 +174,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and hit **_Save_**.
 
-### 4. Create new Team 2
-
-- Please follow the same steps as above to add an extra Team as `Team2_2022_TS`. Later we will use this team to assign a custom Desktop Layout.
-
 
 
 > The following video outlines how to configure the users in Admin Portal that were added first in Control Hub. This is a very critical task from the Contact Center perspective. We also would take a look at how to associate customer-created Site, Team, and Multi-Media Profile with those users. After this, we should be able to login as an agent.
@@ -208,6 +207,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - Select `MMP_2022_TS` in the **_Multimedia Profile_** drop-down and hit **_Save_**.
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
+
+
+# Bulk Configuration
+
+### 4. Create new Team 2
+
+- Please follow the same steps as above to add an extra Team as `Team2_2022_TS`. Later we will use this team to assign a custom Desktop Layout.
 
 
 # Access to the Agent Desktop
@@ -287,7 +293,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
 
-# Bulk Configuration
+
 
 
 ---
