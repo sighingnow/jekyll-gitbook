@@ -67,7 +67,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
-> {: .block-tip }
+{: .block-tip }
 
 <div class="alert"></div>
 <form id="attendee-form">
@@ -108,20 +108,24 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 
 
+> ##### TIP
+>
 > The video below shows a demo about the agent login process and the available options.
-> {: .block-tip }
+{: .block-tip }
 
 <iframe width="1024" height="576" src="https://app.vidcast.io/share/e4b450ff-9d3f-424d-96bb-2f0988b81743" title="Station Login" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
 
 
 ## Agent Desktop Interface
 
+>##### TIP
+>
 > Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it.
-> {: .block-tip }
+{: .block-tip }
 
 <iframe width="1024" height="500" src="https://app.vidcast.io/share/dc341488-94ab-4659-8951-4b4ba1412373" title="Agent Desktop Interface" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
 
-![Image1](assets/images/AgentDesktopOverview.png)
+![Image1](/assets/images/AgentDesktopOverview.png)
 
 The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
 
@@ -141,7 +145,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Calls Handling
 
 > In the following video you will see how to handle incoming calls and what are the different agent states.
->  {: .block-tip }
+{: .block-tip }
 <iframe width="1024" height="576" src="https://app.vidcast.io/share/f5a79811-eb60-4925-b11a-a8586760a3d3" title="Calls Handling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
 
 #### Agent states:
@@ -206,10 +210,10 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 
 > **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your _attendeeID_ is provided in the email in the **"Attendee ID"** line.
-> {: .block-warning }
+{: .block-warning }
 
 > Be aware that all entities that don't match with attendee IDs will be deleted
-> {: .block-warning }
+{: .block-warning }
 
 
 
@@ -217,7 +221,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Testing Incoming call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
->  {: .block-tip }
+{: .block-tip }
 
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
@@ -252,6 +256,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 	- Check the **CAD variables** and try to edit any Global Variable
 	- Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
 
+<br>
 
 - Let's play with the call interaction buttons
 	- Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
@@ -263,7 +268,8 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 
 > For this part, you will need a third calling device for interacting as aSupervisor
-> {: .block-warning }
+{: .block-warning }
+
 - Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
 	- In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
 	- Place the call from the third calling endpoint (your personal phone for example)
@@ -274,7 +280,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Exploring User Profile
 
 > In this section, we will explore what are the available options and settings under the User Profile
->  {: .block-tip }
+{: .block-tip }
 
 <iframe width="1024" height="500" src="https://app.vidcast.io/share/149fe8d1-c27e-4c7e-a0b9-af072487c543" title="Exploring User Profile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
 
@@ -308,7 +314,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Outdial
 
 > In this section, we will test Outdial calls using different Outdial ANIs and Address Books
->  {: .block-tip }
+{: .block-tip }
 
 <iframe width="1024" height="500" src="https://app.vidcast.io/share/df20ad39-55db-4c8c-a268-bcd4818fe1f3" title="Outdial Calls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
 
@@ -336,7 +342,10 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Navigate to _Management Portal > Tenant > Settings_
 	- Check what is the **Default Outdial ANI** 
-		> **This is a required setting at tenant level, so PLEASE DON'T EDIT IT** {: .block-tip }
+
+
+> **This is a required setting at tenant level, so PLEASE DON'T EDIT IT**
+{: .block-tip }
 
 
 
