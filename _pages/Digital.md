@@ -2950,13 +2950,10 @@ Request Body:
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 5 min            |
-| [Debugging a flow](#2debugging-a-flow)                       | Read & Understand     | MID            | 5 min            |
-| [Issue #1 - Engage Asset not linked to Entry Point in Webex CC](#3...) | Read & Understand     | MID            | 5 min            |
-| [Issue #2 - Engage authentication not working](#2...)  | Read & Understand     | MID            | 5 min     |
-| [Issue #3 - Connect authentication not working](#3...)  | Read & Understand     | MID            | 5 min     |
-| [Issue #4 - Missed/empty Value](#3...) | Read & Understand     | MID            | 5 min            |
-| [Issue #5 - Wrong value](#4...) | Read & Understand     | MID            | 5 min            |
+| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 15 min            |
+| [Debugging a flow](#2debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
+| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 15 min            |
+
 
 ## Introduction
 
@@ -3077,6 +3074,41 @@ appear at the bottom. This window is scalable, so we can adjust its size to make
 
 ![DC_Lab.12.19_Debugging_Flow_7](/assets/images/DC_Lab_12.19._Debugging_Flow_7.png)
 
+-  The ***OUTCOME*** column of the list shows the result of execuiting each flow node. In case if any node has been completed with an error or timeout, it will be displayed as an outcome in the line of the list which corresponds to the affected flow node. Error details will be available on rigth-hand side of debugging window.
+
+![DC_Lab.12.19_Debugging_Flow_8](/assets/images/DC_Lab_12.19._Debugging_Flow_8.png)
+
+In the next section we will look at the most common issues in Webex Connect flows and how to solve them.
+
+
+## 3. The most common issues in Webex Connect flows
+
+Let's look the few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
+
+### 3.1. Engage Asset not linked to Entry Point in Webex CC
+
+### 3.2. Engage authentication not working
+
+### 3.3. Connect authentication not working
+
+### 3.4. Variable does not exist or has empty value
+
+Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. In this case there will be the following error in flow debugger.
+
+![DC_Lab.12.19_Error_No_Value_1](/assets/images/DC_Lab_12.19._Error_No_Value_1.png)
+
+The error ***desc : value is mandatory , name : task id*** means ***TASK ID*** parameter of ***Create Task*** node had no value when the node was executed. It could happen if the variable assigned to ***TASK ID*** did not exist or had an empty value. 
+To fix this issue, we need to open the configuration of ***Cretae Task*** node and check the value of ***TASK ID*** parameter. In our case there is a variable ***$(flid_na)***, which does not exist and that's why there was an empty value used when calling ***Create Task*** node. 
+
+![DC_Lab.12.19_Error_No_Value_2](/assets/images/DC_Lab_12.19._Error_No_Value_2.png)
+
+Potential ways to fix the issue:
+-  Correct variable name if it is wrong and check the value of this variable
+-  Create a variable if it does not exist and assign proper value to it
+-  \[Not a flexible approach\] Replace the variable name by exact value
+
+
+### 3.5. Wrong value of the parameter
 
 
 
