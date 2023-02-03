@@ -23,17 +23,17 @@ layout: post
     * [2. Changing the Site name with "Update Site By ID" API](#2-changing-the-site-name-with-update-site-by-id-api)
     * [3. Practicing with Bulk Upload](#3-practicing-with-bulk-upload)
   - [Part 5: Search API](#part-5-Search-API)
-    * [1. Search endpoint in developer portal.](#1-Search-endpoint-in-developer-portal)
-    * [2. Forming a graphQL query.](#2-Forming-a-graphQL-query)
-    * [3. Running the query.](#3-Running-the-query)
+    * [1. Search endpoint in developer portal](#1-Search-endpoint-in-developer-portal)
+    * [2. Forming a graphQL query](#2-Forming-a-graphQL-query)
+    * [3. Running the query](#3-Running-the-query)
   - [Part 6: Agent Desktop APIs](#part-6-Agent-Desktop-APIs)
-    * [1. Useful links.](#1-Useful-links)
-    * [2. Importing postman collection and setting up oauth2.](#2-Importing-postman-collection-and-setting-up-oauth2)
-    * [3. Establish a websocket connection.](#3-Establish-a-websocket-connection)
-	* [4. Login an agent.](#4-Login-an-agent)
-	* [5. Change state of an agent.](#5-Change-state-of-an-agent)
-	* [6. Reload an agent.](#6-Reload-an-agent)
-	* [7. Logout an agent.](#7-Logout-an-agent)
+    * [1. Useful links](#1-Useful-links)
+    * [2. Importing postman collection and setting up oauth2](#2-Importing-postman-collection-and-setting-up-oauth2)
+    * [3. Establish a websocket connection](#3-Establish-a-websocket-connection)
+	* [4. Login an agent](#4-Login-an-agent)
+	* [5. Change state of an agent](#5-Change-state-of-an-agent)
+	* [6. Reload an agent](#6-Reload-an-agent)
+	* [7. Logout an agent](#7-Logout-an-agent)
 
 - [APIv1 (Legacy version)](#apiv1-legacy-version)
   - [Part 1: Legacy 1.0 APIs: CSR, CSR Query](#part-1-legacy-10-apis-csr-csr-query)
@@ -320,12 +320,12 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
  - Go to - **[Search endpoint on Developer Portal](https://developer.webex-cx.com/documentation/search)**
  - Click on -> Try out -> Expand try out window by clicking box icon on right hand side top section.
 
-### 2. Forming a graphQL query.
+### 2. Forming a graphQL query
 
  - In the interactive editor paste the query from github sample **[link](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/simple.graphql)**
  - NOTE : To and From should be changed accoring to your needs, it has to be epoch time in miliseconds, use this **[link](- https://www.epochconverter.com/)** to convert.
 
-### 3. Running the query.
+### 3. Running the query
 
 - Click on run - notice that you will receive all the interaction ID's between that timeframe.
 - Run the query **[- https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/totalCallsByAni.graphql](- https://www.epochconverter.com/)** to aggregate calls from a specific phone number.
@@ -339,7 +339,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%"> <iframe src="https://app.vidcast.io/share/embed/49fce72a-de94-449a-809e-822ed061d2e3" width="100%" height="100%" title="Agent desktop APIs" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe> </div>
 
-### 1. Useful links.
+### 1. Useful links
 
 - **[Web socket subscription API](https://developer.webex-cx.com/documentation/notification)**
 - **[Login](https://developer.webex-cx.com/documentation/agents/v1/login)**
@@ -354,7 +354,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 - Setup Oauth2 connection on postman collection as mentioned in **[section 1](https://app.vidcast.io/share/b8b4de22-7322-45d3-ab9c-070b3a8ec1f3)**
 
 
-### 3. Establish a websocket connection.
+### 3. Establish a websocket connection
 
 - Establish a web socket connection from postman as shown in this **[video](https://developer.webex-cx.com/documentation/notification)**
 - Collection -> Agent -> Register Web socket Subscription.
@@ -363,7 +363,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 - On Postman Click on New -> WebSocket Request -> Paste the URL -> Click connect.
 - At this point a WebSocket will be established successfully.
 
-### 4. Login an agent.
+### 4. Login an agent
 
 - Collection -> Agent -> Station login.
 - Change the request body as mentioned in this **[document](https://developer.webex-cx.com/documentation/agents/v1/login)**
@@ -371,7 +371,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 - Agent will be successfully logged in and will be in idle state.
 - Click on web socket established in step 5 and notice that an event is received on web socket for successful login.
 
-### 5. Change state of an agent.
+### 5. Change state of an agent
 
 - Collection -> Agent -> Change state.
 - Change the request body as mentioned in this (To available) **[document](https://developer.webex-cx.com/documentation/agents/v1/state-change)**
@@ -379,7 +379,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 - Agent state will be successfully changed to Available.
 - Click on web socket established in step 3 and notice that an event is received on web socket for successful state change.
 
-### 6. Reload an agent.
+### 6. Reload an agent
 
 - Collection -> Agent -> Reload Agent.
 - Reload API **[documentation](https://developer.webex-cx.com/documentation/agents/v1/reload)** 
@@ -387,7 +387,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 - Agent state data will be successfully received on web socket. this will include the config details aswell as task agent is handling.
 - Click on web socket established in step 3 and notice that an event is received on web socket for successful agent reload.
 
-### 7. Logout an agent.
+### 7. Logout an agent
 
 - Collection -> tasks -> Logout Task.
 - Change the request body as in this **[document](https://developer.webex-cx.com/documentation/agents/v1/logout)** 
