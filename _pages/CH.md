@@ -114,12 +114,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 > The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users. 
 
-<iframe width="1024" height="576" src="https://app.vidcast.io/share/embed/9ca6bf5a-5d8e-4b57-bbd9-6aa42481dd43" title="WxCC Lab #1 Part 2: Admin Portal Multimedia Profile, Site and Team Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/9ca6bf5a-5d8e-4b57-bbd9-6aa42481dd43" width="100%" height="100%" title="Webex CC Lab Guides: GitHub + Obsidian" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/92ou5Yias-8?rel=0" title="WxCC Lab #1 Part 2: Admin Portal Multimedia Profile, Site and Team Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -241,25 +235,9 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/2bmoiAfxpTU?rel=0" title="WxCC Lab #2 Part 4: Access to the Agent Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+>If you have a US number you can use for sign in as an agent or supervisor. Otherwise, please download the Webex App and sign in with both users. 
 
-### 1. Activate Webex Calling
-
-- Login the **[Control Hub](https://admin.webex.com/){:target="_blank"}** with your admin credentials.
-
-- Navigate to **_Users_**.
-
-- Select the **Agent** user 
-
-- In the User settings, make sure that the following **_Services_** are listed:
-   -  **_Messaging_** as **Advanced Messaging**.
-   -  **_Calling_** as **Webex Calling (Professional)**.
-   -  **_Contact Center_**.
-
-- Scroll down to **_Calling Behaviour_** and select **_Webex Calling app_**. Click **_Save_**.
-
-- Repeat the same steps for **Supervisor** user. Make sure that **_Webex Calling app_** has been activated.
-
-### 2. Download and Login in the Webex Calling app for PC or Mac
+### 1. Download and Login in the Webex app for PC or Mac
 
 > **Note:** You need two Webex Calling app for placing a call to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex Calling app for PC or Mac for **agent** account.
 
