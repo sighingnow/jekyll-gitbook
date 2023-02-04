@@ -11,9 +11,9 @@ layout: post
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) | Practical Lab | EASY            | 15 min           |
-| [Managment Portal User Configuration](#managment-portal-user-configuration)              | Practical Lab | EASY            | 10 min           |
-| [Access to the Agent Desktop](#part-4-access-to-the-agent-desktop)                       | Practical Lab | EASY            | 5 min            |
+| [Managment Portal User Configuration](#managment-portal-user-configuration)              | Practical Lab | EASY            | 7 min           |
 | [Bulk Configuration](#bulk-configuration)                                                | Practical Lab | EASY            | 5 min            |
+| [Access to the Agent Desktop](#part-4-access-to-the-agent-desktop)                       | Practical Lab | EASY            | 15 min            |
 
 
 ## Overview of the lab:
@@ -131,7 +131,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - In the left pane navigate to **_Contact Center_** card.
 
-- Click **_Settings_** in the upper right corner.
+- Click **_Settings_** in the upper menu.
 
 - Scroll down to the **_Advanced Configuration_** section and click on **_Go to Webex Contact Center Management Portal_**.
 
@@ -141,7 +141,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Multimedia Profile` to open Multimedia Profile configuration page.
 
-- Input Name as <w class = "attendee-class">your_attendee_ID</w>_MMP.
+- Input Name as **<w class = "attendee-class">your_attendee_ID</w>_MMP**.
 
 - In the Media Details section, select the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, and click **_Save_**.
 
@@ -149,9 +149,9 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Navigate to **_Provisioning_** and select **_Site_**.
 
-- Click on `+ New Site` button and provide the Name as <w class = "attendee-class">your_attendee_ID</w>_Site.
+- Click on `+ New Site` button and provide the Name as **<w class = "attendee-class">your_attendee_ID</w>_Site**.
 
-- Select <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
+- Select **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
 ### 3. Create new Team
 
@@ -159,13 +159,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Team`.
 
-- Select <w class = "attendee-class">your_attendee_ID</w>_Site from the **_Site_** drop-down.
+- Select **<w class = "attendee-class">your_attendee_ID</w>_Site** from the **_Site_** drop-down.
 
-- Input **_Name_** as <w class = "attendee-class">your_attendee_ID</w>_Team1.
+- Input **_Name_** as **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
 - Use the default **_Type_** `Agent Based`.
 
-- Select <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop-down.
+- Select **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the **_Multimedia Profile_** drop-down.
 
 - Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and **_Save_** the configuration.
 
@@ -177,13 +177,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on **_Contact Center Enabled_** toggle to move it to **_On_**.
 
-- In the **_Agent Settings_** section, select <w class = "attendee-class">your_attendee_ID</w>_Site in the **_Site_** drop-down.
+- In the **_Agent Settings_** section, select **<w class = "attendee-class">your_attendee_ID</w>_Site** in the **_Site_** drop-down.
 
-- Click the **_Teams_** area and select <w class = "attendee-class">your_attendee_ID</w>_Team1.
+- Click the **_Teams_** area and select **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
 - Select the **_Agent-Profile_** in the **_Agent Profile_** drop-down list.
 
-- Choose <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop-down and hit **_Save_**.
+- Choose **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the **_Multimedia Profile_** drop-down and hit **_Save_**.
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
 
@@ -191,13 +191,38 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 
 # Bulk Configuration
+> The following video outlines how to use the Bulk Configuration in Control Hub. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. 
 
-### 4. Create new Team 2
-
-- Please follow the same steps as above to add an extra Team as `Team2_2022_TS`. Later we will use this team to assign a custom Desktop Layout.
-
+<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/r_A-BPhoTaA?rel=0" title="WxCC Lab #1 Part 3: Admin Portal User Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+### Create the second Team 
+
+- Go to the Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
+
+- In the left pane navigate to **_Contact Center_** card.
+
+- Select **_Buld Operations_** in the upper menu.
+
+- Click **_Create Bulk Operations_** button in the right corner.
+
+- In Step 1 select the configuration object **_Team_** in the drop-down list.
+
+- In the Export secotion enter the **MyTeam** as the file name and click **Next** button.
+
+- Once the task is **Completed** click on **_Download export file_** and open the csv file in the notepad.
+
+- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
+
+- Rename the Team1 to **<w class = "attendee-class">your_attendee_ID</w>_Team2** and save the file.
+
+- Go back to the **Bulk Operations** menu and click **_Create Bulk Operations_** button again.
+
+- In step 1, select the **_Team_** configuration object from the drop-down list and **import** the CSV file by dragging it into the Import section.
+
+- Click **Next** button and wait the results. The status should be shown as **Completed**.
+
+- Go to the Management Portal, click on **_Provisioning_** and  **_Team_** and verify that the **<w class = "attendee-class">your_attendee_ID</w>_Team2** is created. 
 
 
 
@@ -280,9 +305,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 
 
-> The following video outlines how to configure the users in Admin Portal that were added first in Control Hub. This is a very critical task from the Contact Center perspective. We also would take a look at how to associate customer-created Site, Team, and Multi-Media Profile with those users. After this, we should be able to login as an agent.
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/r_A-BPhoTaA?rel=0" title="WxCC Lab #1 Part 3: Admin Portal User Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ---
