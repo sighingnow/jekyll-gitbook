@@ -88,8 +88,8 @@ WxM admin | wxmdemoadmin | Login@123
 -   Open the **_Account Settings_** section and navigate to **_Users_**
 -   In the table, look for the **username with _`system`_** as a suffix in the username
     
-    > **Note**: Webex XM automatically creates ‘Machine sub-users’ in the account to be used to integrate with any platform
-    {: .block-tip }
+>**Note**: Webex XM automatically creates ‘Machine sub-users’ in the account to be used to integrate with any platform
+{: .block-tip }
     
 -   Copy the username and the **API Key**
 -   If the API key is not present, click on **Create** and then copy the key.
@@ -97,7 +97,7 @@ WxM admin | wxmdemoadmin | Login@123
 ### 2. Configure WxM connector in Control hub
 
 -   Login to [Control Hub](https://admin.webex.com/)
--   Enter the Customer admin email id and the password.
+-   Enter your admin email id and the password.
 -   Navigate to **_Contact Center_** Card
 -   Click on **_Connectors_**
 -   Click on **Set Up** on Webex Experience Management card.
@@ -126,7 +126,7 @@ WxM admin | wxmdemoadmin | Login@123
 
 ### 2. Enable Customer Experience Journey Widget
 
--   Login to the **[WxM console](https://cx.cloudcherry.com/)** with the WxM admin credentials mentioned here: [[#Lab Section]].
+-   Login to the **[WxM console](https://cx.cloudcherry.com/)** with the WxM admin credentials mentioned here in the Lab Section.
 -   Enter the **WxM admin credentials**.
 -   Dismiss informative alerts if any.
 -   Navigate to the **Overall Experience** response page.
@@ -156,7 +156,7 @@ WxM admin | wxmdemoadmin | Login@123
  
 -   Login in the Tenant Portal, navigate to Routing Strategies and open the **`WxM_Feedback_Flow`** to see how the Flow Diagram is buit. You can also create your own flow prefixed by your attendee ID and map it to your Entry Point from the Routing Strategies page.
     
--   **See the [video](https://xm.webex.com/docs/webex_cc/pcs_ivr_setup/#video-set-up-guide) and the Configure Feedback Node section** below to know the configuration steps needed.
+-  **See the [video](https://xm.webex.com/docs/webex_cc/pcs_ivr_setup/#video-set-up-guide) and the Configure Feedback Node section** below to know the configuration steps needed.
 
 
 ### 1. Configure IVR Feedback Node
@@ -174,22 +174,24 @@ WxM admin | wxmdemoadmin | Login@123
 ### 2. Test Voice interaction and confirm that voice survey is forwarded to the ANI
 
 -   Login in the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/)** with the recently created agent credentials
--   **Trigger a voice call** from the Webex Calling app to the Dial Number mapped to the Entry Point: **`+14402308308`**
--   End the call **from the Agent Desktop and select a Wrap-Up option**
--   A **voice surver should be played** in the caller user phone
--   Complete the voice survey **dialing a number** in the Webex Calling app from where you made the call
--   After testing the call interaction **move the Agent to non-Available status**, so the rest of attendees can also complete this task
+-   **Trigger a voice call** from the Webex Calling app to the Dial Number mapped to your Entry Point.
+-   End the call **from the Agent Desktop and select a Wrap-Up option**.
+-   A **voice survey should be played** in the caller user phone.
+-   Complete the voice survey **dialing a number** in the Webex Calling app from where you made the call.
+-   After testing the call interaction **move the Agent to non-Available status**, to complete this task
 
 ### 3. Validate that the survey filled by the caller is recorded properly in WxM
 
 -   Login to the **[WxM console](https://cx.cloudcherry.com/)**
 -   Enter the **WxM admin credentials.**
 -   Navigate to the **`Overall Experience`** dashboard and ensure that the feedback you provided is recorded
+>Alternatively, you can dial in again to the agent and view your last recorded response in the Customer Experience Journey widget.
+{: .block-tip }
 
 
 ## XM v2
-- We announced on October 14th, 2022, the End of Sale of WXM V1 Standalone and End of Life WxM V1 Standalone will be on November 14th, 2024.
-- We are currently working on the next version, Webex Experience Management v2, which will be directly integrated into Webex CC and Webex CCE to provide improved abilities to collect explicit/implicit feedback and data, store and visualize customer feedback data through surveys over various channels and displays information in user friendly dashboards.
+- We announced on October 14th, 2022, the End of Sale of WxM V1 Standalone and End of Life WxM V1 Standalone will be on November 14th, 2024.
+- We are currently working on the next version, Webex Experience Management v2 (XM v2), which will be directly integrated into Webex CC and Webex CCE to provide improved abilities to collect explicit/implicit feedback and data, store and visualize customer feedback data through surveys over various channels and displays information in user friendly dashboards.
 - XM v2 will be available in the next 3-5 months tentatively.
 - Here is a preview of how XM v2 could look and function, this is an example of Post Interaction Surveys using Digital channels of Webex Connect. 
 
