@@ -150,9 +150,9 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Navigate to **_Provisioning_** and select **_Site_**.
 
-- Click on `+ New Site` button and provide the Name as **<w class = "attendee-class">your_attendee_ID</w>_Site**.
+- Click on `+ New Site` button and provide the Name as _<w class = "attendee-class">your_attendee_ID</w>_Site_.
 
-- Select **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the **_Multimedia Profile_** drop down list and hit **_Save_**.
+- Select <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
 ### 3. Create new Team
 
@@ -235,7 +235,8 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/2bmoiAfxpTU?rel=0" title="WxCC Lab #2 Part 4: Access to the Agent Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
->If you have a US number you can use for sign in as an agent or supervisor. Otherwise, please download the Webex App and sign in with both users. 
+>This tenant does not allow outbound international calls. If you have the US numbers you can use that for sign in as an agent or supervisor. Otherwise, please download the Webex App according to the steps below. 
+{: .block-tip }
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
@@ -255,7 +256,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Depending on your operation system, navigate to the Webex Callin Menu **_Edit Server Address_** and make sure you have selected **North America** region.
 
-### 3. Download and Login in the Webex Calling app for mobile
+### 2. Download and Login in the Webex app for mobile
 
 > **Note:** You need two Webex Calling app for placing a call to Entry Point and accepting on the agent side. In this lab, we will use the Webex Calling app for mobile for **supervisor** account.
 
@@ -272,10 +273,10 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > **Note:** Make sure that you give access to the phone's microphone for the calling app.
 
 
-![WxCallingAndroid](/assets/images/wxcallingandroid.png)
+### 3. Agent Desktop Login
 
-### 4. Agent Desktop Login
-> **Note**: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
+> **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
+{: .block-tip }
 
 - Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** in a new browser or in incognito mode.
 
