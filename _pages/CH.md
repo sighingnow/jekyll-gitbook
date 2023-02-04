@@ -150,9 +150,9 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Navigate to **_Provisioning_** and select **_Site_**.
 
-- Click on `+ New Site` button and provide the Name as _<w class = "attendee-class">your_attendee_ID</w>_Site_.
+- Click on `+ New Site` button and provide the Name as *<w class = "attendee-class">your_attendee_ID</w>_Site*.
 
-- Select <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
+- Select *<w class = "attendee-class">your_attendee_ID</w>_MMP* in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
 ### 3. Create new Team
 
