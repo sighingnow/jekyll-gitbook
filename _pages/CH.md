@@ -47,7 +47,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles. 
-{: .block-tip }
+
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/0p37TL5wtCY?rel=0" title="WxCC Lab #1 Part 1: Control Hub User Management Admin Task" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -69,7 +69,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 </form>
 <script src="/assets/gitbook/form.js"></script>
 
->**NOTE:** the **Attendee ID** was provided in the email with the admin credentionals. You can share your tenant with your colleagues, in that case the **Attendee ID** should be the same for all, but you can use a sub prefix with the number. Ex: attendeeID_agent1_1, attendeeID_agent1_2, etc.
+>**NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can use a sub prefix with the number. Ex: _attendeeID**1**_agent1, attendeeID**2**_agent1, etc._
 {: .block-tip }
 	
 ### 2.  Add agent and supervisor users and set the calling extensions
@@ -112,101 +112,82 @@ In this Lab, we will go through the tasks that are required to complete the gene
 # Managment Portal User Configuration
 
 > The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users. 
-{: .block-tip }
+
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/92ou5Yias-8?rel=0" title="WxCC Lab #1 Part 2: Admin Portal Multimedia Profile, Site and Team Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 | **Entity**          | **Name** |
 | ------------------- | -------- |
 | Multimedia Profiles | <w class = "attendee-class">your_attendee_ID</w>_MMP   |
-| Site                | <w class = "attendee-class">your_attendee_ID</w>_MMP  |
-| Team1               | <w class = "attendee-class">your_attendee_ID</w>_MMP |
-| Team2               | <w class = "attendee-class">your_attendee_ID</w>_MMP |
+| Site                | <w class = "attendee-class">your_attendee_ID</w>_Site  |
+| Team1               | <w class = "attendee-class">your_attendee_ID</w>_Team1 |
 
-> **NOTE:** the **Attendee ID** was provided in the email with the admin credentionals. You can share your tenant with your colleagues, in that case the **Attendee ID** should be the same for all, but you can use a sub prefix with the number. Ex: attendeeID_MMP_1, attendeeID2_MMP_2, etc.
+>**NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can add a sub prefix with the number. _Ex: attendeeID**1**_MMP, attendeeID**2**_MMP, etc.
 {: .block-tip }
 
-### 1. Create new MultiMedia Profile
+### 1. Create new Multimedia Profile
 
-- Login to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
+- Login with admin credentionals to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
 
-- Enter the admin email id and the password.
-
-- Navigate to **_Contact Center_** Card.
+- In the left pane navigate to **_Contact Center_** card.
 
 - Click **_Settings_** in the upper right corner.
 
-- Scroll down to the **_Advanced Configuration_** section.
-
-- Click on **_Go to Webex Contact Center Management Portal_**.
+- Scroll down to the **_Advanced Configuration_** section and click on **_Go to Webex Contact Center Management Portal_**.
 
 - Ensure that browser pop up blockers are not blocking the **_Admin Portal_** pop up.
 
-- Click on **_Provisioning_** and select **_Multimedia Profiles_**.
+- In the Management Portal click on **_Provisioning_** and select **_Multimedia Profiles_**.
 
 - Click on `+ New Multimedia Profile` to open Multimedia Profile configuration page.
 
-- Input Name as `MMP_2022_TS`.
+- Input Name as <w class = "attendee-class">your_attendee_ID</w>_MMP.
 
-- In the Media Details section, select the blended multimedia profile and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, and click **_Save_**.
+- In the Media Details section, select the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, and click **_Save_**.
 
 ### 2. Create new Site
 
 - Navigate to **_Provisioning_** and select **_Site_**.
 
-- Click on `+ New Site` button and provide the Name as `Site_2022_TS`.
+- Click on `+ New Site` button and provide the Name as <w class = "attendee-class">your_attendee_ID</w>_Site.
 
-- Select `MMP_2022_TS` in the **_Multimedia Profile_** drop down and hit **_Save_**.
+- Select <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
-### 3. Create new Team 1
+### 3. Create new Team
 
 - Navigate to **_Provisioning_** and select **_Team_**.
 
 - Click on `+ New Team`.
 
-- Select `Site_2022_TS` from the **_Site_** drop-down.
+- Select <w class = "attendee-class">your_attendee_ID</w>_Site from the **_Site_** drop-down.
 
-- Input **_Name_** as `Team1_2022_TS`.
+- Input **_Name_** as <w class = "attendee-class">your_attendee_ID</w>_Team1.
 
 - Use the default **_Type_** `Agent Based`.
 
-- Select `MMP_2022_TS` in the **_Multimedia Profile_** drop-down.
+- Select <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop-down.
 
-- Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and hit **_Save_**.
+- Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and **_Save_** the configuration.
 
-
-
-> The following video outlines how to configure the users in Admin Portal that were added first in Control Hub. This is a very critical task from the Contact Center perspective. We also would take a look at how to associate customer-created Site, Team, and Multi-Media Profile with those users. After this, we should be able to login as an agent.
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/r_A-BPhoTaA?rel=0" title="WxCC Lab #1 Part 3: Admin Portal User Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 1. Synchronize Webex Contact Center Users
-
-- Login to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
-
-- Enter the admin email id and the password.
-
-- Navigate to **_Contact Center_** card.
-
-- Click on **_Settings_** and then `Synchronize Users`.
-
-### 2. Manage settings for existing user
-
-- Go back to the **_Webex Contact Center Management Portal_**.
+### 4. Activate users in the Management Portal
 
 - Click on **_Provisioning_** and select **_Users_**.
 
-- Click on `...` for the first user, to launch the **_Edit_** view for a particular User configuration.
+- Click on `...` for the agent, to launch the **_Edit_** view for a particular User configuration.
 
 - Click on **_Contact Center Enabled_** toggle to move it to **_On_**.
 
-- In the **_Agent Settings_** section, select `Site_2022_TS` in the **_Site_** drop-down.
+- In the **_Agent Settings_** section, select <w class = "attendee-class">your_attendee_ID</w>_Site in the **_Site_** drop-down.
 
-- Click the **_Teams_** area and select `Team1_2022_TS` and `Team2_2022_TS`.
+- Click the **_Teams_** area and select <w class = "attendee-class">your_attendee_ID</w>_Team1.
 
-- Select `MMP_2022_TS` in the **_Multimedia Profile_** drop-down and hit **_Save_**.
+- Select the **_Agent-Profile_** in the **_Agent Profile_** drop-down list.
+
+- Choose <w class = "attendee-class">your_attendee_ID</w>_MMP in the **_Multimedia Profile_** drop-down and hit **_Save_**.
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
+
+- Repeate the same steps as above for your supervisor.
 
 
 # Bulk Configuration
@@ -214,6 +195,10 @@ In this Lab, we will go through the tasks that are required to complete the gene
 ### 4. Create new Team 2
 
 - Please follow the same steps as above to add an extra Team as `Team2_2022_TS`. Later we will use this team to assign a custom Desktop Layout.
+
+
+
+
 
 
 # Access to the Agent Desktop
@@ -294,6 +279,10 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
 
 
+
+> The following video outlines how to configure the users in Admin Portal that were added first in Control Hub. This is a very critical task from the Contact Center perspective. We also would take a look at how to associate customer-created Site, Team, and Multi-Media Profile with those users. After this, we should be able to login as an agent.
+
+<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/r_A-BPhoTaA?rel=0" title="WxCC Lab #1 Part 3: Admin Portal User Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ---
