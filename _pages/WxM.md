@@ -13,10 +13,10 @@ In this Lab, we will go through the tasks that are required to build a Webex Exp
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [[#WxM Connector setup]] | Informational | EASY            | 5 min           |
-| [[#Enable WxM widgets in Desktop Layout]]           | Practical Lab | EASY            | 10 min           |
-| [[#Configure Feedback node in Flow]]                       | Practical Lab | EASY            | 10 min            |
-| [[#XM v2]]                                          | Informational | EASY            | 5 min            |
+| WxM Connector setup | Informational | EASY            | 5 min           |
+| Enable WxM widgets in Desktop Layout           | Practical Lab | EASY            | 10 min           |
+| Configure Feedback node in Flow                      | Practical Lab | EASY            | 10 min            |
+| XM v2                                          | Informational | EASY            | 7 min            |
 
 
 # Introduction
@@ -77,7 +77,7 @@ WxM admin | wxmdemoadmin | Login@123
 > The following video outlines the steps required to create the WxM connector. Webex CC uses this connector to read the dispatches that are configured in WxM. This connector is also used to load the widgets into the agent desktop and FeedBack is triggered via the same.
 {: .block-tip }
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GI4nzVLLFCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1024" height="576" src="https://www.youtube.com/embed/GI4nzVLLFCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### 1. Identify the API key from WxM
 
@@ -116,7 +116,7 @@ WxM admin | wxmdemoadmin | Login@123
 >This lab section assumes that you are familiar with how the agent desktop layout can be modified and applied to a team.
 {: .block-warning }
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Njie8PrB6Kk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1024" height="576" src="https://www.youtube.com/embed/Njie8PrB6Kk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### 1. Enable wxmConfigured flag
 
@@ -193,10 +193,10 @@ WxM admin | wxmdemoadmin | Login@123
 - XM v2 will be available in the next 3-5 months tentatively.
 - Here is a preview of how XM v2 could look and function, this is an example of Post Interaction Surveys using Digital channels of Webex Connect. 
 
->**Disclaimer: The look and feel, and even certain functionalities, at the time of release, may differ from what is shown in this short preview, as the feature is still under development.
+>Disclaimer: The look and feel, and even certain functionalities, at the time of release, may differ from what is shown in this short preview, as the feature is still under development.
 {: .block-warning }
 
-<iframe src="https://app.vidcast.io/share/embed/eafc4ea3-e5a2-4075-a83c-29da713631c3" width="560" height="350" title="Post Interaction Surveys using Digital Channels" frameborder="0" loading="lazy" allowfullscreen ></iframe>
+<iframe src="https://app.vidcast.io/share/embed/eafc4ea3-e5a2-4075-a83c-29da713631c3" width="1024" height="576" title="Post Interaction Surveys using Digital Channels" frameborder="0" loading="lazy" allowfullscreen ></iframe>
 
 ---
 
