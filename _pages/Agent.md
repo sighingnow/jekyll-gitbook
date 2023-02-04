@@ -5,95 +5,412 @@ date: 2022-03-03
 layout: post
 ---
 
-### Overview of the lab:
+## Overview of the lab:
 
-In this Lab, we will go through the portals that Agents and Supervisors use in their daily basis. We will review how to complete the main tasks of both roles and some advance features will be introduced.
-By following each of the steps, you will have better understanding of the new Agent Desktop and learn the available reporting features for Supervisors.
+In this Lab, we will go through the Agents Desktop portal use in their daily basis. We will review how to complete some of the most common tasks and some more advance features will be introduced.
+
+At the end of the lab, you should be able to handle calls as an agent, perform some useful agent tasks and create your cutomized Agent Desktop.
 
 
-# Table of Contents
+## Table of Contents
 
-- [Part 1: Agent Desktop](#part-1-agent-desktop)
-  - [1. Introducing the Agent Desktop Interface](#11-introducing-the-agent-desktop-interface)
-  - [2. Create a Custom Desktop Layout](#12-create-a-custom-desktop-layout)
-  - [3. More Advance Example](#13-more-advance-example)
-- [Part 2: Supervisor](#part-2-supervisor)
-  - [1. Portal's Dashboards](#21-portals-dashboards)
-  - [2. Permissions and Remote Agent Logout](#22-permissions-and-remote-agent-logout)
 
-# Introduction
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [Agent Desktop Overview](#agent-desktop-overview) | Demo | EASY            | 10 min           |
+| [Basic Features](#basic-features)              | Practical Lab | EASY            | 15 min           |
+| [Custom Desktop Layouts](#custom-desktop-layout)                       | Practical Lab | MEDIUM            | 30 min            |
 
-## Lab Objective
 
-- The objective of this lab is to get an idea about the Agents and Supervisors user journey, to familiarize with the platforms they use and to explore some of the most useful new features they offer.
+## Introduction
 
-- In the first part of the lab we will focus on the Agent Desktop, we will customize the logo and title of the platform and also add a widget in the nav bar section.
+### Lab Objective
 
-- Later, in the second part, we will see the different reporting dashboards that Supervisors can see through the Management Portal and perform some action on the Agents
+- The objective of this lab is to get an idea about the Agents user journey, to familiarize with the platform they use and to explore some of the most useful new features they offer.
 
-## Pre-requisite
+- In the first part of the lab we will focus on explaining the different parts and and possible functions of Agent Desktop interface 
 
-1. You need **2 devices** where you can install **Webex Calling** (example: PC or Mac and Mobile).
-2. For doing this lab, you must first complete the **Lab 1: Control Hub and Admin Portal:**
-* You have the administrator's access to the Tenant Management Portal.
-* Agent and Supervisor users created and configured
-* You have agent's access to the Agent Desktop
-* You have the supervisor's access to the Tenant Management Portal.
-* Agent is part of 2 Teams.
-* Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
+- In the second part of the lab, you will learn some of the basic functions that a user can perform as an agent: handle Incoming calls, making outdial calls and configure some User Profile setting
+
+- In the third part of the lab we will customize Horizontal header of the platform and also add some custom widget in the Navigarion bar section.
+
+
+### Pre-requisite
+
+1. You need **2 devices** where you can install **Webex App** (example: your laptop and mobile phone).
+	- You will need an extra device (your personal phone for example) to test Consult and Conference functionalities
+
+3. For doing this lab, you must first complete the **Lab 1: Control Hub and Admin Portal:**
+	* You have the administrator's access to the Tenant Management Portal.
+	* Agent and Supervisor users created and configured
+	* You have agent's access to the Agent Desktop
+	* You have the supervisor's access to the Tenant Management Portal.
+	* Agent is part of 2 Teams.
+	* Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
+
 3. You also must complete the **Lab 2: IVR Contact Routing:**
-* Simple flow configured and making a call tested
+	* Simple flow configured and making a call tested
+	* Global variables created as Agent Editable
 
 
 
-## Quick Links
+### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
 
 
-# Lab Section
 
-## Part 1: Agent Desktop
+
+## Lab Section
+
+
+> Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
+{: .block-tip }
+
+
+<div class="alert"></div>
+<form id="attendee-form">
+      <label for="attendee-id">Attendee ID</label>
+      <input type="text" name="attendee-id" id="attendee-id" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="/assets/gitbook/form.js"></script>
+
+
+# Agent Desktop Overview
+
+> Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
+{: .block-tip }
+
+
+<div class="alert"></div>
+<form id="attendee-form">
+      <label for="attendee-id">Attendee ID</label>
+      <input type="text" name="attendee-id" id="attendee-id" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="/assets/gitbook/form.js"></script>
+
+## Station Login
+
+- In order to access to the Agent Desktop you can do it either via the Management Portal (Desktop module) or navigating to the direct URL:  https://desktop.wxcc-<DC\>.cisco.com/
+
+- Once you're in the login page, enter the agent credentials (username and password)
+
+- Agents will need to input the number where they need to receive incoming and outdial calls 
+	- If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
+	- If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
+
+<br>
+- They can choose between Dial Number or Extension
+	- Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
+
+	- Dial Number: E.164 format phone number
+		- If you check the __International Dialing Format__ box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
+
+
+
+- Select one of the possible teams from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams
+
+- Check the __Remember My Credentials__ box to save your station credential details for future sign-ins
+
+- Be aware that agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
+
+
+
+> 
+> The video below shows a demo about the agent login process and the available options.
+{: .block-tip }
+>
+
+
+<iframe width="1024" height="576" src="https://app.vidcast.io/share/e4b450ff-9d3f-424d-96bb-2f0988b81743" title="Station Login" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+
+
+## Agent Desktop Interface
+
+>
+> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it.
+{: .block-tip }
+>
+
+<iframe width="1024" height="500" src="https://app.vidcast.io/share/dc341488-94ab-4659-8951-4b4ba1412373" title="Agent Desktop Interface" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+
+![Image1](/assets/images/AgentDesktopOverview.png)
+
+The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
+
+1. **Task List**: When a request is routed to your queue and you are _Available_, a new request appears in your Task List pane. You must accept the requests to start communication with the customer.
+
+3. **Horizontal Header**: Basic functionalities such as: Title and logo, Agent availability state, Notification Center, Outdial and User Profile. We will explain more in detail some User Profile options in the next section of the lab.
+
+4. **Interaction Control**: When you accept a voice call (inbound or outbound), by default, the Interaction Control pane is expanded. This pane includes: customer information (CAD variables), timers (for example: connected and call on hold time) and call control buttons (Record, Hold, Transfer...).
+
+5. **Auxiliary Information**: The center pane displays details based on your selection of the contact card in the Task List panel. For Voice requests, it will display the customer contacts history. Whereas for any digital channels (email, chat or social messaging), you will see the whole conversation with the customer and you will be able to send new messages. 
+
+6. **Agent Interaction History**: You can view your previous contacts of the agent across all the channels (voice, email, chat, and social) in this pane. The pane displays details for the last 24 hours. Moreover, for Voice channel you can callback to the contact phone number. 
+
+7. **Navigation bar**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
+
+
+## Calls Handling
+
+> 
+> In the following video you will see how to handle incoming calls and what are the different agent states.
+{: .block-tip }
+>
+<iframe width="1024" height="576" src="https://app.vidcast.io/share/f5a79811-eb60-4925-b11a-a8586760a3d3" title="Calls Handling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+
+#### Agent states:
+
+- **Available**: Indicates that you are ready to accept and respond to contact requests that are routed to you. After you sign in, you must select Available from the drop-down list to accept voice call, chat, email, and social messaging conversation requests. 
+
+- **Idle**: Indicates that you are signed in but not ready to accept any routed requests. When you sign in to the desktop, your state is set to the default idle reason configured by your administrator.
+
+- **RONA (Redirection on No Answer)**: Indicates that you have not accepted a voice call, chat, email, or social messaging conversation request within the specified time. Your administrator configures the time available to accept an incoming request from any channel. If you cannot accept the request within the specified time displayed in the timer, the action button on the popover flashes for a few seconds and your state automatically changes to RONA. The request is returned to the queue. When your state changes to RONA, a popover appears and you can select the state that you want to be moved: to Idle or to Available
+
+- **Engaged**: indicates that you are busy and connected with a customer. When you have accepted the contact request, the Available state changes to the Engaged - Available label. When you're in this state, you can continue to receive active requests on other channels, depending on the channel capacity. If you don't want to receive more requests, you can select any Idle state, so you will be moved to Engaged - Idle label.
+
+
+
+
+#### Manage Voice Calls
+
+- **Call Associated Data (CAD) variables**: These variables allow the administrator to collect call data such as a case number or any action code of the customer. In Flow Designer, your administrator configures the variables, labels of the variables, and the order in which they must appear on the Interaction Control panel. While you are on a call, you can edit the CAD variables if your administrator configures the CAD variables as editable.
+
+- **Hold/Resume**: You can put the customer on hold so that you can consult with another agent or lookup additional information without having the customer listening to you. Click on Resume to take a call off hold.
+
+- **Pause/Resume Recording**: Your administrator can choose for each Queue either to record all the calls or not. In case the recording is enabled, the agent can Pause and Resume the recording.
+
+- **End**: After you have helped your customer with queries, it is a good practice to ask the customer to end the voice call. If necessary, you can also end the call. When the customer ends the call, agent will need to select some Wrap Up Reasons from the dialog box appears. 
+
+- **Consult**: You can initiate a consult call with another agent while you are on an active call with a customer.
+
+- **Transfer**: If you cannot resolve a customer query and want to escalate the active voice call (inbound or outbound), you can transfer the call to another agent or supervisor.
+
+- Either for **Consult and Transfer** you have the following options:
+	- _Agent_: You can either select an agent from the drop-down list, or use the search field to filter the list. The drop-down list displays the names of available agents.
+
+	- _Queue_: You can select a Queue or Entry Point from the drop-down list, or use the search field to filter the list. The drop-down list displays the queues that are available to transfer the call.
+
+	- _DN_: You can enter a name or number; select a name or number from the drop-down list; or use the search field to filter the list. The drop-down list shows the grouped list of contacts in your address book. Names are listed along with the numbers for the contacts in the address book.
+
+- **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
+
+
+
+
+
+
+# Basic Features
 
 
 | **Entity** | **Name**      | 
-| ----------- | ----------------- | 
-| User Profiles        | Agent Profile \<ID\>   | 
-| Agent         | agent1_\<ID\>@mailinator.com | 
+| ----------- | ----------------- |  
+| Agent 1        | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com | 
+| Supervisor 1        |  <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |  
+| Agent Profile        |  <w class = "attendee-class">attendeeID</w>\_agentProfile |  
+| Entry Point        |  <w class = "attendee-class">attendeeID</w>\_EP |  
+| Queue        |  <w class = "attendee-class">attendeeID</w>\_Q |  
+| Team 1        |  <w class = "attendee-class">attendeeID</w>\_team1 |  
+| Team 2        |  <w class = "attendee-class">attendeeID</w>\_team2 |  
+| Outdial ANI        |  <w class = "attendee-class">attendeeID</w>\_outdialANI |
+| Outdial ANI Entry 1        |  <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1 | 
+| Address Book        |  <w class = "attendee-class">attendeeID</w>\_addressBook | 
+| Address Book Entry 1        |  <w class = "attendee-class">attendeeID</w>\_addressBookEntry1 | 
+| Multimedia Profile        |  <w class = "attendee-class">attendeeID</w>\_MMP | 
 
-> **NOTE:** Your \<ID\> is provided in the email in the **"Attendee ID"** line.
+
+
+> 
+> **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your _attendeeID_ is provided in the email in the **"Attendee ID"** line.
+{: .block-warning }
+>
+
+>
+> Be aware that all entities that don't match with attendee IDs will be deleted
+{: .block-warning }
+>
 
 
 
 
-## 1.1 Introducing the Agent Desktop Interface
+## Testing Incoming call
 
-> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it.
+>
+> In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
+{: .block-tip }
+>
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/Xa4j9TVQZKg?rel=0" title="Part1: Agent Desktop Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
-> **Note:** In this section you don't need to do any tasks. This section was created to familiarize you with the agent interface.
+- Login with your administrator user in the **Control Hub** and navigate to _Services > Contact Center > Settings > Desktop_
+	- Make sure that **`End Call`** and **`End Consult`** are enabled
+	- You can also configure _Auto Wrapup and RONA timeouts_
 
-![Image1](AgentDesktopOverview.png)
+<br>
+- Now open the **Management Portal** and navigate to _Provisioning > Agent Profiles_ and edit _your Agent Profile_:
+	- In the **Collaboration** tab:
+		- Set the **Buddy Teams** to **`All`**
+		- Enable **`Consult to Queue`**
 
-The Agent Desktop is divided in 6 sections. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
-1. **Task List**: When a request is routed to your queue and you are _Available_, a new request appears in your Task List pane. You must accept the requests to start communication with the customer.
-2. **Horizontal Header**: Basic functionalities such as: Title and logo, Agent availability state, Notification Center, Outbound Call and User Profile. We will explain more in detail some User Profile options in the next section of the lab.
-3. **Interaction Control**: When you accept a voice call (inbound or outbound), by default, the Interaction Control pane is expanded. This pane includes: customer information (CAD variables), timers (for example: connected and call on hold time) and call control buttons (Record, Hold, Transfer...).
-4. **Auxiliary Information**: This section only appears when you accept an email, chat or social messaging conversation request, not for Voice requests. The center pane displays details based on your selection of the contact card in the Task List panel.
-5. **Agent Interaction History**: You can view your previous communications with a customer across all the channels (voice, email, chat, and social) in this pane. The pane displays details for the last 24 hours.
-6. **Navigation bar**: By default you can find the following icons here: Home, Agent Performance Statistics and Help. However, you can customize it and add some additional icons and widgets.
+<br>
 
-## 1.2 Create a Custom Desktop Layout
+- Navigate to _Provisioning > Queue_ and edit your Queue
+	- Enable **`Permit Recording, Record All Calls and Pause/Resume`**
+		- Make sure that these settings are also enabled at tenant level
+		
+	- You can also set the _Recording Pause Duration_. This is the maxiumum duration that an agent can pause the recording
+
+
+<br>
+- Now place it's time to test the incoming call
+	- Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user 
+	- Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
+	- Move to **`Available`** state
+	- Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+
+<br>
+- Accept the call in the Webex App of _your Agent 1_
+	- Check the **CAD variables** and try to edit any Global Variable
+	- Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
+
+<br>
+
+- Let's play with the call interaction buttons
+	- Click on **`Hold`** to pause the conversation with the end-customer and click on **`Resume`** to talk with him again
+	- Click on **`Pause Recording`**, say some personal infor and click again on **`Resume`** to continue the recording
+	- Click on **`Transfer`** and select the **`Welcome_EP`**
+		- End-customer be redirected to a common EP already created
+	- **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
+
+
+
+>
+> For this part, you will need a third calling device for interacting as aSupervisor
+{: .block-warning }
+>
+
+- Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
+	- In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
+	- Place the call from the third calling endpoint (your personal phone for example)
+	- Try **`Consult, Conference and Transfer`** functions between End Customer, Agent and Supervisor.
+
+
+
+## Exploring User Profile
+
+>
+> In this section, we will explore what are the available options and settings under the User Profile
+{: .block-tip }
+>
+
+<iframe width="1024" height="500" src="https://app.vidcast.io/share/149fe8d1-c27e-4c7e-a0b9-af072487c543" title="Exploring User Profile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+
+
+- First, we will see how to change from one team to another one
+	- In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
+
+<br>
+- Navigate to the _Management Portal > Provisioning > Teams_
+	- Find _your Team 2_ and click on `Edit`
+	- Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied. 
+	- Change the **Multimedia Profile** of the team from `<w class = "attendee-class">attendeeID</w>\_MMP` to `Default_Telephony_Profile`
+
+<br>
+- Now, login in the **Agent Desktop** selecting `<w class = "attendee-class">attendeeID</w>\_team1`
+	- Open _your User Profile_ and check that the **Channel Capacity**
+	- Now, click on _your Team_, you will see a dropdown list with other available Teams
+	- Click on `<w class = "attendee-class">attendeeID</w>\_team2` 
+	- **`Save Team Selection`** to confirm that you want to change a team
+
+<br>
+- You will see notification appeared in the **Notification Center**
+	- You can change the **Notification settings** to disable the incoming notifications or the sound
+	- Mark the notification as `Read`
+	- Go to the **User Profile** and check the **Channel Capacity** again, it's different
+
+<br>
+- Test some additional options:
+	- **Switch to Dark Mode**
+	- **Keyboard shortcuts**
+	- **Download error log** 
+
+
+## Outdial
+
+>
+> In this section, we will test Outdial calls using different Outdial ANIs and Address Books
+{: .block-tip }
+>
+
+<iframe width="1024" height="500" src="https://app.vidcast.io/share/df20ad39-55db-4c8c-a268-bcd4818fe1f3" title="Outdial Calls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+
+- Navigate to _Management Portal > Provisioning > Outdial ANI_
+	- Click on **`New Outdial ANI`**
+	- Name:  `<w class = "attendee-class">_attendeeID_</w>\_outdialANI`
+	- Add Outdial ANI entry
+		- Name:  `<w class = "attendee-class">_attendeeID_</w>\_outdialANIEntry1`
+		- Number: Select your mapped DN
+
+
+<br>
+- Navigate to _Management Portal > Provisioning > Address Book_
+	- Click on **`New Address Book`**
+	- Name: `<w class = "attendee-class">_attendeeID_</w>\_addressBook`
+	- Parent Type: **`Site`**
+	- Add Address Book entries
+		- Naming: `<w class = "attendee-class">_attendeeID_</w>\_addressBookEntry1`
+		- Only US numbers are supported. For example: +18662293239 (Cisco Helpdesk)
+
+<br>
+- Navigate to _Management Portal > Provisioning > Agent Profiles_
+	- Search for _your Agent Profile_ and make sure that **Outdial is enabled and your Outdial EP selected**
+	- Select _your Outdial ANI_
+
+<br>
+- Navigate to _Management Portal > Tenant > Settings_
+	- Check what is the **Default Outdial ANI** 
+
+>
+> **This is a required setting at tenant level, so PLEASE DON'T EDIT IT**
+{: .block-tip }
+>
+
+
+<br>
+- Now, login in the **Agent Desktop** with _your Agent1_ and using the Webex Extension
+	- Input your personal phone number
+	- **Don't select any Outdial ANI**
+	- Click on the telephone button to place the call
+	- The call will be delivered to your phone number with the tenant **Default Outdial ANI**
+	- Now repeat the same but **choosing _your Outdial ANI_** configured before. You will see that the call is coming with a different ANI
+
+<br>
+
+- Finally, let's see how **Adress Book** works
+	- Open the Outdial window and swith to the Address Book tab
+	- You will see the the list of entries of _your Address Book_ configured before
+	- You can search by entry name or DN
+	- Try to call any of the numbers in the list
+
+
+
+
+
+
+
+
+# Custom Desktop Layouts
 
 > Watch the following video to learn the dekstop layout customization process. After the video, you will be able to customize the Agent Desktop with your company logo.
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/zCFwhqaBPWU?rel=0" title="Part 2: Custom Desktop Layout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### 1. Download default desktop Layout
+## Download default desktop Layout
 
 - Login to **[https://portal.wxcc-us1.cisco.com](https://portal.wxcc-us1.cisco.com){:target="_blank"}** with admin credentials.
 
@@ -103,7 +420,7 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 
 - Click on **_Download_** button to download the **Default Desktop Layout.json** file.
 
-### 2. Customize default desktop layout with logo and title
+## Customize default desktop layout with logo and title
 
 - Open the **Default Desktop Layout.json** file with any text editor (e.g. Notepad or Sublime text).
 
@@ -113,7 +430,7 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 
 - **_Save As_** the JSON file with a distinguishable name.
 
-### 3. Upload the custom desktop layout and associate it to a team
+## Upload the custom desktop layout and associate it to a team
 
 - Go as admin to **_Desktop Layout_** module in the **[Tenant Management Portal](https://portal.wxcc-us1.cisco.com){:target="_blank"}**.
 
@@ -127,7 +444,7 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 
 - Click **_Save_** button to apply the layout.
 
-### 4. Verify the new custom desktop layout
+## Verify the new custom desktop layout
 
 - Login in the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}**.
 
@@ -142,9 +459,8 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 - Wait some seconds to see the results. Now you should get a new log icon in the left upper corner.
 
 
-## 1.3 More advance example
+## More advance example
 
-### 1. Upload the custom desktop layout and associate it to a team
 
 - Download the **[custom JSON file](https://raw.githubusercontent.com/wxcctechsummit/wxcclabguides/master/TechSummitRoW_2021/FlyHigh%20Desktop%20Layout%201.0(1).json){:target="_blank"}**.
 
@@ -160,8 +476,6 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 
 - Click **_Save_** button to apply the layout.
 
-### 2. Verify the new custom desktop layout
-
 - Go back to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** and change the team to `Team1_<ID>_TS`.
 
 - **Explore** the new Desktop Layout, new widgets have been added.
@@ -171,110 +485,17 @@ The Agent Desktop is divided in 6 sections. In the image above you can see a gen
 - This is just an example of what you can achieve with custom desktop layouts, **you can design really advance features**.
 
 
-## Part 2: Supervisor
-
-| **Entity** | **Name**      | 
-| ----------- | ----------------- | 
-| User Profiles        | Supervisor Profile \<ID\>   | 
-| Supervisor         | supervisor1_\<ID\>@mailinator.com | 
-
-> **NOTE:** Your \<ID\> is provided in the email in the **"Attendee ID"** line.
-
-## 2.1 Portal's Dashboards
-
->The following video outlines the existing dashboards available to the supervisor in the management portal. Follow the instructions to find out which dashboards are available and what they are for.
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/QA5XSfYZgiw?rel=0" title="Part 3: Portal Dashboards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
- 
-### 1. Management Portal with Supervisor account
-
-- Make sure the agent is logged into the agent interface **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** 
-
-- Make the agent **Available** by selecting the appropriate state in the upper left corner.
-
-- Navigate to **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}** in a **new browser tab (Private mode)**
-
-- Enter the **Username and Password** of the **Supervisor** created in the first lab.
-
-- Ensure that browser pop up blockers are not blocking the **_Admin Portal_** pop up. The **`Entry Point - Site level`** dashboard has to be shown on the landing page.
-
-- Make sure there are more than 0 agents listed in the **AVAILABLE AGENTS** field.
-
-- Make a new call to your EP. After starting IVR, you will see this value in the **IN IVR** field.
-
-- Now redirect your call to the queue with the agent. Make sure the agent answered this call. You should see a value of 1 in the **CONNECTED** field. 
-
-- Navigate to the agent desktop, end your call and move your agent back to the **Idle** status. Nobody should be in **Available** status.
-
-### 2. Contact Center Overview - Realtime
-
-- Go back to the portal's dashboard and select the second dashboard **`Contact Center Overview - Realtime`** in the upper left corner.
-
-- Make a **new call** to your EP and wait until the call reach a queue.
-
-- Check the new data on the Realtime dashboard. Now, this call will be presented in the table **Contact Details in the Queue**. In addition, the value will increase in the **Longest Contact Currently in Queue** chart.
-
-### 3. Contact Center Overview - Historical
-
--  Select the third dashboard **`Contact Center Overview - Historical`**. You will be able to see the same information but from the historical perspective. By default the informaiton is shown for the last 7 days. Change the **Duration** filter to **This Year** in the upper right corner. 
-
-- Open the help guide by clicking on the supervisor account in the upper right corner and select the **Help** option.
+> Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
+{: .block-tip }
 
 
-### 4. Agent State Data – Realtime dashboard 
-
-- Select the 4th dashboard **`Agent State Data – Realtime`** in the upper left corner.
-
-- Now the agent has to be presented in the **Agent State Data** dashboard.
-
-- Manually refresh dashboard data by clicking on **Stop Refresh** button. As the result, the **time since last refresh** will be restarted.
-
-## 2.2 Permissions and remote agent logout
-
->Here we go through the newly added dashboard. We will learn how to change supervisor permissions and how to manually log out agents by using a supervisor account.
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/nGOrskpqwGg?rel=0" title="Part 4: Supervisor permissions and remote agent logout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-### 1. Remote Agent Logout 
-
-- To log out an agent, in the **`Agent State Data – Realtime`** dashboard, click **Sign Out** button in the **Action** column. 
-
-- Make sure that you **receive a notification** that the agent has been successfully logged out.
-
-> **Note:** You can log out agents who are in the Available, Idle, or Not Responding. If the agent is in a **Connected** state the Sign Out button will not be available.
-
-- Go to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}**_ and verify the agent status. He should **receive the notification** that the supervisor has signed him out.
-
-
-### 2. Supervisor’s User Profile
-
-- Make sure the agent is logged back into the agent interface. During the agent login select the `Team2_<ID>_TS`.
-
-- In the **[Management Portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**_, navigate to **_Provisioning_** and select **_User Profiles_**.
-
-- Click on dots `...` infront of **_Supervisor Profile_** and select **Copy** option.
-
-- The new **User Profile** page will be presented. Set the **Name** base on your Attendee \<ID\> `Supervisor Profile <ID>`.
-
-- In the **User Profile** page click on **Access Rights**.
-
-- In **Teams** field set only team1 `Team1_<ID>_TS` and click **Save**.
-
-- Navigate to **_Provisioning_**, select **_Users_** and modify your supervisor account.
-
-- In front of the current supervisor `supervisor1_<ID>@mailinator.com` click on `...` , to launch the **_Edit_** view for a particular User configuration.
-
-- Select a created profile `Supervisor Profile <ID>` in the **_User Profile_** drop down list and hit **_Save_**.
-
-- **Log-out and log-in again** in to apply the new supervisor profile settings.
-
-- Verify that there are **no agents in the `Agent State Data – Realtime` dashboard** with a new profile.
-
-- Go to the agent desktop and change the team settings. **Switch the agent to `Team1_<ID>_TS`**.
-
-- In the agent dashboard click the **Auto Refresh** button and make sure the agent appears.
-
+<div class="alert"></div>
+<form id="attendee-form">
+      <label for="attendee-id">Attendee ID</label>
+      <input type="text" name="attendee-id" id="attendee-id" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="/assets/gitbook/form.js"></script>
 
 
 ---

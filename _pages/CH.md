@@ -5,33 +5,6 @@ date: 2022-01-10
 layout: post
 ---
 
-### Overview of the lab:
-
-In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
-```
-> ##### Comment
->
-> It is assumed that the attendee has already an access to the tenant.**
-```
-
-
-> ##### TIP
->
-> It is assumed that the attendee has already an access to the tenant.**
-{: .block-tip }
-
-
-> ##### Warning
->
-> It is assumed that the attendee has already an access to the tenant.**
-{: .block-warning }
-
-
-> ##### Danger
->
-> It is assumed that the attendee has already an access to the tenant.**
-{: .block-danger }
-
 ## Table of Contents
 
 
@@ -43,6 +16,11 @@ In this Lab, we will go through the tasks that are required to complete the gene
 | [Bulk Configuration](#bulk-configuration)                                                | Practical Lab | EASY            | 5 min            |
 
 
+## Overview of the lab:
+
+In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
+
+
 ## Introduction
 
 ### Lab Objective
@@ -52,15 +30,15 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ### Pre-requisites
 
-- You have Admin access to Control Hub and can create your GOLD tenant OR already have a GOLD Tenant created
+- You have Admin access to Control Hub
+- You have the dialed number registered on the Control Hub
 
 
 ### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="_blank"}**\
+> Portal: **[https://portal.wxcc-us1.cisco.com/](https://portal.wxcc-us1.cisco.com/){:target="_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="_blank"}**\
-> Webex Calling app **[https://settings.webex.com/](https://settings.webex.com/){:target="_blank"}**
 
 
 ## Lab Section
@@ -69,16 +47,20 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles. 
+{: .block-tip }
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/0p37TL5wtCY?rel=0" title="WxCC Lab #1 Part 1: Control Hub User Management Admin Task" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-| **User Role** | **User email**              | **User Extension** |
-| ------------- | --------------------------- | ------------------ |
-| Agent         | <w class = "attendee-class">your_attendee_ID</w>_agent1@mailinator.com      | \<your assign DN\>      |
-| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>_supervisor1@mailinator.com | \<your assign DN\>      |
+| **User Role** | **User email**                                                          | **User Extension** |
+| ------------- | ----------------------------------------------------------------------- | ------------------ |
+| Agent         | <w class = "attendee-class">your_attendee_ID</w>_agent1@\<your domain\> | \<your assign DN\> |
+| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>_supervisor1@\<your domain\> | \<your assign DN\> |
 
+> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted.
+{: .block-danger }
 
-### 1. Define your Attendee ID
+### 1.  Define your Attendee ID
+
 <div class="alert"></div>
 <form id="attendee-form">
       <label for="attendee-id">Attendee ID</label>
@@ -87,65 +69,62 @@ In this Lab, we will go through the tasks that are required to complete the gene
 </form>
 <script src="/assets/gitbook/form.js"></script>
 
+>**NOTE:** the **Attendee ID** was provided in the email with the admin credentionals. You can share your tenant with your colleagues, in that case the **Attendee ID** should be the same for all, but you can use a sub prefix with the number. Ex: attendeeID_agent1_1, attendeeID_agent1_2, etc.
+{: .block-tip }
 	
-### 1. Add an agent and a supervisor users and configure the calling extension
+### 2.  Add agent and supervisor users and set the calling extensions
 
 - Login to the [Control Hub](https://admin.webex.com){:target="_blank"} with the admin account.
 
-- Navigate to **_Users_**.
+- In the left navigation pane go to **_Users_** under **Management**.
 
 - Click on **_Manage Users_** button.
 
-- Click on **_Manually Add or Modify User_**.
+- Select **_Manually add users_**.
 
-- Select **_Next_** in **_Manage Users_** pane.
+- Set the agent's **First name**, **Last name** and input the **Email addresses** of the agent. 
 
-- Input the **Email addresses** of the agent and supervisor users and click **_Next_**. 
-	- Users and email addresses should have already been created for the purpose of these exercises.  
+- Click on `+` sign and add the supervisor in the same way.
 
-- For consistency, verify that the **Email addresses** are same as in the table above and click **_Next_**.  *(this step is not mandatory but will help with the consistency of the labs)*
+- For consistency, verify that the **Email addresses** are same as in the table above and click **_Next_**.  
 
-- Check **_Messaging_** , **_Webex Calling (Professional)_** & **_Contact Center_**.
-
-- Ensure that the License Type is **_Premium Agent_** and Role is **_Agent_** and click **_Next_**. 
+- In **Step 2: Assign license for users** select **_Webex Calling (Professional)_** & **_Contact Center (Premium Agent)_**.
 
 - On the next page, make sure that the **_Location_** is selected under **_Assign Numbers_**. The correct value should be already selected by default. 
 
 - The **_Phone Number_** left as **None**.
 
-- On the same page, Enter the correct `Extension` under **_Assign Numbers_**. You can find this in the table above.
+- On the same page, Enter the correct `Extension` under **_Assign Numbers_**. The correct Extensions should be provided to you with the admin credentials.
 
-- Click **_Finish_**.
+- In step **Step 4: Review** verify the data and Click **_Add users_**.
 
-- On the next page, you should get confirmation **"2 Total records processed"**. Confirm the same by pressing **_Finish_**.
+- On the next page, you should get confirmation **"2  users added"**. Confirm the same by pressing **_Close_**.
 
-- Select the supervisor user and modify his role to **_Supervisor_** by clicking the top **_Edit_** button in front of **_Services_**. Click **_Save_** to confirm the changes.
+- Now select the supervisor user and modify his role to **_Premium Agent - Supervisor Role_** by clicking the  **_Edit Licenses_** button in the **_Licenses_** section. 
 
-- Validate the users by going to the assigned email account you chose for agent or supervisor and follow the **Cisco Webex** instructions to activate
+- Click **_Save_** and **_Close_** to confirm the changes.
 
-- Refresh the **_Users_** page in the Control Hub, make sure that all users are in **Active** status.
+- Validate the users by going to the assigned email account. Open the Control Hub validation email and follow the **Cisco Webex** instructions to activate the both accounts.
 
-### 2. Optionally, add the rest of the users
-
-- Follow the same steps as above to add any extra users that you want to add to the Contact Center.
-
-[To top of this lab](#table-of-contents)
+- Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
 
 # Managment Portal User Configuration
 
-> The following video outlines how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user. We will also see how to navigate to the Webex Contact Center Management Portal from Control Hub UI.
+> The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users. 
+{: .block-tip }
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/92ou5Yias-8?rel=0" title="WxCC Lab #1 Part 2: Admin Portal Multimedia Profile, Site and Team Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 | **Entity**          | **Name** |
 | ------------------- | -------- |
-| Multimedia Profiles | MMP_2022_TS   |
-| Site                | Site_2022_TS  |
-| Team1               | Team1_2022_TS |
-| Team2               | Team2_2022_TS |
+| Multimedia Profiles | <w class = "attendee-class">your_attendee_ID</w>_MMP   |
+| Site                | <w class = "attendee-class">your_attendee_ID</w>_MMP  |
+| Team1               | <w class = "attendee-class">your_attendee_ID</w>_MMP |
+| Team2               | <w class = "attendee-class">your_attendee_ID</w>_MMP |
 
-> **NOTE:** Multiple \<ID\> were provided in the email in the **"Attendee ID"** line. You can share your tenant with the multiple administrators in your organization, in that case the ID should be unique for each user.
+> **NOTE:** the **Attendee ID** was provided in the email with the admin credentionals. You can share your tenant with your colleagues, in that case the **Attendee ID** should be the same for all, but you can use a sub prefix with the number. Ex: attendeeID_MMP_1, attendeeID2_MMP_2, etc.
+{: .block-tip }
 
 ### 1. Create new MultiMedia Profile
 
@@ -195,10 +174,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and hit **_Save_**.
 
-### 4. Create new Team 2
-
-- Please follow the same steps as above to add an extra Team as `Team2_2022_TS`. Later we will use this team to assign a custom Desktop Layout.
-
 
 
 > The following video outlines how to configure the users in Admin Portal that were added first in Control Hub. This is a very critical task from the Contact Center perspective. We also would take a look at how to associate customer-created Site, Team, and Multi-Media Profile with those users. After this, we should be able to login as an agent.
@@ -232,6 +207,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - Select `MMP_2022_TS` in the **_Multimedia Profile_** drop-down and hit **_Save_**.
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
+
+
+# Bulk Configuration
+
+### 4. Create new Team 2
+
+- Please follow the same steps as above to add an extra Team as `Team2_2022_TS`. Later we will use this team to assign a custom Desktop Layout.
 
 
 # Access to the Agent Desktop
@@ -311,7 +293,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
 
-# Bulk Configuration
+
 
 
 ---

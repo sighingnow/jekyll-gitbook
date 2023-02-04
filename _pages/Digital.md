@@ -27,7 +27,7 @@ This page is under developments
 | [Task BOTs](#lab1216---) | Practical Lab | HARD            | 30 min           |
 | [Event Scheduler](#lab1217---) | Read & Understand | MED            | 15 min           |
 | [Inbound Webhooks](#lab1218---) | Practical Lab | HARD            | 15 min           |
-| [Troubleshooting](#lab1219---) | Practical Lab | MED            | 15 min           |
+| [Troubleshooting](#lab1219---troubleshooting) | Practical Lab | MED            | 15 min           |
 | [Custom Nodes](#lab1220---) | Practical Lab | HARD            | 15 min           |
 | [Events and Triggers](#lab1221---) | Practical Lab | MED            | 15 min           |
 | [Flow and Global variables](#lab1222---) | Practical Lab | MED            | 15 min           |
@@ -1002,10 +1002,11 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 #### Pre-requisite
 
-1. Webex CC Portal, Agent Desktop and Webex Connect URL .
-2. Admin credentials to complete configurations in Webex CC Management Portal and Engage Portal.
-3. Admin credentials to complete configurations in Connect Portal.
-4. Agent Credentials to handle the Chat.
+1. You received Webex CC Portal, Agent Desktop and Webex Connect URL .
+2. You have admin credentials to complete configurations in Webex CC Management Portal and Engage Portal.
+3. You have admin credentials to complete configurations in Connect Portal.
+4. You have agent Credentials to handle the Chat.
+5. You have successfully completed the previous Lab1 **Preconfiguration**.
 
 #### Quick Links
 
@@ -2332,17 +2333,18 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 
 -   WxCC Portal, Agent Desktop and IMI connect URL.
 -   Admin credentials to complete configurations in WxCC portal and IMI connect.
--   Agent Credentials to Handle FBM digital contact
+-   Agent Credentials to Handle FBM digital contact.
 
 ### 1.     Navigate to BOT Builder and Create bot
 
--   Log on to Connect portal and navigate to BOT Builder
+-   Log on to Connect portal and navigate to BOT Builder.
     
--   On the top right you have 2 options QnA BOT and Task BOT
+-   On the top right you have 2 options QnA BOT and Task BOT.
     
--   Create new QnA Bot
+-   Create new QnA Bot.
     
--   Give name and enable agent handoff option
+-   Give name and enable Agent handover and Allow feedback options. For easy tracking of configurations, please use the Attendee ID as part of your Bot name. For example:
+	Bot Name: AttendeeID_QnA_Bot
     
 
 ### 2.     Preview
@@ -2942,6 +2944,175 @@ Request Body:
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
 
 # Lab.12.19 - Troubleshooting
+
+
+## Table of Contents
+
+| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 15 min            |
+| [Debugging a flow](#2debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
+| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 15 min            |
+
+
+## Introduction
+
+This section is designed to introduce troubleshooting capabilites available for digital channels in Webex Connect platform. In addition there examples of the most common issues and the ways of how to fix them.
+
+
+## Pre-requisite
+
+1. You received Webex CC Management Portal, Agent Desktop and Webex Connect URL .
+2. You have admin credentials for Webex CC Management Portal and Engage Portal.
+3. You have admin credentials for Connect Portal.
+4. You have at least one flow created and published in Webex Connect.
+
+
+## 1. Understanding of Webex Connect troubleshooting capabilities
+
+>**Note:** Please check and make sure all configuration steps for digital channel have been completed succesfully before start troubleshooting it.
+
+There are the following troubleshooting capabilities available for the administrator to troubleshoot issues in digital channels provided by Webex Connect:
+-  Export Logs tool
+-  The debugger built into the flow builder
+Let's consider how we can use both of them.
+
+### 1.1. Export Logs tool
+
+This tool allows Webex Connect admin to download inbound and outbound log events as XLSX file for any Service / Asset / Digital Channel for desired timefrrame. The we can inspect this file to check, for example, whether the message was received or sent by corresponding component of Webex Connect platform.
+
+Please login to Connect Portal, then go to ***Tools*** -> ***Export Logs*** to access the tool.
+
+![DC_Lab.12.19_Export_Logs_1](/assets/images/DC_Lab_12.19._Export_Logs_1.png)
+
+Let's download all incoming messages received via ***Chat_Asset*** for the last 7 days. We need to provide the following details and press ***Download*** button:
+
+| Parameter Name | Parameter Value  |
+| -------------- | ---------------- |
+| Number or App  | Chat_asset       |
+| Channel Event  | Incoming Message |
+| Period         | Last 7 days      |
+
+![DC_Lab.12.19_Export_Logs_2](/assets/images/DC_Lab_12.19._Export_Logs_2.png)
+
+After the log file has been downloaded, we can open the file and see all inbound events, incliding timestamps, IDs and message text. We can use the file to check whether specific message rom the end user has been received by Webex Connect via selected Number or App (asset).
+
+![DC_Lab.12.19_Export_Logs_3](/assets/images/DC_Lab_12.19._Export_Logs_3.png)
+
+Now, let's download all outbound messages for ***My First Service*** for the last 7 days. We need to provide the following details and press ***Download*** button:
+
+| Parameter Name | Parameter Value              |
+| -------------- | ---------------------------- |
+| Service        | My First Sertvice            |
+| Channel        | Live Chat / In-App Messaging |
+| Period         | Last 7 days                  |
+
+![DC_Lab.12.19_Export_Logs_4](/assets/images/DC_Lab_12.19._Export_Logs_4.png)
+
+After the log file has been downloaded, we can open the file and see all outbound events, incliding timestamps, IDs and message text. We can use this log to check whether exact message has been sent to the end user by Webex Connect via selected Service / Channel.
+
+![DC_Lab.12.19_Export_Logs_5](/assets/images/DC_Lab_12.19._Export_Logs_5.png)
+
+### 1.2. Flow Debugger 
+
+This tool allows Webex Connect admin to track flow execution from the beginning till the end. Flow debugger has the following capabilities:
+-  search for exact flow execution event based on the timestamp or Transaction ID
+-  briefly shows the result of exectuting each node of the flow in the form of a list
+-  adds unique ID to each node on flow canvas to simplify the mapping between the nodes and items in the list
+-  shows all the parameters used when calling each flow node
+-  shows the responce returned by each flow node after it had been called
+-  shows the values of the variables created by admin for troubleshooting purpose
+
+>**Note:** By default, debugging details are encrypted in Flow Debugger. Webex Connect admin account should have ***Decryption Access*** permission to be able to decrypt the details.
+>- Admin account with ***Owner*** permission has ***Decryption Access*** by default.
+>- Admin accoun without ***Owner*** permission has no ***Decryption Access*** by default - it can be granted by the owner.
+
+Login to Connect Portal and go to ***Settings*** -> ***Teammates*** and loot at ***Decryption Access*** column to check which accounts on Connect Portal have log decryption permission. For example:
+
+![DC_Lab.12.19_Flow_Debugger_1](/assets/images/DC_Lab_12.19._Flow_Debugger_1.png)
+
+To grant ***Decryption Access*** permission to some admin account, check and make sure you are logged in under admin account with ***Owner*** permission. Then click ***Edit*** button next to the desired admin account, tick ***Decrypt Logs*** check box in the pop-up window with account details and save changes.
+
+![DC_Lab.12.19_Flow_Debugger_2](/assets/images/DC_Lab_12.19._Flow_Debugger_2.png)
+
+Check and make sure ***Decryption Access*** permission is visible next to the desired admin account in the list of users.
+
+![DC_Lab.12.19_Flow_Debugger_3](/assets/images/DC_Lab_12.19._Flow_Debugger_3.png)
+
+
+## 2. Debugging a flow
+
+Flow debugger is embedded into Webex Connect flow builedr. Let's have a look how to use it. 
+
+-  Login to Connect Portal and go to ***Services***. Then go to the service, switch to ***Flows*** tab and double-click on the flow which you are going to debug. 
+-  Once the flow is loaded, click on ***Debug*** button on the right pane. Flow debugger window will
+appear at the bottom. This window is scalable, so we can adjust its size to make troublehooting process more convenient.
+
+![DC_Lab.12.19_Debugging_Flow_1](/assets/images/DC_Lab_12.19._Debugging_Flow_1.png)
+
+-  Provide proper time frame or ***Transaction ID*** (if you know it) and press ***Search*** button to find corresponding flow events. You will see all found flow events as a list in debugger window. Each line of the list represents single flow execution.
+
+![DC_Lab.12.19_Debugging_Flow_2](/assets/images/DC_Lab_12.19._Debugging_Flow_2.png)
+
+-  Click on the corresponding hyperlink in ***Transaction ID*** column to see the details of exact flow execution. Those details will be displayed as a list at a separate tab in the same debugger window. The title of the tab will be the value of the Transaction ID.
+
+![DC_Lab.12.19_Debugging_Flow_3](/assets/images/DC_Lab_12.19._Debugging_Flow_3.png)
+
+-  Select one item from the list to see its details on the right-hand side of debugging window. All details of the event are encrypted by default. Click on ***DECRYPT LOGS*** button in the title of debuggin screen to see decrypted log messages.
+
+![DC_Lab.12.19_Debugging_Flow_4](/assets/images/DC_Lab_12.19._Debugging_Flow_4.png)
+
+-  Decrypted log messages will be displayed on the right-hand side of debuggin window. Those log messages include the parameters used when calling the node as well as the results returned by the node after the request was processed. You can copy the value of any debug message by pressing copy icon next to the message on the right-hand side of debugging window.
+
+![DC_Lab.12.19_Debugging_Flow_5](/assets/images/DC_Lab_12.19._Debugging_Flow_5.png)
+
+-  All items in the list have ***Node ID*** and ***Node*** which matches the same values for each node on flow canvas.
+
+![DC_Lab.12.19_Debugging_Flow_6](/assets/images/DC_Lab_12.19._Debugging_Flow_6.png)
+
+-  So, every time you click on any item in the list in debugging window the log messages of this node are displayed on the righ-hand side. In addition, corresponding node is highlighted with a blue border on flow canvas, which simplifies troubleshhoting.
+
+![DC_Lab.12.19_Debugging_Flow_7](/assets/images/DC_Lab_12.19._Debugging_Flow_7.png)
+
+-  The ***OUTCOME*** column of the list shows the result of execuiting each flow node. In case if any node has been completed with an error or timeout, it will be displayed as an outcome in the line of the list which corresponds to the affected flow node. Error details will be available on rigth-hand side of debugging window.
+
+![DC_Lab.12.19_Debugging_Flow_8](/assets/images/DC_Lab_12.19._Debugging_Flow_8.png)
+
+In the next section we will look at the most common issues in Webex Connect flows and how to solve them.
+
+
+## 3. The most common issues in Webex Connect flows
+
+Let's look the few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
+
+### 3.1. Engage Asset not linked to Entry Point in Webex CC
+
+### 3.2. Engage authentication not working
+
+### 3.3. Connect authentication not working
+
+### 3.4. Variable does not exist or has empty value
+
+Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. In this case there will be the following error in flow debugger.
+
+![DC_Lab.12.19_Error_No_Value_1](/assets/images/DC_Lab_12.19._Error_No_Value_1.png)
+
+The error ***desc : value is mandatory , name : task id*** means ***TASK ID*** parameter of ***Create Task*** node had no value when the node was executed. It could happen if the variable assigned to ***TASK ID*** did not exist or had an empty value. 
+To fix this issue, we need to open the configuration of ***Cretae Task*** node and check the value of ***TASK ID*** parameter. In our case there is a variable ***$(flid_na)***, which does not exist and that's why there was an empty value used when calling ***Create Task*** node. 
+
+![DC_Lab.12.19_Error_No_Value_2](/assets/images/DC_Lab_12.19._Error_No_Value_2.png)
+
+Potential ways to fix the issue:
+-  Correct variable name if it is wrong and check the value of this variable
+-  Create a variable if it does not exist and assign proper value to it
+-  \[Not a flexible approach\] Replace the variable name by exact value
+
+
+### 3.5. Wrong value of the parameter
+
+
+
+
 # Lab 12.20 - Creating Custom Nodes
 ## Table of Contents
 
@@ -2987,7 +3158,8 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ![Lab12.20_CustomNodeAddIntegrations](/assets/images/Lab12.20_CustomNodeAddIntegrations.png)
 
--   Name your Custom Node, select ‘Custom Nodes’ under Node Category and click OK
+-   Name your Custom Node, select ‘Custom Nodes’ under Node Category and click OK. For easy tracking of configurations, please use the Attendee ID as part of your node name. For example:
+	Node Name: AttendeeID_CustomNode
 
 ![Lab12.20_CustomNodeCreateNew](/assets/images/Lab12.20_CustomNodeCreateNew.png)
 
@@ -3182,8 +3354,10 @@ Both variables are transferable between flows. In the second part of this lab in
 
 ![Lab12.24.1_GVFirst](/assets/images/Lab12.24.1_GVFirst.png)
 
--   Create a new OR select an existing Global Variable with the following configurations:
+-   Create a new OR select an existing Global Variable with the following configurations. For easy tracking of configurations, please use the Attendee ID as part of your global variable name. For example:
+	Name: AttendeeID_GV
 
+	-   Name: AttendeeID_GV
 	-   Variable Type: String
 	-   Default Value: _your prefered value_
 	-   Make Reportable: Yes
@@ -3263,7 +3437,7 @@ Both variables are transferable between flows. In the second part of this lab in
 	-   Task ID: $(flid)
 	-   Set Variable:
 	
-		-   Name: _your prefered value_
+		-   Name: AttendeeID_FV (For easy tracking, please prepend your Attendee ID)
 		-   Type: String
 		-   Value:
 		-   Enable “Make agent viewable”
