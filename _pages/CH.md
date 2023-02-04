@@ -69,6 +69,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 </form>
 <script src="/assets/gitbook/form.js"></script>
 
+
 >**NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can use a sub prefix with the number. Ex: _attendeeID**1**_agent1, attendeeID**2**_agent1, etc._
 {: .block-tip }
 	
@@ -161,11 +162,11 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Select **<w class = "attendee-class">your_attendee_ID</w>_Site** from the **_Site_** drop-down.
 
-- Input **_Name_** as **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
+- Input **_Name_** as `<w class = "attendee-class">your_attendee_ID</w>_Team1`.
 
 - Use the default **_Type_** `Agent Based`.
 
-- Select **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the **_Multimedia Profile_** drop-down.
+- Select `<w class = "attendee-class">your_attendee_ID</w>_MMP` in the **_Multimedia Profile_** drop-down.
 
 - Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and **_Save_** the configuration.
 
@@ -223,6 +224,8 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
 - Go to the Management Portal, click on **_Provisioning_** and  **_Team_** and verify that the **<w class = "attendee-class">your_attendee_ID</w>_Team2** is created. 
+
+- In the Management Portal you can directly associate the **<w class = "attendee-class">your_attendee_ID</w>_Team2** with your agent and supervisor.
 
 
 
