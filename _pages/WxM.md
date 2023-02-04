@@ -11,19 +11,13 @@ In this Lab, we will go through the tasks that are required to build a Webex Exp
 
 # Table of Contents 
 
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [[#WxM Connector setup]] | Informational | EASY            | 5 min           |
+| [[#Enable WxM widgets in Desktop Layout]]           | Practical Lab | EASY            | 10 min           |
+| [[#Configure Feedback node in Flow]]                       | Practical Lab | EASY            | 10 min            |
+| [[#XM v2]]                                          | Informational | EASY            | 5 min            |
 
--   [Part 1: WxM Connector setup](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#part-1-wxm-connector-setup----not-need-to-complete-it-already-configured)
-    -   [1. Identify the API key from WxM](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#1-identify-the-api-key-from-wxm)
-    -   [2. Configure WxM connector in Control hub](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#2-configure-wxm-connector-in-control-hub)
--   [Part 3: Enable WxM widgets in Desktop Layout](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#part-3-enable-wxm-widgets-in-desktop-layout)
-    -   [1. Enable wxmConfigured flag](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#1-enable-wxmconfigured-flag)
-    -   [2. Enable Customer Experience Journey Widget](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#2-enable-customer-experience-journey-widget)
-    -   [3. Enable Customer Experience Analytics Widget](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#3-enable-customer-experience-analytics-widget)
-    -   [4. Check Widgets in Agent Desktop](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#4-check-widgets-in-agent-desktop)
--   [Part 4: Configure Feedback node in Flow](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#part-4-configure-ivr-feedback-node-in-flow----dont-change-the-logic-of-the-flow)
-    -   [1. Configure Feedback Node](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#1-configure-feedback-node)
-    -   [2. Test Voice interaction and confirm that voice survey is forwarded to the ANI](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#2-test-voice-interaction-and-confirm-that-voice-survey-is-forwarded-to-the-ani)
-    -   [3. Validate that the survey filled by the caller is recorded properly in WxM](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#3-validate-that-the-survey-filled-by-the-caller-is-recorded-properly-in-wxm)
 
 # Introduction
 
@@ -46,7 +40,8 @@ In this Lab, we will go through the tasks that are required to build a Webex Exp
     -   You are familiar with editing and updating desktop layout JSON
 4.  You have **Webex Calling installed** in your mobile phone and supervisor created in Lab 1 from which you can make calls to the contact center
 
-> **RECOMMENDED**: To have more information and undestanding about the WxM solution, follow this **[online training](https://salesconnect.cisco.com/#/mylearningmap/SC_LMS_1689)** first
+>**RECOMMENDED**: To have more information and undestanding about the WxM solution, follow this **[online training](https://salesconnect.cisco.com/#/mylearningmap/SC_LMS_1689)** first
+{: .block-tip }
 
 ## Quick Links
 
@@ -55,18 +50,20 @@ In this Lab, we will go through the tasks that are required to build a Webex Exp
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > WxM Console: **[https://xm.webex.com](https://xm.webex.com/)** WxM Documentation: **[https://xm.webex.com/docs/webex_cc/pcs_ivr_setup](https://xm.webex.com/docs/webex_cc/pcs_ivr_setup)**
 
-# Lab Section - remove u&p
+# Lab Section
 
-> Due to limitation with the number of WxM tenants, all the participants will use the same tenant (**Pod29**) for this lab.
 
 
 **Account** | **Username** | **Password**
 --- | --- | ---
 WxM admin | wxmdemoadmin | Login@123
-Pod29 admin | admin1pod29@email.carehybrid.com | WxCC_ASEAN2021!
 
 
-## Part 1: WxM Connector setup – Not need to complete it, already configured!
+
+## WxM Connector setup
+
+>Not need to complete it, already configured!
+{: .block-warning }
 
 -   **We have configured the WxM Connector for you**.
     
@@ -77,7 +74,8 @@ Pod29 admin | admin1pod29@email.carehybrid.com | WxCC_ASEAN2021!
 -   For more details, review the **[WxM Documentation](https://xm.webex.com/docs/webex_cc/pcs_ivr_setup)**
     
 
-> The following video outlines the steps required to create the WxM connector. WxCC uses this connector to read the dispatches that are configured in WxM. This connector is also used to load the widgets into the agent desktop and FeedBack is triggered via the same.
+> The following video outlines the steps required to create the WxM connector. Webex CC uses this connector to read the dispatches that are configured in WxM. This connector is also used to load the widgets into the agent desktop and FeedBack is triggered via the same.
+{: .block-tip }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/GI4nzVLLFCk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -91,6 +89,7 @@ Pod29 admin | admin1pod29@email.carehybrid.com | WxCC_ASEAN2021!
 -   In the table, look for the **username with _`system`_** as a suffix in the username
     
     > **Note**: Webex XM automatically creates ‘Machine sub-users’ in the account to be used to integrate with any platform
+    {: .block-tip }
     
 -   Copy the username and the **API Key**
 -   If the API key is not present, click on **Create** and then copy the key.
@@ -109,9 +108,13 @@ Pod29 admin | admin1pod29@email.carehybrid.com | WxCC_ASEAN2021!
 
 
 
-## Part 2: Enable WxM widgets in Desktop Layout
+## Enable WxM widgets in Desktop Layout
 
-> The following video shows how the Agent Desktop Layout JSON has to be modified with the appropriate values of the WxM dashboard, so that they are loaded into the widgets. The Space ID and the Metrics ID extracted from WxM decide which widget will be loaded for the agent. This lab section assumes that you are familiar with how the agent desktop layout can be modified and applied to a team.
+> The following video shows how the Agent Desktop Layout JSON has to be modified with the appropriate values of the WxM dashboard, so that they are loaded into the widgets. The Space ID and the Metrics ID extracted from WxM decide which widget will be loaded for the agent. 
+{: .block-tip }
+
+>This lab section assumes that you are familiar with how the agent desktop layout can be modified and applied to a team.
+{: .block-warning }
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Njie8PrB6Kk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -123,7 +126,7 @@ Pod29 admin | admin1pod29@email.carehybrid.com | WxCC_ASEAN2021!
 
 ### 2. Enable Customer Experience Journey Widget
 
--   Login to the **[WxM console](https://cx.cloudcherry.com/)** with the WxM admin credentials
+-   Login to the **[WxM console](https://cx.cloudcherry.com/)** with the WxM admin credentials mentioned here: [[#Lab Section]].
 -   Enter the **WxM admin credentials**.
 -   Dismiss informative alerts if any.
 -   Navigate to the **Overall Experience** response page.
@@ -146,20 +149,15 @@ Pod29 admin | admin1pod29@email.carehybrid.com | WxCC_ASEAN2021!
 -   Login in the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/)** with the recently created agent credentials
 -   Confirm that the **WxM widgets are visible on Agent Desktop.**
 
-## Part 3: Configure Feedback node in Flow – Don’t change the logic of the flow!
+## Configure Feedback node in Flow 
 
--   **We have created the Flow and configured the Feedback node for you.**
+>Don’t change the logic of the flow if already configured!
+{: .block-warning }
+ 
+-   Login in the Tenant Portal, navigate to Routing Strategies and open the **`WxM_Feedback_Flow`** to see how the Flow Diagram is buit. You can also create your own flow prefixed by your attendee ID and map it to your Entry Point from the Routing Strategies page.
     
--   Login in the Tenant Portal, navigate to Routing Strategies and open the **`WxM_Feedback_Flow`** to see how the Flow Diagram is buit. **DO NOT change the logic of the flow**, since the pod is shared with all partners
-    
--   You can also **see the video and the Configure Feedback Node section** to know the configuration steps needed.
-    
--   **THE VIDEO EXPLAINS HOW TO CONFIGURE EMAIL/SMS FEEFBACK. For IVR Feedback configuration, follow the steps written below.**
-    
+-   **See the [video](https://xm.webex.com/docs/webex_cc/pcs_ivr_setup/#video-set-up-guide) and the Configure Feedback Node section** below to know the configuration steps needed.
 
-> The video does a quick demo on how the Feedback node should be implemented such that the caller receives an email with the survey link after completion of the call. The same steps can be followed to trigger an SMS with the survey link to the call ANI.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qGW6lRI7AA0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### 1. Configure IVR Feedback Node
 
@@ -189,11 +187,14 @@ Pod29 admin | admin1pod29@email.carehybrid.com | WxCC_ASEAN2021!
 -   Navigate to the **`Overall Experience`** dashboard and ensure that the feedback you provided is recorded
 
 
-## Part 4: XM v2
-- We announced on October 14th, 2022, the End of Sale of WXM V1 Standalone and End of Life WXM V1 Standalone will be on November 14th, 2024.
-- We are currently working on the next version, Webex Experience Management v2, which will be directly integrated into WxCC and WxCCE to provide improved abilities to collect explicit/implicit feedback and data, store and visualize customer feedback data through surveys over various channels and displays information in user friendly dashboards.
+## XM v2
+- We announced on October 14th, 2022, the End of Sale of WXM V1 Standalone and End of Life WxM V1 Standalone will be on November 14th, 2024.
+- We are currently working on the next version, Webex Experience Management v2, which will be directly integrated into Webex CC and Webex CCE to provide improved abilities to collect explicit/implicit feedback and data, store and visualize customer feedback data through surveys over various channels and displays information in user friendly dashboards.
 - XM v2 will be available in the next 3-5 months tentatively.
-- Here is a preview of how XM v2 could look and function, this is an example of Post Interaction Surveys using Digital channels of Webex Connect. **Disclaimer: The look and feel, and even certain functionalities, at the time of release, may differ from what is shown in this short preview, as the feature is still under development.
+- Here is a preview of how XM v2 could look and function, this is an example of Post Interaction Surveys using Digital channels of Webex Connect. 
+
+>**Disclaimer: The look and feel, and even certain functionalities, at the time of release, may differ from what is shown in this short preview, as the feature is still under development.
+{: .block-warning }
 
 <iframe src="https://app.vidcast.io/share/embed/eafc4ea3-e5a2-4075-a83c-29da713631c3" width="560" height="350" title="Post Interaction Surveys using Digital Channels" frameborder="0" loading="lazy" allowfullscreen ></iframe>
 
