@@ -67,7 +67,7 @@ WxM admin | wxmdemoadmin | Login@123
 
 -   **We have configured the WxM Connector for you**.
     
--   You just need to login in Control Hub with Pod29 credentials, navigate to _Services -> Contact Center -> Connectors_ and **check that the WxM Connector is already created**.
+-   You just need to login into Control Hub with your admin credentials, navigate to _Services -> Contact Center -> Connectors_ and **check that the WxM Connector is already created**.
     
 -   However, we recommend you to **have a look to the video and configuration steps below**, to get an idea of how WxM Connector is configured
     
