@@ -160,13 +160,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Team`.
 
-- Select **<w class = "attendee-class">your_attendee_ID</w>_Site** from the **_Site_** drop-down.
+- Select **<w class = "attendee-class">your_attendee_ID</w>_Site** from the _Site_ drop-down.
 
-- Input **_Name_** as `<w class = "attendee-class">your_attendee_ID</w>_Team1`.
+- Input _Name_ as **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
 - Use the default **_Type_** `Agent Based`.
 
-- Select `<w class = "attendee-class">your_attendee_ID</w>_MMP` in the **_Multimedia Profile_** drop-down.
+- Select **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the _Multimedia Profile_ drop-down.
 
 - Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and **_Save_** the configuration.
 
