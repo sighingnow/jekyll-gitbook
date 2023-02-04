@@ -5,11 +5,12 @@ date: 2022-08-08
 layout: post
 ---
 
-## Overview of the lab: Update all the abreviations
+## Overview of the lab:
 
 In this Lab, we will go through the tasks that are required to build a Webex Experience Management connecter and use that to send a survey to customers so that they can provide feedback on their interaction with the contact center. Also, we will look at how the agent can get this feedback on their agent desktop to provide appropriate level of service to end customers. This will enhance their customer satisfaction level which will positively impact their business.
 
-# Table of Contents - update to table
+# Table of Contents 
+
 
 -   [Part 1: WxM Connector setup](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#part-1-wxm-connector-setup----not-need-to-complete-it-already-configured)
     -   [1. Identify the API key from WxM](https://wxcctechsummit.github.io/wxcclabguides/TechSummitRoW_2021/WxM.html#1-identify-the-api-key-from-wxm)
