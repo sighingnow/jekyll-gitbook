@@ -2951,8 +2951,8 @@ Request Body:
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 15 min            |
-| [Debugging a flow](#2debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
-| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 15 min            |
+| [Debugging a flow](#2-debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
+| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 30 min            |
 
 
 ## Introduction
@@ -3087,6 +3087,14 @@ Let's look at few examples of the most commn issues in Webex Connect flows. We w
 
 ### 3.1. Engage Asset not linked to Entry Point in Webex CC
 
+Here is an example of what will happen if live chat app (asset) is not assigned to the Entry Point on Webex CC management portal. Flow debugger disaplays ***onInvalidChoice*** error next to the affected ***Create Task*** node. The error on the right-hand side of debugging window contains ***desc : no valid edge found for the async event*** message.
+
+![DC_Lab.12.19_Error_No_EP_1](/assets/images/DC_Lab_12.19._Error_No_EP_1.png)
+
+Please follow the action plan below to fox the issue:
+1. Please check which app/asset is assigned to the affected flow on Connect Portal.
+2. Login to Webex CC Management Portal, go to ***Provisioning*** -> ***Etry Points/Queues*** -> ***Entry Point*** and select ***Edit*** next to the proper Entry Point.
+3. Then select affected app/asset created on Connect Portal in the ***Asset Name*** drop-down list and save changes. If the affected asset is not in the drop-down list, please create new one on Connect portal, register it with proper service and check one more time.
 
 
 ### 3.2. Engage authentication not working
