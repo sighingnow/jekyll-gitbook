@@ -3097,7 +3097,7 @@ Please follow the action plan below to fox the issue:
 3. Then select affected app/asset created on Connect Portal in the ***Asset Name*** drop-down list and save changes. If the affected asset is not in the drop-down list, please create new one on Connect portal, register it with proper service and check one more time.
 
 
-### 3.2. Engage authentication not working
+### 3.2. Engage authorization not working
 
 Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onInvalidData*** error next to the affected Engage node.
 
@@ -3153,7 +3153,7 @@ Then click on ***Authorize*** button in the pop-up window and provide credential
 ![DC_Lab.12.19_Error_WebexCC_Auth_5](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_5.png)
 
 
-### 3.4. Variable does not exist or has empty value
+### 3.4. Variable does not exist or has an empty value
 
 Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. Flow debugger disaplays ***onError*** error next to the affected ***Create Task*** node.
 
