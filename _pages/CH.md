@@ -236,64 +236,55 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/2bmoiAfxpTU?rel=0" title="WxCC Lab #2 Part 4: Access to the Agent Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 >This tenant does not allow outbound international calls. If you have the US numbers you can use that for sign in as an agent or supervisor. Otherwise, please download the Webex App according to the steps below. 
-{: .block-tip }
+{: .block-warning }
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
-> **Note:** You need two Webex Calling app for placing a call to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex Calling app for PC or Mac for **agent** account.
+> **Note:** You would need two Webex app for placing a call to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **agent** account.
+{: .block-warning }
 
-- Login to **[https://settings.webex.com/](https://settings.webex.com/){:target="_blank"}** by using account `agent1`.
-
-- Click on **_Webex Calling_** this will cross launch CUP in a new browser tab.
-
-- Go to **_My Apps_**.
-
-- Click `Download` the Webex Calling Client **Desktop Software**.
+- Download the Webex app from **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="_blank"}**.
 
 - Install the application on your PC/Mac.
 
-- Open Webex Calling and сlick **Sign In**. Specify the agent credentials for `agent1`.
+- Open Webex app and сlick **Sign In**. Specify the agent credentials.
 
-- Depending on your operation system, navigate to the Webex Callin Menu **_Edit Server Address_** and make sure you have selected **North America** region.
 
 ### 2. Download and Login in the Webex app for mobile
 
-> **Note:** You need two Webex Calling app for placing a call to Entry Point and accepting on the agent side. In this lab, we will use the Webex Calling app for mobile for **supervisor** account.
+> **Note:** You need two Webex apps for placing a call to Entry Point and accepting on the agent side. In this lab, we will use the Webex mobile app for the **supervisor** account.
+{: .block-tip }
 
 - Open the Application Manager (**Play Store** or **App Store**) on your mobile phone.
 
-- Search for **_webex calling_**.
+- Search for **_Webex_**.
 
-- **Download** and **Open** the app. Click `Get Started`.
+- **Download** and **Open** the app. 
 
-- Login in the app by selecting **_Region_** as **North America**.
+- Set **_Email address_** and **_Password_** as the supervisor account.
 
-- Set **_Email address_** and **_Password_** as the supervisor account `supervisor1`.
-
-> **Note:** Make sure that you give access to the phone's microphone for the calling app.
+> **Note:** Make sure that you give access to the phone's microphone for the webex app.
 
 
 ### 3. Agent Desktop Login
 
 > **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
+{: .block-warning }
+
+- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** in the different browser or in incognito mode.
+
+- Enter the agent’s **email ID** which you created in the previous task.
+
+- Enter the **Password** for the appropriate username.
+
+- In the **_Station Credentials_** pane, select **"Extension"** and input the configured number for that user. 
+
+> **Note:** Please use Webex App Extension for this lab. Optionally, if you have a US number, you can use it from the agent's desktop. This tenant does not allow numbers outside of the United States.
 {: .block-tip }
 
-- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="_blank"}** in a new browser or in incognito mode.
-
-- Enter the agent’s **email ID** `agent1` which you created in the previous lab.
-
-- Enter the **Password** for the appropriate Username.
-
-- In the **_Station Login_** pane, select **"Extension"** and input the configured number for that user. 
-
-> **Note:** Please use Webex Callin Extension for this lab. Optionally, if you have a US number, you can use it from the agent's desktop. This tenant does not allow numbers outside of the United States.
-
-- Select the `Team1_2022_TS`, with default desktop layout.
+- Select the team **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
 - Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
-
-
-
 
 
 
