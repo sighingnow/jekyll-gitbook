@@ -3083,13 +3083,38 @@ In the next section we will look at the most common issues in Webex Connect flow
 
 ## 3. The most common issues in Webex Connect flows
 
-Let's look the few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
+Let's look at few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
 
 ### 3.1. Engage Asset not linked to Entry Point in Webex CC
 
 ### 3.2. Engage authentication not working
 
-### 3.3. Connect authentication not working
+### 3.3. Webex CC authorization not working
+
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the corresponding node:
+
+![DC_Lab.12.19_Error_WebexCC_Auth_1](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_1.png)
+
+The error ***desc : unauthorized, integration :Create Task, method : Create Task*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Create Task*** does not work.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_2](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_2.png)
+
+Potential ways to fix the issue:
+
+1.  If there is incorrect autorization method selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
+
+2. If correct autorization method is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please make sure proper account is still active on Control Hub. Then go to ***Assets*** -> ***Integrations*** -> ***Webex CC Task*** and select ***Manage*** from the drop-down list next to the integartion name.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_3](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_3.png)
+
+Then scroll down to ***Node Authorizations***, click on arrow button to expand the list and select ***Update*** from ***Actions*** list next to the affected authorization.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_4](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_4.png)
+
+Then click on ***Authorize*** button in the pop-up window and provide credentials if needed to update Webex CC authorization.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_5](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_5.png)
+
 
 ### 3.4. Variable does not exist or has empty value
 
