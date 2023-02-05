@@ -2951,8 +2951,8 @@ Request Body:
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 15 min            |
-| [Debugging a flow](#2debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
-| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 15 min            |
+| [Debugging a flow](#2-debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
+| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 30 min            |
 
 
 ## Introduction
@@ -3083,17 +3083,79 @@ In the next section we will look at the most common issues in Webex Connect flow
 
 ## 3. The most common issues in Webex Connect flows
 
-Let's look the few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
+Let's look at few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
 
 ### 3.1. Engage Asset not linked to Entry Point in Webex CC
 
-### 3.2. Engage authentication not working
+Here is an example of what will happen if live chat app (asset) is not assigned to the Entry Point on Webex CC management portal. Flow debugger disaplays ***onInvalidChoice*** error next to the affected ***Create Task*** node. The error on the right-hand side of debugging window contains ***desc : no valid edge found for the async event*** message.
 
-### 3.3. Connect authentication not working
+![DC_Lab.12.19_Error_No_EP_1](/assets/images/DC_Lab_12.19._Error_No_EP_1.png)
 
-### 3.4. Variable does not exist or has empty value
+Please follow the action plan below to fox the issue:
+1. Please check which app/asset is assigned to the affected flow on Connect Portal.
+2. Login to Webex CC Management Portal, go to ***Provisioning*** -> ***Etry Points/Queues*** -> ***Entry Point*** and select ***Edit*** next to the proper Entry Point.
+3. Then select affected app/asset created on Connect Portal in the ***Asset Name*** drop-down list and save changes. If the affected asset is not in the drop-down list, please create new one on Connect portal, register it with proper service and check one more time.
 
-Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. In this case there will be the following error in flow debugger.
+
+### 3.2. Engage authorization not working
+
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onInvalidData*** error next to the affected Engage node.
+
+![DC_Lab.12.19_Error_Engage_Auth_1](/assets/images/DC_Lab_12.19._Error_Engage_Auth_1.png)
+
+The error ***desc : Authorization not found*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Search Conversation*** node does not work.
+
+![DC_Lab.12.19_Error_Engage_Auth_2](/assets/images/DC_Lab_12.19._Error_Engage_Auth_2.png)
+
+Potential ways to fix the issue:
+
+1. If there is ***undefined*** value of autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, this means that Engage autorization used for this node has been deleted. Please select another autorization from the drop-down list or create new authorization, then save changes and make the flow live.
+
+3. If there is incorrect autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
+
+2. If correct autorization is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, but it fails, please update selected authorization. Go to ***Assets*** -> ***Integrations*** -> ***Webex CC Engage*** and select ***Manage*** from the drop-down list next to the integartion name. For example:
+
+![DC_Lab.12.19_Error_Engage_Auth_3](/assets/images/DC_Lab_12.19._Error_Engage_Auth_3.png)
+
+Then scroll down to ***Node Authorizations***, click on arrow button to expand the list and select ***Update*** from ***Actions*** list next to the affected authorization.
+
+![DC_Lab.12.19_Error_Engage_Auth_4](/assets/images/DC_Lab_12.19._Error_Engage_Auth_4.png)
+
+Then click on ***Authorize*** button in the pop-up window and provide credentials if needed to update Webex CC authorization.
+
+![DC_Lab.12.19_Error_Engage_Auth_5](/assets/images/DC_Lab_12.19._Error_Engage_Auth_5.png)
+
+
+### 3.3. Webex CC authorization not working
+
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the affected Webex CC node.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_1](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_1.png)
+
+The error ***desc : unauthorized, integration :Create Task, method : Create Task*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Create Task*** node does not work.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_2](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_2.png)
+
+Potential ways to fix the issue:
+
+1. If there is incorrect autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
+
+2. If correct autorization is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, but it fails, please make sure proper account is still active on Control Hub. Then go to ***Assets*** -> ***Integrations*** -> ***Webex CC Task*** and select ***Manage*** from the drop-down list next to the integartion name. For example:
+
+![DC_Lab.12.19_Error_WebexCC_Auth_3](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_3.png)
+
+Then scroll down to ***Node Authorizations***, click on arrow button to expand the list and select ***Update*** from ***Actions*** list next to the affected authorization.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_4](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_4.png)
+
+Then click on ***Authorize*** button in the pop-up window and provide credentials if needed to update Webex CC authorization.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_5](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_5.png)
+
+
+### 3.4. Variable does not exist or has an empty value
+
+Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. Flow debugger disaplays ***onError*** error next to the affected ***Create Task*** node.
 
 ![DC_Lab.12.19_Error_No_Value_1](/assets/images/DC_Lab_12.19._Error_No_Value_1.png)
 
@@ -3103,13 +3165,20 @@ To fix this issue, we need to open the configuration of ***Cretae Task*** node a
 ![DC_Lab.12.19_Error_No_Value_2](/assets/images/DC_Lab_12.19._Error_No_Value_2.png)
 
 Potential ways to fix the issue:
--  Correct variable name if it is wrong and check the value of this variable
--  Create a variable if it does not exist and assign proper value to it
--  \[Not a flexible approach\] Replace the variable name by exact value
+1. Correct variable name if it is wrong and check the value of this variable
+2. Create a variable if it does not exist and assign proper value to it
+3. \[Not a flexible approach\] Replace the variable name by exact value
 
 
-### 3.5. Wrong value of the parameter
+### 3.5. Variable or parameter has wrong value
 
+Here is an example where the variable or parameter of a flow node has wrong value. Flow debugger disaplays ***onAppendMessageFailure*** error next to the affected ***Append Conversation*** node.
+
+![DC_Lab.12.19_Error_Wrong_Value_1](/assets/images/DC_Lab_12.19._Error_Wrong_Value_1.png)
+
+The error ***""description":"Chat ID provided does not exist","event":"conversation-message:error","value":{"conversationId":"this-is-wrong-ID-just-for-example","aliasId":""}"*** means that ***CONVERSATION ID*** parameter of ***Append Conversation*** node has wrong value - ***"this-is-wrong-ID-just-for-example"***. Please double-click on the affected node and correct the value of ***CONVERSATION ID*** parameter to fix the issue. Then save changes and make the flow live. 
+
+![DC_Lab.12.19_Error_Wrong_Value_2](/assets/images/DC_Lab_12.19._Error_Wrong_Value_2.png)
 
 
 
