@@ -3128,7 +3128,7 @@ Then click on ***Authorize*** button in the pop-up window and provide credential
 
 ### 3.3. Webex CC authorization not working
 
-Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the affected Webex CC node
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the affected Webex CC node.
 
 ![DC_Lab.12.19_Error_WebexCC_Auth_1](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_1.png)
 
@@ -3155,7 +3155,7 @@ Then click on ***Authorize*** button in the pop-up window and provide credential
 
 ### 3.4. Variable does not exist or has empty value
 
-Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. In this case there will be the following error in flow debugger.
+Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. Flow debugger disaplays ***onError*** error next to the affected ***Create Task*** node.
 
 ![DC_Lab.12.19_Error_No_Value_1](/assets/images/DC_Lab_12.19._Error_No_Value_1.png)
 
@@ -3170,8 +3170,15 @@ Potential ways to fix the issue:
 3. \[Not a flexible approach\] Replace the variable name by exact value
 
 
-### 3.5. Wrong value of the parameter
+### 3.5. Variable or parameter has wrong value
 
+Here is an example where the variable or parameter of a flow node has wrong value. Flow debugger disaplays ***onAppendMessageFailure*** error next to the affected ***Append Conversation*** node.
+
+![DC_Lab.12.19_Error_Wrong_Value_1](/assets/images/DC_Lab_12.19._Error_Wrong_Value_1.png)
+
+The error ***""description":"Chat ID provided does not exist","event":"conversation-message:error","value":{"conversationId":"this-is-wrong-ID-just-for-example","aliasId":""}"*** means that ***CONVERSATION ID*** parameter of ***Append Conversation*** node has wrong value - ***"this-is-wrong-ID-just-for-example"***. Please double-click on the affected node and correct the value of ***CONVERSATION ID*** parameter to fix the issue. Then save changes and make the flow live. 
+
+![DC_Lab.12.19_Error_Wrong_Value_2](/assets/images/DC_Lab_12.19._Error_Wrong_Value_2.png)
 
 
 
