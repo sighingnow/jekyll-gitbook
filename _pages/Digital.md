@@ -3087,23 +3087,52 @@ Let's look at few examples of the most commn issues in Webex Connect flows. We w
 
 ### 3.1. Engage Asset not linked to Entry Point in Webex CC
 
+
+
 ### 3.2. Engage authentication not working
+
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onInvalidData*** error next to the affected Engage node.
+
+![DC_Lab.12.19_Error_Engage_Auth_1](/assets/images/DC_Lab_12.19._Error_Engage_Auth_1.png)
+
+The error ***desc : Authorization not found*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Search Conversation*** node does not work.
+
+![DC_Lab.12.19_Error_Engage_Auth_2](/assets/images/DC_Lab_12.19._Error_Engage_Auth_2.png)
+
+Potential ways to fix the issue:
+
+1. If there is ***undefined*** value of autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, this means that Engage autorization used for this node has been deleted. Please select another autorization from the drop-down list or create new authorization, then save changes and make the flow live.
+
+3. If there is incorrect autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
+
+2. If correct autorization is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, but it fails, please update selected authorization. Go to ***Assets*** -> ***Integrations*** -> ***Webex CC Engage*** and select ***Manage*** from the drop-down list next to the integartion name. For example:
+
+![DC_Lab.12.19_Error_Engage_Auth_3](/assets/images/DC_Lab_12.19._Error_Engage_Auth_3.png)
+
+Then scroll down to ***Node Authorizations***, click on arrow button to expand the list and select ***Update*** from ***Actions*** list next to the affected authorization.
+
+![DC_Lab.12.19_Error_Engage_Auth_4](/assets/images/DC_Lab_12.19._Error_Engage_Auth_4.png)
+
+Then click on ***Authorize*** button in the pop-up window and provide credentials if needed to update Webex CC authorization.
+
+![DC_Lab.12.19_Error_Engage_Auth_5](/assets/images/DC_Lab_12.19._Error_Engage_Auth_5.png)
+
 
 ### 3.3. Webex CC authorization not working
 
-Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the corresponding node:
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the affected Webex CC node
 
 ![DC_Lab.12.19_Error_WebexCC_Auth_1](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_1.png)
 
-The error ***desc : unauthorized, integration :Create Task, method : Create Task*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Create Task*** does not work.
+The error ***desc : unauthorized, integration :Create Task, method : Create Task*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Create Task*** node does not work.
 
 ![DC_Lab.12.19_Error_WebexCC_Auth_2](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_2.png)
 
 Potential ways to fix the issue:
 
-1.  If there is incorrect autorization method selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
+1. If there is incorrect autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
 
-2. If correct autorization method is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please make sure proper account is still active on Control Hub. Then go to ***Assets*** -> ***Integrations*** -> ***Webex CC Task*** and select ***Manage*** from the drop-down list next to the integartion name.
+2. If correct autorization is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, but it fails, please make sure proper account is still active on Control Hub. Then go to ***Assets*** -> ***Integrations*** -> ***Webex CC Task*** and select ***Manage*** from the drop-down list next to the integartion name. For example:
 
 ![DC_Lab.12.19_Error_WebexCC_Auth_3](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_3.png)
 
@@ -3128,9 +3157,9 @@ To fix this issue, we need to open the configuration of ***Cretae Task*** node a
 ![DC_Lab.12.19_Error_No_Value_2](/assets/images/DC_Lab_12.19._Error_No_Value_2.png)
 
 Potential ways to fix the issue:
--  Correct variable name if it is wrong and check the value of this variable
--  Create a variable if it does not exist and assign proper value to it
--  \[Not a flexible approach\] Replace the variable name by exact value
+1. Correct variable name if it is wrong and check the value of this variable
+2. Create a variable if it does not exist and assign proper value to it
+3. \[Not a flexible approach\] Replace the variable name by exact value
 
 
 ### 3.5. Wrong value of the parameter
