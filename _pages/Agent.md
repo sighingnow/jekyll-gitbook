@@ -69,7 +69,6 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 {: .block-tip }
 
-
 <div class="alert"></div>
 <form id="attendee-form">
       <label for="attendee-id">Attendee ID</label>
@@ -84,14 +83,6 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 {: .block-tip }
 
-
-<div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" />
-      <button type="submit" id="save">SAVE</button>
-</form>
-<script src="/assets/gitbook/form.js"></script>
 
 ## Station Login
 
@@ -125,8 +116,9 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 {: .block-tip }
 >
 
-
-<iframe width="1024" height="576" src="https://app.vidcast.io/share/e4b450ff-9d3f-424d-96bb-2f0988b81743" title="Station Login" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 
 ## Agent Desktop Interface
@@ -134,9 +126,11 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 >
 > Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it.
 {: .block-tip }
->
 
-<iframe width="1024" height="500" src="https://app.vidcast.io/share/dc341488-94ab-4659-8951-4b4ba1412373" title="Agent Desktop Interface" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ![Image1](/assets/images/AgentDesktopOverview.png)
 
@@ -161,7 +155,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 > In the following video you will see how to handle incoming calls and what are the different agent states.
 {: .block-tip }
 >
-<iframe width="1024" height="576" src="https://app.vidcast.io/share/f5a79811-eb60-4925-b11a-a8586760a3d3" title="Calls Handling" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f5a79811-eb60-4925-b11a-a8586760a3d3" width="100%" height="100%" title="Calls Handling" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 #### Agent states:
 
@@ -307,8 +303,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 {: .block-tip }
 >
 
-<iframe width="1024" height="500" src="https://app.vidcast.io/share/149fe8d1-c27e-4c7e-a0b9-af072487c543" title="Exploring User Profile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
-
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - First, we will see how to change from one team to another one
 	- In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
@@ -346,7 +343,10 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 {: .block-tip }
 >
 
-<iframe width="1024" height="500" src="https://app.vidcast.io/share/df20ad39-55db-4c8c-a268-bcd4818fe1f3" title="Outdial Calls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreeframe/>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/df20ad39-55db-4c8c-a268-bcd4818fe1f3" width="100%" height="100%" title="Outdial Call" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
 
 - Navigate to _Management Portal > Provisioning > Outdial ANI_
 	- Click on **`New Outdial ANI`**
@@ -487,15 +487,6 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 {: .block-tip }
-
-
-<div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" />
-      <button type="submit" id="save">SAVE</button>
-</form>
-<script src="/assets/gitbook/form.js"></script>
 
 
 ---
