@@ -43,7 +43,7 @@ The video shows how to set up a Webex Contact Center Trial Tenant Remotely. This
 
 # Lab 0. Part 3: Provisioning with Creating a New Customer Organization
 This video demonstrates how to create a new Customer organization by using Provisioning email generated in Web Order.
->Note: Demonstration was done on Cisco internal lab and some options will not be visible in your production environment.
+>Note: Demonstration was done on Cisco internal lab environment and some options will not be visible in your production environment.
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -54,8 +54,12 @@ This video demonstrates how to create a new Customer organization by using Provi
 
 # Lab 0. Part 4: Provisioning on existing Customer Organization
 This video demonstrates how to apply Webex COntact Center subscription to an existing Customer organization by using Provisioning email generated in Web Order. In our example the organization has  a Webex Calling tenant already deployed.
->Note: Demonstration was done on Cisco internal lab and some options will not be visible in your production environment.
+>Note: Demonstration was done on Cisco internal lab environment and some options will not be visible in your production environment.
 {: .block-tip }
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/7fff8b9a-d38d-4c75-afd1-c535bf84dec3" width="100%" height="100%" title="Provisioning on existing Customer Organization.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
