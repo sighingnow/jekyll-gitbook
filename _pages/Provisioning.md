@@ -23,7 +23,7 @@ This is a supportive videos that do not require any actions since your tenant is
 # Lab 0. Part 1: How to create Webex Contact Center Trial
 This video demonstrates the proces of creation Webex Contact Center Trial. To create a Trial it is not necessary to go through the ordering process. Trial tenants are a great option for partners who are willing to start with the configuration before billing started. 
 > NOTE: By default the Webex Contact Center trial feature is not available in Partner Hubs. It can be activated only after approval. Please contact your PSM/CSM**.
-> {: .block-tip }
+{: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/0b8e2ef2-1045-477c-8ab2-3367568a0113" width="100%" height="100%" title="Creating Webex Contact Center Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -34,7 +34,7 @@ This video demonstrates the proces of creation Webex Contact Center Trial. To cr
 
 The video shows how to set up a Webex Contact Center Trial Tenant Remotely. This is not a common way of creating a trial but one of the scenarios to use this type of provisioning is when Partner administrator went on holidays and there is no one who can add a Webex Contact Center Trial to an existing customer organization. This demonstration shows how to add Webex Contact Center Trial to an existing organization by using another Partner Hub. CSM can perform a role of remote Partner Administrator.
 > Note: Customer organization must exist.
-> {: .block-tip } 
+{: .block-tip } 
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/07e770f8-19c2-4f65-91d2-f0809bfcb243" width="100%" height="100%" title="Creating Webex Contact Center Trial Remotely" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -43,7 +43,7 @@ The video shows how to set up a Webex Contact Center Trial Tenant Remotely. This
 # Lab 0. Part 3: Provisioning with Creating a New Customer Organization
 This video demonstrates how to create a new Customer organization by using Provisioning email generated in Web Order.
 >Note: Demonstration was done on Cisco internal lab and some options will not be visible in your production environment.
->{: .block-tip }
+{: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/7003a715-79d3-47bb-b6c4-5c8802d19353" width="100%" height="100%" title="Provisioning New Webex Contact Center" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
