@@ -48,8 +48,9 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles. 
 
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/0p37TL5wtCY?rel=0" title="WxCC Lab #1 Part 1: Control Hub User Management Admin Task" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/715d21da-91cf-4890-82c9-c60da5c5e883" width="100%" height="100%" title="February 06, 2023 at 4:59 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 | **User Role** | **User email**                                                          | **User Extension** |
 | ------------- | ----------------------------------------------------------------------- | ------------------ |
@@ -70,7 +71,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <script src="/assets/gitbook/form.js"></script>
 
 
->**NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can use a sub prefix with the number. Ex: _attendeeID**1**_agent1, attendeeID**2**_agent1, etc._
+>**NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel with you. In that case, the **Attendee ID** is the same for all of you, but you can use the different number in the end as the suffix. Ex: _attendeeID_agent**1**, attendeeID_agent**2**, attendeeID_agent**3**, etc._
 {: .block-tip }
 	
 ### 2.  Add agent and supervisor users and set the calling extensions
