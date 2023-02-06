@@ -2950,13 +2950,10 @@ Request Body:
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 5 min            |
-| [Troubleshooting flows](#2...)                       | Read & Understand     | MID            | 5 min            |
-| [Issue #1 - Engage Asset not linked to Entry Point in Webex CC](#3...) | Read & Understand     | MID            | 5 min            |
-| [Issue #2 - Engage authentication not working](#2...)  | Read & Understand     | MID            | 5 min     |
-| [Issue #3 - Connect authentication not working](#3...)  | Read & Understand     | MID            | 5 min     |
-| [Issue #4 - Missed/empty Value](#3...) | Read & Understand     | MID            | 5 min            |
-| [Issue #5 - Wrong value](#4...) | Read & Understand     | MID            | 5 min            |
+| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 15 min            |
+| [Debugging a flow](#2-debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
+| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 30 min            |
+
 
 ## Introduction
 
@@ -2975,12 +2972,12 @@ This section is designed to introduce troubleshooting capabilites available for 
 
 >**Note:** Please check and make sure all configuration steps for digital channel have been completed succesfully before start troubleshooting it.
 
-There are the following troubleshooting capabilities available for the administrator to troubleshoot issues in digital channels empowered by Webex Connect:
+There are the following troubleshooting capabilities available for the administrator to troubleshoot issues in digital channels provided by Webex Connect:
 -  Export Logs tool
 -  The debugger built into the flow builder
 Let's consider how we can use both of them.
 
-#### Export Logs tool
+### 1.1. Export Logs tool
 
 This tool allows Webex Connect admin to download inbound and outbound log events as XLSX file for any Service / Asset / Digital Channel for desired timefrrame. The we can inspect this file to check, for example, whether the message was received or sent by corresponding component of Webex Connect platform.
 
@@ -3015,6 +3012,173 @@ Now, let's download all outbound messages for ***My First Service*** for the las
 After the log file has been downloaded, we can open the file and see all outbound events, incliding timestamps, IDs and message text. We can use this log to check whether exact message has been sent to the end user by Webex Connect via selected Service / Channel.
 
 ![DC_Lab.12.19_Export_Logs_5](/assets/images/DC_Lab_12.19._Export_Logs_5.png)
+
+### 1.2. Flow Debugger 
+
+This tool allows Webex Connect admin to track flow execution from the beginning till the end. Flow debugger has the following capabilities:
+-  search for exact flow execution event based on the timestamp or Transaction ID
+-  briefly shows the result of exectuting each node of the flow in the form of a list
+-  adds unique ID to each node on flow canvas to simplify the mapping between the nodes and items in the list
+-  shows all the parameters used when calling each flow node
+-  shows the responce returned by each flow node after it had been called
+-  shows the values of the variables created by admin for troubleshooting purpose
+
+>**Note:** By default, debugging details are encrypted in Flow Debugger. Webex Connect admin account should have ***Decryption Access*** permission to be able to decrypt the details.
+>- Admin account with ***Owner*** permission has ***Decryption Access*** by default.
+>- Admin accoun without ***Owner*** permission has no ***Decryption Access*** by default - it can be granted by the owner.
+
+Login to Connect Portal and go to ***Settings*** -> ***Teammates*** and loot at ***Decryption Access*** column to check which accounts on Connect Portal have log decryption permission. For example:
+
+![DC_Lab.12.19_Flow_Debugger_1](/assets/images/DC_Lab_12.19._Flow_Debugger_1.png)
+
+To grant ***Decryption Access*** permission to some admin account, check and make sure you are logged in under admin account with ***Owner*** permission. Then click ***Edit*** button next to the desired admin account, tick ***Decrypt Logs*** check box in the pop-up window with account details and save changes.
+
+![DC_Lab.12.19_Flow_Debugger_2](/assets/images/DC_Lab_12.19._Flow_Debugger_2.png)
+
+Check and make sure ***Decryption Access*** permission is visible next to the desired admin account in the list of users.
+
+![DC_Lab.12.19_Flow_Debugger_3](/assets/images/DC_Lab_12.19._Flow_Debugger_3.png)
+
+
+## 2. Debugging a flow
+
+Flow debugger is embedded into Webex Connect flow builedr. Let's have a look how to use it. 
+
+-  Login to Connect Portal and go to ***Services***. Then go to the service, switch to ***Flows*** tab and double-click on the flow which you are going to debug. 
+-  Once the flow is loaded, click on ***Debug*** button on the right pane. Flow debugger window will
+appear at the bottom. This window is scalable, so we can adjust its size to make troublehooting process more convenient.
+
+![DC_Lab.12.19_Debugging_Flow_1](/assets/images/DC_Lab_12.19._Debugging_Flow_1.png)
+
+-  Provide proper time frame or ***Transaction ID*** (if you know it) and press ***Search*** button to find corresponding flow events. You will see all found flow events as a list in debugger window. Each line of the list represents single flow execution.
+
+![DC_Lab.12.19_Debugging_Flow_2](/assets/images/DC_Lab_12.19._Debugging_Flow_2.png)
+
+-  Click on the corresponding hyperlink in ***Transaction ID*** column to see the details of exact flow execution. Those details will be displayed as a list at a separate tab in the same debugger window. The title of the tab will be the value of the Transaction ID.
+
+![DC_Lab.12.19_Debugging_Flow_3](/assets/images/DC_Lab_12.19._Debugging_Flow_3.png)
+
+-  Select one item from the list to see its details on the right-hand side of debugging window. All details of the event are encrypted by default. Click on ***DECRYPT LOGS*** button in the title of debuggin screen to see decrypted log messages.
+
+![DC_Lab.12.19_Debugging_Flow_4](/assets/images/DC_Lab_12.19._Debugging_Flow_4.png)
+
+-  Decrypted log messages will be displayed on the right-hand side of debuggin window. Those log messages include the parameters used when calling the node as well as the results returned by the node after the request was processed. You can copy the value of any debug message by pressing copy icon next to the message on the right-hand side of debugging window.
+
+![DC_Lab.12.19_Debugging_Flow_5](/assets/images/DC_Lab_12.19._Debugging_Flow_5.png)
+
+-  All items in the list have ***Node ID*** and ***Node*** which matches the same values for each node on flow canvas.
+
+![DC_Lab.12.19_Debugging_Flow_6](/assets/images/DC_Lab_12.19._Debugging_Flow_6.png)
+
+-  So, every time you click on any item in the list in debugging window the log messages of this node are displayed on the righ-hand side. In addition, corresponding node is highlighted with a blue border on flow canvas, which simplifies troubleshhoting.
+
+![DC_Lab.12.19_Debugging_Flow_7](/assets/images/DC_Lab_12.19._Debugging_Flow_7.png)
+
+-  The ***OUTCOME*** column of the list shows the result of execuiting each flow node. In case if any node has been completed with an error or timeout, it will be displayed as an outcome in the line of the list which corresponds to the affected flow node. Error details will be available on rigth-hand side of debugging window.
+
+![DC_Lab.12.19_Debugging_Flow_8](/assets/images/DC_Lab_12.19._Debugging_Flow_8.png)
+
+In the next section we will look at the most common issues in Webex Connect flows and how to solve them.
+
+
+## 3. The most common issues in Webex Connect flows
+
+Let's look at few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
+
+### 3.1. Engage Asset not linked to Entry Point in Webex CC
+
+Here is an example of what will happen if live chat app (asset) is not assigned to the Entry Point on Webex CC management portal. Flow debugger disaplays ***onInvalidChoice*** error next to the affected ***Create Task*** node. The error on the right-hand side of debugging window contains ***desc : no valid edge found for the async event*** message.
+
+![DC_Lab.12.19_Error_No_EP_1](/assets/images/DC_Lab_12.19._Error_No_EP_1.png)
+
+Please follow the action plan below to fox the issue:
+1. Please check which app/asset is assigned to the affected flow on Connect Portal.
+2. Login to Webex CC Management Portal, go to ***Provisioning*** -> ***Etry Points/Queues*** -> ***Entry Point*** and select ***Edit*** next to the proper Entry Point.
+3. Then select affected app/asset created on Connect Portal in the ***Asset Name*** drop-down list and save changes. If the affected asset is not in the drop-down list, please create new one on Connect portal, register it with proper service and check one more time.
+
+
+### 3.2. Engage authorization not working
+
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onInvalidData*** error next to the affected Engage node.
+
+![DC_Lab.12.19_Error_Engage_Auth_1](/assets/images/DC_Lab_12.19._Error_Engage_Auth_1.png)
+
+The error ***desc : Authorization not found*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Search Conversation*** node does not work.
+
+![DC_Lab.12.19_Error_Engage_Auth_2](/assets/images/DC_Lab_12.19._Error_Engage_Auth_2.png)
+
+Potential ways to fix the issue:
+
+1. If there is ***undefined*** value of autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, this means that Engage autorization used for this node has been deleted. Please select another autorization from the drop-down list or create new authorization, then save changes and make the flow live.
+
+3. If there is incorrect autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
+
+2. If correct autorization is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, but it fails, please update selected authorization. Go to ***Assets*** -> ***Integrations*** -> ***Webex CC Engage*** and select ***Manage*** from the drop-down list next to the integartion name. For example:
+
+![DC_Lab.12.19_Error_Engage_Auth_3](/assets/images/DC_Lab_12.19._Error_Engage_Auth_3.png)
+
+Then scroll down to ***Node Authorizations***, click on arrow button to expand the list and select ***Update*** from ***Actions*** list next to the affected authorization.
+
+![DC_Lab.12.19_Error_Engage_Auth_4](/assets/images/DC_Lab_12.19._Error_Engage_Auth_4.png)
+
+Then click on ***Authorize*** button in the pop-up window and provide credentials if needed to update Webex CC authorization.
+
+![DC_Lab.12.19_Error_Engage_Auth_5](/assets/images/DC_Lab_12.19._Error_Engage_Auth_5.png)
+
+
+### 3.3. Webex CC authorization not working
+
+Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the affected Webex CC node.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_1](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_1.png)
+
+The error ***desc : unauthorized, integration :Create Task, method : Create Task*** means the autorization configured in ***NODE RUNTIME AUTHORIZATION*** field of ***Create Task*** node does not work.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_2](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_2.png)
+
+Potential ways to fix the issue:
+
+1. If there is incorrect autorization selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, please select proper value from the drop-down list, save changes and make the flow live.
+
+2. If correct autorization is selected in ***NODE RUNTIME AUTHORIZATION*** field of the affected node, but it fails, please make sure proper account is still active on Control Hub. Then go to ***Assets*** -> ***Integrations*** -> ***Webex CC Task*** and select ***Manage*** from the drop-down list next to the integartion name. For example:
+
+![DC_Lab.12.19_Error_WebexCC_Auth_3](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_3.png)
+
+Then scroll down to ***Node Authorizations***, click on arrow button to expand the list and select ***Update*** from ***Actions*** list next to the affected authorization.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_4](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_4.png)
+
+Then click on ***Authorize*** button in the pop-up window and provide credentials if needed to update Webex CC authorization.
+
+![DC_Lab.12.19_Error_WebexCC_Auth_5](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_5.png)
+
+
+### 3.4. Variable does not exist or has an empty value
+
+Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. Flow debugger disaplays ***onError*** error next to the affected ***Create Task*** node.
+
+![DC_Lab.12.19_Error_No_Value_1](/assets/images/DC_Lab_12.19._Error_No_Value_1.png)
+
+The error ***desc : value is mandatory , name : task id*** means ***TASK ID*** parameter of ***Create Task*** node had no value when the node was executed. It could happen if the variable assigned to ***TASK ID*** did not exist or had an empty value. 
+To fix this issue, we need to open the configuration of ***Cretae Task*** node and check the value of ***TASK ID*** parameter. In our case there is a variable ***$(flid_na)***, which does not exist and that's why there was an empty value used when calling ***Create Task*** node. 
+
+![DC_Lab.12.19_Error_No_Value_2](/assets/images/DC_Lab_12.19._Error_No_Value_2.png)
+
+Potential ways to fix the issue:
+1. Correct variable name if it is wrong and check the value of this variable
+2. Create a variable if it does not exist and assign proper value to it
+3. \[Not a flexible approach\] Replace the variable name by exact value
+
+
+### 3.5. Variable or parameter has wrong value
+
+Here is an example where the variable or parameter of a flow node has wrong value. Flow debugger disaplays ***onAppendMessageFailure*** error next to the affected ***Append Conversation*** node.
+
+![DC_Lab.12.19_Error_Wrong_Value_1](/assets/images/DC_Lab_12.19._Error_Wrong_Value_1.png)
+
+The error ***""description":"Chat ID provided does not exist","event":"conversation-message:error","value":{"conversationId":"this-is-wrong-ID-just-for-example","aliasId":""}"*** means that ***CONVERSATION ID*** parameter of ***Append Conversation*** node has wrong value - ***"this-is-wrong-ID-just-for-example"***. Please double-click on the affected node and correct the value of ***CONVERSATION ID*** parameter to fix the issue. Then save changes and make the flow live. 
+
+![DC_Lab.12.19_Error_Wrong_Value_2](/assets/images/DC_Lab_12.19._Error_Wrong_Value_2.png)
 
 
 
