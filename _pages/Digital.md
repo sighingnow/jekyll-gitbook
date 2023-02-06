@@ -3040,9 +3040,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 -   Admin credentials to login to Webex Connect portal
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-
-<iframe src="https://app.vidcast.io/share/44d5e84f-e110-4c3b-acc6-3b482198ab53" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-
+	<iframe src="https://app.vidcast.io/share/embed/44d5e84f-e110-4c3b-acc6-3b482198ab53" width="100%" height="100%" title="Lab 20: Create Custom Nodes" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 ## Adding a Custom Node
@@ -3085,9 +3083,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 ## Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-
-<iframe src="https://app.vidcast.io/share/fe9230a8-3dfe-4177-b804-3065218a1873" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-
+	<iframe src="https://app.vidcast.io/share/embed/fe9230a8-3dfe-4177-b804-3065218a1873" width="100%" height="100%" title="Lab 20: Custom Nodes Demo" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 ![Lab12.20_CustomNodeDemo](/assets/images/Lab12.20_CustomNodeDemo.png)
@@ -3248,9 +3244,7 @@ Both variables are transferable between flows. In the second part of this lab in
 ## Fetching and Reporting Global Variable
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-
-<iframe src="https://app.vidcast.io/share/39203703-097c-4b2c-83f9-96b4c091e813" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-
+	<iframe src="https://app.vidcast.io/share/embed/39203703-097c-4b2c-83f9-96b4c091e813" width="100%" height="100%" title="Lab 22.1: Fetching GV from Webex Connect and Viewing on Agent Desktop" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 ### 1.     Login in to Webex CC administration portal
@@ -3296,11 +3290,8 @@ Both variables are transferable between flows. In the second part of this lab in
 ### 3.     Configure Analyzer to report the Global Variables configured in Webex Connect flow
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-
-<iframe src="https://app.vidcast.io/share/2b9504eb-a908-4453-9134-6fd6a0734043" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-
+	<iframe src="https://app.vidcast.io/share/embed/2b9504eb-a908-4453-9134-6fd6a0734043" width="100%" height="100%" title="Lab 22.1: Reporting GV for Digital Channels" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-
 
 -   Navigate to “Reporting and Analytics” at the left column of WxCC portal
 ![Lab12.24.1_GVThird](/assets/images/Lab12.24.1_GVThird.png)
@@ -3322,9 +3313,7 @@ Both variables are transferable between flows. In the second part of this lab in
 ## Configuring Flow Variables
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-
-<iframe src="https://app.vidcast.io/share/741c4912-2c79-453f-8cdc-2f0afa3ea4f3" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-
+	<iframe src="https://app.vidcast.io/share/embed/741c4912-2c79-453f-8cdc-2f0afa3ea4f3" width="100%" height="100%" title="Lab 22.2: Configuring Flow Variables in Digital Channels" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 ### Login in to Webex Connect portal and open your inbound chat flow
@@ -3360,9 +3349,7 @@ Both variables are transferable between flows. In the second part of this lab in
 ## Transfer Global and Flow variable values between Webex Connect flows
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-
-<iframe src="https://app.vidcast.io/share/ccecf093-f0a9-4ae3-823b-ae74b515e513" width="100%" height="100%" title="VPOP Voice Provisioning" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-
+	<iframe src="https://app.vidcast.io/share/embed/ccecf093-f0a9-4ae3-823b-ae74b515e513" width="100%" height="100%" title="Lab 22: Transfer of variables between Webex Connect flows" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 ## Lab Objective
