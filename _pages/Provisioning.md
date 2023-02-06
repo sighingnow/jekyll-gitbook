@@ -1,7 +1,7 @@
 ---
 title: Lab 0 - Provisioning
 author: Yaroslav Bondar & Abdul Iraqi
-date: 2022-01-01
+date: 2022-02-06
 layout: post
 ---
 
@@ -27,12 +27,16 @@ This video demonstrates the proces of creation Webex Contact Center Trial. To cr
 The video shows how to set up a Webex Contact Center Trial Tenant Remotely. This is not a common way of creating a trial but one of the scenarios to use this type of provisioning is when Partner administrator went on holidays and there is no one who can add a Webex Contact Center Trial to an existing customer organization. This demonstration shows how to add Webex Contact Center Trial to an existing organization by using another Partner Hub. CSM can perform a role of remote Partner Administrator.
 > **Please note, customer organization must exist. ** 
 
-<iframe width="1024" height="576" src="https://app.vidcast.io/share/07e770f8-19c2-4f65-91d2-f0809bfcb243" title="How to create Webex Contact Center Trial remotely" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/07e770f8-19c2-4f65-91d2-f0809bfcb243" width="100%" height="100%" title="Creating Webex Contact Center Trial Remotely" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 # Lab 0. Part 3: Provisioning with Creating a New Customer Organization
 This video demonstrates how to create a new Customer organization by using Provisioning email generated in Web Order.
 >**Please note: Demonstration was done on Cisco internal lab and some options will not be visible in your production environment.
 
-<iframe width="1024" height="576" src="https://app.vidcast.io/share/7003a715-79d3-47bb-b6c4-5c8802d19353" title="Provisioning with Creating a New Customer Organization" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/7003a715-79d3-47bb-b6c4-5c8802d19353" width="100%" height="100%" title="Provisioning New Webex Contact Center" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 ---
 
 
