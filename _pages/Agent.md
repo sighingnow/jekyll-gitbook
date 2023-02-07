@@ -423,8 +423,11 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 # Create custom widget & change default landing page
 
 > In this section, you will learn how to create a custom widget and how to change the default landing page in the Agent Desktop.
+
 > In this example, we are using Webex Contact Center Analyzer Report as a custom widget.
+
 > Prerequisite - You should have a Webex Contact Center Analyzer Report.
+
 > [How to create Analyzer Report on WebexCC Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -435,19 +438,16 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Open the desktop layout file with any text editor (e.g. Notepad, Sublime text).
 
-- Create another section under **_navigation_** similar to that of existing Customer Experience Analytics
+- Create another section under **_navigation_** similar to that of existing Customer Experience Analytics.
+  Check out this sample [Analyzer_iFrame_Widget.json](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/iframe-widget-sample/Analyzer_iFrame_Widget_Layout.json)
 
 - In the new section, add the **_label_** key value with your choice.
 
 - Add the **_icon_** key value with your choice.
 
-- **_navigateTo_** key value should be **_iframe-widget_**.
-
 - Add a new key **_isDefaultLandingPage_** and its value should be set as **_true_**.
 
 - **_src_** key value should be same as URL of your analyzer report.
-
-- Crea
 
 <br>
 
