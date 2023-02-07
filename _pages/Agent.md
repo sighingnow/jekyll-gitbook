@@ -342,6 +342,10 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 > Watch the following video to learn the dekstop layout customization process. After the video, you will be able to customize the Agent Desktop with a custom logo, custom title, custom widgets. Also, you willl learn how to enable/disbale standard widgets and change the default landing page in the Agent Desktop.
 
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Create a Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
 ### Download default desktop Layout
 
 - Login to **[https://portal.wxcc-us1.cisco.com](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** with admin credentials.
@@ -396,27 +400,11 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 # Reorder components of Horizontal Header
 
-- Download the **[custom JSON file](<https://raw.githubusercontent.com/wxcctechsummit/wxcclabguides/master/TechSummitRoW_2021/FlyHigh%20Desktop%20Layout%201.0(1).json>){:target="\_blank"}**.
+- Take the same custom desktop layout file that you used in the last section.
 
-- Go again to **_Desktop Layout_** module in the **[Tenant Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}**.
+- Take .
 
-- Click on **_New Layout_**.
-
-- Provide any preferable **name and description**.
-
-- Select `Team1_<ID>_TS` again as Team.
-
-- Click **_Upload_** button to upload the modified JSON file.
-
-- Click **_Save_** button to apply the layout.
-
-- Go back to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** and change the team to `Team1_<ID>_TS`.
-
-- **Explore** the new Desktop Layout, new widgets have been added.
-
-- You can play with the **sizes and distribution** of the new widgets.
-
-- This is just an example of what you can achieve with custom desktop layouts, **you can design really advance features**.
+- Take .
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 > {: .block-tip }
