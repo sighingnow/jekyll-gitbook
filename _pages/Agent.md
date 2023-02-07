@@ -428,7 +428,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 > Prerequisite - You should have a Webex Contact Center Analyzer Report.
 
-> [How to create Analyzer Report on WebexCC Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
+> [How to create Analyzer Report on Webex Contact Center Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/d6e4883a-282e-4376-8b3e-b5bf67fc6b43" width="100%" height="100%" title="Create custom widget & change default landing page" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
