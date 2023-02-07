@@ -340,7 +340,11 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 # Custom Desktop Layouts
 
-> Watch the following video to learn the dekstop layout customization process. After the video, you will be able to customize the Agent Desktop with a custom logo, custom title, custom widgets. Also, you willl learn how to enabe disbale standard widgets and change the default landing page.
+> Watch the following video to learn the dekstop layout customization process. After the video, you will be able to customize the Agent Desktop with a custom logo, custom title, custom widgets. Also, you willl learn how to enable/disbale standard widgets and change the default landing page in the Agent Desktop.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Part #1 - COMPLETE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Part #1 - COMPLETE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
