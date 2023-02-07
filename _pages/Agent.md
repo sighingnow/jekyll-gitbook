@@ -340,7 +340,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 # Custom Desktop Layout
 
-> Watch the following video to learn the dekstop layout customization process. After the video, you will be able to customize the Agent Desktop with a custom logo, custom title, custom widgets. Also, you willl learn how to enable/disbale standard widgets and change the default landing page in the Agent Desktop.
+> In this video, you will learn the dekstop layout customization process. After watching this, you will be able to customize the Agent Desktop with a custom logo, custom title. You will also learn how to enable/disbale standard widgets.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Create a Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -400,11 +400,33 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 # Reorder components of Horizontal Header
 
-- Take the same custom desktop layout file that you used in the last section.
+> In this section, you will learn how to reorder components of Horizontal Header.
 
-- Take .
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/41edcf4e-25c5-45b6-8315-4a922ee615e3" width="100%" height="100%" title="Reorder components of Horizontal Header" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-- Take .
+- Take the same desktop layout file that you used in the last section.
+
+- Open the desktop layout file with any text editor (e.g. Notepad, Sublime text).
+
+- Make sure the layout version is 0.0.7 or higher.
+
+- Under **_advancedHeader_**, change the order of components.
+
+- **_Save As_** JSON file and upload it on **[Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** against your team.
+
+- Now login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** or refresh the browser if you are already logged in.
+
+- You should be able to see the order of components in the Horizontal header as per your configuration.
+
+# Add custom widgets & change default landing page
+
+> In this section, you will learn how to add custom widgets and how to change the default landing page in the Agent Desktop.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/d6e4883a-282e-4376-8b3e-b5bf67fc6b43" width="100%" height="100%" title="Add custom widgets & change default landing page" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 > {: .block-tip }
