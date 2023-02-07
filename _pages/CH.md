@@ -10,10 +10,10 @@ layout: post
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) | Practical Lab | EASY            | 10 min           |
-| [Managment Portal User Configuration](#managment-portal-user-configuration)              | Practical Lab | EASY            | 7 min           |
-| [Bulk Configuration](#bulk-configuration)                                                | Practical Lab | EASY            | 5 min            |
-| [Access to the Agent Desktop](#part-4-access-to-the-agent-desktop)                       | Practical Lab | EASY            | 15 min            |
+| [Control Hub User Management Tasks](#control-hub-user-management-task) | Practical Lab | EASY            | 10 min           |
+| [Management Portal User Configuration](#management-portal-user-configuration)              | Practical Lab | EASY            | 5 min           |
+| [Bulk Operations](#bulk-operations)                                                | Practical Lab | EASY            | 5 min            |
+| [Access to the Agent Desktop](#access-to-the-agent-desktop)                       | Practical Lab | EASY            | 10 min            |
 
 
 ## Overview of the lab:
@@ -25,7 +25,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ### Lab Objective
 
-- This lab is designed to help you do the initial setup and configuration for your GOLD tenant and to be familiar with the control hub and admin portal UI.
+- This lab is designed to help you do the initial setup and configuration of the tenant.
 - The lab contains multiple exercises on Control Hub and Admin Portal to make you comfortable with the Webex Contact Center application.
 
 ### Pre-requisites
@@ -57,7 +57,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 | Agent         | <w class = "attendee-class">your_attendee_ID</w>_agent1@\<your domain\> | \<your assign DN\> |
 | Supervisor    | <w class = "attendee-class">your_attendee_ID</w>_supervisor1@\<your domain\> | \<your assign DN\> |
 
-> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted.
+> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted from the training tenant.
 {: .block-danger }
 
 ### 1.  Define your Attendee ID
@@ -224,7 +224,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 Example:
 ```csv
 NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
-**pod110_team2**,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
+pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 ```
 
 - Go back to the **Bulk Operations** menu and click **_Create Bulk Operations_** button again.
@@ -243,14 +243,16 @@ NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
 
 >The following video explains the process to access the Agent Desktop. Following the steps, you will log in with your credentials and indicate the number where you want to receive the calls. 
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/2bmoiAfxpTU?rel=0" title="WxCC Lab #2 Part 4: Access to the Agent Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/badf99b8-e0b5-4d14-a23e-bcacf0e4c7a3" width="100%" height="100%" title="February 07, 2023 at 5:34 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 >This tenant does not allow outbound international calls. If you have the US numbers you can use that for sign in as an agent or supervisor. Otherwise, please download the Webex App according to the steps below. 
 {: .block-warning }
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
-> **Note:** You would need two Webex app for placing a call to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **agent** account.
+> **Note:** You would need two Webex app for placing calls to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **agent** account.
 {: .block-warning }
 
 - Download the Webex app from **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="_blank"}**.
