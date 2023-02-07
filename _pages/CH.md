@@ -155,7 +155,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Site` button and provide the Name as *<w class = "attendee-class">your_attendee_ID</w>_Site*.
 
-- Select *<w class = "attendee-class">your_attendee_ID</w>_MMP* in the **_Multimedia Profile_** drop down list and hit **_Save_**.
+- Select your MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
 ### 3. Create new Team
 
@@ -163,13 +163,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Team`.
 
-- Select **<w class = "attendee-class">your_attendee_ID</w>_Site** from the _Site_ drop-down.
+- Select you site from the _Site_ drop-down.
 
 - Input _Name_ as **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
 - Use the default **_Type_** `Agent Based`.
 
-- Select **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the _Multimedia Profile_ drop-down.
+- Select your MMP in the _Multimedia Profile_ drop-down.
 
 - Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and **_Save_** the configuration.
 
@@ -181,13 +181,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on **_Contact Center Enabled_** toggle to move it to **_On_**.
 
-- In the **_Agent Settings_** section, select **<w class = "attendee-class">your_attendee_ID</w>_Site** in the **_Site_** drop-down.
+- In the **_Agent Settings_** section, select your site in the **_Site_** drop-down.
 
-- Click the **_Teams_** area and select **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
+- Click the **_Teams_** area and select your team1
 
-- Select the **_Agent-Profile_** in the **_Agent Profile_** drop-down list.
+- Select the default **_Agent-Profile_** in the **_Agent Profile_** drop-down list.
 
-- Choose **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the **_Multimedia Profile_** drop-down and hit **_Save_**.
+- Choose the **_Multimedia Profile_** and hit **_Save_**.
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
 
