@@ -338,7 +338,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
-# Custom Desktop Layouts
+# Custom Desktop Layout
 
 > Watch the following video to learn the dekstop layout customization process. After the video, you will be able to customize the Agent Desktop with a custom logo, custom title, custom widgets. Also, you willl learn how to enable/disbale standard widgets and change the default landing page in the Agent Desktop.
 
@@ -356,7 +356,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Click on **_Download_** button to download the **Default Desktop Layout.json** file.
 
-## Customize default desktop layout with logo and title & enable standard widgets
+### Customize default desktop layout with logo and title & enable standard widgets
 
 - Open the **Default Desktop Layout.json** file with any text editor (e.g. Notepad, Sublime text).
 
@@ -382,7 +382,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Click **_Save_** button to apply the layout.
 
-## Verify the new custom desktop layout
+### Verify the new custom desktop layout
 
 - Login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**.
 
@@ -398,7 +398,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Now you should be able to see the new logo, new title and will be able to access the out of box widgets i.e Webex & Custom Experience Analytics.
 
-## More advance example
+# Redorder components of Horizontal Header
 
 - Download the **[custom JSON file](<https://raw.githubusercontent.com/wxcctechsummit/wxcclabguides/master/TechSummitRoW_2021/FlyHigh%20Desktop%20Layout%201.0(1).json>){:target="\_blank"}**.
 
