@@ -10,7 +10,7 @@ layout: post
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) | Practical Lab | EASY            | 15 min           |
+| [Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) | Practical Lab | EASY            | 10 min           |
 | [Managment Portal User Configuration](#managment-portal-user-configuration)              | Practical Lab | EASY            | 7 min           |
 | [Bulk Configuration](#bulk-configuration)                                                | Practical Lab | EASY            | 5 min            |
 | [Access to the Agent Desktop](#part-4-access-to-the-agent-desktop)                       | Practical Lab | EASY            | 15 min            |
@@ -111,12 +111,14 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
 
-# Managment Portal User Configuration
+# Management Portal User Configuration
 
 > The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users. 
 
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/92ou5Yias-8?rel=0" title="WxCC Lab #1 Part 2: Admin Portal Multimedia Profile, Site and Team Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/dd077d51-a8f1-4e01-9f52-da3ce1c65cf3" width="100%" height="100%" title="February 07, 2023 at 10:22 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 | **Entity**          | **Name** |
 | ------------------- | -------- |
@@ -192,10 +194,12 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - Repeate the same steps as above for your supervisor.
 
 
-# Bulk Configuration
+# Bulk Operations
 > The following video outlines how to use the Bulk Configuration in Control Hub. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. 
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/r_A-BPhoTaA?rel=0" title="WxCC Lab #1 Part 3: Admin Portal User Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/7719cc70-28fb-4c00-a3ba-251079dd72b3" width="100%" height="100%" title="February 07, 2023 at 11:01 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 
 ### Create the second Team 
@@ -216,7 +220,12 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
-- Rename the Team1 to **<w class = "attendee-class">your_attendee_ID</w>_Team2** and save the file.
+- Rename the Team1 to **<w class = "attendee-class">your_attendee_ID</w>_Team2** and save the file. You should have only 2 rows in the file. 
+Example:
+```csv
+NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
+**pod110_team2**,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
+```
 
 - Go back to the **Bulk Operations** menu and click **_Create Bulk Operations_** button again.
 
