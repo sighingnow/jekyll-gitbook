@@ -449,6 +449,12 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - **_src_** key value should be same as URL of your analyzer report.
 
+- **_Save As_** JSON file and upload it on **[Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** against your team.
+
+- Now login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** or refresh the browser if you are already logged in.
+
+- You should be able to see the new widget you added when you login to the agent desktop as it is set as the default landing page.
+
 <br>
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
