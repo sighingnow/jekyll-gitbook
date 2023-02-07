@@ -343,32 +343,34 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 > Watch the following video to learn the dekstop layout customization process. After the video, you will be able to customize the Agent Desktop with a custom logo, custom title, custom widgets. Also, you willl learn how to enable/disbale standard widgets and change the default landing page in the Agent Desktop.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Part #1 - COMPLETE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Create a Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-## Download default desktop Layout
+### Download default desktop Layout
 
 - Login to **[https://portal.wxcc-us1.cisco.com](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** with admin credentials.
 
 - Navigate to **_Provisioning_** –> **_Desktop Layout_**.
 
-- Click on ellipses `...` of Global Layout and select **_Edit_**.
+- Click on **_New Layout_** button.
 
 - Click on **_Download_** button to download the **Default Desktop Layout.json** file.
 
-## Customize default desktop layout with logo and title
+## Customize default desktop layout with logo and title & enable standard widgets
 
-- Open the **Default Desktop Layout.json** file with any text editor (e.g. Notepad or Sublime text).
+- Open the **Default Desktop Layout.json** file with any text editor (e.g. Notepad, Sublime text).
 
 - Modify the **_appTitle_** key value with your company name in order to change Agent Desktop title.
 
 - Modify the **_logo_** key value with your company logo URL or use this **https://raw.githubusercontent.com/wxcctechsummit/holcct2100/main/labslive/CiscoLiveLogo.jpg**.
 
-- **_Save As_** the JSON file with a distinguishable name.
+- Modify the wxmConfigured and webexConfigured key values to **_true_** to enable the standard (out of box) widgets.
 
-## Upload the custom desktop layout and associate it to a team
+- **_Save As_** JSON file with a distinguishable name.
 
-- Go as admin to **_Desktop Layout_** module in the **[Tenant Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}**.
+### Upload the custom desktop layout and associate it to a team
+
+- Login as admin to **_Desktop Layout_** module in the **[Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}**.
 
 - Click on **_New Layout_**.
 
@@ -382,7 +384,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 ## Verify the new custom desktop layout
 
-- Login in the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**.
+- Login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**.
 
 - Open the **_User Profile_** and click on the arrow `>` under **_Team_**.
 
@@ -392,7 +394,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Confirm the changes by clicking on **_Change Team_**.
 
-- Wait some seconds to see the results. Now you should get a new log icon in the left upper corner.
+- Wait for few seconds to see the results.
+
+- Now you should be able to see the new logo, new title and will be able to access the out of box widgets i.e Webex & Custom Experience Analytics.
 
 ## More advance example
 
