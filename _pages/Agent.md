@@ -420,13 +420,21 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - You should be able to see the order of components in the Horizontal header as per your configuration.
 
-# Add custom widgets & change default landing page
+# Create custom widget & change default landing page
 
-> In this section, you will learn how to add custom widgets and how to change the default landing page in the Agent Desktop.
+> In this section, you will learn how to create a custom widget and how to change the default landing page in the Agent Desktop.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/d6e4883a-282e-4376-8b3e-b5bf67fc6b43" width="100%" height="100%" title="Add custom widgets & change default landing page" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/d6e4883a-282e-4376-8b3e-b5bf67fc6b43" width="100%" height="100%" title="Create custom widget & change default landing page" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
+
+- Take the same desktop layout file that you used in the last section.
+
+- Open the desktop layout file with any text editor (e.g. Notepad, Sublime text).
+
+- Make sure the layout version is 0.0.7 or higher.
+
+<br>
 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 > {: .block-tip }
