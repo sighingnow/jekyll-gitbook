@@ -490,7 +490,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
 2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
-3. Zendesk instance. For the details, refer the next section [Start Zendesk Trial](#Optional-Start-Zendesk-Trial).
+3. Zendesk instance. For the details, refer the next section [Start Zendesk Trial](#optional-start-zendesk-trial).
 4. Access to the [Webex Contact Center Desktop Layout for Zendesk](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Zendesk) JSON.
 5. Lab 2 (IVR Contact Routing) completed.
 
