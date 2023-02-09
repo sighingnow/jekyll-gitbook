@@ -198,7 +198,9 @@ WxM admin | wxmdemoadmin | Login@123
 >Disclaimer: The look and feel, and even certain functionalities, at the time of release, may differ from what is shown in this short preview, as the feature is still under development.
 {: .block-warning }
 
-<iframe src="https://app.vidcast.io/share/embed/eafc4ea3-e5a2-4075-a83c-29da713631c3" width="1024" height="576" title="Post Interaction Surveys using Digital Channels" frameborder="0" loading="lazy" allowfullscreen ></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/eafc4ea3-e5a2-4075-a83c-29da713631c3" width="100%" height="100%" title="February 06, 2023 at 4:59 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ---
 

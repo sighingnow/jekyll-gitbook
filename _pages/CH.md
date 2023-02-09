@@ -10,10 +10,10 @@ layout: post
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Admin Task](#part-1-control-hub-user-management-admin-task) | Practical Lab | EASY            | 15 min           |
-| [Managment Portal User Configuration](#managment-portal-user-configuration)              | Practical Lab | EASY            | 7 min           |
-| [Bulk Configuration](#bulk-configuration)                                                | Practical Lab | EASY            | 5 min            |
-| [Access to the Agent Desktop](#part-4-access-to-the-agent-desktop)                       | Practical Lab | EASY            | 15 min            |
+| [Control Hub User Management Tasks](#control-hub-user-management-task) | Practical Lab | EASY            | 10 min           |
+| [Management Portal User Configuration](#management-portal-user-configuration)              | Practical Lab | EASY            | 5 min           |
+| [Bulk Operations](#bulk-operations)                                                | Practical Lab | EASY            | 5 min            |
+| [Access to the Agent Desktop](#access-to-the-agent-desktop)                       | Practical Lab | EASY            | 10 min            |
 
 
 ## Overview of the lab:
@@ -25,7 +25,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ### Lab Objective
 
-- This lab is designed to help you do the initial setup and configuration for your GOLD tenant and to be familiar with the control hub and admin portal UI.
+- This lab is designed to help you do the initial setup and configuration of the tenant.
 - The lab contains multiple exercises on Control Hub and Admin Portal to make you comfortable with the Webex Contact Center application.
 
 ### Pre-requisites
@@ -48,15 +48,16 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles. 
 
-
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/0p37TL5wtCY?rel=0" title="WxCC Lab #1 Part 1: Control Hub User Management Admin Task" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/715d21da-91cf-4890-82c9-c60da5c5e883" width="100%" height="100%" title="February 06, 2023 at 4:59 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 | **User Role** | **User email**                                                          | **User Extension** |
 | ------------- | ----------------------------------------------------------------------- | ------------------ |
 | Agent         | <w class = "attendee-class">your_attendee_ID</w>_agent1@\<your domain\> | \<your assign DN\> |
 | Supervisor    | <w class = "attendee-class">your_attendee_ID</w>_supervisor1@\<your domain\> | \<your assign DN\> |
 
-> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted.
+> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted from the training tenant.
 {: .block-danger }
 
 ### 1.  Define your Attendee ID
@@ -70,7 +71,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <script src="/assets/gitbook/form.js"></script>
 
 
->**NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can use a sub prefix with the number. Ex: _attendeeID**1**_agent1, attendeeID**2**_agent1, etc._
+>**NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel with you. In that case, the **Attendee ID** is the same for all of you, but you can use the different number in the end as the suffix. Ex: _attendeeID_agent**1**, attendeeID_agent**2**, attendeeID_agent**3**, etc._
 {: .block-tip }
 	
 ### 2.  Add agent and supervisor users and set the calling extensions
@@ -110,12 +111,14 @@ In this Lab, we will go through the tasks that are required to complete the gene
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
 
-# Managment Portal User Configuration
+# Management Portal User Configuration
 
 > The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users. 
 
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/92ou5Yias-8?rel=0" title="WxCC Lab #1 Part 2: Admin Portal Multimedia Profile, Site and Team Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/dd077d51-a8f1-4e01-9f52-da3ce1c65cf3" width="100%" height="100%" title="February 07, 2023 at 10:22 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 | **Entity**          | **Name** |
 | ------------------- | -------- |
@@ -152,7 +155,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Site` button and provide the Name as *<w class = "attendee-class">your_attendee_ID</w>_Site*.
 
-- Select *<w class = "attendee-class">your_attendee_ID</w>_MMP* in the **_Multimedia Profile_** drop down list and hit **_Save_**.
+- Select your MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
 ### 3. Create new Team
 
@@ -160,13 +163,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Team`.
 
-- Select **<w class = "attendee-class">your_attendee_ID</w>_Site** from the _Site_ drop-down.
+- Select you site from the _Site_ drop-down.
 
 - Input _Name_ as **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
 - Use the default **_Type_** `Agent Based`.
 
-- Select **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the _Multimedia Profile_ drop-down.
+- Select your MMP in the _Multimedia Profile_ drop-down.
 
 - Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and **_Save_** the configuration.
 
@@ -178,23 +181,25 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on **_Contact Center Enabled_** toggle to move it to **_On_**.
 
-- In the **_Agent Settings_** section, select **<w class = "attendee-class">your_attendee_ID</w>_Site** in the **_Site_** drop-down.
+- In the **_Agent Settings_** section, select your site in the **_Site_** drop-down.
 
-- Click the **_Teams_** area and select **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
+- Click the **_Teams_** area and select your team1
 
-- Select the **_Agent-Profile_** in the **_Agent Profile_** drop-down list.
+- Select the default **_Agent-Profile_** in the **_Agent Profile_** drop-down list.
 
-- Choose **<w class = "attendee-class">your_attendee_ID</w>_MMP** in the **_Multimedia Profile_** drop-down and hit **_Save_**.
+- Choose the **_Multimedia Profile_** and hit **_Save_**.
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
 
 - Repeate the same steps as above for your supervisor.
 
 
-# Bulk Configuration
+# Bulk Operations
 > The following video outlines how to use the Bulk Configuration in Control Hub. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. 
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/r_A-BPhoTaA?rel=0" title="WxCC Lab #1 Part 3: Admin Portal User Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/7719cc70-28fb-4c00-a3ba-251079dd72b3" width="100%" height="100%" title="February 07, 2023 at 11:01 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 
 ### Create the second Team 
@@ -215,7 +220,12 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class = "attendee-class">your_attendee_ID</w>_Team1**.
 
-- Rename the Team1 to **<w class = "attendee-class">your_attendee_ID</w>_Team2** and save the file.
+- Rename the Team1 to **<w class = "attendee-class">your_attendee_ID</w>_Team2** and save the file. You should have only 2 rows in the file. 
+Example:
+```csv
+NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
+pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
+```
 
 - Go back to the **Bulk Operations** menu and click **_Create Bulk Operations_** button again.
 
@@ -233,14 +243,16 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 >The following video explains the process to access the Agent Desktop. Following the steps, you will log in with your credentials and indicate the number where you want to receive the calls. 
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/2bmoiAfxpTU?rel=0" title="WxCC Lab #2 Part 4: Access to the Agent Desktop" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/badf99b8-e0b5-4d14-a23e-bcacf0e4c7a3" width="100%" height="100%" title="February 07, 2023 at 5:34 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 >This tenant does not allow outbound international calls. If you have the US numbers you can use that for sign in as an agent or supervisor. Otherwise, please download the Webex App according to the steps below. 
 {: .block-warning }
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
-> **Note:** You would need two Webex app for placing a call to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **agent** account.
+> **Note:** You would need two Webex app for placing calls to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **agent** account.
 {: .block-warning }
 
 - Download the Webex app from **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="_blank"}**.

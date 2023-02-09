@@ -3252,6 +3252,8 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 	<iframe src="https://app.vidcast.io/share/embed/fe9230a8-3dfe-4177-b804-3065218a1873" width="100%" height="100%" title="Lab 20: Custom Nodes Demo" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
+**Note**: The ppt presented in the video has an error. The HTTP Request to Webhook is a POST request. Please refer to the diagram below.
+
 ![Lab12.20_CustomNodeDemo](/assets/images/Lab12.20_CustomNodeDemo.png)
 
 
