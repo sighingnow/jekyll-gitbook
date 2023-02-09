@@ -14,14 +14,14 @@ This page is under developments
 | [Engage GUI overview](#lab123---Engage-GUI-overview) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---User–Management-in-Connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
 | [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Practical Lab | EASY            | 20 min           |
-| [Flow Builder](#lab126---Flow-Builder) | Read & Understand | EASY            | 15 min           |
-| [Email Channel Configuration](#lab127---Email-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
+| [Flow Builder](#lab126---Flow-Builder) | Read & Understand | EASY            | 20 min           |
+| [Email Channel Configuration](#lab127---Email-Channel-Configuration) | Practical Lab | EASY            | 25 min           |
 | [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 15 min           |
 | [Facebook Messenger Channel Configuration](#lab129---Facebook-Messenger-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
 | [SMS Channel Configuration](#lab1210---SMS-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
 | [WhatsApp Channel Configuration](#lab1211---WhatsApp-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
-| [Connect Templates](#lab1212---connect-templates) | Practical Lab | EASY            | 15 min           |
-| [Engage Templates](#lab1213---engage-templates) | Practical Lab | EASY            | 15 min           |
+| [Connect Templates](#lab1212---connect-templates) | Read & Understand | EASY            | 20 min           |
+| [Engage Templates](#lab1213---engage-templates) | Read & Understand | EASY            | 25 min           |
 | [Introduction to BOTs](#lab1214---) | Read & Understand | MED            | 20 min           |
 | [Q&A BOTs](#lab1215---Q&A-BOTs) | Practical Lab | MED            | 15 min           |
 | [Task BOTs](#lab1216---Task-BOTs) | Practical Lab | HARD            | 30 min           |
@@ -586,7 +586,7 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Understanding Connect Flows](Understanding-Connect-Flows)                       | Read & Understand         | EASY                | 15 min                 |
+| [Understanding Connect Flows](Understanding-Connect-Flows)                       | Read & Understand         | EASY                | 20 min                 |
 
 ## Introduction
 
