@@ -14,23 +14,23 @@ This page is under developments
 | [Engage GUI overview](#lab123---Engage-GUI-overview) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---User–Management-in-Connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
 | [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Practical Lab | EASY            | 20 min           |
-| [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
-| [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
+| [Flow Builder](#lab126---Flow-Builder) | Read & Understand | EASY            | 15 min           |
+| [Email Channel Configuration](#lab127---Email-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
 | [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 15 min           |
-| [Facebook Messenger Channel Configuration](#lab129---) | Practical Lab | EASY            | 15 min           |
-| [SMS Channel Configuration](#lab1210---) | Practical Lab | EASY            | 15 min           |
-| [WhatsApp Channel Configuration](#lab1211---) | Practical Lab | EASY            | 15 min           |
+| [Facebook Messenger Channel Configuration](#lab129---Facebook-Messenger-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
+| [SMS Channel Configuration](#lab1210---SMS-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
+| [WhatsApp Channel Configuration](#lab1211---WhatsApp-Channel-Configuration) | Practical Lab | EASY            | 15 min           |
 | [Connect Templates](#lab1212---connect-templates) | Practical Lab | EASY            | 15 min           |
 | [Engage Templates](#lab1213---engage-templates) | Practical Lab | EASY            | 15 min           |
 | [Introduction to BOTs](#lab1214---) | Read & Understand | MED            | 20 min           |
-| [Q&A BOTs](#lab1215---) | Practical Lab | MED            | 15 min           |
-| [Task BOTs](#lab1216---) | Practical Lab | HARD            | 30 min           |
-| [Event Scheduler](#lab1217---) | Read & Understand | MED            | 15 min           |
-| [Inbound Webhooks](#lab1218---) | Practical Lab | HARD            | 15 min           |
+| [Q&A BOTs](#lab1215---Q&A-BOTs) | Practical Lab | MED            | 15 min           |
+| [Task BOTs](#lab1216---Task-BOTs) | Practical Lab | HARD            | 30 min           |
+| [Event Scheduler](#lab1217---Event-Scheduler) | Read & Understand | MED            | 15 min           |
+| [Inbound Webhooks](#lab1218---Inbound-Webhooks) | Practical Lab | HARD            | 15 min           |
 | [Troubleshooting](#lab1219---troubleshooting) | Practical Lab | MED            | 15 min           |
-| [Custom Nodes](#lab1220---) | Practical Lab | HARD            | 15 min           |
-| [Events and Triggers](#lab1221---) | Practical Lab | MED            | 15 min           |
-| [Flow and Global variables](#lab1222---) | Practical Lab | MED            | 15 min           |
+| [Creating Custom Nodes](#lab1220---Creating-Custom-Nodes) | Practical Lab | HARD            | 15 min           |
+| [Events and Triggers](#lab1221---Event-and-Triggers) | Practical Lab | MED            | 15 min           |
+| [Global and Flow variable support in Digital channels](#lab1222---Global-and-Flow–variable–support–in-Digital-channels) | Practical Lab | MED            | 15 min           |
 
 
 
