@@ -496,7 +496,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Optional: Start Zendesk Trial
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/nhTgM2OQQCY?rel=0" title="CRM Integration Lab: Start Zendesk Trial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+    <iframe src="https://app.vidcast.io/share/embed/df78bfe5-195d-48c3-bb82-4cf4346ecf33" width="100%" height="100%" title="Start Zendesk Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 <br/>
 
