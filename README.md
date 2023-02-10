@@ -25,7 +25,7 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab 9  |       [Outbound Campaign - Acqueon](/pages/Acqueon/)        |    MID    |  30 min   |
 | Lab 10 |            [QM/WFO - Calabrio](/pages/Calabrio/)            |    MID    |  30 min   |
 | Lab 11 |                [Webex CC APIs](/pages/API/)                 |   HARD    |  90 min   |
-| Lab 12 |             [Digital Channels](/pages/Digital/)             |    MID    |  420 min  |
+| Lab 12 |             [Digital Channels](/pages/Digital/)             |    MID    |  555 min  |
 
 
 
