@@ -5,7 +5,6 @@ date: 2022-12-12
 layout: post 
 ---
 
-This page is under developments
 
 | Topic                                                                                                                        | Lab Type          | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
@@ -30,7 +29,7 @@ This page is under developments
 | [Troubleshooting](#lab1219---troubleshooting) | Practical Lab | MED            | 60 min           |
 | [Creating Custom Nodes](#lab1220---Creating-Custom-Nodes) | Practical Lab | MED            | 30 min           |
 | [Events and Triggers](#lab1221---Event-and-Triggers) | Practical Lab | MED            | 30 min           |
-| [Global and Flow variable support in Digital channels](#lab1222---Global-and-Flow–variable–support–in-Digital-channels) | Practical Lab | MED            | 15 min           |
+| [Global and Flow variable support in Digital channels](#lab1222---Global-and-Flow–variable–support–in-Digital-channels) | Practical Lab | MED            | 45 min           |
 
 
 
