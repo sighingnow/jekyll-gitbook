@@ -52,13 +52,14 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - [Optional: Start Zendesk Trial](#optional-start-zendesk-trial)
 - [Part 1: Install Webex Contact Center application on Zendesk instance](#part-1-install-webex-contact-center-application-on-zendesk-instance)
-  - [1. Install Webex Contact Center application for Zendesk from Marketplace](#1-install-webex-contact-center-application-for-zendesk-from-marketplace)
+  - [Install Webex Contact Center application for Zendesk from Marketplace](#install-webex-contact-center-application-for-zendesk-from-marketplace)
 - [Part 2: Configure Webex Contact Center tenant and Zendesk instance](#part-2-configure-webex-contact-center-tenant-and-zendesk-instance)
-  - [2. Create Custom Desktop Layout for Zendesk](#2-create-desktop-layout-for-zendesk)
-  - [3. Create new Customer in Zendesk](#3-create-new-customer-in-zendesk)
+  - [Create Custom Desktop Layout for Zendesk](#create-custom-desktop-layout-for-zendesk)
+  - [Create new Customer in Zendesk](#create-new-customer-in-zendesk)
 - [Part 3: Test Webex Contact Center Agent Desktop for Zendesk](#part-3-test-webex-contact-center-agent-desktop-for-zendesk)
-  - [4. Sign into Webex Contact Center for Zendesk](#4-sign-into-webex-contact-center-for-zendesk)
-  - [5. Make inbound test calls](#5-make-inbound-test-calls)
+  - [Sign into Webex Contact Center for Zendesk](#sign-into-webex-contact-center-for-zendesk)
+  - [Make inbound test call from a number registered in Zendesk CRM](#a-make-inbound-test-call-from-a-number-registered-in-zendesk-crm)
+  - [Make inbound test call from a number NOT registered in Zendesk CRM](#b-make-inbound-test-call-from-a-number-not-registered-in-zendesk-crm)
 
 # 6.1 Salesforce integration
 
@@ -642,7 +643,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click on "Views" icon on the vertical menu bar on the left. You should be able to see both the tickets created after making the test calls.
 
-> **Note:** For Custom Desktop Layout Configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
+> **Note:** For Custom Desktop Layout configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
 
 ---
 
