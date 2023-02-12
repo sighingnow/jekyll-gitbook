@@ -534,9 +534,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 1: Install Webex Contact Center application on Zendesk instance
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/gxQtY3OC97w?rel=0" title="CRM Integration Lab: Install Cisco Webex Contact Center application for Zendesk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/5f58f249-f316-4ec3-9d98-2be79781d2e3" width="100%" height="100%" title="Install Webex Contact Center application on Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 1. Install Webex Contact Center application for Zendesk from Marketplace
+### Install Webex Contact Center application for Zendesk from Marketplace
 
 - Sign into your Zendesk instance. URL should have format - **https://< your-zendesk-subdomain >.zendesk.com**
   (This is the same page where you were at the end of last section)
@@ -558,9 +560,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 2: Configure Webex Contact Center tenant and Zendesk instance
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/OJp6-lKnDX4?rel=0" title="CRM Integration Lab: Configure Webex Contact Center tenant and Zendesk instance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/1dc62037-6473-4a65-9686-57d65a02a123" width="100%" height="100%" title="Configure Webex Contact Center tenant and Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 2. Create Custom Desktop Layout for Zendesk
+### Create Custom Desktop Layout for Zendesk
 
 - Navigate to [Zendesk Layout](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Zendesk) GitHub page.
 
@@ -578,11 +582,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Press **Save** to create the layout. Once layout is created make sure it is "Active".
 
-### 3. Create new Customer in Zendesk
+### Create new Customer in Zendesk
 
 - In Zendesk instance, click on "Customers" icon in the vertical menu bar on the left.
 
-- Click on **+Add customer** button. Provide the Customer Name and Email ID (optional) and press **Add** button.
+- Click on **Add customer** button. Provide the Customer Name and Email ID (optional) and press **Add** button.
 
 - Customer will be created and its info page will be opened. Click on **+add contact** link on the left side and enter the calling number which you will use to make test call to Webex Contact Center.
 
@@ -590,13 +594,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 3: Test Webex Contact Center Agent Desktop for Zendesk
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/9-TmtxanubU?rel=0" title="CRM Integration Lab: Test Webex Contact Center Agent Desktop for Zendesk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 4. Sign into Webex Contact Center for Zendesk
+### Sign into Webex Contact Center for Zendesk
 
 - Sign into your Zendesk instance.
 
-- Click on Webex icon (grey square with Webex logo inside) at the top right corner of Zendesk window to launch agent desktop.
+- Click on Webex icon (grey square with Webex logo inside) at the top right corner of Zendesk window to launch embedded agent desktop in the CRM.
 
 - Press **Sign In** button within "Webex Contact Center" app and provide agent credentials in the new browser tab.
 
@@ -606,7 +608,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Make the agent "Available" by selecting corresponding state.
 
-### 5. Make inbound test calls
+### a. Make inbound test call from a number registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/0bd7c450-020c-4187-b06f-b152ca8595e3" width="100%" height="100%" title="Call Test Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Initiate a call from the calling number which should be the same as the phone number of Zendesk customer created in the previous part of this lab.
 
@@ -616,7 +622,13 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Now hang up and wrap-up the call.
 
-- The ticket that was created at the start of the call will be updated with call details.
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
+
+### b. Make inbound test call from a number NOT registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b5e6a197-5389-4e35-93ba-418f5a5656d3" width="100%" height="100%" title="Call Test Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Initiate one more call from the calling number which does not match any customer in Zendesk and compare the behavior.
 
@@ -626,7 +638,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Now hang up and wrap-up the call.
 
-- The ticket that was created at the start of the call will be updated with call details.
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
 
 - Click on "Views" icon on the vertical menu bar on the left. You should be able to see both the tickets created after making the test calls.
 
