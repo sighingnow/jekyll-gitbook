@@ -50,6 +50,9 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
    - Simple flow configured and making a call tested
    - Global variables created as Agent Editable
 
+4. For Part 3 - Custom Desktop Layour, you should have a Webex Contact Center Analyzer Report. You can use the Stock Reports created by default or use your own custom Reports
+	> [How to create Analyzer Report on Webex Contact Center Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
+
 ### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
@@ -58,8 +61,9 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 ## Lab Section
 
+> 
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
-> {: .block-tip }
+{: .block-tip }
 
 <div class="alert"></div>
 <form id="attendee-form">
@@ -71,9 +75,6 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 # Agent Desktop Overview
 
-> Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
-> {: .block-tip }
-
 ## Station Login
 
 - In order to access to the Agent Desktop you can do it either via the Management Portal (Desktop module) or navigating to the direct URL: https://desktop.wxcc-<DC\>.cisco.com/
@@ -84,7 +85,6 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
   - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
   - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
 
-<br>
 - They can choose between Dial Number or Extension
 	- Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
 
@@ -98,7 +98,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 - Be aware that agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
 > The video below shows a demo about the agent login process and the available options.
-> {: .block-tip }
+{: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -107,12 +107,12 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 ## Agent Desktop Interface
 
 > Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it.
-> {: .block-tip }
+{: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/dc341488-94ab-4659-8951-4b4ba1412373" width="100%" height="100%" title="Agent Desktop Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-
+<br>
 ![Image1](/assets/images/AgentDesktopOverview.png)
 
 The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
@@ -132,12 +132,12 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Calls Handling
 
 > In the following video you will see how to handle incoming calls and what are the different agent states.
-> {: .block-tip }
+{: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/f5a79811-eb60-4925-b11a-a8586760a3d3" width="100%" height="100%" title="Calls Handling" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-
+<br>
 #### Agent states:
 
 - **Available**: Indicates that you are ready to accept and respond to contact requests that are routed to you. After you sign in, you must select Available from the drop-down list to accept voice call, chat, email, and social messaging conversation requests.
@@ -190,15 +190,15 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 | Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
 
 > **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your _attendeeID_ is provided in the email in the **"Attendee ID"** line.
-> {: .block-warning }
+{: .block-warning }
 
 > Be aware that all entities that don't match with attendee IDs will be deleted
-> {: .block-warning }
+{: .block-warning }
 
 ## Testing Incoming call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
-> {: .block-tip }
+{: .block-tip }
 
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
@@ -241,8 +241,8 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
 
 > For this part, you will need a third calling device for interacting as aSupervisor
-> {: .block-warning }
-
+{: .block-warning }
+<br>
 - Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
   - In a separate device (you mobile phone for example), login in Webex App with your _Supervisor_ user
   - Place the call from the third calling endpoint (your personal phone for example)
@@ -251,12 +251,12 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Exploring User Profile
 
 > In this section, we will explore what are the available options and settings under the User Profile
-> {: .block-tip }
+{: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/149fe8d1-c27e-4c7e-a0b9-af072487c543" width="100%" height="100%" title="User Profile" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-
+<br>
 - First, we will see how to change from one team to another one
   - In order to notice some difference when we make the Team change, we need to modify some setting from _your Team 2_ (created in Lab 1) . For that, we will assign a different **Multimedia Profile** to that team.
 
@@ -264,13 +264,13 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Navigate to the _Management Portal > Provisioning > Teams_
 	- Find _your Team 2_ and click on `Edit`
 	- Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied. 
-	- Change the **Multimedia Profile** of the team from `<w class = "attendee-class">attendeeID</w>\_MMP` to `Default_Telephony_Profile`
+	- Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP` to `Default_Telephony_Profile
 
 <br>
-- Now, login in the **Agent Desktop** selecting `<w class = "attendee-class">attendeeID</w>\_team1`
+- Now, login in the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
 	- Open _your User Profile_ and check that the **Channel Capacity**
 	- Now, click on _your Team_, you will see a dropdown list with other available Teams
-	- Click on `<w class = "attendee-class">attendeeID</w>\_team2` 
+	- Click on <w class = "attendee-class">attendeeID</w>\_team2 
 	- **`Save Team Selection`** to confirm that you want to change a team
 
 <br>
@@ -288,26 +288,26 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 ## Outdial
 
 > In this section, we will test Outdial calls using different Outdial ANIs and Address Books
-> {: .block-tip }
+{: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/df20ad39-55db-4c8c-a268-bcd4818fe1f3" width="100%" height="100%" title="Outdial Call" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-
+<br>
 - Navigate to _Management Portal > Provisioning > Outdial ANI_
   - Click on **`New Outdial ANI`**
-  - Name: `<w class = "attendee-class">_attendeeID_</w>\_outdialANI`
+  - Name: <w class = "attendee-class">_attendeeID_</w>\_outdialANI
   - Add Outdial ANI entry
-    - Name: `<w class = "attendee-class">_attendeeID_</w>\_outdialANIEntry1`
+    - Name: <w class = "attendee-class">_attendeeID_</w>\_outdialANIEntry1
     - Number: Select your mapped DN
 
 <br>
 - Navigate to _Management Portal > Provisioning > Address Book_
 	- Click on **`New Address Book`**
-	- Name: `<w class = "attendee-class">_attendeeID_</w>\_addressBook`
+	- Name: <w class = "attendee-class">_attendeeID_</w>\_addressBook
 	- Parent Type: **`Site`**
 	- Add Address Book entries
-		- Naming: `<w class = "attendee-class">_attendeeID_</w>\_addressBookEntry1`
+		- Name: <w class = "attendee-class">_attendeeID_</w>\_addressBookEntry1
 		- Only US numbers are supported. For example: +18662293239 (Cisco Helpdesk)
 
 <br>
@@ -320,7 +320,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 	- Check what is the **Default Outdial ANI**
 
 > **This is a required setting at tenant level, so PLEASE DON'T EDIT IT**
-> {: .block-tip }
+{: .block-danger }
 
 <br>
 - Now, login in the **Agent Desktop** with _your Agent1_ and using the Webex Extension
@@ -340,12 +340,17 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 # Custom Desktop Layout
 
+## Basics about Custom Desktop Layouts
+
 > In this video, you will learn the dekstop layout customization process. After watching this, you will be able to customize the Agent Desktop with a custom logo, custom title. You will also learn how to enable/disbale standard widgets.
+{: .block-tip }
+
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/de0e97f2-d0bc-447a-b326-93ccbf190203" width="100%" height="100%" title="Create a Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
+<br>
 ### Download default desktop Layout
 
 - Login to **[https://portal.wxcc-us1.cisco.com](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** with admin credentials.
@@ -367,28 +372,28 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Modify the wxmConfigured and webexConfigured key values to **_true_** to enable the standard (out of box) widgets.
 
 - **_Save As_** JSON file with a distinguishable name.
-
+<br>
 ### Upload the custom desktop layout and associate it to a team
 
 - Login as admin to **_Desktop Layout_** module in the **[Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}**.
 
 - Click on **_New Layout_**.
 
-- Provide the following **name**: `CustomDesktopLayout_<ID>_TS`. Your \<ID\> is provided in the email in the **"Attendee ID"** line.
+- Provide the following **name**: <w class = "attendee-class">_attendeeID_</w>\_desktopLayout
 
-- Select `Team2_<ID>_TS` as Team.
+- Select <w class = "attendee-class">_attendeeID_</w>\_team2 as Team.
 
 - Click **_Upload_** button to upload the modified JSON file.
 
 - Click **_Save_** button to apply the layout.
-
+<br>
 ### Verify the new custom desktop layout
 
 - Login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**.
 
 - Open the **_User Profile_** and click on the arrow `>` under **_Team_**.
 
-- Change the team of the agent to `Team2_<ID>_TS`.
+- Change the team of the agent to <w class = "attendee-class">_attendeeID_</w>\_team2
 
 - Click on **_Save Team Selection_**.
 
@@ -397,10 +402,12 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Wait for few seconds to see the results.
 
 - Now you should be able to see the new logo, new title and will be able to access the out of box widgets i.e Webex & Custom Experience Analytics.
-
-# Reorder components of Horizontal Header
+<br>
+## Reorder components of Horizontal Header
 
 > In this section, you will learn how to reorder components of Horizontal Header.
+{: .block-tip }
+
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/41edcf4e-25c5-45b6-8315-4a922ee615e3" width="100%" height="100%" title="Reorder components of Horizontal Header" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -419,16 +426,15 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Now login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** or refresh the browser if you are already logged in.
 
 - You should be able to see the order of components in the Horizontal header as per your configuration.
-
-# Create custom widget & change default landing page
+<br>
+## Create custom widget & change default landing page
 
 > In this section, you will learn how to create a custom widget and how to change the default landing page in the Agent Desktop.
+{: .block-tip }
 
 > In this example, we are using Webex Contact Center Analyzer Report as a custom widget.
+{: .block-tip }
 
-> Prerequisite - You should have a Webex Contact Center Analyzer Report.
-
-> [How to create Analyzer Report on Webex Contact Center Analyzer](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/iframe-widget-sample)
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/d6e4883a-282e-4376-8b3e-b5bf67fc6b43" width="100%" height="100%" title="Create custom widget & change default landing page" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -439,7 +445,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Open the desktop layout file with any text editor (e.g. Notepad, Sublime text).
 
 - Create another section under **_navigation_** similar to that of existing Customer Experience Analytics.
-  Check out this sample [Analyzer_iFrame_Widget.json](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/iframe-widget-sample/Analyzer_iFrame_Widget_Layout.json)
+  > Check out this sample [Analyzer_iFrame_Widget.json](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/iframe-widget-sample/Analyzer_iFrame_Widget_Layout.json)
 
 - In the new section, add the **_label_** key value with your choice.
 
@@ -456,9 +462,6 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - You should be able to see the new widget you added when you login to the agent desktop as it is set as the default landing page.
 
 <br>
-
-> Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
-> {: .block-tip }
 
 ---
 

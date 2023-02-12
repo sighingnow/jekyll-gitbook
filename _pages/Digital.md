@@ -5,7 +5,6 @@ date: 2022-12-12
 layout: post 
 ---
 
-This page is under developments
 
 | Topic                                                                                                                        | Lab Type          | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
@@ -14,23 +13,23 @@ This page is under developments
 | [Engage GUI overview](#lab123---Engage-GUI-overview) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---User–Management-in-Connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
 | [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Practical Lab | EASY            | 20 min           |
-| [Flow Builder](#lab126---) | Read & Understand | EASY            | 15 min           |
-| [Email Channel Configuration](#lab127---) | Practical Lab | EASY            | 15 min           |
-| [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 15 min           |
-| [Facebook Messenger Channel Configuration](#lab129---) | Practical Lab | EASY            | 15 min           |
-| [SMS Channel Configuration](#lab1210---) | Practical Lab | EASY            | 15 min           |
-| [WhatsApp Channel Configuration](#lab1211---) | Practical Lab | EASY            | 15 min           |
-| [Connect Templates](#lab1212---connect-templates) | Practical Lab | EASY            | 15 min           |
-| [Engage Templates](#lab1213---engage-templates) | Practical Lab | EASY            | 15 min           |
+| [Flow Builder](#lab126---Flow-Builder) | Read & Understand | EASY            | 20 min           |
+| [Email Channel Configuration](#lab127---Email-Channel-Configuration) | Practical Lab | EASY            | 25 min           |
+| [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 30 min           |
+| [Facebook Messenger Channel Configuration](#lab129---Facebook-Messenger-Channel-Configuration) | Practical Lab | EASY            | 25 min           |
+| [SMS Channel Configuration](#lab1210---SMS-Channel-Configuration) | Practical Lab | EASY            | 20 min           |
+| [WhatsApp Channel Configuration](#lab1211---WhatsApp-Channel-Configuration) | Practical Lab | EASY            | 25 min           |
+| [Connect Templates](#lab1212---connect-templates) | Read & Understand | EASY            | 20 min           |
+| [Engage Templates](#lab1213---engage-templates) | Read & Understand | EASY            | 25 min           |
 | [Introduction to BOTs](#lab1214---) | Read & Understand | MED            | 20 min           |
-| [Q&A BOTs](#lab1215---) | Practical Lab | MED            | 15 min           |
-| [Task BOTs](#lab1216---) | Practical Lab | HARD            | 30 min           |
-| [Event Scheduler](#lab1217---) | Read & Understand | MED            | 15 min           |
-| [Inbound Webhooks](#lab1218---) | Practical Lab | HARD            | 15 min           |
-| [Troubleshooting](#lab1219---troubleshooting) | Practical Lab | MED            | 15 min           |
-| [Custom Nodes](#lab1220---) | Practical Lab | HARD            | 15 min           |
-| [Events and Triggers](#lab1221---) | Practical Lab | MED            | 15 min           |
-| [Flow and Global variables](#lab1222---) | Practical Lab | MED            | 15 min           |
+| [Q&A BOTs](#lab1215---Q&A-BOTs) | Practical Lab | MED            | 25 min           |
+| [Task BOTs](#lab1216---Task-BOTs) | Practical Lab | HARD            | 30 min           |
+| [Event Scheduler](#lab1217---Event-Scheduler) | Read & Understand | MED            | 15 min           |
+| [Inbound Webhooks](#lab1218---Inbound-Webhooks) | Practical Lab | HARD            | 35 min           |
+| [Troubleshooting](#lab1219---troubleshooting) | Practical Lab | MED            | 60 min           |
+| [Creating Custom Nodes](#lab1220---Creating-Custom-Nodes) | Practical Lab | MED            | 30 min           |
+| [Events and Triggers](#lab1221---Event-and-Triggers) | Practical Lab | MED            | 30 min           |
+| [Global and Flow variable support in Digital channels](#lab1222---Global-and-Flow–variable–support–in-Digital-channels) | Practical Lab | MED            | 45 min           |
 
 
 
@@ -155,6 +154,10 @@ Move your mouse pointer on each icon of the menu to see its name and the availab
 
 This is the introduction video. It walks through the menu items and explains the purposes of each tab.
 
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/4706e810-fe23-4176-88ba-dd027cc91593" width="100%" height="100%" title="WxConnect.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
 #### **1. Services**
 
 Services are containers for all the flows the administrator will typically configure to orchestrate and route incoming messages from customers to agents. The administrators can create, name and arrange Services following their preferences.
@@ -258,6 +261,10 @@ Move your mouse pointer on each icon of the menu to see its name and the availab
 Within Engage not all the options in the menus are required to be known and used: this lab will cover the commonly used settings.      
 
 This is the introduction video. It walks through the menu items and explains the purposes of each tab.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/efc45f82-7610-4533-898f-e0c3f63bb1a3" width="100%" height="100%" title="WxEngage.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 #### **1. Engage login**
 
@@ -368,6 +375,8 @@ Connect allows the Owner to create local users in containers called **Groups** a
 -   Tenant level – can contain users and Groups
 -   Group – can contain users and Teams
 -   Team – can contain users only
+
+> To create new groups or teams go to ‘Settings’ > 'Groups/Teams'
 
 ## **3. Login to Connect portal**
 
@@ -584,7 +593,7 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Understanding Connect Flows](Understanding-Connect-Flows)                       | Read & Understand         | EASY                | 15 min                 |
+| [Understanding Connect Flows](Understanding-Connect-Flows)                       | Read & Understand         | EASY                | 20 min                 |
 
 ## Introduction
 
@@ -637,7 +646,11 @@ The flow designer is divided in three main section:
 
 - Toolbar on top – containing the flow name and status, the settings, save and ‘make live’ buttons.
 - Canvas in the middle – where the administrator can arrange the node to execute the desired workflow.
-- Node menu on the left – containing all the nodes the admin can use (by dragging them inside the Canvas)
+- Node menu on the left – containing all the nodes the admin can use (by dragging them inside the Canvas
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/20277a81-1d69-470b-bb69-69c9f2a7b5a3" width="100%" height="100%" title="Canvas.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 Nodes are categorized between Utilities, Channels and Integrations depending on their use but they all follow the same structure. To check a node simply drag and drop it into the canvas and double click on it. Inside each node you will find the:
 
@@ -650,6 +663,10 @@ Nodes are categorized between Utilities, Channels and Integrations depending on 
 - Node Outcomes section – Click on it to expand the section. You will see a list of which and how many outcomes (exit connections) the node has. When closing the node configuration you will notice coloured dots on the right side of the node indicating the Outcomes. Drag those dots onto other nodes to connect them together, or into an empty point of the canvas if no further actions are needed.
 
 When using nodes’ Output Variables inside the configuration of other nodes, administrator will have to use the following syntax: $(nX.outputvariablename), where X is the node ID that has generated that variable.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/de1a70ff-5016-4bf0-8915-ec8b11374ce3" width="100%" height="100%" title="node.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 #### 4. Building a new Channel Specific flow
 
@@ -980,16 +997,16 @@ Now create a new client ID that will be used to identify your application to Goo
 
 | Topic                                                                     | Lab Type      | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [\[Optional\] Create a service](#1-optional-create-a-service)            | Practical Lab | EASY            | 2 min            |
-| [Configure and Register Chat Asset](#2-configure-and-register-chat-asset) | Practical Lab | EASY            | 5 min            |
-| [Create Entry Point for Chat](#3-create-entry-point-for-chat)             | Practical Lab | EASY            | 5 min            |
-| [Create Queue for Chat](#4-create-queue-for-chat)                         | Practical Lab | EASY            | 5 min            |
-| [Create Chat Template](#5-create-chat-template)                           | Practical Lab | EASY            | 5 min            |
-| [Website Widget Configuration](#6-website-widget-configuration)           | Practical Lab | EASY            | 5 min            |
-| [Create Chat Inbound Flow](#7-create-chat-inbound-flow)           | Practical Lab | EASY            | 5 min            |
-| [Create Chat Close Flow](#8-create-chat-close-flow)           | Practical Lab | EASY            | 5 min            |
-| [Publish Chat Widget](#9-publish-chat-widget)           | Practical Lab | EASY            | 5 min            |
-| [Verification: Initiate and Accept the Chat](#10-verification-initiate-and-accept-the-chat)           | Practical Lab | EASY            | 5 min            |
+| [\[Optional\] Create a service](#1-optional-create-a-service)            | Practical Lab | EASY            | 3 min            |
+| [Configure and Register Chat Asset](#2-configure-and-register-chat-asset) | Practical Lab | EASY            | 3 min            |
+| [Create Entry Point for Chat](#3-create-entry-point-for-chat)             | Practical Lab | EASY            | 3 min            |
+| [Create Queue for Chat](#4-create-queue-for-chat)                         | Practical Lab | EASY            | 3 min            |
+| [Create Chat Template](#5-create-chat-template)                           | Practical Lab | EASY            | 3 min            |
+| [Website Widget Configuration](#6-website-widget-configuration)           | Practical Lab | EASY            | 3 min            |
+| [Create Chat Inbound Flow](#7-create-chat-inbound-flow)           | Practical Lab | EASY            | 3 min            |
+| [Create Chat Close Flow](#8-create-chat-close-flow)           | Practical Lab | EASY            | 3 min            |
+| [Publish Chat Widget](#9-publish-chat-widget)           | Practical Lab | EASY            | 3 min            |
+| [Verification: Initiate and Accept the Chat](#10-verification-initiate-and-accept-the-chat)           | Practical Lab | EASY            | 3 min            |
 
 
 ## Introduction
@@ -1320,13 +1337,19 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ---
 
 
-
 # Lab.12.9 - Facebook Messenger Channel Configuration
 ---
 
 
 ## Table of Contents
 
+| Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
+| ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
+| [Facebook Page configuration](#1-Facebook-Page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
+| [Facebook Messenger Asset creation & Register to Webex CC](#2-Facebook-Messenger-Asset-creation-&-Register-to-Webex-CC)                           | Practical Lab         | EASY                | 5 min                 |
+| [Create Entry Point and Queue](#3-Create-Entry-Point-and-Queue) | Practical Lab         | EASY                | 5 min                 |
+| [Create/Upload Facebook Messenger flow](#4-CreateUpload-Facebook-Messenger-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Verification - start Facebook Chat and accept the request](#5-Verification---start-Facebook-Chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
 
 
 
@@ -1353,9 +1376,9 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
 
-## Lab Section
 
-## Step 1 Facebook Page configuration
+
+## 1. Facebook Page configuration
 
 - Customer/Partner should have a Facebook account to create a Facebook Business page
 
@@ -1371,7 +1394,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 [Back to top](#table-of-contents)
 
-## Step 2. Facebook Messenger Asset creation & Register to Webex CC
+## 2. Facebook Messenger Asset creation & Register to Webex CC
 
 - Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
 
@@ -1417,7 +1440,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 [Back to top](#table-of-contents)
 
-## Step 3. Create Entry Point and Queue
+## 3. Create Entry Point and Queue
 
 #### 1. Create Entry Point in Management Portal 
 
@@ -1465,7 +1488,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 [Back to top](#table-of-contents)
 
-## Step 4. Create/Upload Facebook Messenger flow
+## 4. Create/Upload Facebook Messenger flow
 
 #### 1. Initial flow loading
 
@@ -1526,7 +1549,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 [Back to top](#table-of-contents)
 
-## Step 5. Verification - start Facebook Chat and accept the request
+## 5. Verification - start Facebook Chat and accept the request
 
 - Open a new tab and login to the Agent Desktop if you haven't done already and make the agent Available (if you haven't done already in Lab2). 
 
@@ -1559,16 +1582,24 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 ![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request8.jpg)
 
 
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
+
 # Lab.12.10 - SMS Channel Configuration
 
 ## Table of Contents
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Creating Assets, EntryPoint,Queue and other config| Practical Lab | EASY           | 10 min           |
-| Workflow Association | Practical Lab          |EASY           |10 min
+| [SMS number procurement](#1-SMS-number-procurement)                           | Practical Lab         | EASY                | 5 min                 |
+| [Create SMS Asset and Register to WebexCC](#2-Create-SMS-Asset-and-Register-to-WebexCC)                           | Practical Lab         | EASY                | 5 min                 |
+| [Workflow Association](#3-Workflow-Association) | Practical Lab         | EASY                | 5 min                 |
+| [Modifying the Flow](#4-Modifying-the-Flow) | Practical Lab         | EASY                | 5 min                 |
 
 
 
@@ -1583,134 +1614,110 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 
 ## Pre-requisite
 
--WxCC Portal, Agent Desktop and Webex connect URL
-
--Admin credentials to complete configurations in WxCC portal and Webex connect.
-
--Agent Credentials to Handle the Chat
-
--SMS number procurement process should be completed (Please work with your PSAM)
-
--SMS number should be assigned in your Webex Conenct tenant
+- WxCC Portal, Agent Desktop and Webex connect URL
+- Admin credentials to complete configurations in WxCC portal and Webex connect.
+- Agent Credentials to Handle the Chat
+- SMS number procurement process should be completed (Please work with your PSAM)
+- SMS number should be assigned in your Webex Conenct tenant
 
 
-### 1.     SMS number procurement
+## 1. SMS number procurement
 
--SMS Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant
-
--SMS Numbers are not assigned by default to any of the WxCC tenants.
-
--Please note that Partners have to go through a procurement process and work with your respective PSAM to enable SMS and get numbers assigned to the gold tenant
-
--Once the procurement process is completed, SMS Numbers are assigned to the tenant by the backend operations team
-
--Pleae complete this step before proceeding further.
+- SMS Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant
+- SMS Numbers are not assigned by default to any of the WxCC tenants.
+- Please note that Partners have to go through a procurement process and work with your respective PSAM to enable SMS and get numbers assigned to the gold tenant
+- Once the procurement process is completed, SMS Numbers are assigned to the tenant by the backend operations team
+- Please complete this step before proceeding further.
 
 
-### 2.     Create SMS Asset and Register to WebexCC
+## 2. Create SMS Asset and Register to WebexCC
 
--Login to Webex Connect  tenant using your credentials.
+- Login to Webex Connect  tenant using your credentials.
 
 From the left side pane, click on Assets ---> Numbers
 
-
 ![12.10.1](/assets/images/12.10.1.png)
 
-
--Select the number from the list. Click on Manage and Register to Webex Engage.In the subsequent window select the service and click register.
+- Select the number from the list. Click on Manage and Register to Webex Engage.In the subsequent window select the service and click register.
 
 ![12.10.2](/assets/images/12.10.2.png)
 
--Login to the Contact Centre Management Portal . Click on Provisioning ---> Entry Points. Click on New entry Point.
-
+- Login to the Contact Centre Management Portal . Click on Provisioning ---> Entry Points. Click on New entry Point.
 
 ![12.10.3](/assets/images/12.10.3.png)
 
--Enter a unique name, select the channel type as social, Social Channel Type as SMS and select the Asset that was created in Webex Connect as the Asset name. Click Save.
-
+- Enter a unique name, select the channel type as social, Social Channel Type as SMS and select the Asset that was created in Webex Connect as the Asset name. Click Save.
 
 ![12.10.4](/assets/images/12.10.4.png)
 
-
--Click on Provisioning---->Queue’s from the Left pane and click New Queue.Enter a unique name and select the Channel Type as Social Channel. Add the other required details and click Save.
-
+- Click on Provisioning---->Queue’s from the Left pane and click New Queue.Enter a unique name and select the Channel Type as Social Channel. Add the other required details and click Save.
 
 ![12.10.5](/assets/images/12.10.5.png)
 
-### 3.     Workflow Association
+## 3. Workflow Association
 
--Download the SMS flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)
-
--Navigate to webexcc-digital-channels/Webex Connect Flows/v2.1/SMS Inbound Flow.workflow.zip select the zip file and click download.
-
+- Download the SMS flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)
+- Navigate to webexcc-digital-channels/Webex Connect Flows/v2.1/SMS Inbound Flow.workflow.zip select the zip file and click download.
 
 ![12.10.6](/assets/images/12.10.6.png)
 
--Unzip the downloaded file.
-
--Go to Webex Connect, click on Services and select the service in which the Asset is created in.
-
--In the service click on FLOWS -> CREATE FLOW
-
--Enter the FLOW NAME as SMS Inbound Flow, select the TYPE as Work Flow and under METHOD select Upload a flow.
-
--Drag and drop the SMS Inbound Flow.workflow flow that is downloaded in zip file, click CREATE
-
+- Unzip the downloaded file.
+- Go to Webex Connect, click on Services and select the service in which the Asset is created in.
+- In the service click on FLOWS -> CREATE FLOW
+- Enter the FLOW NAME as SMS Inbound Flow, select the TYPE as Work Flow and under METHOD select Upload a flow.
+- Drag and drop the SMS Inbound Flow.workflow flow that is downloaded in zip file, click CREATE
 
 ![12.10.7](/assets/images/12.10.7.png)
 
--In the resulting window select the Incoming number from the dropdown list and click Save
-
+- In the resulting window select the Incoming number from the dropdown list and click Save
 
 ![12.10.12](/assets/images/12.10.12.png)
 
+## 4. Modifying the Flow
 
-### 4.     Modifying the Flow
-
--Open the Queue Task Node in the flow. Select the Queue that you created in an earlier step and click Save.
+- Open the Queue Task Node in the flow. Select the Queue that you created in an earlier step and click Save.
 
 ![12.10.8](/assets/images/12.10.8.png)
 
--Open up an SMS node in the flow and enter the from Number variable selected from the right side pane as shown below.Click Save
-
--Repeat the above step for all the SMS nodes in the flow.
-
+- Open up an SMS node in the flow and enter the from Number variable selected from the right side pane as shown below.Click Save
+- Repeat the above step for all the SMS nodes in the flow.
 
 ![12.10.9](/assets/images/12.10.9.png)
 
--Save the flow and Make Live
-
+- Save the flow and Make Live
 
 ![12.10.10](/assets/images/12.10.10.png)
 
-
--Login to the agent desktop, initiate an SMS to the configured number. Once the interaction pops up on the agent desktop, accept the conversation
+- Login to the agent desktop, initiate an SMS to the configured number. Once the interaction pops up on the agent desktop, accept the conversation
 
 ![12.10.11](/assets/images/12.10.11.png)
 
--Test the conversation between the agent and the customer.
+- Test the conversation between the agent and the customer.
+- End the conversation and add a Wrapup Code.
 
--End the conversation and add a Wrapup Code.
+---
 
+**Congratulations, you have completed this section!**
 
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 # Lab.12.11 - WhatsApp Channel Configuration
 
 
 ## Table of Contents
-- [Table of Contents](#table-of-contents)
-- [Introduction](#introduction)
-    - [Lab Objective](#lab-objective)
-    - [Pre-requisite](#pre-requisite)
-- [Lab Section](#lab-section)
-  - [Step 1. Verify WhatsApp Number Assignment](#step-1-verify-WhatsApp-number-assignment)
-  - [Step 2. WhatsApp Asset registration to WebexCC](#step-2-WhatsApp-asset-registration-to-webexcc)
-  - [Step 3. WhatsApp Entry Point and Queue creation](#step-3-WhatsApp-entry-point-and-queue-creation)
-  - [Step 4. Create/Upload WhatsApp flow](#step-4-createupload-WhatsApp-flow)
-  - [Verification - send WhatsApp message and accept the request](#verification---send-WhatsApp-message-and-accept-the-request)
-  - [Back to top](#back-to-top)
-    - [Congratulations, you have completed this section!](#congratulations-you-have-completed-this-section)
- 
+
+
+| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [Verify WhatsApp Number Assignment](#1-verify-WhatsApp-number-assignment)                           | Practical Lab         | EASY                | 5 min                 |
+| [WhatsApp Asset registration to WebexCC](#2-WhatsApp-asset-registration-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
+| [WhatsApp Entry Point and Queue creation](#3-WhatsApp-entry-point-and-queue-creation) | Practical Lab         | EASY                | 5 min                 |
+| [Create/Upload WhatsApp flow](#4-createupload-WhatsApp-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Verification - send WhatsApp message and accept the request](#5-verification---send-WhatsApp-message-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
+
+
 ## Introduction
 
 #### Lab Objective
@@ -1726,16 +1733,13 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 3. You have successfully completed the previous Lab **Preconfiguration**
 4. **Note**: WhatsApp Numbers cannot be procured directly from the Webex Contact Center integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.
 
-## Lab Section
 
-## Step 1. Verify WhatsApp Number Assignment
+## 1. Verify WhatsApp Number Assignment
 
 - Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
-
 - Navigate to Assets > App and verify that the tenant you are using has a SMS number assigned 
 
 ![DC_Lab_12.11_Verify_Whatsapp_Number_Assignment](/assets/images/DC_Lab_12.11_Verify_Whatsapp_Number_Assignment1.png)
-
 
 - Identify and make note of the APP ID (We will need this later in the flow configuration)
 
@@ -1749,7 +1753,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ![DC_Lab_12.11_Verify_Whatsapp_Number_Assignment](/assets/images/DC_Lab_12.11_Verify_Whatsapp_Number_Assignment4.png)
 
-## Step 2. WhatsApp Asset registration to WebexCC
+## 2. WhatsApp Asset registration to WebexCC
 
 - In the WhatsApp number assigned, under actions select the 'Manage' option 
 
@@ -1767,40 +1771,30 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ![DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC1](/assets/images/DC_Lab_12.11_Whatsapp_Asset_registration_to_WebexCC4.png)
 
-## Step 3. WhatsApp Entry Point and Queue creation
+## 3. WhatsApp Entry Point and Queue creation
 
 - Login to Webex Contact Centre administration portal 
-
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Entry Point_**.
-
 - Click on `New Entry Point`.
 
 ![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation1.jpg)
 
 - Input **_Name_** as `WhatsApp_EP`.
-
 - Select `Social Channel` in the **_Channel Type_** section.
-
 - Select `WhatsApp` in the **_Social Channel Type_** section.
-
 - Leave the **_Asset Name_** as appeared value `WhatsApp Asset assigned in your Connect tenant`.
-
 - The **_Time Zone_** can stay as default value.
-
 - Click on **Save** after comparing your values with the screenshot below.
 
 ![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation2.png)
 
 - Click on **_Provisioning_** and select **_Entry Points/Queues_** > **_Queue_**.
-
 - Click on `New Queue`.
 
 ![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation3.jpg)
 
 - Input **_Name_** as `WhatsApp_Queue`.
-
 - Select `Social Channel` in the **_Channel Type_** section.
-
 - Click `Add Group` in the **_Conversation distribution_** section.
 
 ![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation4.png)
@@ -1810,29 +1804,22 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 ![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation5.png)
 
 - Input **_Maximum Time in Queue_** as `300`.
-
 - The **_Time Zone_** can stay as default value.
-
 - Click on **Save** after comparing your values with the screenshot below.
 
 ![DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation](/assets/images/DC_Lab_12.11_Whatsapp_Entry_Point_and_Queue_creation6.png)
 
-## Step 4. Create/Upload WhatsApp flow
+## 4. Create/Upload WhatsApp flow
 
 - Download the WhatsApp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
-
 - Navigate to **Webex Connect Flows** -> **v2.1** -> **WAB Inbound Flow.workflow.zip**, select the zip file and click download.
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow1.png)
 
 - Unzip the downloaded file.
-
 - Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
-
 - In the service click on **FLOWS** -> **CREATE FLOW** 
-
 - Enter the **FLOW NAME** as **WhatsApp Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
-
 - Drag and drop the **WAB Inbound Flow.workflow** flow that is downloaded in zip file, click **CREATE**
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow2.png)
@@ -1857,9 +1844,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow7.png)
 
-[To top of this lab](#table-of-contents)
-
-## Verification - send WhatsApp message and accept the request
+## 5. Verification - send WhatsApp message and accept the request
 
 - Login to the Agent Desktop and make the agent Available. 
 
@@ -1893,7 +1878,13 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request8.png)
 
+---
 
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 # Lab.12.12 - Connect Templates
 
@@ -1989,8 +1980,6 @@ Let's create SMS template which notifies end user after incoming request over SM
 
 ---
 
-
-
 # Lab.12.13 - Engage Templates
 
 ## Table of Contents
@@ -2006,6 +1995,7 @@ Let's create SMS template which notifies end user after incoming request over SM
 ## Introduction
 
 This section is designed to introduce Engage templates, which can be used for quick reply from the agent desktop to the end user through various digital channels. In this section you will find configuration steps and examples of use. The goal is to understand the purpose of each template.
+
 
 ## 1. Understanding Engage Templates
 
@@ -2133,8 +2123,6 @@ Here are few key points to note about Engage templates which provide better unde
 **We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
-
-
 
 # Lab.12.14 - Introduction to BOTs
 
@@ -2311,82 +2299,70 @@ Provide version control over all changes the administrator applies on that speci
 
 # Lab 12.15 - QnA BOTs
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/X2HnaG3PVeo" title="Part1: Agent Desktop Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Table of Contents
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Navigate to BOT Builder and Create bot | Practical Lab | MID          | 5 min           |
-| Preview | Practical Lab | MID          | 5 min           |
-| Bot testing | Practical Lab | MID        | 10 min           |
-| Curation | Practical Lab | MID         | 15 min           |
-| Demo | Demo | NA          | 15 min           |
+| [Navigate to BOT Builder and Create bot](#1-Navigate-to-BOT-Builder-and-Create-bot) | Practical Lab | MED          | 5 min           |
+| [Preview](#2-Preview) | Practical Lab | MED          | 5 min           |
+| [Bot testing](#3-Bot-testing) | Practical Lab | MED        | 5 min           |
+| [Curation](#4-Curation) | Practical Lab | MED         | 10 min           |
+
 
 ## Introduction
 
-## Lab Objective
+#### Lab Objective
 
 This lab is designed to complete a new QnA bot creation, new article creation and previewing the same. We will also test the bot, add new test cases and learn about curation.
 
-## Pre-requisite
+#### Pre-requisite
 
 -   WxCC Portal, Agent Desktop and IMI connect URL.
 -   Admin credentials to complete configurations in WxCC portal and IMI connect.
 -   Agent Credentials to Handle FBM digital contact.
 
-### 1.     Navigate to BOT Builder and Create bot
+## 1. Navigate to BOT Builder and Create bot
 
 -   Log on to Connect portal and navigate to BOT Builder.
-    
 -   On the top right you have 2 options QnA BOT and Task BOT.
-    
 -   Create new QnA Bot.
-    
 -   Give name and enable Agent handover and Allow feedback options. For easy tracking of configurations, please use the Attendee ID as part of your Bot name. For example:
 	Bot Name: AttendeeID_QnA_Bot
-    
 
-### 2.     Preview
+
+## 2. Preview
 
 -   Navigate to Article -> click on 3 dot -> import from catalogue
-    
 -   Once the Article is added, click on preview on top right and test the BOT
-    
 -   Click on Session to check to user input matching with Article
-    
 
-### 3.     Bot testing
+
+## 3. Bot testing
 
 -   Open BOT Builder
-    
 -   Log on to Connect portal and navigate to BOT Builder
-    
 -   Click on the BOT created on Lab 1
-    
 -   Click on Testing and add test case
-    
 -   Execute the test case
-    
 -   Click on session to validate the test case
     
 
-### 4.     Curation
+## 4. Curation
 
 -   Make sure feedback to BOT is enabled under sessions
-    
 -   Open preview option and run few input to test the article
-    
 -   If BOT is not giving expected response, click on red down thumb to downvote the article
-    
 -   Open curation menu
-    
 -   BOT Admin has an option to change response, add new article or attach response with an existing Article
+<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/X2HnaG3PVeo" title="Part1: Agent Desktop Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+---
 
-<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
-		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+**Congratulations, you have completed this section!**
 
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 # Lab.12.16 - Task BOTs
 
@@ -2523,17 +2499,25 @@ Time to test your new configuration:
 - Get your conversation escalated to the agent.
 - Have your agent conversating with the customer.
 
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
+
 
 # Lab.12.17 - Event Scheduler
 
 ## Table of Contents
 
--   [Lab Objective](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#lab-objective)
--   [Pre-requisite](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#pre-requisite)
--   [Lab Section](https://github.com/WebexCC/webexcc.github.io/blob/master/_pages/Digital.md#lab-section)
-	  1. Introduction to Event Scheduler
-	  2. Option 1 - Schedule SMS Event
-	  3. Option 2 - Schedule Custom Event
+| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Introduction to Event Scheduler](#1-Introduction-to-Event-Scheduler)             | Read & Understand | HARD            | 5 min            |
+| [Option 1 - Schedule SMS Event](#2-Option-1---Schedule-SMS-Event)                       | Practical Lab     | HARD            | 5 min            |
+| [Option 2 - Schedule Custom Event](#3-Option-2---Schedule-Custom–Event) | Practical Lab     | EASY            | 10 min            |
+
 
 ## Lab Objective
 
@@ -2550,9 +2534,8 @@ Option 2: Custom Event – Allows you to trigger rules or flows associated with 
 3.  Access to MS Excel or any other CSV file editor
 4.  You have successfully completed the previous Labs Pre-configuration, Email Configuration
 
-## Lab Section
 
-### 1. Introduction to Event Scheduler
+## 1. Introduction to Event Scheduler
 
 Event Scheduler allows Webex Connect users to send SMS messages or schedule execution of Webex Connect rules/live flows, by uploading a file (on the UI or via an SFTP location) with required information in the relevant format. From Webex Connect select the App Tray & then click on Event Scheduler (Event Scheduler will open in a new browser tab).
 
@@ -2595,7 +2578,6 @@ Configuring scheduled outbound SMS campaign only require the setup inside the Ev
 	- CustomerName – in this column add the Name (and/or Surname) for everyone added to the list
 
 -   Save the file.
-
 -   Choose if to upload a file created in previous step or use an existing SFTP connection. For this lab, we'll choose Upload File.
 
 ![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event5.png)
@@ -2802,9 +2784,13 @@ Custom Events use source files containing data that will be used by flows when s
 
 ![DC_Lab.12.17_Schedule_Custom_Event](/assets/images/DC_Lab.12.17_Schedule_Custom_Event25.png)
 
+---
 
+**Congratulations, you have completed this section!**
 
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
+---
 
 # Lab.12.18 - Inbound Webhooks
 
@@ -2812,9 +2798,9 @@ Custom Events use source files containing data that will be used by flows when s
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Creating an Inbound webhook flow | Practical Lab | MID           | 15 min           |
-| Creating a voice flow in flow control| Practical Lab | MID           | 15 min           |
-| Test the Inbound Webhook  | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1-Creating-an-Inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating a voice flow in flow control](#2-Creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
+| [Test the Inbound Webhook](#3-Test-the-Inbound-Webhook)  | Practical Lab | EASY          | 5 min           |
 
 
 ## Quick Links
@@ -2834,23 +2820,18 @@ In this lab, we will explore how an Inbound Webhook can be used to generate an e
 ## Pre-requisite
 
 -   Admin credentials to login to WxCC and Webex Connect portal
-
 -   Knowledge of WxCC Connect flows and basic troubleshooting
 
 
-
-### 1.     Create an Inbound Webhook
+## 1. Create an Inbound Webhook
 
 -   Click on Assets ---> Integrations from the left navigation pane 
 
 ![12.18.2.png](/assets/images/12.18.2.png)
 
-
 -   Click on the Add Integration button and select Inbound Webhook
 
-
 ![12.18.3.png](/assets/images/12.18.3.png)
-
 
 - Enter a unique name for the Inbound Webhook and enter the JSON data as follows. Click on Parse and Save.
 
@@ -2861,87 +2842,65 @@ In this lab, we will explore how an Inbound Webhook can be used to generate an e
     "maintenance":"maintenance notification"
 }
 
-
 ![12.18.4.png](/assets/images/12.18.4.png)
-
 
 - Navigate to the Service you created earlier on in the labs and click on Create blank Flow.
 
-
 ![12.18.5.png](/assets/images/12.18.5.png)
 
-
 - Give the flow a unique name and click on create flow button.
-
-
 - Select the Trigger Category as Webhook
-
 
 ![12.18.6.png](/assets/images/12.18.6.png)
 
-
 - Select the Webhook you created in a previous step and click Save.
-
 
 ![12.18.7.png](/assets/images/12.18.7.png)
 
-
 - Drag and drop the Email node from the left pane and connect the two nodes.
-
 
 ![12.18.8.png](/assets/images/12.18.8.png)
 
-
 - Double click on the Email node to access the settings and details as shown below. Click Save.
 
-
 ![12.18.9.png](/assets/images/12.18.9.png)
-
 
 - Save the flow and make the flow Live.
 
 
-### 2.     Creating a voice flow in flow control
-
+## 2. Creating a voice flow in flow control
 
 - Login to the Webex Contact Centre management portal and navigate to flow control.
-
 - Create a simple flow that sends out Outage details as an email. The main menu prompt takes the caller to a http request node when they press 1.
-
 - The http request node then triggers the Webhook along with the message that needs to be sent out in the request body .
 
 Request Body:
-
 {
 "outage": "Current power outages are applicable for the suburbs 2118, 2456, 2761, 2229"
 }
 
-
 ![12.18.10.png](/assets/images/12.18.10.png)
-
 
 ![12.18.11.png](/assets/images/12.18.11.png)
 
+- Save and publish the flow.
 
--Save and publish the flow.
 
-
-### 3.     Testing the Inbound Webhook
+## 3. Testing the Inbound Webhook
 
 - Make a call to the Entry point associated with the voice call flow that you created in the previous step.
-
 - After making the selection and the call should get disconnected.
-
 - Check the email box of the Destination Email address that was entered in the Webex Connect flow to ensure the email has been received.
-
 
 ![12.18.12.png](/assets/images/12.18.12.png)
 
+---
 
+**Congratulations, you have completed this section!**
 
-<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
-		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 # Lab.12.19 - Troubleshooting
 
@@ -2950,9 +2909,9 @@ Request Body:
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MID            | 15 min            |
-| [Debugging a flow](#2-debugging-a-flow)                       | Read & Understand     | MID            | 15 min            |
-| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MID            | 30 min            |
+| [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MED            | 15 min            |
+| [Debugging a flow](#2-debugging-a-flow)                       | Read & Understand     | MED            | 15 min            |
+| [The most common issues in Webex Connect flows](#3-the-most-common-issues-in-webex-connect-flows) | Read & Understand     | MED            | 30 min            |
 
 
 ## Introduction
@@ -2977,7 +2936,7 @@ There are the following troubleshooting capabilities available for the administr
 -  The debugger built into the flow builder
 Let's consider how we can use both of them.
 
-### 1.1. Export Logs tool
+#### 1.1. Export Logs tool
 
 This tool allows Webex Connect admin to download inbound and outbound log events as XLSX file for any Service / Asset / Digital Channel for desired timefrrame. The we can inspect this file to check, for example, whether the message was received or sent by corresponding component of Webex Connect platform.
 
@@ -3013,7 +2972,7 @@ After the log file has been downloaded, we can open the file and see all outboun
 
 ![DC_Lab.12.19_Export_Logs_5](/assets/images/DC_Lab_12.19._Export_Logs_5.png)
 
-### 1.2. Flow Debugger 
+#### 1.2. Flow Debugger 
 
 This tool allows Webex Connect admin to track flow execution from the beginning till the end. Flow debugger has the following capabilities:
 -  search for exact flow execution event based on the timestamp or Transaction ID
@@ -3085,7 +3044,7 @@ In the next section we will look at the most common issues in Webex Connect flow
 
 Let's look at few examples of the most commn issues in Webex Connect flows. We will consider how to identify the cause of each issue and potential solutions. 
 
-### 3.1. Engage Asset not linked to Entry Point in Webex CC
+#### 3.1. Engage Asset not linked to Entry Point in Webex CC
 
 Here is an example of what will happen if live chat app (asset) is not assigned to the Entry Point on Webex CC management portal. Flow debugger disaplays ***onInvalidChoice*** error next to the affected ***Create Task*** node. The error on the right-hand side of debugging window contains ***desc : no valid edge found for the async event*** message.
 
@@ -3097,7 +3056,7 @@ Please follow the action plan below to fox the issue:
 3. Then select affected app/asset created on Connect Portal in the ***Asset Name*** drop-down list and save changes. If the affected asset is not in the drop-down list, please create new one on Connect portal, register it with proper service and check one more time.
 
 
-### 3.2. Engage authorization not working
+#### 3.2. Engage authorization not working
 
 Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onInvalidData*** error next to the affected Engage node.
 
@@ -3126,7 +3085,7 @@ Then click on ***Authorize*** button in the pop-up window and provide credential
 ![DC_Lab.12.19_Error_Engage_Auth_5](/assets/images/DC_Lab_12.19._Error_Engage_Auth_5.png)
 
 
-### 3.3. Webex CC authorization not working
+#### 3.3. Webex CC authorization not working
 
 Here is an example where Webex CC authorization does not work properly. Flow debugger disaplays ***onauthorizationfail*** error next to the affected Webex CC node.
 
@@ -3153,7 +3112,7 @@ Then click on ***Authorize*** button in the pop-up window and provide credential
 ![DC_Lab.12.19_Error_WebexCC_Auth_5](/assets/images/DC_Lab_12.19._Error_WebexCC_Auth_5.png)
 
 
-### 3.4. Variable does not exist or has an empty value
+#### 3.4. Variable does not exist or has an empty value
 
 Here is an example where the variable assigned to one of the parameters of flow node does not exist or has empty value. Flow debugger disaplays ***onError*** error next to the affected ***Create Task*** node.
 
@@ -3170,7 +3129,7 @@ Potential ways to fix the issue:
 3. \[Not a flexible approach\] Replace the variable name by exact value
 
 
-### 3.5. Variable or parameter has wrong value
+#### 3.5. Variable or parameter has wrong value
 
 Here is an example where the variable or parameter of a flow node has wrong value. Flow debugger disaplays ***onAppendMessageFailure*** error next to the affected ***Append Conversation*** node.
 
@@ -3180,15 +3139,22 @@ The error ***""description":"Chat ID provided does not exist","event":"conversat
 
 ![DC_Lab.12.19_Error_Wrong_Value_2](/assets/images/DC_Lab_12.19._Error_Wrong_Value_2.png)
 
+---
 
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 # Lab 12.20 - Creating Custom Nodes
+
 ## Table of Contents
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Adding a Custom Node | Practical Lab | MID           | 15 min           |
-| Demo via calling EP into Webhook to invoke Custom Node | Demo | NA          | 15 min           |
+| [Adding a Custom Node](1#Adding-a-Custom-Node) | Practical Lab | MED           | 15 min           |
+| [Demo](#2-Demo) | Read & Understand | EASY          | 15 min           |
 
 ## Quick Links
 
@@ -3203,24 +3169,23 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 -   Admin credentials to login to Webex Connect portal
 
+
+## 1. Adding a Custom Node
+
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/44d5e84f-e110-4c3b-acc6-3b482198ab53" width="100%" height="100%" title="Lab 20: Create Custom Nodes" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-## Adding a Custom Node
-
-### 1.     Navigate to Integrations in Webex Connect
+#### 1.1. Navigate to Integrations in Webex Connect
 
 -   Login in to Webex Connect portal
-
 -   From left column, navigate to “Integrations”
 
 ![Lab12.20_CustomNodeIntegrations](/assets/images/Lab12.20_CustomNodeIntegrations.png)
 
-### 2.     Add Custom Node
+#### 1.2. Add Custom Node
 
 -   In Integrations, click ‘Add Integration’
-
 -   Select ‘Custom Node’
 
 ![Lab12.20_CustomNodeAddIntegrations](/assets/images/Lab12.20_CustomNodeAddIntegrations.png)
@@ -3230,21 +3195,22 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ![Lab12.20_CustomNodeCreateNew](/assets/images/Lab12.20_CustomNodeCreateNew.png)
 
-### 3.     Configure REST API under Settings tab. These settings are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
+#### 1.3. Configure REST API under Settings tab 
+
+These settings are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
 
 -   Step 1: Configure Authorization
-
 -   Step 2: Configure Headers
-
 -   Step 3: Configure Body
-
 -   Step 4: Configure Response
 
-### 4.     Configure Node UI tab (optional)
+### 1.4. Configure Node UI tab (optional)
 
 -   This setting are specific to the requirement of your existing business system or with third-party applications you are trying to integrate.
 
-## Demo via calling EP into Webhook to invoke custom node to update WxCC Site name
+## 2. Demo
+
+Here a quick Demo via calling EP into Webhook to invoke custom node to update WxCC Site name:
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/fe9230a8-3dfe-4177-b804-3065218a1873" width="100%" height="100%" title="Lab 20: Custom Nodes Demo" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -3254,11 +3220,13 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 ![Lab12.20_CustomNodeDemo](/assets/images/Lab12.20_CustomNodeDemo.png)
 
+---
 
-<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
-		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+**Congratulations, you have completed this section!**
 
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 # Lab.12.21 - Event and Triggers
 
@@ -3266,11 +3234,12 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Creating an Inbound webhook flow | Practical Lab | MID           | 15 min           |
-| Creating an Event in Webex Engage Portal| Practical Lab | MID           | 15 min           |
-| Test the Event Trigger | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1-Creating-an-Inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating an Event in Webex Engage Portal](#2-Creating-an-Event-in-Webex-Engage-Portal)| Practical Lab | MED           | 10 min           |
+| [Test the Event Trigger](#3-Test-the-Event-Trigger) | Practical Lab | EASY          | 5 min           |
 
 ## Quick Links
+
 -   https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Generic_Topic.dita_47ceb6a2-e47c-4639-9a2c-dcde742cec2f-4
 
 
@@ -3278,15 +3247,15 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 This lab walks through the configuration of Events and Triggers in the Webex Contact Centre Engage Portal. Once configured, these can be invoked by an agent handling digital interactions to achieve the required use case.
 
+
 ## Pre-requisite
 
 -   Admin credentials to login to WxCC and Webex Connect portal
-
 -   Working inbound chat and routed flow
-
 -   Knowledge of WxCC Connect flows and basic troubleshooting
 
-### 1.    Login to Webex Connect portal
+
+## 1. Login to Webex Connect portal
 
 -   From Left column, navigate to Assets--> Integrations
 
@@ -3311,11 +3280,8 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 - Select the Webhook name from the dropdown and paste the below Json data and click Parse. Save the changes
 
 {
-
 "email": "xxx@cisco.com",
-
 "url": "https://www.cisco.com/"
-
 }
 
 ![12.21_6.png](/assets/images/12.21_6.png)
@@ -3331,7 +3297,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 - Save the flow and make live.
 
 
-### 2.     Creating an Event in Webex Engage Portal
+## 2. Creating an Event in Webex Engage Portal
 
 - Login to Webex Contact Centre Management Portal and cross launch Webex Engage from the left side pane.
 
@@ -3361,7 +3327,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 
 ![12.21_16.png](/assets/images/12.21_16.png)
 
-### 3.     Test the Event Trigger
+## 3. Test the Event Trigger
 
 - Login to the agent desktop and initiate a chat session. After accepting the chat session click on the lightning bolt icon to select the trigger and click Next.
 
@@ -3375,10 +3341,13 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 
 - Check the recipient’s mailbox to validate the Email has been received successfully.
 
+---
 
-<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
-		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---
 
 # Lab 12.22 - Global and Flow variable support in Digital channels
 
@@ -3386,11 +3355,12 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| Fetching and Reporting Global variable | Practical Lab | MID           | 15 min           |
-| Configuring Flow variable| Practical Lab | MID           | 15 min           |
-| Transfer Global and Flow variable values between Webex Connect flows | Practical Lab | MID           | 15 min           |
+| [Fetching and Reporting Global variable](#1-Fetching-and-Reporting-Global-variable) | Practical Lab | MED           | 15 min           |
+| [Configuring Flow variables](#2-Configuring-Flow-variables)| Practical Lab | MED           | 15 min           |
+| [Transfer Global and Flow variable values between Webex Connect flows](3#-Transfer-Global-and-Flow-variable-values-between-Webex-Connect-flows) | Practical Lab | MED           | 15 min           |
 
 ## Quick Links
+
 -   [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
 
 ## Lab Objective
@@ -3402,18 +3372,17 @@ Both variables are transferable between flows. In the second part of this lab in
 ## Pre-requisite
 
 -   Admin credentials to login to WxCC and Webex Connect portal
-
 -   Working inbound chat and routed flow
-
 -   Knowledge of WxCC Global variables and Analyzer
 
-## Fetching and Reporting Global Variable
+
+## 1. Fetching and Reporting Global Variable
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/39203703-097c-4b2c-83f9-96b4c091e813" width="100%" height="100%" title="Lab 22.1: Fetching GV from Webex Connect and Viewing on Agent Desktop" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### 1.     Login in to Webex CC administration portal
+#### 1.1. Login in to Webex CC administration portal
 
 -   From left column, navigate to “Global Variables”
 
@@ -3430,7 +3399,7 @@ Both variables are transferable between flows. In the second part of this lab in
 	-   Desktop Label: _your prefered value_
 	-   Agent Editable: Yes
 
-### 2.     Next, login to Webex Connect portal and open your inbound chat flow
+#### 1.2. Next, login to Webex Connect portal and open your inbound chat flow
 
 -   Click “Edit” on the top right of the flow
 -   Delete connection between “Queue Task” and “Update Conversation”
@@ -3446,57 +3415,48 @@ Both variables are transferable between flows. In the second part of this lab in
 	-   Select the Global Variable configured earlier in WxCC Portal
 	-   Set Variable: _Leave as default value configured_
 
-
 -   Save and make the flow live
-
 -   Start a new chat session and observe the Global variable value appearing in the interaction panel of Agent Desktop
-
 -   Capture the Session ID appearing at the address bar of the Agent Desktop upon accepting the chat session
 
-### 3.     Configure Analyzer to report the Global Variables configured in Webex Connect flow
+#### 1.3. Configure Analyzer to report the Global Variables configured in Webex Connect flow
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/2b9504eb-a908-4453-9134-6fd6a0734043" width="100%" height="100%" title="Lab 22.1: Reporting GV for Digital Channels" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 -   Navigate to “Reporting and Analytics” at the left column of WxCC portal
+
 ![Lab12.24.1_GVThird](/assets/images/Lab12.24.1_GVThird.png)
 
 -   Create a new visualization with the following fields:
-
 	-   Session ID
 	-   _Global Variable defined in WxCC portal_ (In the video example, the Globle variable is _DavidGV1_)
 	-   Create a report filter with the captured Session ID
 
 -   Run the report and observe the Global variable value
 
-### 4.     Repeat a new chat sessions with the following scenario:
+#### 1.4. Repeat a new chat sessions with the following scenario:
 
 -   Chat session 2 use case: Prior to starting the chat session, open the specific flow again in Webex Connect. Edit the “Set Variable” value of the Global variable in the “Set Variable” node to something other than the default. Capture the Session ID for Analyzer report filter.
-
 -   Re-run the Anayzer report after adding the Session ID and observe the reported value of the Global variable.
 
-## Configuring Flow Variables
+## 2. Configuring Flow Variables
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/741c4912-2c79-453f-8cdc-2f0afa3ea4f3" width="100%" height="100%" title="Lab 22.2: Configuring Flow Variables in Digital Channels" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### Login in to Webex Connect portal and open your inbound chat flow
+#### 2.1. Login in to Webex Connect portal and open your inbound chat flow
 
 -   Click “Edit” on the top right of the flow
-
 -   Delete connection between “Set Variable” and “Update Conversation”
-
 -   Drag a second “Set Variable” from the left panel and drop between the earlier “Set Variable” and “Update Conversation” nodes and connect them as shown in the video
-
 -   Configure “Set Variable” with the following:
-
 	-   Method Name: Select Flow Variable
 	-   Node Runtime Authorization: _Configured for your tenant_
 	-   Task ID: $(flid)
 	-   Set Variable:
-	
 		-   Name: AttendeeID_FV (For easy tracking, please prepend your Attendee ID)
 		-   Type: String
 		-   Value:
@@ -3504,29 +3464,26 @@ Both variables are transferable between flows. In the second part of this lab in
 		-   Description: _your prefered value_
 		-   Desktop Label: _your prefered value_
 		-   Check “Agent Editable”
-
 -   Click Save
-
 -   Save and make the flow live.
-
 -   Start a new chat session and observe the Flow variable value appearing in the interaction panel of Agent Desktop.
 -   Note that Flow variables are not reportable in Analyzer.
 
-## Transfer Global and Flow variable values between Webex Connect flows
+## 3. Transfer Global and Flow variable values between Webex Connect flows
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/ccecf093-f0a9-4ae3-823b-ae74b515e513" width="100%" height="100%" title="Lab 22: Transfer of variables between Webex Connect flows" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-## Lab Objective
+#### 3.1. Lab Objective
 
 To transfer chat form input and Global variable values from inbound chat flow to channel-agnostic routed flow for Agent Desktop screen pop
 
-### Login in to Webex Connect portal and open your routed flow
+#### 3.2. Login in to Webex Connect portal and open your routed flow
 
 -   Click “Edit” on the top right of the flow
-
 -   Click on the gear icon at the top right of the screen and navigate to Custom Variables
+- 
 ![Lab12.24.3_TxFirst](/assets/images/Lab12.24.3_TxFirst.png)
 
 -   Add the Global variable and Flow variable specific to your configuration (Note that the variables are case-sensitive)
@@ -3548,35 +3505,35 @@ function extractVariable(varname) {
             return object.value;
 
         }
-
     }
-
 }
 
 //Extracting _NatureOfRequest_ and _DavidGV1_ variables set in the live chat inbound flow
-
 var _natureOfRequest_ = extractVariable("_NatureOfRequest_");
-
 var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 ![Lab12.24.3_TxAftBetweenFirstSecond](/assets/images/Lab12.24.3_TxAftBetweenFirstSecond.png)
 
 -   Within the same “Extract Task Variables” node, navigate to the second option “Transition Actions (Optional)” and add the Custom variables under “Time: On-leave” and “Action: Set variable” created above to the extracted Global and Flow variables:
+- 
 ![Lab12.24.3_TxSecond](/assets/images/Lab12.24.3_TxSecond.png)
 
 -   Scroll down the same page and add both variables to the Debug Log for troubleshooting purposes if required.
-
 -   Save the settings and double-click on the Screen Pop node
-
 -   Add the following under “Query Parameters”:
+
 ![Lab12.24.3_TxThird](/assets/images/Lab12.24.3_TxThird.png)
 
 -   Save and make the flow live.
-
 -   Start a new chat session and observe the Screen Pop address bar upon Agent Desktop accepting the chat session. Both Global and Flow variables from the channel specific inbound chat flow are transfered to the routed flow.
+
 
 ![Lab12.24.3_TxLast](/assets/images/Lab12.24.3_TxLast.png)
 
-<p style="text-align:center"><strong>Congratulations, you have completed **ALL section**. Well done!!!</strong></p>
-		
-<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
+---
+
+**Congratulations, you have completed this section!**
+
+**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
+
+---

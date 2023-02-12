@@ -32,7 +32,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - [9. WebexCC Salesforce Desktop Layout Configuration](#9-webexcc-salesforce-desktop-layout-configuration)
 - [Login Agent and Make a Test Call](#login-agent-make-call)
 
-[6.2 Microsoft Dynamics 365 integration](#42-microsoft-dynamics-365-integration)
+[6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
 
 - [Optional: Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
 - [Part 1: Install applications for MS Dynamics 365 environment](#part-1-install-applications-for-ms-dynamics-365-environment)
@@ -52,13 +52,14 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - [Optional: Start Zendesk Trial](#optional-start-zendesk-trial)
 - [Part 1: Install Webex Contact Center application on Zendesk instance](#part-1-install-webex-contact-center-application-on-zendesk-instance)
-  - [1. Install Webex Contact Center application for Zendesk from Marketplace](#1-install-webex-contact-center-application-for-zendesk-from-marketplace)
+  - [Install Webex Contact Center application for Zendesk from Marketplace](#install-webex-contact-center-application-for-zendesk-from-marketplace)
 - [Part 2: Configure Webex Contact Center tenant and Zendesk instance](#part-2-configure-webex-contact-center-tenant-and-zendesk-instance)
-  - [2. Create Custom Desktop Layout for Zendesk](#2-create-desktop-layout-for-zendesk)
-  - [3. Create new Customer in Zendesk](#3-create-new-customer-in-zendesk)
+  - [Create Custom Desktop Layout for Zendesk](#create-custom-desktop-layout-for-zendesk)
+  - [Create new Customer in Zendesk](#create-new-customer-in-zendesk)
 - [Part 3: Test Webex Contact Center Agent Desktop for Zendesk](#part-3-test-webex-contact-center-agent-desktop-for-zendesk)
-  - [4. Sign into Webex Contact Center for Zendesk](#4-sign-into-webex-contact-center-for-zendesk)
-  - [5. Make inbound test calls](#5-make-inbound-test-calls)
+  - [Sign into Webex Contact Center for Zendesk](#sign-into-webex-contact-center-for-zendesk)
+  - [Make inbound test call from a number registered in Zendesk CRM](#a-make-inbound-test-call-from-a-number-registered-in-zendesk-crm)
+  - [Make inbound test call from a number NOT registered in Zendesk CRM](#b-make-inbound-test-call-from-a-number-not-registered-in-zendesk-crm)
 
 # 6.1 Salesforce integration
 
@@ -267,13 +268,21 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
 2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
-3. An MS Dynamics Sales instance. For the details, refer the next section "Start Microsoft Dynamics Trial"
-4. Access to the [Webex Contact Contact Center Desktop Layout for Microsoft Dynamics](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples/Layouts/MS Dynamics/) JSON.
-5. Lab 2 (IVR and Contact Routing) completed.
+3. An MS Dynamics Sales instance. For the details, refer the next section [Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
+4. Access to the [Webex Contact Contact Center Desktop Layout for Microsoft Dynamics](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/MS Dynamics) JSON.
+5. Lab 2 (IVR Contact Routing) completed.
 
 ## Optional: Start Microsoft Dynamics Trial
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/tXRt5PmWCAw?rel=0" title="CRM Integration Lab: Start Microsoft Dynamics Trial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/e2f95e82-93ab-4175-982f-339c9c8a05f3" width="100%" height="100%" title="Start Microsoft Dynamics Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<br/>
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/a03c6589-4d5d-49f8-a4d8-92c8cf7d14b3" width="100%" height="100%" title="Start Microsoft Dynamics Trial, Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 <br/>
 
@@ -309,7 +318,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 1: Install applications for MS Dynamics 365 environment
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/h3RWXoFZDJg?rel=0" title="CRM Integration Lab: Install applications for MS Dynamics 365 environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/e2e20b2c-cf18-48b5-bfb8-b2dbdde07823" width="100%" height="100%" title="Install Channel Integration Framework from AppSource" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### 1. Install Channel Integration Framework from AppSource
 
@@ -349,7 +360,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 2: Configure applications for MS Dynamics 365 environment
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/Ku3-ek0o4_0?rel=0" title="CRM Integration Lab: Configure applications for MS Dynamics 365 environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/39a8b835-0ed7-4ed3-97c3-26fb1c6d35f3" width="100%" height="100%" title="Configure Channel Integration Framework" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### 3. Configure Channel Integration Framework
 
@@ -382,6 +395,10 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - Press "Save & Close" button at the top of the page to save changes.
 
 ### 4. Create Desktop Layout file
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f41ce761-8672-41dd-b286-e18a1fba4913" width="100%" height="100%" title="Create Desktop Layout file" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
@@ -426,7 +443,15 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/PVJiQeNd2NQ?rel=0" title="CRM Integration Lab: Test Webex Contact Center Agent Desktop for MS Dynamics 365" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/9e5991cb-f16e-4f54-94ef-839d27916d63" width="100%" height="100%" title="MSD Call test 1.ABC" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<br/>
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="MSD Call Test 1.DE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### 7. Sign into Webex Contact Center for Microsoft Dynamics 365
 
@@ -490,13 +515,15 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
 2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
-3. Zendesk instance. For the details, refer the next section [Start Zendesk Trial](#Optional-Start-Zendesk-Trial).
+3. Zendesk instance. For the details, refer the next section [Start Zendesk Trial](#optional-start-zendesk-trial).
 4. Access to the [Webex Contact Center Desktop Layout for Zendesk](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Zendesk) JSON.
 5. Lab 2 (IVR Contact Routing) completed.
 
 ## Optional: Start Zendesk Trial
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/nhTgM2OQQCY?rel=0" title="CRM Integration Lab: Start Zendesk Trial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+    <iframe src="https://app.vidcast.io/share/embed/df78bfe5-195d-48c3-bb82-4cf4346ecf33" width="100%" height="100%" title="Start Zendesk Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 <br/>
 
@@ -532,9 +559,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 1: Install Webex Contact Center application on Zendesk instance
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/gxQtY3OC97w?rel=0" title="CRM Integration Lab: Install Cisco Webex Contact Center application for Zendesk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/5f58f249-f316-4ec3-9d98-2be79781d2e3" width="100%" height="100%" title="Install Webex Contact Center application on Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 1. Install Webex Contact Center application for Zendesk from Marketplace
+### Install Webex Contact Center application for Zendesk from Marketplace
 
 - Sign into your Zendesk instance. URL should have format - **https://< your-zendesk-subdomain >.zendesk.com**
   (This is the same page where you were at the end of last section)
@@ -556,9 +585,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 2: Configure Webex Contact Center tenant and Zendesk instance
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/OJp6-lKnDX4?rel=0" title="CRM Integration Lab: Configure Webex Contact Center tenant and Zendesk instance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/1dc62037-6473-4a65-9686-57d65a02a123" width="100%" height="100%" title="Configure Webex Contact Center tenant and Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 2. Create Custom Desktop Layout for Zendesk
+### Create Custom Desktop Layout for Zendesk
 
 - Navigate to [Zendesk Layout](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Zendesk) GitHub page.
 
@@ -576,11 +607,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Press **Save** to create the layout. Once layout is created make sure it is "Active".
 
-### 3. Create new Customer in Zendesk
+### Create new Customer in Zendesk
 
 - In Zendesk instance, click on "Customers" icon in the vertical menu bar on the left.
 
-- Click on **+Add customer** button. Provide the Customer Name and Email ID (optional) and press **Add** button.
+- Click on **Add customer** button. Provide the Customer Name and Email ID (optional) and press **Add** button.
 
 - Customer will be created and its info page will be opened. Click on **+add contact** link on the left side and enter the calling number which you will use to make test call to Webex Contact Center.
 
@@ -588,13 +619,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 3: Test Webex Contact Center Agent Desktop for Zendesk
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/9-TmtxanubU?rel=0" title="CRM Integration Lab: Test Webex Contact Center Agent Desktop for Zendesk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 4. Sign into Webex Contact Center for Zendesk
+### Sign into Webex Contact Center for Zendesk
 
 - Sign into your Zendesk instance.
 
-- Click on Webex icon (grey square with Webex logo inside) at the top right corner of Zendesk window to launch agent desktop.
+- Click on Webex icon (grey square with Webex logo inside) at the top right corner of Zendesk window to launch embedded agent desktop in the CRM.
 
 - Press **Sign In** button within "Webex Contact Center" app and provide agent credentials in the new browser tab.
 
@@ -604,7 +633,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Make the agent "Available" by selecting corresponding state.
 
-### 5. Make inbound test calls
+### a. Make inbound test call from a number registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/0bd7c450-020c-4187-b06f-b152ca8595e3" width="100%" height="100%" title="Call Test Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Initiate a call from the calling number which should be the same as the phone number of Zendesk customer created in the previous part of this lab.
 
@@ -614,7 +647,13 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Now hang up and wrap-up the call.
 
-- The ticket that was created at the start of the call will be updated with call details.
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
+
+### b. Make inbound test call from a number NOT registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b5e6a197-5389-4e35-93ba-418f5a5656d3" width="100%" height="100%" title="Call Test Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Initiate one more call from the calling number which does not match any customer in Zendesk and compare the behavior.
 
@@ -624,9 +663,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Now hang up and wrap-up the call.
 
-- The ticket that was created at the start of the call will be updated with call details.
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
 
 - Click on "Views" icon on the vertical menu bar on the left. You should be able to see both the tickets created after making the test calls.
+
+> **Note:** For Custom Desktop Layout configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
 
 ---
 
