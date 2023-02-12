@@ -5,8 +5,7 @@ date: 2022-09-09
 layout: post
 ---
 
-This page is under development
-TEST
+Work in progress. ETA is the end of February.
 
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>

@@ -5,7 +5,7 @@ date: 2022-04-04
 layout: post
 ---
 
-Supervisor Desktop
+Work in progress. ETA is the end of February.
 
 
 
