@@ -642,7 +642,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click on "Views" icon on the vertical menu bar on the left. You should be able to see both the tickets created after making the test calls.
 
-> **Note:** For Desktop Layout Configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
+> **Note:** For Custom Desktop Layout Configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
 
 ---
 
