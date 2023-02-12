@@ -32,7 +32,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - [9. WebexCC Salesforce Desktop Layout Configuration](#9-webexcc-salesforce-desktop-layout-configuration)
 - [Login Agent and Make a Test Call](#login-agent-make-call)
 
-[6.2 Microsoft Dynamics 365 integration](#42-microsoft-dynamics-365-integration)
+[6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
 
 - [Optional: Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
 - [Part 1: Install applications for MS Dynamics 365 environment](#part-1-install-applications-for-ms-dynamics-365-environment)
@@ -274,7 +274,15 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Optional: Start Microsoft Dynamics Trial
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/tXRt5PmWCAw?rel=0" title="CRM Integration Lab: Start Microsoft Dynamics Trial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/e2f95e82-93ab-4175-982f-339c9c8a05f3" width="100%" height="100%" title="Start Microsoft Dynamics Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<br/>
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/a03c6589-4d5d-49f8-a4d8-92c8cf7d14b3" width="100%" height="100%" title="Start Microsoft Dynamics Trial, Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 <br/>
 
@@ -310,7 +318,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 1: Install applications for MS Dynamics 365 environment
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/h3RWXoFZDJg?rel=0" title="CRM Integration Lab: Install applications for MS Dynamics 365 environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/e2e20b2c-cf18-48b5-bfb8-b2dbdde07823" width="100%" height="100%" title="Install Channel Integration Framework from AppSource" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### 1. Install Channel Integration Framework from AppSource
 
@@ -350,7 +360,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 2: Configure applications for MS Dynamics 365 environment
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/Ku3-ek0o4_0?rel=0" title="CRM Integration Lab: Configure applications for MS Dynamics 365 environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/39a8b835-0ed7-4ed3-97c3-26fb1c6d35f3" width="100%" height="100%" title="Configure Channel Integration Framework" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### 3. Configure Channel Integration Framework
 
@@ -383,6 +395,10 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - Press "Save & Close" button at the top of the page to save changes.
 
 ### 4. Create Desktop Layout file
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f41ce761-8672-41dd-b286-e18a1fba4913" width="100%" height="100%" title="Create Desktop Layout file" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
@@ -427,7 +443,15 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/PVJiQeNd2NQ?rel=0" title="CRM Integration Lab: Test Webex Contact Center Agent Desktop for MS Dynamics 365" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/9e5991cb-f16e-4f54-94ef-839d27916d63" width="100%" height="100%" title="MSD Call test 1.ABC" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<br/>
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="MSD Call Test 1.DE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### 7. Sign into Webex Contact Center for Microsoft Dynamics 365
 
