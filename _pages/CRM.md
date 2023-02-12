@@ -268,9 +268,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
 2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
-3. An MS Dynamics Sales instance. For the details, refer the next section "Start Microsoft Dynamics Trial"
-4. Access to the [Webex Contact Contact Center Desktop Layout for Microsoft Dynamics](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples/Layouts/MS Dynamics/) JSON.
-5. Lab 2 (IVR and Contact Routing) completed.
+3. An MS Dynamics Sales instance. For the details, refer the next section [Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
+4. Access to the [Webex Contact Contact Center Desktop Layout for Microsoft Dynamics](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/MS Dynamics) JSON.
+5. Lab 2 (IVR Contact Routing) completed.
 
 ## Optional: Start Microsoft Dynamics Trial
 
