@@ -324,7 +324,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 > **Note:** If you see your email ID in the user name, wait for sometime. It may take upto 20 minutes to update the Microsoft-created user details there.
 
-- Next step is to Sign in to [**Power Platform Admin Center**](https://admin.powerplatform.microsoft.com) with the user name we got from the last step and click **Next**.
+- Next step is to Sign in to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) with the user name we got from the last step and click **Next**.
 
 - Since we do not have the password of this user yet, click **Forgot my password** and follow the wizard to create a new password.
 
