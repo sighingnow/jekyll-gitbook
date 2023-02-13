@@ -66,7 +66,7 @@ This lab is designed to introduce the audience to the digital channels (Webex Co
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## **1. Webex Connect architecture**
@@ -139,7 +139,6 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
 # Lab.12.2 - Connect GUI overview
@@ -248,7 +247,6 @@ The Settings session allows the administrator to review and manage users and tea
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
 # Lab.12.3 - Engage GUI overview
@@ -342,7 +340,6 @@ Within the setting section the administrator can control some additional useful 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
 # Lab.12.4 - User Management in Connect
@@ -380,7 +377,7 @@ This lab is designed to introduce the Connect User Management structure. Through
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## **1. User Roles and Permissions**
@@ -440,8 +437,6 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
-
 
 ---
 # Lab.12.5 - Digital Channels Pre-configuration
@@ -478,7 +473,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## Configuration Order
@@ -623,7 +618,6 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 # Lab.12.6 - Flow Builder
@@ -739,7 +733,6 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -785,8 +778,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
-
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## Configuration Order
@@ -1033,12 +1025,11 @@ Now create a new client ID that will be used to identify your application to Goo
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
 # Lab.12.8 - Chat Channel Configuration
----
+
 
 ## Table of Contents
 
@@ -1085,8 +1076,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
-
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. \[Optional\] Create a service
@@ -1387,13 +1377,11 @@ Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123L
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
 
 # Lab.12.9 - Facebook Messenger Channel Configuration
----
 
 
 ## Table of Contents
@@ -1435,7 +1423,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Facebook Page configuration
@@ -1646,11 +1634,11 @@ Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123L
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
 # Lab.12.10 - SMS Channel Configuration
+
 
 ## Table of Contents
 
@@ -1687,7 +1675,7 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. SMS number procurement
@@ -1768,7 +1756,6 @@ From the left side pane, click on Assets ---> Numbers
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -1815,7 +1802,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Verify WhatsApp Number Assignment
@@ -1966,7 +1953,6 @@ Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123L
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2063,7 +2049,6 @@ Let's create SMS template which notifies end user after incoming request over SM
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2209,7 +2194,6 @@ Here are few key points to note about Engage templates which provide better unde
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2382,7 +2366,6 @@ Provide version control over all changes the administrator applies on that speci
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2424,8 +2407,7 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
-
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Navigate to BOT Builder and Create bot
@@ -2466,7 +2448,6 @@ Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123L
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2505,7 +2486,7 @@ In this lab we will be creating a Task Bot using the Bot Builder in Webex Connec
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Create a new Task Bot
@@ -2623,7 +2604,6 @@ Time to test your new configuration:
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2668,7 +2648,7 @@ Option 2: Custom Event – Allows you to trigger rules or flows associated with 
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Introduction to Event Scheduler
@@ -2924,7 +2904,6 @@ Custom Events use source files containing data that will be used by flows when s
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2966,7 +2945,7 @@ In this lab, we will explore how an Inbound Webhook can be used to generate an e
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Create an Inbound Webhook
@@ -3044,7 +3023,6 @@ Request Body:
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -3290,7 +3268,6 @@ The error ***""description":"Chat ID provided does not exist","event":"conversat
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -3325,7 +3302,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Adding a Custom Node
@@ -3382,7 +3359,6 @@ Here a quick Demo via calling EP into Webhook to invoke custom node to update Wx
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -3423,7 +3399,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Login to Webex Connect portal
@@ -3516,7 +3492,6 @@ Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123L
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -3557,7 +3532,7 @@ Both variables are transferable between flows. In the second part of this lab in
 
 **Account** | **Username** | **Password**
 --- | --- | ---
-Webex Connect (Tenant Owner) | adminlabus@email.carehybrid.com | C1sc0!@#L@B123LL
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Fetching and Reporting Global Variable
@@ -3718,6 +3693,5 @@ var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
