@@ -274,17 +274,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Optional: Start Microsoft Dynamics Trial
 
+### Part 1 - Create Dynamics 365 Sales account
+
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/e2f95e82-93ab-4175-982f-339c9c8a05f3" width="100%" height="100%" title="Start Microsoft Dynamics Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-
-<br/>
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/a03c6589-4d5d-49f8-a4d8-92c8cf7d14b3" width="100%" height="100%" title="Start Microsoft Dynamics Trial, Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-
-<br/>
 
 - Navigate to [Dynamics 365 Free Trial](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) website
 
@@ -294,15 +288,29 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 > **Note:** If there is a notification about using work account, click on **set up** link to create new account. Then follow the wizard.
 
-- Enter the same email address at the first step of account creation wizard and press **Next**.
+- To verify your email address, click **Next**.
 
-- Complete the form with your personal details and click on **Next** to continue.
+- In the next window, click **Create account**.
 
-- Verify your account using either SMS or phone call.
+- Create a password and click **Next**.
 
-- Enter username, subdomain name under ".onmicrosoft.com" domain and password. Then press **Next** button.
+- Create a password and click **Next**.
 
-- Copy and note your username at the last step of the wizard and click on **Get Started** button to create an account.
+- Enter the security code that you have received in your email to verify and click **Next**.
+
+- Complete the form with your personal details and click **Next** to continue.
+
+- Complete the next form with your organization details and click **Save**.
+
+- Next, enter any random number when asked for "Tax ID or PAN registeration number" and click **Save**.
+
+- On the next page, click on **Launch Trial** to open your Dynamics 365 trial account.
+
+### Part 2 - Get Microsoft-created user credentials and login to Power Platform Admin center
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/a03c6589-4d5d-49f8-a4d8-92c8cf7d14b3" width="100%" height="100%" title="Start Microsoft Dynamics Trial, Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Sing into Power Platform Admin Center under created account by providing username (in the form of an e-mail address) and password.
 
