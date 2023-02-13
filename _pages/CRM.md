@@ -42,8 +42,8 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - [Install Cisco Webex Contact Center for Microsoft Dynamics from AppSource](#install-cisco-webex-contact-center-for-microsoft-dynamics-from-appsource)
 - [Part 2: Configure applications for MS Dynamics 365 environment](#part-2-configure-applications-for-ms-dynamics-365-environment)
   - [Configure Channel Integration Framework](#configure-channel-integration-framework)
-  - [Create Desktop Layout file](#create-desktop-layout-file)
-  - [Upload Desktop Layout to Webex Contact Center Mangement Portal](#upload-desktop-layout-to-webex-contact-center-management-portal)
+  - [Create Custom Desktop Layout file](#create-custom-desktop-layout-file)
+  - [Upload Custom Desktop Layout to Webex Contact Center Mangement Portal](#upload-custom-desktop-layout-to-webex-contact-center-management-portal)
   - [Update Security Policy on Control Hub](#update-security-policy-on-control-hub)
 - [Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365](#part-3-test-webex-contact-center-agent-desktop-for-ms-dynamics-365)
   - [Sign into Webex Contact Center for Microsoft Dynamics 365](#sign-into-webex-contact-center-for-microsoft-dynamics-365)
@@ -389,20 +389,20 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**
 
 - Click on **Open Environment** at the top of the environment page.
 
 - Choose **Channel Integration Framework** on the page with published apps.
 
-- Press **New** button at the top of "Channel Providers" page to create new channel provider.
+- Press **New** button at the top of "Channel Providers" page to create a new channel provider.
 
 - Complete channel provider configuration by providing the following details:
 
 | Parameter Name                | Parameter Value                    |
 | ----------------------------- | ---------------------------------- |
-| Name                          | Cisco Webex Contact Center         |
-| Label                         | Cisco Webex Contact Center         |
+| Name                          | Webex Contact Center               |
+| Label                         | Webex Contact Center               |
 | Channel URL                   | https://desktop.wxcc-us1.cisco.com |
 | Enable Outbound Communication | Yes                                |
 | Channel Order                 | 1                                  |
@@ -411,11 +411,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Select "Customer Services Hub" as Unified Interface Apps for the Channel.
 
-- Select all roles available for the channel.
+- Select the relevant roles for the channel.
 
 - Press "Save & Close" button at the top of the page to save changes.
 
-### Create Desktop Layout file
+### Create Custom Desktop Layout file
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/f41ce761-8672-41dd-b286-e18a1fba4913" width="100%" height="100%" title="Create Desktop Layout file" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -423,14 +423,14 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**
 
-- Rigth-click on the link under "Environment URL" and copy link value. For example: **https://org2a50d69e.crm11.dynamics.com/** <br/>
-  Then paste this URL into the text editor and save - we will need it later when creating Desktop Layout JSON file.
+- Note down the "Environment URL" under "Details" section. For example: **https://org2a50d69e.crm11.dynamics.com/** <br/>
+  We will need it while creating Custom Desktop Layout JSON file.
 
-- Navigate to [MS Dynamics Layout](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples/Layouts/MS%20Dynamics) page.
+- Navigate to [MS Dynamics Layout](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/MS%20Dynamics) page.
 
-- Click to "MSDynamics_Desktop.json" file. Copy the content of the file and paste it into any text editor.
+- Click on "MSDynamics_Desktop_xxxxx.json" file. Copy the contents of the file, paste it in any text editor.
 
 - Find "hostname" key and replace the value of this key by Environment URL which you noted before. For example:
 
@@ -440,13 +440,13 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Save the file with .json extension. For example, **MSDynamics_Desktop.json**
 
-### Upload Desktop Layout to Webex Contact Center Management Portal
+### Upload Custom Desktop Layout to Webex Contact Center Management Portal
 
 - Sing into [Webex Contact Center Managemnt Portal](https://portal.wxcc-us1.cisco.com/) of your lab pod.
 
 - Go to **Provisioning** -> **Desktop Layout** and press **New Layout** button.
 
-- Enter layout name (for example, "MS Dynamics 365"), press "Upload" and choose JSON file with layout you have created above. Once file is uploaded, make sure it is validated successfully.
+- Enter layout name (for example, "MS Dynamics 365"), press "Upload" and choose JSON file you have created above. Once file is uploaded, make sure it is validated successfully.
 
 - Click on "Teams" row and choose one or more teams.
 
@@ -468,35 +468,31 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/9e5991cb-f16e-4f54-94ef-839d27916d63" width="100%" height="100%" title="MSD Call test 1.ABC" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-<br/>
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="MSD Call Test 1.DE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-
 ### Sign into Webex Contact Center for Microsoft Dynamics 365
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**
 
 - Click on **Open Environment** at the top of the environment page to see the list of published apps on the Apps page.
 
-> **Note:** If you are forwarded to Channel Integration Framework page intead of Apps page, just click to **Channel Integration Framework** link at the top of the page near "Dynamics 365" title. Then you will see Apps page with the list of published apps.
+> **Note:** If you are forwarded to Channel Integration Framework page intead of Apps page, just click on **Channel Integration Framework** link at the top of the page near "Dynamics 365" title. Then you will see Apps page with the list of published apps.
 
 - Click on "Customer Service Hub" app and you will be redirected to Dashboards tab of Customer Service Hub.
 
-- Press **Sign In** button within "Cisco Webex Contact Center" app on the right-hand side and provide agent credentials in new borwser tab.
+- Click on the icon on the right side bar to open the embedded **Webex Contact Center** app inside the Dynamics CRM.
 
-- Once authentication is completed, provide "Dialed Number" / "Extension" and choose proper team within "Cisco Webex Contact Center" app.
+- Press **Sign In** button and provide agent credentials in a new browser tab.
 
-> **Note:** This team must have Desktop Layout for Dynamics 365 applied in Webex Contact Center Management Portal in the previous part of this lab.
+- Once authentication is completed, provide "Dial Number" / "Extension" and choose the proper team within "Webex Contact Center" app.
 
-- Make agent desktop "Available" by selecting corresponding state.
+> **Note:** This team must have the Custom Desktop Layout for Dynamics 365 applied in Webex Contact Center Management Portal in the previous part of this lab.
+
+- Make agent "Available" by selecting corresponding state.
 
 ### Create new contact record in MS Dynamics
 
-> **Note:** You may create new contact record in Dynamics 365 to test the scenario when calling number matches or does not match phone number of the contact.
+> **Note:** You may create new contact record in Dynamics 365 to test the scenario when calling number matches phone number of the contact.
 
 - Go to "Contacts" tab of Customer Service Hub and press "New" button at the top to create new account.
 
@@ -509,6 +505,10 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - Press "Save & Close" button to save the contact.
 
 ### Make inbound test calls
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="MSD Call Test 1.DE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Initiate a call from the calling number which matches the one configured under new contact created on the previous step.
 
