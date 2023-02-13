@@ -306,23 +306,37 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - On the next page, click on **Launch Trial** to open your Dynamics 365 trial account.
 
-### Part 2 - Get Microsoft-created user credentials and login to Power Platform Admin center
+> **Note:** Do not log out / refresh the browser at this point (without getting Microsoft-created user account details).
+
+### Part 2 - Get Microsoft-created user account details and login to Power Platform Admin center
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/a03c6589-4d5d-49f8-a4d8-92c8cf7d14b3" width="100%" height="100%" title="Start Microsoft Dynamics Trial, Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-- Sing into Power Platform Admin Center under created account by providing username (in the form of an e-mail address) and password.
+- In your Dynamics 365 trial account, click on the gear icon on the top right corner to go to **Settings** and then select **Personalization Settings** from the list.
 
-- In "New environment" dialog enter "Name", choose "Region" and press **Next**.
+- In the pop-up window, scroll down to the end and click on **user information** hyperlink. This will open user details in a new browser window.
 
-- In "Add database" dialog choose the language if needed and press **Save** to create an environment.
+- Copy and save the **User Name** displayed on that page. This user is created by microsoft and has microsoft domain added in the user name.
 
-- Use **Refresh** button at the top of "Environments" page and wait untill the status of new envornment is changed to "Ready".
+> **Note:** If you see your email ID in the user name, wait for sometime. It may take upto 20 minutes to update the Microsoft-created user details there.
 
-- Go to your e-mail inbox and click **Start your trial** link to activate trial.
+- Next step is to Sign in to [**Power Platform Admin Center**](admin.powerplatform.microsoft.com/) with the user name we got from the last step and click **Next**.
 
-- Once you are forwarded to "Microsoft 365 admin center" make sure that "Subscription status" is "Active".
+- Since we do not have the password of this user yet, click **Forgot my password** and follow the wizard to create a new password.
+
+- After creating the new password, click on **Sign in with your new password**
+
+- Enter the user name and password to login to **Power Platform Admin center**
+
+- Click on **Environments** from the left side navigation bar. You should be able to see a **Sales Trial** environment created with the Type - **Trial (subscription-based)**
+
+> **Note:** If you do not see Trial (subscription-based) enviornment created, follow the below steps to create one :
+> Under **Environments**, click on **New** button on the top.
+> In "New environment" dialog enter "Name", choose "Region", "Type" should be "Trial (subscription-based)" and press **Next**.
+> Choose "Language", "Currency". Toggle Dynamics 365 apps to enable it. Do not choose any apps to automatically deploy and press **Save** to create an environment.
+> Use **Refresh** button at the top of "Environments" page and wait untill the status of new envornment is changed to "Ready".
 
 ## Part 1: Install applications for MS Dynamics 365 environment
 
