@@ -351,21 +351,19 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**.
 
 - Click on **Dynamics 365 apps** link under "Resources" section of your environment.
 
 - Click on **Open AppSource** at the top of the apps page.
 
-- Search for "channel" on the AppSource page and choose "Dynamics 365 Channel Integration Framework" from the list.
+- Search for "channel" on the AppSource page and choose **Dynamics 365 Channel Integration Framework** from the list.
 
 - Press **Get it now** button on the app page to install it.
 
-- Sign into AppSource if needed using your username (in the form of an e-mail address). Then press **Get it now** on the app page one more time.
+- Sign into AppSource if needed using your username (with microsoft doamin in it). Then press **Get it now** on the app page one more time.
 
-- Complete the form by choosing Country/region, tick the checkbox to grant permission and press **Continue** button to proceed.
-
-- Select an environment, tick both checkboxes and press **Install** button to start the installation.
+- Choose the "Sales Trial" environment, tick both checkboxes and press **Install** button to start the installation.
 
 - Use **Refresh** button at the top of "Dynamics 365 apps" page and wait untill the status of "Dynamics 365 Channel Integration Framework" app is changed to "Installed".
 
@@ -373,11 +371,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click on **Open AppSource** at the top of the apps page one more time in order to navigate to AppSource.
 
-- Search for "webex" on the AppSource page and choose **Cisco Webex Contact Center for Microsoft Dynamics** from the list.
+- Search for "webex" on the AppSource page and choose **Webex Contact Center for Microsoft Dynamics** from the list.
 
 - Press **Get it now** button on the app page to install it.
-
-- Tick the checkbox to grant permission and press **Continue** button to proceed.
 
 - Select an environment, tick both checkboxes and press **Install** button to start the installation.
 
