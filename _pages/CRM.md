@@ -333,10 +333,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - Click on **Environments** from the left side navigation bar. You should be able to see a **Sales Trial** environment created with the Type - **Trial (subscription-based)**
 
 > **Note:** If you do not see Trial (subscription-based) enviornment created, follow the below steps to create one :
-> Under **Environments**, click on **New** button on the top.
-> In "New environment" dialog enter "Name", choose "Region", "Type" should be "Trial (subscription-based)" and press **Next**.
-> Choose "Language", "Currency". Toggle Dynamics 365 apps to enable it. Do not choose any apps to automatically deploy and press **Save** to create an environment.
-> Use **Refresh** button at the top of "Environments" page and wait untill the status of new envornment is changed to "Ready".
+>
+> - Under **Environments**, click on **New** button on the top.
+> - In "New environment" dialog enter "Name", choose "Region", "Type" should be "Trial (subscription-based)" and press **Next**.
+> - Choose "Language", "Currency". Toggle Dynamics 365 apps to enable it. Do not choose any apps to automatically deploy and press **Save** to create an environment.
+> - Use **Refresh** button at the top of "Environments" page and wait untill the status of new envornment is changed to "Ready".
 
 ## Part 1: Install applications for MS Dynamics 365 environment
 
