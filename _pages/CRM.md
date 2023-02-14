@@ -465,7 +465,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 ## Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/9e5991cb-f16e-4f54-94ef-839d27916d63" width="100%" height="100%" title="MSD Call test 1.ABC" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/9e5991cb-f16e-4f54-94ef-839d27916d63" width="100%" height="100%" title="Sign into Webex Contact Center for Microsoft Dynamics 365" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 ### Sign into Webex Contact Center for Microsoft Dynamics 365
@@ -507,26 +507,26 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 ### Make inbound test calls
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="MSD Call Test 1.DE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="Make inbound test calls" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 - Initiate a call from the calling number which matches the one configured under new contact created on the previous step.
 
-- Answer the call by the agent and make sure you see screen pop with the details of new contact created above.
+- Answer the call by the agent. You should see the screen pop with the details of new contact created above.
 
 - Answer the call and wait few seconds. Then hang up and wrap-up the call.
 
-- Make sure you see activity record with call details created within MS Dynamics. "Call From" must be pre-populated with contact name.
+- You should see an activity record created with call details captured within MS Dynamics. “Call From” must be pre-populated with contact name.
 
 - Initiate one more call from calling number which does not match any contact in MS Dynamics and compare the behavior.
 
-- Answer the call by the agent and make sure you see screen pop with "No results found" notification.
+- Answer the call by the agent. You should see the screen pop with "No results found" notification.
 
 - Answer the call and wait few seconds. Then hang up and wrap-up the call.
 
-- Make sure you see activity record with call details created within MS Dynamics. "Call From" must be empty.
+- You should see an activity record created with call details captured within MS Dynamics. “Call From” must be empty.
 
-- Go to "Activities" and make sure you see both records created after the calls.
+- Go to "Activities" and you should see both records created after the calls.
 
 # 6.3 Service Now integration
 
