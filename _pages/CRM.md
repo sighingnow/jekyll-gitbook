@@ -35,18 +35,20 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 [6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
 
 - [Optional: Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
+  - [Step 1 : Create Dynamics 365 Sales account](#step-1--create-dynamics-365-sales-account)
+  - [Step 2 : Get Microsoft-created user account details and Login to Power Platform Admin center](#step-2--get-microsoft-created-user-account-details-and-login-to-power-platform-admin-center)
 - [Part 1: Install applications for MS Dynamics 365 environment](#part-1-install-applications-for-ms-dynamics-365-environment)
-  - [1. Install Channel Integration Framework from AppSource](#1-install-channel-integration-framework-from-appsource)
-  - [2. Install Cisco Webex Contact Center for Microsoft Dynamics from AppSource](#2-install-cisco-webex-contact-center-for-microsoft-dynamics-from-appsource)
+  - [Install Channel Integration Framework from AppSource](#install-channel-integration-framework-from-appsource)
+  - [Install Cisco Webex Contact Center for Microsoft Dynamics from AppSource](#install-cisco-webex-contact-center-for-microsoft-dynamics-from-appsource)
 - [Part 2: Configure applications for MS Dynamics 365 environment](#part-2-configure-applications-for-ms-dynamics-365-environment)
-  - [3. Configure Channel Integration Framework](#3-configure-channel-integration-framework)
-  - [4. Create Desktop Layout file](#4-create-desktop-layout-file)
-  - [5. Upload Desktop Layout to Webex Contact Center Mangement Portal](#5-upload-desktop-layout-to-webex-contact-center-management-portal)
-  - [6. Update Security Policy on Control Hub](#6-update-security-policy-on-control-hub)
+  - [Configure Channel Integration Framework](#configure-channel-integration-framework)
+  - [Create Custom Desktop Layout file](#create-custom-desktop-layout-file)
+  - [Upload Custom Desktop Layout to Webex Contact Center Mangement Portal](#upload-custom-desktop-layout-to-webex-contact-center-management-portal)
+  - [Update Security Policy on Control Hub](#update-security-policy-on-control-hub)
 - [Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365](#part-3-test-webex-contact-center-agent-desktop-for-ms-dynamics-365)
-  - [7. Sign into Webex Contact Center for Microsoft Dynamics 365](#7-sign-into-webex-contact-center-for-microsoft-dynamics-365)
-  - [8. Create new contact record in MS Dynamics](#8-create-new-contact-record-in-ms-dynamics)
-  - [9. Make inbound test calls](#9-make-inbound-test-calls)
+  - [Sign into Webex Contact Center for Microsoft Dynamics 365](#sign-into-webex-contact-center-for-microsoft-dynamics-365)
+  - [Create new contact record in MS Dynamics](#create-new-contact-record-in-ms-dynamics)
+  - [Make inbound test calls](#make-inbound-test-calls)
 
 [6.3 Zendesk integration](#64-zendesk-integration)
 
@@ -274,17 +276,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Optional: Start Microsoft Dynamics Trial
 
+### Step 1 : Create Dynamics 365 Sales account
+
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/e2f95e82-93ab-4175-982f-339c9c8a05f3" width="100%" height="100%" title="Start Microsoft Dynamics Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
-
-<br/>
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/a03c6589-4d5d-49f8-a4d8-92c8cf7d14b3" width="100%" height="100%" title="Start Microsoft Dynamics Trial, Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-
-<br/>
 
 - Navigate to [Dynamics 365 Free Trial](https://dynamics.microsoft.com/en-us/dynamics-365-free-trial/) website
 
@@ -294,27 +290,56 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 > **Note:** If there is a notification about using work account, click on **set up** link to create new account. Then follow the wizard.
 
-- Enter the same email address at the first step of account creation wizard and press **Next**.
+- To verify your email address, click **Next**.
 
-- Complete the form with your personal details and click on **Next** to continue.
+- In the next window, click **Create account**.
 
-- Verify your account using either SMS or phone call.
+- Create a password and click **Next**.
 
-- Enter username, subdomain name under ".onmicrosoft.com" domain and password. Then press **Next** button.
+- Create a password and click **Next**.
 
-- Copy and note your username at the last step of the wizard and click on **Get Started** button to create an account.
+- Enter the security code that you have received in your email to verify and click **Next**.
 
-- Sing into Power Platform Admin Center under created account by providing username (in the form of an e-mail address) and password.
+- Complete the form with your personal details and click **Next** to continue.
 
-- In "New environment" dialog enter "Name", choose "Region" and press **Next**.
+- Complete the next form with your organization details and click **Save**.
 
-- In "Add database" dialog choose the language if needed and press **Save** to create an environment.
+- Next, enter any random number when asked for "Tax ID or PAN registeration number" and click **Save**.
 
-- Use **Refresh** button at the top of "Environments" page and wait untill the status of new envornment is changed to "Ready".
+- On the next page, click on **Launch Trial** to open your Dynamics 365 trial account.
 
-- Go to your e-mail inbox and click **Start your trial** link to activate trial.
+> **Note:** Do not log out / refresh the browser at this point (without getting Microsoft-created user account details).
 
-- Once you are forwarded to "Microsoft 365 admin center" make sure that "Subscription status" is "Active".
+### Step 2 : Get Microsoft-created user account details and Login to Power Platform Admin center
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/a03c6589-4d5d-49f8-a4d8-92c8cf7d14b3" width="100%" height="100%" title="Start Microsoft Dynamics Trial, Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- In your Dynamics 365 trial account, click on the gear icon on the top right corner to go to **Settings** and then select **Personalization Settings** from the list.
+
+- In the pop-up window, scroll down to the end and click on **user information** hyperlink. This will open user details in a new browser window.
+
+- Copy and save the **User Name** displayed on that page. This user is created by microsoft and has microsoft domain added in the user name.
+
+> **Note:** If you see your email ID in the user name, wait for sometime. It may take upto 20 minutes to update the Microsoft-created user details there.
+
+- Next step is to Sign in to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) with the user name we got from the last step and click **Next**.
+
+- Since we do not have the password of this user yet, click **Forgot my password** and follow the wizard to create a new password.
+
+- After creating the new password, click on **Sign in with your new password**
+
+- Enter the user name and password to login to **Power Platform Admin center**
+
+- Click on **Environments** from the left side navigation bar. You should be able to see a **Sales Trial** environment created with the Type - **Trial (subscription-based)**
+
+> **Note:** If you do not see Trial (subscription-based) enviornment created, follow the below steps to create one :
+>
+> - Under **Environments**, click on **New** button on the top.
+> - In "New environment" dialog enter "Name", choose "Region", "Type" should be "Trial (subscription-based)" and press **Next**.
+> - Choose "Language", "Currency". Toggle Dynamics 365 apps to enable it. Do not choose any apps to automatically deploy and press **Save** to create an environment.
+> - Use **Refresh** button at the top of "Environments" page and wait untill the status of new envornment is changed to "Ready".
 
 ## Part 1: Install applications for MS Dynamics 365 environment
 
@@ -322,37 +347,33 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/e2e20b2c-cf18-48b5-bfb8-b2dbdde07823" width="100%" height="100%" title="Install Channel Integration Framework from AppSource" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### 1. Install Channel Integration Framework from AppSource
+### Install Channel Integration Framework from AppSource
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**.
 
 - Click on **Dynamics 365 apps** link under "Resources" section of your environment.
 
 - Click on **Open AppSource** at the top of the apps page.
 
-- Search for "channel" on the AppSource page and choose "Dynamics 365 Channel Integration Framework" from the list.
+- Search for "channel" on the AppSource page and choose **Dynamics 365 Channel Integration Framework** from the list.
 
 - Press **Get it now** button on the app page to install it.
 
-- Sign into AppSource if needed using your username (in the form of an e-mail address). Then press **Get it now** on the app page one more time.
+- Sign into AppSource if needed using your username (with microsoft doamin in it). Then press **Get it now** on the app page one more time.
 
-- Complete the form by choosing Country/region, tick the checkbox to grant permission and press **Continue** button to proceed.
-
-- Select an environment, tick both checkboxes and press **Install** button to start the installation.
+- Choose the "Sales Trial" environment, tick both checkboxes and press **Install** button to start the installation.
 
 - Use **Refresh** button at the top of "Dynamics 365 apps" page and wait untill the status of "Dynamics 365 Channel Integration Framework" app is changed to "Installed".
 
-### 2. Install Cisco Webex Contact Center for Microsoft Dynamics from AppSource
+### Install Cisco Webex Contact Center for Microsoft Dynamics from AppSource
 
 - Click on **Open AppSource** at the top of the apps page one more time in order to navigate to AppSource.
 
-- Search for "webex" on the AppSource page and choose **Cisco Webex Contact Center for Microsoft Dynamics** from the list.
+- Search for "webex" on the AppSource page and choose **Webex Contact Center for Microsoft Dynamics** from the list.
 
 - Press **Get it now** button on the app page to install it.
-
-- Tick the checkbox to grant permission and press **Continue** button to proceed.
 
 - Select an environment, tick both checkboxes and press **Install** button to start the installation.
 
@@ -364,24 +385,24 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/39a8b835-0ed7-4ed3-97c3-26fb1c6d35f3" width="100%" height="100%" title="Configure Channel Integration Framework" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### 3. Configure Channel Integration Framework
+### Configure Channel Integration Framework
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**
 
 - Click on **Open Environment** at the top of the environment page.
 
 - Choose **Channel Integration Framework** on the page with published apps.
 
-- Press **New** button at the top of "Channel Providers" page to create new channel provider.
+- Press **New** button at the top of "Channel Providers" page to create a new channel provider.
 
 - Complete channel provider configuration by providing the following details:
 
 | Parameter Name                | Parameter Value                    |
 | ----------------------------- | ---------------------------------- |
-| Name                          | Cisco Webex Contact Center         |
-| Label                         | Cisco Webex Contact Center         |
+| Name                          | Webex Contact Center               |
+| Label                         | Webex Contact Center               |
 | Channel URL                   | https://desktop.wxcc-us1.cisco.com |
 | Enable Outbound Communication | Yes                                |
 | Channel Order                 | 1                                  |
@@ -390,11 +411,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Select "Customer Services Hub" as Unified Interface Apps for the Channel.
 
-- Select all roles available for the channel.
+- Select the relevant roles for the channel.
 
 - Press "Save & Close" button at the top of the page to save changes.
 
-### 4. Create Desktop Layout file
+### Create Custom Desktop Layout file
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/f41ce761-8672-41dd-b286-e18a1fba4913" width="100%" height="100%" title="Create Desktop Layout file" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -402,14 +423,14 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**
 
-- Rigth-click on the link under "Environment URL" and copy link value. For example: **https://org2a50d69e.crm11.dynamics.com/** <br/>
-  Then paste this URL into the text editor and save - we will need it later when creating Desktop Layout JSON file.
+- Note down the "Environment URL" under "Details" section. For example: **https://org2a50d69e.crm11.dynamics.com/** <br/>
+  We will need it while creating Custom Desktop Layout JSON file.
 
-- Navigate to [MS Dynamics Layout](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples/Layouts/MS%20Dynamics) page.
+- Navigate to [MS Dynamics Layout](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/MS%20Dynamics) page.
 
-- Click to "MSDynamics_Desktop.json" file. Copy the content of the file and paste it into any text editor.
+- Click on "MSDynamics_Desktop_xxxxx.json" file. Copy the contents of the file, paste it in any text editor.
 
 - Find "hostname" key and replace the value of this key by Environment URL which you noted before. For example:
 
@@ -419,13 +440,13 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Save the file with .json extension. For example, **MSDynamics_Desktop.json**
 
-### 5. Upload Desktop Layout to Webex Contact Center Management Portal
+### Upload Custom Desktop Layout to Webex Contact Center Management Portal
 
 - Sing into [Webex Contact Center Managemnt Portal](https://portal.wxcc-us1.cisco.com/) of your lab pod.
 
 - Go to **Provisioning** -> **Desktop Layout** and press **New Layout** button.
 
-- Enter layout name (for example, "MS Dynamics 365"), press "Upload" and choose JSON file with layout you have created above. Once file is uploaded, make sure it is validated successfully.
+- Enter layout name (for example, "MS Dynamics 365"), press "Upload" and choose JSON file you have created above. Once file is uploaded, make sure it is validated successfully.
 
 - Click on "Teams" row and choose one or more teams.
 
@@ -433,7 +454,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Press **Save** to create the layout. Once layout is created make sure it is "Active".
 
-### 6. Update Security Policy on Control Hub
+### Update Security Policy on Control Hub
 
 - Sign into [Webex Control Hub](https://admin.webex.com/) of your lab pod.
 
@@ -444,38 +465,34 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 ## Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/9e5991cb-f16e-4f54-94ef-839d27916d63" width="100%" height="100%" title="MSD Call test 1.ABC" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/9e5991cb-f16e-4f54-94ef-839d27916d63" width="100%" height="100%" title="Sign into Webex Contact Center for Microsoft Dynamics 365" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-<br/>
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="MSD Call Test 1.DE" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-
-### 7. Sign into Webex Contact Center for Microsoft Dynamics 365
+### Sign into Webex Contact Center for Microsoft Dynamics 365
 
 - Sign into [Microsoft Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
-- Go to "Environments" and click on the environment you created for this lab.
+- Go to "Environments" and click on the environment named **Sales Trial**
 
 - Click on **Open Environment** at the top of the environment page to see the list of published apps on the Apps page.
 
-> **Note:** If you are forwarded to Channel Integration Framework page intead of Apps page, just click to **Channel Integration Framework** link at the top of the page near "Dynamics 365" title. Then you will see Apps page with the list of published apps.
+> **Note:** If you are forwarded to Channel Integration Framework page intead of Apps page, just click on **Channel Integration Framework** link at the top of the page near "Dynamics 365" title. Then you will see Apps page with the list of published apps.
 
 - Click on "Customer Service Hub" app and you will be redirected to Dashboards tab of Customer Service Hub.
 
-- Press **Sign In** button within "Cisco Webex Contact Center" app on the right-hand side and provide agent credentials in new borwser tab.
+- Click on the icon on the right side bar to open the embedded **Webex Contact Center** app inside the Dynamics CRM.
 
-- Once authentication is completed, provide "Dialed Number" / "Extension" and choose proper team within "Cisco Webex Contact Center" app.
+- Press **Sign In** button and provide agent credentials in a new browser tab.
 
-> **Note:** This team must have Desktop Layout for Dynamics 365 applied in Webex Contact Center Management Portal in the previous part of this lab.
+- Once authentication is completed, provide "Dial Number" / "Extension" and choose the proper team within "Webex Contact Center" app.
 
-- Make agent desktop "Available" by selecting corresponding state.
+> **Note:** This team must have the Custom Desktop Layout for Dynamics 365 applied in Webex Contact Center Management Portal in the previous part of this lab.
 
-### 8. Create new contact record in MS Dynamics
+- Make agent "Available" by selecting corresponding state.
 
-> **Note:** You may create new contact record in Dynamics 365 to test the scenario when calling number matches or does not match phone number of the contact.
+### Create new contact record in MS Dynamics
+
+> **Note:** You may create new contact record in Dynamics 365 to test the scenario when calling number matches phone number of the contact.
 
 - Go to "Contacts" tab of Customer Service Hub and press "New" button at the top to create new account.
 
@@ -487,25 +504,29 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Press "Save & Close" button to save the contact.
 
-### 9. Make inbound test calls
+### Make inbound test calls
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b834ac8b-d54f-444e-b077-4be1569d6be3" width="100%" height="100%" title="Make inbound test calls" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Initiate a call from the calling number which matches the one configured under new contact created on the previous step.
 
-- Answer the call by the agent and make sure you see screen pop with the details of new contact created above.
+- Answer the call by the agent. You should see the screen pop with the details of new contact created above.
 
 - Answer the call and wait few seconds. Then hang up and wrap-up the call.
 
-- Make sure you see activity record with call details created within MS Dynamics. "Call From" must be pre-populated with contact name.
+- You should see an activity record created with call details captured within MS Dynamics. “Call From” must be pre-populated with contact name.
 
 - Initiate one more call from calling number which does not match any contact in MS Dynamics and compare the behavior.
 
-- Answer the call by the agent and make sure you see screen pop with "No results found" notification.
+- Answer the call by the agent. You should see the screen pop with "No results found" notification.
 
 - Answer the call and wait few seconds. Then hang up and wrap-up the call.
 
-- Make sure you see activity record with call details created within MS Dynamics. "Call From" must be empty.
+- You should see an activity record created with call details captured within MS Dynamics. “Call From” must be empty.
 
-- Go to "Activities" and make sure you see both records created after the calls.
+- Go to "Activities" and you should see both records created after the calls.
 
 # 6.3 Service Now integration
 

@@ -9,28 +9,27 @@ layout: post
 | Topic                                                                                                                        | Lab Type          | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Read & Understand + Practical Lab     | EASY            | 15 min           |
-| [Connect GUI overview](#lab122---connect-gui-overview) | Practical Lab     | EASY            | 15 min           |
-| [Engage GUI overview](#lab123---Engage-GUI-overview) | Read & Understand | EASY            | 15 min           |
-| [User Management in Connect](#lab124---User–Management-in-Connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
-| [Digital Channels Pre-configuration](#lab125---Digital-Channels-Pre---configuration) | Practical Lab | EASY            | 20 min           |
-| [Flow Builder](#lab126---Flow-Builder) | Read & Understand | EASY            | 20 min           |
-| [Email Channel Configuration](#lab127---Email-Channel-Configuration) | Practical Lab | EASY            | 25 min           |
+| [Connect GUI overview](#lab122---connect-gui-overview) | Read & Understand     | EASY            | 15 min           |
+| [Engage GUI overview](#lab123---engage-gui-overview) | Read & Understand | EASY            | 15 min           |
+| [User Management in Connect](#lab124---user–management-in-connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
+| [Digital Channels Pre-configuration](#lab125---digital-channels-pre---configuration) | Practical Lab | EASY            | 20 min           |
+| [Flow Builder](#lab126---flow-builder) | Read & Understand | EASY            | 20 min           |
+| [Email Channel Configuration](#lab127---email-channel-configuration) | Practical Lab | EASY            | 25 min           |
 | [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 30 min           |
-| [Facebook Messenger Channel Configuration](#lab129---Facebook-Messenger-Channel-Configuration) | Practical Lab | EASY            | 25 min           |
-| [SMS Channel Configuration](#lab1210---SMS-Channel-Configuration) | Practical Lab | EASY            | 20 min           |
-| [WhatsApp Channel Configuration](#lab1211---WhatsApp-Channel-Configuration) | Practical Lab | EASY            | 25 min           |
+| [Facebook Messenger Channel Configuration](#lab129---facebook-messenger-channel-configuration) | Practical Lab | EASY            | 25 min           |
+| [SMS Channel Configuration](#lab1210---sms-channel-configuration) | Practical Lab | EASY            | 20 min           |
+| [WhatsApp Channel Configuration](#lab1211---whatsapp-channel-configuration) | Practical Lab | EASY            | 25 min           |
 | [Connect Templates](#lab1212---connect-templates) | Read & Understand | EASY            | 20 min           |
 | [Engage Templates](#lab1213---engage-templates) | Read & Understand | EASY            | 25 min           |
-| [Introduction to BOTs](#lab1214---) | Read & Understand | MED            | 20 min           |
-| [Q&A BOTs](#lab1215---Q&A-BOTs) | Practical Lab | MED            | 25 min           |
-| [Task BOTs](#lab1216---Task-BOTs) | Practical Lab | HARD            | 30 min           |
-| [Event Scheduler](#lab1217---Event-Scheduler) | Read & Understand | MED            | 15 min           |
-| [Inbound Webhooks](#lab1218---Inbound-Webhooks) | Practical Lab | HARD            | 35 min           |
+| [Introduction to BOTs](#lab1214---introduction-to-bots) | Read & Understand | MED            | 20 min           |
+| [Q&A BOTs](#lab1215---q&a-bots) | Practical Lab | MED            | 25 min           |
+| [Task BOTs](#lab1216---task-bots) | Practical Lab | HARD            | 30 min           |
+| [Event Scheduler](#lab1217---event-scheduler) | Read & Understand | MED            | 15 min           |
+| [Inbound Webhooks](#lab1218---inbound-webhooks) | Practical Lab | HARD            | 35 min           |
 | [Troubleshooting](#lab1219---troubleshooting) | Practical Lab | MED            | 60 min           |
-| [Creating Custom Nodes](#lab1220---Creating-Custom-Nodes) | Practical Lab | MED            | 30 min           |
-| [Events and Triggers](#lab1221---Event-and-Triggers) | Practical Lab | MED            | 30 min           |
-| [Global and Flow variable support in Digital channels](#lab1222---Global-and-Flow–variable–support–in-Digital-channels) | Practical Lab | MED            | 45 min           |
-
+| [Creating Custom Nodes](#lab1220---creating-custom-nodes) | Practical Lab | MED            | 30 min           |
+| [Events and Triggers](#lab1221---event-and-triggers) | Practical Lab | MED            | 30 min           |
+| [Global and Flow variable support in Digital channels](#lab1222---global-and-flow–variable–support–in-digital-channels) | Practical Lab | MED            | 45 min           |
 
 
 
@@ -54,6 +53,21 @@ This lab is designed to introduce the audience to the digital channels (Webex Co
 #### **Pre-requisite**
 
 1.  Admin credentials to login to Control Hub and Webex Contact Center administration portal.
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
+
 
 ## **1. Webex Connect architecture**
 
@@ -125,7 +139,6 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
 # Lab.12.2 - Connect GUI overview
@@ -137,7 +150,9 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 | [Overview of Connect menu items](#Overview–of-Connect–menu-items) | Read & Understand         | EASY                | 15 min                 |
 
 
-#### **Introduction**
+## **Introduction**
+
+#### **Lab Objective**
 
 This lab is designed to introduce the Connect interface, which is used for the configuration and orchestration of all digital channels. In this lab you will not find configuration steps, the goal is to understand the purpose and use of each menu item.
 
@@ -232,7 +247,6 @@ The Settings session allows the administrator to review and manage users and tea
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
 # Lab.12.3 - Engage GUI overview
@@ -326,7 +340,6 @@ Within the setting section the administrator can control some additional useful 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 
 # Lab.12.4 - User Management in Connect
@@ -343,14 +356,29 @@ Within the setting section the administrator can control some additional useful 
 
 ## **Introduction**
 
-**Lab Objective**
+#### Lab Objective
 
 This lab is designed to introduce the Connect User Management structure. Throughout this lab you will learn how to add new administrator users in Connect and how to arrange user accesses.
 
-**Pre-requisite**
+#### Pre-requisite
 
 1.  Connect portal URL
 2.  Tenant Owner credentials to login to IMI Connect portal
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
+
 
 ## **1. User Roles and Permissions**
 
@@ -409,8 +437,6 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
-
 
 ---
 # Lab.12.5 - Digital Channels Pre-configuration
@@ -437,10 +463,18 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 #### Quick Links
 
-> Control Hub: https://admin.webex.com
-> Portal: https://portal.wxcc-us1.cisco.com/portal
-> Agent Desktop: https://desktop.wxcc-us1.cisco.com
-> Webex Connect: https://cl1podXXX.imiconnect.io/ (where XXX is your POD number)
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
+
 
 ## Configuration Order
 
@@ -584,7 +618,6 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 # Lab.12.6 - Flow Builder
@@ -700,7 +733,6 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -730,16 +762,23 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received Email account credentials.
-3. You have successfully completed the previous Lab1 **Preconfiguration**.
+3. You have successfully completed the previous Lab12.5 **Preconfiguration**.
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)**\
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Gmail: **[https://mail.google.com](https://mail.google.com)**\
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect: https://cl1pod<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## Configuration Order
@@ -986,12 +1025,11 @@ Now create a new client ID that will be used to identify your application to Goo
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
 # Lab.12.8 - Chat Channel Configuration
----
+
 
 ## Table of Contents
 
@@ -1023,15 +1061,22 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 2. You have admin credentials to complete configurations in Webex CC Management Portal and Engage Portal.
 3. You have admin credentials to complete configurations in Connect Portal.
 4. You have agent Credentials to handle the Chat.
-5. You have successfully completed the previous Lab1 **Preconfiguration**.
+5. You have successfully completed the previous Lab12.5 **Preconfiguration**.
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)**\
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect: https://cl1pod<ID\>.imiconnect.io/ (where \<ID\> is your POD number) 
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. \[Optional\] Create a service
@@ -1332,13 +1377,11 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
 
 # Lab.12.9 - Facebook Messenger Channel Configuration
----
 
 
 ## Table of Contents
@@ -1350,7 +1393,6 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 | [Create Entry Point and Queue](#3-Create-Entry-Point-and-Queue) | Practical Lab         | EASY                | 5 min                 |
 | [Create/Upload Facebook Messenger flow](#4-CreateUpload-Facebook-Messenger-flow) | Practical Lab         | EASY                | 5 min                 |
 | [Verification - start Facebook Chat and accept the request](#5-Verification---start-Facebook-Chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
-
 
 
 ## Introduction
@@ -1365,17 +1407,23 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 #### Pre-requisite
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
-2. You have successfully completed the previous Lab **Preconfiguration**
+2. You have successfully completed the previous Lab12.5 **Preconfiguration**
 3. You have a Facebook Account
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com)**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com)**\
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Connect: https://cl1pod**\<ID\>**.imiconnect.io/ (where **\<ID\>** is your POD number)
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Facebook Page configuration
@@ -1586,11 +1634,11 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
 # Lab.12.10 - SMS Channel Configuration
+
 
 ## Table of Contents
 
@@ -1602,23 +1650,32 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 | [Modifying the Flow](#4-Modifying-the-Flow) | Practical Lab         | EASY                | 5 min                 |
 
 
-
-## Quick Links
-
-https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Task.dita_14c9a756-8032-4b6a-8c95-3addb2825c8d
-
-
-## Lab Objective
+#### Lab Objective
 
 This lab is designed to complete required SMS configurations in Webex Connect. You will be able to initiate a contact from a mobile number (SMS) and will be able to accept and respond to the SMS contact by logging in as an agent.
 
-## Pre-requisite
+#### Pre-requisite
 
 - WxCC Portal, Agent Desktop and Webex connect URL
 - Admin credentials to complete configurations in WxCC portal and Webex connect.
 - Agent Credentials to Handle the Chat
 - SMS number procurement process should be completed (Please work with your PSAM)
 - SMS number should be assigned in your Webex Conenct tenant
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. SMS number procurement
@@ -1699,7 +1756,6 @@ From the left side pane, click on Assets ---> Numbers
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -1730,8 +1786,23 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received the WhatsApp number associated with your tenant.
-3. You have successfully completed the previous Lab **Preconfiguration**
+3. You have successfully completed the previous Lab12.5 **Preconfiguration**
 4. **Note**: WhatsApp Numbers cannot be procured directly from the Webex Contact Center integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Verify WhatsApp Number Assignment
@@ -1882,7 +1953,6 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -1899,7 +1969,10 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Introduction
 
+#### Lab Objective
+
 This section is designed to introduce Connect templates, which can be used for sending notifications from flows to the end user through various digital channels. In this section you will find configuration steps and examples of use. The goal is to understand the purpose of the most popular templates.
+
 
 ## 1. Understanding Connect Templates
 
@@ -1976,7 +2049,6 @@ Let's create SMS template which notifies end user after incoming request over SM
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -1993,6 +2065,8 @@ Let's create SMS template which notifies end user after incoming request over SM
 | [Verify Engage Template in Agent Desktop](#5-verify-engage-template-in-agent-desktop) | Read & Understand     | EASY            | 5 min            |
 
 ## Introduction
+
+#### Lab Objective
 
 This section is designed to introduce Engage templates, which can be used for quick reply from the agent desktop to the end user through various digital channels. In this section you will find configuration steps and examples of use. The goal is to understand the purpose of each template.
 
@@ -2120,7 +2194,6 @@ Here are few key points to note about Engage templates which provide better unde
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2130,10 +2203,10 @@ Here are few key points to note about Engage templates which provide better unde
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Understanding Connect Bots](#1-Understanding-Connect-Bots)             | Read & Understand | MED            | 5 min            |
-| [Access and navigation](#2-Access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
-| [Understand and navigate Q&A Bots](#3-Understand-and-navigate-Q&A-Bots) | Read & Understand     | MED            | 5 min            |
-| [Understand and navigate Task Bots](#3-Understand-and-navigate-Task-Bots) | Read & Understand     | MED            | 5 min            |
+| [Understanding Connect Bots](#1-understanding-connect-bots)             | Read & Understand | MED            | 5 min            |
+| [Access and navigation](#2-access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
+| [Understand and navigate Q&A Bots](#3-understand-and-navigate-q&a-bots) | Read & Understand     | MED            | 5 min            |
+| [Understand and navigate Task Bots](#3-understand-and-navigate-task-bots) | Read & Understand     | MED            | 5 min            |
 
 ## Introduction
 
@@ -2293,11 +2366,10 @@ Provide version control over all changes the administrator applies on that speci
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
-# Lab 12.15 - QnA BOTs
+# Lab.12.15 - QnA BOTs
 
 
 ## Table of Contents
@@ -2321,6 +2393,22 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 -   WxCC Portal, Agent Desktop and IMI connect URL.
 -   Admin credentials to complete configurations in WxCC portal and IMI connect.
 -   Agent Credentials to Handle FBM digital contact.
+-   Sample Facebook Flow configured.
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
+
 
 ## 1. Navigate to BOT Builder and Create bot
 
@@ -2360,7 +2448,6 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2386,6 +2473,20 @@ In this lab we will be creating a Task Bot using the Bot Builder in Webex Connec
 2.  Admin credentials to login to Connect administration portal.
 3.  A Connect flow (previously built and successfully tested).
 4.  Test agent credentials.
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Create a new Task Bot
@@ -2503,7 +2604,6 @@ Time to test your new configuration:
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2519,7 +2619,9 @@ Time to test your new configuration:
 | [Option 2 - Schedule Custom Event](#3-Option-2---Schedule-Custom–Event) | Practical Lab     | EASY            | 10 min            |
 
 
-## Lab Objective
+## Introduction
+
+#### Lab Objective
 
 In this Lab, we will learn about what is Event Scheduler, how it works & the various configuration options it provides. Please note, Event Scheduler mainly provides two configuration options i.e. SMS Event & Custom Event. You may choose to try either one or both of them.
 
@@ -2527,12 +2629,26 @@ Option 1:  SMS Event– Allows you to send SMS messages simply by processing th
 
 Option 2: Custom Event – Allows you to trigger rules or flows associated with the selected custom event. The variables required to trigger the custom event and for the successful execution of concerned flows/rules should be available in the file.
 
-## Pre-requisite
+#### Pre-requisite
 
 1.  You've received Administrator credentials to configure in Management Portal and Webex Connect.
 2.  At least one SMS number is already provisioned in Webex Connect.
 3.  Access to MS Excel or any other CSV file editor
 4.  You have successfully completed the previous Labs Pre-configuration, Email Configuration
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Introduction to Event Scheduler
@@ -2788,7 +2904,6 @@ Custom Events use source files containing data that will be used by flows when s
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2803,12 +2918,9 @@ Custom Events use source files containing data that will be used by flows when s
 | [Test the Inbound Webhook](#3-Test-the-Inbound-Webhook)  | Practical Lab | EASY          | 5 min           |
 
 
-## Quick Links
+## Introduction
 
-[https://help.imiconnect.io/docs/inbound-webhooks](https://help.imiconnect.io/docs/inbound-webhooks)
-
-
-## Lab Objective
+#### Lab Objective
 
 Inbound Webhooks generate a unique endpoint that can be embedded into your applications to notify Webex Connect of events occurring on business systems.This lab is designed to showcase the capabilities of an inbound Webhook in Webex Connect.
 
@@ -2816,11 +2928,24 @@ In this lab, we will explore how an Inbound Webhook can be used to generate an e
 
 ![12.18.1.png](/assets/images/12.18.1.png)
 
-
-## Pre-requisite
+#### Pre-requisite
 
 -   Admin credentials to login to WxCC and Webex Connect portal
 -   Knowledge of WxCC Connect flows and basic troubleshooting
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Create an Inbound Webhook
@@ -2898,7 +3023,6 @@ Request Body:
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -2916,10 +3040,11 @@ Request Body:
 
 ## Introduction
 
+#### Lab Objective
+
 This section is designed to introduce troubleshooting capabilites available for digital channels in Webex Connect platform. In addition there examples of the most common issues and the ways of how to fix them.
 
-
-## Pre-requisite
+#### Pre-requisite
 
 1. You received Webex CC Management Portal, Agent Desktop and Webex Connect URL .
 2. You have admin credentials for Webex CC Management Portal and Engage Portal.
@@ -3143,11 +3268,10 @@ The error ***""description":"Chat ID provided does not exist","event":"conversat
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
-# Lab 12.20 - Creating Custom Nodes
+# Lab.12.20 - Creating Custom Nodes
 
 ## Table of Contents
 
@@ -3156,18 +3280,29 @@ The error ***""description":"Chat ID provided does not exist","event":"conversat
 | [Adding a Custom Node](1#Adding-a-Custom-Node) | Practical Lab | MED           | 15 min           |
 | [Demo](#2-Demo) | Read & Understand | EASY          | 15 min           |
 
-## Quick Links
+## Introduction
 
--   [https://help.imiconnect.io/docs/custom-nodes](https://help.imiconnect.io/docs/custom-nodes)
--   [https://help.imiconnect.io/docs/configure-custom-integration-node](https://help.imiconnect.io/docs/configure-custom-integration-node)
-
-## Lab Objective
+#### Lab Objective
 
 This lab walks you through the creation of custom node and a demo of its usage. Custom nodes allow you to configure reusable integrations with your existing business system or with third-party applications using REST/SOAP APIs. In this sample example, we are going to show how you can integrate with WxCC and update Site name via calling into Entry Point.
 
-## Pre-requisite
+#### Pre-requisite
 
 -   Admin credentials to login to Webex Connect portal
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Adding a Custom Node
@@ -3224,7 +3359,6 @@ Here a quick Demo via calling EP into Webhook to invoke custom node to update Wx
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
@@ -3238,21 +3372,34 @@ Here a quick Demo via calling EP into Webhook to invoke custom node to update Wx
 | [Creating an Event in Webex Engage Portal](#2-Creating-an-Event-in-Webex-Engage-Portal)| Practical Lab | MED           | 10 min           |
 | [Test the Event Trigger](#3-Test-the-Event-Trigger) | Practical Lab | EASY          | 5 min           |
 
-## Quick Links
 
--   https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Generic_Topic.dita_47ceb6a2-e47c-4639-9a2c-dcde742cec2f-4
+## Introduction
 
-
-## Lab Objective
+#### Lab Objective
 
 This lab walks through the configuration of Events and Triggers in the Webex Contact Centre Engage Portal. Once configured, these can be invoked by an agent handling digital interactions to achieve the required use case.
 
 
-## Pre-requisite
+#### Pre-requisite
 
 -   Admin credentials to login to WxCC and Webex Connect portal
 -   Working inbound chat and routed flow
 -   Knowledge of WxCC Connect flows and basic troubleshooting
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Cisco Doc: **[Official Documentation](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Generic_Topic.dita_47ceb6a2-e47c-4639-9a2c-dcde742cec2f-4)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Login to Webex Connect portal
@@ -3345,11 +3492,10 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
 
-# Lab 12.22 - Global and Flow variable support in Digital channels
+# Lab.12.22 - Global and Flow variable support in Digital channels
 
 ## Table of Contents
 
@@ -3359,21 +3505,34 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 | [Configuring Flow variables](#2-Configuring-Flow-variables)| Practical Lab | MED           | 15 min           |
 | [Transfer Global and Flow variable values between Webex Connect flows](3#-Transfer-Global-and-Flow-variable-values-between-Webex-Connect-flows) | Practical Lab | MED           | 15 min           |
 
-## Quick Links
 
--   [https://help.imiconnect.io/docs/set-variable](https://help.imiconnect.io/docs/set-variable)
+## Introduction
 
-## Lab Objective
+#### Lab Objective
 
 This lab walks through the configuration of Global and Flow variables for digital channels. The behaviour of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
 
 Both variables are transferable between flows. In the second part of this lab in 12.24.3, we will configure the transfer of chat form entries received in the inbound chat flow to routed flow when agent accepts the inbound chat.
 
-## Pre-requisite
+#### Pre-requisite
 
 -   Admin credentials to login to WxCC and Webex Connect portal
 -   Working inbound chat and routed flow
 -   Knowledge of WxCC Global variables and Analyzer
+
+#### Quick Links
+
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
+#### Credentials
+
+**Account** | **Username** | **Password**
+--- | --- | ---
+Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Fetching and Reporting Global Variable
@@ -3534,6 +3693,5 @@ var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 **Congratulations, you have completed this section!**
 
-**We would like to keep track of your progress and make sure that we are giving you effective support. Please take approximately one minute to complete a short survey.**
 
 ---
