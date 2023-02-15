@@ -260,6 +260,18 @@ In this exercise we will copy a stock report to create a new custom report. The 
 
 ![DataRepos](/assets/images/Analyzer/DataRepos.png)
 
+There are 4 key `repositories` that we will learn about in this chapter:
+
+**Customer**
+
+- Customer Session Record (CSR)
+- Customer Activity Record (CAR)
+
+**Agent**
+
+- Agent Session Record (ASR)
+- Agent Activity Record (AAR)
+
 ## Table of Contents
 
 | Topic                                                                                   | Lab Type      | Dificulty Level | Estimated length |
@@ -272,60 +284,170 @@ In this exercise we will copy a stock report to create a new custom report. The 
 
 In this exercise, you will spend some time understanding the Webex Contact Center Data and schema in which data is stored.
 
-1. Navigate to Analyzer and click on Create New and select Visualization to create a new report that will be saved in your student folder.
+1. Navigate to Analyzer and click on `Create New` and select `Visualization` to create a new report that will be saved in your student folder.
 
-2. Select the Type as Customer Session Record.
+2. Select the Type as `Customer Session Record`.
 
-3. Select Start Time as Today.
+3. Select `Start Time` as **Today**.
 
-4. Click on Profile variables.
+4. Click on `Profile variables`.
 
 5. Add the following Profile variable of type Fields:
-   o Search for session and select “Contact Session ID” under fields and drag&drop it into Profile Variables.
 
-o Select the Value of Contact Session ID under Formula.
+- Search for session and select `Contact Session ID` under fields and drag&drop it into Profile Variables.
+- Select the Value of Contact Session ID under Formula.
 
-o Next, add the below fields similarly and Save the report as 3.1_CSR_Today_ValueReport in your folder after you have added all of them.
-• DNIS
-• Entry point
-• IVR Script Name
-• Final Queue Name
-• Team
-• Agent
+6. Next, add the below fields similarly and Save the report as `3.1_CSR_Today_ValueReport` in your folder after you have added all of them.
 
-o Preview the Report.
+- DNIS
+- Entry point
+- IVR Script Name
+- Final Queue Name
+- Team
+- Agent
 
-Outcome 10: Successfully create report 3.1_CSR_Today_ValueReport inside your student folder. 6. Next click on any session ID, then click on Zoom Icon .
+7. `Preview` the Report.
 
-7. Make a note of all the Call Activities during this session (Call Activity Records)
+8. Next click on any session ID, then click on `Zoom` Icon ![Zoom](/assets/images/Analyzer/zoom.png).
 
-8. On the Drill Down on the left, search for Team Name and click on it.
+9. Make a note of all the Call Activities during this session (Call Activity Records).
 
-9. Team name will be added to Drill-down view.
+10. On the Drill Down on the left, search for `Team Name` and click on it.
 
-10. Launch it in a separate tab.
+11. Team name will be added to Drill-down view.
 
-11. Move Contact Start Timestamp and Contact End Timestamp next to nextState_s by dragging them.
+12. Launch it in a separate tab.
 
-Outcome 11: Take a screenshot of below fields after they are aligned in requested order.
+13. Move `Contact Start Timestamp` and `Contact End Timestamp` next to `nextState_s` by dragging them.
 
-12. Click Export as Excel and save a copy of Call Activity records.
+14. Click `Export as Excel` and save a copy of Call Activity records.
 
-13. Now, create a similar report for Agent Session Record with below value fields and Start Time as Today.
-    o Agent Session ID
-    o Agent Name
-    o Agent Endpoint (DN)
-    o Team Name
-    o Current State
-    o Channel type
+15. Now, create a similar report for Agent Session Record with below value fields and Start Time as Today.
 
-Save it as 3.1_ASR_Today_ValueReport in your folder and Click Preview.
+- Agent Session ID
+- Agent Name
+- Agent Endpoint (DN)
+- Team Name
+- Current State
+- hannel type
 
-14. Click on hamburger menu next to Value of Current State.
+16. Save it as `3.1_ASR_Today_ValueReport` in your folder and Click `Preview`.
 
-15. Uncheck all the states except Idle.
+17. Click on hamburger menu next to Value of Current State.
+
+18. Uncheck all the states except `Idle`.
 
 ## 2. Create Realtime Agent Visualization
+
+In this exercise, we will create a custom visualization to showcase the state of agents on a Realtime basis. While completing this Exercise, you will be able to understand and use some key capabilities like:
+
+- Fields and Measures
+- Enhanced Fields
+- Formulas
+- Drill-down
+- Group Summary
+- On the Fly-filter
+- Filtering
+
+**Objective**: Create an Agent Real-time state report with following data insights:
+
+- State of Agents on real-time basis for Telephony channel
+- Capture key metrics
+  - Agent Team
+  - Agent Name
+  - Agent State
+  - Idle Code
+  - Total number of agents logged-in
+  - Number of Agents in Available and idle state for each team
+  - Duration in the State
+- Create a high-level view, based on Line of business (Group or Teams)
+- Have Data summarize based on each Line of Business (LOB)
+- Have options to filter the data based on LOB and Idle code
+- Create some visual indication when certain agents in Idle state for long duration
+
+1. Create a new visualization in Analyzer as an `Agent Activity Record`.
+
+2. Set `Start Time` as **Realtime**.
+
+3. Set `Duration` as **None (Snapshot)**.
+
+4. Set `Refresh` duration as **3 Seconds**.
+
+5. Next, we will begin adding variables to the visualization. Click on `Row Segment` and add:
+
+   - Team Name
+   - Agent Name
+   - Activity State
+   - Idle Code Name
+
+6. Next, click on `Profile Variables`, search for `Agent Session ID` and add the Count of it under formulas. Rename the name as **_#Total_**.
+
+7. To capture Available Agent Count, add `Agent Session ID` again. Name it as **_#Available_**.
+
+   - Drag `Activity State` as Filter with value **"available"**.
+
+8. Repeat step 7 to add Idle Agent count, this time with filter value **"idle”**. Name it as **_#Idle_**.
+
+9. Next, we need to capture the `State Duration`. We will achieve this by using a **_formula_** to subtract the activity start time from current time, which will give us the activity duration.
+
+   - Search for Profile variable Measure `Activity Start Timestamp`.
+   - Under formula, select `Minimum Activity Start Timestamp` and save it.
+   - **Right click** on the field and click `New Formula`.
+   - Name Duration, swap the fields by clicking ![Swap](/assets/images/Analyzer/swap.png).
+   - Click on the empty field and select `Current Timestamp`.
+   - Select ![Substract](/assets/images/Analyzer/substract.png) `Subtraction` operator, as shown below.
+   - Right click the `Duration` profile variable, and set the `Duration Number Format` as **Duration > MM:SS**.
+   - `Hide` Minimum Activity Start Timestamp.
+
+10. Re-order the variables by dragging and dropping the variables in the order that you wish to see them in the report.
+
+11. Save the report as `3.2_AAR_RT_AgentState` in your folder and click `Preview`.
+
+12. Notice that the **#Total** count for each agent is “5”.
+
+    - This is because each agent is a multi-channel agent (with Total 5 channels, 1 voice, and 4 Digital ones).
+    - In this case we want to capture data for `Telephony channel` only so let’s add a Channel Filter for Telephony.
+    - Go Back to the report edit mode and Add Filter with Channel Type as Telephony.
+
+13. Save the visualization and click on Preview to run it again.
+
+14. We are still missing below asks:
+
+    - Create a high-level view, based on Line of Business (Groups or Teams)
+    - Have data summarized based on each Line of Business (LOB)
+    - Have options to filter the data based on LOB and idle code
+    - Create some visual indication when certain agents in idle state for long duration.
+
+15. Update the `Output Type` to **Heatmap**.
+
+16. To create a LOB group:
+
+- Right click on the Team name and then `Create Enhanced Field`.
+- Name the Field LOB_GroupingX, where X is your student number.
+  For Example: Student 2 will create LOB_Grouping2
+- Add 2 groups containing the following teams:
+  CL_G1x : Select Team-1, Team-10, Team-11, Team,12
+  CL_G2x : Select Team-2,Team-20,Team-21, Team-22
+- Save it.
+- Make this Enhanced Field global so it can be used for any other visualizations with need of creating it again.
+- Right click LOB_GroupingX à Click Save à When prompted, click Save again.
+- Field is now saved and can be used in any other report.
+- Not necessary to proceed with the exercise, but you can verify this by deleting the LOB_GroupingX.
+- Next from Row segment à Click + on Row segment à Go to Enhanced Fields on left panel à Drag and Drop LOB_GroupingX
+- Move LOB_Grouping{{StudentID}} as top row segment
+
+17. To Create a Summary at LOB level:
+
+    - Click Show Summary Option and select LOB_Grouping
+    - Click Customize à Go to LOB_Grouping level
+    - Select SUM for #Total, #Idle, #Avaliable à Save it
+
+18. Lastly, add the on-the fly filters for the LOB Grouping and Idle Code Name.
+
+    - Click on Show Filter On Run Mode
+    - Select LOB_Grouping and Idle Code Name
+
+19. Save visualizations and check the `Preview`
 
 ## 3. Create Chart Visualization with Interval
 
@@ -450,43 +572,177 @@ We will create a new Dashboard using the below visualizations which we have crea
 
 ## 1. Queue Based Reporting
 
+Queue Based Reports offer the standard fields and measures you know but aggregated at Queue level (i.e. Per Queue level & Per Agent Level Metrics).
+
+- `Call statistics`, such as calls presented, handled, abandoned, and dequeued.
+- `Service Level statistics`, such as Average Queue Time, Average Speed of Answer, and Average Abandoned Time.
+
+There are additionally **3 new stock reports**:
+
+- Queue Activity by Queue
+- Queue All Fields Report
+- Queue Call Distribution Summary
+
+In this exercise, you will see how Queue based data is different from Contact Session and Contact Activity Data and how you can use Queue based reports to capture more precise insights for your contact center at the queue level which help with more accurate and predictive actions.
+
+Before continuing with this exercise make, sure you have made some test calls and used `Preferred Agent Routing` to handle the calls (Refer Instructions to Create Voice Data Step 4 for More details). TODO
+In this exercise you will notice how data are captured across 3 different types of repositories: Customer Session Record (CSR) , Customer Activity Record (CAR) and Queue Record and how `Queue Record` offers much clear data points for contact center.
+
+![Queue1](/assets/images/Analyzer/Queue1.png).
+
+![Queue2](/assets/images/Analyzer/Queue2.png).
+
+1. Edit `3.1_CSR_Today_ValueReport` and add `Preferred Agent Name` as a filter -> Select your user in the field.
+
+2. Save the visualizations and `Preview`.
+
+3. Make a Note of Call session along with the Queue Name and capture in this document (For future use).
+
+4. Next Click on any Session Id and click on Zoom ![Zoom](/assets/images/Analyzer/zoom.png) to drill down into the Session.
+
+5. Here, makes a note of all the Activities for this session and make a note of the Queue name across various activities. (Click on Next page at the bottom if applicable )
+
+6. Navigate to Analyzer and Create a new report visualization that will be saved in your personal directory. Create New Visualization.
+
+7. Select the Type as `Queue Record`.
+
+8. Select `Duration` as **Today**.
+
+9. Click on `Profile variables`.
+
+10. Add the Profile variable Fields.
+
+    - Search for session and select `Contact Session ID` and drop it into Profile Variable .
+    - Select the `Value of Contact Session ID`.
+    - Next Add below fields and Save the report as 5.1_QBR_Today_ValueReport in your folder:
+      - CallLeg ID
+      - CallLeg Start Timestamp (Set Date/Time Format )
+      - CallLeg End Timestamp (Set Date/Time Format )
+      - Queue Name
+      - Agent Name
+      - Is Within Service Level
+      - Service Level Threshold (Set Duration format)
+      - Handle Type
+    - `Preview` the Report.
+
+11. Click Hamburger icon next to Customer Session ID
+
+12. Filter it for the session selected in step-4 above (make sure you use your own Session ID). You will notice all Call legs associated with this Contact session.
+
+13. Next, Go to `Stock Reports > Historical Reports > Queue Reports`.
+    - Preview all three Queue Stock reports and make a note of various data points.
+
 ## 2. Global Variable Reporting
 
+Global Variable allow you to save Call associated or Agent entered Data or data from external applications into the reporting. You must mark the Global variable as Reportable (Max 100 Reportable) to report on this data. Variable can be of following types:
+
+- Boolean
+- String: 256-character limit
+- Integer
+- Decimal
+- Date Time
+
+In this Exercise you see how you can capture the data using Global variable and use in visualizations to capture the key insights.
+
+- Before continuing with this Lab make sure you have made some test calls and opted for Callback by keeping your agent in Idle state.
+- Next, change your agent state to Available, callback will be established.
+- Make a note of your agent desktop Call data information.
+
+You would notice two Global Variables: TODO
+
+- Global_IsCallback (Integer)
+- Global_StudentID (String)
+
+The Data insights we want to capture is two fold:
+
+- Value of Caller entered digits in IVR
+- Number of calls opted for Callback Per Student and SUM total
+
+1. Create a visualization as per Screenshot below: TODO
+
+   - Choose `Start Time` as **Today**.
+   - Select `Global_StudentID` in `Row Segments`.
+   - In profile variable under `Measure` select `Sum of Global_IsCallback` (Note: Check Measures as this is an integer variable not string)
+   - Enable Run mode filter for Global_StudentID
+
+2. Save the visualizations as 5.2_GlobalVariable in your Folder and Preview.
+
+This will provide you number of callbacks for each StudentID.
+
 ## 3. Data Reporting for Digital Channels
+
+Besides voice data, Analyzer reporting offers similar insights on digital channel interactions as well, such as conversation statistics (conversations presented, handled, abandoned) and service levels (In Service Level, Average Speed of Answer, Average Abandoned Time). Global variables are also recently available in Webex Connect flows to capture additional data.
+
+In this Exercise, you will explore the available stock reports for Digital Channel reporting as well as create your own custom visualization, capturing some non-voice data from the chat conversations.
+
+- Before continuing with the exercise, make sure to create some test digital interactions, based on the information provided (Refer Instructions to Create Digital Channel Data to for more details). TODO Make sure to create at least one Live Chat conversation, as it will be needed to populate the global variables with digital channel interaction data).
+
+1. Stock visualizations for multiple channels are available inside the `Multimedia Reports` folders.
+
+2. Navigate to `Stock Reports > Historical Reports > Multimedia Reports`.
+
+3. Search for the `Queue Service Level` report, click on the 3 dots and then `Run`.
+
+4. Make sure to change the Duration filter on the top-right to `This Week`.
+
+5. Familiarize yourself with the visualization. Feel free to use the Channel Type filter to search for specific channel interactions (e.g. chat, email, social).
+
+6. After becoming familiar with the report, you can close current tab and search for the `Agent Trace` stock visualization and run it.
+
+7. Make sure again that Duration filter is for `This Week`. Investigate the report and <ins>notice how agent has a different state for each channel their Multimedia Profile includes.</ins>
+
+8. After becoming familiar with the report, you can close current tab and go back to the Visualizations tab in Analyzer.
+
+9. Create a new CSR visualization, utilizing the knowledge gathered so far, with the following requirements:
+
+   - Set the `Start Time` as **This Week**.
+   - Value of variables `Channel Type`, `ANI`, `DNIS`, `Global_StudentID` and `Contact Start Timestamp` as profile variables.
+   - Verify that Contact Start Timestamp has the proper Number Format to show Date Time, by right clicking on variable Contact Start Timestamp and selecting the desired format.
+   - Create a filter on `Channel Type` to only include chat, email & social.
+
+10. Save the report as `5.3_CSR_Digital_Channels` under your student folder.
+
+11. Click `Preview` to see the report.
+
+12. Try to spot the chat interaction that you initiated with your student ID.
 
 ## 4. Skill Based Reporting
 
 Skill Reporting has been launched recently, which offers new data insights into Call and Agent skill assignments, providing information for agents and flows that utilize the Skill-Based Routing logic.
+
 Fields added for CSR, CAR, ASR and AAR
-• Agent Skill Profile (ASR and AAR)
-• Agent Skills (ASR and AAR)
-• Contact Required skills (CSR and CAR)
-• Contact Matched skills (CSR and CAR)
-• Contact matched Skill profile (CSR and CAR)
+
+- Agent Skill Profile (ASR and AAR)
+- Agent Skills (ASR and AAR)
+- Contact Required skills (CSR and CAR)
+- Contact Matched skills (CSR and CAR)
+- Contact matched Skill profile (CSR and CAR)
+
 Support Skill Type:
 
-1. Enum: A named set of predefined values
-2. Proficiency: 0-10
-3. Text: Free-form text, support 40 characters
-4. Boolean: True, False
+- Enum: A named set of predefined values
+- Proficiency: 0-10
+- Text: Free-form text, support 40 characters
+- Boolean: True, False
 
 In this Exercise you would try to capture skill information for the caller and Agents.
 
-First visualization we will create will capture the numbers of agent available for each skill set
+First visualization we will create will capture the numbers of agent available for each skill set.
 
 1. Leverage the learning so far to build a custom report with Row segment and Profile variables and create below shown visualizations
-   • Data Type: Agent Session Record
-   • Realtime with 5 sec refresh duration
-   • Agent skill and Agent Name as Segment
-   • Count of Agent as Profile Variable
-   • Filter on Channel Type Telephony
-   • Select Agent Skills for Filter on Run Mode
 
-2. Save the Visualizations as 5.4_Agent_RT_SkillCount.
+   - Data Type: `Agent Session Record`
+   - `Realtime` with **5 sec refresh** duration
+   - `Agent Skill` and `Agent Name` as Row Segment
+   - **Count of Agent** as `Profile Variable`
+   - Filter on `Channel Type` **Telephony**
+   - Select `Agent Skills` for Filter on Run Mode.
 
-3. Click Preview.
+2. Save the Visualizations as `5.4_Agent_RT_SkillCount`.
 
-4. Click on Agent Skills Filter à Click Custom Select
+3. Click `Preview`.
+
+4. Click on `Agent Skills Filter -> Click Custom Select`.
 
 ## 5. Preferred Agent Reporting
 
