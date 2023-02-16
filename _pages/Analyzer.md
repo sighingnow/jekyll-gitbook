@@ -15,8 +15,8 @@ layout: post
 | [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 15 min           |
 | [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 60 min           |
 | [Agent Data Insights](#management-portal-user-configuration)                                                    | Practical Lab     | EASY            | 10 min           |
-| [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 15 min           |
-| [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | Easy            | 10 min           |
+| [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 25 min           |
+| [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | EASY            | 10 min           |
 
 ## Overview of the Lab
 
@@ -29,6 +29,14 @@ You will also learn about new capabilities developed around the new cloud Data p
 ## Introduction
 
 ### Pre-requisites
+
+<div class="alert"></div>
+<form id="attendee-form">
+      <label for="attendee-id">Attendee ID</label>
+      <input type="text" name="attendee-id" id="attendee-id" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="/assets/gitbook/form.js"></script>
 
 - TODO
 
@@ -841,89 +849,91 @@ Analyzer is a premium functionality which is only accessible for Supervisors or 
 
 # Supplementary Data Capabilities
 
-There are various additional capabilities that Analyzer offers in terms of automating and monitoring the system. In this lab, we will explore how we can import/export report templates, how we can schedule reports to be run and sent on predefined time periods as well as how we can create alerts when specific threshold criteria are surpassed.
+There are various additional capabilities that Analyzer offers in terms of automating and monitoring the system. In this lab, we will explore how we can `import/export report templates`, how we can `schedule reports` to be run and sent on predefined time periods as well as how we can create `alerts` when specific threshold criteria are surpassed.
 
 ## Table of Contents
 
 | Topic                                                                             | Lab Type      | Dificulty Level | Estimated length |
 | --------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Export/Import Visualizations Template](#1-export/import-visualizations-template) | Practical Lab | EASY            | 5 min            |
+| [Export/Import Visualizations Template](#1-export/import-visualizations-template) | Practical Lab | EASY            | 10 min           |
 | [Visualization Scheduler](#2-visualization-scheduler)                             | Practical Lab | EASY            | 5 min            |
-| [Threshold Alerting](#3-threshold-alerting)                                       | Practical Lab | EASY            | 5 min            |
+| [Threshold Alerting](#3-threshold-alerting)                                       | Practical Lab | EASY            | 10 min           |
 
 ## 1. Export/Import Visualizations Template
 
-You can export or import visualizations as a single file or as folders containing multiple files. Exporting /Import report templates helps in reusability across multiple tenants.
+You can **_export or import visualizations_** as a single file or as folders containing multiple files. Exporting /Import report templates helps in reusability across multiple tenants.
 
-**This is an Administrator only functionality and these options won’t be visible for supervisor role.**
+**_This is an Administrator only functionality and these options won’t be visible for supervisor role._** <br>
 
-For this exercise, you need to login in the Analyzer portalin a separate browser or incognito window with user cladm29user@mailinator.com. Also, you will need to download the zip file named CCMonitor.zip that is shared in the lab’s Webex Teams space. (TODO user+files)
+For this exercise, you need to login in the Analyzer portal in a separate browser or incognito window with your **administrator user**. Also, you will need to download the zip file below named **_ImportZIP_**.
 
-1. Go to the `Visualizations` tab, click on the `ellipsis` on the right of your student folder and click `Export Templates`. Confirm by clicking `Export` on the popup window.
+![ImportZIP](/assets/images/Analyzer/Analyzer_Import.zip)
 
-2. Zip file with the templates of all the created visualizations will be downloaded on your PC. **\_Note: During export, the filter names are retained but the values are not, thus **filter values are blank** after export and need to be re-configured.\_**
+1. Go to the `Visualizations` tab, click on the ellipsis ![Ellipsis](/assets/images/Analyzer/Ellipsis.png) on the right of your student folder and click `Export Templates`. Confirm by clicking `Export` on the popup window.
 
-3. To import the downloaded template, first to go your student folder and create a sub-directory named **Import**.
+2. Zip file with the templates of all the created visualizations will be downloaded on your computer. **\_Note: During export, the filter names are retained but the values are not, thus **filter values are blank** after export and need to be re-configured.\_**
+
+3. To import the downloaded template, first to go your student folder and create a subfolder named **_Import_**.
 
 4. Go Inside the Import folder, and click on `Import` on the top.
 
-5. Browse to the Downloads Folder of your PC.
+5. Browse to the Downloads Folder of your computer.
 
-6. Select the zip file CCMonitor.zip , and click Import. TODO
+6. Select the zip file **_ImportZIP.zip_** , and click Import.
 
 7. You can verify from the new popup window that the templates were imported successfully.
 
 8. Try to run these reports (e.g. Agent Monitor by State). <ins>You will see that most will fail and will ask provide you the details of filters which need to be updated due to the values being blank </ins>.
 
-9. Go inside the report and fill all the filters. Once filter values are added, you can run these reports. You can also remove the filter all together, if not required.
+9. Go inside the report and `fill all the filters`. Once filter values are added, you can run these reports. You can also remove the filter all together, if not required.
 
 ## 2. Visualization Scheduler
 
-In this exercise we will learn how to `schedule` visualizations within Analyzer. In Analyzer, you can schedule any historical visualization to be run and sent in a predefined time period to an email address. This is very handy for admins or supervisors who need to see reports on a scheduled daily, weekly or monthly basis.
+In this exercise we will learn how to **_schedule visualizations_** within Analyzer. In Analyzer, you can schedule any historical visualization to be run and sent in a predefined time period to an email address. This is very handy for admins or supervisors who need to see reports on a scheduled daily, weekly or monthly basis.
 
 1. Find the report `2.3_Queue Service Level` report that we created previously from your student folder.
 
-2. Next, in the right-hand corner of the report, select the three `ellipsis` and from the dropdown select the option `Schedule Job`.
+2. Next, in the right-hand corner of the report, select the three ellipsis ![Ellipsis](/assets/images/Analyzer/Ellipsis.png) and, from the dropdown, select the option `Schedule Job`.
 
 3. Fill in the schedule information for the scheduled report.
 
-- Start with the `Job Name`. Let’s set this to run daily so we will give it the name **2.3 Daily**.
-- Choose a start date and time. Select today’s date with a time of a few minutes ahead of your current time to give it time to trigger.
-- Next complete the details for the email notification by entering in your email address and a subject line.
+   - Start with the `Job Name`. Let’s set this to run daily, so we will give it the name **2.3 Daily**.
+   - Choose a start date and time. Select today’s date with a time of a few minutes ahead of your current time to give it time to trigger.
+   - Lastly, complete the details for the email notification by entering in your email address and a subject line.
 
 4. Once saved, the scheduled job will show up under the `Jobs` list.
 
 5. If everything was setup correctly, check your email for the report after the trigger time has passed.
 
-6. If your job was only set to run once, once it runs, that job is deleted from the jobs list.
+6. If your job was only set to run once, once it runs, <ins>that job is deleted from the jobs list</ins>.
 
 7. Close the job scheduling window. Go back to the folder structure and look at the `Details` of the report, it will show the number of jobs scheduled. You should see 1 scheduled job to reflect the job we just scheduled in this exercise.
 
 ## 3. Threshold Alerting
 
-`Threshold Rules` can be set to trigger when specific threshold criteria (e.g. number of calls in Queue) are met. This is another useful feature for administrators, as they can be notified both inside the Analyzer and via email when an undesired condition is met in the tenant in order to take action.
+**_Threshold Rules_** can be set to trigger when specific threshold criteria (e.g. number of calls in Queue) are met. This is another useful feature for administrators, as they can be notified both inside the Analyzer and via email when an undesired condition is met in the tenant in order to take action.
 
 1. Navigate to the `Admin Portal` and under the Provisioning menu, go to `Threshold Rules`.
 
 2. Create a `New Threshold Rule`.
 
-3. Let's setup an agent threshold alert. Name it LabThresholdX, where X is your student number. <ins>Threshold rules can be set according to Agent or Contact records.</ins> TODO
+3. Let's setup a Queue threshold alert. Name it `<w class = "attendee-class">your_attendee_ID</w>LabQueueThreshold`, based on your attendee number. <ins>Threshold rules can be set according to Agent or Contact records.</ins>
 
 4. Set the entity type to be `Queue`.
 
-5. Select the name of your queue. For this exercise select the queue assigned to your user (should be of format SBR_QV_TeamX). TODO
+5. Select the name of your queue.
 
 6. Next select the `Longest Time in Queue` as the Threshold Metric with the `>=` operand and `Trigger Value` of 10 seconds, as well as `Trigger Interval` of 120 seconds.
 
 7. Type your email address for the alert. After you entered your email address, you need to hit `Enter` key for the email to save.
 
-8. Test the new threshold with a call into the queue.
+8. Test the new threshold with a call into the queue. Let the call be in the queue for more than 10 seconds.
 
-9. Check your email to see that you got the alert.
+9. Check your email after a few minutes to verify that you got the alert.
 
-10. In Analyzer check your threshold alerts on top-right. You should see an alert.
+10. Next, in Analyzer, check your threshold alerts on the top-right. You should see an alert notification ![ThresholdAlert](/assets/images/Analyzer/ThresholdAlert.png). Click on `Threshold Alerts`.
 
-11. Next, acknowledge this threshold alert by checking the box next to the alert and clicking `Mark as Read`.
+11. Next, acknowledge this threshold alert by checking the box next to the alert ![MarkAsRead](/assets/images/Analyzer/MarkAsRead.png) and clicking `Mark as Read`.
 
 12. Lastly, you will notice that the threshold alert also gives ability to filter on (1) Notification Types (2) Duration and (3) Entity Type as well as the option to turn off the auto refresh function. You can also switch between Realtime and Historical Alerts, to view any past alerts in the system.
 
