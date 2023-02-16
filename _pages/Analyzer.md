@@ -917,7 +917,7 @@ In this exercise we will learn how to **_schedule visualizations_** within Analy
 
 2. Create a `New Threshold Rule`.
 
-3. Let's setup a Queue threshold alert. Name it <w class = "attendee-class">attendeeID</w>\_LabQueueThreshold, based on your attendee number. <ins>Threshold rules can be set according to Agent or Contact records.</ins>
+3. Let's setup a Queue threshold alert. Name it <w class = "attendee-class">attendee-id</w>\_LabQueueThreshold, based on your attendee number. <ins>Threshold rules can be set according to Agent or Contact records.</ins>
 
 4. Set the entity type to be `Queue`.
 
