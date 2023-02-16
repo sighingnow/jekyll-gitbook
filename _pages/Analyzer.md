@@ -1,22 +1,22 @@
 ---
 title: Lab 5 - Analyzer Deep Dive
 author: Krishna Tyagi & Mike Turnbow & George Kovanis
-date: 2023-02-13
+date: 2022-05-05
 layout: post
 ---
 
 ## Table of Contents
 
-| Topic                                                                                                           | Lab Type      | Dificulty Level | Estimated length |
-| --------------------------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab | EASY            | 20 min           |
-| [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab | EASY            | 20 min           |
-| [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab | MEDIUM          | 45 min           |
-| [Dashboards](#dashboards)                                                                                       | Practical Lab | EASY            | 15 min           |
-| [New Data Insights](#new-data-insights)                                                                         | Practical Lab | HARD            | 60 min           |
-| [Agent Data Insights](#management-portal-user-configuration)                                                    | Practical Lab | EASY            | 10 min           |
-| [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab | EASY            | 15 min           |
-| [Using Data APIs](#using-data-apis)                                                                             | Practical Lab | MEDIUM          | 15 min           |
+| Topic                                                                                                           | Lab Type          | Dificulty Level | Estimated length |
+| --------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab     | EASY            | 20 min           |
+| [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab     | EASY            | 20 min           |
+| [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 45 min           |
+| [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 15 min           |
+| [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 60 min           |
+| [Agent Data Insights](#management-portal-user-configuration)                                                    | Practical Lab     | EASY            | 10 min           |
+| [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 15 min           |
+| [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | Easy            | 10 min           |
 
 ## Overview of the Lab
 
@@ -929,106 +929,18 @@ In this exercise we will learn how to `schedule` visualizations within Analyzer.
 
 # Using Data APIs
 
-Webex Contact Center Analyzer utilizes `GraphQL` for its API capabilities. GraphQL endpoint enables users to search for various contact center objects, such as tasks (= contacts/calls) or agent sessions, as per the graphQL schema.
+Webex Contact Center Analyzer utilizes `GraphQL` for its API capabilities. GraphQL endpoint enables users to search for various Contact Center objects, such as tasks (= contacts/calls) or agent sessions, as per the graphQL schema.
 
-The queries supported by the search graphQL endpoint optionally accept filters and aggregations, whose format, is also defined in the schema.
+The queries supported by the search graphQL endpoint optionally accept filters and aggregations, whose format, is also defined in the schema. The search results are paginated, with max page size being different across various queries, and a maximum of 10000 results across multiple pages are returned.
 
-The search results are paginated, with max page size being different across various queries, and a maximum of 10000 results across multiple pages are returned.
-
-<ins>It is important to note that SearchTasks API is not querying the reports we create in Analyzer but the raw data directly.</ins>
+<ins>It is important to note that SearchTasks API is not querying the reports we create in Analyzer but the raw data directly,</ins> compared to previous versions.
 
 Additionally to the [Developer Documentation](https://developer.webex-cx.com/documentation/search/v1/search-tasks), Cisco has created various additional Search Task endpoint samples and help videos to get started with Analyzer API, which can be found in [Cisco DevNet Github page](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/graphql-sample).
 
-In this lab, we are going to see a basic example of utilizing API through the Developer portal to retrieve some data from our tenant.
-
-## Table of Contents
-
-| Topic                         | Lab Type      | Dificulty Level | Estimated length |
-| ----------------------------- | ------------- | --------------- | ---------------- |
-| [Search APIs](#1-search-apis) | Practical Lab | MEDIUM          | 15 min           |
-
-## 1. Search APIs
-
-In this exercise, we are going to use API to retrieve the `LastAgentInteraction` example from Github to find when a customer called in the last 7 days and which agent they reached.
-
-1. Open Developer portal using this [link](https://developer.webex-cx.com/documentation/search/v1/search-tasks).
-
-2. Login with Admin user TODO credentials.
-
-3. Click `Try Out` -> `Maximize Screen`.
-
-4. You can **_explore_** the schema by clicking on Docs to open the Documentation Explorer. On the explorer, click on `Query -> task -> TaskList`.
-
-5. Now let’s execute a query and see what data you get. `Update` the <ins>underlined Origin number</ins> in below query with the phone number you are using to make the test calls. If you used Calling as customer DN, use TODO as the origin instead of the DN.
-
-6. Go to the query window and delete the text first before you paste the new query with your number.
-
-7. Then, paste the snippet in Query space and click `Run`. Review the results of the API response.
-
-```
-{
-#LAST AGENT INTERACTIONS: Usage of filters, aggregates, pagination and custom fields to find when the customer called last in a 7 day window and who they reached
-task( # NOTE: from and to are mandatory arguments that take the Epoch timestamp in milliseconds
-from: 1675638001000 #This can be set to Date.now() - (days _ 24 _ 60 _ 60 _ 1000) for lookback in days
-to: 1675782001000 #This can be set to Date.now() in millis
-timeComparator: createdTime #Filter by created Time only
-filter: {
-#Filter the type of Task
-and: [
-{ channelType: { equals: telephony } } #Telephony calls only
-<ins>{ origin: { equals: "XXXXXXXXXXXX" } }</ins> #Customer ANI
-{ status: { equals: "ended" } } #Final Disposition
-{ direction: { equals: "inbound" } } #Inbound call only
-{ isActive: { equals: false } } #Resolved call only
-{ owner: { notequals: { id: null } } } #Only calls that had an Owner
-]
-}
-pagination: { cursor: "0" } #Display first page only
-) {
-tasks {
-#Task Metadata
-id
-createdTime
-endedTime
-origin
-destination
-lastWrapupCodeName #Why the customer called
-totalDuration
-selfserviceDuration
-captureRequested
-#Treatment Details
-lastEntryPoint {
-#Entrypoint Details
-id
-name
-}
-lastQueue {
-#Queue Details
-id
-name
-}
-lastTeam {
-#Team Details
-id
-name
-}
-owner {
-#Agent Details
-name
-id
-}
-}
-#Pagination Information
-pageInfo {
-endCursor
-hasNextPage
-}
-}
-}
-```
+To learn everything about Reporting and Search APIs, you can follow and complete [Lab 11](https://webexcc.github.io/pages/API/#all-new-webex-contact-center-apis-new-version).
 
 ---
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
-		
+      
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
