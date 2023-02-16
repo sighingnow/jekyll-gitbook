@@ -14,7 +14,7 @@ layout: post
 | [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 45 min           |
 | [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 15 min           |
 | [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 60 min           |
-| [Agent Data Insights](#management-portal-user-configuration)                                                    | Practical Lab     | EASY            | 10 min           |
+| [Agent Data Insights](#agent-data-insights)                                                                     | Practical Lab     | EASY            | 25 min           |
 | [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 25 min           |
 | [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | EASY            | 10 min           |
 
@@ -785,13 +785,13 @@ In many cases, it’s not only supervisors or administrators but also agents tha
 
 | Topic                                                                                 | Lab Type      | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Agent Personal Statistics](#1-agent-personal-statistics)                             | Practical Lab | EASY            | 5 min            |
+| [Agent Personal Statistics](#1-agent-personal-statistics)                             | Practical Lab | EASY            | 10 min           |
 | [Agent Direct URL Access](#2-agent-direct-url-access)                                 | Practical Lab | EASY            | 5 min            |
-| [Embedding the report into Agent Desktop](#3-embedding-the-report-into-agent-desktop) | Practical Lab | EASY            | 5 min            |
+| [Embedding the report into Agent Desktop](#3-embedding-the-report-into-agent-desktop) | Practical Lab | EASY            | 10 min           |
 
 ## 1. Agent Personal Statistics
 
-1. If not already logged in to the Agent Desktop, open a new window and **login**.
+1. If not already logged in to the Agent Desktop, open a new window and **login** with your agent user.
 
 2. On the left-hand side menu select the `APS` icon ![APS](/assets/images/Analyzer/APS.png).
 
@@ -799,9 +799,9 @@ In many cases, it’s not only supervisors or administrators but also agents tha
 
 4. Go back to the first tab called `Summary`. While on the Summary report, the agent can filter their view. We now have the ability to **save** these filters in cache so that next time agent logs in, the filters will already be in place.
 
-5. Choose different options from the `Team Name`, `Queue Name`, `Channel Type`. Notice that the data on the screen updates.
+5. Choose different options in the `Team Name`, `Queue Name`, `Channel Type` filters. Notice that the data on the screen updates.
 
-6. The tabs inside the APS reports are **_persistent_**, i.e. the agent desktop will remember the last tab you visited if you navigate away to the home screen or any other page. Select the `Queue Stats – Realtime` tab. Then, click the `Home` tab on the left side.
+6. The tabs inside the APS reports are **_persistent_**, i.e. the agent desktop will remember the last tab you visited if you navigate away to the home screen or any other page. Select the `Queue Stats – Realtime` tab. Then, click the `Home` tab ![AgentHome](/assets/images/Analyzer/AgentHome.png) on the left side.
 
 7. Go back to the APS tab. You will notice that the `Queue Stats – Realtime` is the default tab in your APS viewer.
 
@@ -809,43 +809,45 @@ In many cases, it’s not only supervisors or administrators but also agents tha
 
 Analyzer is a premium functionality which is only accessible for Supervisors or Administrators but there are few use-cases where supervisors would like to share certain visualizations with Agents (Standard or Premium) for sharing the insights they are looking. This is possible with the `Share Browser Links` functionality.
 
-1. Run the dashboard 4.2_CustomDashboard you created in [previous exercise](#2-creating-custom-dashboards) with your student user.
+1. Run the dashboard `4.2_CustomDashboard` you created in [previous exercise 4.2](#2-creating-custom-dashboards) with your **_supervisor user_**.
 
 2. **_Copy_** the dashboard link from the browser.
 
-3. Now, **Login** with user TODO in a separate browser or incognito mode. You can use TODO to login. This is an `Agent` user.
+3. Now, **Login** with your **_agent user_** in a separate browser or incognito mode.
 
 4. **_Paste_** the dashboard link in a new tab on the agent's browser session. You can see that you can now the dashboard as an agent, seeing only the statistics in which you have access.
 
 ## 3. Embedding the report into Agent Desktop
 
-`Desktops layout` configuration drives the Agent desktop UI. By default all Agent teams are mapped to default Global Desktop Layout. To **_embed_** aa custom report into Agent desktop, follow below instructions:
+`Desktops layout` configuration drives the Agent desktop UI. By default, all Agent teams are mapped to default Global Desktop Layout. To **_embed_** a custom report into Agent desktop, follow below instructions:
 
-1. Execute the dashboard you created in 4.2
+1. Run the dashboard `4.2_CustomDashboard` you created in [previous exercise 4.2](#2-creating-custom-dashboards).
 
-2. Now open the custom desktop layout file provided to you with the Lab documents in a VS Code (should be default option on your lab machines).
+2. Now, download and open the below custom desktop layout file provided to you.
 
-3. Go to the Line 114 or look for "src" and copy the dashboard link from step 1 as src value.
+[Custom Desktop Layout JSON File](/assets/images/Analyzer/CustomDesktopLayout_v1.json)
 
-4. Save the file.
+3. Go to the Line 114 or look for `src` and copy the dashboard link from step 1 as src value.
 
-5. Go back to the Admin Portal.
+4. `Save` the file.
 
-6. Go to Desktop Layout under Provisioning.
+5. Go back to the `Admin Portal`.
 
-7. Click on 3 dots and then Copy the layout and name it as “DesktopLayout_TeamX” where X is your student number.
+6. Go to `Desktop Layout` under Provisioning.
+
+7. Click on 3 dots and then Copy the layout and name it as <w class = "attendee-class">attendee-id</w>\_DesktopLayout, based on your attendee ID.
 
 8. Upload the saved file in step 4 and save the desktop layout.
 
-9. Now, navigate to Provisioning -> Team.
+9. Now, navigate to `Provisioning -> Team`.
 
- Select your team and edit by clicking 3 dots -> Edit.
+10. Select your team and edit by clicking 3 dots -> Edit.
 
- Under Advanced settings -> Desktop Layout, select your newly created personalize desktop layout and save the Team.
+11. Under `Advanced settings -> Desktop Layout`, select your newly created personalized desktop layout and save the Team.
 
-10. Now refresh the agent desktop, you will notice Analyzer iFrame Widget on the agent desktop.
+12. Now refresh the agent desktop, you will notice `Analyzer iFrame Widget` on the agent desktop ![DesktopWidget](/assets/images/Analyzer/DesktopWidget.png).
 
-11. Click on it and you will see the dashboard loading on agent desktop!
+13. Click on it and you will see the dashboard loading on agent desktop!
 
 # Supplementary Data Capabilities
 
