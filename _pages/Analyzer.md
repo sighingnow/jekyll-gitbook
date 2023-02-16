@@ -9,10 +9,10 @@ layout: post
 
 | Topic                                                                                                           | Lab Type          | Dificulty Level | Estimated length |
 | --------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab     | EASY            | 20 min           |
-| [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab     | EASY            | 20 min           |
+| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab     | EASY            | 25 min           |
+| [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab     | EASY            | 35 min           |
 | [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 45 min           |
-| [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 15 min           |
+| [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 20 min           |
 | [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 60 min           |
 | [Agent Data Insights](#agent-data-insights)                                                                     | Practical Lab     | EASY            | 25 min           |
 | [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 25 min           |
@@ -56,7 +56,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 | ----------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Portal Dashboards](#1-portal-dashboards)             | Practical Lab | EASY            | 10 min           |
 | [Analyzer User Interface](#2-analyzer-user-interface) | Practical Lab | EASY            | 5 min            |
-| [Access Control](#3-access-control)                   | Practical Lab | EASY            | 5 min            |
+| [Access Control](#3-access-control)                   | Practical Lab | EASY            | 10 min           |
 
 ## 1. Portal Dashboards
 
@@ -149,9 +149,9 @@ This lab is designed to give you a basic understanding on stock visualizations, 
 
 | Topic                                                                                                               | Lab Type      | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Execute Stock Reports](#1-execute-stock-reports)                                                                   | Practical Lab | EASY            | 5 min            |
+| [Execute Stock Reports](#1-execute-stock-reports)                                                                   | Practical Lab | EASY            | 15 min           |
 | [Execute CCX Transition Reports](#2-execute-ccx-transition-reports)                                                 | Practical Lab | EASY            | 5 min            |
-| [Create Custom Visualization using Stock Visualizations](#3-create-custom-visualization-using-stock-visualizations) | Practical Lab | EASY            | 5 min            |
+| [Create Custom Visualization using Stock Visualizations](#3-create-custom-visualization-using-stock-visualizations) | Practical Lab | EASY            | 15 min           |
 
 ## 1. Execute Stock Reports
 
@@ -163,7 +163,7 @@ This lab is designed to give you a basic understanding on stock visualizations, 
 
 3. Search for and execute the `Agent Details` report.
 
-4. Update the `Filters` to show data for `Today` and at `Hourly` interval.
+4. Update the `Filters` to show data for **Today** and at **Hourly** interval.
 
 5. Click on the hamburger menu to check the `Data summary` and `Details`. Review the following information:
 
@@ -171,6 +171,7 @@ This lab is designed to give you a basic understanding on stock visualizations, 
    - Time to compute
    - Number of Rows and Columns
    - Report Duration and Interval
+     <br>
 
 6. Click on the `Settings` button. The Row segments and report variables are now visible.
 
@@ -233,6 +234,8 @@ In this exercise we will copy a stock report to create a new custom report. The 
 3. Search in the `Analyzer User Guide` for the data point and identify the report.
 
 `Queue Service Level` report comes as a result in all three ways and seems to be covering what we are looking for, so execute that report and validate the data.
+
+Based on the data inside that report, we need to do the following steps:
 
 1. Identify what needs to be changed to meet the requirements.
 
@@ -496,8 +499,8 @@ This lab is designed to introduce you to the dashboards available in Analyzer. D
 
 | Topic                                                       | Lab Type      | Dificulty Level | Estimated length |
 | ----------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Stock Dashboards](#1-stock-dashboards)                     | Practical Lab | EASY            | 5 min            |
-| [Creating Custom Dashboards](#2-creating-custom-dashboards) | Practical Lab | EASY            | 5 min            |
+| [Stock Dashboards](#1-stock-dashboards)                     | Practical Lab | EASY            | 10 min           |
+| [Creating Custom Dashboards](#2-creating-custom-dashboards) | Practical Lab | EASY            | 10 min           |
 
 ## 1. Stock Dashboards
 
@@ -521,17 +524,17 @@ This lab is designed to introduce you to the dashboards available in Analyzer. D
 
 9. Remove the `Contact Volume dashboard` table format from the bottom of the dashboard.
 
-10. Next, we will add another report to this dashboard. Find the report created in Lab 3.2 called `3.2_AAR_RT_AgentState` under your Team folder and drag that into the dashboard on top of the chart. Adjust the height and width of the report. TODO
+10. Next, we will add another report to this dashboard. Find the report created in Lab 3.2 called `3.2_AAR_RT_AgentState` under your Team folder and drag that into the dashboard on top of the chart. Adjust the height and width of the report.
 
 11. Update the Dashboard name as `4.1_Contact_Volume_AgentState` below `Save` option.
 
-12. Save this Dashboard as 4.1_Contact_Volume_AgentState Dashboard and execute it.
+12. Save this Dashboard as `4.1_Contact_Volume_AgentState` and execute it.
 
 ## 2. Creating Custom Dashboards
 
 We will create a new Dashboard using the below visualizations which we have created in previous labs together with some stock visualizations.
 
-**Objective**: Create a dashboard to provide insights on: TODO
+**Objective**: Create a dashboard to provide insights on:
 
 - How are contacts trending historically around Total vs Abandoned calls?
   - Via 3.3_CSR_ContactVolume
@@ -551,11 +554,12 @@ We will create a new Dashboard using the below visualizations which we have crea
    - 3.3_CSR_ContactVolume
 
 3. Search for the other visualizations and drag them in the panel.
+
    - Team Details Real-Time
    - Average Service Level Card Real-Time
    - Longest Contact Currently in Queue Card Real-Time
 
-**_Tip: If you are having issues with dragging the visualizations, try dragging it next to an already added report instead of a random free space in the dashaboard._**
+   **_Tip: If you are having issues with dragging the visualizations, try dragging it next to an already added report instead of a random free space in the dashaboard._**
 
 4. Arrange them in a presentable view by moving them around and extending.
 
