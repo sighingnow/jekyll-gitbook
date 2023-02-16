@@ -93,7 +93,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 1: Connector Installation
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/T1MQ161bTSs?rel=0" title="CRM Integration Lab Part 1: Connector Installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/778b9e9e-b336-4628-9288-5065882859f3" width="100%" height="100%" title="PART 1 - Connector Installation" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
  
 ### 1. Connector Installation From Salesforce AppExchange
 
@@ -101,21 +103,21 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - In the search box, type `AppExchange Marketplace`.
 
-- In the AppExchange Marketplace type `Cisco Webex Contact Center for Salesforce`.
+- In the AppExchange Marketplace type `Webex Contact Center for Salesforce`.
 
-- Click on the Cisco Webex Contact Center App and the click on **Get It Now**.
+- Click on the Webex Contact Center App and then click on **Get It Now**.
 
 - On the pop-up window, click on **Open Login Screen**. If prompted, login again with your credentials and **Allow** access to the `appx_api`.
 
 - After verifying your login, choose the **Intall in This Org** option.
 
-- Fill in the required fields with your details and accept the Terms and Conditions to be able to proceed with installation.
+- Fill in the required fields with your details and accept the **Terms and Conditions** check box to be able to proceed with installation.
 
 - Choose **Install for All Users** option and then click on **Install**.
 
-- If asked, grant access to third party web site `_cpc.ccone.net_` by clicking on the checkbox and then on **Continue**.
+- If asked, grant access to third party web site `_cpc.ccone.net_` by clicking on the checkbox and then click on **Continue**.
 
-- After the installation is complete, click **Done**.
+- After the installation is completed, click **Done**.
 
 ### 2. Connector Installation Verification
 
