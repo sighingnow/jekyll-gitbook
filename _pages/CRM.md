@@ -50,7 +50,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - [Create new contact record in MS Dynamics](#create-new-contact-record-in-ms-dynamics)
   - [Make inbound test calls](#make-inbound-test-calls)
 
-[6.3 Zendesk integration](#64-zendesk-integration)
+[6.4 Zendesk integration](#64-zendesk-integration)
 
 - [Optional: Start Zendesk Trial](#optional-start-zendesk-trial)
 - [Part 1: Install Webex Contact Center application on Zendesk instance](#part-1-install-webex-contact-center-application-on-zendesk-instance)
@@ -67,31 +67,30 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ### Pre-requisites
 
-1. Administrator/ Supervisor with Salesforce access.
-2. Administrator/ Supervisor with WebexCC portal access.
-3. New user (Agent) is already created.
-4. Agent is able to login to agent desktop.
-5. Agent should be part of a team.
-6. Basic knowledge of JSON format.
-7. Salesforce Custom Desktop Layout.
-8. Use any online [JSON validator](https://jsonlint.com/) to validate the file.
-9. Lab 2 (IVR and Contact Routing) completed.
+1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
+2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
+3. Salesforce instance. For the details, refer the next section [Create Salesforce Account](#optional-create-salesforce-account).
+4. Access to the [Webex Contact Center Desktop Layout for Salesforce](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Salesforce) JSON.
+5. Lab 2 (IVR Contact Routing) completed.
 
 ## Optional: Create Salesforce Account
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/_4ZgHUSsp4U?rel=0" title="CRM Integration Lab: Salesforce Account Creation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/1dd3ccfb-ac40-4a4c-a72e-0da16fe113c3" width="100%" height="100%" title="PART 0 - Create Salesforce Account" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 <br/>
 
-- Navigate to [Salesforce Developer](https://developer.salesforce.com) website and click on **Sign Up**.
+- Navigate to Salesforce Developer [Signup Page](https://developer.salesforce.com/signup).
+- Navigate to [Salesforce Developer Signup Page](https://developer.salesforce.com/signup).
 
 - Complete the form with your personal details and click on **Sign me up** to create your account.
 
 > **Note:** Username needs to be in the form of an e-mail address. This address does not need to be a real e-mail address.
 
-- Go to your e-mail inbox and wait for the confirmation e-mail regarding your account. Click on **Verify Account**.
+- Go to your e-mail inbox and wait for the confirmation e-mail regarding your account. Click on **Verify Account** in the confirmation email.
 
-- Enter a **password** as well as an **answer** to the security question. This will successfully create your account and log you in the Salesforce platform.
+- Set up your Salesforce account **password** and **security question**. This will successfully create your account and log you in the Salesforce platform.
 
 ## Part 1: Connector Installation
 
@@ -271,7 +270,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
 2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
 3. An MS Dynamics Sales instance. For the details, refer the next section [Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
-4. Access to the [Webex Contact Contact Center Desktop Layout for Microsoft Dynamics](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/MS Dynamics) JSON.
+4. Access to the [Webex Contact Center Desktop Layout for Microsoft Dynamics](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/MS%20Dynamics) JSON.
 5. Lab 2 (IVR Contact Routing) completed.
 
 ## Optional: Start Microsoft Dynamics Trial
