@@ -867,11 +867,11 @@ You can **_export or import visualizations_** as a single file or as folders con
 
 For this exercise, you need to login in the Analyzer portal in a separate browser or incognito window with your **administrator user**. Also, you will need to download the zip file below named **_ImportZIP_**.
 
-![ImportZIP](/assets/images/Analyzer/Analyzer_Import.zip)
+[ImportZIP](/assets/images/Analyzer/Analyzer_Import.zip)
 
 1. Go to the `Visualizations` tab, click on the ellipsis ![Ellipsis](/assets/images/Analyzer/Ellipsis.png) on the right of your student folder and click `Export Templates`. Confirm by clicking `Export` on the popup window.
 
-2. Zip file with the templates of all the created visualizations will be downloaded on your computer. **\_Note: During export, the filter names are retained but the values are not, thus **filter values are blank** after export and need to be re-configured.\_**
+2. Zip file with the templates of all the created visualizations will be downloaded on your computer. **_Note: During export, the filter names are retained but the values are not, thus filter values are blank after export and need to be re-configured._**
 
 3. To import the downloaded template, first to go your student folder and create a subfolder named **_Import_**.
 
@@ -917,7 +917,7 @@ In this exercise we will learn how to **_schedule visualizations_** within Analy
 
 2. Create a `New Threshold Rule`.
 
-3. Let's setup a Queue threshold alert. Name it `<w class = "attendee-class">your_attendee_ID</w>LabQueueThreshold`, based on your attendee number. <ins>Threshold rules can be set according to Agent or Contact records.</ins>
+3. Let's setup a Queue threshold alert. Name it <w class = "attendee-class">your_attendee_ID</w>LabQueueThreshold, based on your attendee number. <ins>Threshold rules can be set according to Agent or Contact records.</ins>
 
 4. Set the entity type to be `Queue`.
 
