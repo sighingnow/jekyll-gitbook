@@ -82,7 +82,6 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 <br/>
 
 - Navigate to Salesforce Developer [Signup Page](https://developer.salesforce.com/signup).
-- Navigate to [Salesforce Developer Signup Page](https://developer.salesforce.com/signup).
 
 - Complete the form with your personal details and click on **Sign me up** to create your account.
 
