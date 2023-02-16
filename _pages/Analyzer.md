@@ -60,7 +60,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 ## 1. Portal Dashboards
 
-1. Login to the `Webex CC Administration Portal` using the Portal link. Login using your provided student email and password.
+1. Login to the `Webex CC Administration Portal` using the Portal link. Login using your created supervisor user from [Lab 1](https://webexcc.github.io/pages/CH/#control-hub-user-management-task).
 
 2. Navigate through the various dashboards via the dropdown to see current tenant information and to familiarize yourself with the four different dashboard views.
 
@@ -70,7 +70,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
    - Total Contacts Handled
    - Longest Contact Currently in Queue (Realtime)
    - Agent State Data (Listing all logged-in agents with their current state)
-   - "Team Details Real-Time" from `Contact Centre Overview - Realtime` Dashboard
+   - **Team Details Real-Time** from `Contact Centre Overview - Realtime` Dashboard <br>
 
 4. Return to the `Entry Point - Site Level Dashboard` and complete some navigation exercises:
    - In `Site Interval Realtime - Chart` report, filter calls for **Inbound Connected Count** (by clicking on profile variable next to the gear icon)
@@ -86,10 +86,10 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 3. Click on the `Visualizations` tab on the left.
 
-4. On the top in `Search` field, search for key word like **agent**:
+4. On the top in `Search` field, search for key word like **"agent"**:
 
    - Click on `Agent Realtime` report and note down the path for this report.
-   - Searched items can be further filtered to show Visualizations or Folders from the “Show” dropdown menu.
+   - Searched items can be further filtered to show Visualizations or Folders from the “Show” dropdown menu. <br>
 
 5. Then, navigate to the path `Stock Reports > Real-Time Reports > Agent Reports > Interval Reports`.
 
@@ -101,7 +101,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 6. Click ![Dots](/assets/images/Analyzer/dots.png) the icon next to the report and then click on Details.
 
    - Make a note of the `Date Range` and `Scheduled Jobs`.
-   - Try the same for any Historical stock report.
+   - Try the same for any Historical stock report. <br>
 
 7. On the top, click on your **username** and then `Help` to open the help manual for Analyzer.
 
@@ -115,26 +115,27 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 The goal of this exercise is to review the access controls and permissions you can apply for Analyzer reporting.
 
-1. Ensure you are logged into the Admin portal.
+1. Ensure you are logged into the Admin portal with your supervisor user.
 
 2. Open Analyzer in a new tab to enable you to switch between tasks in Portal and Analyzer.
 
 3. You would notice two folders: `Admin` and `Stock` Reports.
 
-4. Create a folder for yourself under Visualisations with the name `Team_X`, where X is your student number. TODO
+4. Create a folder for yourself under Visualisations with the name Team\_<w class = "attendee-class">attendee-id</w>, based on your atendee ID.
 
-5. In Admin Portal, navigate on the left to `Provisioning -> Users`. Use the Search bar to find your user. You can search for your student number to make it easy. Check which `User Profile` is being used by your user.
+5. In Admin Portal, navigate on the left to `Provisioning -> Users`. Use the Search bar to find your user. You can search for your student number to make it easy. Check which `User Profile` is being used by your user. TODO
 
 6. Edit your User profile by navigating to `User Profiles` and selecting the ellipsis menu next to that profile, then click `Edit`. Then, in your User Profile, navigate to `Access Rights`.
+
    - Set all folders except yours to “None”.
 
-**_Note: Stock Folder cannot be modified and is visible to all._**
+   **_Note: Stock Folder cannot be modified and is visible to all._**
 
-1. `Save` the User profile.
+7. `Save` the User profile.
 
-2. **Logout** from the Administrator portal, **close** the Browser and login back with your student user.
+8. **Logout** from the Administrator portal, **close** the Browser and login back with your supervisor user.
 
-3. Go Back to the `Analyzer -> Visualizations` and check if the applied folder restrictions are visible. You should be able to see only the Stock Reports and your own folder.
+9. Go Back to the `Analyzer -> Visualizations` and check if the applied folder restrictions are visible. You should be able to see only the Stock Reports and your own folder.
 
 You can always consult the [Analyzer User Guide Access Control](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/Analyzer_2/b_analyzeronloinehelp/_b_analyzeronloinehelp_chapter_01.html#topic_38C3FADD09C46F7A0073A1F4452D23F2) chapter on complete information on permissions and access control for each type of user.
 
@@ -337,7 +338,7 @@ In this exercise, you will spend some time understanding the Webex Contact Cente
 - Agent Endpoint (DN)
 - Team Name
 - Current State
-- hannel type
+- Channel type
 
 16. Save it as `3.1_ASR_Today_ValueReport` in your folder and Click `Preview`.
 
