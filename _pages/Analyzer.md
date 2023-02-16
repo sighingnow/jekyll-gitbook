@@ -1,22 +1,22 @@
 ---
 title: Lab 5 - Analyzer Deep Dive
 author: Krishna Tyagi & Mike Turnbow & George Kovanis
-date: 2023-02-13
+date: 2022-05-05
 layout: post
 ---
 
 ## Table of Contents
 
-| Topic                                                                                                           | Lab Type      | Dificulty Level | Estimated length |
-| --------------------------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab | EASY            | 20 min           |
-| [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab | EASY            | 20 min           |
-| [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab | MEDIUM          | 45 min           |
-| [Dashboards](#dashboards)                                                                                       | Practical Lab | EASY            | 15 min           |
-| [New Data Insights](#new-data-insights)                                                                         | Practical Lab | HARD            | 60 min           |
-| [Agent Data Insights](#management-portal-user-configuration)                                                    | Practical Lab | EASY            | 10 min           |
-| [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab | EASY            | 15 min           |
-| [Using Data APIs](#using-data-apis)                                                                             | Practical Lab | MEDIUM          | 15 min           |
+| Topic                                                                                                           | Lab Type          | Dificulty Level | Estimated length |
+| --------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
+| [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab     | EASY            | 20 min           |
+| [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab     | EASY            | 20 min           |
+| [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 45 min           |
+| [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 15 min           |
+| [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 60 min           |
+| [Agent Data Insights](#agent-data-insights)                                                                     | Practical Lab     | EASY            | 25 min           |
+| [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 25 min           |
+| [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | EASY            | 10 min           |
 
 ## Overview of the Lab
 
@@ -29,6 +29,14 @@ You will also learn about new capabilities developed around the new cloud Data p
 ## Introduction
 
 ### Pre-requisites
+
+<div class="alert"></div>
+<form id="attendee-form">
+      <label for="attendee-id">Attendee ID</label>
+      <input type="text" name="attendee-id" id="attendee-id" />
+      <button type="submit" id="save">SAVE</button>
+</form>
+<script src="/assets/gitbook/form.js"></script>
 
 - TODO
 
@@ -52,7 +60,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 ## 1. Portal Dashboards
 
-1. Login to the `Webex CC Administration Portal` using the Portal link. Login using your provided student email and password.
+1. Login to the `Webex CC Administration Portal` using the Portal link. Login using your created supervisor user from [Lab 1](https://webexcc.github.io/pages/CH/#control-hub-user-management-task).
 
 2. Navigate through the various dashboards via the dropdown to see current tenant information and to familiarize yourself with the four different dashboard views.
 
@@ -62,7 +70,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
    - Total Contacts Handled
    - Longest Contact Currently in Queue (Realtime)
    - Agent State Data (Listing all logged-in agents with their current state)
-   - "Team Details Real-Time" from `Contact Centre Overview - Realtime` Dashboard
+   - **Team Details Real-Time** from `Contact Centre Overview - Realtime` Dashboard <br>
 
 4. Return to the `Entry Point - Site Level Dashboard` and complete some navigation exercises:
    - In `Site Interval Realtime - Chart` report, filter calls for **Inbound Connected Count** (by clicking on profile variable next to the gear icon)
@@ -78,10 +86,10 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 3. Click on the `Visualizations` tab on the left.
 
-4. On the top in `Search` field, search for key word like **agent**:
+4. On the top in `Search` field, search for key word like **"agent"**:
 
    - Click on `Agent Realtime` report and note down the path for this report.
-   - Searched items can be further filtered to show Visualizations or Folders from the “Show” dropdown menu.
+   - Searched items can be further filtered to show Visualizations or Folders from the “Show” dropdown menu. <br>
 
 5. Then, navigate to the path `Stock Reports > Real-Time Reports > Agent Reports > Interval Reports`.
 
@@ -93,7 +101,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 6. Click ![Dots](/assets/images/Analyzer/dots.png) the icon next to the report and then click on Details.
 
    - Make a note of the `Date Range` and `Scheduled Jobs`.
-   - Try the same for any Historical stock report.
+   - Try the same for any Historical stock report. <br>
 
 7. On the top, click on your **username** and then `Help` to open the help manual for Analyzer.
 
@@ -107,26 +115,27 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 The goal of this exercise is to review the access controls and permissions you can apply for Analyzer reporting.
 
-1. Ensure you are logged into the Admin portal.
+1. Ensure you are logged into the Admin portal with your supervisor user.
 
 2. Open Analyzer in a new tab to enable you to switch between tasks in Portal and Analyzer.
 
 3. You would notice two folders: `Admin` and `Stock` Reports.
 
-4. Create a folder for yourself under Visualisations with the name `Team_X`, where X is your student number. TODO
+4. Create a folder for yourself under Visualisations with the name Team\_<w class = "attendee-class">attendee-id</w>, based on your atendee ID.
 
-5. In Admin Portal, navigate on the left to `Provisioning -> Users`. Use the Search bar to find your user. You can search for your student number to make it easy. Check which `User Profile` is being used by your user.
+5. In Admin Portal, navigate on the left to `Provisioning -> Users`. Use the Search bar to find your user. You can search for your student number to make it easy. Check which `User Profile` is being used by your user. TODO
 
 6. Edit your User profile by navigating to `User Profiles` and selecting the ellipsis menu next to that profile, then click `Edit`. Then, in your User Profile, navigate to `Access Rights`.
+
    - Set all folders except yours to “None”.
 
-**_Note: Stock Folder cannot be modified and is visible to all._**
+   **_Note: Stock Folder cannot be modified and is visible to all._**
 
-1. `Save` the User profile.
+7. `Save` the User profile.
 
-2. **Logout** from the Administrator portal, **close** the Browser and login back with your student user.
+8. **Logout** from the Administrator portal, **close** the Browser and login back with your supervisor user.
 
-3. Go Back to the `Analyzer -> Visualizations` and check if the applied folder restrictions are visible. You should be able to see only the Stock Reports and your own folder.
+9. Go Back to the `Analyzer -> Visualizations` and check if the applied folder restrictions are visible. You should be able to see only the Stock Reports and your own folder.
 
 You can always consult the [Analyzer User Guide Access Control](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/Analyzer_2/b_analyzeronloinehelp/_b_analyzeronloinehelp_chapter_01.html#topic_38C3FADD09C46F7A0073A1F4452D23F2) chapter on complete information on permissions and access control for each type of user.
 
@@ -329,7 +338,7 @@ In this exercise, you will spend some time understanding the Webex Contact Cente
 - Agent Endpoint (DN)
 - Team Name
 - Current State
-- hannel type
+- Channel type
 
 16. Save it as `3.1_ASR_Today_ValueReport` in your folder and Click `Preview`.
 
@@ -777,13 +786,13 @@ In many cases, it’s not only supervisors or administrators but also agents tha
 
 | Topic                                                                                 | Lab Type      | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Agent Personal Statistics](#1-agent-personal-statistics)                             | Practical Lab | EASY            | 5 min            |
+| [Agent Personal Statistics](#1-agent-personal-statistics)                             | Practical Lab | EASY            | 10 min           |
 | [Agent Direct URL Access](#2-agent-direct-url-access)                                 | Practical Lab | EASY            | 5 min            |
-| [Embedding the report into Agent Desktop](#3-embedding-the-report-into-agent-desktop) | Practical Lab | EASY            | 5 min            |
+| [Embedding the report into Agent Desktop](#3-embedding-the-report-into-agent-desktop) | Practical Lab | EASY            | 10 min           |
 
 ## 1. Agent Personal Statistics
 
-1. If not already logged in to the Agent Desktop, open a new window and **login**.
+1. If not already logged in to the Agent Desktop, open a new window and **login** with your agent user.
 
 2. On the left-hand side menu select the `APS` icon ![APS](/assets/images/Analyzer/APS.png).
 
@@ -791,9 +800,9 @@ In many cases, it’s not only supervisors or administrators but also agents tha
 
 4. Go back to the first tab called `Summary`. While on the Summary report, the agent can filter their view. We now have the ability to **save** these filters in cache so that next time agent logs in, the filters will already be in place.
 
-5. Choose different options from the `Team Name`, `Queue Name`, `Channel Type`. Notice that the data on the screen updates.
+5. Choose different options in the `Team Name`, `Queue Name`, `Channel Type` filters. Notice that the data on the screen updates.
 
-6. The tabs inside the APS reports are **_persistent_**, i.e. the agent desktop will remember the last tab you visited if you navigate away to the home screen or any other page. Select the `Queue Stats – Realtime` tab. Then, click the `Home` tab on the left side.
+6. The tabs inside the APS reports are **_persistent_**, i.e. the agent desktop will remember the last tab you visited if you navigate away to the home screen or any other page. Select the `Queue Stats – Realtime` tab. Then, click the `Home` tab ![AgentHome](/assets/images/Analyzer/AgentHome.png) on the left side.
 
 7. Go back to the APS tab. You will notice that the `Queue Stats – Realtime` is the default tab in your APS viewer.
 
@@ -801,234 +810,150 @@ In many cases, it’s not only supervisors or administrators but also agents tha
 
 Analyzer is a premium functionality which is only accessible for Supervisors or Administrators but there are few use-cases where supervisors would like to share certain visualizations with Agents (Standard or Premium) for sharing the insights they are looking. This is possible with the `Share Browser Links` functionality.
 
-1. Run the dashboard 4.2_CustomDashboard you created in [previous exercise](#2-creating-custom-dashboards) with your student user.
+1. Run the dashboard `4.2_CustomDashboard` you created in [previous exercise 4.2](#2-creating-custom-dashboards) with your **_supervisor user_**.
 
 2. **_Copy_** the dashboard link from the browser.
 
-3. Now, **Login** with user TODO in a separate browser or incognito mode. You can use TODO to login. This is an `Agent` user.
+3. Now, **Login** with your **_agent user_** in a separate browser or incognito mode.
 
 4. **_Paste_** the dashboard link in a new tab on the agent's browser session. You can see that you can now the dashboard as an agent, seeing only the statistics in which you have access.
 
 ## 3. Embedding the report into Agent Desktop
 
-`Desktops layout` configuration drives the Agent desktop UI. By default all Agent teams are mapped to default Global Desktop Layout. To **_embed_** aa custom report into Agent desktop, follow below instructions:
+`Desktops layout` configuration drives the Agent desktop UI. By default, all Agent teams are mapped to default Global Desktop Layout. To **_embed_** a custom report into Agent desktop, follow below instructions:
 
-1. Execute the dashboard you created in 4.2
+1. Run the dashboard `4.2_CustomDashboard` you created in [previous exercise 4.2](#2-creating-custom-dashboards).
 
-2. Now open the custom desktop layout file provided to you with the Lab documents in a VS Code (should be default option on your lab machines).
+2. Now, download and open the below custom desktop layout file provided to you.
 
-3. Go to the Line 114 or look for "src" and copy the dashboard link from step 1 as src value.
+[Custom Desktop Layout JSON File](/assets/images/Analyzer/CustomDesktopLayout_v1.json)
 
-4. Save the file.
+3. Go to the Line 114 or look for `src` and copy the dashboard link from step 1 as src value.
 
-5. Go back to the Admin Portal.
+4. `Save` the file.
 
-6. Go to Desktop Layout under Provisioning.
+5. Go back to the `Admin Portal`.
 
-7. Click on 3 dots and then Copy the layout and name it as “DesktopLayout_TeamX” where X is your student number.
+6. Go to `Desktop Layout` under Provisioning.
+
+7. Click on 3 dots and then Copy the layout and name it as <w class = "attendee-class">attendee-id</w>\_DesktopLayout, based on your attendee ID.
 
 8. Upload the saved file in step 4 and save the desktop layout.
 
-9. Now, navigate to Provisioning -> Team.
+9. Now, navigate to `Provisioning -> Team`.
 
- Select your team and edit by clicking 3 dots -> Edit.
+10. Select your team and edit by clicking 3 dots -> Edit.
 
- Under Advanced settings -> Desktop Layout, select your newly created personalize desktop layout and save the Team.
+11. Under `Advanced settings -> Desktop Layout`, select your newly created personalized desktop layout and save the Team.
 
-10. Now refresh the agent desktop, you will notice Analyzer iFrame Widget on the agent desktop.
+12. Now refresh the agent desktop, you will notice `Analyzer iFrame Widget` on the agent desktop ![DesktopWidget](/assets/images/Analyzer/DesktopWidget.png).
 
-11. Click on it and you will see the dashboard loading on agent desktop!
+13. Click on it and you will see the dashboard loading on agent desktop!
 
 # Supplementary Data Capabilities
 
-There are various additional capabilities that Analyzer offers in terms of automating and monitoring the system. In this lab, we will explore how we can import/export report templates, how we can schedule reports to be run and sent on predefined time periods as well as how we can create alerts when specific threshold criteria are surpassed.
+There are various additional capabilities that Analyzer offers in terms of automating and monitoring the system. In this lab, we will explore how we can `import/export report templates`, how we can `schedule reports` to be run and sent on predefined time periods as well as how we can create `alerts` when specific threshold criteria are surpassed.
 
 ## Table of Contents
 
 | Topic                                                                             | Lab Type      | Dificulty Level | Estimated length |
 | --------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Export/Import Visualizations Template](#1-export/import-visualizations-template) | Practical Lab | EASY            | 5 min            |
+| [Export/Import Visualizations Template](#1-export/import-visualizations-template) | Practical Lab | EASY            | 10 min           |
 | [Visualization Scheduler](#2-visualization-scheduler)                             | Practical Lab | EASY            | 5 min            |
-| [Threshold Alerting](#3-threshold-alerting)                                       | Practical Lab | EASY            | 5 min            |
+| [Threshold Alerting](#3-threshold-alerting)                                       | Practical Lab | EASY            | 10 min           |
 
 ## 1. Export/Import Visualizations Template
 
-You can export or import visualizations as a single file or as folders containing multiple files. Exporting /Import report templates helps in reusability across multiple tenants.
+You can **_export or import visualizations_** as a single file or as folders containing multiple files. Exporting /Import report templates helps in reusability across multiple tenants.
 
-**This is an Administrator only functionality and these options won’t be visible for supervisor role.**
+**_This is an Administrator only functionality and these options won’t be visible for supervisor role._** <br>
 
-For this exercise, you need to login in the Analyzer portalin a separate browser or incognito window with user cladm29user@mailinator.com. Also, you will need to download the zip file named CCMonitor.zip that is shared in the lab’s Webex Teams space. (TODO user+files)
+For this exercise, you need to login in the Analyzer portal in a separate browser or incognito window with your **administrator user**. Also, you will need to download the zip file below named **_ImportZIP_**.
 
-1. Go to the `Visualizations` tab, click on the `ellipsis` on the right of your student folder and click `Export Templates`. Confirm by clicking `Export` on the popup window.
+[ImportZIP](/assets/images/Analyzer/Analyzer_Import.zip)
 
-2. Zip file with the templates of all the created visualizations will be downloaded on your PC. **\_Note: During export, the filter names are retained but the values are not, thus **filter values are blank** after export and need to be re-configured.\_**
+1. Go to the `Visualizations` tab, click on the ellipsis ![Ellipsis](/assets/images/Analyzer/Ellipsis.png) on the right of your student folder and click `Export Templates`. Confirm by clicking `Export` on the popup window.
 
-3. To import the downloaded template, first to go your student folder and create a sub-directory named **Import**.
+2. Zip file with the templates of all the created visualizations will be downloaded on your computer. **_Note: During export, the filter names are retained but the values are not, thus filter values are blank after export and need to be re-configured._**
+
+3. To import the downloaded template, first to go your student folder and create a subfolder named **_Import_**.
 
 4. Go Inside the Import folder, and click on `Import` on the top.
 
-5. Browse to the Downloads Folder of your PC.
+5. Browse to the Downloads Folder of your computer.
 
-6. Select the zip file CCMonitor.zip , and click Import. TODO
+6. Select the zip file **_ImportZIP.zip_** , and click Import.
 
 7. You can verify from the new popup window that the templates were imported successfully.
 
 8. Try to run these reports (e.g. Agent Monitor by State). <ins>You will see that most will fail and will ask provide you the details of filters which need to be updated due to the values being blank </ins>.
 
-9. Go inside the report and fill all the filters. Once filter values are added, you can run these reports. You can also remove the filter all together, if not required.
+9. Go inside the report and `fill all the filters`. Once filter values are added, you can run these reports. You can also remove the filter all together, if not required.
 
 ## 2. Visualization Scheduler
 
-In this exercise we will learn how to `schedule` visualizations within Analyzer. In Analyzer, you can schedule any historical visualization to be run and sent in a predefined time period to an email address. This is very handy for admins or supervisors who need to see reports on a scheduled daily, weekly or monthly basis.
+In this exercise we will learn how to **_schedule visualizations_** within Analyzer. In Analyzer, you can schedule any historical visualization to be run and sent in a predefined time period to an email address. This is very handy for admins or supervisors who need to see reports on a scheduled daily, weekly or monthly basis.
 
 1. Find the report `2.3_Queue Service Level` report that we created previously from your student folder.
 
-2. Next, in the right-hand corner of the report, select the three `ellipsis` and from the dropdown select the option `Schedule Job`.
+2. Next, in the right-hand corner of the report, select the three ellipsis ![Ellipsis](/assets/images/Analyzer/Ellipsis.png) and, from the dropdown, select the option `Schedule Job`.
 
 3. Fill in the schedule information for the scheduled report.
 
-- Start with the `Job Name`. Let’s set this to run daily so we will give it the name **2.3 Daily**.
-- Choose a start date and time. Select today’s date with a time of a few minutes ahead of your current time to give it time to trigger.
-- Next complete the details for the email notification by entering in your email address and a subject line.
+   - Start with the `Job Name`. Let’s set this to run daily, so we will give it the name **2.3 Daily**.
+   - Choose a start date and time. Select today’s date with a time of a few minutes ahead of your current time to give it time to trigger.
+   - Lastly, complete the details for the email notification by entering in your email address and a subject line.
 
 4. Once saved, the scheduled job will show up under the `Jobs` list.
 
 5. If everything was setup correctly, check your email for the report after the trigger time has passed.
 
-6. If your job was only set to run once, once it runs, that job is deleted from the jobs list.
+6. If your job was only set to run once, once it runs, <ins>that job is deleted from the jobs list</ins>.
 
 7. Close the job scheduling window. Go back to the folder structure and look at the `Details` of the report, it will show the number of jobs scheduled. You should see 1 scheduled job to reflect the job we just scheduled in this exercise.
 
 ## 3. Threshold Alerting
 
-`Threshold Rules` can be set to trigger when specific threshold criteria (e.g. number of calls in Queue) are met. This is another useful feature for administrators, as they can be notified both inside the Analyzer and via email when an undesired condition is met in the tenant in order to take action.
+**_Threshold Rules_** can be set to trigger when specific threshold criteria (e.g. number of calls in Queue) are met. This is another useful feature for administrators, as they can be notified both inside the Analyzer and via email when an undesired condition is met in the tenant in order to take action.
 
 1. Navigate to the `Admin Portal` and under the Provisioning menu, go to `Threshold Rules`.
 
 2. Create a `New Threshold Rule`.
 
-3. Let's setup an agent threshold alert. Name it LabThresholdX, where X is your student number. <ins>Threshold rules can be set according to Agent or Contact records.</ins> TODO
+3. Let's setup a Queue threshold alert. Name it <w class = "attendee-class">attendee-id</w>\_LabQueueThreshold, based on your attendee number. <ins>Threshold rules can be set according to Agent or Contact records.</ins>
 
 4. Set the entity type to be `Queue`.
 
-5. Select the name of your queue. For this exercise select the queue assigned to your user (should be of format SBR_QV_TeamX). TODO
+5. Select the name of your queue.
 
 6. Next select the `Longest Time in Queue` as the Threshold Metric with the `>=` operand and `Trigger Value` of 10 seconds, as well as `Trigger Interval` of 120 seconds.
 
 7. Type your email address for the alert. After you entered your email address, you need to hit `Enter` key for the email to save.
 
-8. Test the new threshold with a call into the queue.
+8. Test the new threshold with a call into the queue. Let the call be in the queue for more than 10 seconds.
 
-9. Check your email to see that you got the alert.
+9. Check your email after a few minutes to verify that you got the alert.
 
-10. In Analyzer check your threshold alerts on top-right. You should see an alert.
+10. Next, in Analyzer, check your threshold alerts on the top-right. You should see an alert notification ![ThresholdAlert](/assets/images/Analyzer/ThresholdAlert.png). Click on `Threshold Alerts`.
 
-11. Next, acknowledge this threshold alert by checking the box next to the alert and clicking `Mark as Read`.
+11. Next, acknowledge this threshold alert by checking the box next to the alert ![MarkAsRead](/assets/images/Analyzer/MarkAsRead.png) and clicking `Mark as Read`.
 
 12. Lastly, you will notice that the threshold alert also gives ability to filter on (1) Notification Types (2) Duration and (3) Entity Type as well as the option to turn off the auto refresh function. You can also switch between Realtime and Historical Alerts, to view any past alerts in the system.
 
 # Using Data APIs
 
-Webex Contact Center Analyzer utilizes `GraphQL` for its API capabilities. GraphQL endpoint enables users to search for various contact center objects, such as tasks (= contacts/calls) or agent sessions, as per the graphQL schema.
+Webex Contact Center Analyzer utilizes `GraphQL` for its API capabilities. GraphQL endpoint enables users to search for various Contact Center objects, such as tasks (= contacts/calls) or agent sessions, as per the graphQL schema.
 
-The queries supported by the search graphQL endpoint optionally accept filters and aggregations, whose format, is also defined in the schema.
+The queries supported by the search graphQL endpoint optionally accept filters and aggregations, whose format, is also defined in the schema. The search results are paginated, with max page size being different across various queries, and a maximum of 10000 results across multiple pages are returned.
 
-The search results are paginated, with max page size being different across various queries, and a maximum of 10000 results across multiple pages are returned.
-
-<ins>It is important to note that SearchTasks API is not querying the reports we create in Analyzer but the raw data directly.</ins>
+<ins>It is important to note that SearchTasks API is not querying the reports we create in Analyzer but the raw data directly,</ins> compared to previous versions.
 
 Additionally to the [Developer Documentation](https://developer.webex-cx.com/documentation/search/v1/search-tasks), Cisco has created various additional Search Task endpoint samples and help videos to get started with Analyzer API, which can be found in [Cisco DevNet Github page](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/graphql-sample).
 
-In this lab, we are going to see a basic example of utilizing API through the Developer portal to retrieve some data from our tenant.
-
-## Table of Contents
-
-| Topic                         | Lab Type      | Dificulty Level | Estimated length |
-| ----------------------------- | ------------- | --------------- | ---------------- |
-| [Search APIs](#1-search-apis) | Practical Lab | MEDIUM          | 15 min           |
-
-## 1. Search APIs
-
-In this exercise, we are going to use API to retrieve the `LastAgentInteraction` example from Github to find when a customer called in the last 7 days and which agent they reached.
-
-1. Open Developer portal using this [link](https://developer.webex-cx.com/documentation/search/v1/search-tasks).
-
-2. Login with Admin user TODO credentials.
-
-3. Click `Try Out` -> `Maximize Screen`.
-
-4. You can **_explore_** the schema by clicking on Docs to open the Documentation Explorer. On the explorer, click on `Query -> task -> TaskList`.
-
-5. Now let’s execute a query and see what data you get. `Update` the <ins>underlined Origin number</ins> in below query with the phone number you are using to make the test calls. If you used Calling as customer DN, use TODO as the origin instead of the DN.
-
-6. Go to the query window and delete the text first before you paste the new query with your number.
-
-7. Then, paste the snippet in Query space and click `Run`. Review the results of the API response.
-
-```
-{
-#LAST AGENT INTERACTIONS: Usage of filters, aggregates, pagination and custom fields to find when the customer called last in a 7 day window and who they reached
-task( # NOTE: from and to are mandatory arguments that take the Epoch timestamp in milliseconds
-from: 1675638001000 #This can be set to Date.now() - (days _ 24 _ 60 _ 60 _ 1000) for lookback in days
-to: 1675782001000 #This can be set to Date.now() in millis
-timeComparator: createdTime #Filter by created Time only
-filter: {
-#Filter the type of Task
-and: [
-{ channelType: { equals: telephony } } #Telephony calls only
-<ins>{ origin: { equals: "XXXXXXXXXXXX" } }</ins> #Customer ANI
-{ status: { equals: "ended" } } #Final Disposition
-{ direction: { equals: "inbound" } } #Inbound call only
-{ isActive: { equals: false } } #Resolved call only
-{ owner: { notequals: { id: null } } } #Only calls that had an Owner
-]
-}
-pagination: { cursor: "0" } #Display first page only
-) {
-tasks {
-#Task Metadata
-id
-createdTime
-endedTime
-origin
-destination
-lastWrapupCodeName #Why the customer called
-totalDuration
-selfserviceDuration
-captureRequested
-#Treatment Details
-lastEntryPoint {
-#Entrypoint Details
-id
-name
-}
-lastQueue {
-#Queue Details
-id
-name
-}
-lastTeam {
-#Team Details
-id
-name
-}
-owner {
-#Agent Details
-name
-id
-}
-}
-#Pagination Information
-pageInfo {
-endCursor
-hasNextPage
-}
-}
-}
-```
+To learn everything about Reporting and Search APIs, you can follow and complete [Lab 11](https://webexcc.github.io/pages/API/#all-new-webex-contact-center-apis-new-version).
 
 ---
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
-		
+      
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>
