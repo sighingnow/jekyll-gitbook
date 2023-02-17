@@ -13,7 +13,7 @@ layout: post
 | [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab     | EASY            | 35 min           |
 | [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 60 min           |
 | [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 20 min           |
-| [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 60 min           |
+| [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 65 min           |
 | [Agent Data Insights](#agent-data-insights)                                                                     | Practical Lab     | EASY            | 25 min           |
 | [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 25 min           |
 | [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | MEDIUM          | 10 min           |
@@ -616,11 +616,11 @@ We will create a new Dashboard using the below visualizations which we have crea
 
 | Topic                                                                         | Lab Type      | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Queue Based Reporting](#1-queue-based-reporting)                             | Practical Lab | EASY            | 5 min            |
-| [Global Variable Reporting](#2-global-variable-reporting)                     | Practical Lab | EASY            | 5 min            |
-| [Data Reporting for Digital Channels](#3-data-reporting-for-digital-channels) | Practical Lab | EASY            | 5 min            |
-| [Skill Based Reporting](#4-skill-based-reporting)                             | Practical Lab | EASY            | 5 min            |
-| [Preferred Agent Reporting](#5-preferred-agent-reporting)                     | Practical Lab | EASY            | 5 min            |
+| [Queue Based Reporting](#1-queue-based-reporting)                             | Practical Lab | EASY            | 15 min           |
+| [Global Variable Reporting](#2-global-variable-reporting)                     | Practical Lab | EASY            | 10 min           |
+| [Data Reporting for Digital Channels](#3-data-reporting-for-digital-channels) | Practical Lab | EASY            | 10 min           |
+| [Skill Based Reporting](#4-skill-based-reporting)                             | Practical Lab | EASY            | 15 min           |
+| [Preferred Agent Reporting](#5-preferred-agent-reporting)                     | Practical Lab | EASY            | 15 min           |
 
 ## 1. Queue Based Reporting
 
@@ -637,12 +637,15 @@ There are additionally **3 new stock reports**:
 
 In this exercise, you will see how Queue based data is different from Contact Session and Contact Activity Data and how you can use Queue based reports to capture more precise insights for your contact center at the queue level which help with more accurate and predictive actions.
 
-Before continuing with this exercise make, sure you have made some test calls and used `Preferred Agent Routing` to handle the calls (Refer Instructions to Create Voice Data Step 4 for More details). TODO
+Before continuing with this exercise make, sure you have made some test calls and used `Preferred Agent Routing` to handle the calls (Refer to instructions on [Pre-requisites](https://webexcc.github.io/pages/Analyzer/)).
+
 In this exercise you will notice how data are captured across 3 different types of repositories: Customer Session Record (CSR) , Customer Activity Record (CAR) and Queue Record and how `Queue Record` offers much clear data points for contact center.
 
-![Queue1](/assets/images/Analyzer/Queue1.png).
+![Queue1](/assets/images/Analyzer/Queue1.png)
 
-![Queue2](/assets/images/Analyzer/Queue2.png).
+![Queue2](/assets/images/Analyzer/Queue2.png)
+
+Follow the steps below to complete this exercise:
 
 1. Edit `3.1_CSR_Today_ValueReport` and add `Preferred Agent Name` as a filter -> Select your user in the field.
 
@@ -652,9 +655,9 @@ In this exercise you will notice how data are captured across 3 different types 
 
 4. Next Click on any Session Id and click on Zoom ![Zoom](/assets/images/Analyzer/zoom.png) to drill down into the Session.
 
-5. Here, makes a note of all the Activities for this session and make a note of the Queue name across various activities. (Click on Next page at the bottom if applicable )
+5. Here, makes a note of all the Activities for this session and make a note of the Queue name across various activities (Click on Next page at the bottom if applicable).
 
-6. Navigate to Analyzer and Create a new report visualization that will be saved in your personal directory. Create New Visualization.
+6. Navigate to Analyzer and Create a new report visualization that will be saved in your atendee folder. Create `New Visualization`.
 
 7. Select the Type as `Queue Record`.
 
@@ -666,7 +669,7 @@ In this exercise you will notice how data are captured across 3 different types 
 
     - Search for session and select `Contact Session ID` and drop it into Profile Variable .
     - Select the `Value of Contact Session ID`.
-    - Next Add below fields and Save the report as 5.1_QBR_Today_ValueReport in your folder:
+    - Next Add below fields and Save the report as `5.1_QBR_Today_ValueReport` in your folder:
       - CallLeg ID
       - CallLeg Start Timestamp (Set Date/Time Format )
       - CallLeg End Timestamp (Set Date/Time Format )
@@ -679,14 +682,14 @@ In this exercise you will notice how data are captured across 3 different types 
 
 11. Click Hamburger icon next to Customer Session ID
 
-12. Filter it for the session selected in step-4 above (make sure you use your own Session ID). You will notice all Call legs associated with this Contact session.
+12. Filter it for the session selected in step-4 above. You will notice all Call legs associated with this Contact session.
 
 13. Next, Go to `Stock Reports > Historical Reports > Queue Reports`.
     - Preview all three Queue Stock reports and make a note of various data points.
 
 ## 2. Global Variable Reporting
 
-Global Variable allow you to save Call associated or Agent entered Data or data from external applications into the reporting. You must mark the Global variable as Reportable (Max 100 Reportable) to report on this data. Variable can be of following types:
+**_Global Variables)_** allow you to save Call associated or Agent entered Data or data from external applications into the reporting. You must mark the Global variable as Reportable (Max 100 Reportable) to report on this data. Variable can be of following types:
 
 - Boolean
 - String: 256-character limit
@@ -696,38 +699,38 @@ Global Variable allow you to save Call associated or Agent entered Data or data 
 
 In this Exercise you see how you can capture the data using Global variable and use in visualizations to capture the key insights.
 
-- Before continuing with this Lab make sure you have made some test calls and opted for Callback by keeping your agent in Idle state.
+- Before continuing with this Lab, make sure you have made some test calls and opted for Callback by keeping your agent in Idle state.
 - Next, change your agent state to Available, callback will be established.
-- Make a note of your agent desktop Call data information.
+- Make a note of your agent desktop call data information.
 
 You would notice two Global Variables: TODO
 
 - Global_IsCallback (Integer)
-- Global_StudentID (String)
+- Global_AttendeeID (String)
 
 The Data insights we want to capture is two fold:
 
 - Value of Caller entered digits in IVR
 - Number of calls opted for Callback Per Student and SUM total
 
-1. Create a visualization as per Screenshot below: TODO
+1. Create a visualization with the following characteristics:
 
    - Choose `Start Time` as **Today**.
    - Select `Global_StudentID` in `Row Segments`.
    - In profile variable under `Measure` select `Sum of Global_IsCallback` (Note: Check Measures as this is an integer variable not string)
-   - Enable Run mode filter for Global_StudentID
+   - Enable `Run mode filter` for Global_StudentID
 
-2. Save the visualizations as 5.2_GlobalVariable in your Folder and Preview.
+2. Save the visualizations as `5.2_GlobalVariable` in your Folder and `Preview`.
 
-This will provide you number of callbacks for each StudentID.
+This will provide you number of callbacks for each Attendee ID.
 
 ## 3. Data Reporting for Digital Channels
 
-Besides voice data, Analyzer reporting offers similar insights on digital channel interactions as well, such as conversation statistics (conversations presented, handled, abandoned) and service levels (In Service Level, Average Speed of Answer, Average Abandoned Time). Global variables are also recently available in Webex Connect flows to capture additional data.
+Besides voice data, Analyzer reporting offers similar insights on **_digital channel interactions_** as well, such as conversation statistics (conversations presented, handled, abandoned) and service levels (In Service Level, Average Speed of Answer, Average Abandoned Time). Global variables are also recently available in Webex Connect flows to capture additional data.
 
-In this Exercise, you will explore the available stock reports for Digital Channel reporting as well as create your own custom visualization, capturing some non-voice data from the chat conversations.
+In this Exercise, you will explore the available stock reports for Digital Channel reporting as well as create your own custom visualization, capturing some data from the non-voice conversations.
 
-- Before continuing with the exercise, make sure to create some test digital interactions, based on the information provided (Refer Instructions to Create Digital Channel Data to for more details). TODO Make sure to create at least one Live Chat conversation, as it will be needed to populate the global variables with digital channel interaction data).
+- Before continuing with the exercise, make sure to create some test digital interactions. If you do not have any digital interactions created, you can skip this exercise until you complete [Lab 12 - Digital Channels](https://webexcc.github.io/pages/Digital/).
 
 1. Stock visualizations for multiple channels are available inside the `Multimedia Reports` folders.
 
@@ -748,7 +751,7 @@ In this Exercise, you will explore the available stock reports for Digital Chann
 9. Create a new CSR visualization, utilizing the knowledge gathered so far, with the following requirements:
 
    - Set the `Start Time` as **This Week**.
-   - Value of variables `Channel Type`, `ANI`, `DNIS`, `Global_StudentID` and `Contact Start Timestamp` as profile variables.
+   - Value of variables `Channel Type`, `ANI`, `DNIS` and `Contact Start Timestamp` as profile variables.
    - Verify that Contact Start Timestamp has the proper Number Format to show Date Time, by right clicking on variable Contact Start Timestamp and selecting the desired format.
    - Create a filter on `Channel Type` to only include chat, email & social.
 
@@ -756,13 +759,11 @@ In this Exercise, you will explore the available stock reports for Digital Chann
 
 11. Click `Preview` to see the report.
 
-12. Try to spot the chat interaction that you initiated with your student ID.
-
 ## 4. Skill Based Reporting
 
-Skill Reporting has been launched recently, which offers new data insights into Call and Agent skill assignments, providing information for agents and flows that utilize the Skill-Based Routing logic.
+**_Skill Reporting_** has been launched recently, which offers new data insights into Call and Agent skill assignments, providing information for agents and flows that utilize the Skill-Based Routing logic.
 
-Fields added for CSR, CAR, ASR and AAR
+Fields added for CSR, CAR, ASR and AAR:
 
 - Agent Skill Profile (ASR and AAR)
 - Agent Skills (ASR and AAR)
@@ -770,7 +771,7 @@ Fields added for CSR, CAR, ASR and AAR
 - Contact Matched skills (CSR and CAR)
 - Contact matched Skill profile (CSR and CAR)
 
-Support Skill Type:
+Supported Skill Types:
 
 - Enum: A named set of predefined values
 - Proficiency: 0-10
@@ -779,15 +780,20 @@ Support Skill Type:
 
 In this Exercise you would try to capture skill information for the caller and Agents.
 
-First visualization we will create will capture the numbers of agent available for each skill set.
+The visualization we will create will capture the numbers of agent available for each skill set.
 
-1. Leverage the learning so far to build a custom report with Row segment and Profile variables and create below shown visualizations
+1. Leverage the learning so far to build a custom report with below characteristics:
 
    - Data Type: `Agent Session Record`
-   - `Realtime` with **5 sec refresh** duration
-   - `Agent Skill` and `Agent Name` as Row Segment
-   - **Count of Agent** as `Profile Variable`
-   - Filter on `Channel Type` **Telephony**
+
+   - `Realtime` with **5 sec refresh** duration.
+
+   - `Agent Skill` and `Agent Name` as Row Segment.
+
+   - **Count of Agent** as `Profile Variable`.
+
+   - Filter on `Channel Type` **Telephony**.
+
    - Select `Agent Skills` for Filter on Run Mode.
 
 2. Save the Visualizations as `5.4_Agent_RT_SkillCount`.
@@ -798,13 +804,13 @@ First visualization we will create will capture the numbers of agent available f
 
 ## 5. Preferred Agent Reporting
 
-In this exercise, you will explore key reporting data points when using Preferred Agent Routing.
+In this exercise, you will explore key reporting data points when using **_Preferred Agent Routing_**.
 
 1. Create a new visualization in Analyzer as `Customer Session Record`.
 
-2. Set `Start Time` as `Today`
+2. Set `Start Time` as `Today`.
 
-3. Next, Click on `Row Segment` and add:
+3. Next, Click on `Row Segments` and add:
 
    - Routing Type
    - Preferred Agent Name
