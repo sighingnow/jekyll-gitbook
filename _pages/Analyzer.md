@@ -50,7 +50,26 @@ Enter your attendee ID below and click on `SAVE`. This will update any relevant 
 
   - If you have not create these users yet, please follow the steps from [Lab 1 - Admin Experience](https://webexcc.github.io/pages/CH/#control-hub-user-management-task) to create both of them.
 
-- For `Lab 5` exercises, TODO Flow creation.
+- For `Lab 5` exercises, we will need to generate some data that include global variables, callback requests as well as preferred agent routing. To do so, a flow template named `AnalyzerLab_Flow` has been created. To create your own flow based on that and generate data, please do the following steps:
+
+  - Go to `Admin Portal -> Routing Strategy -> Flows`.
+
+  - Click on the dots ![Dots](/assets/images/Analyzer/dots.png)icon next to the `AnalyzerLab_Flow` and click on `Copy`.
+
+  - Open the newly copied flow.
+
+  - Make the following changes:
+
+    - Rename the flow as <w class = "attendee-class">attendee-id</w>\_AnalyzerLab_Flow.
+
+    - In the `Queue Contact` node, update the Queue with your own.
+
+    - Find the `SetAgentEmail` node, update it with the email address of the supervisor user you have created.
+
+  - Save the flow.
+
+  - Map this flow with your Entry Point and make a few test calls.
+    - Make sure to make at least one normal call (Agent available & Answers), one callback call (Agent idle, press 1 to prompt for callback and then make agent available to receive the callback) and one preferred agent routing (agent idle, press 2, then make agent available).
 
 - `Lab 5 - Data Reporting for Digital Channels`, we will need digital channel (Chat, Email or Social) data to be generated first. However, as Digital Channels is on a later lab ([Lab 12](https://webexcc.github.io/pages/Digital/)), you can skip this specific exercise until some digital data is generated on your tenant to report on.
 
