@@ -20,7 +20,7 @@ layout: post
 
 ## Overview of the Lab
 
-This hands-on Lab will provide you foundational and advanced knowledge of Webex Contact Center Data and Analytics, you will learn about data points and metrics across various existing and new capabilities, you will learn how to use stock reports and dashboards.
+This hands-on Lab will provide you fundamental and advanced knowledge of Webex Contact Center Data and Analytics, you will learn about data points and metrics across various existing and new capabilities, you will learn how to use stock reports and dashboards.
 
 This session will guide you step-by-step on how to design and build analytic Visualizations and Dashboards to capture your business & operational KPIs and Actionable Insights.
 
@@ -30,6 +30,30 @@ You will also learn about new capabilities developed around the new cloud Data p
 
 ### Pre-requisites
 
+To complete all the exercises of this lab, you need to have a `Supervisor` user, an `Agent` user as well as an `Administrator` user created. The administrator user should be already provided to you, while the supervisor and agent users should already be created in Lab 1.
+
+- If you have not create these users yet, please follow the steps from [Lab 1 - Admin Experience](https://webexcc.github.io/pages/CH/#control-hub-user-management-task) to create both of them.
+
+For `Lab 5` exercises, TODO Flow creation.
+
+`Lab 5 - Data Reporting for Digital Channels`, we will need digital channel (Chat, Email or Social) data to be generated first. However, as Digital Channels is on a later lab ([Lab 12](https://webexcc.github.io/pages/Digital/)), you can skip this specific exercise until some digital data is generated on your tenant to report on.
+
+For `Lab 6 - Embedding the report in the Agent Desktop` you will need to update the Desktop Layout of your supervisor user, so a unique User Profile needs to be created and linked to your Supervisor user. To achieve this, complete the following steps.
+
+1. In [Admin Portal](https://portal.wxcc-us1.cisco.com/), go to `Provisioning -> User Profiles`.
+
+2. Fine the profile named `Supervisor_Analyzer`. Click on the dots ![Dots](/assets/images/Analyzer/dots.png) on the left of the line and then click on `Copy` ![Copy](/assets/images/Analyzer/Copy.png).
+
+3. Change the `Name` of the User Profile to <w class = "attendee-class">attendee-id</w>\Supervisor_Analyzer and `Save`.
+
+4. Navigate to `Provisioning -> Users`. Search for your **supervisor** user, click on the dots ![Dots](/assets/images/Analyzer/dots.png) on the left of the line and then click on `Edit`.
+
+5. Change the `User Profile` of that user to the one you just created and then click on `Save`.
+
+### Define your Attendee ID
+
+Enter your attendee ID below and click on `SAVE`. This will update any relevant names in this lab with your specific attendee ID as prefix, so that your configuration is unique amongst the other attendees.
+
 <div class="alert"></div>
 <form id="attendee-form">
       <label for="attendee-id">Attendee ID</label>
@@ -38,7 +62,8 @@ You will also learn about new capabilities developed around the new cloud Data p
 </form>
 <script src="/assets/gitbook/form.js"></script>
 
-- TODO
+> **NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can add a sub prefix with the number. \_Ex: attendeeID**1**\_MMP, attendeeID**2**\_MMP, etc.
+> {: .block-tip }
 
 ### Quick Links
 
@@ -239,12 +264,12 @@ Based on the data inside that report, we need to do the following steps:
 
 1. Identify what needs to be changed to meet the requirements.
 
-- `Duration` needs to be updated to **Yesterday**.
-- Few field name headers need to be renamed.
-- `Channel Type` need to be set to **Telephony**.
-- If it can be compacted in view.
-- `Not-required` fields to be **removed**.
-- `% Abandoned` is missing in this report (needs to be added).
+   - `Duration` needs to be updated to **Yesterday**.
+   - Few field name headers need to be renamed.
+   - `Channel Type` need to be set to **Telephony**.
+   - If it can be compacted in view.
+   - `Not-required` fields to be **removed**.
+   - `% Abandoned` is missing in this report (needs to be added).
 
 2. Create a copy of this report by clicking on the `dots` icon and `Create a Copy`.
 
@@ -306,17 +331,17 @@ In this exercise, you will spend some time understanding the Webex Contact Cente
 
 5. Add the following Profile variable of type Fields:
 
-- Search for session and select `Contact Session ID` under fields and drag&drop it into Profile Variables.
-- Select the Value of Contact Session ID under Formula.
+   - Search for session and select `Contact Session ID` under fields and drag&drop it into Profile Variables.
+   - Select the Value of Contact Session ID under Formula.
 
 6. Next, add the below fields similarly and Save the report as `3.1_CSR_Today_ValueReport` in your folder after you have added all of them.
 
-- DNIS
-- Entry point
-- IVR Script Name
-- Final Queue Name
-- Team
-- Agent
+   - DNIS
+   - Entry point
+   - IVR Script Name
+   - Final Queue Name
+   - Team
+   - Agent
 
 7. `Preview` the Report.
 
@@ -336,16 +361,16 @@ In this exercise, you will spend some time understanding the Webex Contact Cente
 
 15. Now, create a similar report for Agent Session Record with below value fields and Start Time as Today.
 
-- Agent Session ID
-- Agent Name
-- Agent Endpoint (DN)
-- Team Name
-- Current State
-- Channel type
+    - Agent Session ID
+    - Agent Name
+    - Agent Endpoint (DN)
+    - Team Name
+    - Current State
+    - Channel type
 
 16. Save it as `3.1_ASR_Today_ValueReport` in your folder and Click `Preview`.
 
-17. Click on hamburger menu next to Value of Current State.
+17. Click on `hamburger` menu next to Value of Current State.
 
 18. Uncheck all the states except `Idle`.
 
@@ -377,6 +402,8 @@ In this exercise, we will create a custom visualization to showcase the state of
 - Have options to filter the data based on LOB and Idle code
 - Create some visual indication when certain agents in Idle state for long duration
 
+To create a report with all the above requirements, we need to complete the following steps:
+
 1. Create a new visualization in Analyzer as an `Agent Activity Record`.
 
 2. Set `Start Time` as **Realtime**.
@@ -407,7 +434,7 @@ In this exercise, we will create a custom visualization to showcase the state of
    - **Right click** on the field and click `New Formula`.
    - Name Duration, swap the fields by clicking ![Swap](/assets/images/Analyzer/swap.png).
    - Click on the empty field and select `Current Timestamp`.
-   - Select ![Substract](/assets/images/Analyzer/substract.png) `Subtraction` operator, as shown below.
+   - Select `Subtraction` operator ![Substract](/assets/images/Analyzer/substract.png).
    - Right click the `Duration` profile variable, and set the `Duration Number Format` as **Duration > MM:SS**.
    - `Hide` Minimum Activity Start Timestamp.
 
@@ -434,19 +461,19 @@ In this exercise, we will create a custom visualization to showcase the state of
 
 16. To create a LOB group:
 
-- Right click on the Team name and then `Create Enhanced Field`.
-- Name the Field LOB_GroupingX, where X is your student number.
-  For Example: Student 2 will create LOB_Grouping2
-- Add 2 groups containing the following teams:
-  CL_G1x : Select Team-1, Team-10, Team-11, Team,12
-  CL_G2x : Select Team-2,Team-20,Team-21, Team-22
-- Save it.
-- Make this Enhanced Field global so it can be used for any other visualizations with need of creating it again.
-- Right click LOB_GroupingX à Click Save à When prompted, click Save again.
-- Field is now saved and can be used in any other report.
-- Not necessary to proceed with the exercise, but you can verify this by deleting the LOB_GroupingX.
-- Next from Row segment à Click + on Row segment à Go to Enhanced Fields on left panel à Drag and Drop LOB_GroupingX
-- Move LOB_Grouping{{StudentID}} as top row segment
+    - Right click on the Team name and then `Create Enhanced Field`.
+    - Name the Field LOB_GroupingX, where X is your student number.
+      For Example: Student 2 will create LOB_Grouping2
+    - Add 2 groups containing the following teams:
+      CL_G1x : Select Team-1, Team-10, Team-11, Team,12
+      CL_G2x : Select Team-2,Team-20,Team-21, Team-22
+    - Save it.
+    - Make this Enhanced Field global so it can be used for any other visualizations with need of creating it again.
+    - Right click LOB_GroupingX à Click Save à When prompted, click Save again.
+    - Field is now saved and can be used in any other report.
+    - Not necessary to proceed with the exercise, but you can verify this by deleting the LOB_GroupingX.
+    - Next from Row segment à Click + on Row segment à Go to Enhanced Fields on left panel à Drag and Drop LOB_GroupingX
+    - Move LOB_Grouping{{StudentID}} as top row segment
 
 17. To Create a Summary at LOB level:
 
@@ -459,7 +486,7 @@ In this exercise, we will create a custom visualization to showcase the state of
     - Click on Show Filter On Run Mode
     - Select LOB_Grouping and Idle Code Name
 
-19. Save visualizations and check the `Preview`
+19. Save visualizations and check the `Preview`.
 
 ## 3. Create Chart Visualization with Interval
 
