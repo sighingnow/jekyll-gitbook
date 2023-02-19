@@ -13,6 +13,7 @@
 .book.with-summary .book-body .book-header {
     position: fixed;
     width: calc(100% - 300px);
+    overflow-y: hidden;
 }
 
 .book-body .body-inner {
