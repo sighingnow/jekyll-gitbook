@@ -11,16 +11,16 @@ layout: post
 | --------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Admin Portal Dashboard and Analyzer User Interfaces](#admin-portal-dashboard-and-analyzer-user-interfaces)     | Practical Lab     | EASY            | 25 min           |
 | [Getting Data Insight using Stock Visualizations](#getting-data-insight-using-stock-visualizations)             | Practical Lab     | EASY            | 35 min           |
-| [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 45 min           |
+| [Understanding Data and Creating Custom Visualizations](#understanding-data-and-creating-custom-visualizations) | Practical Lab     | MEDIUM          | 60 min           |
 | [Dashboards](#dashboards)                                                                                       | Practical Lab     | EASY            | 20 min           |
-| [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 60 min           |
+| [New Data Insights](#new-data-insights)                                                                         | Practical Lab     | HARD            | 65 min           |
 | [Agent Data Insights](#agent-data-insights)                                                                     | Practical Lab     | EASY            | 25 min           |
 | [Supplementary Data Capabilities](#supplementary-data-capabilities)                                             | Practical Lab     | EASY            | 25 min           |
-| [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | EASY            | 10 min           |
+| [Using Data APIs](#using-data-apis)                                                                             | Read & Understand | MEDIUM          | 10 min           |
 
 ## Overview of the Lab
 
-This hands-on Lab will provide you foundational and advanced knowledge of Webex Contact Center Data and Analytics, you will learn about data points and metrics across various existing and new capabilities, you will learn how to use stock reports and dashboards.
+This hands-on Lab will provide you fundamental and advanced knowledge of Webex Contact Center Data and Analytics, you will learn about data points and metrics across various existing and new capabilities, you will learn how to use stock reports and dashboards.
 
 This session will guide you step-by-step on how to design and build analytic Visualizations and Dashboards to capture your business & operational KPIs and Actionable Insights.
 
@@ -28,7 +28,9 @@ You will also learn about new capabilities developed around the new cloud Data p
 
 ## Introduction
 
-### Pre-requisites
+### Define your Attendee ID
+
+Enter your attendee ID below and click on `SAVE`. This will update any relevant names in this lab with your specific attendee ID as prefix, so that your configuration is unique amongst the other attendees.
 
 <div class="alert"></div>
 <form id="attendee-form">
@@ -38,7 +40,50 @@ You will also learn about new capabilities developed around the new cloud Data p
 </form>
 <script src="/assets/gitbook/form.js"></script>
 
-- TODO
+> **NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can add a sub prefix with the number. \_Ex: attendeeID**1**\_MMP, attendeeID**2**\_MMP, etc.
+> {: .block-tip }
+
+### Pre-requisites
+
+- To complete all the exercises of this lab, you need to have a `Supervisor` user, an `Agent` user as well as an `Administrator` user created.
+  The administrator user should be already provided to you, while the supervisor and agent users should already be created in Lab 1.
+
+  - If you have not create these users yet, please follow the steps from [Lab 1 - Admin Experience](https://webexcc.github.io/pages/CH/#control-hub-user-management-task) to create both of them.
+
+- For `Lab 5` exercises, we will need to generate some data that include global variables, callback requests as well as preferred agent routing. To do so, a flow template named `AnalyzerLab_Flow` has been created. To create your own flow based on that and generate data, please do the following steps:
+
+  - Go to `Admin Portal -> Routing Strategy -> Flows`.
+
+  - Click on the dots ![Dots](/assets/images/Analyzer/dots.png)icon next to the `AnalyzerLab_Flow` and click on `Copy`.
+
+  - Open the newly copied flow.
+
+  - Make the following changes:
+
+    - Rename the flow as <w class = "attendee-class">attendee-id</w>\_AnalyzerLab_Flow.
+
+    - In the `Queue Contact` node, update the Queue with your own.
+
+    - Find the `SetAgentEmail` node, update it with the email address of the supervisor user you have created.
+
+  - Save the flow.
+
+  - Map this flow with your Entry Point and make a few test calls.
+    - Make sure to make at least one normal call (Agent available & Answers), one callback call (Agent idle, press 1 to prompt for callback and then make agent available to receive the callback) and one preferred agent routing (agent idle, press 2, then make agent available).
+
+- `Lab 5 - Data Reporting for Digital Channels`, we will need digital channel (Chat, Email or Social) data to be generated first. However, as Digital Channels is on a later lab ([Lab 12](https://webexcc.github.io/pages/Digital/)), you can skip this specific exercise until some digital data is generated on your tenant to report on.
+
+- For `Lab 6 - Embedding the report in the Agent Desktop`, you will need to update the Desktop Layout of your supervisor user, so a unique User Profile needs to be created and linked to your Supervisor user. To achieve this, complete the following steps.
+
+  1. In [Admin Portal](https://portal.wxcc-us1.cisco.com/), go to `Provisioning -> User Profiles`.
+
+  2. Fine the profile named `Supervisor_Analyzer`. Click on the dots ![Dots](/assets/images/Analyzer/dots.png) on the left of the line and then click on `Copy` ![Copy](/assets/images/Analyzer/Copy.png).
+
+  3. Change the `Name` of the User Profile to <w class = "attendee-class">attendee-id</w>Supervisor_Analyzer (based on your attendee ID) and `Save`.
+
+  4. Navigate to `Provisioning -> Users`. Search for your **supervisor** user, click on the dots ![Dots](/assets/images/Analyzer/dots.png) on the left of the line and then click on `Edit`.
+
+  5. Change the `User Profile` of that user to the one you just created and then click on `Save`.
 
 ### Quick Links
 
@@ -48,7 +93,7 @@ You will also learn about new capabilities developed around the new cloud Data p
 
 # Admin Portal Dashboard and Analyzer User Interfaces
 
-This lab is designed to give you basic understanding of Analyzer, user interface features, access controls and permissions as well as the default dashboards available in the Admin Portal. In the following exercises, the goal is the familiarization with the product, interfaces and terminology.
+This lab is designed to give you basic understanding of Analyzer, `user interface` features, `access controls` and permissions as well as the `default dashboards` available in the Admin Portal. In the following exercises, the goal is the familiarization with the product, interfaces and terminology.
 
 ## Table of Contents
 
@@ -86,7 +131,7 @@ This lab is designed to give you basic understanding of Analyzer, user interface
 
 3. Click on the `Visualizations` tab on the left.
 
-4. On the top in `Search` field, search for key word like **"agent"**:
+4. On the top in `Search` field, search for keyword **"agent"**:
 
    - Click on `Agent Realtime` report and note down the path for this report.
    - Searched items can be further filtered to show Visualizations or Folders from the “Show” dropdown menu. <br>
@@ -96,9 +141,9 @@ This lab is designed to give you basic understanding of Analyzer, user interface
    - Click ![Grid](/assets/images/Analyzer/grid.png) to change the view to List view.
    - Here you can sort the reports based on a specific header by clicking on it.
    - Notice the `Temporal Scope`, which can be either Realtime or Historical.
-   - ID is <ins>unique</ins> for every report and a report can also be searched by its ID.
+   - <ins>ID is unique for every report and a report can also be searched by its ID.</ins>
 
-6. Click ![Dots](/assets/images/Analyzer/dots.png) the icon next to the report and then click on Details.
+6. Click the ![Dots](/assets/images/Analyzer/dots.png) icon next to the report and then click on Details.
 
    - Make a note of the `Date Range` and `Scheduled Jobs`.
    - Try the same for any Historical stock report. <br>
@@ -121,9 +166,9 @@ The goal of this exercise is to review the access controls and permissions you c
 
 3. You would notice two folders: `Admin` and `Stock` Reports.
 
-4. Create a folder for yourself under Visualisations with the name Team\_<w class = "attendee-class">attendee-id</w>, based on your atendee ID.
+4. Create a folder for yourself under Visualisations with the name Team\_<w class = "attendee-class">attendee-id</w>, based on your attendee ID.
 
-5. In Admin Portal, navigate on the left to `Provisioning -> Users`. Use the Search bar to find your user. You can search for your student number to make it easy. Check which `User Profile` is being used by your user. TODO
+5. In Admin Portal, navigate on the left to `Provisioning -> Users`. Use the Search bar to find your user. You can search for your student number to make it easy. Check which `User Profile` is being used by your user.
 
 6. Edit your User profile by navigating to `User Profiles` and selecting the ellipsis menu next to that profile, then click `Edit`. Then, in your User Profile, navigate to `Access Rights`.
 
@@ -141,7 +186,7 @@ You can always consult the [Analyzer User Guide Access Control](https://www.cisc
 
 # Getting Data Insight using Stock Visualizations
 
-This lab is designed to give you a basic understanding on stock visualizations, how to execute them and how to use them to create custom visualizations as per your business requirements.
+This lab is designed to give you a basic understanding of `stock visualizations`, how to execute them and how to use them to create custom visualizations as per your business requirements.
 
 <ins>Reports created in this lab will be used in later labs to create a custom dashboard.</ins>
 
@@ -175,7 +220,7 @@ This lab is designed to give you a basic understanding on stock visualizations, 
 
 6. Click on the `Settings` button. The Row segments and report variables are now visible.
 
-7. Drag all `Row segments` fields except Agent name and Interval to the `Hidden Segments` section.
+7. Drag all `Row segments` fields except **_Agent name_** and **_Interval_** to the `Hidden Segments` section.
 
 8. Also, by Clicking the Eye ![eye](/assets/images/Analyzer/eye.png) symbol, hide the `Initial Log In Time` and `Final Log Out Time` fields.
 
@@ -187,11 +232,11 @@ This lab is designed to give you a basic understanding on stock visualizations, 
     For example, searching –100 will bring up the Agent Details Report.
 
 12. Search through the stock reports and find below information:
-    1. Historical Agent Details with Staff hours information
-    2. Agent Idle state information
-    3. Realtime Queue Statistics
-    4. Agent Usage Report
-    5. Average service level in Card format
+    - Historical Agent Details with Staff hours information
+    - Agent Idle state information
+    - Realtime Queue Statistics
+    - Agent Usage Report
+    - Average service level in Card format
 
 **_Tips:_**
 
@@ -225,11 +270,9 @@ In this exercise we will copy a stock report to create a new custom report. The 
 - ASA (Average Speed of Answer)
 - Telephony only Contacts
 
-**_Tips:_**
+**_Tips:How to search for the right report to match your requirements?_** <ins>There are three ways</ins> :
 
-<ins>How to search for the right report to match your requirements?</ins> Three Ways:
-
-1. Go into the `Stock Report Directory` structure and look for something similar, e.g. we are looking for a `Historical -> Multimedia Report`.
+1. Go into the `Stock Report Directory` structure (Step 2 in exercise [2.1](https://webexcc.github.io/pages/Analyzer/#1-execute-stock-reports)) and look for something similar, e.g. we are looking for a `Historical -> Multimedia Report`.
 2. Search for keywords matching your desired report data, e.g. search for `Service level`.
 3. Search in the `Analyzer User Guide` for the data point and identify the report.
 
@@ -239,12 +282,11 @@ Based on the data inside that report, we need to do the following steps:
 
 1. Identify what needs to be changed to meet the requirements.
 
-- `Duration` needs to be updated to **Yesterday**.
-- Few field name headers need to be renamed.
-- `Channel Type` need to be set to **Telephony**.
-- If it can be compacted in view.
-- `Not-required` fields to be **removed**.
-- `% Abandoned` is missing in this report (needs to be added).
+   - `Duration` needs to be updated to **Yesterday**.
+   - Few field name headers need to be renamed.
+   - `Channel Type` need to be set to **Telephony**.
+   - `Not-required` fields to be **removed**.
+   - `% Abandoned` is missing in this report (needs to be added).
 
 2. Create a copy of this report by clicking on the `dots` icon and `Create a Copy`.
 
@@ -253,7 +295,7 @@ Based on the data inside that report, we need to do the following steps:
    - Update the `Start Time` to **Today** and `Interval` as **None**.
    - Right click on the `Channel type` and add a filter for **Telephony**.
      <ins>Filters are a very powerful tool that allows us to only extract the data that meet specific criteria. They can be applied on a variable on a report level. In this case, we make sure to only account for the calls that have their Channel Type marked as "telephony".</ins>
-   - Since we created a filter to only show telephony Channel, we can `remove Channel Type` from the Row segment as it is redundant. <ins>Filter has been applied on a report level from the previous step.</ins>
+   - Since we created a filter to only show telephony Channel, we can `remove Channel Type` from the Row segment as it is redundant. <ins>Filter has been applied on report level from the previous step.</ins>
    - Right click on the field `In Service Level%`. Click `Edit` and update the name as `%ServiceLevel`.
    - Hide unnecessary fields by clicking on `Eye` symbol on the `Profile Variables`.
    - Notice that `% Abandoned field` is there in the report, but it’s hidden. `Unhide` it.
@@ -264,7 +306,7 @@ Based on the data inside that report, we need to do the following steps:
 
 6. Click `Preview`.
 
-7. Notice that some Fields are taking too much width like `Avg Speed Of Answer`.
+7. Notice that some Fields are taking too much width like the `Avg Speed Of Answer` column.
 
 8. `Double click` the column lines. This will adjust the width of each column to the size of the values. Any change on the column width is stored and remains on the report even after refresh. You can also adjust the width manually by clicking on the column line and dragging left or right to resize it.
 
@@ -288,15 +330,15 @@ There are 4 key `repositories` that we will learn about in this chapter:
 
 | Topic                                                                                   | Lab Type      | Dificulty Level | Estimated length |
 | --------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Understanding the Data](#1-understanding-the-data)                                     | Practical Lab | EASY            | 5 min            |
-| [Create Realtime Agent Visualization](#2-create-realtime-agent-visualization)           | Practical Lab | EASY            | 5 min            |
-| [Create Chart Visualization with Interval](#3-create-chart-visualization-with-interval) | Practical Lab | EASY            | 5 min            |
+| [Understanding the Data](#1-understanding-the-data)                                     | Practical Lab | MEDIUM          | 20 min           |
+| [Create Realtime Agent Visualization](#2-create-realtime-agent-visualization)           | Practical Lab | MEDIUM          | 20 min           |
+| [Create Chart Visualization with Interval](#3-create-chart-visualization-with-interval) | Practical Lab | MEDIUM          | 20 min           |
 
 ## 1. Understanding the Data
 
-In this exercise, you will spend some time understanding the Webex Contact Center Data and schema in which data is stored.
+In this exercise, you will spend some time understanding the Webex Contact Center data and schema in which data is stored.
 
-1. Navigate to Analyzer and click on `Create New` and select `Visualization` to create a new report that will be saved in your student folder.
+1. Navigate to Analyzer and click on `Create New` and select `Visualization` to create a new report that will be saved in your attendee folder.
 
 2. Select the Type as `Customer Session Record`.
 
@@ -304,50 +346,52 @@ In this exercise, you will spend some time understanding the Webex Contact Cente
 
 4. Click on `Profile variables`.
 
-5. Add the following Profile variable of type Fields:
+5. Add the following profile variable of type **Fields**:
 
-- Search for session and select `Contact Session ID` under fields and drag&drop it into Profile Variables.
-- Select the Value of Contact Session ID under Formula.
+   - Search for **_session_** and select `Contact Session ID` under fields and drag&drop it into Profile Variables.
+   - Select the `Value of Contact Session ID` under Formula.
 
-6. Next, add the below fields similarly and Save the report as `3.1_CSR_Today_ValueReport` in your folder after you have added all of them.
+6. Similarly, add the values of below fields:
 
-- DNIS
-- Entry point
-- IVR Script Name
-- Final Queue Name
-- Team
-- Agent
+   - DNIS
+   - Entry point
+   - IVR Script Name
+   - Final Queue Name
+   - Team
+   - Agent
 
-7. `Preview` the Report.
+7. Save the report as `3.1_CSR_Today_ValueReport` in your attendee folder after you have added all of them.
 
-8. Next click on any session ID, then click on `Zoom` Icon ![Zoom](/assets/images/Analyzer/zoom.png).
+8. `Preview` the Report.
 
-9. Make a note of all the Call Activities during this session (Call Activity Records).
+9. Next click on any session ID, then click on `Zoom` icon ![Zoom](/assets/images/Analyzer/zoom.png).
 
-10. On the Drill Down on the left, search for `Team Name` and click on it.
+10. Make a note of all the Call Activities during this session (Call Activity Records).
 
-11. Team name will be added to Drill-down view.
+11. On the Drill Down on the left, search for `Team Name` and click on it.
 
-12. Launch it in a separate tab.
+12. Team name will be added to Drill-down view.
 
-13. Move `Contact Start Timestamp` and `Contact End Timestamp` next to `nextState_s` by dragging them.
+13. Launch it in a separate tab.
 
-14. Click `Export as Excel` and save a copy of Call Activity records.
+14. Move `Contact Start Timestamp` and `Contact End Timestamp` next to `nextState_s` by dragging them.
 
-15. Now, create a similar report for Agent Session Record with below value fields and Start Time as Today.
+15. Click `Export as Excel` and save a copy of Call Activity records.
 
-- Agent Session ID
-- Agent Name
-- Agent Endpoint (DN)
-- Team Name
-- Current State
-- Channel type
+16. Now, apply everything you learnt and create a similar report for `Agent Session Record` with below value fields and `Start Time` as **Today**.
 
-16. Save it as `3.1_ASR_Today_ValueReport` in your folder and Click `Preview`.
+    - Agent Session ID
+    - Agent Name
+    - Agent Endpoint (DN)
+    - Team Name
+    - Current State
+    - Channel type
 
-17. Click on hamburger menu next to Value of Current State.
+17. Save it as `3.1_ASR_Today_ValueReport` in your folder and Click `Preview`.
 
-18. Uncheck all the states except `Idle`.
+18. Click on `hamburger` menu next to Value of Current State.
+
+19. Uncheck all the states except `Idle`.
 
 ## 2. Create Realtime Agent Visualization
 
@@ -375,7 +419,9 @@ In this exercise, we will create a custom visualization to showcase the state of
 - Create a high-level view, based on Line of business (Group or Teams)
 - Have Data summarize based on each Line of Business (LOB)
 - Have options to filter the data based on LOB and Idle code
-- Create some visual indication when certain agents in Idle state for long duration
+- Create some visual indication when certain agents are in Idle state for long duration
+
+To create a report with all the above requirements, we need to complete the following steps:
 
 1. Create a new visualization in Analyzer as an `Agent Activity Record`.
 
@@ -396,7 +442,7 @@ In this exercise, we will create a custom visualization to showcase the state of
 
 7. To capture Available Agent Count, add `Agent Session ID` again. Name it as **_#Available_**.
 
-   - Drag `Activity State` as Filter with value **"available"**.
+   - Drag `Activity State` as Filter with value **"available"** and save it.
 
 8. Repeat step 7 to add Idle Agent count, this time with filter value **"idle”**. Name it as **_#Idle_**.
 
@@ -405,9 +451,9 @@ In this exercise, we will create a custom visualization to showcase the state of
    - Search for Profile variable Measure `Activity Start Timestamp`.
    - Under formula, select `Minimum Activity Start Timestamp` and save it.
    - **Right click** on the field and click `New Formula`.
-   - Name Duration, swap the fields by clicking ![Swap](/assets/images/Analyzer/swap.png).
+   - Name it `Duration`, swap the fields by clicking ![Swap](/assets/images/Analyzer/swap.png).
    - Click on the empty field and select `Current Timestamp`.
-   - Select ![Substract](/assets/images/Analyzer/substract.png) `Subtraction` operator, as shown below.
+   - Select `Subtraction` operator ![Substract](/assets/images/Analyzer/substract.png).
    - Right click the `Duration` profile variable, and set the `Duration Number Format` as **Duration > MM:SS**.
    - `Hide` Minimum Activity Start Timestamp.
 
@@ -415,13 +461,13 @@ In this exercise, we will create a custom visualization to showcase the state of
 
 11. Save the report as `3.2_AAR_RT_AgentState` in your folder and click `Preview`.
 
-12. Notice that the **#Total** count for each agent is “5”.
+12. Notice that the **#Total** count for each agent is “7”.
 
-    - This is because each agent is a multi-channel agent (with Total 5 channels, 1 voice, and 4 Digital ones).
-    - In this case we want to capture data for `Telephony channel` only so let’s add a Channel Filter for Telephony.
-    - Go Back to the report edit mode and Add Filter with Channel Type as Telephony.
+    - This is because each agent is a multi-channel agent (with total 7 channels, 1 voice, and 6 Digital ones).
+    - In this case, we want to capture data for `Telephony channel` only so let’s add a Channel Filter for Telephony.
+    - Go back to the report edit mode and add `Filter` with Channel Type as Telephony.
 
-13. Save the visualization and click on Preview to run it again.
+13. Save the visualization and click on `Preview` to run it again.
 
 14. We are still missing below asks:
 
@@ -434,32 +480,44 @@ In this exercise, we will create a custom visualization to showcase the state of
 
 16. To create a LOB group:
 
-- Right click on the Team name and then `Create Enhanced Field`.
-- Name the Field LOB_GroupingX, where X is your student number.
-  For Example: Student 2 will create LOB_Grouping2
-- Add 2 groups containing the following teams:
-  CL_G1x : Select Team-1, Team-10, Team-11, Team,12
-  CL_G2x : Select Team-2,Team-20,Team-21, Team-22
-- Save it.
-- Make this Enhanced Field global so it can be used for any other visualizations with need of creating it again.
-- Right click LOB_GroupingX à Click Save à When prompted, click Save again.
-- Field is now saved and can be used in any other report.
-- Not necessary to proceed with the exercise, but you can verify this by deleting the LOB_GroupingX.
-- Next from Row segment à Click + on Row segment à Go to Enhanced Fields on left panel à Drag and Drop LOB_GroupingX
-- Move LOB_Grouping{{StudentID}} as top row segment
+    - Right click on the Team name and then `Create Enhanced Field`.
 
-17. To Create a Summary at LOB level:
+    - Name the Field LOB_Grouping<w class = "attendee-class">attendee-id</w>, based on your attendee IT.
 
-    - Click Show Summary Option and select LOB_Grouping
-    - Click Customize à Go to LOB_Grouping level
-    - Select SUM for #Total, #Idle, #Avaliable à Save it
+    - Add 2 groups containing the following teams:
+      Group1 : Select your Team only
+      Group2 : Select any other team available.
+
+    - `Save` it.
+
+    - Make this `Enhanced Field` global so it can be used for any other visualizations with need of creating it again.
+
+    - Right click LOB_Grouping<w class = "attendee-class">attendee-id</w> -> Click Save -> When prompted, click Save again.
+
+    - Field is now saved and can be used in any other report.
+
+    - Optionally, you can verify this by deleting the LOB_Grouping<w class = "attendee-class">attendee-id</w>.
+
+    - Next, click on `Row Segments`, search for the enhanced field you created under `Enhanced Fields` and drag&drop LOB_Grouping<w class = "attendee-class">attendee-id</w>
+
+    - Move LOB_Grouping<w class = "attendee-class">attendee-id</w> as top Row Segment.
+
+17. To Create a **_Summary_** at LOB level:
+
+    - Click `Show Summary` option and select LOB_Grouping<w class = "attendee-class">attendee-id</w>
+
+    - Click `Customize`.
+
+    - Go to LOB_Grouping level
+
+    - Select `SUM` for #Total, #Idle, #Avaliable and `Save` it.
 
 18. Lastly, add the on-the fly filters for the LOB Grouping and Idle Code Name.
 
-    - Click on Show Filter On Run Mode
-    - Select LOB_Grouping and Idle Code Name
+    - Click on `Show Filter On Run Mode` on the settings on the left.
+    - Select `LOB_Grouping` and `Idle Code Name`.
 
-19. Save visualizations and check the `Preview`
+19. Save visualizations and check the `Preview`.
 
 ## 3. Create Chart Visualization with Interval
 
@@ -471,7 +529,7 @@ In this exercise, we will create a visualization in chart view of historical dat
 
 3. Next, set this visualization as a **Monthly** report, select **This Month** as the `Start Time`. Then under `Compute`, we will select `Interval` as **Daily**.
 
-4. Click on `Profile Variables`. Bring in `Contact Session ID` and drag and drop that into the report. When prompted, we will select `Count of Session IDs` as formula and rename the field as **Total Calls**.
+4. Click on `Profile Variables`. Find `Contact Session ID` and drag and drop that into the report. When prompted, we will select `Count of Session IDs` as formula and rename the field as **Total Calls**.
 
 5. Next, we will add `Abandoned Calls` to the report.
 
@@ -493,7 +551,7 @@ In this exercise, we will create a visualization in chart view of historical dat
 
 # Dashboards
 
-This lab is designed to introduce you to the dashboards available in Analyzer. Dashboards are available for Historical, Realtime and Business Metrics. You will learn about and run some useful stock dashboards as well as create a custom one.
+This lab is designed to introduce you to the `dashboards` available in Analyzer. Dashboards are available for Historical, Realtime and Business Metrics. You will learn about and run some useful stock dashboards as well as create a custom one.
 
 ## Table of Contents
 
@@ -548,7 +606,7 @@ We will create a new Dashboard using the below visualizations which we have crea
 
 1. Navigate to the `Dashboards` section of Analyzer and `Create New Dashboard`.
 
-2. Drag the following created reports from your student folder to the dashboard.
+2. Drag the following created reports from your attendee folder to the dashboard.
 
    - 3.2_AAR_RT_AgentState
    - 3.3_CSR_ContactVolume
@@ -577,11 +635,11 @@ We will create a new Dashboard using the below visualizations which we have crea
 
 | Topic                                                                         | Lab Type      | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Queue Based Reporting](#1-queue-based-reporting)                             | Practical Lab | EASY            | 5 min            |
-| [Global Variable Reporting](#2-global-variable-reporting)                     | Practical Lab | EASY            | 5 min            |
-| [Data Reporting for Digital Channels](#3-data-reporting-for-digital-channels) | Practical Lab | EASY            | 5 min            |
-| [Skill Based Reporting](#4-skill-based-reporting)                             | Practical Lab | EASY            | 5 min            |
-| [Preferred Agent Reporting](#5-preferred-agent-reporting)                     | Practical Lab | EASY            | 5 min            |
+| [Queue Based Reporting](#1-queue-based-reporting)                             | Practical Lab | EASY            | 15 min           |
+| [Global Variable Reporting](#2-global-variable-reporting)                     | Practical Lab | EASY            | 10 min           |
+| [Data Reporting for Digital Channels](#3-data-reporting-for-digital-channels) | Practical Lab | EASY            | 10 min           |
+| [Skill Based Reporting](#4-skill-based-reporting)                             | Practical Lab | EASY            | 15 min           |
+| [Preferred Agent Reporting](#5-preferred-agent-reporting)                     | Practical Lab | EASY            | 15 min           |
 
 ## 1. Queue Based Reporting
 
@@ -598,12 +656,15 @@ There are additionally **3 new stock reports**:
 
 In this exercise, you will see how Queue based data is different from Contact Session and Contact Activity Data and how you can use Queue based reports to capture more precise insights for your contact center at the queue level which help with more accurate and predictive actions.
 
-Before continuing with this exercise make, sure you have made some test calls and used `Preferred Agent Routing` to handle the calls (Refer Instructions to Create Voice Data Step 4 for More details). TODO
+Before continuing with this exercise make, sure you have made some test calls and used `Preferred Agent Routing` to handle the calls (Refer to instructions on [Pre-requisites](https://webexcc.github.io/pages/Analyzer/)).
+
 In this exercise you will notice how data are captured across 3 different types of repositories: Customer Session Record (CSR) , Customer Activity Record (CAR) and Queue Record and how `Queue Record` offers much clear data points for contact center.
 
-![Queue1](/assets/images/Analyzer/Queue1.png).
+![Queue1](/assets/images/Analyzer/Queue1.png)
 
-![Queue2](/assets/images/Analyzer/Queue2.png).
+![Queue2](/assets/images/Analyzer/Queue2.png)
+
+Follow the steps below to complete this exercise:
 
 1. Edit `3.1_CSR_Today_ValueReport` and add `Preferred Agent Name` as a filter -> Select your user in the field.
 
@@ -613,9 +674,9 @@ In this exercise you will notice how data are captured across 3 different types 
 
 4. Next Click on any Session Id and click on Zoom ![Zoom](/assets/images/Analyzer/zoom.png) to drill down into the Session.
 
-5. Here, makes a note of all the Activities for this session and make a note of the Queue name across various activities. (Click on Next page at the bottom if applicable )
+5. Here, makes a note of all the Activities for this session and make a note of the Queue name across various activities (Click on Next page at the bottom if applicable).
 
-6. Navigate to Analyzer and Create a new report visualization that will be saved in your personal directory. Create New Visualization.
+6. Navigate to Analyzer and Create a new report visualization that will be saved in your atendee folder. Create `New Visualization`.
 
 7. Select the Type as `Queue Record`.
 
@@ -627,7 +688,7 @@ In this exercise you will notice how data are captured across 3 different types 
 
     - Search for session and select `Contact Session ID` and drop it into Profile Variable .
     - Select the `Value of Contact Session ID`.
-    - Next Add below fields and Save the report as 5.1_QBR_Today_ValueReport in your folder:
+    - Next Add below fields and Save the report as `5.1_QBR_Today_ValueReport` in your folder:
       - CallLeg ID
       - CallLeg Start Timestamp (Set Date/Time Format )
       - CallLeg End Timestamp (Set Date/Time Format )
@@ -640,14 +701,14 @@ In this exercise you will notice how data are captured across 3 different types 
 
 11. Click Hamburger icon next to Customer Session ID
 
-12. Filter it for the session selected in step-4 above (make sure you use your own Session ID). You will notice all Call legs associated with this Contact session.
+12. Filter it for the session selected in step-4 above. You will notice all Call legs associated with this Contact session.
 
 13. Next, Go to `Stock Reports > Historical Reports > Queue Reports`.
     - Preview all three Queue Stock reports and make a note of various data points.
 
 ## 2. Global Variable Reporting
 
-Global Variable allow you to save Call associated or Agent entered Data or data from external applications into the reporting. You must mark the Global variable as Reportable (Max 100 Reportable) to report on this data. Variable can be of following types:
+**_Global Variables)_** allow you to save Call associated or Agent entered Data or data from external applications into the reporting. You must mark the Global variable as Reportable (Max 100 Reportable) to report on this data. Variable can be of following types:
 
 - Boolean
 - String: 256-character limit
@@ -657,38 +718,38 @@ Global Variable allow you to save Call associated or Agent entered Data or data 
 
 In this Exercise you see how you can capture the data using Global variable and use in visualizations to capture the key insights.
 
-- Before continuing with this Lab make sure you have made some test calls and opted for Callback by keeping your agent in Idle state.
+- Before continuing with this Lab, make sure you have made some test calls and opted for Callback by keeping your agent in Idle state.
 - Next, change your agent state to Available, callback will be established.
-- Make a note of your agent desktop Call data information.
+- Make a note of your agent desktop call data information.
 
 You would notice two Global Variables: TODO
 
 - Global_IsCallback (Integer)
-- Global_StudentID (String)
+- Global_AttendeeID (String)
 
 The Data insights we want to capture is two fold:
 
 - Value of Caller entered digits in IVR
 - Number of calls opted for Callback Per Student and SUM total
 
-1. Create a visualization as per Screenshot below: TODO
+1. Create a visualization with the following characteristics:
 
    - Choose `Start Time` as **Today**.
    - Select `Global_StudentID` in `Row Segments`.
    - In profile variable under `Measure` select `Sum of Global_IsCallback` (Note: Check Measures as this is an integer variable not string)
-   - Enable Run mode filter for Global_StudentID
+   - Enable `Run mode filter` for Global_StudentID
 
-2. Save the visualizations as 5.2_GlobalVariable in your Folder and Preview.
+2. Save the visualizations as `5.2_GlobalVariable` in your Folder and `Preview`.
 
-This will provide you number of callbacks for each StudentID.
+This will provide you number of callbacks for each Attendee ID.
 
 ## 3. Data Reporting for Digital Channels
 
-Besides voice data, Analyzer reporting offers similar insights on digital channel interactions as well, such as conversation statistics (conversations presented, handled, abandoned) and service levels (In Service Level, Average Speed of Answer, Average Abandoned Time). Global variables are also recently available in Webex Connect flows to capture additional data.
+Besides voice data, Analyzer reporting offers similar insights on **_digital channel interactions_** as well, such as conversation statistics (conversations presented, handled, abandoned) and service levels (In Service Level, Average Speed of Answer, Average Abandoned Time). Global variables are also recently available in Webex Connect flows to capture additional data.
 
-In this Exercise, you will explore the available stock reports for Digital Channel reporting as well as create your own custom visualization, capturing some non-voice data from the chat conversations.
+In this Exercise, you will explore the available stock reports for Digital Channel reporting as well as create your own custom visualization, capturing some data from the non-voice conversations.
 
-- Before continuing with the exercise, make sure to create some test digital interactions, based on the information provided (Refer Instructions to Create Digital Channel Data to for more details). TODO Make sure to create at least one Live Chat conversation, as it will be needed to populate the global variables with digital channel interaction data).
+- Before continuing with the exercise, make sure to create some test digital interactions. If you do not have any digital interactions created, you can skip this exercise until you complete [Lab 12 - Digital Channels](https://webexcc.github.io/pages/Digital/).
 
 1. Stock visualizations for multiple channels are available inside the `Multimedia Reports` folders.
 
@@ -709,7 +770,7 @@ In this Exercise, you will explore the available stock reports for Digital Chann
 9. Create a new CSR visualization, utilizing the knowledge gathered so far, with the following requirements:
 
    - Set the `Start Time` as **This Week**.
-   - Value of variables `Channel Type`, `ANI`, `DNIS`, `Global_StudentID` and `Contact Start Timestamp` as profile variables.
+   - Value of variables `Channel Type`, `ANI`, `DNIS` and `Contact Start Timestamp` as profile variables.
    - Verify that Contact Start Timestamp has the proper Number Format to show Date Time, by right clicking on variable Contact Start Timestamp and selecting the desired format.
    - Create a filter on `Channel Type` to only include chat, email & social.
 
@@ -717,13 +778,11 @@ In this Exercise, you will explore the available stock reports for Digital Chann
 
 11. Click `Preview` to see the report.
 
-12. Try to spot the chat interaction that you initiated with your student ID.
-
 ## 4. Skill Based Reporting
 
-Skill Reporting has been launched recently, which offers new data insights into Call and Agent skill assignments, providing information for agents and flows that utilize the Skill-Based Routing logic.
+**_Skill Reporting_** has been launched recently, which offers new data insights into Call and Agent skill assignments, providing information for agents and flows that utilize the Skill-Based Routing logic.
 
-Fields added for CSR, CAR, ASR and AAR
+Fields added for CSR, CAR, ASR and AAR:
 
 - Agent Skill Profile (ASR and AAR)
 - Agent Skills (ASR and AAR)
@@ -731,7 +790,7 @@ Fields added for CSR, CAR, ASR and AAR
 - Contact Matched skills (CSR and CAR)
 - Contact matched Skill profile (CSR and CAR)
 
-Support Skill Type:
+Supported Skill Types:
 
 - Enum: A named set of predefined values
 - Proficiency: 0-10
@@ -740,15 +799,20 @@ Support Skill Type:
 
 In this Exercise you would try to capture skill information for the caller and Agents.
 
-First visualization we will create will capture the numbers of agent available for each skill set.
+The visualization we will create will capture the numbers of agent available for each skill set.
 
-1. Leverage the learning so far to build a custom report with Row segment and Profile variables and create below shown visualizations
+1. Leverage the learning so far to build a custom report with below characteristics:
 
    - Data Type: `Agent Session Record`
-   - `Realtime` with **5 sec refresh** duration
-   - `Agent Skill` and `Agent Name` as Row Segment
-   - **Count of Agent** as `Profile Variable`
-   - Filter on `Channel Type` **Telephony**
+
+   - `Realtime` with **5 sec refresh** duration.
+
+   - `Agent Skill` and `Agent Name` as Row Segment.
+
+   - **Count of Agent** as `Profile Variable`.
+
+   - Filter on `Channel Type` **Telephony**.
+
    - Select `Agent Skills` for Filter on Run Mode.
 
 2. Save the Visualizations as `5.4_Agent_RT_SkillCount`.
@@ -759,13 +823,13 @@ First visualization we will create will capture the numbers of agent available f
 
 ## 5. Preferred Agent Reporting
 
-In this exercise, you will explore key reporting data points when using Preferred Agent Routing.
+In this exercise, you will explore key reporting data points when using **_Preferred Agent Routing_**.
 
 1. Create a new visualization in Analyzer as `Customer Session Record`.
 
-2. Set `Start Time` as `Today`
+2. Set `Start Time` as `Today`.
 
-3. Next, Click on `Row Segment` and add:
+3. Next, Click on `Row Segments` and add:
 
    - Routing Type
    - Preferred Agent Name
@@ -784,7 +848,7 @@ In this exercise, you will explore key reporting data points when using Preferre
 
 # Agent Data Insights
 
-In many cases, it’s not only supervisors or administrators but also agents that need access to some reporting and statistics. Since Analyzer is, by default, not accessible to agents, there are other ways that we can share such data insights with them. In this lab, you will explore some of them, such as the `Agent Personal Statistics(APS)` tab in Agent desktop, the `direct access via URL` as well as `embedding reports on the Agent Desktop` itself.
+In many cases, it’s not only supervisors or administrators but also agents that need access to some reporting and statistics. Since Analyzer is, by default, not accessible to agents, there are other ways that we can share such data insights with them. In this lab, you will explore some of them, such as the `Agent Personal Statistics (APS)` tab in Agent desktop, the `direct access via URL` as well as `embedding reports on the Agent Desktop` itself.
 
 ## Table of Contents
 
@@ -798,7 +862,7 @@ In many cases, it’s not only supervisors or administrators but also agents tha
 
 1. If not already logged in to the Agent Desktop, open a new window and **login** with your agent user.
 
-2. On the left-hand side menu select the `APS` icon ![APS](/assets/images/Analyzer/APS.png).
+2. On the left-hand side menu, select the `APS` icon ![APS](/assets/images/Analyzer/APS.png).
 
 3. Within APS, there are multiple tabs of data. Navigate through the APS dashboards available in the Agent Desktop.
 
@@ -824,15 +888,15 @@ Analyzer is a premium functionality which is only accessible for Supervisors or 
 
 ## 3. Embedding the report into Agent Desktop
 
-`Desktops layout` configuration drives the Agent desktop UI. By default, all Agent teams are mapped to default Global Desktop Layout. To **_embed_** a custom report into Agent desktop, follow below instructions:
+`Desktops layout` configuration drives the Agent desktop UI. By default, all Agent teams are mapped to a default global Desktop Layout. To **_embed_** a custom report into Agent desktop, follow below instructions:
 
 1. Run the dashboard `4.2_CustomDashboard` you created in [previous exercise 4.2](#2-creating-custom-dashboards).
 
 2. Now, download and open the below custom desktop layout file provided to you.
 
-[Custom Desktop Layout JSON File](/assets/images/Analyzer/CustomDesktopLayout_v1.json)
+   [Custom Desktop Layout JSON File](/assets/images/Analyzer/CustomDesktopLayout_v1.json)
 
-3. Go to the Line 114 or look for `src` and copy the dashboard link from step 1 as src value.
+3. Go to the Line 114 or look for `src` and paste the dashboard link from step 1 as src value.
 
 4. `Save` the file.
 
@@ -840,7 +904,7 @@ Analyzer is a premium functionality which is only accessible for Supervisors or 
 
 6. Go to `Desktop Layout` under Provisioning.
 
-7. Click on 3 dots and then Copy the layout and name it as <w class = "attendee-class">attendee-id</w>\_DesktopLayout, based on your attendee ID.
+7. Click on the dots ![Dots](/assets/images/Analyzer/dots.png) and then Copy the layout and name it as <w class = "attendee-class">attendee-id</w>\_DesktopLayout, based on your attendee ID.
 
 8. Upload the saved file in step 4 and save the desktop layout.
 
@@ -953,6 +1017,8 @@ The queries supported by the search graphQL endpoint optionally accept filters a
 <ins>It is important to note that SearchTasks API is not querying the reports we create in Analyzer but the raw data directly,</ins> compared to previous versions.
 
 Additionally to the [Developer Documentation](https://developer.webex-cx.com/documentation/search/v1/search-tasks), Cisco has created various additional Search Task endpoint samples and help videos to get started with Analyzer API, which can be found in [Cisco DevNet Github page](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/graphql-sample).
+
+- Navigate through both of these links to familiarize yourself with the Data API capabilities in Webex Contact Center.
 
 To learn everything about Reporting and Search APIs, you can follow and complete [Lab 11](https://webexcc.github.io/pages/API/#all-new-webex-contact-center-apis-new-version).
 
