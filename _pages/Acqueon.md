@@ -24,11 +24,11 @@ In this lab tenant, the tenant provisioning and integration is already completed
 ## Step 2. Create Campaign
 
 - Login to administration portal and launch the 'Campaign Manager' portal 
-![Outbound](/assets/images/OB_1.gif)
+![Outbound](/assets/images/1_OB_1.gif)
 
 
 - Navigge to 'Campaign' and click 'Add Campaign' button
-![Outbound](/assets/images/OB_2.gif)
+![Outbound](/assets/images/1_OB_2.gif
 
 
 - Enter the following details and click 'Next' : 
@@ -39,21 +39,21 @@ In this lab tenant, the tenant provisioning and integration is already completed
   - Select TimeZone: `Select a desired time zone`
 
 
-![Outbound](/assets/images/OB_3.gif)
+![Outbound](/assets/images/1_OB_3.gif)
 
 
 - Uncheck "Digital/CPaaS" option and from the list of available teams, select your respective team and add it under the "Assigned Teams" section. Click "Next"   
 
-![Outbound](/assets/images/OB_4.gif)
+![Outbound](/assets/images/1_OB_4.gif)
 
 
 - Select the contact strategy as "Default_Simple_Strategy" and select the Callback Strategy as "Default_Callback_Strategy" and click "Next"
 
-![Outbound](/assets/images/OB_5.gif)
+![Outbound](/assets/images/1_OB_5.gif)
 
 
 - Click "Save" and verify that you receive the message "Campaign created successfully"
-![Outbound](/assets/images/OB_6.gif)
+![Outbound](/assets/images/1_OB_6.gif)
 
 
 
@@ -64,7 +64,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
   - Lastname
   - Phone
 
-![Outbound](/assets/images/OB_7.gif)
+![Outbound](/assets/images/1_OB_7.gif)
 
 
 ## Step 4. Create and Upload Contact List 
@@ -74,7 +74,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 - The second row in the file should be: Test,Agent1,<`Any US phone number of your choice`>
 - Save the file 
 
-![Outbound](/assets/images/OB_8.gif)
+![Outbound](/assets/images/1_OB_8.gif)
 
 
 - Navigate to "Contact Lists" section 
@@ -83,7 +83,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 -  Verify "File Type" is `Text/CSV` and "Delimiter" is `,`
 -  Click "Choose File" and select the file created in the previous step
 
-![Outbound](/assets/images/OB_9.gif)
+![Outbound](/assets/images/1_OB_9.gif)
 
 
 - Navigate to "Field Mapping", select "ZoneName" as `Campaign Specific TimeZone`
@@ -92,7 +92,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 - Click "Upload"
 - Click "Refresh" and verify that the list shows up under the list of records
 
-![Outbound](/assets/images/OB_10.gif)
+![Outbound](/assets/images/1_OB_10.gif)
 
 
 ## Step 5. Upload a new desktop layout
@@ -100,7 +100,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 - Download the desktop layout provided here: https://github.com/WebexCC/webexcc.github.io/blob/master/assets/Acqueon_Desktop_Layout.json
 - If you are unable to download the file, use the `Copy raw contents` options to copy the content and past it in a text file in your desktop. Save it as a JSON file. 
 
-![Outbound](/assets/images/OB_15.gif)
+![Outbound](/assets/images/1_OB_15.gif)
 
 
 - Login to the administration portal, Navigate to Provisioning > Desktop Layout > Click "New Layout"
@@ -108,7 +108,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 - Click "Upload" and select the layout downloaded earlier
 - Click "Save"
 
-![Outbound](/assets/images/OB_11.gif)
+![Outbound](/assets/images/1_OB_11.gif)
 
 
 ## Step 6. Assign the new layout to your team
@@ -116,7 +116,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 - Navigate to Team and edit your respective team 
 - In the "Desktop Layout" field, select the new desktop layout created in previous step
 
-![Outbound](/assets/images/OB_12.gif)
+![Outbound](/assets/images/1_OB_12.gif)
 
 
 ## Step 7. Login to Agent desktop and verify Campaign Manager option 
@@ -125,7 +125,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 - Agent dekstop URL: https://desktop.wxcc-us1.cisco.com/
 - Next to the agent desktop title, verify that the `Campaign Contact` is visible 
 
-![Outbound](/assets/images/OB_13.gif)
+![Outbound](/assets/images/1_OB_13.gif)
 
 
 ## Step 8. Accept the Campaign Contact
@@ -133,7 +133,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 - Make the agent available 
 - Click `Campaign Contact` and accept the preview contact 
 
-![Outbound](/assets/images/OB_14.gif)
+![Outbound](/assets/images/1_OB_14.gif)
 
 
 
