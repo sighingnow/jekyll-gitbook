@@ -1,7 +1,7 @@
 ---
 title: Lab 9 - Outbound Campaign
 author: Gagarin Sathiyanarayanan
-date: 2022-02-17
+date: 2022-02-20
 layout: post
 ---
 
@@ -12,7 +12,8 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 2. Verify that the Agents can initiate and make outbound campaign calls from the Agent Desktop
 
 # Lab Pre-requisites
-In this lab tenant, the tenant provisioning and integration is already completed. If you are using a different tenant, you can configure and use outbound campaigns only if your enterprise has purchased the Acqueon SKU and provisioning, integration is completed. 
+- In this lab tenant, the tenant provisioning and integration is already completed. If you are using a different tenant, you can configure and use outbound campaigns only if your enterprise has purchased the Acqueon SKU and provisioning, integration is completed. 
+- You should also be able to login to agent desktop with your respective team created in previous labs
 
 
 # Lab Section
@@ -24,6 +25,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 ## Step 2. Create Campaign
 
 - Login to administration portal and launch the 'Campaign Manager' portal 
+
 ![Outbound](/assets/images/1_OB_1.gif)
 
 
@@ -53,6 +55,7 @@ In this lab tenant, the tenant provisioning and integration is already completed
 
 
 - Click "Save" and verify that you receive the message "Campaign created successfully"
+
 ![Outbound](/assets/images/1_OB_6.gif)
 
 
@@ -97,10 +100,10 @@ In this lab tenant, the tenant provisioning and integration is already completed
 
 ## Step 5. Upload a new desktop layout
 
-- Download the desktop layout provided here: https://github.com/WebexCC/webexcc.github.io/blob/master/assets/Acqueon_Desktop_Layout.json
+- Download the desktop layout provided here: **[Custom Desktop Layout](https://github.com/WebexCC/webexcc.github.io/blob/master/assets/Acqueon_Desktop_Layout.json){:target="\_blank"}**\
 - If you are unable to download the file, use the `Copy raw contents` options to copy the content and past it in a text file in your desktop. Save it as a JSON file. 
 
-![Outbound](/assets/images/1_OB_15.gif)
+![Outbound](/assets/images/1_OB_15.png)
 
 
 - Login to the administration portal, Navigate to Provisioning > Desktop Layout > Click "New Layout"
