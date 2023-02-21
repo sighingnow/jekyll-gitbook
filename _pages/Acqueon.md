@@ -29,8 +29,8 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 ![Outbound](/assets/images/1_OB_1.gif)
 
 
-- Navigge to 'Campaign' and click 'Add Campaign' button
-![Outbound](/assets/images/1_OB_2.gif
+- Navigate to 'Campaign' and click 'Add Campaign' button
+![Outbound](/assets/images/1_OB_2.gif)
 
 
 - Enter the following details and click 'Next' : 
@@ -100,7 +100,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 
 ## Step 5. Upload a new desktop layout
 
-- Download the desktop layout provided here: **[Custom Desktop Layout](https://github.com/WebexCC/webexcc.github.io/blob/master/assets/Acqueon_Desktop_Layout.json){:target="\_blank"}**\
+- Download the desktop layout provided here: **[Custom Desktop Layout](https://github.com/WebexCC/webexcc.github.io/blob/master/assets/Acqueon_Desktop_Layout.json){:target="\_blank"}**
 - If you are unable to download the file, use the `Copy raw contents` options to copy the content and past it in a text file in your desktop. Save it as a JSON file. 
 
 ![Outbound](/assets/images/1_OB_15.png)
