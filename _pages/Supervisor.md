@@ -61,6 +61,35 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 ![Lab_4_Supervisor_Config_6](/assets/images/DC_Lab_4_Supervisor_Config_6.png)
 
 
+## **2. Assign desktop layout for supervisor**
+
+-  Download desktop laout JSON file for supervisor from GitHub using the following link: https://cisco.app.box.com/s/ndgusl7aez4o16rkyjq6xskfh5xd7x75
+-  Open the file in any JSON editor, check and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
+	- ***supervisor*** section is used when the user signs in to supervisor desktop in <> mode
+	- ***supervisorAdmin*** section is used when the user signs in to supervisor desktop in <> mode
+
+
+
+-  Go to ***Provisioning*** -> ***Desktop Layout*** and click on ***New Layout***.
+
+
+
+-  Provide ***Name***, press ***Upload*** button and select JSON layout file downloaded above. After the file is uploaded check and make sure the validation is completed successfully and save desktop layout.
+
+
+
+-  Go to ***Provisioning*** -> ***Teams*** and click on ***New Team***.
+
+
+
+-  Choose proper ***Site*** from drop-down list, provide ***Name***, select ***Desktop Layout*** for supervisor created at the previous step and save the team.
+
+
+
+-  
+
+
+
 
 <iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
