@@ -15,13 +15,15 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 1.  Admin credentials to login to Control Hub and Webex Contact Center administration portal.
 2.  At least one admin and one supervisor users are created on Control Hub.
+3.  Standard or Premium agent license is assigned to agent's account on Control Hub.
+4.  Agent account is configured on Webex CC management portal and you are able to sign in as an agent.
 
-#### Example of agent and 
+#### Example of agent and supervisor users on Control Hub 
 
-| **User Role** | **User email**                                                                | **User Extension** |
-| ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class = "attendee-class">your_attendee_ID</w>\_agent1@\<your domain\>      | \<your assign DN\> |
-| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>\_supervisor1@\<your domain\> | \<your assign DN\> |
+| **User Role** | **User email**                                     |
+| ------------- | ------------------------------------------ |
+| Agent         | <w class = "attendee-class">your_attendee_ID</w>\_agent1@\<your domain\>      |
+| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>\_supervisor1@\<your domain\> |
 
 >**Note:** Please refer ***Lab 1 - Admin Experiense*** if you need to add agent or supervisor users on Control Hub.
 
