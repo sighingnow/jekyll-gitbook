@@ -61,7 +61,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 ![Lab_4_Supervisor_Config_6](/assets/images/DC_Lab_4_Supervisor_Config_6.png)
 
 
-## **2. Assign desktop layout for supervisor**
+## **2. Configure supervisor in Webex CC**
 
 -  Download desktop laout JSON file for supervisor from GitHub using the following link: https://cisco.app.box.com/s/ndgusl7aez4o16rkyjq6xskfh5xd7x75
 -  Open the file in any JSON editor, check and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
@@ -86,7 +86,23 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 
 
--  
+-  Go to ***Provisioning*** -> ***User Profiles***, find default ***Supervisor Profile***, click on ***...*** button next to it, then on ***Copy***.
+
+
+
+-  Provide proper user profile name and go to ***Module Settings*** tab.
+
+
+
+-  Select ***Module Access*** as ***Specific***. Check and make sure ***Send Messages*** and ***Mid-Call Monitor*** capabilities are enabled.
+
+
+
+-  Scroll to the bottom of the page and save supervisor profile.
+
+
+
+-  Go to **Provisioning*** -> ***Users***, find your supervisor user, click on ***...*** button next to it, then on ***Edit***.
 
 
 
