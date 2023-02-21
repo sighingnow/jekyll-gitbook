@@ -65,46 +65,59 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 -  Download desktop laout JSON file for supervisor from GitHub using the following link: https://cisco.app.box.com/s/ndgusl7aez4o16rkyjq6xskfh5xd7x75
 -  Open the file in any JSON editor, check and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
-	- ***supervisor*** section is used when the user signs in to supervisor desktop in <> mode
-	- ***supervisorAdmin*** section is used when the user signs in to supervisor desktop in <> mode
+	- ***supervisor*** section is used when the user signs in to supervisor desktop with ***Supervisor*** role.
+	- ***supervisorAdmin*** section is used when the user signs in to supervisor desktop with ***Supervisor and Agent*** role.
 
-
+![Lab_4_WebexCC_Config_1](/assets/images/DC_Lab_4_Supervisor_WebexCC_1.png)
 
 -  Go to ***Provisioning*** -> ***Desktop Layout*** and click on ***New Layout***.
 
-
+![Lab_4_WebexCC_Config_2](/assets/images/DC_Lab_4_Supervisor_WebexCC_2.png)
 
 -  Provide ***Name***, press ***Upload*** button and select JSON layout file downloaded above. After the file is uploaded check and make sure the validation is completed successfully and save desktop layout.
 
-
+![Lab_4_WebexCC_Config_3](/assets/images/DC_Lab_4_Supervisor_WebexCC_3.png)
 
 -  Go to ***Provisioning*** -> ***Teams*** and click on ***New Team***.
 
+![Lab_4_WebexCC_Config_4](/assets/images/DC_Lab_4_Supervisor_WebexCC_4.png)
 
+-  Choose proper ***Site*** from drop-down list according to the lab guide, provide ***Name***, select ***Desktop Layout*** for supervisor created at the previous step and save the team.
 
--  Choose proper ***Site*** from drop-down list, provide ***Name***, select ***Desktop Layout*** for supervisor created at the previous step and save the team.
-
-
+![Lab_4_WebexCC_Config_5](/assets/images/DC_Lab_4_Supervisor_WebexCC_5.png)
 
 -  Go to ***Provisioning*** -> ***User Profiles***, find default ***Supervisor Profile***, click on ***...*** button next to it, then on ***Copy***.
 
-
+![Lab_4_WebexCC_Config_6](/assets/images/DC_Lab_4_Supervisor_WebexCC_6.png)
 
 -  Provide proper user profile name and go to ***Module Settings*** tab.
 
-
+![Lab_4_WebexCC_Config_7](/assets/images/DC_Lab_4_Supervisor_WebexCC_7.png)
 
 -  Select ***Module Access*** as ***Specific***. Check and make sure ***Send Messages*** and ***Mid-Call Monitor*** capabilities are enabled.
 
-
+![Lab_4_WebexCC_Config_8](/assets/images/DC_Lab_4_Supervisor_WebexCC_8.png)
 
 -  Scroll to the bottom of the page and save supervisor profile.
 
-
+![Lab_4_WebexCC_Config_9](/assets/images/DC_Lab_4_Supervisor_WebexCC_9.png)
 
 -  Go to **Provisioning*** -> ***Users***, find your supervisor user, click on ***...*** button next to it, then on ***Edit***.
 
+![Lab_4_WebexCC_Config_10](/assets/images/DC_Lab_4_Supervisor_WebexCC_10.png)
 
+-  Set the following parameters and save changes: 
+
+| **Parameter Name**             | **Parameter Value**                               |
+| -------------------------- | --------------------------------------------- |
+| Contact Center Enabled     | Yes                                           |
+| Primary Team               | Select supervisor team created above          |
+| Site                       | Select proper site according the to lab guide |
+| Teams                      | Add teams which supervisor can use when signing in as an agent |
+| Agent Profile              | Select the default one - ***Agent-Profile***        |
+| Multimedia Profile         | Select the default one - ***Default_Multimedia_Profile*** | 
+
+![Lab_4_WebexCC_Config_11](/assets/images/DC_Lab_4_Supervisor_WebexCC_11.png)
 
 
 <iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
