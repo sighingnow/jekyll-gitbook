@@ -31,10 +31,34 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
 > Webex CC Management Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Agent / Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 
 ## **1. Assign supervisor license to the user**
 
+-  Login to Control Hub under organization admin account.
+-  Go to ***Users***, click on supervisor's account, scroll dow to ***Licenses*** section and press ***Edit Licenses*** button.
+
+![Lab_4_Supervisor_Config_1](/assets/images/DC_Lab_4_Supervisor_Config_1.png)
+
+-  Press ***Edit Licenses*** button on ***Edit services*** page.
+
+![Lab_4_Supervisor_Config_2](/assets/images/DC_Lab_4_Supervisor_Config_2.png)
+
+-  Go to ***Contact Center*** tab, tick ***Licenses Agent*** checkbox and assign ***Premium Agent - Supervisor Role*** license. Then save changes.
+
+![Lab_4_Supervisor_Config_3](/assets/images/DC_Lab_4_Supervisor_Config_3.png)
+
+-  Check and make sure supervisor license has been assigned. Then click on ***Close*** button to return to the user settings.
+
+![Lab_4_Supervisor_Config_4](/assets/images/DC_Lab_4_Supervisor_Config_4.png)
+
+-  Check and make sure supervisor license is displayed in ***Licenses*** section of user seetings on Control Hub.
+
+![Lab_4_Supervisor_Config_5](/assets/images/DC_Lab_4_Supervisor_Config_5.png)
+
+-  Go to ***Contact Center*** -> ***Settings*** and press ***Synchronize Users*** button to sync all changes from Control Hub to Webex CC Management Portal.
+
+![Lab_4_Supervisor_Config_6](/assets/images/DC_Lab_4_Supervisor_Config_6.png)
 
 
 
