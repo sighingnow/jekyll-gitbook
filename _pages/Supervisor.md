@@ -9,7 +9,7 @@ layout: post
 
 #### **Lab Objective**
 
-This lab is designed to introduce the audience to the Extensible Supervisor Desktop (ESD), its configuration and capabilities. In addition this lab contains demo which shows user experience .
+This lab is designed to introduce the audience to the Extensible Supervisor Desktop (ESD), its configuration and capabilities. In addition this lab contains demo which shows user experience when working with ESD.
 
 #### **Pre-requisite**
 
