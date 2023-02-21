@@ -1,7 +1,7 @@
 ---
 title: Lab 9 - Outbound Campaign
 author: Gagarin Sathiyanarayanan
-date: 2022-02-20
+date: 2022-09-09
 layout: post
 ---
 
