@@ -125,7 +125,7 @@ update()
 
 ### Create your first flow
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
-2. Click Routing Strategy <img src="/assets/images/IRV/routingStrategy.JPG" width="25">>
+2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" width="25">
 3. Click on Flows in the top ribbon
 4. Click Import
 5. Select flow_template
