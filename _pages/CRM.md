@@ -131,7 +131,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 2: Call Center Configuration
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/-pKYj1z2E7U?rel=0" title="CRM Integration Lab Part 2: Call Center Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/dae6c6c0-0140-481a-8d93-53380d729e03" width="100%" height="100%" title="PART 2 - Call Center Configuration" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### 3. Salesforce Call Center Configuration
 
