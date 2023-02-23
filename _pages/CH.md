@@ -1,5 +1,5 @@
 ---
-title: Lab 1 - Admin Experiense
+title: Lab 1 - Admin Experience
 author: Dmitry Bokatov & Mike Turnbow
 date: 2022-01-10
 layout: post
@@ -7,7 +7,7 @@ layout: post
 
 ## Table of Contents
 
-| Topic                                                                         | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Control Hub User Management Tasks](#control-hub-user-management-task)        | Practical Lab | EASY            | 10 min           |
 | [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY            | 5 min            |
@@ -105,7 +105,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 # Management Portal User Configuration
 
-> The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
+> The following video outlines how to access the management portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/dd077d51-a8f1-4e01-9f52-da3ce1c65cf3" width="100%" height="100%" title="February 07, 2023 at 10:22 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -182,7 +182,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
 
-- Repeate the same steps as above for your supervisor.
+- Repeat the same steps as above for your supervisor.
 
 # Bulk Operations
 
@@ -198,13 +198,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - In the left pane navigate to **_Contact Center_** card.
 
-- Select **_Buld Operations_** in the upper menu.
+- Select **_Bulk Operations_** in the upper menu.
 
 - Click **_Create Bulk Operations_** button in the right corner.
 
 - In Step 1 select the configuration object **_Team_** in the drop-down list.
 
-- In the Export secotion enter the **MyTeam** as the file name and click **Next** button.
+- In the Export section enter the **MyTeam** as the file name and click **Next** button.
 
 - Once the task is **Completed** click on **_Download export file_** and open the csv file in the notepad.
 
