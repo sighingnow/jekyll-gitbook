@@ -51,7 +51,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 
 
-## Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions" 
+### Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions" 
 <form id="IVRdeets">
   
   <label for="DN">EP DN you were assigned:</label><br>
@@ -67,7 +67,7 @@ In this lab, we will configure all of the required elements to deliver a call in
   <button onclick="update()">Update Directions</button>
 </form>
 ---
-
+<script>document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Enter Attendee ID" </script>
 
 
 ---
