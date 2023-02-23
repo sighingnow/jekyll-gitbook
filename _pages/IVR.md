@@ -39,7 +39,8 @@ In this lab, we will configure all of the required elements to deliver a call in
   - You have the supervisor's access to the Tenant Management Portal.
   - Agent is part of 2 Teams.
   - Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
-  ---
+  
+    ---
 
 ### Quick Links
 
@@ -67,9 +68,11 @@ In this lab, we will configure all of the required elements to deliver a call in
   <button onclick="update()">Update Directions</button>
 </form>
 ---
-<script>document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Enter Attendee ID" </script>
-
-
+<script>
+document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Enter EP DN"
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Enter Attendee ID" 
+document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Enter Agent Email"
+</script>
 ---
 
 # Lab Section
@@ -169,7 +172,17 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 
 
+<script>
+    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+	Object.entries(them).forEach((entry) => {
+    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
+    {
+      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+    })})
 
+  event.preventDefault()}
+</script> 
 
 
 
