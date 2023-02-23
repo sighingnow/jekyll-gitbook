@@ -13,8 +13,8 @@ layout: post
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Configuring Contact Center for Call Delivery](#part-1-configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
 | [Adding Functionality to Your Flow](#part-2-adding-functionality-to-your-flow) | Practical Lab | EASY            | 5 min            |
-| [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
-| [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
+| [Bulk Operations FAKE!](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
+| [Access to the Agent Desktop FAKE!](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
 
 ## Overview of the lab:
 
@@ -81,7 +81,7 @@ update()
 # Lab Section
 
 
-## Part 1: Configuring Contact Center for Call Delivery
+# Part 1: Configuring Contact Center for Call Delivery
 
 ### Create your Entry Point
 1. Click on the provisioning menu > Entry Points/Queues > Entry point
@@ -127,13 +127,13 @@ update()
     > Call Distribution:
     >> Click Add Group
     >>
-    >> Select team XXXX
+    >> Select <w class="attendee_out">Your_Attendee_ID</w>_Team1
     >>
     >> Save Group
     >>
     >> Create second group
     >>
-    >> Select team yyyy
+    >> Select <w class="attendee_out">Your_Attendee_ID</w>_Team2
     >>
     >> After: 60 Seconds in queue
     >>
@@ -162,9 +162,11 @@ update()
 
 
 ### Test your configuration
-1. Call your assigned DN 
+1. Call your assigned EP DN from xxx
+   > You should hear the greeting message and then the music in queue
+2.  
 
-## Part 2: Adding Functionality to Your Flow
+# Part 2: Adding Functionality to Your Flow
 
 ### Adding a comfort message while a call is in queue
 
