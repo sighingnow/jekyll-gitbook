@@ -17,7 +17,7 @@ Welcome to the Webex Labs Repository. Here you will find step-by-step guides on 
 | Lab 1  |               [Admin Experience](/pages/CH/)                |   EASY    |  30 min   |
 | Lab 2  |             [IVR Contact Routing](/pages/IVR/)              |    MID    |  60 min   |
 | Lab 3  |               [Agent Desktop](/pages/Agent/)                |   MID    |  55 min   |
-| Lab 4  |          [Supervisor Desktop](/pages/Supervisor/)           |   TBD    |  TBD   |
+| Lab 4  |          [Supervisor Desktop](/pages/Supervisor/)           |   EASY    |  40 min   |
 | Lab 5  |           [Analyzer Deep Dive](/pages/Analyzer/)            |    MID    |  120 min   |
 | Lab 6  |               [CRM Integration](/pages/CRM/)                |   HARD    |  90 min   |
 | Lab 7  |        [Google CCAI & TTS Integration](/pages/CCAI/)        |   MID    |  90 min   |
