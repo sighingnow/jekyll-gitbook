@@ -204,7 +204,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - In Step 1 select the configuration object **_Team_** in the drop-down list.
 
-- In the Export secotion enter the **MyTeam** as the file name and click **Next** button.
+- In the Export section enter the **MyTeam** as the file name and click **Next** button.
 
 - Once the task is **Completed** click on **_Download export file_** and open the csv file in the notepad.
 
