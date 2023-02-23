@@ -11,7 +11,7 @@ layout: post
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Tasks](#control-hub-user-management-task)        | Practical Lab | EASY            | 10 min           |
+| [Configuring Contact Center for Call Delivery](#part-1:-configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
 | [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY            | 5 min            |
 | [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
 | [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
@@ -56,23 +56,25 @@ In this lab, we will configure all of the required elements to deliver a call in
 <form id="IVRdeets">
   
   <label for="DN">EP DN you were assigned:</label><br>
-  <input type="text" id="DN" name="DN"><br>
+  <input type="text" id="DN" name="DN" onChange="update()"><br>
   
   <label for="attendee">Attendee ID:</label><br>
-  <input type="text" id="attendee" name="attendee"><br>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
   
   <label for="agent">Agent Email Address:</label><br>
-  <input type="text" id="agent" name="agent"><br>
+  <input type="text" id="agent" name="agent" onChange="update()"><br>
 <br>
 
   <button onclick="update()">Update Directions</button>
 </form>
----
+
 <script>
-document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Enter EP DN"
+document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
 document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Enter Attendee ID" 
-document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Enter Agent Email"
+document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
 </script>
+
+
 ---
 
 # Lab Section
@@ -127,6 +129,18 @@ document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Ent
     >> Select team XXXX
     >>
     >> Save Group
+    >>
+    >> Create second group
+    >>
+    >> Select team yyyy
+    >>
+    >> After: 60 Seconds in queue
+    >>
+    >> Add Group as: Last
+    >>
+    >> Save Group
+    >>
+    >> Click Close
     >
     > Service Level Threshold: 60
     >
