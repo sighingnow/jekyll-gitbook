@@ -83,36 +83,6 @@ update()
 
 # Part 1: Configuring Contact Center for Call Delivery
 
-### Create your Entry Point
-1. Click on the provisioning menu > Entry Points/Queues > Entry point
-2. Click Create new Entry point
-    > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
-    >
-    > Description: optional
-    >
-    > Channel Type: telephony
-    >
-    > Service Level Threshold: 60
-    >
-    > Flow: 
-    >
-    > Music on Hold: defaultmusic_on_hold.wav
-
-    ---
-
-### Create your Entry Point mapping
-1. Click on the provisioning menu > Entry Point Mapping
-2. Click new mapping
-    > In location, select "Office"
-    >
-    > In Available Numbers select <w class= "DN_out" >Your EP DN</w>
-    >
-    > In Entry point select EP_<w class="attendee_out">AttendeeID
-    >
-    > Click Save
-
-    ---
-
 ### Create a queue
 1. Click on the provisioning menu > Entry Points/Queues > Queue
 2. Click New Queue
@@ -153,18 +123,83 @@ update()
 
     ---
 
-
 ### Create your first flow
-1. Click
-2. Create a new flow and name it <w class="attendee_out">AttendeeID</w>_TechSummit
+1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
+2. Click Routing Strategy <img src="/assets/images/IRV/routingStrategy.JPG" width="25">>
+3. Click on Flows in the top ribbon
+4. Click Import
+5. Select flow_template
+6. Click the ellipsis next to the newly imported flow_template and select Open
+   > Rename the flow <w class="attendee_out">AttendeeID</w>_TechSummit
+   >
+   > Click on the Play Message node
+   >> Audio File:  
+   >
+   > Click on the Queue Contact node
+   >> Select Static Queue
+   >>
+   >> Queue: Q_<w class="attendee_out">AttendeeID</w>
+   >>
+   > Click on the Play Music node
+   >> Select Static Audio File
+   >>
+   >> Music File: defaultmusic_on_hold.wav
+   >>
+   > Click the Validation switch to turn on validation
+   >
+   > Click Publish Flow
+   > 
+   > Add a Publish Note of your choosing
+   >
+   > Click Publish Flow
+   >
+   > Click Return to Flow
+   > 
+   > Turn off Validation 
 
-### Create Routing Strategy  
+
+
+
+
+### Create your Entry Point
+1. Click on Provisioning > Entry Points/Queues > Entry point
+2. Click Create new Entry point
+    > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
+    >
+    > Description: optional
+    >
+    > Channel Type: telephony
+    >
+    > Service Level Threshold: 60
+    >
+    > Flow: <w class="attendee_out">AttendeeID</w>_TechSummit
+    >
+    > Music on Hold: defaultmusic_on_hold.wav
+
+    ---
+
+### Create your Entry Point mapping
+1. Click on the provisioning menu > Entry Point Mapping
+2. Click new mapping
+    > In location, select "Office"
+    >
+    > In Available Numbers select <w class= "DN_out" >Your EP DN</w>
+    >
+    > In Entry point select EP_<w class="attendee_out">AttendeeID
+    >
+    > Click Save
+
+    ---
 
 
 ### Test your configuration
-1. Call your assigned EP DN from xxx
-   > You should hear the greeting message and then the music in queue
-2.  
+1. Call <w class= "DN_out" >Your EP DN</w> from your non agent extension
+    > You should hear the greeting message and then the music in queue
+    >
+    > Go available in the agent desktop
+    >> The call should be delivered to your agent extension
+    >
+    > End the call, Wrap-up, and Go unavailable
 
 # Part 2: Adding Functionality to Your Flow
 
