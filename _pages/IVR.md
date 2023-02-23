@@ -11,8 +11,8 @@ layout: post
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Configuring Contact Center for Call Delivery](#part-1:-configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
-| [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY            | 5 min            |
+| [Configuring Contact Center for Call Delivery](#part-1-configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
+| [Adding Functionality to Your Flow](#part-2-adding-functionality-to-your-flow) | Practical Lab | EASY            | 5 min            |
 | [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
 | [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
 
@@ -70,8 +70,9 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 <script>
 document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
-document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Enter Attendee ID" 
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Your Attendee ID" 
 document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
+update()
 </script>
 
 
@@ -104,7 +105,7 @@ document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Age
 2. Click new mapping
     > In location, select "Office"
     >
-    > In Available Numbers select <w class= "DN-out" >Your EP DN</w>
+    > In Available Numbers select <w class= "DN_out" >Your EP DN</w>
     >
     > In Entry point select EP_<w class="attendee_out">AttendeeID
     >
@@ -163,7 +164,7 @@ document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Age
 ### Test your configuration
 1. Call your assigned DN 
 
-## Part 2: Adding functionality to your flow
+## Part 2: Adding Functionality to Your Flow
 
 ### Adding a comfort message while a call is in queue
 
@@ -195,7 +196,17 @@ document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Age
       document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
     })})
 
-  event.preventDefault()}
+  event.preventDefault()
+  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
+    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
+  }
+   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendee-form",document.forms["IVRdeets"][1].value)
+  }  
+  if(document.forms["IVRdeets"][2].value != "Agent Email"){
+    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
+  } 
+  }
 </script> 
 
 
