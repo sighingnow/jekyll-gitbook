@@ -52,7 +52,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 
 ## Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions" 
-<form>
+<form id="IVRdeets">
   
   <label for="DN">EP DN you were assigned:</label><br>
   <input type="text" id="DN" name="DN"><br>
@@ -91,6 +91,7 @@ In this lab, we will configure all of the required elements to deliver a call in
     > Flow: 
     >
     > Music on Hold: defaultmusic_on_hold.wav
+
     ---
 
 ### Create your Entry Point mapping
@@ -103,6 +104,7 @@ In this lab, we will configure all of the required elements to deliver a call in
     > In Entry point select EP_<w class="attendee_out">AttendeeID
     >
     > Click Save
+
     ---
 
 ### Create a queue
@@ -131,6 +133,7 @@ In this lab, we will configure all of the required elements to deliver a call in
     >
     > Save
 
+    ---
 
 
 ### Create your first flow
@@ -187,5 +190,5 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
-<p style="text-align:center;"><img src="..\assets\gitbook\images\webex.png" width="100"></p>	
+<p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
 
