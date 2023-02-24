@@ -124,13 +124,17 @@ update()
     ---
 
 ### Create your first flow
-1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:download}
-2. <a href = "https://webexcc.github.io/../../../assets/files/flow_template.json" download>test</a>
-3. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" width="50">
-4. Click on Flows in the top ribbon
-5. Click Import
-6. Select flow_template
-7. Click the ellipsis next to the newly imported flow_template and select Open
+1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
+   > The file will open in a separate window.  Select the save option.
+   >
+   > <img src="/assets/images/IVR/saveJson.gif">
+   >
+   >
+2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="20">
+3. Click on Flows in the top ribbon
+4. Click Import
+5. Select flow_template
+6. Click the ellipsis next to the newly imported flow_template and select Open
    > Rename the flow <w class="attendee_out">AttendeeID</w>_TechSummit
    >
    > Click on the Play Message node
@@ -201,6 +205,10 @@ update()
     >> The call should be delivered to your agent extension
     >
     > End the call, Wrap-up, and Go unavailable
+
+    ---
+
+
 
 # Part 2: Adding Functionality to Your Flow
 
