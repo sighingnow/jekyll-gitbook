@@ -125,11 +125,12 @@ update()
 
 ### Create your first flow
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:download}
-2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" width="50">
-3. Click on Flows in the top ribbon
-4. Click Import
-5. Select flow_template
-6. Click the ellipsis next to the newly imported flow_template and select Open
+2. <a href = "https://webexcc.github.io/../../../assets/files/flow_template.json" download>test</a>
+3. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" width="50">
+4. Click on Flows in the top ribbon
+5. Click Import
+6. Select flow_template
+7. Click the ellipsis next to the newly imported flow_template and select Open
    > Rename the flow <w class="attendee_out">AttendeeID</w>_TechSummit
    >
    > Click on the Play Message node
