@@ -312,9 +312,9 @@ update()
    ---
 2. Delete the connection from the second Play Message node
 3. Drag a Menu node onto the canvas
-   > 
+   > Label:
    >
-   >
+   > Prompt:
    >
    >
 4. Add a new Set Variable node
@@ -322,7 +322,7 @@ update()
    >
    > Select Variable: callbackANI
    >
-   > Set to Value: `{{NewPhoneContact.ANI | slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)}}`
+   > Set to Value: ```{{NewPhoneContact.ANI | slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)}}```
    >
    ---
 5. Add a new Set Variable node
@@ -330,7 +330,7 @@ update()
    >
    > Select Variable: rDigit
    >
-   > Set to Value: `{{callbackANI | slice (sPosition,sPosition+1)}}`
+   > Set to Value: ```{{callbackANI | slice (sPosition,sPosition+1)}}```
    >
    ---
 6. Add a Play Message Node
@@ -344,7 +344,7 @@ update()
    >
    > Select Variable: sPosition
    >
-   > Set to Value: `{{sPosition+1}}`
+   > Set to Value: ```{{sPosition+1}}```
    >
    ---
 8. Add a new Condition node
