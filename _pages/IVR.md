@@ -125,11 +125,15 @@ update()
 
 ### Create your first flow
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
-   > The file will open in a separate window.  Select the save option.
+   > The file will open in a separate window.  
+   >
+   > If using Firefox, Select the save option.
    >
    > <img src="/assets/images/IVR/saveJson.gif">
    >
-   > 
+   > If using Chrome or Edge, right click and select save.
+   >
+   ><img src="/assets/images/IVR/saveJsonChrome.gif">
    
    ---
 2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="40">
