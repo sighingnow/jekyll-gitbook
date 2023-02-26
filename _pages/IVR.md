@@ -322,7 +322,7 @@ update()
    >
    > Select Variable: callbackANI
    >
-   > Set to Value: `{{NewPhoneContact.ANI | slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)}}`
+   > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}`
    >
    ---
 5. Add a new Set Variable node
