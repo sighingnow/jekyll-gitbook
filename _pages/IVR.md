@@ -350,7 +350,7 @@ update()
 8. Add a new Condition node
     > Label: positionCheck
     > 
-    > `{{sPosition <= (callbackANI.length -1) }}`
+    > ```{{sPosition <= (callbackANI.length -1) }}```
     >
     > True: Connect to rDigit
     >
