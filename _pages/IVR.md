@@ -294,7 +294,7 @@ update()
   ---
 ### Creating an opt-out option with ANI readout
 1. Create new flow variables:
-   > Callback number
+   > callbackANI
    >> Type: String
    >>
    >> No default value
@@ -310,19 +310,71 @@ update()
    >> Default Value: 0
    >>
    ---
-2. 
-3. Delete the connection from the second Play Message node
-4. Drag a Menu node onto the canvas
+2. Delete the connection from the second Play Message node
+3. Drag a Menu node onto the canvas
    > 
    >
    >
    >
    >
+4. Add a new Set Variable node
+   > Label: callbackANI_set
+   >
+   > Select Variable: callbackANI
+   >
+   > Set to Value: `{{NewPhoneContact.ANI | slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)}}`
+   >
+   ---
+5. Add a new Set Variable node
+   > Label: rDigit
+   >
+   > Select Variable: rDigit
+   >
+   > Set to Value: `{{callbackANI | slice (sPosition,sPosition+1)}}`
+   >
+   ---
+6. Add a Play Message Node
+   > Label: playDigit 
+   >
+   >
+   > 
+   ---
+7. Add a new Set Variable node
+   > Label: advance
+   >
+   > Select Variable: sPosition
+   >
+   > Set to Value: `{{sPosition+1}}`
+   >
+   ---
+8. Add a new Condition node
+    > Label: positionCheck
+    > 
+    > `{{sPosition <= (callbackANI.length -1) }}`
+    >
+    > True: Connect to rDigit
+    >
+    > False: Add a new Disconnect Call node and connect it here
+    ---
+9. Publish your flow
+10. Place a test call to <w class= "DN_out" >Your EP DN</w>
+    > When you are given the option for a callback, press 1.
+    >> Did you hear your 10 digit callback number being read back?
 
 
-### Adding the ability to collect digits for a callback
+
+
+### Adding the ability to receive a callback at a different number
 1. Create new flow variables
+2. Add a new Menu node
+    > Connect False from positionCheck to the beginning of this node
+    >
+    > Prompt: number_confirm_English.wav
+    >
+    > 
+    ---
 
+### Adding the ability to collect an extension to be presented to an agent during a callback
 
 ### Making the flow bi-lingual
 
