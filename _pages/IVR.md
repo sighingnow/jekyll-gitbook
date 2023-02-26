@@ -298,12 +298,16 @@ update()
    >> Type: String
    >>
    >> No default value
+   >
    > ---
+   >
    > rDigit
    >> Type: string
    >>
    >> No default value
+   >
    > ---
+   >
    > sPosition
    >> type: Integer
    >>
@@ -330,7 +334,7 @@ update()
    >
    > Select Variable: rDigit
    >
-   > Set to Value: `\{\{callbackANI | slice (sPosition,sPosition+1)\}\}`
+   > Set to Value: \{\{callbackANI \| slice (sPosition,sPosition+1)\}\}
    >
    ---
 6. Add a Play Message Node
@@ -344,13 +348,13 @@ update()
    >
    > Select Variable: sPosition
    >
-   > Set to Value: `\{\{sPosition+1\}\}`
+   > Set to Value: \{\{sPosition+1\}\}
    >
    ---
 8. Add a new Condition node
     > Label: positionCheck
     > 
-    > Condition: `\{\{sPosition <= (callbackANI.length -1) \}\}`
+    > Condition: \{\{sPosition <= (callbackANI.length -1) \}\}
     >
     > True: Connect to rDigit
     >
