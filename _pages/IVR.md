@@ -78,7 +78,7 @@ update()
 
 ---
 
-# Lab Section
+## Lab Section
 
 
 # Part 1: Configuring Contact Center for Call Delivery
@@ -129,8 +129,10 @@ update()
    >
    > <img src="/assets/images/IVR/saveJson.gif">
    >
-   >
-2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="20">
+   > 
+   
+   ---
+2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="40">
 3. Click on Flows in the top ribbon
 4. Click Import
 5. Select flow_template
@@ -138,7 +140,7 @@ update()
    > Rename the flow <w class="attendee_out">AttendeeID</w>_TechSummit
    >
    > Click on the Play Message node
-   >> Audio File:  
+   >> Audio File: welcome.wav 
    >
    > Click on the Queue Contact node
    >> Select Static Queue
@@ -162,7 +164,7 @@ update()
    > 
    > Turn off Validation 
 
-
+    ---
 
 
 
@@ -213,10 +215,91 @@ update()
 # Part 2: Adding Functionality to Your Flow
 
 ### Adding a comfort message while a call is in queue
+1. Delete the connection which loops from the end of the Play Music node back to the beginning of the Play Music node.
+2. Drag a new Play Message node under the Play Music node. 
+3. Connect the end of the Play Music node to the beginning of the play message node.
+4. Connect the end of the Play Message node to the beginning of the Play Music node.
+5. Click on the Play Music node
+   > Set the music duration to 15 seconds 
+   >
+6. Click on the Play message node
+   > 
+   > 
+   >
+   >
+   >
+   >
+7. Validate and Publish the flow:   
+   > Click the Validation switch to turn on validation
+   >
+   > Click Publish Flow
+   > 
+   > Add a Publish Note of your choosing
+   >
+   > Click Publish Flow
+   >
+   > Click Return to Flow
+   > 
+   > Turn off Validation 
+8. Place a test call to <w class= "DN_out" >Your EP DN</w>
+   > Did you hear the comfort message every 15 seconds?
+
+   ---
 
 ### Creating alternating comfort messages while a call is in queue
-
+1. Create a new flow variable: 
+    > Click on the flow background 
+    >
+    > 
+2. Delete the connection from the Play Music node to the Play Message node.
+3. Delete the connection from the Play Message node to the Play Music node.
+4. Drag a Set Variable node onto the canvas and place it next to the Play Music node
+5. Click on the Set Variable node
+    >
+    >
+    >
+    >
+6. Drag a Condition node on the canvas
+7. Connect the end of the Set Variable node to the Condition node
+8. Click on the condition node
+    >
+    >
+    >
+    >
+9. Drag another Play Message node onto the canvas 
+    > 
+    >
+    >
+10. Connect the True 
+11. Connect the False
+12. Connect the ends of both Play Message nodes to the Play Music node
+13. Publish your flow
+14. Place a test call to <w class= "DN_out" >Your EP DN</w>
+   > Did you hear the comfort message and website message alternate every 15 seconds?
+  
+  ---
 ### Creating an opt-out option with ANI readout
+1. Create new flow variables:
+   > Callback number
+   >> Type: String
+   >>
+   >> No default value
+   >
+   > rDigit
+   >> Type: Integer
+   >>
+   >> Default Value: 0
+   >
+   >
+2. 
+3. Delete the connection from the second Play Message node
+4. Drag a Menu node onto the canvas
+   > 
+   >
+   >
+   >
+   >
+
 
 ### Adding the ability to collect digits for a callback
 
