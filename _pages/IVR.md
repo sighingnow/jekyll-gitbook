@@ -112,6 +112,7 @@ update()
     >> Save Group
     >>
     >> Click Close
+    > ---
     >
     > Service Level Threshold: 60
     >
@@ -133,7 +134,7 @@ update()
    >
    > If using Chrome or Edge, right click and select save.
    >
-   ><img src="/assets/images/IVR/saveJsonChrome.gif">
+   ><img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
    
    ---
 2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="40">
@@ -146,16 +147,19 @@ update()
    > Click on the Play Message node
    >> Audio File: welcome.wav 
    >
+   > ---
    > Click on the Queue Contact node
    >> Select Static Queue
    >>
    >> Queue: Q_<w class="attendee_out">AttendeeID</w>
    >>
+   > ---
    > Click on the Play Music node
    >> Select Static Audio File
    >>
    >> Music File: defaultmusic_on_hold.wav
    >>
+   >  ---
    > Click the Validation switch to turn on validation
    >
    > Click Publish Flow
@@ -226,13 +230,15 @@ update()
 5. Click on the Play Music node
    > Set the music duration to 15 seconds 
    >
+   ---
 6. Click on the Play message node
    > 
-   > 
+   > settings
+   >
+   > other stuff
    >
    >
-   >
-   >
+   ---
 7. Validate and Publish the flow:   
    > Click the Validation switch to turn on validation
    >
@@ -245,6 +251,8 @@ update()
    > Click Return to Flow
    > 
    > Turn off Validation 
+
+   ---
 8. Place a test call to <w class= "DN_out" >Your EP DN</w>
    > Did you hear the comfort message every 15 seconds?
 
@@ -279,7 +287,7 @@ update()
 12. Connect the ends of both Play Message nodes to the Play Music node
 13. Publish your flow
 14. Place a test call to <w class= "DN_out" >Your EP DN</w>
-   > Did you hear the comfort message and website message alternate every 15 seconds?
+    > Did you hear the comfort message and website message alternate every 15 seconds?
   
   ---
 ### Creating an opt-out option with ANI readout
@@ -288,13 +296,18 @@ update()
    >> Type: String
    >>
    >> No default value
-   >
+   > ---
    > rDigit
-   >> Type: Integer
+   >> Type: string
+   >>
+   >> No default value
+   > ---
+   > sPosition
+   >> type: Integer
    >>
    >> Default Value: 0
-   >
-   >
+   >>
+   ---
 2. 
 3. Delete the connection from the second Play Message node
 4. Drag a Menu node onto the canvas
@@ -306,6 +319,8 @@ update()
 
 
 ### Adding the ability to collect digits for a callback
+1. Create new flow variables
+
 
 ### Making the flow bi-lingual
 
