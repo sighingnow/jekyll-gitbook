@@ -136,7 +136,7 @@ update()
    >
    ><img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
    
-   ---
+      ---
 2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="40">
 3. Click on Flows in the top ribbon
 4. Click Import
@@ -154,12 +154,14 @@ update()
    >> Queue: Q_<w class="attendee_out">AttendeeID</w>
    >>
    > ---
+   >
    > Click on the Play Music node
    >> Select Static Audio File
    >>
    >> Music File: defaultmusic_on_hold.wav
    >>
    >  ---
+   >
    > Click the Validation switch to turn on validation
    >
    > Click Publish Flow
