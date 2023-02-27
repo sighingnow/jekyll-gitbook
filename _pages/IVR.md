@@ -63,6 +63,9 @@ In this lab, we will configure all of the required elements to deliver a call in
   
   <label for="agent">Agent Email Address:</label><br>
   <input type="text" id="agent" name="agent" onChange="update()"><br>
+
+  <label for="supervisorEXT">Supervisor Extension:</label><br>
+  <input type="text" id="agent" name="supervisor" onChange="update()"><br>
 <br>
 
   <button onclick="update()">Update Directions</button>
@@ -72,6 +75,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
 document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Your Attendee ID" 
 document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
+document.forms["IVRdeets"][3].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
 update()
 </script>
 
@@ -326,7 +330,7 @@ update()
    >
    >
 
-4. Add a new Set Variable node
+4. Add a Set Variable node
    > Label: callbackANI_set
    >
    > Select Variable: callbackANI
@@ -334,7 +338,7 @@ update()
    > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}`
    >
    ---
-5. Add a new Set Variable node
+5. Add a Set Variable node
    > Label: rDigit
    >
    > Select Variable: rDigit
@@ -348,7 +352,7 @@ update()
    >
    > 
    ---
-7. Add a new Set Variable node
+7. Add a Set Variable node
    > Label: advance
    >
    > Select Variable: sPosition
@@ -356,7 +360,7 @@ update()
    > Set to Value: \{\{sPosition+1\}\}
    >
    ---
-8. Add a new Condition node
+8. Add a Condition node
     > Label: positionCheck
     > 
     > Condition: \{\{sPosition <= (callbackANI.length -1) \}\}
@@ -418,15 +422,44 @@ update()
 1. Create new flow variable:
    > Name: Extension
    >
-   > Type: String
-   >
-   > No default value
-   >
-   >
-   >
+   >> Type: String
+   >>
+   >> No default value
+   >>
+   >> Set as agent Viewable: True
+   >>
+   >> Desktop Label: Extension
    >
 
-### Making the flow bi-lingual
+    ---
+2. Add a Set variable node
+3. Add a Set Variable node
+4. Add a Play Message node   
+5. Add a Set Variable node
+6. Add a Condition node
+7. Add a Menu node
+8. Add a Callback node
+9. Publish your flow
+10. Place a test call to <w class= "DN_out" >Your EP DN</w>
+    > Press one to receive a callback 
+    >
+    > Press one to keep the number which was read back
+    >
+    > Press one to receive a callback at an extension
+    >
+    > Enter <w class="supervisor_out">Your Supervisor Extension</w> and press #.
+    >
+    > In the agent desktop, go available.
+    >
+    > When your agent phone rings, answer the call.
+    > 
+    > Listen to the prompts and enter the Extension shown on the agent desktop.
+    >
+    > Your Supervisor extension should ring, answer it.
+
+    ---  
+
+## Making the flow bi-lingual
 
 
 ## Part 3: Adding HTTP lookups and agent routing
@@ -458,6 +491,9 @@ update()
   if(document.forms["IVRdeets"][2].value != "Agent Email"){
     localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
   } 
+  if(document.forms["IVRdeets"][3].value != "Supervisor Extension"){
+    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][2].value)
+  }
   }
 </script> 
 
