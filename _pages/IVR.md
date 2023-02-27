@@ -172,11 +172,11 @@ update()
    
       ---
 2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="40">
-3. Click on Flows in the top ribbon
+3. Click on Flows in the top ribbon 
 4. Click Import
 5. Select flow_template
-6. Click the ellipsis next to the newly imported flow_template and select Open
-   > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit
+6. Click the ellipsis next to the newly imported flow_template and select Open <img src="/assets/images/IVR/openFlow.JPG" height="40">
+   > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit by clicking on the pencil icon at the top of the screen, next to the flow name
    >
    > Click on the Play Message node
    >> Audio File: welcome.wav 
