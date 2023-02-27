@@ -300,7 +300,7 @@ update()
 
 ## Creating alternating comfort messages while a call is in queue
 1. Create a new flow variable: 
-    > Click on the cog in hte lower left corner of the canvas <img src="/assets/images/IVR/openFlow.JPG" height="40"> (or on the background of the flow) 
+    > Click on the cog in the lower left corner of the canvas <img src="/assets/images/IVR/flowCog.JPG" height="40"> (or on the background of the flow) 
     >
     > Click Add flow Variables
     >> Name: Loop_Count
