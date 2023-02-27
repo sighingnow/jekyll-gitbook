@@ -119,7 +119,14 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 ![Lab_4_WebexCC_Config_11](/assets/images/DC_Lab_4_Supervisor_WebexCC_11.png)
 
-## **3. Providing the Supervisor capabilities feedback**
+
+## **3. Supervisor Experience**
+
+Login to the Agent / Supervisor Desktop: https://desktop.wxcc-us1.cisco.com with your Webex credentials.
+
+
+
+## **4. Providing the Supervisor capabilities feedback**
 
 We are seeking your feedback on the Agent and Supervisor capabilities. By participating in this survey, you will help us to improve the quality of our products. 
 <iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
