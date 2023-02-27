@@ -65,7 +65,7 @@ In this lab, we will configure all of the required elements to deliver a call in
   <input type="text" id="agent" name="agent" onChange="update()"><br>
 
   <label for="supervisorEXT">Supervisor Extension:</label><br>
-  <input type="text" id="agent" name="supervisor" onChange="update()"><br>
+  <input type="text" id="agent" name="supervisorEXT" onChange="update()"><br>
 <br>
 
   <button onclick="update()">Update Directions</button>
@@ -447,7 +447,7 @@ update()
     >
     > Press one to receive a callback at an extension
     >
-    > Enter <w class="supervisor_out">Your Supervisor Extension</w> and press #.
+    > Enter <w class="supervisorEXT_out">Your Supervisor Extension</w> and press #.
     >
     > In the agent desktop, go available.
     >
@@ -492,7 +492,7 @@ update()
     localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
   } 
   if(document.forms["IVRdeets"][3].value != "Supervisor Extension"){
-    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][2].value)
+    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][3].value)
   }
   }
 </script> 
