@@ -233,7 +233,7 @@ update()
 
 **Your Entry Point has already been mapped for you.  You can skip this step.**
 
-1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/openEP.gif){:target="\_blank"}
+1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEP.gif){:target="\_blank"}
 2. Click new mapping
     > In location, select "Office"
     >
