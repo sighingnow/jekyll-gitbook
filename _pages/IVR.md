@@ -112,6 +112,7 @@ update()
     >> Save Group
     >>
     >> Click Close
+    >
     > ---
     >
     > Service Level Threshold: 60
@@ -224,7 +225,7 @@ update()
 
 # Part 2: Adding Functionality to Your Flow
 
-### Adding a comfort message while a call is in queue
+## Adding a comfort message while a call is in queue
 1. Delete the connection which loops from the end of the Play Music node back to the beginning of the Play Music node.
 2. Drag a new Play Message node under the Play Music node. 
 3. Connect the end of the Play Music node to the beginning of the play message node.
@@ -260,7 +261,7 @@ update()
 
    ---
 
-### Creating alternating comfort messages while a call is in queue
+## Creating alternating comfort messages while a call is in queue
 1. Create a new flow variable: 
     > Click on the flow background 
     >
@@ -292,35 +293,39 @@ update()
     > Did you hear the comfort message and website message alternate every 15 seconds?
   
   ---
-### Creating an opt-out option with ANI readout
+## Creating an opt-out option with ANI readout
 1. Create new flow variables:
-   > callbackANI
+   > Name: callbackANI
    >> Type: String
    >>
    >> No default value
    >
    > ---
    >
-   > rDigit
+   > Name: rDigit
    >> Type: string
    >>
    >> No default value
    >
    > ---
    >
-   > sPosition
-   >> type: Integer
+   > Name: sPosition
+   >> Type: Integer
    >>
    >> Default Value: 0
    >>
    ---
 2. Delete the connection from the second Play Message node
 3. Drag a Menu node onto the canvas
-   > Label:
+   > Label: callback_opt
    >
    > Prompt:
    >
    >
+   >
+   >
+   >
+
 4. Add a new Set Variable node
    > Label: callbackANI_set
    >
@@ -337,7 +342,7 @@ update()
    > Set to Value: \{\{callbackANI \| slice (sPosition,sPosition+1)\}\}
    >
    ---
-6. Add a Play Message Node
+6. Add a Play Message node
    > Label: playDigit 
    >
    >
@@ -365,20 +370,61 @@ update()
     > When you are given the option for a callback, press 1.
     >> Did you hear your 10 digit callback number being read back?
 
+    ---
 
 
 
-### Adding the ability to receive a callback at a different number
-1. Create new flow variables
-2. Add a new Menu node
+## Adding the ability to receive a callback at a different number
+1. Add a new Menu node
     > Connect False from positionCheck to the beginning of this node
     >
     > Prompt: number_confirm_English.wav
     >
     > 
     ---
+2. Add a Collect Digits node
+   > new_number_English.wav
+   >
+   >
+3. Add a Set Variable Node
+   >
+   >
+   >
+   >
+4. Add a Set Variable Node
+   >
+   >
+   >
+   >
+5. Add a Play message node
+   > 
+   > 
+   > entered_English.wav
 
-### Adding the ability to collect an extension to be presented to an agent during a callback
+6. Publish your flow
+7. Place a test call to <w class= "DN_out" >Your EP DN</w>
+    > When you are given the option for a callback, press 1.
+    >
+    > Press 2 to enter a different number.
+    >> Did you hear your 10 digit callback number being read back?
+    >>
+    >> Did you hear the number you entered read back?
+
+    ---
+
+
+
+## Adding the ability to collect an extension to be presented to an agent during a callback
+1. Create new flow variable:
+   > Name: Extension
+   >
+   > Type: String
+   >
+   > No default value
+   >
+   >
+   >
+   >
 
 ### Making the flow bi-lingual
 
