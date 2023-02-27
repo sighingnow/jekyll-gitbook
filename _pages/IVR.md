@@ -5,7 +5,30 @@ date: 2022-02-02
 category: Jekyll
 layout: post
 ---
+<script>
+    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+	Object.entries(them).forEach((entry) => {
+    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
+    {
+      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+    })})
 
+  event.preventDefault()
+  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
+    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
+  }
+   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendee-form",document.forms["IVRdeets"][1].value)
+  }  
+  if(document.forms["IVRdeets"][2].value != "Agent Email"){
+    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
+  } 
+  if(document.forms["IVRdeets"][3].value != "Supervisor Extension"){
+    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][3].value)
+  }
+  }
+</script>
 
 ## Table of Contents
 
@@ -447,7 +470,7 @@ update()
     >
     > Press one to receive a callback at an extension
     >
-    > Enter <w class="supervisorEXT_out">Your Supervisor Extension</w> and press #.
+    > Enter <w class= "supervisorEXT_out">Your Supervisor Extension</w> and press #.
     >
     > In the agent desktop, go available.
     >
@@ -472,30 +495,7 @@ update()
 
 
 
-<script>
-    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
-	Object.entries(them).forEach((entry) => {
-    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
-    {
-      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
-      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
-    })})
-
-  event.preventDefault()
-  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
-    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
-  }
-   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendee-form",document.forms["IVRdeets"][1].value)
-  }  
-  if(document.forms["IVRdeets"][2].value != "Agent Email"){
-    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
-  } 
-  if(document.forms["IVRdeets"][3].value != "Supervisor Extension"){
-    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][3].value)
-  }
-  }
-</script> 
+ 
 
 
 
