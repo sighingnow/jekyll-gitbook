@@ -34,8 +34,8 @@ layout: post
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Configuring Contact Center for Call Delivery](#part-1-configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
-| [Adding Functionality to Your Flow](#part-2-adding-functionality-to-your-flow) | Practical Lab | EASY            | 5 min            |
+| [Configuring Contact Center for Call Delivery](#configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
+| [Adding Functionality to Your Flow](#adding-functionality-to-your-flow) | Practical Lab | EASY            | 5 min            |
 | [Bulk Operations FAKE!](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
 | [Access to the Agent Desktop FAKE!](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
 
@@ -108,10 +108,12 @@ update()
 ## Lab Section
 
 
-# Part 1: Configuring Contact Center for Call Delivery
+# Configuring Contact Center for Call Delivery
 
 ### Create a queue
-1. Click on the provisioning menu > Entry Points/Queues > Queue
+1. Click on Provisioning > Entry Points/Queues > Queue
+    > <img src="/assets/images/IVR/openQueue.gif">
+    ---
 2. Click New Queue
     > Name your queue Q_<w class="attendee_out">AttendeeID</w>
     >
@@ -170,7 +172,7 @@ update()
 4. Click Import
 5. Select flow_template
 6. Click the ellipsis next to the newly imported flow_template and select Open
-   > Rename the flow <w class="attendee_out">AttendeeID</w>_TechSummit
+   > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit
    >
    > Click on the Play Message node
    >> Audio File: welcome.wav 
@@ -207,6 +209,10 @@ update()
 
 
 ### Create your Entry Point
+
+**Your Entry Point has already been created as EP_<w class="attendee_out">AttendeeID</w>.  In this step you only need to search for it and update the flow field.**
+
+
 1. Click on Provisioning > Entry Points/Queues > Entry point
 2. Click Create new Entry point
     > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
@@ -224,7 +230,10 @@ update()
     ---
 
 ### Create your Entry Point mapping
-1. Click on the provisioning menu > Entry Point Mapping
+
+**Your Entry Point has already been mapped for you.  You can skip this step.**
+
+1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/openEP.gif){:target="\_blank"}
 2. Click new mapping
     > In location, select "Office"
     >
@@ -250,7 +259,7 @@ update()
 
 
 
-# Part 2: Adding Functionality to Your Flow
+# Adding Functionality to Your Flow
 
 ## Adding a comfort message while a call is in queue
 1. Delete the connection which loops from the end of the Play Music node back to the beginning of the Play Music node.
@@ -358,7 +367,7 @@ update()
    >
    > Select Variable: callbackANI
    >
-   > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}`
+   > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}
    >
    ---
 5. Add a Set Variable node
