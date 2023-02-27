@@ -35,9 +35,13 @@ layout: post
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Configuring Contact Center for Call Delivery](#configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
-| [Adding Functionality to Your Flow](#adding-functionality-to-your-flow) | Practical Lab | EASY            | 5 min            |
-| [Bulk Operations FAKE!](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
-| [Access to the Agent Desktop FAKE!](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
+| [Adding a comfort message while a call is in queue](#adding-a-comfort-message-while-a-call-is-in-queue) | Practical Lab | EASY            | 5 min            |
+| [Creating alternating comfort messages while a call is in queue](#creating-alternating-comfort-messages-while-a-call-is-in-queue)                                           | Practical Lab | EASY            | 5 min            |
+| [Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ANI-readout)                   | Practical Lab | EASY            | 10 min           |
+| [Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 10 min           |
+| [Adding the ability to collect an extension to be presented to an agent during a callback](#adding-the-ability-to-collect-an-extension-to-be-presented-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 10 min           |
+| [Making the flow bi-lingual](#making-the-flow-bi-lingual)                   | Practical Lab | EASY            | 10 min           |
+
 
 ## Overview of the lab:
 
@@ -210,11 +214,11 @@ update()
 
 ### Create your Entry Point
 
-**Your Entry Point has already been created as EP_<w class="attendee_out">AttendeeID</w>.  In this step you only need to search for it and update the flow field.**
+⚠️**Your Entry Point has already been created as EP_<w class="attendee_out">AttendeeID</w>.  In this step you only need to search for it and update the flow field.**
 
 
 1. Click on Provisioning > Entry Points/Queues > Entry point
-2. Click Create new Entry point
+2. Click Create new Entry point [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEP.gif){:target="\_blank"}
     > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
     >
     > Description: optional
@@ -231,9 +235,9 @@ update()
 
 ### Create your Entry Point mapping
 
-**Your Entry Point has already been mapped for you.  You can skip this step.**
+⚠️**Your Entry Point has already been mapped for you.  You can skip this step.**
 
-1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEP.gif){:target="\_blank"}
+1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEPmap.gif){:target="\_blank"}
 2. Click new mapping
     > In location, select "Office"
     >
