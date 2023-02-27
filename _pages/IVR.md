@@ -251,7 +251,7 @@ update()
 
 
 ### Test your configuration
-1. Call <w class= "DN_out" >Your EP DN</w> from your non agent extension
+1. Call <w class= "DN_out" >Your EP DN</w> from your supervisor extension
     > You should hear the greeting message and then the music in queue
     >
     > Go available in the agent desktop
@@ -261,27 +261,24 @@ update()
 
     ---
 
-
-
 # Adding Functionality to Your Flow
 
 ## Adding a comfort message while a call is in queue
 1. Delete the connection which loops from the end of the Play Music node back to the beginning of the Play Music node.
 2. Drag a new Play Message node under the Play Music node. 
-3. Connect the end of the Play Music node to the beginning of the play message node.
-4. Connect the end of the Play Message node to the beginning of the Play Music node.
-5. Click on the Play Music node
+3. Click on the Play message node
+   > 
+   > Activity Label: comfortMessage
+   >
+   > Audio File: comfort_1_English
+   >
+   ---
+4. Click on the Play Music node
    > Set the music duration to 15 seconds 
    >
-   ---
-6. Click on the Play message node
-   > 
-   > settings
-   >
-   > other stuff
-   >
-   >
-   ---
+   --- 
+5. Connect the end of the Play Music node to the beginning of the play message node.
+6. Connect the end of the Play Message node to the beginning of the Play Music node.
 7. Validate and Publish the flow:   
    > Click the Validation switch to turn on validation
    >
@@ -303,33 +300,48 @@ update()
 
 ## Creating alternating comfort messages while a call is in queue
 1. Create a new flow variable: 
-    > Click on the flow background 
+    > Click on the cog in hte lower left corner of the canvas <img src="/assets/images/IVR/openFlow.JPG" height="40"> (or on the background of the flow) 
     >
-    > 
+    > Click Add flow Variables
+    >> Name: Loop_Count
+    >> 
+    >> Variable Type: Integer
+    >>
+    >> Default value: 0
+    >
+    > Click Save
+    >
+    > ---
+
 2. Delete the connection from the Play Music node to the Play Message node.
-3. Delete the connection from the Play Message node to the Play Music node.
-4. Drag a Set Variable node onto the canvas and place it next to the Play Music node
-5. Click on the Set Variable node
+3. Drag a Set Variable node onto the canvas and place it next to the Play Music node
+4. Click on the Set Variable node
+    > Activity Label: lCount
     >
+    > Variable: Loop_Count
     >
+    > Set Value: \{\{ Loop_Count + 1 \}\}
     >
+    > ---
+5. Drag a Condition node on the canvas
+6. Connect the end of the Set Variable node to the Condition node
+7. Click on the condition node
+    > Activity Label: evenOdd
     >
-6. Drag a Condition node on the canvas
-7. Connect the end of the Set Variable node to the Condition node
-8. Click on the condition node
+    > Expression: \{\{ Loop_Count is odd\}\}
     >
+    > ---
+8. Drag another Play Message node onto the canvas 
+    > Activity Label: websiteMessage
     >
+    > Audio File: website_English.wav
     >
-    >
-9. Drag another Play Message node onto the canvas 
-    > 
-    >
-    >
-10. Connect the True 
-11. Connect the False
-12. Connect the ends of both Play Message nodes to the Play Music node
-13. Publish your flow
-14. Place a test call to <w class= "DN_out" >Your EP DN</w>
+    > ---
+9.  Connect the True node edge from evenOdd to comfortMessage
+10. Connect the False node edge from evenOdd to websiteMessage
+11. Connect the end of websiteMessage node to the Play Music node
+12. Publish your flow
+13. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > Did you hear the comfort message and website message alternate every 15 seconds?
   
   ---
