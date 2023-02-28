@@ -343,8 +343,8 @@ update()
 12. Publish your flow
 13. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > Did you hear the comfort message and website message alternate every 15 seconds?
-  
-  ---
+    >
+    > ---
 ## Creating an opt-out option with ANI readout
 1. Create new flow variables:
    > Name: callbackANI
@@ -436,7 +436,8 @@ update()
     > True: Connect to rDigit positionCheck
     >
     > False: Add a new Disconnect Contact node and connect it here
-    ---
+    >
+   ---
 16. Connect advance to     
 17. Publish your flow
 18. Place a test call to <w class= "DN_out" >Your EP DN</w>
