@@ -369,15 +369,13 @@ update()
    ---
 2. Delete the connection from the websiteMessage node
 3. Drag a Menu node onto the canvas
-   > Label: callback_opt
+   > Activity Label: callback_opt
    >
    > Audio File: opt_out_English.wav
    >
    > Make Prompt Interruptible: True
    >
-   > Digit Number: 1
-   >
-   > Link Description: optOut 
+   > Digit Number: 1 Link Description: optOut 
    >
    > Connect the No-Input Timeout node edge to Play Music
    >
@@ -386,7 +384,7 @@ update()
    > ---
 4. Connect the websiteMessage to the callback_opt node
 5. Add a Set Variable node
-   > Label: callbackANI_set
+   > Activity Label: callbackANI_set
    >
    > Select Variable: callbackANI
    >
@@ -395,14 +393,14 @@ update()
    ---
 6. Connect the callback_opt optOut node edge to callbackANI_set 
 7. Add a Play Message Node
-   > Label: cfrom
+   > Activity Label: cfrom
    >
    > Audio File: calling_from_English.wav
    >
    > ---
 8. Connect callbackANI_set to cfrom
 9. Add a Set Variable node
-   > Label: rDigit_set
+   > Activity Label: rDigit_set
    >
    > Select Variable: rDigit
    >
@@ -411,7 +409,7 @@ update()
    ---
 10. Connect cfrom to rDigit_set
 11. Add a Play Message node
-   > Label: playDigit 
+   > Activity Label: playDigit 
    >
    > Click Add Audio Prompt Variable
    >> Audio Prompt Variable: \{\{rDigit\}\}_English.wav
@@ -420,7 +418,7 @@ update()
    ---
 12. Connect rDigit_set to playDigit
 13. Add a Set Variable node
-    > Label: advance
+    > Activity Label: advance
     >
     > Select Variable: sPosition
     >
@@ -429,7 +427,7 @@ update()
    ---
 14. Connect playDigit to advance
 15. Add a Condition node
-    > Label: positionCheck
+    > Activity Label: positionCheck
     > 
     > Condition: \{\{sPosition <= (callbackANI.length -1) \}\}
     >
@@ -438,7 +436,7 @@ update()
     > False: Add a new Disconnect Contact node and connect it here
     >
    ---
-16. Connect advance to     
+16. Connect advance to positionCheck  
 17. Publish your flow
 18. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > When you are given the option for a callback, press 1.
@@ -450,35 +448,69 @@ update()
 
 ## Adding the ability to receive a callback at a different number
 1. Add a new Menu node
-    > Label:
+    > Activity Label: confirmNumber
     >
     > Prompt: number_confirm_English.wav
     >
-    > 
-    ---
+    > Make Prompt Interruptible: True
+    >
+    > Digit Number: 1 Link Description: confirm number
+    >
+    > Digit Number: 2 Link Description: change number
+    >
+    > Connect No-Imput Timeout to the front of the confirmNumber node
+    >
+    > Connect Unmatched Entry to the front of the confirmNumber node
+    >
+    > ---
 2. Delete the False node edge from positionCheck to Disconnect Contact
-3. Connect the False node edge from positionCheck to the beginning of this node    
-4. Add a Collect Digits node
-   > new_number_English.wav
+3. Connect the False node edge from positionCheck to confirmNumber
+4. Connect the confirm number node edge to Disconnect Contact
+5. Add a Collect Digits node
+   > Activity Label: newNumber 
    >
+   > Audio File: new_number_English.wav
    >
-5. Add a Set Variable Node
+   > Make Prompt Interruptible: True
    >
+   > Minimum Digits: 10
    >
+   > Maximum Digits: 10
    >
+   > Connect No-Imput Timeout to the front of the newNumber node
    >
-6. Add a Set Variable Node
+   > Connect Unmatched Entry to the front of the newNumber node
    >
+   > ---
+6. Connect the change number node edge to newNumber
+7. Add a Set Variable Node
+   > Activity Label: newCB
    >
+   > Variable: callbackANI
    >
+   > Set Value: \{\{newNumber.DigitsEntered\}\}
    >
-7. Add a Play message node
-   > 
-   > 
-   > entered_English.wav
-
-8. Publish your flow
-9.  Place a test call to <w class= "DN_out" >Your EP DN</w>
+   > ---
+8. Connect newNumber to newCB
+9.  Add a Set Variable Node
+    > Activity Label:resetPosition
+    >
+    > Variable: sPosition
+    >
+    > Set Value: 0
+    >
+    > ---
+10. Connect newCB to resetPosition
+11. Add a Play message node
+    > Activity Label: rcontext
+    > 
+    > Audio File: entered_English.wav
+    >
+    > ---
+12. Connect resetPosition to rcontext
+13. Connect rcontext to rDigit_set
+14. Publish your flow
+15. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > When you are given the option for a callback, press 1.
     >
     > Press 2 to enter a different number.
@@ -505,13 +537,34 @@ update()
 
     ---
 2. Add a Set variable node
+    >Activity Label:
+    >
+    >
 3. Add a Set Variable node
+    > Activity Label:
+    >
+    >
 4. Add a Play Message node   
+    > Activity Label:
+    >
+    >
 5. Add a Set Variable node
+    > Activity Label:
+    >
+    >
 6. Add a Condition node
+    > Activity Label:
+    >
+    >
 7. Add a Menu node
+    > Activity Label:
+    >
+    >
 8. Add a Callback node
-9. Publish your flow
+    > Activity Label:
+    >
+    >
+9.  Publish your flow
 10. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > Press one to receive a callback 
     >
