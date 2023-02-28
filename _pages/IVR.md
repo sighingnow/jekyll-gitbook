@@ -594,7 +594,7 @@ update()
 16. Rename the copied nodes the original names = _EXT (example: rDigit_set_EXT)
 17. Connect entEXT > rDigit_set_EXT > playDigit_EXT > advance_EXT > positionCheck_EXT
 18. Edit rDigit_set_EXT 
-    > Set value: \{\{Extension | slice (sPosition,sPosition+1)\}\}
+    > Set value: \{\{Extension \| slice (sPosition,sPosition+1)\}\}
     >
     > ---
 19. Edit positionCheck_EXT
