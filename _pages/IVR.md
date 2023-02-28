@@ -372,7 +372,7 @@ update()
    >> Default Value: 0
    >>
    ---
-2. Delete the connection from the websiteMessage node
+2. Delete the connection from the websiteMessage node to Play Music
 3. Drag a Menu node onto the canvas
    > Activity Label: callback_opt
    >
@@ -437,7 +437,7 @@ update()
     > 
     > Condition: \{\{sPosition <= (callbackANI.length -1) \}\}
     >
-    > True: Connect to rDigit positionCheck
+    > True: Connect to rDigit_set 
     >
     > False: Add a new Disconnect Contact node and connect it here
     >
