@@ -302,7 +302,7 @@ update()
 1. Create a new flow variable: 
     > Click on the cog in the lower left corner of the canvas <img src="/assets/images/IVR/flowCog.JPG" height="40"> (or on the background of the flow) 
     >
-    > Click Add flow Variables
+    > Click Add Flow Variables
     >> Name: Loop_Count
     >> 
     >> Variable Type: Integer
@@ -313,8 +313,8 @@ update()
     >
     > ---
 
-2. Delete the connection from the Play Music node to the Play Message node.
-3. Drag a Set Variable node onto the canvas and place it next to the Play Music node
+2. Delete the connection from the Play Music node to the comfortMessage node.
+3. Drag a Set Variable node onto the canvas and place it below the Play Music node
 4. Click on the Set Variable node
     > Activity Label: lCount
     >
@@ -367,18 +367,25 @@ update()
    >> Default Value: 0
    >>
    ---
-2. Delete the connection from the second Play Message node
+2. Delete the connection from the websiteMessage node
 3. Drag a Menu node onto the canvas
    > Label: callback_opt
    >
-   > Prompt:
+   > Audio File: opt_out_English.wav
    >
+   > Make Prompt Interruptible: True
    >
+   > Digit Number: 1
    >
+   > Link Description: optOut 
    >
+   > Connect the No-Input Timeout node edge to Play Music
    >
-
-4. Add a Set Variable node
+   > Connect the Unmatched Entry node edge to Play Music
+   >
+   > ---
+4. Connect the websiteMessage to the callback_opt node
+5. Add a Set Variable node
    > Label: callbackANI_set
    >
    > Select Variable: callbackANI
@@ -386,39 +393,53 @@ update()
    > Set to Value: \{\{NewPhoneContact.ANI \| slice (NewPhoneContact.ANI.length -10,NewPhoneContact.ANI.length)\}\}
    >
    ---
-5. Add a Set Variable node
-   > Label: rDigit
+6. Connect the callback_opt optOut node edge to callbackANI_set 
+7. Add a Play Message Node
+   > Label: cfrom
+   >
+   > Audio File: calling_from_English.wav
+   >
+   > ---
+8. Connect callbackANI_set to cfrom
+9. Add a Set Variable node
+   > Label: rDigit_set
    >
    > Select Variable: rDigit
    >
    > Set to Value: \{\{callbackANI \| slice (sPosition,sPosition+1)\}\}
    >
    ---
-6. Add a Play Message node
+10. Connect cfrom to rDigit_set
+11. Add a Play Message node
    > Label: playDigit 
    >
-   >
-   > 
+   > Click Add Audio Prompt Variable
+   >> Audio Prompt Variable: \{\{rDigit\}\}_English.wav
+   >>
+   >> Delete the Audio File Drop Down
    ---
-7. Add a Set Variable node
-   > Label: advance
-   >
-   > Select Variable: sPosition
-   >
-   > Set to Value: \{\{sPosition+1\}\}
-   >
+12. Connect rDigit_set to playDigit
+13. Add a Set Variable node
+    > Label: advance
+    >
+    > Select Variable: sPosition
+    >
+    > Set to Value: \{\{sPosition+1\}\}
+    >
    ---
-8. Add a Condition node
+14. Connect playDigit to advance
+15. Add a Condition node
     > Label: positionCheck
     > 
     > Condition: \{\{sPosition <= (callbackANI.length -1) \}\}
     >
-    > True: Connect to rDigit
+    > True: Connect to rDigit positionCheck
     >
-    > False: Add a new Disconnect Call node and connect it here
+    > False: Add a new Disconnect Contact node and connect it here
     ---
-9. Publish your flow
-10. Place a test call to <w class= "DN_out" >Your EP DN</w>
+16. Connect advance to     
+17. Publish your flow
+18. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > When you are given the option for a callback, press 1.
     >> Did you hear your 10 digit callback number being read back?
 
@@ -428,33 +449,35 @@ update()
 
 ## Adding the ability to receive a callback at a different number
 1. Add a new Menu node
-    > Connect False from positionCheck to the beginning of this node
+    > Label:
     >
     > Prompt: number_confirm_English.wav
     >
     > 
     ---
-2. Add a Collect Digits node
+2. Delete the False node edge from positionCheck to Disconnect Contact
+3. Connect the False node edge from positionCheck to the beginning of this node    
+4. Add a Collect Digits node
    > new_number_English.wav
    >
    >
-3. Add a Set Variable Node
+5. Add a Set Variable Node
    >
    >
    >
    >
-4. Add a Set Variable Node
+6. Add a Set Variable Node
    >
    >
    >
    >
-5. Add a Play message node
+7. Add a Play message node
    > 
    > 
    > entered_English.wav
 
-6. Publish your flow
-7. Place a test call to <w class= "DN_out" >Your EP DN</w>
+8. Publish your flow
+9.  Place a test call to <w class= "DN_out" >Your EP DN</w>
     > When you are given the option for a callback, press 1.
     >
     > Press 2 to enter a different number.
