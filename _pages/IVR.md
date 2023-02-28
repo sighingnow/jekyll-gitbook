@@ -663,8 +663,9 @@ update()
 ## Making the flow bi-lingual
 
 
-## Part 3: Adding HTTP lookups and agent routing
-
+### Coming soon:
+#### Adding HTTP lookups and agent routing
+#### Business Hours
 
 
 
