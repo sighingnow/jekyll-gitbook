@@ -39,7 +39,7 @@ layout: post
 | [Creating alternating comfort messages while a call is in queue](#creating-alternating-comfort-messages-while-a-call-is-in-queue)                                           | Practical Lab | EASY            | 5 min            |
 | [Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ANI-readout)                   | Practical Lab | EASY            | 10 min           |
 | [Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 10 min           |
-| [Adding the ability to collect an extension to be presented to an agent during a callback](#adding-the-ability-to-collect-an-extension-to-be-presented-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 10 min           |
+| [Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 10 min           |
 | [Making the flow bi-lingual](#making-the-flow-bi-lingual)                   | Practical Lab | EASY            | 10 min           |
 
 
