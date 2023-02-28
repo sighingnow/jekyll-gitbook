@@ -171,10 +171,11 @@ update()
    ><img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
    
       ---
-2. Click Routing Strategy <img src="/assets/images/IVR/rsToFlow.gif" Align= "right">
+2. Click Routing Strategy <img src="/assets/images/IVR/rsToFlow.gif" Align= "right" height="200">
 3. Click on Flows in the top ribbon 
 4. Click Import
 5. Select flow_template
+<br><br><br><br>
 6. Click the ellipsis next to the newly imported flow_template and select Open <img src="/assets/images/IVR/openFlow.JPG" height="40">
    > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit by clicking on the pencil icon at the top of the screen, next to the flow name
    >
@@ -560,9 +561,9 @@ update()
    >
    > Make Prompt Interruptible: True
    >
-   > Connect No-Input Timeout to the front of the getEXT node
+   > Connect the No-Input Timeout node edge to the front of the getEXT node
    >
-   > Connect Unmatched Entry to the front of the getEXT node
+   > Connect the Unmatched Entry node edge to the front of the getEXT node
    > 
    > ---
 6. Connect the collect ext node edge of needExt to getEXT
