@@ -123,7 +123,7 @@ update()
     >
     > Description: optional
     >
-    > Channel Type
+    > Channel Type: Telephony
     >
     > Queue Routing Type: Longest Available Agent
     > 
@@ -171,7 +171,7 @@ update()
    ><img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
    
       ---
-2. Click Routing Strategy <img src="/assets/images/IVR/routingStrategy.JPG" height="40">
+2. Click Routing Strategy <img src="/assets/images/IVR/rsToFlow.gif" Align= "right">
 3. Click on Flows in the top ribbon 
 4. Click Import
 5. Select flow_template
@@ -230,8 +230,10 @@ update()
     > Flow: <w class="attendee_out">AttendeeID</w>_TechSummit
     >
     > Music on Hold: defaultmusic_on_hold.wav
-
-    ---
+    >
+    > Click Save
+    >
+    > ---
 
 ### Create your Entry Point mapping
 
@@ -246,8 +248,8 @@ update()
     > In Entry point select EP_<w class="attendee_out">AttendeeID
     >
     > Click Save
-
-    ---
+    >
+    > ---
 
 
 ### Test your configuration
@@ -258,8 +260,8 @@ update()
     >> The call should be delivered to your agent extension
     >
     > End the call, Wrap-up, and Go unavailable
-
-    ---
+    >
+    > ---
 
 # Adding Functionality to Your Flow
 
@@ -272,11 +274,11 @@ update()
    >
    > Audio File: comfort_1_English
    >
-   ---
+   > ---
 4. Click on the Play Music node
    > Set the music duration to 15 seconds 
    >
-   --- 
+   > --- 
 5. Connect the end of the Play Music node to the beginning of the play message node.
 6. Connect the end of the Play Message node to the beginning of the Play Music node.
 7. Validate and Publish the flow:   
@@ -291,12 +293,14 @@ update()
    > Click Return to Flow
    > 
    > Turn off Validation 
-
-   ---
+   >
+   > [Compare](https://webexcc.github.io/../../../assets/images/IVR/comfortMessage.JPG){:target="\_blank"}
+   >
+   > ---
 8. Place a test call to <w class= "DN_out" >Your EP DN</w>
    > Did you hear the comfort message every 15 seconds?
-
-   ---
+   >
+   > ---
 
 ## Creating alternating comfort messages while a call is in queue
 1. Create a new flow variable: 
@@ -323,25 +327,26 @@ update()
     > Set Value: \{\{ Loop_Count + 1 \}\}
     >
     > ---
-5. Drag a Condition node on the canvas
-6. Connect the end of the Set Variable node to the Condition node
-7. Click on the condition node
+5. Connect the Play Music node to lCount
+6. Drag a Condition node on the canvas
+7. Connect the end of the Set Variable node to the Condition node
+8. Click on the condition node
     > Activity Label: evenOdd
     >
     > Expression: \{\{ Loop_Count is odd\}\}
     >
     > ---
-8. Drag another Play Message node onto the canvas 
+9. Drag another Play Message node onto the canvas 
     > Activity Label: websiteMessage
     >
     > Audio File: website_English.wav
     >
     > ---
-9.  Connect the True node edge from evenOdd to comfortMessage
-10. Connect the False node edge from evenOdd to websiteMessage
-11. Connect the end of websiteMessage node to the Play Music node
-12. Publish your flow
-13. Place a test call to <w class= "DN_out" >Your EP DN</w>
+10. Connect the True node edge from evenOdd to comfortMessage
+11. Connect the False node edge from evenOdd to websiteMessage
+12. Connect the end of websiteMessage node to the Play Music node
+13. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/altMessages.JPG){:target="\_blank"}
+14. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > Did you hear the comfort message and website message alternate every 15 seconds?
     >
     > ---
@@ -415,7 +420,8 @@ update()
    >> Audio Prompt Variable: \{\{rDigit\}\}_English.wav
    >>
    >> Delete the Audio File Drop Down
-   ---
+   >> 
+   >> ---
 12. Connect rDigit_set to playDigit
 13. Add a Set Variable node
     > Activity Label: advance
@@ -437,7 +443,7 @@ update()
     >
    ---
 16. Connect advance to positionCheck  
-17. Publish your flow
+17. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/aniRead.JPG){:target="\_blank"}
 18. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > When you are given the option for a callback, press 1.
     >> Did you hear your 10 digit callback number being read back?
@@ -509,7 +515,7 @@ update()
     > ---
 12. Connect resetPosition to rcontext
 13. Connect rcontext to rDigit_set
-14. Publish your flow
+14. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/changeNumber.JPG){:target="\_blank"}
 15. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > When you are given the option for a callback, press 1.
     >
@@ -640,7 +646,7 @@ update()
 25. Connect callback to callbackConfirm
 26. Connect callbackConfirm to Disconnect Contact
 27. Connect the No-Input Timeout and Unmatched Entry node edges from needExt to Disconnect Contact
-28. Publish your flow
+28. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/collectExt.JPG){:target="\_blank"}
 29. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > Press one to receive a callback 
     >
@@ -657,8 +663,8 @@ update()
     > Listen to the prompts and enter the Extension shown on the agent desktop.
     >
     > Your Supervisor extension should ring, answer it.
-
-    ---  
+    >
+    > ---  
 
 ## Making the flow bi-lingual
 
