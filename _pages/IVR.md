@@ -458,7 +458,7 @@ update()
     >
     > Digit Number: 2 Link Description: change number
     >
-    > Connect No-Imput Timeout to the front of the confirmNumber node
+    > Connect No-Input Timeout to the front of the confirmNumber node
     >
     > Connect Unmatched Entry to the front of the confirmNumber node
     >
@@ -477,7 +477,7 @@ update()
    >
    > Maximum Digits: 10
    >
-   > Connect No-Imput Timeout to the front of the newNumber node
+   > Connect No-Input Timeout to the front of the newNumber node
    >
    > Connect Unmatched Entry to the front of the newNumber node
    >
@@ -522,7 +522,7 @@ update()
 
 
 
-## Adding the ability to collect an extension to be presented to an agent during a callback
+## Adding the ability to collect an extension and present it to an agent during a callback
 1. Create new flow variable:
    > Name: Extension
    >
@@ -534,38 +534,114 @@ update()
    >>
    >> Desktop Label: Extension
    >
-
     ---
-2. Add a Set variable node
-    >Activity Label:
+2. Add a Menu node
+   > Activity Label: needExt
+   > 
+   > Audio File: ext_English.wav 
+   >
+   > Make Prompt Interruptible: True
+   >
+   > Digit Number: 1 Link Description: collect ext
+   >
+   > ---  
+3. Delete to connection from the confirm number node edge of confirmNumber to Disconnect Contact
+4. Connect the confirm number node edge of confirmNumber to needExt
+5. Add a Collect Digits node
+   > Activity Label: getEXT
+   >
+   > Audio File: enter_ext_English
+   >
+   > Make Prompt Interruptible: True
+   >
+   > Connect No-Input Timeout to the front of the getEXT node
+   >
+   > Connect Unmatched Entry to the front of the getEXT node
+   > 
+   > ---
+6. Connect the collect ext node edge of needExt to getEXT
+7. Add a Set Variable node
+    > Activity Label: setExt
     >
+    > Variable: Extension
     >
-3. Add a Set Variable node
-    > Activity Label:
+    > Set Value: \{\{getEXT.DigitsEntered\}\}
+8. Connect getEXT to setEXT
+9. Add a Set variable node
+    > Activity Label: clrsPos
     >
+    > Variable: sPosition 
     >
-4. Add a Play Message node   
-    > Activity Label:
+    > Set Value: 0
     >
+    > ---
+10. Connect setEXT to clrsPos
+11. Add a Play Message node
+    > Activity Label: entEXT
     >
-5. Add a Set Variable node
-    > Activity Label:
+    > Audio File: entered_English.wav
     >
+    > ---
+
+12. Connect clrsPos to entEXT
+13. Use Shift + left click to select nodes:
+   - rDigit_set
+   - playDigit
+   - advance
+   - positionCheck
+14. Click the copy button in the lower left corner of the canvas
+15. Drag the copied versions of the nodes under the clrsPos node
+16. Rename the copied nodes the original names = _EXT (example: rDigit_set_EXT)
+17. Connect entEXT > rDigit_set_EXT > playDigit_EXT > advance_EXT > positionCheck_EXT
+18. Edit rDigit_set_EXT 
+    > Set value: \{\{Extension | slice (sPosition,sPosition+1)\}\}
     >
-6. Add a Condition node
-    > Activity Label:
+    > ---
+19. Edit positionCheck_EXT
+    > Expression: \{\{sPosition <= (Extension.length -1) \}\}
     >
+    > Connect True node edge to rDigit_set_EXT
     >
-7. Add a Menu node
-    > Activity Label:
+    >  ---
+20. Add a Menu node   
+    > Activity Label: confirmEXT
     >
+    > Audio File: ext_confirm_English.wav
     >
-8. Add a Callback node
-    > Activity Label:
+    > Make Prompt Interruptible: True
     >
+    > Digit Number: 1 Link Description: confirmed
     >
-9.  Publish your flow
-10. Place a test call to <w class= "DN_out" >Your EP DN</w>
+    > Digit Number: 2 Link Description: again
+    >
+    > Connect No-Input Timeout to the front of the confirmEXT node
+    >
+    > Connect Unmatched Entry to the front of the confirmEXT node
+    >
+    > Connect the Again node edge to getEXT
+    >
+    > ---
+21. Connect the False node edge of positionCheck_EXT to confirmEXT
+22. Add a Callback node
+    > Activity Label: callback
+    >
+    > Callback Dial Number: callbackANI
+    >
+    > Callback Queue: Q_<w class="attendee_out">AttendeeID</w>
+    >
+    > ---
+23. Connect the confirmed node edge of confirmedEXT to callback
+24. Add a Play Message node
+    > Activity Label: callbackConfirm
+    >
+    > Audio File: callback_confirm_English.wav
+    >
+    > ---
+25. Connect callback to callbackConfirm
+26. Connect callbackConfirm to Disconnect Contact
+27. Connect the No-Input Timeout and Unmatched Entry node edges from needExt to Disconnect Contact
+28. Publish your flow
+29. Place a test call to <w class= "DN_out" >Your EP DN</w>
     > Press one to receive a callback 
     >
     > Press one to keep the number which was read back
