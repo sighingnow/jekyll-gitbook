@@ -137,7 +137,8 @@ In this section you will act as a supervisor and perform activities. The Supervi
 
 - In the next window, set your role as **supervisor** and your **own extension**. Please note that you can set your role either as **supervisor** or **agent and supervisor**.
 
-![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_1.png)
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_11.png)
 
 - When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop.
   
