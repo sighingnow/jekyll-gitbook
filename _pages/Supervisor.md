@@ -241,6 +241,7 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 
 ## **4. Supervisor Experience Demonstration**
+{: .block-tip }
 
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
