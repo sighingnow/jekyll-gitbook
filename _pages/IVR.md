@@ -35,12 +35,12 @@ layout: post
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Configuring Contact Center for Call Delivery](#configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
-| [Adding a comfort message while a call is in queue](#adding-a-comfort-message-while-a-call-is-in-queue) | Practical Lab | EASY            | 5 min            |
-| [Creating alternating comfort messages while a call is in queue](#creating-alternating-comfort-messages-while-a-call-is-in-queue)                                           | Practical Lab | EASY            | 5 min            |
-| [Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ANI-readout)                   | Practical Lab | EASY            | 10 min           |
-| [Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 10 min           |
-| [Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 10 min           |
-| [Making the flow bi-lingual](#making-the-flow-bi-lingual)                   | Practical Lab | EASY            | 10 min           |
+| [Adding a comfort message while a call is in queue](#adding-a-comfort-message-while-a-call-is-in-queue) | Practical Lab | EASY            | 8 min            |
+| [Creating alternating comfort messages while a call is in queue](#creating-alternating-comfort-messages-while-a-call-is-in-queue)                                           | Practical Lab | EASY            | 15 min            |
+| [Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ani-readout)                   | Practical Lab | EASY            | 15 min           |
+| [Adding the ability to receive a callback at a different number](#adding-the-ability-to-receive-a-callback-at-a-different-number)                   | Practical Lab | EASY            | 15 min           |
+| [Adding the ability to collect an extension and present it to an agent during a callback](#adding-the-ability-to-collect-an-extension-and-present-it-to-an-agent-during-a-callback)                   | Practical Lab | EASY            | 15 min           |
+---
 
 
 ## Overview of the lab:
@@ -353,6 +353,7 @@ update()
     > Did you hear the comfort message and website message alternate every 15 seconds?
     >
     > ---
+
 ## Creating an opt-out option with ANI readout
 1. Create new flow variables:
    > Name: callbackANI
