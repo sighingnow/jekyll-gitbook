@@ -122,8 +122,85 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 ## **3. Supervisor Experience**
 
-Login to the Agent / Supervisor Desktop: https://desktop.wxcc-us1.cisco.com with your Webex credentials.
+#### **Lab Objective**
 
+In this section you will act as a supervisor and perform activities. The Supervisor Desktop provides a holistic supervisor experience within a centralized interface. It enables supervisors to manage, monitor, assess, guide, and assist agents. It also enables administrators to customize the Supervisor Desktop with widgets to address specific Contact Center business needs
+
+#### **Pre-requisite**
+
+1.  a supervisor user configured as described above
+2.  one agent logged in and in conversation with a customer so you can monitor the call.
+
+#### **Supervisor Log in**
+
+- Sign in to the **Supervisor Desktop**: https://desktop.wxcc-us1.cisco.com with your supervisor credentials.
+
+- In the next window, set your role as **supervisor** and your **own extension**. Please note that you can set your role either as **supervisor** or **agent and supervisor**.
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_1.png)
+
+- When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop.
+  
+- The default page highlights a **dashboard** of your Contact Center activity with a couple of filters to narrow your analysis. 
+
+- Note the **Supervisor Desktop** UI supports localization in 30 languages. The following are the supported languages:
+Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US),Finnish,French, German, Hungarian, Italian,Japanese, Korean, Norwegian,Polish,Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian. The Supervisor Desktop UI language is based on the language preference settings on your browser. For example, let us consider that you have selected the preferred language as French on the Google Chrome browser. When you launch the Supervisor Desktop in the Google Chrome browser, the Supervisor Desktop UI appears in Français (French).
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_2.png)
+
+- if your now click on the third menu option, you can see the **Team Performance Details** page where your agents activities are displayed : status, call duration, team, ... In the last column, you are presented two options : **chat** or **monitor**.
+  
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_3.png)
+
+- you can customize this view to show / hide columns or group information
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_32.png)
+
+
+#### **Chat with your agents**
+
+- Click on the **Send Message** button
+    
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_4_chat.png)
+
+- Fill the chat window with a message to send to your agent
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_5_chat.png)
+
+- On the agent side, observe the message notification received
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_6_chat.png)
+
+- If, as an agent, you want to answer to the supervisor, your will need to click on the **Webex logo** to open the Webex app embedded in the **Agent Desktop**. You can then reply to the supervisor directly.
+  
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_7_chat.png)
+
+- On the supervisor side, observe the message notification received
+  
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_8_chat.png)
+
+
+#### **Monitor calls**
+
+- As a supervisor, the **Team Performance Details** page allows you to see all connected agents and decide to monitor calls by clicking on the **Review and Monitor** icon.
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_9_monitor.png)
+
+- The following popup will be displayed. Click on **Start Monitoring**.
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_10_monitor.png)
+
+- In your **Supervisor Desktop**, an incoming popover window will be displayed and your softphone will ring as Webex Contact Center is now trying to reach you. Accept the call on your supervisor softphone.
+
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_11_monitor.png)
+
+- As a supervisor, the call you are now monitoring is displayed in your desktop with agent and customer details of which the call variables so you are aware of the context of the call.
+  
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_12_monitor.png)
+
+- You can pause the monitoring and start is again if you will
+  
+![Lab_4_WebexCC_Config_12](/assets/images/Lab4_ESD_13_monitor.png)
 
 
 ## **4. Providing the Supervisor capabilities feedback**
