@@ -243,6 +243,11 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 ## **4. Supervisor Experience Demonstration**
 
 
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/2d7fd721-b192-43d1-83f9-68c7f2d544b3" width="100%" height="100%" title="Supervisor Desktop Demonstration" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<br>
+
 
 ## **5. Providing the Supervisor capabilities feedback**
 
