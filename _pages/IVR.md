@@ -670,10 +670,11 @@ update()
     >
     > ---  
 
-## Making the flow bi-lingual
+
 
 
 ### Coming soon:
+#### Making the flow bi-lingual
 #### Adding HTTP lookups and agent routing
 #### Business Hours
 
