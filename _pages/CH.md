@@ -93,19 +93,19 @@ In this Lab, we will go through the tasks that are required to complete the gene
 <form id="IVRdeets">
 
   <label for="DN">EP DN you were assigned:</label>
-  <input type="number" id="DN" name="DN" onChange="update()"><br>
+  <input type="tel" id="DN" name="DN" onChange="update()"><br>
 
   <label for="attendee">Attendee ID:</label>
   <input type="text" id="attendee" name="attendee" onChange="update()"><br>
 
   <label for="agent">Agent Email Address:</label>
-  <input type="text" id="agent" name="agent" onChange="update()"><br>
+  <input type="email" id="agent" name="agent" onChange="update()"><br>
 
   <label for="agentEXT">Agent Extension:</label>
   <input type="number" id="agentEXT" name="agentEXT" onChange="update()"><br>
 
   <label for="supervisor">Supervisor Email Address:</label>
-  <input type="text" id="supervisor" name="supervisor" onChange="update()"><br>
+  <input type="email" id="supervisor" name="supervisor" onChange="update()"><br>
 
   <label for="supervisorEXT">Supervisor Extension:</label>
   <input type="number" id="supervisorEXT" name="supervisorEXT" onChange="update()"><br>
