@@ -19,7 +19,7 @@ layout: post
     localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
   }
    if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendee-form",document.forms["IVRdeets"][1].value)
+    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
   }  
   if(document.forms["IVRdeets"][2].value != "Agent Email"){
     localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
@@ -102,7 +102,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 <script>
 document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
-document.forms["IVRdeets"][1].value = localStorage.getItem("attendee-form") || "Your Attendee ID" 
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
 document.forms["IVRdeets"][3].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
 update()
