@@ -207,7 +207,7 @@ update()
 
 - Navigate to **_Provisioning_** and select **_Site_**.
 
-- Click on `+ New Site` button and provide the Name as _<w class="attendee_out">Your_Attendee_ID</w>_Site_.
+- Click on `+ New Site` button and provide the Name as **<w class="attendee_out">Your_Attendee_ID</w>_Site**.
 
 - Select your MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
