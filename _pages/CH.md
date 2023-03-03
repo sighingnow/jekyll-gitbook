@@ -78,18 +78,22 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 | **User Role** | **User email**                                                                | **User Extension** |
 | ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class = "attendee-class">your_attendee_ID</w>\_agent1@\<your domain\>      | \<your assign DN\> |
-| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>\_supervisor1@\<your domain\> | \<your assign DN\> |
+| Agent         | <w class="attendee_out">Your_Attendee_ID</w>_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w> |
+| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
+
+
 
 > Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted from the training tenant.
 > {: .block-danger }
 
-### 1. Define your Attendee ID
+### 1. Define your Attendee ID and Other parameters
+
+> You have received an email with the lab access details, please copy and paste the data from the email into the corresponding fields.
 
 <form id="IVRdeets">
 
   <label for="DN">EP DN you were assigned:</label>
-  <input type="text" id="DN" name="DN" onChange="update()"><br>
+  <input type="number" id="DN" name="DN" onChange="update()"><br>
 
   <label for="attendee">Attendee ID:</label>
   <input type="text" id="attendee" name="attendee" onChange="update()"><br>
@@ -98,13 +102,13 @@ In this Lab, we will go through the tasks that are required to complete the gene
   <input type="text" id="agent" name="agent" onChange="update()"><br>
 
   <label for="agentEXT">Agent Extension:</label>
-  <input type="text" id="agentEXT" name="agentEXT" onChange="update()"><br>
+  <input type="number" id="agentEXT" name="agentEXT" onChange="update()"><br>
 
   <label for="supervisor">Supervisor Email Address:</label>
   <input type="text" id="supervisor" name="supervisor" onChange="update()"><br>
 
   <label for="supervisorEXT">Supervisor Extension:</label>
-  <input type="text" id="supervisorEXT" name="supervisorEXT" onChange="update()"><br>
+  <input type="number" id="supervisorEXT" name="supervisorEXT" onChange="update()"><br>
 <br>
 
   <button onclick="update()">Save</button>
