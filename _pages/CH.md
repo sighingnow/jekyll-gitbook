@@ -4,6 +4,36 @@ author: Dmitry Bokatov & Mike Turnbow
 date: 2022-01-10
 layout: post
 ---
+<script>
+    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+	Object.entries(them).forEach((entry) => {
+    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
+    {
+      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+    })})
+
+  event.preventDefault()
+  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
+    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
+  }
+  if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
+  }  
+  if(document.forms["IVRdeets"][2].value != "Agent Email"){
+    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
+  } 
+  if(document.forms["IVRdeets"][3].value != "Agent Extension"){
+    localStorage.setItem("agentEXT",document.forms["IVRdeets"][3].value)
+  }
+  if(document.forms["IVRdeets"][4].value != "Supervisor Email"){
+    localStorage.setItem("supervisorEmail",document.forms["IVRdeets"][4].value)
+  } 
+  if(document.forms["IVRdeets"][5].value != "Supervisor Extension"){
+    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][5].value)
+  }
+  }
+</script>
 
 ## Table of Contents
 
@@ -56,13 +86,40 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ### 1. Define your Attendee ID
 
-<div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" />
-      <button type="submit" id="save">SAVE</button>
+<form id="IVRdeets">
+
+  <label for="DN">EP DN you were assigned:</label>
+  <input type="text" id="DN" name="DN" onChange="update()"><br>
+
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+
+  <label for="agent">Agent Email Address:</label>
+  <input type="text" id="agent" name="agent" onChange="update()"><br>
+
+  <label for="agentEXT">Agent Extension:</label>
+  <input type="text" id="agentEXT" name="agentEXT" onChange="update()"><br>
+
+  <label for="supervisor">Supervisor Email Address:</label>
+  <input type="text" id="supervisor" name="supervisor" onChange="update()"><br>
+
+  <label for="supervisorEXT">Supervisor Extension:</label>
+  <input type="text" id="supervisorEXT" name="supervisorEXT" onChange="update()"><br>
+<br>
+
+  <button onclick="update()">Save</button>
 </form>
-<script src="/assets/gitbook/form.js"></script>
+
+<script>
+document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
+document.forms["IVRdeets"][3].value = localStorage.getItem("agentEXT") || "Agent Extension"
+document.forms["IVRdeets"][4].value = localStorage.getItem("supervisorEmail") || "Supervisor Email"
+document.forms["IVRdeets"][5].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
+
+update()
+</script>
 
 > **NOTE:** the **Attendee ID** should be provided with the admin credentials. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel with you. In that case, the **Attendee ID** is the same for all of you, but you can use the different number in the end as the suffix. Ex: _attendeeID_agent**1**, attendeeID_agent**2**, attendeeID_agent**3**, etc._
 > {: .block-tip }
