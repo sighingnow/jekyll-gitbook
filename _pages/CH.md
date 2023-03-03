@@ -174,9 +174,11 @@ update()
 
 | **Entity**          | **Name**                                                |
 | ------------------- | ------------------------------------------------------- |
-| Multimedia Profiles | <w class = "attendee-class">your_attendee_ID</w>\_MMP   |
-| Site                | <w class = "attendee-class">your_attendee_ID</w>\_Site  |
-| Team1               | <w class = "attendee-class">your_attendee_ID</w>\_Team1 |
+| Multimedia Profiles | <w class="attendee_out">Your_Attendee_ID</w>_MMP   |
+| Site                | <w class="attendee_out">Your_Attendee_ID</w>_Site  |
+| Team1               | <w class="attendee_out">Your_Attendee_ID</w>_Team1 |
+
+
 
 > **NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can add a sub prefix with the number. \_Ex: attendeeID**1**\_MMP, attendeeID**2**\_MMP, etc.
 > {: .block-tip }
@@ -197,7 +199,7 @@ update()
 
 - Click on `+ New Multimedia Profile` to open Multimedia Profile configuration page.
 
-- Input Name as **<w class = "attendee-class">your_attendee_ID</w>\_MMP**.
+- Input Name as **<w class="attendee_out">Your_Attendee_ID</w>_MMP**.
 
 - In the Media Details section, select the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, and click **_Save_**.
 
@@ -205,7 +207,7 @@ update()
 
 - Navigate to **_Provisioning_** and select **_Site_**.
 
-- Click on `+ New Site` button and provide the Name as _<w class = "attendee-class">your_attendee_ID</w>\_Site_.
+- Click on `+ New Site` button and provide the Name as _<w class="attendee_out">Your_Attendee_ID</w>_Site_.
 
 - Select your MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
@@ -217,7 +219,7 @@ update()
 
 - Select you site from the _Site_ drop-down.
 
-- Input _Name_ as **<w class = "attendee-class">your_attendee_ID</w>\_Team1**.
+- Input _Name_ as **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
 - Use the default **_Type_** `Agent Based`.
 
@@ -269,9 +271,9 @@ update()
 
 - Once the task is **Completed** click on **_Download export file_** and open the csv file in the notepad.
 
-- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class = "attendee-class">your_attendee_ID</w>\_Team1**.
+- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
-- Rename the Team1 to **<w class = "attendee-class">your_attendee_ID</w>\_Team2** and save the file. You should have only 2 rows in the file.
+- Rename the Team1 to **<w class="attendee_out">Your_Attendee_ID</w>_Team2** and save the file. You should have only 2 rows in the file.
   Example:
 
 ```csv
@@ -285,9 +287,9 @@ pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
-- Go to the Management Portal, click on **_Provisioning_** and **_Team_** and verify that the **<w class = "attendee-class">your_attendee_ID</w>\_Team2** is created.
+- Go to the Management Portal, click on **_Provisioning_** and **_Team_** and verify that the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** is created.
 
-- In the Management Portal you can directly associate the **<w class = "attendee-class">your_attendee_ID</w>\_Team2** with your agent and supervisor.
+- In the Management Portal you can directly associate the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** with your agent and supervisor.
 
 # Access to the Agent Desktop
 
@@ -342,7 +344,7 @@ pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 > **Note:** Please use Webex App Extension for this lab. Optionally, if you have a US number, you can use it from the agent's desktop. This tenant does not allow numbers outside of the United States.
 > {: .block-tip }
 
-- Select the team **<w class = "attendee-class">your_attendee_ID</w>\_Team1**.
+- Select the team **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
 - Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
 
