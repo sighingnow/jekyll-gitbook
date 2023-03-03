@@ -85,7 +85,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 <form id="IVRdeets">
   
   <label for="DN">EP DN you were assigned:</label><br>
-  <input type="text" id="DN" name="DN" onChange="update()"><br>
+  <input type="number" id="DN" name="DN" onChange="update()"><br>
   
   <label for="attendee">Attendee ID:</label><br>
   <input type="text" id="attendee" name="attendee" onChange="update()"><br>
@@ -94,7 +94,7 @@ In this lab, we will configure all of the required elements to deliver a call in
   <input type="text" id="agent" name="agent" onChange="update()"><br>
 
   <label for="supervisorEXT">Supervisor Extension:</label><br>
-  <input type="text" id="agent" name="supervisorEXT" onChange="update()"><br>
+  <input type="number" id="agent" name="supervisorEXT" onChange="update()"><br>
 <br>
 
   <button onclick="update()">Update Directions</button>
