@@ -85,7 +85,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 <form id="IVRdeets">
   
   <label for="DN">EP DN you were assigned:</label><br>
-  <input type="number" id="DN" name="DN" onChange="update()"><br>
+  <input type="text" id="DN" name="DN" onChange="update()"><br>
   
   <label for="attendee">Attendee ID:</label><br>
   <input type="text" id="attendee" name="attendee" onChange="update()"><br>
