@@ -238,7 +238,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 5: WebExCC Salesforce Desktop Layout
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/wCzcAIL6w3Y?rel=0" title="CRM Integration Lab Part 5: WebExCC Salesforce Desktop Layout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f5b8bc81-87b1-48e9-91b2-b2df8c090913" width="100%" height="100%" title="PART 5 - WebexCC Salesforce Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 ### WebexCC Salesforce Desktop Layout Configuration
 
