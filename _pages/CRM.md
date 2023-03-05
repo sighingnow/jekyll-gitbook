@@ -29,7 +29,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - [Part 4: Reports](#part-4-reports)
   - [WebexCC Salesforce Desktop Report View](#webexcc-salesforce-desktop-report-view)
 - [Part 5: WebexCC Desktop Layout](#part-5-webexcc-dekstop-layout)
-  - [9. WebexCC Salesforce Desktop Layout Configuration](#9-webexcc-salesforce-desktop-layout-configuration)
+  - [WebexCC Salesforce Desktop Layout Configuration](#webexcc-salesforce-desktop-layout-configuration)
 - [Login Agent and Make a Test Call](#login-agent-make-call)
 
 [6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
@@ -240,22 +240,23 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/wCzcAIL6w3Y?rel=0" title="CRM Integration Lab Part 5: WebExCC Salesforce Desktop Layout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### 9. WebexCC Salesforce Desktop Layout Configuration
+### WebexCC Salesforce Desktop Layout Configuration
 
-- Login to [WebexCC Admin Portal](https://portal.wxcc-us1.cisco.com/portal/home.html).
+- Download the latest Custom Desktop Layout file from the [Github Repo](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Salesforce)
+
+- Save it on your machine as JSON file.
+
+- Login to [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/portal/home.html).
 
 - Go to **Provisioning** > **Desktop Layout** > **New Layout**.
 
 - Enter Name and Description for the desktop layout.
 
-- Status by default will be **Active**.
+- Add the **Teams** to the Desktop layout. Only the agents associated with that team will get the Salesforce Desktop Layout.
 
-- Add the **Teams** to Desktop layout. Agents associated with that team will get the Salesforce Desktop Layout.
+- Upload the custom desktop layout file saved earlier.
 
-- Upload the custom desktop layout for WebexCC Salesforce Desktop.
-  [WebexCC_Salesforce_Desktop.zip](https://github.com/wxcctechsummit/wxcclabguides/raw/08fb8082092b2552ec89e1b42dbe84b12214a805/WebexCC_Salesforce_Desktop.zip)
-
-- Click **Save**. This will create a custom Desktop Layout named Salesforce in WebexCC.
+- Click **Save**. This will create a Custom Desktop Layout in Webex Contact Center.
 
 ## Login Agent and Make a Test Call
 
