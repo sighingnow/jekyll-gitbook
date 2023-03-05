@@ -17,15 +17,15 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - [Optional: Create Salesforce Account](#optional-create-salesforce-account)
 - [Part 1: Connector Installation](#part-1-connector-installation)
-  - [1. Connector Installation From Salesforce AppExchange](#1-connector-installation-from-salesforce-appexchange)
-  - [2. Connector Installation Verification](#2-connector-installation-verification)
+  - [Connector Installation From Salesforce AppExchange](#connector-installation-from-salesforce-appexchange)
+  - [Connector Installation Verification](#connector-installation-verification)
 - [Part 2: Call Center Configuration](#part-2-call-center-configuration)
-  - [3. Salesforce Call Center Configuration](#3-salesforce-call-center-configuration)
-  - [4. Adding Call Center Users To Salesforce Call Center Application](#4-adding-call-center-users-to-salesforce-call-center-application)
-- [Part 3: Softphone & Task Layout Configuration](#part-3-softphone-task-layout-configuration)
-  - [5. Create Salesforce Softphone Layout Configuration](#5-create-salesforce-softphone-layout-configuration)
-  - [6. Salesforce Softphone Layout Assignment](#6-salesforce-softphone-layout-assignment)
-  - [7. Salesforce Task Layout Configuration](#7-salesforce-task-layout-configuration)
+  - [Salesforce Call Center Configuration](#salesforce-call-center-configuration)
+  - [Adding Call Center Users To Salesforce Call Center Application](#adding-call-center-users-to-salesforce-call-center-application)
+- [Part 3: Softphone & Task Layout Configuration](#part-3-softphone--task-layouts)
+  - [Create Salesforce Softphone Layout Configuration](#create-salesforce-softphone-layout-configuration)
+  - [Salesforce Softphone Layout Assignment](#salesforce-softphone-layout-assignment)
+  - [Salesforce Task Layout Configuration](#salesforce-task-layout-configuration)
 - [Part 4: Reports](#part-4-reports)
   - [8. WebexCC Salesforce Desktop Report View](#8-webexcc-salesforce-desktop-report-view)
 - [Part 5: WebexCC Desktop Layout](#part-5-webexcc-dekstop-layout)
@@ -97,7 +97,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/778b9e9e-b336-4628-9288-5065882859f3" width="100%" height="100%" title="PART 1 - Connector Installation" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
  
-### 1. Connector Installation From Salesforce AppExchange
+### Connector Installation From Salesforce AppExchange
 
 - Login to your [Salesforce](https://login.salesforce.com) instance and go to **Setup**.
 
@@ -119,7 +119,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - After the installation is completed, click **Done**.
 
-### 2. Connector Installation Verification
+### Connector Installation Verification
 
 - In Salesforce, navigate to **Setup**.
 
@@ -135,7 +135,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/dae6c6c0-0140-481a-8d93-53380d729e03" width="100%" height="100%" title="PART 2 - Call Center Configuration" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### 3. Salesforce Call Center Configuration
+### Salesforce Call Center Configuration
 
 - In Salesforce, navigate to **Setup**.
 
@@ -150,7 +150,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click **Save**
 
-### 4. Adding Call Center Users To Salesforce Call Center Application
+### Adding Call Center Users To Salesforce Call Center Application
 
 - Open the Call Center Definition file again (not in Edit mode). Just click on the Call Center File name.
 
@@ -166,9 +166,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 3: Softphone & Task Layouts
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/w0tCjlyEWEY?rel=0" title="CRM Integration Lab Part 3: Softphone & Task Layouts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f434bc8b-9498-4861-a914-3141ed682153" width="100%" height="100%" title="PART 3 - Softphone & Task Layouts" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 5. Create Salesforce Softphone Layout Configuration
+### Create Salesforce Softphone Layout Configuration
 
 - In Salesforce, navigate to **Setup**.
 
@@ -180,41 +182,41 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Select the **Is Default Layout** checkbox to make this Softphone layout default for all the call center application.
 
-- On the **salesforce.com objects**, remove `Lead` from the selections and add `Opportunity`.
+- On the **Display these salesforce.com objects**, remove `Lead` from the selections and add `Case`.
 
-- On the **Screen Pop Settings**, choose `Pop to new Contact` for **No matching records**, `Pop detail page` for **Single-matching records** and `Pop to search page` for **Multiple-matching records**.
+- On the **Screen Pop Settings**, choose `Don't pop any screen` for **No matching records**, `Pop detail page` for **Single-matching records** and `Pop to search page` for **Multiple-matching records**.
 
 - Click **Save** to create the Softphone Layout configuration.
 
-### 6. Salesforce Softphone Layout Assignment
+- In the Call Center Configuration file, make the changes (if required) under **Screenpop Settings** (for No Matching Records) as per the business use-case.
+
+### Salesforce Softphone Layout Assignment
 
 - If not already there, in the search box type `Softphone Layout` and click on **Continue** to reach the Softphone Layout page.
 
 - Click on the **Softphone Layout Assignment** Button, it opens the Softphone Layout Assignment page.
 
-- Assign the Softphone Layout configuration you created to the **System Administrator** profile.
+- Assign the Softphone Layout configuration you created to the **System Administrator** or your user profile.
 
-- Click **Save** to assign the Softphone Layouts.
+- Click **Save** to assign the Softphone Layout.
 
-### 7. Salesforce Task Layout Configuration
+### Salesforce Task Layout Configuration
 
 - In Salesforce, navigate to **Setup**.
 
 - In the search box, type `Object Manager` and click on it.
 
-- Filter the list page by typing `Task` in the **Quick Find** search box and click on the **Task button link**.
+- Filter the list page by typing `Task` in the **Quick Find** search box and click on the **Task** button link.
 
 - Select **Page Layouts** on the left of the Task details page.
 
 - Click on **Page Layout Assignment** on top-right and then on **Edit Assignment**.
 
-- Select the **System Administrator** profile from the displayed list in the Profiles column.
+- Select the **System Administrator** profile or your user profile from the displayed list in the Profiles column.
 
-- Select the **Cisco Webex Contact Center Task Layout** from the **Page Layout To Use** drop-down list on top.
+- Select the **Webex Contact Center Task Layout** from the **Page Layout To Use** drop-down list on top.
 
-- Apply the same page layout to **Standard User** and **Standard Platform User** profiles as well.
-
-- Click **Save** to assign the Task Layout.
+- Click **Save** to assign the Custom Task Layout.
 
 ## Part 4: Reports
 
