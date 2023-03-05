@@ -27,7 +27,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - [Salesforce Softphone Layout Assignment](#salesforce-softphone-layout-assignment)
   - [Salesforce Task Layout Configuration](#salesforce-task-layout-configuration)
 - [Part 4: Reports](#part-4-reports)
-  - [8. WebexCC Salesforce Desktop Report View](#8-webexcc-salesforce-desktop-report-view)
+  - [WebexCC Salesforce Desktop Report View](#webexcc-salesforce-desktop-report-view)
 - [Part 5: WebexCC Desktop Layout](#part-5-webexcc-dekstop-layout)
   - [9. WebexCC Salesforce Desktop Layout Configuration](#9-webexcc-salesforce-desktop-layout-configuration)
 - [Login Agent and Make a Test Call](#login-agent-make-call)
@@ -220,9 +220,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 4: Reports
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/jLw92srDV2I?rel=0" title="CRM Integration Lab Part 4: Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/89bdbffa-ee60-4f82-b6ec-ac5b3c46dff3" width="100%" height="100%" title="PART 4 - Reports" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 8. WebexCC Salesforce Desktop Report View
+### WebexCC Salesforce Desktop Report View
 
 - In Salesforce, click **App Launcher** on top left and then choose **Webex Contact Center**.
 
@@ -232,7 +234,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - To see all the existing reports, click **All Reports**.
 
-> **Note:** There is a default call activity report that installs with Cisco Webex Contact Center for Salesforce client.
+> **Note:** There is a default call activity report that is configured alongwith Webex Contact Center app installation.
 
 ## Part 5: WebExCC Salesforce Desktop Layout
 
