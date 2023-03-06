@@ -30,7 +30,9 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
   - [WebexCC Salesforce Desktop Report View](#webexcc-salesforce-desktop-report-view)
 - [Part 5: WebexCC Desktop Layout](#part-5-webexcc-dekstop-layout)
   - [WebexCC Salesforce Desktop Layout Configuration](#webexcc-salesforce-desktop-layout-configuration)
-- [Login Agent and Make a Test Call](#login-agent-make-call)
+- [Part 6: Test Webex Contact Center Agent Desktop for Salesforce](#part-6-test-webex-contact-center-agent-desktop-for-salesforce)
+  - [Call Center Definition File Configuration](#call-center-definition-file-configuration)
+  - [Login to Salesforce Agent Desktop and Make a Test Call](#login-to-salesforce-agent-desktop-and-make-a-test-call)
 
 [6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
 
@@ -260,17 +262,34 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click **Save**. This will create a Custom Desktop Layout in Webex Contact Center.
 
-## Login Agent and Make a Test Call
+## Part 6: Test Webex Contact Center Agent Desktop for Salesforce
 
-- Back on Salesforce page, click on **App Launcher** icon on top left and then click on **Webex Contact Center**.
+### Call Center Definition File Configuration
 
-- On the bottom left, click on **Phone** and then **Sign In**.
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/77eb5100-9fe6-4fae-ba9f-b6dca835e613" width="100%" height="100%" title="PART 6(a) - Call Center Definition File - Advanced Configurations" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-- Sign in an agent that is part of the team that the Dekstop Layout was associated with previously. You can use the agent, EPs and flow created in Lab 2 Part 2 (IVR and Contact Routing) for the queued to agent scenario.
+- This document covers customization of each field of call center definition file, its description and possible values :
+  [Integrate Webex Contact Center with Salesforce](https://help.webex.com/en-us/article/nhxw7kfb/Integrate-Webex-Contact-Center-with-Salesforce#Cisco_Reference.dita_053158ba-52cb-437e-9243-64d28a3c9845)
+
+## Login to Salesforce Agent Desktop and Make a Test Call
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/ad3757df-3eff-49bb-b2c8-a1ec6f9899c3" width="100%" height="100%" title="PART 6(b) - Test Webex Contact Center Salesforce Agent Desktop" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- On Salesforce page, click on **App Launcher** icon on top left and then click on **Webex Contact Center**.
+
+- On the bottom left, click on **Phone** and then on **Sign In**.
+
+- Sign in to Webex Contact Center Agent Desktop using agent credentials. This agent user needs to be part of the same team with which we had associated the Desktop Layout previously.
 
 - Make sure the agent is in available state and make a test call to your EP.
 
-- Upon accepting the call, we will see account information populated for this call. A `task activity` should also be created and visible upon accepting the call.
+- Upon accepting the call, you should be able to see a screenpop as per the configurations in the Call Center Definiton file.
+
+- A Phone Call Activity Record will be created for every call and will be associated with the Salesforce Record.
 
 # 6.2 Microsoft Dynamics 365 integration
 
