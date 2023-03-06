@@ -30,6 +30,7 @@ layout: post
 | [Creating Custom Nodes](#lab1220---creating-custom-nodes) | Practical Lab | MED            | 30 min           |
 | [Events and Triggers](#lab1221---event-and-triggers) | Practical Lab | MED            | 30 min           |
 | [Global and Flow variable support in Digital channels](#lab1222---global-and-flow–variable–support–in-digital-channels) | Practical Lab | MED            | 45 min           |
+| [Providing Digital Channels feedback](#lab1223---providing-digital-channels-feedback) | Survey | EASY            | 5 min           |
 
 
 
@@ -3688,6 +3689,11 @@ var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 
 ![Lab12.24.3_TxLast](/assets/images/Lab12.24.3_TxLast.png)
+
+
+# **12.23 Providing Digital Channels feedback**
+
+We are seeking your feedback on the Digital Channel capabilities. By participating in this survey, you will help us to improve the quality of our products: https://forms.gle/qDRF2hYdkZHr5owa8 
 
 ---
 
