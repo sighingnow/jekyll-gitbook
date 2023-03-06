@@ -264,11 +264,13 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 6: Test Webex Contact Center Agent Desktop for Salesforce
 
-### Call Center Definition File Configuration
+### Call Center Definition File - Advanced Configurations
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/77eb5100-9fe6-4fae-ba9f-b6dca835e613" width="100%" height="100%" title="PART 6(a) - Call Center Definition File - Advanced Configurations" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
+
+<br/>
 
 - This document covers customization of each field of call center definition file, its description and possible values :
   [Integrate Webex Contact Center with Salesforce](https://help.webex.com/en-us/article/nhxw7kfb/Integrate-Webex-Contact-Center-with-Salesforce#Cisco_Reference.dita_053158ba-52cb-437e-9243-64d28a3c9845)
