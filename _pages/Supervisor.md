@@ -63,7 +63,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 ## **2. Configure supervisor in Webex CC**
 
--  Download [Desktop Laout JSON](/files/ESD_default_layout.json) file for supervisor from GitHub.
+-  Download [Desktop Laout JSON](/assets/files/ESD_default_layout.json) file for supervisor from GitHub.
 -  Open the file in any JSON editor, check and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
 	- ***supervisor*** section is used when the user signs in to supervisor desktop with ***Supervisor*** role.
 	- ***supervisorAdmin*** section is used when the user signs in to supervisor desktop with ***Supervisor and Agent*** role.
