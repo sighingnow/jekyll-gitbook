@@ -31,7 +31,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - [Part 5: WebexCC Desktop Layout](#part-5-webexcc-dekstop-layout)
   - [WebexCC Salesforce Desktop Layout Configuration](#webexcc-salesforce-desktop-layout-configuration)
 - [Part 6: Test Webex Contact Center Agent Desktop for Salesforce](#part-6-test-webex-contact-center-agent-desktop-for-salesforce)
-  - [Call Center Definition File Configuration](#call-center-definition-file-configuration)
+  - [Call Center Definition File Configuration - Advanced Configurations](#call-center-definition-file---advanced-configurations)
   - [Login to Salesforce Agent Desktop and Make a Test Call](#login-to-salesforce-agent-desktop-and-make-a-test-call)
 
 [6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
