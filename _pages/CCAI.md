@@ -1,5 +1,5 @@
 ---
-title: Lab 7 - Google CCAI & TTS 
+title: Lab 7 - Google Dialogflow & TTS 
 author: Chandramouli Vaithiyanathan & Kevin Simpson
 date: 2022-07-07
 layout: post
@@ -11,20 +11,22 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 # Table of Contents
 
-- [Introduction](#overview) 
-  * [Lab Objective](#lab-objective)
-  * [Pre-Requisites](#pre-requisites)
-  * [Quick Links](#quick-links)
-- [Part 1: Setup the Google Account](#1_setup_the_google_account)
-- [Part 2: Setup Dialogflow Agent & Google Connector](#2_setup_dialogflow_google_connector)
-- [Part 3: TTS, EWT & PIQ](#3_tts_etw_piq)
-- [Part 4: Virtual Agent](#4_virtual_agent)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+    - [Lab Objective](#lab-objective)
+    - [Prerequisites](#prerequisites)
+    - [Quick Links](#quick-links)
+  - [Lab Section](#lab-section)
+    - [1. Setup the Google Account](#1-setup-the-google-account)
+    - [Part 2. Setup Dialogflow Agent \& Google Connector](#part-2-setup-dialogflow-agent--google-connector)
+    - [Part 3: TTS, EWT \& PIQ](#part-3-tts-ewt--piq)
+    - [Part 4: Virtual Agent](#part-4-virtual-agent)
 
 # Introduction
 
 ### Lab Objective
 
-- This lab is designed to help you configure a Google DialogFlow Agent using CCAI (Contact Center AI) on Webex Contact Center and utilize TTS (Text-to-Speech) capabilities.
+- This lab is designed to help you configure a Google Dialogflow Agent using CCAI (Contact Center AI) on Webex Contact Center and utilize TTS (Text-to-Speech) capabilities.
 
 - At the end of this lab, you should have a fully functioning bot front-ending the Webex Contact Center and text to speech prompts.
 

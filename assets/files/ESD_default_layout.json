@@ -1,0 +1,1185 @@
+{
+  "agent": {
+    "version": "0.1.0",
+    "appTitle": "Webex Contact Center",
+    "logo": "",
+    "stopNavigateOnAcceptTask": false,
+    "dragDropEnabled": true,
+    "notificationTimer": 8,
+    "maximumNotificationCount": 3,
+    "browserNotificationTimer": 8,
+    "wxmConfigured": false,
+    "desktopChatApp": {
+      "webexConfigured": true
+    },
+    "area": {
+      "advancedHeader": [
+        {
+          "comp": "agentx-webex"
+        },
+        {
+          "comp": "agentx-outdial"
+        },
+        {
+          "comp": "agentx-notification"
+        },
+        {
+          "comp": "agentx-state-selector"
+        }
+      ],
+      "panel": {
+        "comp": "md-tabs",
+        "attributes": {
+          "class": "widget-tabs"
+        },
+        "children": [
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "IVR_TRANSCRIPT_TAB"
+                }
+              }
+            ],
+            "visibility": "IVR_TRANSCRIPT"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "IVR_TRANSCRIPT"
+                }
+              }
+            ],
+            "visibility": "IVR_TRANSCRIPT"
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "WXM_JOURNEY_TAB"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "ani": "$STORE.agentContact.taskSelected.ani",
+                  "isDarkMode": "$STORE.app.darkMode"
+                },
+                "wrapper": {
+                  "title": "Customer Experience Journey",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "CONTACT_HISTORY_TAB"
+                }
+              }
+            ]
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "CONTACT_HISTORY"
+                }
+              }
+            ]
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "SCREEN_POP_TAB"
+                }
+              }
+            ],
+            "visibility": "SCREEN_POP"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "SCREEN_POP"
+                }
+              }
+            ],
+            "visibility": "SCREEN_POP"
+          }
+        ]
+      },
+      "navigation": [
+        {
+          "nav": {
+            "label": "Customer Experience Analytics",
+            "icon": "/app/images/wxm.bcd45cc3.svg",
+            "iconType": "other",
+            "navigateTo": "wxm-metrics",
+            "align": "top"
+          },
+          "page": {
+            "id": "wxm-metrics",
+            "widgets": {
+              "comp1": {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "attributes": {
+                  "metrics": true
+                },
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "isDarkMode": "$STORE.app.darkMode",
+                  "agentId": "$STORE.agent.agentId"
+                }
+              }
+            },
+            "layout": {
+              "areas": [["comp1"]],
+              "size": {
+                "cols": [1],
+                "rows": [1]
+              }
+            }
+          },
+          "visibility": "WXM_METRICS"
+        }
+      ]
+    }
+  },
+  "supervisor": {
+    "version": "0.1.0",
+    "appTitle": "Webex Contact Center",
+    "logo": "",
+    "stopNavigateOnAcceptTask": false,
+<<<<<<< HEAD
+    "dragDropEnabled": false,
+=======
+    "dragDropEnabled": true,
+>>>>>>> origin/master
+    "notificationTimer": 8,
+    "maximumNotificationCount": 3,
+    "browserNotificationTimer": 8,
+    "wxmConfigured": false,
+    "desktopChatApp": {
+      "webexConfigured": true
+    },
+    "area": {
+      "advancedHeader": [
+        {
+          "comp": "agentx-webex"
+        },
+        {
+          "comp": "agentx-notification"
+        }
+      ],
+      "panel": {
+        "comp": "md-tabs",
+        "attributes": {
+          "class": "widget-tabs"
+        },
+        "children": [
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "IVR_TRANSCRIPT_TAB"
+                }
+              }
+            ],
+            "visibility": "IVR_TRANSCRIPT"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "IVR_TRANSCRIPT"
+                }
+              }
+            ],
+            "visibility": "IVR_TRANSCRIPT"
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "WXM_JOURNEY_TAB"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "ani": "$STORE.agentContact.taskSelected.ani",
+                  "isDarkMode": "$STORE.app.darkMode"
+                },
+                "wrapper": {
+                  "title": "Customer Experience Journey",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "CONTACT_HISTORY_TAB"
+                }
+              }
+            ]
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "CONTACT_HISTORY"
+                }
+              }
+            ]
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "SCREEN_POP_TAB"
+                }
+              }
+            ],
+            "visibility": "SCREEN_POP"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "SCREEN_POP"
+                }
+              }
+            ],
+            "visibility": "SCREEN_POP"
+          }
+        ]
+      },
+      "homepage": {
+        "nav": {
+          "label": "$I18N.common.homePageLabel",
+          "icon": "home",
+          "iconType": "momentum",
+          "navigateTo": "home",
+          "align": "top"
+        },
+        "page": {
+          "id": "landing",
+          "pageHeader": {
+            "comp": "div",
+            "children": [
+              {
+                "comp": "page-title",
+                "attributes": {
+                  "pageTitle": "$STORE.page.getDefaultPageTitle"
+                }
+              }
+            ]
+          },
+          "useFlexLayout": true,
+          "pageSubHeader": {
+            "comp": "div",
+            "attributes": {
+              "style": "display: flex; float:right;margin:16px 0px 16px 16px"
+            },
+            "children": [
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "md-label",
+                    "textContent": "$I18N.pageSubHeader.queueName",
+                    "attributes": {
+                      "style": "margin-bottom:8px;"
+                    }
+                  },
+                  {
+                    "comp": "agentx-wc-queue-filter",
+                    "properties": {
+                      "selectedQueueList": "$STORE.agent.selectedQueueList",
+                      "managedQueues": "$STORE.agent.managedQueues",
+                      "isLoading": "$STORE.agent.isManagedQueueLoading",
+                      "isError": "$STORE.agent.isManagedQueuesError"
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;width:260px;"
+                }
+              },
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "md-label",
+                    "textContent": "$I18N.pageSubHeader.channelType",
+                    "attributes": {
+                      "style": "margin-bottom:8px;"
+                    }
+                  },
+                  {
+                    "comp": "agentx-wc-channel-filter",
+                    "properties": {
+                      "selectedChannelList": "$STORE.agent.selectedChannelList"
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;margin-left:16px;width:260px; "
+                }
+              },
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "md-label",
+                    "textContent": "$I18N.pageSubHeader.managedTeams",
+                    "attributes": {
+                      "style": "margin-bottom:8px;"
+                    }
+                  },
+                  {
+                    "comp": "agentx-wc-team-filter",
+                    "properties": {
+                      "selectedTeamList": "$STORE.agent.selectedTeamList",
+                      "managedTeams": "$STORE.agent.managedTeams",
+                      "isLoading": "$STORE.agent.isManagedTeamLoading",
+                      "isError": "$STORE.agent.isManagedTeamsError"
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;margin-left:16px;width:260px;"
+                }
+              },
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "agentx-more-actions-wrapper",
+                    "properties": {
+                      "actionList": [
+                        {
+                          "comp": "agentx-wc-goto-analyzer"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;margin-top: 20px;"
+                }
+              }
+            ]
+          },
+          "widgets": {
+            "comp1": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "c04c307c-71fd-41f4-828f-a196f94ce08a"
+              }
+            },
+            "comp2": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "bc3f908d-11fa-4f86-be9b-7edfe76eaa59"
+              }
+            },
+            "comp3": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "3e4555a5-be23-46e6-8450-8ebf3f1c35e1"
+              }
+            },
+            "comp4": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "2902a699-bf70-4568-afa1-6857db3e0dc4"
+              }
+            },
+            "comp5": {
+              "comp": "analyzer-widget",
+              "width": 33,
+              "height": 30,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "21716c3a-09a9-476a-bab1-5fbcff226ac6"
+              }
+            },
+            "comp6": {
+              "comp": "analyzer-widget",
+              "width": 33,
+              "height": 30,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "0136c56b-c40f-47a0-af1c-1a180db1fd64"
+              }
+            },
+            "comp7": {
+              "comp": "analyzer-widget",
+              "width": 34,
+              "height": 30,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "e5e19275-0465-4e8c-923d-c9c06002330f"
+              }
+            },
+            "comp8": {
+              "comp": "analyzer-widget",
+              "width": 50,
+              "height": 40,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "9d80a068-099c-48e3-b8a8-207eb38c47c5"
+              }
+            },
+            "comp9": {
+              "comp": "analyzer-widget",
+              "width": 50,
+              "height": 40,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "a0bbecca-0129-4649-9261-ef0fe69281aa"
+              }
+            }
+          }
+        }
+      },
+      "navigation": [
+        {
+          "nav": {
+            "label": "Customer Experience Analytics",
+            "icon": "/app/images/wxm.bcd45cc3.svg",
+            "iconType": "other",
+            "navigateTo": "wxm-metrics",
+            "align": "top"
+          },
+          "page": {
+            "id": "wxm-metrics",
+            "widgets": {
+              "comp1": {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "attributes": {
+                  "metrics": true
+                },
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "isDarkMode": "$STORE.app.darkMode",
+                  "agentId": "$STORE.agent.agentId"
+                }
+              }
+            },
+            "layout": {
+              "areas": [["comp1"]],
+              "size": {
+                "cols": [1],
+                "rows": [1]
+              }
+            }
+          },
+          "visibility": "WXM_METRICS"
+        },
+        {
+          "nav": {
+            "label": "Team Performance Details",
+            "icon": "team",
+            "iconType": "momentum",
+            "navigateTo": "tpw",
+            "align": "top"
+          },
+          "page": {
+            "id": "tpw-sup",
+            "useFlexLayout": true,
+            "widgets": {
+              "comp1": {
+                "comp": "agentx-wc-team-performance-widget",
+                "width": 100,
+                "height": 100,
+                "wrapper": {
+                  "title": "$I18N.tpw.wrapperTitle",
+                  "id": "tpw-1",
+                  "maximizeAreaName": "app-maximize-area"
+                },
+                "properties": {
+                  "tpwConfigs": "$STORE.agent.tpwConfigs"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "supervisorAgent": {
+    "version": "0.1.0",
+    "appTitle": "Webex Contact Center",
+    "logo": "",
+    "stopNavigateOnAcceptTask": false,
+<<<<<<< HEAD
+    "dragDropEnabled": false,
+=======
+    "dragDropEnabled": true,
+>>>>>>> origin/master
+    "notificationTimer": 8,
+    "maximumNotificationCount": 3,
+    "browserNotificationTimer": 8,
+    "wxmConfigured": false,
+    "desktopChatApp": {
+      "webexConfigured": true
+    },
+    "area": {
+      "advancedHeader": [
+        {
+          "comp": "agentx-webex"
+        },
+        {
+          "comp": "agentx-outdial"
+        },
+        {
+          "comp": "agentx-notification"
+        },
+        {
+          "comp": "agentx-state-selector"
+        }
+      ],
+      "panel": {
+        "comp": "md-tabs",
+        "attributes": {
+          "class": "widget-tabs"
+        },
+        "children": [
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "IVR_TRANSCRIPT_TAB"
+                }
+              }
+            ],
+            "visibility": "IVR_TRANSCRIPT"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "IVR_TRANSCRIPT"
+                }
+              }
+            ],
+            "visibility": "IVR_TRANSCRIPT"
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "WXM_JOURNEY_TAB"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "ani": "$STORE.agentContact.taskSelected.ani",
+                  "isDarkMode": "$STORE.app.darkMode"
+                },
+                "wrapper": {
+                  "title": "Customer Experience Journey",
+                  "maximizeAreaName": "app-maximize-area"
+                }
+              }
+            ],
+            "visibility": "WXM_JOURNEY"
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "CONTACT_HISTORY_TAB"
+                }
+              }
+            ]
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "CONTACT_HISTORY"
+                }
+              }
+            ]
+          },
+          {
+            "comp": "md-tab",
+            "attributes": {
+              "slot": "tab",
+              "class": "widget-pane-tab"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "SCREEN_POP_TAB"
+                }
+              }
+            ],
+            "visibility": "SCREEN_POP"
+          },
+          {
+            "comp": "md-tab-panel",
+            "attributes": {
+              "slot": "panel",
+              "class": "widget-pane"
+            },
+            "children": [
+              {
+                "comp": "slot",
+                "attributes": {
+                  "name": "SCREEN_POP"
+                }
+              }
+            ],
+            "visibility": "SCREEN_POP"
+          }
+        ]
+      },
+      "homepage": {
+        "nav": {
+          "label": "$I18N.common.homePageLabel",
+          "icon": "home",
+          "iconType": "momentum",
+          "navigateTo": "home",
+          "align": "top"
+        },
+        "page": {
+          "id": "landing",
+          "useFlexLayout": true,
+          "pageHeader": {
+            "comp": "div",
+            "children": [
+              {
+                "comp": "page-title",
+                "attributes": {
+                  "pageTitle": "$STORE.page.getDefaultPageTitle"
+                }
+              }
+            ],
+            "attributes": {
+              "style": "margin: 0px 0px 0px 16px"
+            }
+          },
+          "pageSubHeader": {
+            "comp": "div",
+            "attributes": {
+              "style": "display: flex; float:right"
+            },
+            "children": [
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "md-label",
+                    "textContent": "$I18N.pageSubHeader.queueName",
+                    "attributes": {
+                      "style": "margin-bottom:8px;"
+                    }
+                  },
+                  {
+                    "comp": "agentx-wc-queue-filter",
+                    "properties": {
+                      "selectedQueueList": "$STORE.agent.selectedQueueList",
+                      "managedQueues": "$STORE.agent.managedQueues",
+                      "isLoading": "$STORE.agent.isManagedQueueLoading",
+                      "isError": "$STORE.agent.isManagedQueuesError"
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;width:260px;"
+                }
+              },
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "md-label",
+                    "textContent": "$I18N.pageSubHeader.channelType",
+                    "attributes": {
+                      "style": "margin-bottom:8px;"
+                    }
+                  },
+                  {
+                    "comp": "agentx-wc-channel-filter",
+                    "properties": {
+                      "selectedChannelList": "$STORE.agent.selectedChannelList"
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;margin-left:16px;width:260px; "
+                }
+              },
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "md-label",
+                    "textContent": "$I18N.pageSubHeader.managedTeams",
+                    "attributes": {
+                      "style": "margin-bottom:8px;"
+                    }
+                  },
+                  {
+                    "comp": "agentx-wc-team-filter",
+                    "properties": {
+                      "selectedTeamList": "$STORE.agent.selectedTeamList",
+                      "managedTeams": "$STORE.agent.managedTeams",
+                      "isLoading": "$STORE.agent.isManagedTeamLoading",
+                      "isError": "$STORE.agent.isManagedTeamsError"
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;margin-left:16px;width:260px;"
+                }
+              },
+              {
+                "comp": "div",
+                "children": [
+                  {
+                    "comp": "agentx-more-actions-wrapper",
+                    "properties": {
+                      "actionList": [
+                        {
+                          "comp": "agentx-wc-goto-analyzer"
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "attributes": {
+                  "style": "display:block;margin-top: 20px;"
+                }
+              }
+            ]
+          },
+          "widgets": {
+            "comp1": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "c04c307c-71fd-41f4-828f-a196f94ce08a"
+              }
+            },
+            "comp2": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "bc3f908d-11fa-4f86-be9b-7edfe76eaa59"
+              }
+            },
+            "comp3": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "3e4555a5-be23-46e6-8450-8ebf3f1c35e1"
+              }
+            },
+            "comp4": {
+              "comp": "analyzer-widget",
+              "width": 25,
+              "height": 25,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "2902a699-bf70-4568-afa1-6857db3e0dc4"
+              }
+            },
+            "comp5": {
+              "comp": "analyzer-widget",
+              "width": 33,
+              "height": 30,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "21716c3a-09a9-476a-bab1-5fbcff226ac6"
+              }
+            },
+            "comp6": {
+              "comp": "analyzer-widget",
+              "width": 33,
+              "height": 30,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "0136c56b-c40f-47a0-af1c-1a180db1fd64"
+              }
+            },
+            "comp7": {
+              "comp": "analyzer-widget",
+              "width": 34,
+              "height": 30,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "e5e19275-0465-4e8c-923d-c9c06002330f"
+              }
+            },
+            "comp8": {
+              "comp": "analyzer-widget",
+              "width": 50,
+              "height": 40,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "9d80a068-099c-48e3-b8a8-207eb38c47c5"
+              }
+            },
+            "comp9": {
+              "comp": "analyzer-widget",
+              "width": 50,
+              "height": 40,
+              "attributes": {
+                "is-dark-mode": "$STORE.app.darkMode",
+                "filter": "$STORE.agent.analyzerInteractionFilter",
+                "access-token": "$STORE.auth.accessToken",
+                "user-id": "$STORE.agent.agentId",
+                "org-id": "$STORE.agent.orgId",
+                "dashboard-id": "a4e99697-06d8-4575-b25d-82ef348e2410",
+                "widget-id": "a0bbecca-0129-4649-9261-ef0fe69281aa"
+              }
+            }
+          }
+        }
+      },
+      "navigation": [
+        {
+          "nav": {
+            "label": "Customer Experience Analytics",
+            "icon": "/app/images/wxm.bcd45cc3.svg",
+            "iconType": "other",
+            "navigateTo": "wxm-metrics",
+            "align": "top"
+          },
+          "page": {
+            "id": "wxm-metrics",
+            "widgets": {
+              "comp1": {
+                "comp": "agentx-wc-cloudcherry-widget",
+                "attributes": {
+                  "metrics": true
+                },
+                "properties": {
+                  "userModel": "$STORE.app.userModel",
+                  "spaceId": "",
+                  "metricsId": "",
+                  "isDarkMode": "$STORE.app.darkMode",
+                  "agentId": "$STORE.agent.agentId"
+                }
+              }
+            },
+            "layout": {
+              "areas": [["comp1"]],
+              "size": {
+                "cols": [1],
+                "rows": [1]
+              }
+            }
+          },
+          "visibility": "WXM_METRICS"
+        },
+        {
+          "nav": {
+            "label": "Team Performance Details",
+            "icon": "team",
+            "iconType": "momentum",
+            "navigateTo": "tpw",
+            "align": "top"
+          },
+          "page": {
+            "id": "tpw-sup-agent",
+            "useFlexLayout": true,
+            "widgets": {
+              "comp1": {
+                "comp": "agentx-wc-team-performance-widget",
+                "width": 100,
+                "height": 100,
+                "wrapper": {
+                  "title": "$I18N.tpw.wrapperTitle",
+                  "id": "tpw-1",
+                  "maximizeAreaName": "app-maximize-area"
+                },
+                "properties": {
+                  "tpwConfigs": "$STORE.agent.tpwConfigs"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> origin/master

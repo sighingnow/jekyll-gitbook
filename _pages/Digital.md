@@ -30,6 +30,7 @@ layout: post
 | [Creating Custom Nodes](#lab1220---creating-custom-nodes) | Practical Lab | MED            | 30 min           |
 | [Events and Triggers](#lab1221---event-and-triggers) | Practical Lab | MED            | 30 min           |
 | [Global and Flow variable support in Digital channels](#lab1222---global-and-flow–variable–support–in-digital-channels) | Practical Lab | MED            | 45 min           |
+| [Providing Digital Channels feedback](#providing-digital-channels-feedback) | Survey | EASY            | 5 min           |
 
 
 
@@ -1012,13 +1013,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Go to personal email account and send an email to the support email address that was initially configured in the Email Asset.
 - Go to the Agent Desktop and make the agent Available. 
-
-![DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_1.png)
-
 - The Email will be offered to the agent. Click **Accept** to handle the email. Click "Reply" or Reply All" to the email and hit send button.
-
-![DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_2.png)
-
 - Add wrap up and close the task.
 
 ---
@@ -3688,6 +3683,11 @@ var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 
 ![Lab12.24.3_TxLast](/assets/images/Lab12.24.3_TxLast.png)
+
+
+# **Providing Digital Channels feedback**
+
+We are seeking your feedback on the Digital Channel capabilities. By participating in this survey, you will help us to improve the quality of our products: [https://forms.gle/qDRF2hYdkZHr5owa8 ](https://forms.gle/qDRF2hYdkZHr5owa8)
 
 ---
 
