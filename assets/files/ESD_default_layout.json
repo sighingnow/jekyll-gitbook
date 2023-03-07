@@ -4,11 +4,7 @@
     "appTitle": "Webex Contact Center",
     "logo": "",
     "stopNavigateOnAcceptTask": false,
-<<<<<<< HEAD
-    "dragDropEnabled": false,
-=======
     "dragDropEnabled": true,
->>>>>>> origin/master
     "notificationTimer": 8,
     "maximumNotificationCount": 3,
     "browserNotificationTimer": 8,
