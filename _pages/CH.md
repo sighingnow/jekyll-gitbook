@@ -51,8 +51,6 @@ In this Lab, we will go through the tasks that are required to complete the gene
 | Agent         | <w class = "attendee-class">your_attendee_ID</w>\_agent1@\<your domain\>      | \<your assign DN\> |
 | Supervisor    | <w class = "attendee-class">your_attendee_ID</w>\_supervisor1@\<your domain\> | \<your assign DN\> |
 
-> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted from the training tenant.
-> {: .block-danger }
 
 ### 1. Define your Attendee ID
 
@@ -68,6 +66,8 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > {: .block-tip }
 
 ### 2. Add agent and supervisor users and set the calling extensions
+
+> For agent and supervisor you can use the https://mailinator.com/ or https://temp-mail.org/en/ which allows you to create a temproary account and verify it from the directly.
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
