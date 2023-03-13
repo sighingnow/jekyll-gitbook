@@ -1383,11 +1383,11 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 | Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Facebook Page configuration](#1-Facebook-Page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
-| [Facebook Messenger Asset creation & Register to Webex CC](#2-Facebook-Messenger-Asset-creation-&-Register-to-Webex-CC)                           | Practical Lab         | EASY                | 5 min                 |
-| [Create Entry Point and Queue](#3-Create-Entry-Point-and-Queue) | Practical Lab         | EASY                | 5 min                 |
-| [Create/Upload Facebook Messenger flow](#4-CreateUpload-Facebook-Messenger-flow) | Practical Lab         | EASY                | 5 min                 |
-| [Verification - start Facebook Chat and accept the request](#5-Verification---start-Facebook-Chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
+| [Facebook Page configuration](#1-facebook-page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
+| [Facebook Messenger Asset creation & Register to Webex CC](#2-facebook-messenger-asset-creation-&-register-to-rebex-cc)                           | Practical Lab         | EASY                | 5 min                 |
+| [Create Entry Point and Queue](#3-create-entry-point-and-queue) | Practical Lab         | EASY                | 5 min                 |
+| [Create/Upload Facebook Messenger flow](#4-createupload-facebook-messenger-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Verification - start Facebook Chat and accept the request](#5-verification---start-facebook-chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
 
 
 ## Introduction
