@@ -1596,33 +1596,33 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 - Open a new tab and login to the Agent Desktop if you haven't done already and make the agent Available (if you haven't done already in Lab2). 
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request1.png)
+![FC1](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request1.png)
 
 - Open a new tab on the same browser session to make sure you are still authenticated to Facebook. Go to the M.Me URL you copied in Step 2 and the following FBM page should load with the Facebook Business page chat you created earlier
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request2.jpg)
+![FC2](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request2.jpg)
 
 - Start chatting and that should trigger a contact into Webex Contact Center that will get routed according to the flow we configured in Step 4. A notification should appear that should help you switch to the agent desktop tab to accept the contact
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request3.jpg)
+![FC3](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request3.jpg)
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request4.jpg)
+![FC4](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request4.jpg)
 
 - Type a response and hit send button.
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request5.jpg)
+![FC5](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request5.jpg)
 
 - Response will be received in the other tab where the FBM page is:
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request6.jpg)
+![FC6](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request6.jpg)
 
 - End the contact
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request7.jpg)
+![FC7](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request7.jpg)
 
 - Add wrap up and close the task. 
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request8.jpg)
+![FC8](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request8.jpg)
 
 
 ---
@@ -1762,11 +1762,11 @@ From the left side pane, click on Assets ---> Numbers
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Verify WhatsApp Number Assignment](#1-verify-WhatsApp-number-assignment)                           | Practical Lab         | EASY                | 5 min                 |
-| [WhatsApp Asset registration to WebexCC](#2-WhatsApp-asset-registration-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
-| [WhatsApp Entry Point and Queue creation](#3-WhatsApp-entry-point-and-queue-creation) | Practical Lab         | EASY                | 5 min                 |
-| [Create/Upload WhatsApp flow](#4-createupload-WhatsApp-flow) | Practical Lab         | EASY                | 5 min                 |
-| [Verification - send WhatsApp message and accept the request](#5-verification---send-WhatsApp-message-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
+| [Verify WhatsApp Number Assignment](#1-verify-whatsapp-number-assignment)                           | Practical Lab         | EASY                | 5 min                 |
+| [WhatsApp Asset registration to WebexCC](#2-whatsapp-asset-registration-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
+| [WhatsApp Entry Point and Queue creation](#3-whatsapp-entry-point-and-queue-creation) | Practical Lab         | EASY                | 5 min                 |
+| [Create/Upload WhatsApp flow](#4-createupload-whatsapp-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Verification - send WhatsApp message and accept the request](#5-verification---send-whatsapp-message-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
 
 
 ## Introduction
@@ -1914,35 +1914,35 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 - Login to the Agent Desktop and make the agent Available. 
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request1.png)
+![WA1](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request1.png)
 
 - In your personal mobile phone, add the WhatsApp number configured in the previous step as a new contact. (The screenshot is for reference. Please use the number assigned to your pod)
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request2.png)
+![WA2](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request2.png)
 
 - Open WhatsApp and look up the contact created in the previous step
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request3.png)
+![WA3](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request3.png)
 
 - Send a message to the contact identified in the previous step to initiate the conversation. 
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request4.png)
+![WA4](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request4.png)
 
 - The WhatsApp contact will be offered to the agent. Click "Accept" to handle the contact.
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request5.png)
+![WA5](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request5.png)
 
 - Type a response and hit send button.
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request6.png)
+![WA6](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request6.png)
 
 - End the contact
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request7.png)
+![WA7](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request7.png)
 
 - Add wrap up and close the task. 
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request8.png)
+![WA8](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request8.png)
 
 ---
 
