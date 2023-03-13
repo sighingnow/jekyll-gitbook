@@ -1447,39 +1447,39 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 - If you haven't done already, authenticate with your FB account where you have a page already created. Then select the respective page that you want to integrate
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC2.jpg)
+![FM2](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC2.jpg)
 
 - Accept all default permissions
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC3.jpg)
+![FM3](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC3.jpg)
 
 - That completes the linking of the Facebook connect with Webex Connect
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC4.jpg)
+![FM4](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC4.jpg)
 
 - Finally select the Business Page you want to link to the Asset
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC5.jpg)
+![FM5](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC5.jpg)
 
 -  Provide the name and click `Save`
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC6.jpg)
+![FM6](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC6.jpg)
 
 -  Click `Register to Webex Engage`  in the ‘Configure New App-Messenger’ window ->  In the resulting window select the service and click `Register`.
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC7.jpg)
+![FM7](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC7.jpg)
 
 - Confirm that registration with Webex CC completed successfully
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC8.jpg)
+![FM8](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC8.jpg)
 
 - Scroll down and take note of the M.Me link in the `Page Discovery Addons` section. We will use that link to trigger the Facebook Messenger interaction from the Customer end. Also take note of the numeric string parameter in the M.Me link. That's the `Facebook Page ID` which we will also need later when configuring the flow.
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC9.jpg)
+![FM9](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC9.jpg)
 
 - Click on the back arrow to go back to the list of Assets Apps. Then take note of the application ID (app id) we just created. We will also need that app ID in the flow
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC10.jpg)
+![FM10](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC10.jpg)
 
 [Back to top](#table-of-contents)
 
@@ -1496,7 +1496,7 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 - Select `Social Channel` in the **_Channel Type_** section.
 
 - Select `Facebook Messenger` in the **_Social Channel Type_** section.
-- 
+
 - Leave the **_Asset Name_** as the configured value earlier.
 
 - The **_Time Zone_** can stay as default value.
