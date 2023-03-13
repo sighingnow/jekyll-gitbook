@@ -1443,7 +1443,7 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 - Navigate to `Assets` > `Apps` > `Configure New App` > `Messenger` and Click on `Add Messenger Page` button
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC1.gif)
+![FM1](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC1.gif)
 
 - If you haven't done already, authenticate with your FB account where you have a page already created. Then select the respective page that you want to integrate
 
