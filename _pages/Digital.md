@@ -1390,7 +1390,7 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 | Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Facebook Page configuration](#1-facebook-page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
-| [Facebook Messenger Asset creation & Register to Webex CC](#2-facebook-messenger-asset-creation-register-to-rebex-cc)                           | Practical Lab         | EASY                | 5 min                 |
+| [Facebook Messenger Asset creation and Register to Webex CC](#2-facebook-messenger-asset-creation-and-register-to-rebex-cc)                           | Practical Lab         | EASY                | 5 min                 |
 | [Create Entry Point and Queue](#3-create-entry-point-and-queue) | Practical Lab         | EASY                | 5 min                 |
 | [Create/Upload Facebook Messenger flow](#4-createupload-facebook-messenger-flow) | Practical Lab         | EASY                | 5 min                 |
 | [Verification - start Facebook Chat and accept the request](#5-verification---start-facebook-chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
@@ -1443,7 +1443,7 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 [Back to top](#table-of-contents)
 
-## 2. Facebook Messenger Asset creation & Register to Webex CC
+## 2. Facebook Messenger Asset creation and Register to Webex CC
 
 - Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
 
@@ -2664,7 +2664,7 @@ The Event Scheduler page gives access to:
 
 ![DC_Lab.12.17_Introduction_EventScheduler](/assets/images/DC_Lab.12.17_Introduction_EventScheduler.png)
 
-### 2. Schedule SMS Event
+## 2. Schedule SMS Event
 
 Configuring scheduled outbound SMS campaign only require the setup inside the Event Scheduler. SMS uses source files containing data that will be used by the scheduler to determine the destination numbers as well as building custom messages (i.e. names, dates, addresses, etc.)
 
@@ -2715,7 +2715,7 @@ Configuring scheduled outbound SMS campaign only require the setup inside the Ev
 
 ![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event9.png)
 
-### 3. Schedule Custom Event
+## 3. Schedule Custom Event
 
 Configuration sequence for Custom Event is as below.
 
