@@ -1390,7 +1390,7 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 | Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Facebook Page configuration](#1-facebook-page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
-| [Facebook Messenger Asset creation & Register to Webex CC](#2-facebook-messenger-asset-creation-&-register-to-rebex-cc)                           | Practical Lab         | EASY                | 5 min                 |
+| [Facebook Messenger Asset creation & Register to Webex CC](#2-facebook-messenger-asset-creation-register-to-rebex-cc)                           | Practical Lab         | EASY                | 5 min                 |
 | [Create Entry Point and Queue](#3-create-entry-point-and-queue) | Practical Lab         | EASY                | 5 min                 |
 | [Create/Upload Facebook Messenger flow](#4-createupload-facebook-messenger-flow) | Practical Lab         | EASY                | 5 min                 |
 | [Verification - start Facebook Chat and accept the request](#5-verification---start-facebook-chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
@@ -2615,9 +2615,9 @@ Time to test your new configuration:
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Introduction to Event Scheduler](#1-Introduction-to-Event-Scheduler)             | Read & Understand | HARD            | 5 min            |
-| [Option 1 - Schedule SMS Event](#2-Option-1---Schedule-SMS-Event)                       | Practical Lab     | HARD            | 5 min            |
-| [Option 2 - Schedule Custom Event](#3-Option-2---Schedule-Custom–Event) | Practical Lab     | EASY            | 10 min            |
+| [Introduction to Event Scheduler](#1-introduction-to-event-scheduler)             | Read & Understand | HARD            | 5 min            |
+| [Option 1 - Schedule SMS Event](#2-option-1---schedule-sms-event)                       | Practical Lab     | HARD            | 5 min            |
+| [Option 2 - Schedule Custom Event](#3-option-2---schedule-custom–event) | Practical Lab     | EASY            | 10 min            |
 
 
 ## Introduction
