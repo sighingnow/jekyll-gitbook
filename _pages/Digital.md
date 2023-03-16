@@ -1012,8 +1012,14 @@ Now create a new client ID that will be used to identify your application to Goo
 ## 5. Verification: Send an Email and accept the task
 
 - Go to personal email account and send an email to the support email address that was initially configured in the Email Asset.
-- Go to the Agent Desktop and make the agent Available. 
+- Go to the Agent Desktop and make the agent Available.
+
+![EmailVerification](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_1.png)
+
 - The Email will be offered to the agent. Click **Accept** to handle the email. Click "Reply" or Reply All" to the email and hit send button.
+
+![EmailVerification](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_2.png)
+
 - Add wrap up and close the task.
 
 ---
