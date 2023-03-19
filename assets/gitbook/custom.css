@@ -23,6 +23,14 @@
     min-height: calc(100% - 50px);
 }
 
+@media (max-width: 1240px) {
+    .book-body .body-inner {
+        position: absolute;
+        margin-top: 50px;
+        min-height: calc(100% - 50px)
+    }
+}
+
 .book-body .body-inner .page-wrapper {
     min-height: calc(100% - 46px);
 }
