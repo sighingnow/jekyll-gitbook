@@ -8,5 +8,4 @@ layout: home
 
 Please use that form for providing the lab feedback.
 
-<iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/42c2c1f4e71940088ad0ea8053ac3006" title="Lab Feedback Form" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe src="https://app.sli.do/event/pV6Qxa8woQfLTuVz31Ga4i" height="100%" width="100%" frameBorder="0" style="min-height: 560px;" title="Feedback"></iframe>
+<iframe src="https://app.sli.do/event/pV6Qxa8woQfLTuVz31Ga4i" height="100%" width="100%" frameBorder="0" style="min-height: 1024px;" title="Feedback"></iframe>
