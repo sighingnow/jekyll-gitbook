@@ -5,67 +5,24 @@ date: 2022-06-06
 layout: post
 ---
 
-# Introduction
+## Introduction
 
 ### Lab Objective
 
 This lab covers Webex Contact Center Agent Desktop integration with the most popular CRM solutions (Salesforce, Microsoft Dynamics 365, Service Now and Zendesk) which allows you to launch the Agent Desktop from within the CRM, providing an integrated Agent Experience for both inbound and outbound calls.
 
-# Table of Contents
+## Table of Contents
 
-[6.1 Salesforce integration](#61-salesforce-integration)
+| Topic                                                                              | Lab Type      | Difficulty Level | Estimated length |
+| ---------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [Salesforce integration](#salesforce-integration)        | Practical Lab | MID             | 35 min           |
+| [Microsoft Dynamics 365 integration](#microsoft-dynamics-365-integration) | Practical Lab | MID             | 30 min            |
+| [Service Now integration](#service-now-integration)                                          | Practical Lab | MID             | TBD            |      |
+| [Zendesk integration](#zendesk-integration)                   | Practical Lab | MID            | 25 min                                                                                      |               |                  |                  |
 
-- [Optional: Create Salesforce Account](#optional-create-salesforce-account)
-- [Part 1: Connector Installation](#part-1-connector-installation)
-  - [Connector Installation From Salesforce AppExchange](#connector-installation-from-salesforce-appexchange)
-  - [Connector Installation Verification](#connector-installation-verification)
-- [Part 2: Call Center Configuration](#part-2-call-center-configuration)
-  - [Salesforce Call Center Configuration](#salesforce-call-center-configuration)
-  - [Adding Call Center Users To Salesforce Call Center Application](#adding-call-center-users-to-salesforce-call-center-application)
-- [Part 3: Softphone & Task Layout Configuration](#part-3-softphone--task-layouts)
-  - [Create Salesforce Softphone Layout Configuration](#create-salesforce-softphone-layout-configuration)
-  - [Salesforce Softphone Layout Assignment](#salesforce-softphone-layout-assignment)
-  - [Salesforce Task Layout Configuration](#salesforce-task-layout-configuration)
-- [Part 4: Reports](#part-4-reports)
-  - [WebexCC Salesforce Desktop Report View](#webexcc-salesforce-desktop-report-view)
-- [Part 5: WebexCC Desktop Layout](#part-5-webexcc-dekstop-layout)
-  - [WebexCC Salesforce Desktop Layout Configuration](#webexcc-salesforce-desktop-layout-configuration)
-- [Part 6: Test Webex Contact Center Agent Desktop for Salesforce](#part-6-test-webex-contact-center-agent-desktop-for-salesforce)
-  - [Call Center Definition File Configuration - Advanced Configurations](#call-center-definition-file---advanced-configurations)
-  - [Login to Salesforce Agent Desktop and Make a Test Call](#login-to-salesforce-agent-desktop-and-make-a-test-call)
 
-[6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
 
-- [Optional: Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
-  - [Step 1 : Create Dynamics 365 Sales account](#step-1--create-dynamics-365-sales-account)
-  - [Step 2 : Get Microsoft-created user account details and Login to Power Platform Admin center](#step-2--get-microsoft-created-user-account-details-and-login-to-power-platform-admin-center)
-- [Part 1: Install applications for MS Dynamics 365 environment](#part-1-install-applications-for-ms-dynamics-365-environment)
-  - [Install Channel Integration Framework from AppSource](#install-channel-integration-framework-from-appsource)
-  - [Install Cisco Webex Contact Center for Microsoft Dynamics from AppSource](#install-cisco-webex-contact-center-for-microsoft-dynamics-from-appsource)
-- [Part 2: Configure applications for MS Dynamics 365 environment](#part-2-configure-applications-for-ms-dynamics-365-environment)
-  - [Configure Channel Integration Framework](#configure-channel-integration-framework)
-  - [Create Custom Desktop Layout file](#create-custom-desktop-layout-file)
-  - [Upload Custom Desktop Layout to Webex Contact Center Mangement Portal](#upload-custom-desktop-layout-to-webex-contact-center-management-portal)
-  - [Update Security Policy on Control Hub](#update-security-policy-on-control-hub)
-- [Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365](#part-3-test-webex-contact-center-agent-desktop-for-ms-dynamics-365)
-  - [Sign into Webex Contact Center for Microsoft Dynamics 365](#sign-into-webex-contact-center-for-microsoft-dynamics-365)
-  - [Create new contact record in MS Dynamics](#create-new-contact-record-in-ms-dynamics)
-  - [Make inbound test calls](#make-inbound-test-calls)
-
-[6.4 Zendesk integration](#64-zendesk-integration)
-
-- [Optional: Start Zendesk Trial](#optional-start-zendesk-trial)
-- [Part 1: Install Webex Contact Center application on Zendesk instance](#part-1-install-webex-contact-center-application-on-zendesk-instance)
-  - [Install Webex Contact Center application for Zendesk from Marketplace](#install-webex-contact-center-application-for-zendesk-from-marketplace)
-- [Part 2: Configure Webex Contact Center tenant and Zendesk instance](#part-2-configure-webex-contact-center-tenant-and-zendesk-instance)
-  - [Create Custom Desktop Layout for Zendesk](#create-custom-desktop-layout-for-zendesk)
-  - [Create new Customer in Zendesk](#create-new-customer-in-zendesk)
-- [Part 3: Test Webex Contact Center Agent Desktop for Zendesk](#part-3-test-webex-contact-center-agent-desktop-for-zendesk)
-  - [Sign into Webex Contact Center for Zendesk](#sign-into-webex-contact-center-for-zendesk)
-  - [Make inbound test call from a number registered in Zendesk CRM](#a-make-inbound-test-call-from-a-number-registered-in-zendesk-crm)
-  - [Make inbound test call from a number NOT registered in Zendesk CRM](#b-make-inbound-test-call-from-a-number-not-registered-in-zendesk-crm)
-
-# 6.1 Salesforce integration
+# Salesforce integration
 
 ### Pre-requisites
 
@@ -293,7 +250,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - A Phone Call Activity Record will be created for every call and will be associated with the Salesforce Record.
 
-# 6.2 Microsoft Dynamics 365 integration
+# Microsoft Dynamics 365 integration
 
 ### Pre-requisites
 
@@ -557,9 +514,12 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Go to "Activities" and you should see both records created after the calls.
 
-# 6.3 Service Now integration
+# Service Now integration
 
-# 6.4 Zendesk integration
+Work in progress. This part is coming in April.
+
+
+# Zendesk integration
 
 ### Pre-requisites
 

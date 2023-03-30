@@ -39,7 +39,7 @@ layout: post
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Tasks](#control-hub-user-management-task)        | Practical Lab | EASY            | 10 min           |
+| [Control Hub User Management Tasks](#control-hub-user-management-tasks)        | Practical Lab | EASY            | 10 min           |
 | [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY            | 5 min            |
 | [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
 | [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |

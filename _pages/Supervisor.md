@@ -5,6 +5,16 @@ date: 2022-04-04
 layout: post
 ---
 
+## Table of Contents
+
+| Topic                                                                              | Lab Type      | Difficulty Level | Estimated length |
+| ---------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [Assign supervisor license to the user](#assign-supervisor-license-to-the-user)        | Practical Lab | EASY             | 5 min           |
+| [Configure supervisor in Management Portal](#configure-supervisor-in-management-portal) | Practical Lab | EASY             | 10 min            |
+| [Supervisor Experience](#supervisor-experience)                                          | Practical Lab | EASY             | 15 min            |      |
+| [Supervisor capabilities Feedback](#supervisor-capabilities-feedback)                   | Practical Lab | EASY            | 2 min                                                                                      |               |                  |                  |
+
+
 ## **Introduction**
 
 #### **Lab Objective**
@@ -20,10 +30,11 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 #### Example of agent and supervisor users on Control Hub 
 
-| **User Role** | **User email**                                     |
-| ------------- | ------------------------------------------ |
-| Agent         | <w class = "attendee-class">your_attendee_ID</w>\_agent1@\<your domain\>      |
-| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>\_supervisor1@\<your domain\> |
+| **User Role** | **User email**                                                                | **User Extension** |
+| ------------- | ----------------------------------------------------------------------------- | ------------------ |
+| Agent         | <w class="attendee_out">Your_Attendee_ID</w>_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w> |
+| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
+
 
 >**Note:** Please refer ***Lab 1 - Admin Experiense*** if you need to add agent or supervisor users on Control Hub.
 
@@ -33,7 +44,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 > Webex CC Management Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent / Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 
-## **1. Assign supervisor license to the user**
+# Assign supervisor license to the user
 
 -  Login to Control Hub under organization admin account.
 -  Go to ***Users***, click on supervisor's account, scroll dow to ***Licenses*** section and press ***Edit Licenses*** button.
@@ -61,7 +72,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 ![Lab_4_Supervisor_Config_6](/assets/images/DC_Lab_4_Supervisor_Config_6.png)
 
 
-## **2. Configure supervisor in Webex CC**
+# Configure supervisor in Management Portal
 
 -  Download [Desktop Layout JSON](/assets/files/ESD_default_layout.json) file for supervisor from GitHub.
 -  Open the file in any JSON editor, check and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
@@ -120,9 +131,15 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 ![Lab_4_WebexCC_Config_11](/assets/images/DC_Lab_4_Supervisor_WebexCC_11.png)
 
 
-## **3. Supervisor Experience**
+# Supervisor Experience
 
 In this section you will act as a supervisor and perform activities. The Supervisor Desktop provides a holistic supervisor experience within a centralized interface. It enables supervisors to manage, monitor, assess, guide, and assist agents. It also enables administrators to customize the Supervisor Desktop with widgets to address specific Contact Center business needs
+
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/2d7fd721-b192-43d1-83f9-68c7f2d544b3" width="100%" height="100%" title="Supervisor Desktop Demonstration" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+<br>
 
 #### **Pre-requisite**
 
@@ -240,20 +257,10 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 ![Lab_4_ESD](/assets/images/Lab4_ESD_16_monitor.png)
 
 
-## **4. Supervisor Experience Demonstration**
-{: .block-tip }
 
+# Supervisor capabilities Feedback
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/2d7fd721-b192-43d1-83f9-68c7f2d544b3" width="100%" height="100%" title="Supervisor Desktop Demonstration" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-<br>
-
-
-## **5. Providing the Supervisor capabilities feedback**
-
-We are seeking your feedback on the Agent and Supervisor capabilities. By participating in this survey, you will help us to improve the quality of our products. 
-<iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
+We are seeking your feedback on the Agent's and Supervisor's capabilities. Please share your opinion by participating in this survey. This will help to improve the quality of the products. <iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 

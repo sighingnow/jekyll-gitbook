@@ -34,7 +34,7 @@ layout: post
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Configuring Contact Center for Call Delivery](#configuring-contact-center-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
+| [Configuring tenant for Call Delivery](#configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
 | [Adding a comfort message while a call is in queue](#adding-a-comfort-message-while-a-call-is-in-queue) | Practical Lab | EASY            | 8 min            |
 | [Creating alternating comfort messages while a call is in queue](#creating-alternating-comfort-messages-while-a-call-is-in-queue)                                           | Practical Lab | EASY            | 15 min            |
 | [Creating an opt-out option with ANI readout](#creating-an-opt-out-option-with-ani-readout)                   | Practical Lab | EASY            | 15 min           |
@@ -114,7 +114,7 @@ update()
 ## Lab Section
 
 
-# Configuring Contact Center for Call Delivery
+# Configuring tenant for Call Delivery
 
 ### Create a queue
 1. Click on Provisioning > Entry Points/Queues > Queue
