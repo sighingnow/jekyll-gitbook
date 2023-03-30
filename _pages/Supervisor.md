@@ -260,7 +260,9 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 # Supervisor capabilities Feedback
 
-We are seeking your feedback on the Agent's and Supervisor's capabilities. Please share your opinion by participating in this survey. This will help to improve the quality of the products. <iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
+We are seeking your feedback on the Agent's and Supervisor's capabilities. Please share your opinion by participating in this survey. This will help to improve the quality of the products. 
+
+<iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 

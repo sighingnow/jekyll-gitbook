@@ -5,24 +5,25 @@ date: 2022-09-09
 layout: post
 ---
 
-# Introduction
+## Introduction
 In this lab you will learn about configuring Webex Contact centre to manage outbound preview campaigns using the LCM (List and Campaign Manager) application.
-# Lab Objective
+
+## Lab Objective
 1. Configure Webex Contact Centre and LCM (List and Campaign Manager) application
 2. Verify that the Agents can initiate and make outbound campaign calls from the Agent Desktop
 
-# Lab Pre-requisites
+## Lab Pre-requisites
 - In this lab tenant, the tenant provisioning and integration is already completed. If you are using a different tenant, you can configure and use outbound campaigns only if your enterprise has purchased the Acqueon SKU and provisioning, integration is completed. 
 - You should also be able to login to agent desktop with your respective team created in previous labs
 
 
-# Lab Section
+## Lab Section
 
-## Step 1. Create a team and add your agent
+# Step 1. Create a team and add your agent
 
 `This step should have been completed as part of previous lab sections. If not already done, please create a team and add your agent to this new team`
 
-## Step 2. Create Campaign
+# Step 2. Create Campaign
 
 - Login to administration portal and launch the 'Campaign Manager' portal 
 
@@ -60,7 +61,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 
 
 
-## Step 3. Create Business Parameters
+# Step 3. Create Business Parameters
 - Select the campaign created in previous step 
 - Navigate to "Business Parameters", click "ADD" and add the below parameters
   - Firstname 
@@ -70,7 +71,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 ![Outbound](/assets/images/1_OB_7.gif)
 
 
-## Step 4. Create and Upload Contact List 
+# Step 4. Create and Upload Contact List 
 
 - Create a text file with comma seperated values as shown in the video below 
 - The first row in the file should be : Firstname,Lastname,Phone
@@ -98,7 +99,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 ![Outbound](/assets/images/1_OB_10.gif)
 
 
-## Step 5. Upload a new desktop layout
+# Step 5. Upload a new desktop layout
 
 - Download the desktop layout provided here: **[Custom Desktop Layout](https://github.com/WebexCC/webexcc.github.io/blob/master/assets/Acqueon_Desktop_Layout.json){:target="\_blank"}**
 - If you are unable to download the file, use the `Copy raw contents` options to copy the content and past it in a text file in your desktop. Save it as a JSON file. 
@@ -114,7 +115,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 ![Outbound](/assets/images/1_OB_11.gif)
 
 
-## Step 6. Assign the new layout to your team
+# Step 6. Assign the new layout to your team
 
 - Navigate to Team and edit your respective team 
 - In the "Desktop Layout" field, select the new desktop layout created in previous step
@@ -122,7 +123,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 ![Outbound](/assets/images/1_OB_12.gif)
 
 
-## Step 7. Login to Agent desktop and verify Campaign Manager option 
+# Step 7. Login to Agent desktop and verify Campaign Manager option 
 
 - Login to desktop with agent credentials
 - Agent dekstop URL: https://desktop.wxcc-us1.cisco.com/
@@ -131,7 +132,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 ![Outbound](/assets/images/1_OB_13.gif)
 
 
-## Step 8. Accept the Campaign Contact
+# Step 8. Accept the Campaign Contact
 
 - Make the agent available 
 - Click `Campaign Contact` and accept the preview contact 
