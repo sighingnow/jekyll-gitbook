@@ -8,4 +8,6 @@ layout: home
 
 Please use that form for providing the lab feedback.
 
-<iframe src="https://app.sli.do/event/pV6Qxa8woQfLTuVz31Ga4i" height="100%" width="100%" frameBorder="0" style="min-height: 800px;" title="Feedback"></iframe>
+<iframe src="https://app.sli.do/event/pV6Qxa8woQfLTuVz31Ga4i" height="100%" width="100%" frameBorder="0" style="min-height: 512px;" title="Feedback"></iframe>
+
+
