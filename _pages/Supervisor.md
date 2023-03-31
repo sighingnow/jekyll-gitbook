@@ -74,7 +74,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 # Configure supervisor in Management Portal
 
--  Download [Desktop Layout JSON](/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
+-  Download [Desktop Layout JSON](https://webexcc.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
 -  Open the file in any JSON editor, check and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
 	- ***supervisor*** section is used when the user signs in to supervisor desktop with ***Supervisor*** role.
 	- ***supervisorAdmin*** section is used when the user signs in to supervisor desktop with ***Supervisor and Agent*** role.
