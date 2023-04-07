@@ -1,15 +1,45 @@
 ---
-title: Lab 1 - Admin Experiense
+title: Lab 1 - Admin Experience
 author: Dmitry Bokatov & Mike Turnbow
 date: 2022-01-10
 layout: post
 ---
+<script>
+    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+	Object.entries(them).forEach((entry) => {
+    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
+    {
+      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+    })})
+
+  event.preventDefault()
+  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
+    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
+  }
+  if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
+  }  
+  if(document.forms["IVRdeets"][2].value != "Agent Email"){
+    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
+  } 
+  if(document.forms["IVRdeets"][3].value != "Agent Extension"){
+    localStorage.setItem("agentEXT",document.forms["IVRdeets"][3].value)
+  }
+  if(document.forms["IVRdeets"][4].value != "Supervisor Email"){
+    localStorage.setItem("supervisorEmail",document.forms["IVRdeets"][4].value)
+  } 
+  if(document.forms["IVRdeets"][5].value != "Supervisor Extension"){
+    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][5].value)
+  }
+  }
+</script>
 
 ## Table of Contents
 
-| Topic                                                                         | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Tasks](#control-hub-user-management-task)        | Practical Lab | EASY            | 10 min           |
+| [Control Hub User Management Tasks](#control-hub-user-management-tasks)        | Practical Lab | EASY            | 10 min           |
 | [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY            | 5 min            |
 | [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
 | [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
@@ -48,26 +78,57 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 | **User Role** | **User email**                                                                | **User Extension** |
 | ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class = "attendee-class">your_attendee_ID</w>\_agent1@\<your domain\>      | \<your assign DN\> |
-| Supervisor    | <w class = "attendee-class">your_attendee_ID</w>\_supervisor1@\<your domain\> | \<your assign DN\> |
+| Agent         | <w class="attendee_out">Your_Attendee_ID</w>_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w> |
+| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
 
-> Don't use the domain **mailinator.com** for the user accounts in Control Hub. For security reasons, such accounts will be automatically deleted from the training tenant.
-> {: .block-danger }
 
-### 1. Define your Attendee ID
 
-<div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" />
-      <button type="submit" id="save">SAVE</button>
+
+### 1. Define your Attendee ID and Other parameters
+
+> You have received an email with the lab access details, please copy and paste the data from the email into the corresponding fields.
+
+<form id="IVRdeets">
+
+  <label for="DN">EP DN you were assigned:</label>
+  <input type="tel" id="DN" name="DN" onChange="update()"><br>
+
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+
+  <label for="agent">Agent Email Address:</label>
+  <input type="email" id="agent" name="agent" onChange="update()"><br>
+
+  <label for="agentEXT">Agent Extension:</label>
+  <input type="number" id="agentEXT" name="agentEXT" onChange="update()"><br>
+
+  <label for="supervisor">Supervisor Email Address:</label>
+  <input type="email" id="supervisor" name="supervisor" onChange="update()"><br>
+
+  <label for="supervisorEXT">Supervisor Extension:</label>
+  <input type="number" id="supervisorEXT" name="supervisorEXT" onChange="update()"><br>
+<br>
+
+  <button onclick="update()">Save</button>
 </form>
-<script src="/assets/gitbook/form.js"></script>
+
+<script>
+document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
+document.forms["IVRdeets"][3].value = localStorage.getItem("agentEXT") || "Agent Extension"
+document.forms["IVRdeets"][4].value = localStorage.getItem("supervisorEmail") || "Supervisor Email"
+document.forms["IVRdeets"][5].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
+
+update()
+</script>
 
 > **NOTE:** the **Attendee ID** should be provided with the admin credentials. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel with you. In that case, the **Attendee ID** is the same for all of you, but you can use the different number in the end as the suffix. Ex: _attendeeID_agent**1**, attendeeID_agent**2**, attendeeID_agent**3**, etc._
 > {: .block-tip }
 
 ### 2. Add agent and supervisor users and set the calling extensions
+
+> For agent and supervisor you can use the https://mailinator.com/ or https://temp-mail.org/en/ which allows you to create a temproary account and verify it from the directly.
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
@@ -105,7 +166,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 # Management Portal User Configuration
 
-> The following video outlines how to access the managment portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
+> The following video outlines how to access the management portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/dd077d51-a8f1-4e01-9f52-da3ce1c65cf3" width="100%" height="100%" title="February 07, 2023 at 10:22 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -113,9 +174,11 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 | **Entity**          | **Name**                                                |
 | ------------------- | ------------------------------------------------------- |
-| Multimedia Profiles | <w class = "attendee-class">your_attendee_ID</w>\_MMP   |
-| Site                | <w class = "attendee-class">your_attendee_ID</w>\_Site  |
-| Team1               | <w class = "attendee-class">your_attendee_ID</w>\_Team1 |
+| Multimedia Profiles | <w class="attendee_out">Your_Attendee_ID</w>_MMP   |
+| Site                | <w class="attendee_out">Your_Attendee_ID</w>_Site  |
+| Team1               | <w class="attendee_out">Your_Attendee_ID</w>_Team1 |
+
+
 
 > **NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can add a sub prefix with the number. \_Ex: attendeeID**1**\_MMP, attendeeID**2**\_MMP, etc.
 > {: .block-tip }
@@ -136,7 +199,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Click on `+ New Multimedia Profile` to open Multimedia Profile configuration page.
 
-- Input Name as **<w class = "attendee-class">your_attendee_ID</w>\_MMP**.
+- Input Name as **<w class="attendee_out">Your_Attendee_ID</w>_MMP**.
 
 - In the Media Details section, select the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, and click **_Save_**.
 
@@ -144,7 +207,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Navigate to **_Provisioning_** and select **_Site_**.
 
-- Click on `+ New Site` button and provide the Name as _<w class = "attendee-class">your_attendee_ID</w>\_Site_.
+- Click on `+ New Site` button and provide the Name as **<w class="attendee_out">Your_Attendee_ID</w>_Site**.
 
 - Select your MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
 
@@ -156,7 +219,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Select you site from the _Site_ drop-down.
 
-- Input _Name_ as **<w class = "attendee-class">your_attendee_ID</w>\_Team1**.
+- Input _Name_ as **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
 - Use the default **_Type_** `Agent Based`.
 
@@ -182,7 +245,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
 
-- Repeate the same steps as above for your supervisor.
+- Repeat the same steps as above for your supervisor.
 
 # Bulk Operations
 
@@ -198,19 +261,19 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 - In the left pane navigate to **_Contact Center_** card.
 
-- Select **_Buld Operations_** in the upper menu.
+- Select **_Bulk Operations_** in the upper menu.
 
 - Click **_Create Bulk Operations_** button in the right corner.
 
 - In Step 1 select the configuration object **_Team_** in the drop-down list.
 
-- In the Export secotion enter the **MyTeam** as the file name and click **Next** button.
+- In the Export section enter the **MyTeam** as the file name and click **Next** button.
 
 - Once the task is **Completed** click on **_Download export file_** and open the csv file in the notepad.
 
-- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class = "attendee-class">your_attendee_ID</w>\_Team1**.
+- The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
-- Rename the Team1 to **<w class = "attendee-class">your_attendee_ID</w>\_Team2** and save the file. You should have only 2 rows in the file.
+- Rename the Team1 to **<w class="attendee_out">Your_Attendee_ID</w>_Team2** and save the file. You should have only 2 rows in the file.
   Example:
 
 ```csv
@@ -224,9 +287,9 @@ pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
-- Go to the Management Portal, click on **_Provisioning_** and **_Team_** and verify that the **<w class = "attendee-class">your_attendee_ID</w>\_Team2** is created.
+- Go to the Management Portal, click on **_Provisioning_** and **_Team_** and verify that the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** is created.
 
-- In the Management Portal you can directly associate the **<w class = "attendee-class">your_attendee_ID</w>\_Team2** with your agent and supervisor.
+- In the Management Portal you can directly associate the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** with your agent and supervisor.
 
 # Access to the Agent Desktop
 
@@ -281,7 +344,7 @@ pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 > **Note:** Please use Webex App Extension for this lab. Optionally, if you have a US number, you can use it from the agent's desktop. This tenant does not allow numbers outside of the United States.
 > {: .block-tip }
 
-- Select the team **<w class = "attendee-class">your_attendee_ID</w>\_Team1**.
+- Select the team **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
 - Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
 

@@ -5,65 +5,24 @@ date: 2022-06-06
 layout: post
 ---
 
-# Introduction
+## Introduction
 
 ### Lab Objective
 
 This lab covers Webex Contact Center Agent Desktop integration with the most popular CRM solutions (Salesforce, Microsoft Dynamics 365, Service Now and Zendesk) which allows you to launch the Agent Desktop from within the CRM, providing an integrated Agent Experience for both inbound and outbound calls.
 
-# Table of Contents
+## Table of Contents
 
-[6.1 Salesforce integration](#61-salesforce-integration)
+| Topic                                                                              | Lab Type      | Difficulty Level | Estimated length |
+| ---------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [Salesforce integration](#salesforce-integration)        | Practical Lab | MID             | 35 min           |
+| [Microsoft Dynamics 365 integration](#microsoft-dynamics-365-integration) | Practical Lab | MID             | 30 min            |
+| [Service Now integration](#service-now-integration)                                          | Practical Lab | MID             | TBD            |      |
+| [Zendesk integration](#zendesk-integration)                   | Practical Lab | MID            | 25 min                                                                                      |               |                  |                  |
 
-- [Optional: Create Salesforce Account](#optional-create-salesforce-account)
-- [Part 1: Connector Installation](#part-1-connector-installation)
-  - [1. Connector Installation From Salesforce AppExchange](#1-connector-installation-from-salesforce-appexchange)
-  - [2. Connector Installation Verification](#2-connector-installation-verification)
-- [Part 2: Call Center Configuration](#part-2-call-center-configuration)
-  - [3. Salesforce Call Center Configuration](#3-salesforce-call-center-configuration)
-  - [4. Adding Call Center Users To Salesforce Call Center Application](#4-adding-call-center-users-to-salesforce-call-center-application)
-- [Part 3: Softphone & Task Layout Configuration](#part-3-softphone-task-layout-configuration)
-  - [5. Create Salesforce Softphone Layout Configuration](#5-create-salesforce-softphone-layout-configuration)
-  - [6. Salesforce Softphone Layout Assignment](#6-salesforce-softphone-layout-assignment)
-  - [7. Salesforce Task Layout Configuration](#7-salesforce-task-layout-configuration)
-- [Part 4: Reports](#part-4-reports)
-  - [8. WebexCC Salesforce Desktop Report View](#8-webexcc-salesforce-desktop-report-view)
-- [Part 5: WebexCC Desktop Layout](#part-5-webexcc-dekstop-layout)
-  - [9. WebexCC Salesforce Desktop Layout Configuration](#9-webexcc-salesforce-desktop-layout-configuration)
-- [Login Agent and Make a Test Call](#login-agent-make-call)
 
-[6.2 Microsoft Dynamics 365 integration](#62-microsoft-dynamics-365-integration)
 
-- [Optional: Start Microsoft Dynamics Trial](#optional-start-microsoft-dynamics-trial)
-  - [Step 1 : Create Dynamics 365 Sales account](#step-1--create-dynamics-365-sales-account)
-  - [Step 2 : Get Microsoft-created user account details and Login to Power Platform Admin center](#step-2--get-microsoft-created-user-account-details-and-login-to-power-platform-admin-center)
-- [Part 1: Install applications for MS Dynamics 365 environment](#part-1-install-applications-for-ms-dynamics-365-environment)
-  - [Install Channel Integration Framework from AppSource](#install-channel-integration-framework-from-appsource)
-  - [Install Cisco Webex Contact Center for Microsoft Dynamics from AppSource](#install-cisco-webex-contact-center-for-microsoft-dynamics-from-appsource)
-- [Part 2: Configure applications for MS Dynamics 365 environment](#part-2-configure-applications-for-ms-dynamics-365-environment)
-  - [Configure Channel Integration Framework](#configure-channel-integration-framework)
-  - [Create Custom Desktop Layout file](#create-custom-desktop-layout-file)
-  - [Upload Custom Desktop Layout to Webex Contact Center Mangement Portal](#upload-custom-desktop-layout-to-webex-contact-center-management-portal)
-  - [Update Security Policy on Control Hub](#update-security-policy-on-control-hub)
-- [Part 3: Test Webex Contact Center Agent Desktop for MS Dynamics 365](#part-3-test-webex-contact-center-agent-desktop-for-ms-dynamics-365)
-  - [Sign into Webex Contact Center for Microsoft Dynamics 365](#sign-into-webex-contact-center-for-microsoft-dynamics-365)
-  - [Create new contact record in MS Dynamics](#create-new-contact-record-in-ms-dynamics)
-  - [Make inbound test calls](#make-inbound-test-calls)
-
-[6.4 Zendesk integration](#64-zendesk-integration)
-
-- [Optional: Start Zendesk Trial](#optional-start-zendesk-trial)
-- [Part 1: Install Webex Contact Center application on Zendesk instance](#part-1-install-webex-contact-center-application-on-zendesk-instance)
-  - [Install Webex Contact Center application for Zendesk from Marketplace](#install-webex-contact-center-application-for-zendesk-from-marketplace)
-- [Part 2: Configure Webex Contact Center tenant and Zendesk instance](#part-2-configure-webex-contact-center-tenant-and-zendesk-instance)
-  - [Create Custom Desktop Layout for Zendesk](#create-custom-desktop-layout-for-zendesk)
-  - [Create new Customer in Zendesk](#create-new-customer-in-zendesk)
-- [Part 3: Test Webex Contact Center Agent Desktop for Zendesk](#part-3-test-webex-contact-center-agent-desktop-for-zendesk)
-  - [Sign into Webex Contact Center for Zendesk](#sign-into-webex-contact-center-for-zendesk)
-  - [Make inbound test call from a number registered in Zendesk CRM](#a-make-inbound-test-call-from-a-number-registered-in-zendesk-crm)
-  - [Make inbound test call from a number NOT registered in Zendesk CRM](#b-make-inbound-test-call-from-a-number-not-registered-in-zendesk-crm)
-
-# 6.1 Salesforce integration
+# Salesforce integration
 
 ### Pre-requisites
 
@@ -97,7 +56,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/778b9e9e-b336-4628-9288-5065882859f3" width="100%" height="100%" title="PART 1 - Connector Installation" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
  
-### 1. Connector Installation From Salesforce AppExchange
+### Connector Installation From Salesforce AppExchange
 
 - Login to your [Salesforce](https://login.salesforce.com) instance and go to **Setup**.
 
@@ -119,7 +78,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - After the installation is completed, click **Done**.
 
-### 2. Connector Installation Verification
+### Connector Installation Verification
 
 - In Salesforce, navigate to **Setup**.
 
@@ -131,33 +90,34 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 2: Call Center Configuration
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/-pKYj1z2E7U?rel=0" title="CRM Integration Lab Part 2: Call Center Configuration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/dae6c6c0-0140-481a-8d93-53380d729e03" width="100%" height="100%" title="PART 2 - Call Center Configuration" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 3. Salesforce Call Center Configuration
+### Salesforce Call Center Configuration
 
 - In Salesforce, navigate to **Setup**.
 
 - In the search box, type `Call Centers` and click on **Continue**.
 
-- Click the **Edit** link corresponding to the **Webex Contact Center Agent Desktop**.
+- Click the **Edit** link corresponding to the **Webex Contact Center Agent Desktop** to edit the Call Center Configurations.
 
-- Click on **Edit** to set up the CTI settings.
+- Update the **Display Name** field, if you want to change the Display name of the call center.
 
-- Update the **Display Name** field if you want to change the Display name of the call center.
-
-- Configure the following CTI Adapter URL: https://desktop.wxcc-us1.cisco.com/ .
-
-- Configure `Softphone Height: 600` and `Softphone Width: 550`.
+- Configure the CTI Adapter URL with the Agent Desktop URL. Use the relevant data center.
+  e.g. - https://desktop.wxcc-us1.cisco.com/ .
 
 - Click **Save**
 
-### 4. Adding Call Center Users To Salesforce Call Center Application
+### Adding Call Center Users To Salesforce Call Center Application
 
-- Click on **Manage Call Center Users** to open the Manage Users page.
+- Open the Call Center Definition file again (not in Edit mode). Just click on the Call Center File name.
 
-- Click on **Add More Users** button to add users to Call Center application.
+- At the bottom of the page, click on **Manage Call Center Users** to open the Manage Users page.
 
-- **Search for New Users** page opens where you can apply filters to find Call Center users. Click on **Find** to list all the available users.
+- Click on **Add More Users** button to add users to the Call Center application.
+
+- On the **Search for New Users** page, either apply filters to find specific Call Center users or click on **Find** to list all the available users.
 
 - Select your user from the list and click on the **Add to Call Center** button.
 
@@ -165,9 +125,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 3: Softphone & Task Layouts
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/w0tCjlyEWEY?rel=0" title="CRM Integration Lab Part 3: Softphone & Task Layouts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f434bc8b-9498-4861-a914-3141ed682153" width="100%" height="100%" title="PART 3 - Softphone & Task Layouts" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 5. Create Salesforce Softphone Layout Configuration
+### Create Salesforce Softphone Layout Configuration
 
 - In Salesforce, navigate to **Setup**.
 
@@ -179,47 +141,49 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Select the **Is Default Layout** checkbox to make this Softphone layout default for all the call center application.
 
-- On the **salesforce.com objects**, remove `Lead` from the selections and add `Opportunity`.
+- On the **Display these salesforce.com objects**, remove `Lead` from the selections and add `Case`.
 
-- On the **Screen Pop Settings**, choose `Pop to new Contact` for **No matching records**, `Pop detail page` for **Single-matching records** and `Pop to search page` for **Multiple-matching records**.
+- On the **Screen Pop Settings**, choose `Don't pop any screen` for **No matching records**, `Pop detail page` for **Single-matching records** and `Pop to search page` for **Multiple-matching records**.
 
 - Click **Save** to create the Softphone Layout configuration.
 
-### 6. Salesforce Softphone Layout Assignment
+- In the Call Center Configuration file, make the changes (if required) under **Screenpop Settings** (for No Matching Records) as per the business use-case.
+
+### Salesforce Softphone Layout Assignment
 
 - If not already there, in the search box type `Softphone Layout` and click on **Continue** to reach the Softphone Layout page.
 
 - Click on the **Softphone Layout Assignment** Button, it opens the Softphone Layout Assignment page.
 
-- Assign the Softphone Layout configuration you created to the **System Administrator** profile.
+- Assign the Softphone Layout configuration you created to the **System Administrator** or your user profile.
 
-- Click **Save** to assign the Softphone Layouts.
+- Click **Save** to assign the Softphone Layout.
 
-### 7. Salesforce Task Layout Configuration
+### Salesforce Task Layout Configuration
 
 - In Salesforce, navigate to **Setup**.
 
 - In the search box, type `Object Manager` and click on it.
 
-- Filter the list page by typing `Task` in the **Quick Find** search box and click on the **Task button link**.
+- Filter the list page by typing `Task` in the **Quick Find** search box and click on the **Task** button link.
 
 - Select **Page Layouts** on the left of the Task details page.
 
 - Click on **Page Layout Assignment** on top-right and then on **Edit Assignment**.
 
-- Select the **System Administrator** profile from the displayed list in the Profiles column.
+- Select the **System Administrator** profile or your user profile from the displayed list in the Profiles column.
 
-- Select the **Cisco Webex Contact Center Task Layout** from the **Page Layout To Use** drop-down list on top.
+- Select the **Webex Contact Center Task Layout** from the **Page Layout To Use** drop-down list on top.
 
-- Apply the same page layout to **Standard User** and **Standard Platform User** profiles as well.
-
-- Click **Save** to assign the Task Layout.
+- Click **Save** to assign the Custom Task Layout.
 
 ## Part 4: Reports
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/jLw92srDV2I?rel=0" title="CRM Integration Lab Part 4: Reports" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/89bdbffa-ee60-4f82-b6ec-ac5b3c46dff3" width="100%" height="100%" title="PART 4 - Reports" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 8. WebexCC Salesforce Desktop Report View
+### WebexCC Salesforce Desktop Report View
 
 - In Salesforce, click **App Launcher** on top left and then choose **Webex Contact Center**.
 
@@ -229,42 +193,64 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - To see all the existing reports, click **All Reports**.
 
-> **Note:** There is a default call activity report that installs with Cisco Webex Contact Center for Salesforce client.
+> **Note:** There is a default call activity report that is configured alongwith Webex Contact Center app installation.
 
 ## Part 5: WebExCC Salesforce Desktop Layout
 
-<iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/wCzcAIL6w3Y?rel=0" title="CRM Integration Lab Part 5: WebExCC Salesforce Desktop Layout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/f5b8bc81-87b1-48e9-91b2-b2df8c090913" width="100%" height="100%" title="PART 5 - WebexCC Salesforce Custom Desktop Layout" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-### 9. WebexCC Salesforce Desktop Layout Configuration
+### WebexCC Salesforce Desktop Layout Configuration
 
-- Login to [WebexCC Admin Portal](https://portal.wxcc-us1.cisco.com/portal/home.html).
+- Download the latest Custom Desktop Layout file from the [Github Repo](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Salesforce)
+
+- Save it on your machine as JSON file.
+
+- Login to [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/portal/home.html).
 
 - Go to **Provisioning** > **Desktop Layout** > **New Layout**.
 
 - Enter Name and Description for the desktop layout.
 
-- Status by default will be **Active**.
+- Add the **Teams** to the Desktop layout. Only the agents associated with that team will get the Salesforce Desktop Layout.
 
-- Add the **Teams** to Desktop layout. Agents associated with that team will get the Salesforce Desktop Layout.
+- Upload the custom desktop layout file saved earlier.
 
-- Upload the custom desktop layout for WebexCC Salesforce Desktop.
-  [WebexCC_Salesforce_Desktop.zip](https://github.com/wxcctechsummit/wxcclabguides/raw/08fb8082092b2552ec89e1b42dbe84b12214a805/WebexCC_Salesforce_Desktop.zip)
+- Click **Save**. This will create a Custom Desktop Layout in Webex Contact Center.
 
-- Click **Save**. This will create a custom Desktop Layout named Salesforce in WebexCC.
+## Part 6: Test Webex Contact Center Agent Desktop for Salesforce
 
-## Login Agent and Make a Test Call
+### Call Center Definition File - Advanced Configurations
 
-- Back on Salesforce page, click on **App Launcher** icon on top left and then click on **Webex Contact Center**.
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/77eb5100-9fe6-4fae-ba9f-b6dca835e613" width="100%" height="100%" title="PART 6(a) - Call Center Definition File - Advanced Configurations" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-- On the bottom left, click on **Phone** and then **Sign In**.
+<br/>
 
-- Sign in an agent that is part of the team that the Dekstop Layout was associated with previously. You can use the agent, EPs and flow created in Lab 2 Part 2 (IVR and Contact Routing) for the queued to agent scenario.
+- This document covers customization of each field of call center definition file, its description and possible values :
+  [Integrate Webex Contact Center with Salesforce](https://help.webex.com/en-us/article/nhxw7kfb/Integrate-Webex-Contact-Center-with-Salesforce#Cisco_Reference.dita_053158ba-52cb-437e-9243-64d28a3c9845)
+
+## Login to Salesforce Agent Desktop and Make a Test Call
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/ad3757df-3eff-49bb-b2c8-a1ec6f9899c3" width="100%" height="100%" title="PART 6(b) - Test Webex Contact Center Salesforce Agent Desktop" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- On Salesforce page, click on **App Launcher** icon on top left and then click on **Webex Contact Center**.
+
+- On the bottom left, click on **Phone** and then on **Sign In**.
+
+- Sign in to Webex Contact Center Agent Desktop using agent credentials. This agent user needs to be part of the same team with which we had associated the Desktop Layout previously.
 
 - Make sure the agent is in available state and make a test call to your EP.
 
-- Upon accepting the call, we will see account information populated for this call. A `task activity` should also be created and visible upon accepting the call.
+- Upon accepting the call, you should be able to see a screenpop as per the configurations in the Call Center Definiton file.
 
-# 6.2 Microsoft Dynamics 365 integration
+- A Phone Call Activity Record will be created for every call and will be associated with the Salesforce Record.
+
+# Microsoft Dynamics 365 integration
 
 ### Pre-requisites
 
@@ -528,9 +514,12 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Go to "Activities" and you should see both records created after the calls.
 
-# 6.3 Service Now integration
+# Service Now integration
 
-# 6.4 Zendesk integration
+Work in progress. This part is coming in April.
+
+
+# Zendesk integration
 
 ### Pre-requisites
 

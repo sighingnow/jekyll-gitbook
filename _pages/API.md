@@ -5,53 +5,23 @@ date: 2022-11-11
 layout: post
 ---
 
-# Table of Contents
+## Table of Contents
 
-- [All New Webex Contact Center APIs (new version)](#all-new-webex-contact-center-apis-new-version)
-  - [Part 1: Introduction to the New Webex CC APIs](#part-1-introduction-to-the-new-webex-cc-apis)
-    * [1. Walkthrough of Auth Flow](#1-walkthrough-of-auth-flow)
-    * [2. Initial Setup of Sample App](#2-initial-setup-of-sample-app)
-  - [Part 2: Reporting APIs](#part-2-reporting-apis)
-    * [1. Executing "Get Tasks" API](#1-executing-get-tasks-api)
-    * [2. Executing "Get Queue Statistics" API](#2-executing-get-queue-statistics-api)
-    * [3. Executing "Get Agent Activities" API](#3-executing-get-agent-activities-api)
-    * [4. Executing "Get Agent Statistics" API](#4-executing-get-agent-statistics-api)
-  - [Part 3: Call Recording APIs](#part-3-call-recording-apis)
-    * [Working with "List Captures" API](#working-with-list-captures-api)
-  - [Part 4: Configuration APIs](#part-4-configuration-apis)
-    * [1. Creating a Site with "Create Sites" API](#1-creating-a-site-with-create-sites-api)
-    * [2. Changing the Site name with "Update Site By ID" API](#2-changing-the-site-name-with-update-site-by-id-api)
-    * [3. Practicing with Bulk Upload](#3-practicing-with-bulk-upload)
-  - [Part 5: Search API](#part-5-search-api)
-    * [1. Search endpoint in developer portal](#1-search-endpoint-in-developer-portal)
-    * [2. Forming a graphQL query](#2-forming-a-graphql-query)
-    * [3. Running the query](#3-running-the-query)
-  - [Part 6: Agent Desktop APIs](#part-6-agent-desktop-apis)
-    * [1. Useful links](#1-useful-links)
-    * [2. Importing postman collection and setting up oauth2](#2-importing-postman-collection-and-setting-up-oauth2)
-    * [3. Establish a websocket connection](#3-establish-a-websocket-connection)
-	* [4. Login an agent](#4-login-an-agent)
-	* [5. Change state of an agent](#5-change-state-of-an-agent)
-	* [6. Reload an agent](#6-reload-an-agent)
-	* [7. Logout an agent](#7-logout-an-agent)
 
-- [APIv1 (Legacy version)](#apiv1-legacy-version)
-  - [Part 1: Legacy 1.0 APIs: CSR, CSR Query](#part-1-legacy-10-apis-csr-csr-query)
-    * [1. Verify that you have an Analyzer Report created and a Call recording exists](#1-verify-that-you-have-an-analyzer-report-created-and-a-call-recording-exists)
-    * [2. Verify you have Postman Installed](#2-verify-you-have-postman-installed)
-    * [3. Create a GET CSR Request](#3-create-a-get-csr-request)
-    * [4. Plug these into Postman as described in the video](#4-plug-these-into-postman-as-described-in-the-video)
-    * [5. Inspect the Browser to create a CSR Query](#5-inspect-the-browser-to-create-a-csr-query)
-    * [6. Copy only the content after query and before the ending braces. I.e this content as an example**](#6-copy-only-the-content-after-query-and-before-the-ending-braces-ie-this-content-as-an-example--)
-    * [7. Encode this in a URL encoded format. i.e Copy this string and paste it in an encoder](#7-encode-this-in-a-url-encoded-format-ie-copy-this-string-and-paste-it-in-an-encoder)
-    * [8. Plug this into the query parameters. Execute the Query](#8-plug-this-into-the-query-parameters-execute-the-query)
-    * [9. Add an Accept Header of text/csv](#9-add-an-accept-header-of-textcsv)
-  - [Part 2: Legacy 1.0 APIs: CARs and activity chains](#part-2-legacy-10-apis-cars-and-activity-chains)
-    * [1. Understand Contact Start and Contact End Timestamps are in Unix/ Epoch format](#1-understand-contact-start-and-contact-end-timestamps-are-in-unix-epoch-format)
-    * [2. Copy the Same CSR Request GET CSR Request and tweak it to a CAR request.](#2-copy-the-same-csr-request-get-csr-request-and-tweak-it-to-a-car-request)
-    * [3. Complete Building out the above requests.](#3-complete-building-out-the-above-requests)
 
-# Introduction
+| Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
+| ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [Introduction to the New Webex CC APIs](#introduction-to-the-new-webex-cc-apis)        | Practical Lab | MID            | 25 min           |
+| [Reporting APIs](#reporting-apis) | Practical Lab | MID            | 25 min            |
+| [Call Recording APIs](#call-recording-apis)                                           | Practical Lab | EASY            | 15 min            |
+| [Configuration APIs](#configuration-apis)                   | Practical Lab | MID            | 20 min           |
+| [Search API](#search-api)                   | Practical Lab | MID            | 25 min |
+| [Agent Desktop APIs](#agent-desktop-apis)                   | Practical Lab | MID            | 25 min |
+| [APIv1 (Legacy version)](#apiv1-legacy-version)                   | Watch & Understand | MID            | 30 min |
+
+
+
+## Introduction
 
 **Important:** Changes to the API Lab.
 
@@ -61,9 +31,9 @@ layout: post
 - For a quick start and overview, refer to the Overview / Quick start section.
 
 
-# All New Webex Contact Center APIs (New Version)
+## All New Webex Contact Center APIs (New Version)
 
-## Part 1: Introduction to the New Webex CC APIs
+# Introduction to the New Webex CC APIs
 > This is the introduction video. It explains what API we have, what application and authorization mechanisms exist and how to get started.
 
 <iframe width="1024" height="500" src="https://www.youtube-nocookie.com/embed/EiCXsxX2EHI?rel=0" title="WxCC Lab #8 Part 1:Introduction to the New Webex Contact Center APIs and Sample Ap" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -162,7 +132,7 @@ Here is a summary:
 - Follow the instructions in the video to clone the repository and run the app.
 
 
-## Part 2: Reporting APIs
+# Reporting APIs
 
 > In this video we will go through the developer portal and execute your first API calls through Postman.
 
@@ -241,7 +211,7 @@ To try this out in Postman follow the steps outlined in the previous example
 
 
 
-## Part 3: Call Recording APIs
+# Call Recording APIs
 
 > In this video we will concentrate on "Captures" API. Captures are audio recordings that can be downloaded through API.
 
@@ -269,7 +239,7 @@ To try this out in Postman follow the steps outlined in the previous example
 To try this out in Postman follow the steps outlined in the previous example
 
 
-## Part 4: Configuration APIs
+# Configuration APIs
 
 > This is the bonus section of New WxCC APIs where you will be able to create/change settings in the Webex Contact Center by using the Configuration APIs.
 
@@ -309,7 +279,7 @@ To try this out in Postman follow the steps outlined in the previous example
 
 Follow the instructions in the video to use Postman and create mutiple sites using a csv file
 
-## Part 5: Search API
+# Search API
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/c8c778c5-6659-4145-891a-bafcece29863" width="100%" height="100%" title="WebexCC Search API: Getting Started with GraphQL" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -335,7 +305,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
   
   NOTE : Change filters and aggregation values according to your tenant.
 
-### Part 6: Agent Desktop APIs
+# Agent Desktop APIs
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%"> <iframe src="https://app.vidcast.io/share/embed/49fce72a-de94-449a-809e-822ed061d2e3" width="100%" height="100%" title="Agent desktop APIs" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe> </div>
 

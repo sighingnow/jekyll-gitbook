@@ -9,14 +9,14 @@ layout: post
 
 In this Lab, we will go through the tasks that are required to build a Webex Experience Management connecter and use that to send a survey to customers so that they can provide feedback on their interaction with the contact center. Also, we will look at how the agent can get this feedback on their agent desktop to provide appropriate level of service to end customers. This will enhance their customer satisfaction level which will positively impact their business.
 
-# Table of Contents 
+## Table of Contents 
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| WxM Connector setup | Informational | EASY            | 5 min           |
-| Enable WxM widgets in Desktop Layout           | Practical Lab | EASY            | 10 min           |
-| Configure Feedback node in Flow                      | Practical Lab | EASY            | 10 min            |
-| XM v2                                          | Informational | EASY            | 7 min            |
+| [WxM Connector setup](#wxm-connector-setup) | Informational | EASY            | 5 min           |
+| [Enable WxM widgets in Desktop Layout](#enable-wxm-widgets-in-desktop-layout)           | Practical Lab | EASY            | 10 min           |
+| [Configure Feedback node in Flow](#configure-feedback-node-in-flow)                      | Practical Lab | EASY            | 10 min            |
+| [XM v2](#xm-v2)                                          | Informational | EASY            | 7 min            |
 
 
 # Introduction
@@ -50,7 +50,7 @@ In this Lab, we will go through the tasks that are required to build a Webex Exp
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > WxM Console: **[https://xm.webex.com](https://xm.webex.com/)** WxM Documentation: **[https://xm.webex.com/docs/webex_cc/pcs_ivr_setup](https://xm.webex.com/docs/webex_cc/pcs_ivr_setup)**
 
-# Lab Section
+## Lab Section
 
 
 
@@ -60,7 +60,7 @@ WxM admin | wxmdemoadmin | Login@123
 
 
 
-## WxM Connector setup
+# WxM Connector setup
 
 >Not need to complete it, already configured!
 {: .block-warning }
@@ -108,7 +108,7 @@ WxM admin | wxmdemoadmin | Login@123
 
 
 
-## Enable WxM widgets in Desktop Layout
+# Enable WxM widgets in Desktop Layout
 
 > The following video shows how the Agent Desktop Layout JSON has to be modified with the appropriate values of the WxM dashboard, so that they are loaded into the widgets. The Space ID and the Metrics ID extracted from WxM decide which widget will be loaded for the agent. 
 {: .block-tip }
@@ -149,7 +149,7 @@ WxM admin | wxmdemoadmin | Login@123
 -   Login in the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/)** with the recently created agent credentials
 -   Confirm that the **WxM widgets are visible on Agent Desktop.**
 
-## Configure Feedback node in Flow 
+# Configure Feedback node in Flow 
 
 >Don’t change the logic of the flow if already configured!
 {: .block-warning }
@@ -189,7 +189,7 @@ WxM admin | wxmdemoadmin | Login@123
 {: .block-tip }
 
 
-## XM v2
+# XM v2
 - We announced on October 14th, 2022, the End of Sale of WxM V1 Standalone and End of Life WxM V1 Standalone will be on November 14th, 2024.
 - We are currently working on the next version, Webex Experience Management v2 (XM v2), which will be directly integrated into Webex CC and Webex CCE to provide improved abilities to collect explicit/implicit feedback and data, store and visualize customer feedback data through surveys over various channels and displays information in user friendly dashboards.
 - XM v2 will be available in the next 3-5 months tentatively.

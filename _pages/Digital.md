@@ -30,6 +30,7 @@ layout: post
 | [Creating Custom Nodes](#lab1220---creating-custom-nodes) | Practical Lab | MED            | 30 min           |
 | [Events and Triggers](#lab1221---event-and-triggers) | Practical Lab | MED            | 30 min           |
 | [Global and Flow variable support in Digital channels](#lab1222---global-and-flow–variable–support–in-digital-channels) | Practical Lab | MED            | 45 min           |
+| [Providing Digital Channels feedback](#providing-digital-channels-feedback) | Survey | EASY            | 5 min           |
 
 
 
@@ -1011,13 +1012,13 @@ Now create a new client ID that will be used to identify your application to Goo
 ## 5. Verification: Send an Email and accept the task
 
 - Go to personal email account and send an email to the support email address that was initially configured in the Email Asset.
-- Go to the Agent Desktop and make the agent Available. 
+- Go to the Agent Desktop and make the agent Available.
 
-![DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_1.png)
+![EmailVerification](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_1.png)
 
 - The Email will be offered to the agent. Click **Accept** to handle the email. Click "Reply" or Reply All" to the email and hit send button.
 
-![DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_2.png)
+![EmailVerification](/assets/images/DC_Lab.12.7_Verification_-_Send_an_Email_and_accept_the_task_2.png)
 
 - Add wrap up and close the task.
 
@@ -1388,11 +1389,11 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 | Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Facebook Page configuration](#1-Facebook-Page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
-| [Facebook Messenger Asset creation & Register to Webex CC](#2-Facebook-Messenger-Asset-creation-&-Register-to-Webex-CC)                           | Practical Lab         | EASY                | 5 min                 |
-| [Create Entry Point and Queue](#3-Create-Entry-Point-and-Queue) | Practical Lab         | EASY                | 5 min                 |
-| [Create/Upload Facebook Messenger flow](#4-CreateUpload-Facebook-Messenger-flow) | Practical Lab         | EASY                | 5 min                 |
-| [Verification - start Facebook Chat and accept the request](#5-Verification---start-Facebook-Chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
+| [Facebook Page configuration](#1-facebook-page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
+| [Facebook Messenger Asset creation and Register to Webex CC](#2-facebook-messenger-asset-creation-and-register-to-rebex-cc)                           | Practical Lab         | EASY                | 5 min                 |
+| [Create Entry Point and Queue](#3-create-entry-point-and-queue) | Practical Lab         | EASY                | 5 min                 |
+| [Create/Upload Facebook Messenger flow](#4-createupload-facebook-messenger-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Verification - start Facebook Chat and accept the request](#5-verification---start-facebook-chat-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
 
 
 ## Introduction
@@ -1442,49 +1443,49 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 [Back to top](#table-of-contents)
 
-## 2. Facebook Messenger Asset creation & Register to Webex CC
+## 2. Facebook Messenger Asset creation and Register to Webex CC
 
 - Login to your respective Webex Connect UI using the provided URL https://cl1pod**X**.imiconnect.io/ (where **X** is your POD number).
 
 - Navigate to `Assets` > `Apps` > `Configure New App` > `Messenger` and Click on `Add Messenger Page` button
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC1.gif)
+![FM1](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC1.gif)
 
 - If you haven't done already, authenticate with your FB account where you have a page already created. Then select the respective page that you want to integrate
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC2.jpg)
+![FM2](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC2.jpg)
 
 - Accept all default permissions
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC3.jpg)
+![FM3](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC3.jpg)
 
 - That completes the linking of the Facebook connect with Webex Connect
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC4.jpg)
+![FM4](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC4.jpg)
 
 - Finally select the Business Page you want to link to the Asset
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC5.jpg)
+![FM5](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC5.jpg)
 
 -  Provide the name and click `Save`
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC6.jpg)
+![FM6](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC6.jpg)
 
 -  Click `Register to Webex Engage`  in the ‘Configure New App-Messenger’ window ->  In the resulting window select the service and click `Register`.
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC7.jpg)
+![FM7](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC7.jpg)
 
 - Confirm that registration with Webex CC completed successfully
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC8.jpg)
+![FM8](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC8.jpg)
 
 - Scroll down and take note of the M.Me link in the `Page Discovery Addons` section. We will use that link to trigger the Facebook Messenger interaction from the Customer end. Also take note of the numeric string parameter in the M.Me link. That's the `Facebook Page ID` which we will also need later when configuring the flow.
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC9.jpg)
+![FM9](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC9.jpg)
 
 - Click on the back arrow to go back to the list of Assets Apps. Then take note of the application ID (app id) we just created. We will also need that app ID in the flow
 
-![DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC10.jpg)
+![FM10](/assets/images/DC_Lab_12.9_Facebook_Messenger_Asset_creation_&_register_to_Webex_CC10.jpg)
 
 [Back to top](#table-of-contents)
 
@@ -1501,7 +1502,7 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 - Select `Social Channel` in the **_Channel Type_** section.
 
 - Select `Facebook Messenger` in the **_Social Channel Type_** section.
-- 
+
 - Leave the **_Asset Name_** as the configured value earlier.
 
 - The **_Time Zone_** can stay as default value.
@@ -1601,33 +1602,33 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 - Open a new tab and login to the Agent Desktop if you haven't done already and make the agent Available (if you haven't done already in Lab2). 
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request1.png)
+![FC1](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request1.png)
 
 - Open a new tab on the same browser session to make sure you are still authenticated to Facebook. Go to the M.Me URL you copied in Step 2 and the following FBM page should load with the Facebook Business page chat you created earlier
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request2.jpg)
+![FC2](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request2.jpg)
 
 - Start chatting and that should trigger a contact into Webex Contact Center that will get routed according to the flow we configured in Step 4. A notification should appear that should help you switch to the agent desktop tab to accept the contact
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request3.jpg)
+![FC3](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request3.jpg)
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request4.jpg)
+![FC4](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request4.jpg)
 
 - Type a response and hit send button.
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request5.jpg)
+![FC5](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request5.jpg)
 
 - Response will be received in the other tab where the FBM page is:
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request6.jpg)
+![FC6](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request6.jpg)
 
 - End the contact
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request7.jpg)
+![FC7](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request7.jpg)
 
 - Add wrap up and close the task. 
 
-![DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request8.jpg)
+![FC8](/assets/images/DC_Lab_12.9_Verification_-_start_Facebook_Chat_and_accept_the_request8.jpg)
 
 
 ---
@@ -1767,11 +1768,11 @@ From the left side pane, click on Assets ---> Numbers
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Verify WhatsApp Number Assignment](#1-verify-WhatsApp-number-assignment)                           | Practical Lab         | EASY                | 5 min                 |
-| [WhatsApp Asset registration to WebexCC](#2-WhatsApp-asset-registration-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
-| [WhatsApp Entry Point and Queue creation](#3-WhatsApp-entry-point-and-queue-creation) | Practical Lab         | EASY                | 5 min                 |
-| [Create/Upload WhatsApp flow](#4-createupload-WhatsApp-flow) | Practical Lab         | EASY                | 5 min                 |
-| [Verification - send WhatsApp message and accept the request](#5-verification---send-WhatsApp-message-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
+| [Verify WhatsApp Number Assignment](#1-verify-whatsapp-number-assignment)                           | Practical Lab         | EASY                | 5 min                 |
+| [WhatsApp Asset registration to WebexCC](#2-whatsapp-asset-registration-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
+| [WhatsApp Entry Point and Queue creation](#3-whatsapp-entry-point-and-queue-creation) | Practical Lab         | EASY                | 5 min                 |
+| [Create/Upload WhatsApp flow](#4-createupload-whatsapp-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Verification - send WhatsApp message and accept the request](#5-verification---send-whatsapp-message-and-accept-the-request) | Practical Lab         | EASY                | 5 min                 |
 
 
 ## Introduction
@@ -1919,35 +1920,35 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 - Login to the Agent Desktop and make the agent Available. 
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request1.png)
+![WA1](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request1.png)
 
 - In your personal mobile phone, add the WhatsApp number configured in the previous step as a new contact. (The screenshot is for reference. Please use the number assigned to your pod)
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request2.png)
+![WA2](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request2.png)
 
 - Open WhatsApp and look up the contact created in the previous step
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request3.png)
+![WA3](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request3.png)
 
 - Send a message to the contact identified in the previous step to initiate the conversation. 
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request4.png)
+![WA4](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request4.png)
 
 - The WhatsApp contact will be offered to the agent. Click "Accept" to handle the contact.
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request5.png)
+![WA5](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request5.png)
 
 - Type a response and hit send button.
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request6.png)
+![WA6](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request6.png)
 
 - End the contact
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request7.png)
+![WA7](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request7.png)
 
 - Add wrap up and close the task. 
 
-![DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request8.png)
+![WA8](/assets/images/DC_Lab_12.11_Verification_-_send_Whatsapp_message_and_accept_the_request8.png)
 
 ---
 
@@ -2614,9 +2615,9 @@ Time to test your new configuration:
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Introduction to Event Scheduler](#1-Introduction-to-Event-Scheduler)             | Read & Understand | HARD            | 5 min            |
-| [Option 1 - Schedule SMS Event](#2-Option-1---Schedule-SMS-Event)                       | Practical Lab     | HARD            | 5 min            |
-| [Option 2 - Schedule Custom Event](#3-Option-2---Schedule-Custom–Event) | Practical Lab     | EASY            | 10 min            |
+| [Introduction to Event Scheduler](#1-introduction-to-event-scheduler)             | Read & Understand | HARD            | 5 min            |
+| [Option 1 - Schedule SMS Event](#2-option-1---schedule-sms-event)                       | Practical Lab     | HARD            | 5 min            |
+| [Option 2 - Schedule Custom Event](#3-option-2---schedule-custom–event) | Practical Lab     | EASY            | 10 min            |
 
 
 ## Introduction
@@ -2663,7 +2664,7 @@ The Event Scheduler page gives access to:
 
 ![DC_Lab.12.17_Introduction_EventScheduler](/assets/images/DC_Lab.12.17_Introduction_EventScheduler.png)
 
-### 2. Schedule SMS Event
+## 2. Schedule SMS Event
 
 Configuring scheduled outbound SMS campaign only require the setup inside the Event Scheduler. SMS uses source files containing data that will be used by the scheduler to determine the destination numbers as well as building custom messages (i.e. names, dates, addresses, etc.)
 
@@ -2714,7 +2715,7 @@ Configuring scheduled outbound SMS campaign only require the setup inside the Ev
 
 ![DC_Lab.12.17_Schedule_SMS_Event1](/assets/images/DC_Lab.12.17_Schedule_SMS_Event9.png)
 
-### 3. Schedule Custom Event
+## 3. Schedule Custom Event
 
 Configuration sequence for Custom Event is as below.
 
@@ -3688,6 +3689,11 @@ var _davidGV1_ = extractVariable("_DavidGV1_");`
 
 
 ![Lab12.24.3_TxLast](/assets/images/Lab12.24.3_TxLast.png)
+
+
+# **Providing Digital Channels feedback**
+
+We are seeking your feedback on the Digital Channel capabilities. By participating in this survey, you will help us to improve the quality of our products: [https://forms.gle/qDRF2hYdkZHr5owa8 ](https://forms.gle/qDRF2hYdkZHr5owa8)
 
 ---
 
