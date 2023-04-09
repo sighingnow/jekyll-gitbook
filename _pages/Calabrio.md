@@ -7,16 +7,7 @@ layout: post
 
 Work in progress. ETA is the end of April.
 
-<form id="AttendeeForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br><br>
-      <input type="submit" value="Submit">
-</form>  
-<div id="message"></div>
 
-<script src="/assets/gitbook/form.js"></script>
 
 
 
