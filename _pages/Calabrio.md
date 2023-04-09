@@ -13,8 +13,7 @@ Work in progress. ETA is the end of April.
       <label for="email">Email:</label>
       <input type="email" id="email" name="email"><br><br>
       <input type="submit" value="Submit">
-    </form>
-    <div id="message"></div>
+</form>  
     <script>
       // Get the form and its inputs
       const form = document.getElementById('myForm');
@@ -49,7 +48,7 @@ Work in progress. ETA is the end of April.
       });
     </script>
 
-/*<script src="/assets/gitbook/form.js"></script>*/
+
 
 ---
 
