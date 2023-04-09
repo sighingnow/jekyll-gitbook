@@ -1,5 +1,5 @@
 // Get the form and its inputs
-      const form = document.getElementById('myForm');
+      const form = document.getElementById('AttendeeForm');
       const nameInput = document.getElementById('name');
       const emailInput = document.getElementById('email');
 

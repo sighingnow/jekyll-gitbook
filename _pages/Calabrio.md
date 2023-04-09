@@ -7,7 +7,7 @@ layout: post
 
 Work in progress. ETA is the end of April.
 
-<form id="myForm">
+<form id="AttendeeForm">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name"><br><br>
       <label for="email">Email:</label>
