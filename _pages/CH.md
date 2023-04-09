@@ -68,6 +68,15 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ## Lab Section
 
+# Introduction to the new Admin Experience
+
+> The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following video outlines the first portion of a new admin experience. This feature introduces, the new left navigation panel for Webex Contact Center in Control Hub.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/53a2b628-e015-4fa2-89e8-b2c7a5a2ff03" width="100%" height="100%" title="February 06, 2023 at 4:59 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+
 # Control Hub User Management Tasks
 
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles.
