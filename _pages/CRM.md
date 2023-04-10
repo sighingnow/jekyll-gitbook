@@ -643,13 +643,20 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 ### a. OpenFrame Configurations
 
 - From the **Filter navigator**, navigate to OpenFrame >> Configurations.
-- Click New.
+- Click **New**.
 - Enter the following values in the form:
 
-  - Name: Webex Contact Center Desktop
-  - Title: Webex Contact Center
-  - Width: 550 (Recommended)
-  - Height: 600 (Recommended)
+| Parameter Name | Parameter Value              |
+| -------------- | ---------------------------- |
+| Name           | Webex Contact Center Desktop |
+| Title          | Webex Contact Center         |
+| Width          | 550 (Recommended)            |
+| Height         | 600 (Recommended)            |
+
+- Name: Webex Contact Center Desktop
+- Title: Webex Contact Center
+- Width: 550 (Recommended)
+- Height: 600 (Recommended)
 
 - To the right of the URL field, click on the **Lock button** and add **agentdesktop.do** as the URL.
 
