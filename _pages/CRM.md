@@ -606,10 +606,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - On the System Properties page, search for **agentdesktop_url** and click on it to open.
 
 - In the value field, enter the URL for the **Webex Contact Center Agent Desktop** according to the region of operation.
-  • North America: https://desktop.wxcc-us1.cisco.com
-  • UK: https://desktop.wxcc-eu1.cisco.com
-  • EU: https://desktop.wxcc-eu2.cisco.com
-  • APJC: https://desktop.wxcc-anz1.cisco.com
+
+  - North America: https://desktop.wxcc-us1.cisco.com
+  - UK: https://desktop.wxcc-eu1.cisco.com
+  - EU: https://desktop.wxcc-eu2.cisco.com
+  - APJC: https://desktop.wxcc-anz1.cisco.com
 
 - Click on **Update** to save the changes.
 
