@@ -634,21 +634,46 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click on **Save**.
 
-## Part 3: Test Webex Contact Center Agent Desktop for Zendesk
+## Part 3: OpenFrame Configurations and Service Now Desktop Layout setup
 
-### Sign into Webex Contact Center for Zendesk
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/9475bd0b-4445-4ee5-8baa-601f52be2cc3" width="100%" height="100%" title="OpenFrame Configuration and Desktop layout setup" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
-- Sign into your Zendesk instance.
+### OpenFrame Configurations
 
-- Click on Webex icon (grey square with Webex logo inside) at the top right corner of Zendesk window to launch embedded agent desktop in the CRM.
+- From the **Filter navigator**, navigate to OpenFrame >> Configurations.
+- Click New.
+- Enter the following values in the form:
 
-- Press **Sign In** button within "Webex Contact Center" app and provide agent credentials in the new browser tab.
+  - Name: Webex Contact Center Desktop
+  - Title: Webex Contact Center
+  - Width: 550 (Recommended)
+  - Height: 600 (Recommended)
 
-- Once authentication is completed, provide "Dial Number" / "Extension" and choose proper team within "Webex Contact Center" app.
+- To the right of the URL field, click on the **Lock button** and add **agentdesktop.do** as the URL.
 
-> **Note:** This team must have the Custom Desktop Layout for Zendesk applied in Webex Contact Center Management Portal (covered in the previous part of this lab).
+- Click **Submit**. The URL now appears as a link.
 
-- Make the agent "Available" by selecting corresponding state.
+### Service Now Desktop Layout setup
+
+- Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest Desktop Layout file.
+
+- Click on "ServiceNow_Desktop_xxxxx.json" file. Copy the contents of the file, paste it in any text editor.
+
+- Update the properties in the Desktop Layout file, if required. Save the file with **.json extension**.
+
+- Sign into [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
+
+- Go to Provisioning -> Desktop Layout and press **New Layout** button.
+
+- Enter layout name (for example, "ServiceNow Desktop Layout"), press **Upload** and choose JSON file you have created above. Once the file is uploaded, make sure it is validated successfully.
+
+- Click on "Teams" row and choose one or more teams.
+
+> **Note:** The agent, you will use to test the integration with Service Now, must be the part of the team chosen above.
+
+- Press **Save** to create the layout. Once the layout is created make sure it is "Active".
 
 ### a. Make inbound test call from a number registered in Zendesk CRM
 
