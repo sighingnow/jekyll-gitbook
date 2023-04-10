@@ -653,11 +653,6 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 | Width          | 550 (Recommended)            |
 | Height         | 600 (Recommended)            |
 
-- Name: Webex Contact Center Desktop
-- Title: Webex Contact Center
-- Width: 550 (Recommended)
-- Height: 600 (Recommended)
-
 - To the right of the URL field, click on the **Lock button** and add **agentdesktop.do** as the URL.
 
 - Click **Submit**. The URL now appears as a link.
@@ -666,7 +661,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest Desktop Layout file.
 
-- Click on "ServiceNow_Desktop_xxxxx.json" file. Copy the contents of the file, paste it in any text editor.
+- Click on **ServiceNow_Desktop_xxxxx.jso** file. Copy the contents of the file, paste it in any text editor.
 
 - Update the properties in the Desktop Layout file, if required. Save the file with **.json extension**.
 
@@ -674,7 +669,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Go to Provisioning -> Desktop Layout and press **New Layout** button.
 
-- Enter layout name (for example, "ServiceNow Desktop Layout"), press **Upload** and choose JSON file you have created above. Once the file is uploaded, make sure it is validated successfully.
+- Enter layout name (for example, "ServiceNow Desktop Layout"), press **Upload** and choose JSON file created in the previous step. Once the file is uploaded, make sure it is validated successfully.
 
 - Click on "Teams" row and choose one or more teams.
 
