@@ -573,11 +573,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 2: Commit the Update Set & Edit System Properties
 
-### Commit the Update Set
-
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/a65f5d73-a95f-4529-9d00-bc1cdc63dce3" width="100%" height="100%" title="Update Commit & Editing System Properties" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
+
+### Commit the Update Set
 
 - Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest System Update Set XML file.
 
