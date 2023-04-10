@@ -577,7 +577,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/a65f5d73-a95f-4529-9d00-bc1cdc63dce3" width="100%" height="100%" title="Update Commit & Editing System Properties" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### Commit the Update Set
+### a. Commit the Update Set
 
 - Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest System Update Set XML file.
 
@@ -599,7 +599,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click **Close** on the dialog box once Update Set Commit is completed.
 
-### Edit System Properties
+### b. Edit System Properties
 
 - In the **Filter navigator** at the upper left side of the window, type **sys_properties.list** and press enter.
 
@@ -614,7 +614,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click on **Update** to save the changes.
 
-### Optional : Change the Activity Table Name
+### c. Optional : Change the Activity Table Name
 
 - In the **Filter navigator** at the upper left side of the window, type **sys_properties.list** and press enter.
 
@@ -622,7 +622,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Change the value field as required. Click on **Update** to save the changes.
 
-### Optional : Add User Groups
+### d. Optional : Add User Groups
 
 - In the **Filter navigator** at the upper left side of the window, navigate to **Groups** under System Security.
 
@@ -640,7 +640,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 	<iframe src="https://app.vidcast.io/share/embed/9475bd0b-4445-4ee5-8baa-601f52be2cc3" width="100%" height="100%" title="OpenFrame Configuration and Desktop layout setup" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### OpenFrame Configurations
+### a. OpenFrame Configurations
 
 - From the **Filter navigator**, navigate to OpenFrame >> Configurations.
 - Click New.
@@ -655,7 +655,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - Click **Submit**. The URL now appears as a link.
 
-### Service Now Desktop Layout setup
+### b. Service Now Desktop Layout setup
 
 - Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest Desktop Layout file.
 
@@ -674,6 +674,8 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 > **Note:** The agent, you will use to test the integration with Service Now, must be the part of the team chosen above.
 
 - Press **Save** to create the layout. Once the layout is created make sure it is "Active".
+
+## Part 4: Test Webex Contact Center Service Now Agent Desktop
 
 ### a. Make inbound test call from a number registered in Zendesk CRM
 
