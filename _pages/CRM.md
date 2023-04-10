@@ -524,7 +524,8 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 > ##### NOTE :
 >
-> This lab is only for developer instances. For licensed instances, please refer :
+> This lab is for Developer Instances only. For Licensed Instances, please refer :
+> <br/>
 > https://help.webex.com/en-us/article/54vvw/Integrate-Webex-Contact-Center-with-ServiceNow >> Integrate tab >> Install ServiceNow for licensed enterprise instances.
 > {: .block-tip }
 
