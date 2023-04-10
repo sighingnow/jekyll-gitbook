@@ -13,14 +13,12 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Table of Contents
 
-| Topic                                                                              | Lab Type      | Difficulty Level | Estimated length |
-| ---------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [Salesforce integration](#salesforce-integration)        | Practical Lab | MID             | 35 min           |
-| [Microsoft Dynamics 365 integration](#microsoft-dynamics-365-integration) | Practical Lab | MID             | 30 min            |
-| [Service Now integration](#service-now-integration)                                          | Practical Lab | MID             | TBD            |      |
-| [Zendesk integration](#zendesk-integration)                   | Practical Lab | MID            | 25 min                                                                                      |               |                  |                  |
-
-
+| Topic                                                                     | Lab Type      | Difficulty Level | Estimated length |
+| ------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- | --- | --- | --- |
+| [Salesforce integration](#salesforce-integration)                         | Practical Lab | MID              | 35 min           |
+| [Microsoft Dynamics 365 integration](#microsoft-dynamics-365-integration) | Practical Lab | MID              | 30 min           |
+| [Service Now integration](#service-now-integration)                       | Practical Lab | MID              | TBD              |     |
+| [Zendesk integration](#zendesk-integration)                               | Practical Lab | MID              | 25 min           |     |     |     |
 
 # Salesforce integration
 
@@ -516,8 +514,153 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 # Service Now integration
 
-Work in progress. This part is coming in April.
+### Pre-requisites
 
+1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
+2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
+3. Service Now instance. For the details, refer the next section [Start Service Now Trial](#optional-start-service-now-trial).
+4. Access to the [Webex Contact Center Desktop Layout for Service Now](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) JSON.
+5. Lab 2 (IVR Contact Routing) completed.
+
+> ##### NOTE :
+>
+> This lab is only for developer instances. For licensed instances, please refer :
+> https://help.webex.com/en-us/article/54vvw/Integrate-Webex-Contact-Center-with-ServiceNow >> Integrate tab >> Install ServiceNow for licensed enterprise instances.
+> {: .block-tip }
+
+## Optional: Start Service Now Trial
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/63aeb2e0-4503-4df8-bd6e-ff045dcd66e3" width="100%" height="100%" title="Servicenow CRM Trial Account" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<br/>
+
+- Navigate to [Service Now Developer Portal](developer.servicenow.com).
+
+- Click on **Sign up and Start Building**.
+
+- Fill the form with requested information. Accept the **Terms and Conditions** check box and click on **Sign Up**.
+
+- Verify the account by clicking on the verification link received on the email.
+
+- Now, login to the developer portal.
+
+- Click on **Request Instance** button and select the appropriate region to request for a Personal Development Instance (PDI).
+
+- You will be on waitlist for the instance. You will get an email once an instance is assigned to you.
+
+## Part 1: Install Webex Contact Center application on Zendesk instance
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/5f58f249-f316-4ec3-9d98-2be79781d2e3" width="100%" height="100%" title="Install Webex Contact Center application on Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+### Install Webex Contact Center application for Zendesk from Marketplace
+
+- Sign into your Zendesk instance. URL should have format - **https://< your-zendesk-subdomain >.zendesk.com**
+  (This is the same page where you were at the end of last section)
+
+- Once signed into Zendesk, click on "Admin" icon (gear icon at the bottom of the vertical menu bar on the left). Then click on **Go to Admin Center**
+
+- You will be routed to the admin portal. Now, click on **Apps and integrations**. Then click on **Marketplace**.
+  Zendesk Marketplace will be opened in a new tab of the web browser.
+
+- Search for "Webex" on Marketplace and click on **Webex Contact Center** application.
+
+- Click on **Install** on the page of "Webex Contact Center" application. Then choose an account to install this app from drop-down list (Since you have already created Zendesk instance, you should be able to see your account name in the list) and click on "Install" one more time. You will be redirected to "Zendesk Admin Center" for the app installation.
+
+- The URL for "AgentDesktopHostUrl" is specific to your geographic location. By default, its value is **https://desktop.wxcc-us1.cisco.com**. Then scroll down and press "Install" button at the bottom of the page.
+
+- You can set the height and width of the connector widget here or can customize it later.
+
+- Wait few seconds until installation is completed and "Webex Contact Center" appears in the list of currently installed apps.
+
+## Part 2: Configure Webex Contact Center tenant and Zendesk instance
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/1dc62037-6473-4a65-9686-57d65a02a123" width="100%" height="100%" title="Configure Webex Contact Center tenant and Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+### Create Custom Desktop Layout for Zendesk
+
+- Navigate to [Zendesk Layout](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Zendesk) GitHub page.
+
+- Click on "Zendesk_Desktop_xxxxx.json" file. Copy the contents of the file, paste it in any text editor and save with .json extension. For example, **Zendesk_Desktop.json**
+
+- Sign into [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/) of your lab pod.
+
+- Go to Provisioning -> Desktop Layout and press **New Layout** button.
+
+- Enter layout name (for example, "Zendesk Desktop Layout"), press **Upload** and choose JSON file you have created above. Once file is uploaded, make sure it is validated successfully.
+
+- Click on "Teams" row and choose one or more teams.
+
+> **Note:** The agent, you will use to test the integration with Zendesk, must be the part of the team chosen above.
+
+- Press **Save** to create the layout. Once layout is created make sure it is "Active".
+
+### Create new Customer in Zendesk
+
+- In Zendesk instance, click on "Customers" icon in the vertical menu bar on the left.
+
+- Click on **Add customer** button. Provide the Customer Name and Email ID (optional) and press **Add** button.
+
+- Customer will be created and its info page will be opened. Click on **+add contact** link on the left side and enter the calling number which you will use to make test call to Webex Contact Center.
+
+- Go to "Customers" tab one more time to make sure new customer is successfully added. If you are unable to see the new customer there, just refresh the browser.
+
+## Part 3: Test Webex Contact Center Agent Desktop for Zendesk
+
+### Sign into Webex Contact Center for Zendesk
+
+- Sign into your Zendesk instance.
+
+- Click on Webex icon (grey square with Webex logo inside) at the top right corner of Zendesk window to launch embedded agent desktop in the CRM.
+
+- Press **Sign In** button within "Webex Contact Center" app and provide agent credentials in the new browser tab.
+
+- Once authentication is completed, provide "Dial Number" / "Extension" and choose proper team within "Webex Contact Center" app.
+
+> **Note:** This team must have the Custom Desktop Layout for Zendesk applied in Webex Contact Center Management Portal (covered in the previous part of this lab).
+
+- Make the agent "Available" by selecting corresponding state.
+
+### a. Make inbound test call from a number registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/0bd7c450-020c-4187-b06f-b152ca8595e3" width="100%" height="100%" title="Call Test Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- Initiate a call from the calling number which should be the same as the phone number of Zendesk customer created in the previous part of this lab.
+
+- Answer the call on the agent's end. You will be able to see the screen pop with the details of the customer created in the previous part of this lab and a new ticket will be created.
+
+- "Requester" field of the ticket will be pre-populated with the customer's name.
+
+- Now hang up and wrap-up the call.
+
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
+
+### b. Make inbound test call from a number NOT registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b5e6a197-5389-4e35-93ba-418f5a5656d3" width="100%" height="100%" title="Call Test Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- Initiate one more call from the calling number which does not match any customer in Zendesk and compare the behavior.
+
+- Answer the call on the agent's end. A new customer will be created and the customer details page will be opened as the screen pop. Also, a new ticket will be created.
+
+- "Requester" field of the ticket will be pre-populated with the new customer's name.
+
+- Now hang up and wrap-up the call.
+
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
+
+- Click on "Views" icon on the vertical menu bar on the left. You should be able to see both the tickets created after making the test calls.
+
+> **Note:** For Custom Desktop Layout configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
 
 # Zendesk integration
 
