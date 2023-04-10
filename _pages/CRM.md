@@ -230,7 +230,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - This document covers customization of each field of call center definition file, its description and possible values :
   [Integrate Webex Contact Center with Salesforce](https://help.webex.com/en-us/article/nhxw7kfb/Integrate-Webex-Contact-Center-with-Salesforce#Cisco_Reference.dita_053158ba-52cb-437e-9243-64d28a3c9845)
 
-## Login to Salesforce Agent Desktop and Make a Test Call
+### Login to Salesforce Agent Desktop and Make a Test Call
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/ad3757df-3eff-49bb-b2c8-a1ec6f9899c3" width="100%" height="100%" title="PART 6(b) - Test Webex Contact Center Salesforce Agent Desktop" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -525,8 +525,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 > ##### NOTE :
 >
 > This lab is for Developer Instances only. For Licensed Instances, please refer :
-> <br/>
-> https://help.webex.com/en-us/article/54vvw/Integrate-Webex-Contact-Center-with-ServiceNow >> Integrate tab >> Install ServiceNow for licensed enterprise instances.
+> <br/> > https://help.webex.com/en-us/article/54vvw/Integrate-Webex-Contact-Center-with-ServiceNow >> Integrate tab >> Install ServiceNow for licensed enterprise instances.
 > {: .block-tip }
 
 ## Optional: Start Service Now Trial
@@ -551,65 +550,88 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - You will be on waitlist for the instance. You will get an email once an instance is assigned to you.
 
-## Part 1: Install Webex Contact Center application on Zendesk instance
+## Part 1: Install the OpenFrame Interface
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/5f58f249-f316-4ec3-9d98-2be79781d2e3" width="100%" height="100%" title="Install Webex Contact Center application on Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/1ff4a677-bf6e-4de0-94cb-426ac75431c3" width="100%" height="100%" title="Install the OpenFrame Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### Install Webex Contact Center application for Zendesk from Marketplace
+- Sign in to your ServiceNow developer portal.
 
-- Sign into your Zendesk instance. URL should have format - **https://< your-zendesk-subdomain >.zendesk.com**
-  (This is the same page where you were at the end of last section)
+- From the **Filter navigator** at the upper left side of the window, navigate to **Plugins**.
 
-- Once signed into Zendesk, click on "Admin" icon (gear icon at the bottom of the vertical menu bar on the left). Then click on **Go to Admin Center**
+- Scroll down and search for **Openframe** plugin.
 
-- You will be routed to the admin portal. Now, click on **Apps and integrations**. Then click on **Marketplace**.
-  Zendesk Marketplace will be opened in a new tab of the web browser.
+- Click on **Install** button to install the Openframe plugin.
 
-- Search for "Webex" on Marketplace and click on **Webex Contact Center** application.
+- In the Activate Plugin dialog box, click on **Activate** button.
 
-- Click on **Install** on the page of "Webex Contact Center" application. Then choose an account to install this app from drop-down list (Since you have already created Zendesk instance, you should be able to see your account name in the list) and click on "Install" one more time. You will be redirected to "Zendesk Admin Center" for the app installation.
+- Once the plugin activation is completed, click on **Close & Reload Form** button.
 
-- The URL for "AgentDesktopHostUrl" is specific to your geographic location. By default, its value is **https://desktop.wxcc-us1.cisco.com**. Then scroll down and press "Install" button at the bottom of the page.
+- To verify the plugin activation, from the **Filter navigator** at the upper left side of the window, search for OpenFrame.
+  If you are able to see OpenFrame >> Configurations listed there, then the plugin installation is verified.
 
-- You can set the height and width of the connector widget here or can customize it later.
+## Part 2: Commit the Update Set & Edit System Properties
 
-- Wait few seconds until installation is completed and "Webex Contact Center" appears in the list of currently installed apps.
-
-## Part 2: Configure Webex Contact Center tenant and Zendesk instance
+### Commit the Update Set
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/1dc62037-6473-4a65-9686-57d65a02a123" width="100%" height="100%" title="Configure Webex Contact Center tenant and Zendesk instance" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/a65f5d73-a95f-4529-9d00-bc1cdc63dce3" width="100%" height="100%" title="Update Commit & Editing System Properties" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-### Create Custom Desktop Layout for Zendesk
+- Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest System Update Set XML file.
 
-- Navigate to [Zendesk Layout](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/Zendesk) GitHub page.
+- Save the file **webexcc-servicenow-update-setv(X).xml** on your machine.
 
-- Click on "Zendesk_Desktop_xxxxx.json" file. Copy the contents of the file, paste it in any text editor and save with .json extension. For example, **Zendesk_Desktop.json**
+- On your ServiceNow Developer Instance, from the **Filter navigator** at the upper left side of the window, navigate to System Update Sets >> **Update Sets to Commit**.
 
-- Sign into [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/) of your lab pod.
+- Click the **Import Update Set from XML** link.
 
-- Go to Provisioning -> Desktop Layout and press **New Layout** button.
+- Click **Choose File**, select the System Update Set XML file saved from the previous step, and click on **Upload**.
 
-- Enter layout name (for example, "Zendesk Desktop Layout"), press **Upload** and choose JSON file you have created above. Once file is uploaded, make sure it is validated successfully.
+- The update set appears in the Retrieved Update Sets list and is in the Loaded state. Click the **Update Set File Name (link)** to open the Update Set.
 
-- Click on "Teams" row and choose one or more teams.
+- At the upper right corner of the window, click **Preview Update Set** to check the update set for any issues.
 
-> **Note:** The agent, you will use to test the integration with Zendesk, must be the part of the team chosen above.
+- Click **Close** on the dialog box once preview is completed.
 
-- Press **Save** to create the layout. Once layout is created make sure it is "Active".
+- Finally, click on **Commit Update Set**.
 
-### Create new Customer in Zendesk
+- Click **Close** on the dialog box once Update Set Commit is completed.
 
-- In Zendesk instance, click on "Customers" icon in the vertical menu bar on the left.
+### Edit System Properties
 
-- Click on **Add customer** button. Provide the Customer Name and Email ID (optional) and press **Add** button.
+- In the **Filter navigator** at the upper left side of the window, type **sys_properties.list** and press enter.
 
-- Customer will be created and its info page will be opened. Click on **+add contact** link on the left side and enter the calling number which you will use to make test call to Webex Contact Center.
+- On the System Properties page, search for **agentdesktop_url** and click on it to open.
 
-- Go to "Customers" tab one more time to make sure new customer is successfully added. If you are unable to see the new customer there, just refresh the browser.
+- In the value field, enter the URL for the **Webex Contact Center Agent Desktop** according to the region of operation.
+  • North America: https://desktop.wxcc-us1.cisco.com
+  • UK: https://desktop.wxcc-eu1.cisco.com
+  • EU: https://desktop.wxcc-eu2.cisco.com
+  • APJC: https://desktop.wxcc-anz1.cisco.com
+
+- Click on **Update** to save the changes.
+
+### Optional : Change the Activity Table Name
+
+- In the **Filter navigator** at the upper left side of the window, type **sys_properties.list** and press enter.
+
+- On the System Properties page, search for **webexccactivitytable** and click on it to open.
+
+- Change the value field as required. Click on **Update** to save the changes.
+
+### Optional : Add User Groups
+
+- In the **Filter navigator** at the upper left side of the window, navigate to **Groups** under System Security.
+
+- Create a new user group or use an existing one.
+
+- Click on the User Group Name to open it. Click on **Edit** button.
+
+- Search for **sn_openframe_user** under Collection and move it to your user group.
+
+- Click on **Save**.
 
 ## Part 3: Test Webex Contact Center Agent Desktop for Zendesk
 
