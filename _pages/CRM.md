@@ -679,41 +679,17 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 4: Test Webex Contact Center Service Now Agent Desktop
 
-### a. Make inbound test call from a number registered in Zendesk CRM
+### a. Make inbound test call from a number registered in ServiceNow CRM
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/0bd7c450-020c-4187-b06f-b152ca8595e3" width="100%" height="100%" title="Call Test Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/233cfa7d-78bf-41f3-91c2-bcb8b752c773" width="100%" height="100%" title="Test Inbound Calls Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-- Initiate a call from the calling number which should be the same as the phone number of Zendesk customer created in the previous part of this lab.
-
-- Answer the call on the agent's end. You will be able to see the screen pop with the details of the customer created in the previous part of this lab and a new ticket will be created.
-
-- "Requester" field of the ticket will be pre-populated with the customer's name.
-
-- Now hang up and wrap-up the call.
-
-- The ticket that was created at the start of the call will be updated with call details after call wrap up.
+This part is coming soon !
 
 ### b. Make inbound test call from a number NOT registered in Zendesk CRM
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/b5e6a197-5389-4e35-93ba-418f5a5656d3" width="100%" height="100%" title="Call Test Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-
-- Initiate one more call from the calling number which does not match any customer in Zendesk and compare the behavior.
-
-- Answer the call on the agent's end. A new customer will be created and the customer details page will be opened as the screen pop. Also, a new ticket will be created.
-
-- "Requester" field of the ticket will be pre-populated with the new customer's name.
-
-- Now hang up and wrap-up the call.
-
-- The ticket that was created at the start of the call will be updated with call details after call wrap up.
-
-- Click on "Views" icon on the vertical menu bar on the left. You should be able to see both the tickets created after making the test calls.
-
-> **Note:** For Custom Desktop Layout configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
+This part is coming soon !
 
 # Zendesk integration
 
