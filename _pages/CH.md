@@ -38,11 +38,12 @@ layout: post
 ## Table of Contents
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
-| ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Tasks](#control-hub-user-management-tasks)        | Practical Lab | EASY            | 10 min           |
-| [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY            | 5 min            |
-| [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
-| [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
+| ----------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience)        | Watch & Understand | EASY   |  4 min        |
+| [Control Hub User Management Tasks](#control-hub-user-management-tasks)       | Practical Lab | EASY             | 10 min           |
+| [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY             | 5 min            |
+| [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY             | 5 min            |
+| [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY             | 10 min           |
 
 ## Overview of the lab:
 
