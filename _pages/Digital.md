@@ -2616,8 +2616,8 @@ Time to test your new configuration:
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Introduction to Event Scheduler](#1-introduction-to-event-scheduler)             | Read & Understand | HARD            | 5 min            |
-| [Option 1 - Schedule SMS Event](#2-option-1---schedule-sms-event)                       | Practical Lab     | HARD            | 5 min            |
-| [Option 2 - Schedule Custom Event](#3-option-2---schedule-custom–event) | Practical Lab     | EASY            | 10 min            |
+| [Schedule SMS Event](#2-schedule-sms-event)                       | Practical Lab     | HARD            | 5 min            |
+| [Schedule Custom Event](#3-schedule-custom–event) | Practical Lab     | EASY            | 10 min            |
 
 
 ## Introduction
