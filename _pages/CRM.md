@@ -13,14 +13,12 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Table of Contents
 
-| Topic                                                                              | Lab Type      | Difficulty Level | Estimated length |
-| ---------------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [Salesforce integration](#salesforce-integration)        | Practical Lab | MID             | 35 min           |
-| [Microsoft Dynamics 365 integration](#microsoft-dynamics-365-integration) | Practical Lab | MID             | 30 min            |
-| [Service Now integration](#service-now-integration)                                          | Practical Lab | MID             | TBD            |      |
-| [Zendesk integration](#zendesk-integration)                   | Practical Lab | MID            | 25 min                                                                                      |               |                  |                  |
-
-
+| Topic                                                                     | Lab Type      | Difficulty Level | Estimated length |
+| ------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- | --- | --- | --- |
+| [Salesforce integration](#salesforce-integration)                         | Practical Lab | MID              | 35 min           |
+| [Microsoft Dynamics 365 integration](#microsoft-dynamics-365-integration) | Practical Lab | MID              | 30 min           |
+| [Service Now integration](#service-now-integration)                       | Practical Lab | MID              | TBD              |     |
+| [Zendesk integration](#zendesk-integration)                               | Practical Lab | MID              | 25 min           |     |     |     |
 
 # Salesforce integration
 
@@ -232,7 +230,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - This document covers customization of each field of call center definition file, its description and possible values :
   [Integrate Webex Contact Center with Salesforce](https://help.webex.com/en-us/article/nhxw7kfb/Integrate-Webex-Contact-Center-with-Salesforce#Cisco_Reference.dita_053158ba-52cb-437e-9243-64d28a3c9845)
 
-## Login to Salesforce Agent Desktop and Make a Test Call
+### Login to Salesforce Agent Desktop and Make a Test Call
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/ad3757df-3eff-49bb-b2c8-a1ec6f9899c3" width="100%" height="100%" title="PART 6(b) - Test Webex Contact Center Salesforce Agent Desktop" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -516,8 +514,206 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 # Service Now integration
 
-Work in progress. This part is coming in April.
+### Pre-requisites
 
+1. Administrator access to the organization on [Control Hub](https://admin.webex.com/) and [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
+2. An agent account with access to [Agent Desktop](https://desktop.wxcc-us1.cisco.com/).
+3. Service Now instance. For the details, refer the next section [Start Service Now Trial](#optional-start-service-now-trial).
+4. Access to the [Webex Contact Center Desktop Layout for Service Now](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) JSON.
+5. Lab 2 (IVR Contact Routing) completed.
+
+> ##### NOTE :
+>
+> This lab is for Developer Instances only. For Licensed Instances, please refer :
+> <br/> > https://help.webex.com/en-us/article/54vvw/Integrate-Webex-Contact-Center-with-ServiceNow >> Integrate tab >> Install ServiceNow for licensed enterprise instances.
+> {: .block-tip }
+
+## Optional: Start Service Now Trial
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/63aeb2e0-4503-4df8-bd6e-ff045dcd66e3" width="100%" height="100%" title="Servicenow CRM Trial Account" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<br/>
+
+- Navigate to [Service Now Developer Portal](developer.servicenow.com).
+
+- Click on **Sign up and Start Building**.
+
+- Fill the form with requested information. Accept the **Terms and Conditions** check box and click on **Sign Up**.
+
+- Verify the account by clicking on the verification link received on the email.
+
+- Now, login to the developer portal.
+
+- Click on **Request Instance** button and select the appropriate region to request for a Personal Development Instance (PDI).
+
+- You will be on waitlist for the instance. You will get an email once an instance is assigned to you.
+
+## Part 1: Install the OpenFrame Interface
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/1ff4a677-bf6e-4de0-94cb-426ac75431c3" width="100%" height="100%" title="Install the OpenFrame Interface" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- Sign in to your ServiceNow developer portal.
+
+- From the **Filter navigator** at the upper left side of the window, navigate to **Plugins**.
+
+- Scroll down and search for **Openframe** plugin.
+
+- Click on **Install** button to install the Openframe plugin.
+
+- In the Activate Plugin dialog box, click on **Activate** button.
+
+- Once the plugin activation is completed, click on **Close & Reload Form** button.
+
+- To verify the plugin activation, from the **Filter navigator** at the upper left side of the window, search for OpenFrame.
+  If you are able to see OpenFrame >> Configurations listed there, then the plugin installation is verified.
+
+## Part 2: Commit the Update Set & Edit System Properties
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/a65f5d73-a95f-4529-9d00-bc1cdc63dce3" width="100%" height="100%" title="Update Commit & Editing System Properties" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+### a. Commit the Update Set
+
+- Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest System Update Set XML file.
+
+- Save the file **webexcc-servicenow-update-setv(X).xml** on your machine.
+
+- On your ServiceNow Developer Instance, from the **Filter navigator** at the upper left side of the window, navigate to System Update Sets >> **Update Sets to Commit**.
+
+- Click the **Import Update Set from XML** link.
+
+- Click **Choose File**, select the System Update Set XML file saved from the previous step, and click on **Upload**.
+
+- The update set appears in the Retrieved Update Sets list and is in the Loaded state. Click the **Update Set File Name (link)** to open the Update Set.
+
+- At the upper right corner of the window, click **Preview Update Set** to check the update set for any issues.
+
+- Click **Close** on the dialog box once preview is completed.
+
+- Finally, click on **Commit Update Set**.
+
+- Click **Close** on the dialog box once Update Set Commit is completed.
+
+### b. Edit System Properties
+
+- In the **Filter navigator** at the upper left side of the window, type **sys_properties.list** and press enter.
+
+- On the System Properties page, search for **agentdesktop_url** and click on it to open.
+
+- In the value field, enter the URL for the **Webex Contact Center Agent Desktop** according to the region of operation.
+
+  - North America: https://desktop.wxcc-us1.cisco.com
+  - UK: https://desktop.wxcc-eu1.cisco.com
+  - EU: https://desktop.wxcc-eu2.cisco.com
+  - APJC: https://desktop.wxcc-anz1.cisco.com
+
+- Click on **Update** to save the changes.
+
+### c. Optional : Change the Activity Table Name
+
+- In the **Filter navigator** at the upper left side of the window, type **sys_properties.list** and press enter.
+
+- On the System Properties page, search for **webexccactivitytable** and click on it to open.
+
+- Change the value field as required. Click on **Update** to save the changes.
+
+### d. Optional : Add User Groups
+
+- In the **Filter navigator** at the upper left side of the window, navigate to **Groups** under System Security.
+
+- Create a new user group or use an existing one.
+
+- Click on the User Group Name to open it. Click on **Edit** button.
+
+- Search for **sn_openframe_user** under Collection and move it to your user group.
+
+- Click on **Save**.
+
+## Part 3: OpenFrame Configurations and Service Now Desktop Layout setup
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/9475bd0b-4445-4ee5-8baa-601f52be2cc3" width="100%" height="100%" title="OpenFrame Configuration and Desktop layout setup" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+### a. OpenFrame Configurations
+
+- From the **Filter navigator**, navigate to OpenFrame >> Configurations.
+- Click **New**.
+- Enter the following values in the form:
+
+| Parameter Name | Parameter Value              |
+| -------------- | ---------------------------- |
+| Name           | Webex Contact Center Desktop |
+| Title          | Webex Contact Center         |
+| Width          | 550 (Recommended)            |
+| Height         | 600 (Recommended)            |
+
+- To the right of the URL field, click on the **Lock button** and add **agentdesktop.do** as the URL.
+
+- Click **Submit**. The URL now appears as a link.
+
+### b. Service Now Desktop Layout setup
+
+- Navigate to [Github page](https://github.com/CiscoDevNet/webex-contact-center-crm-integrations/tree/main/ServiceNow) to download the latest Desktop Layout file.
+
+- Click on **ServiceNow_Desktop_xxxxx.jso** file. Copy the contents of the file, paste it in any text editor.
+
+- Update the properties in the Desktop Layout file, if required. Save the file with **.json extension**.
+
+- Sign into [Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com/).
+
+- Go to Provisioning -> Desktop Layout and press **New Layout** button.
+
+- Enter layout name (for example, "ServiceNow Desktop Layout"), press **Upload** and choose JSON file created in the previous step. Once the file is uploaded, make sure it is validated successfully.
+
+- Click on "Teams" row and choose one or more teams.
+
+> **Note:** The agent, you will use to test the integration with Service Now, must be the part of the team chosen above.
+
+- Press **Save** to create the layout. Once the layout is created make sure it is "Active".
+
+## Part 4: Test Webex Contact Center Service Now Agent Desktop
+
+### a. Make inbound test call from a number registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/0bd7c450-020c-4187-b06f-b152ca8595e3" width="100%" height="100%" title="Call Test Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- Initiate a call from the calling number which should be the same as the phone number of Zendesk customer created in the previous part of this lab.
+
+- Answer the call on the agent's end. You will be able to see the screen pop with the details of the customer created in the previous part of this lab and a new ticket will be created.
+
+- "Requester" field of the ticket will be pre-populated with the customer's name.
+
+- Now hang up and wrap-up the call.
+
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
+
+### b. Make inbound test call from a number NOT registered in Zendesk CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/b5e6a197-5389-4e35-93ba-418f5a5656d3" width="100%" height="100%" title="Call Test Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+- Initiate one more call from the calling number which does not match any customer in Zendesk and compare the behavior.
+
+- Answer the call on the agent's end. A new customer will be created and the customer details page will be opened as the screen pop. Also, a new ticket will be created.
+
+- "Requester" field of the ticket will be pre-populated with the new customer's name.
+
+- Now hang up and wrap-up the call.
+
+- The ticket that was created at the start of the call will be updated with call details after call wrap up.
+
+- Click on "Views" icon on the vertical menu bar on the left. You should be able to see both the tickets created after making the test calls.
+
+> **Note:** For Custom Desktop Layout configurations, kindly check out [help.webex docs](https://help.webex.com/en-us/article/jg2krv/Integrate-Webex-Contact-Center-with-Zendesk#customize)
 
 # Zendesk integration
 
