@@ -133,7 +133,7 @@ update()
 ### 2. Add agent and supervisor users and set the calling extensions
 
 > As a result of the task below you should add two new users to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
-> For agent and supervisor, you can use the https://mailinator.com/ which allows you to create a temporary account without registration. It is safe to use https://mailinator.com/  on the **Lab Tenant** because those accounts do not have admin permissions and the international calls are disabled. 
+> For agent and supervisor, you can use the https://mailinator.com/ which allows you to create a temporary account without registration. We allow to use mailinator on the current **Lab Tenant** because those accounts do not have admin permissions and the international calls are disabled. 
 
 > We don't recommend using the mailinator accounts on your **Gold Tenant** due to security reasons (an attacker can gain access to your tenant). 
 {: .block-warning }
@@ -141,8 +141,8 @@ update()
 
 | **User Role** | **User email**                                                                | **User Extension** |
 | ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class="attendee_out">Your_Attendee_ID</w>_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w> |
-| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
+| Agent         | <w class="attendee_out">AttendeeID</w>_agent1@mailinator.com      | <w class= "agentEXT_out">Your Agent Extension</w> |
+| Supervisor    | <w class="attendee_out">AttendeeID</w>_supervisor1@mailinator.com | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
 
 
 
@@ -177,6 +177,7 @@ update()
 - Click **_Save_** and **_Close_** to confirm the changes.
 
 - Validate the users by going to the assigned email account. Open the Control Hub validation email and follow the **Cisco Webex** instructions to activate the both accounts.
+![mailinator](/assets/images/mailinator-1.gif)
 
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
@@ -329,21 +330,19 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 # Access to the Agent Desktop
 
-> The following video explains the process to access the Agent Desktop. Following the steps, you will log in with your credentials and indicate the number where you want to receive the calls.
+> By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number where you want to receive the calls.
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/badf99b8-e0b5-4d14-a23e-bcacf0e4c7a3" width="100%" height="100%" title="February 07, 2023 at 5:34 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
-
-> This tenant does not allow outbound international calls. If you have the US numbers you can use that for sign in as an agent or supervisor. Otherwise, please download the Webex App according to the steps below.
-> {: .block-warning }
+> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the US numbers you can use that for sign in as an agent or supervisor. Otherwise, please download the Webex App according to the steps below.
+{: .block-warning }
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
 > **Note:** You would need two Webex app for placing calls to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **agent** account.
-> {: .block-warning }
+{: .block-warning }
 
 - Download the Webex app from **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="\_blank"}**.
+
+![Webex App](/assets/images/Lab1-AD-1.png)
 
 - Install the application on your PC/Mac.
 
@@ -351,23 +350,23 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 ### 2. Download and Login in the Webex app for mobile
 
-> **Note:** You need two Webex apps for placing a call to Entry Point and accepting on the agent side. In this lab, we will use the Webex mobile app for the **supervisor** account.
-> {: .block-tip }
+> **Note:** If you are using the **Lab Tenant**, you will need 2 Webex apps. One for placing a call to Entry Point (it is needed for making free calls to EP) and another for accepting the call on the agent side. In this lab, we will use, as an example, the Webex mobile app for the **supervisor** account.
+{: .block-tip }
 
 - Open the Application Manager (**Play Store** or **App Store**) on your mobile phone.
 
 - Search for **_Webex_**.
 
-- **Download** and **Open** the app.
+- **Download** and **Open** the Webex app.
 
-- Set **_Email address_** and **_Password_** as the supervisor account.
+- Set **_Email address_** and **_Password_** of the supervisor account.
 
 > **Note:** Make sure that you give access to the phone's microphone for the webex app.
 
 ### 3. Agent Desktop Login
 
 > **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
-> {: .block-warning }
+{: .block-tip }
 
 - Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the different browser or in incognito mode.
 
@@ -377,12 +376,16 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - In the **_Station Credentials_** pane, select **"Extension"** and input the configured number for that user.
 
-> **Note:** Please use Webex App Extension for this lab. Optionally, if you have a US number, you can use it from the agent's desktop. This tenant does not allow numbers outside of the United States.
-> {: .block-tip }
+> **Note:** If you have the US number, you can use it instead of the agent's Extension during sign-in. 
+{: .block-tip }
 
 - Select the team **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
-- Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop. Now you can continue with the next section.
+- Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop.
+![Agent Sign In](/assets/images/AG-2.gif)
+
+
+Now you can continue with the next section.
 
 ---
 
