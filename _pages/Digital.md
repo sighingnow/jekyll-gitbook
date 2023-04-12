@@ -40,7 +40,7 @@ layout: post
 
 | Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Webex Connect architecture](#1-webex-Connect-architecture)                           | Read & Understand         | EASY                | 5 min                 |
+| [Webex Connect architecture](#1-webex-connect-architecture)                           | Read & Understand         | EASY                | 5 min                 |
 | [Webex Connect provisioning](#2-webex-connect-provisioning)                           | Practical Lab         | EASY                | 5 min                 |
 | [Webex Connect provisioning verification](#3-webex-connect-provisioning-verification) | Practical Lab         | EASY                | 5 min                 |
 
@@ -148,7 +148,7 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 
 | Topic                                                             | Lab Type | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Overview of Connect menu items](#overview–of-connect–menu-items) | Read & Understand         | EASY                | 15 min                 |
+| [Overview of Connect menu items](#overview-of-connect-menu-items) | Read & Understand         | EASY                | 15 min                 |
 
 
 ## **Introduction**
