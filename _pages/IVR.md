@@ -116,6 +116,8 @@ update()
 
 # Configuring tenant for Call Delivery
 
+⚠️ If you are using your Gold Tenant you can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}
+
 ### Create a queue
 1. Click on Provisioning > Entry Points/Queues > Queue
     > <img src="/assets/images/IVR/openQueue.gif">
