@@ -569,7 +569,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 - Once the plugin activation is completed, click on **Close & Reload Form** button.
 
 - To verify the plugin activation, from the **Filter navigator** at the upper left side of the window, search for OpenFrame.
-  If you are able to see OpenFrame >> Configurations listed there, then the plugin installation is verified.
+  If you are able to see OpenFrame >> Configurations listed there, the plugin installation is verified.
 
 ## Part 2: Commit the Update Set & Edit System Properties
 
@@ -591,11 +591,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - The update set appears in the Retrieved Update Sets list and is in the Loaded state. Click the **Update Set File Name (link)** to open the Update Set.
 
-- At the upper right corner of the window, click **Preview Update Set** to check the update set for any issues.
+- Click **Preview Update Set** to check the update set for any issues.
 
 - Click **Close** on the dialog box once preview is completed.
 
-- Finally, click on **Commit Update Set**.
+- Click on **Commit Update Set**.
 
 - Click **Close** on the dialog box once Update Set Commit is completed.
 
@@ -655,7 +655,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 - To the right of the URL field, click on the **Lock button** and add **agentdesktop.do** as the URL.
 
-- Click **Submit**. The URL now appears as a link.
+- Click **Submit**.
 
 ### b. Service Now Desktop Layout setup
 
@@ -679,7 +679,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 4: Test Webex Contact Center Service Now Agent Desktop
 
-### a. Make inbound test call from a number registered in ServiceNow CRM
+### a. Make an inbound test call from a number registered in ServiceNow CRM
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/233cfa7d-78bf-41f3-91c2-bcb8b752c773" width="100%" height="100%" title="Test Inbound Calls Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -687,7 +687,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 This part is coming soon !
 
-### b. Make inbound test call from a number NOT registered in Zendesk CRM
+### b. Make an inbound test call from a number NOT registered in Zendesk CRM
 
 This part is coming soon !
 
