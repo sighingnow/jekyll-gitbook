@@ -12,7 +12,7 @@ layout: post
 | [Connect GUI overview](#lab122---connect-gui-overview) | Read & Understand     | EASY            | 15 min           |
 | [Engage GUI overview](#lab123---engage-gui-overview) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---user-management-in-connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
-| [Digital Channels Pre-configuration](#lab125---digital-channels-pre---configuration) | Practical Lab | EASY            | 20 min           |
+| [Digital Channels Pre-configuration](#lab125---digital-channels-pre-configuration) | Practical Lab | EASY            | 20 min           |
 | [Flow Builder](#lab126---flow-builder) | Read & Understand | EASY            | 20 min           |
 | [Email Channel Configuration](#lab127---email-channel-configuration) | Practical Lab | EASY            | 25 min           |
 | [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 30 min           |
@@ -349,11 +349,11 @@ Within the setting section the administrator can control some additional useful 
 
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [User Roles and Permissions](1-user-roles–and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
-| [Users organization](2-users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
-| [Login to Connect portal](3-login-to-connect-portal)                             | Practical Lab         | EASY                | 1 min                 |
-| [Add new users with administrator role](4-add-new-users-with-administrator-role) | Practical Lab         | EASY                | 2 min                 |
-| [New user activation](5-new-user-activation)                                     | Practical Lab         | EASY                | 2 min                 |
+| [User Roles and Permissions](#1-user-roles–and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
+| [Users organization](#2-users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
+| [Login to Connect portal](#3-login-to-connect-portal)                             | Practical Lab         | EASY                | 1 min                 |
+| [Add new users with administrator role](#4-add-new-users-with-administrator-role) | Practical Lab         | EASY                | 2 min                 |
+| [New user activation](#5-new-user-activation)                                     | Practical Lab         | EASY                | 2 min                 |
 
 ## **Introduction**
 
