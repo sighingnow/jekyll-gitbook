@@ -446,10 +446,10 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Node Authorization for Webex CC Task and Engage nodes](1-Node-Authorization-for-Webex-CC-Task-and-Engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
-| [Retrieve and upload CA flows in Connect](2-Retrieve-and-upload-CA-flows-in-Connect)                                       | Practical Lab         | EASY                | 5 min                 |
-| [Setup agents in the Management Portal (Agents, Team, MMP)](3-Setup-agents-in-the–Management-Portal-Agents-Team-MMP)                             | Practical Lab         | EASY                | 5 min                 |
-| [Setup RONA timers](4-Setup-RONA-timers) | Practical Lab         | EASY                | 5 min                 |
+| [Node Authorization for Webex CC Task and Engage nodes](1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
+| [Retrieve and upload CA flows in Connect](2-retrieve-and-upload-ca-flows-in-connect)                                       | Practical Lab         | EASY                | 5 min                 |
+| [Setup agents in the Management Portal (Agents, Team, MMP)](3-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
+| [Setup RONA timers](4-setup-rona-timers) | Practical Lab         | EASY                | 5 min                 |
 
 ## Introduction
 
