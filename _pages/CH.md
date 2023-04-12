@@ -38,15 +38,17 @@ layout: post
 ## Table of Contents
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
-| ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Control Hub User Management Tasks](#control-hub-user-management-tasks)        | Practical Lab | EASY            | 10 min           |
-| [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY            | 5 min            |
-| [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY            | 5 min            |
-| [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY            | 10 min           |
+| ----------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
+| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience)        | Watch & Understand | EASY   |  4 min        |
+| [Control Hub User Management Tasks](#control-hub-user-management-tasks)       | Practical Lab | EASY             | 10 min           |
+| [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY             | 5 min            |
+| [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY             | 5 min            |
+| [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY             | 10 min           |
 
 ## Overview of the lab:
 
 In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
+You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant**.
 
 ## Introduction
 
@@ -57,7 +59,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 ### Pre-requisites
 
-- You have Admin access to Control Hub
+- You have Admin access to Control Hub (Lab Tenant or Gold Tenant)
 - You have the dialed number registered on the Control Hub
 
 ### Quick Links
@@ -85,17 +87,12 @@ In this Lab, we will go through the tasks that are required to complete the gene
 	<iframe src="https://app.vidcast.io/share/embed/715d21da-91cf-4890-82c9-c60da5c5e883" width="100%" height="100%" title="February 06, 2023 at 4:59 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-| **User Role** | **User email**                                                                | **User Extension** |
-| ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class="attendee_out">Your_Attendee_ID</w>_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w> |
-| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
-
-
 
 
 ### 1. Define your Attendee ID and Other parameters
 
-> You have received an email with the lab access details, please copy and paste the data from the email into the corresponding fields.
+>Please skip the task 1 if you are doing the labs on the Gold Tenant. The task below is only for the Lab Tenant option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the data from the email into the corresponding fields.
+{: .block-tip }
 
 <form id="IVRdeets">
 
@@ -132,12 +129,22 @@ document.forms["IVRdeets"][5].value = localStorage.getItem("supervisorEXT") || "
 update()
 </script>
 
-> **NOTE:** the **Attendee ID** should be provided with the admin credentials. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel with you. In that case, the **Attendee ID** is the same for all of you, but you can use the different number in the end as the suffix. Ex: _attendeeID_agent**1**, attendeeID_agent**2**, attendeeID_agent**3**, etc._
-> {: .block-tip }
 
 ### 2. Add agent and supervisor users and set the calling extensions
 
-> For agent and supervisor you can use the https://mailinator.com/ or https://temp-mail.org/en/ which allows you to create a temproary account and verify it from the directly.
+> As a result of the task below you should add two new users to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
+> For agent and supervisor, you can use the https://mailinator.com/ which allows you to create a temporary account without registration. It is safe to use https://mailinator.com/  on the **Lab Tenant** because those accounts do not have admin permissions and the international calls are disabled. 
+
+> We don't recommend using the mailinator accounts on your **Gold Tenant** due to security reasons (an attacker can gain access to your tenant). 
+{: .block-warning }
+
+
+| **User Role** | **User email**                                                                | **User Extension** |
+| ------------- | ----------------------------------------------------------------------------- | ------------------ |
+| Agent         | <w class="attendee_out">Your_Attendee_ID</w>_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w> |
+| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
+
+
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
 
