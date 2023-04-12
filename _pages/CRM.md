@@ -525,7 +525,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 > ##### NOTE :
 >
 > This lab is for Developer Instances only. For Licensed Instances, please refer :
-> <br/> > https://help.webex.com/en-us/article/54vvw/Integrate-Webex-Contact-Center-with-ServiceNow >> Integrate tab >> Install ServiceNow for licensed enterprise instances.
+> <br/> https://help.webex.com/en-us/article/54vvw/Integrate-Webex-Contact-Center-with-ServiceNow >> Integrate tab >> Install ServiceNow for licensed enterprise instances.
 > {: .block-tip }
 
 ## Optional: Start Service Now Trial
@@ -536,7 +536,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 <br/>
 
-- Navigate to [Service Now Developer Portal](developer.servicenow.com).
+- Navigate to [Service Now Developer Portal](https://developer.servicenow.com).
 
 - Click on **Sign up and Start Building**.
 
