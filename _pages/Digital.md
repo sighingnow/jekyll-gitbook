@@ -40,9 +40,9 @@ layout: post
 
 | Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Webex Connect architecture](#1-Webex-Connect-architecture)                           | Read & Understand         | EASY                | 5 min                 |
-| [Webex Connect provisioning](#2-Webex-Connect-Provisioning)                           | Practical Lab         | EASY                | 5 min                 |
-| [Webex Connect provisioning verification](#3-Webex-Connect-Provisioning-verification) | Practical Lab         | EASY                | 5 min                 |
+| [Webex Connect architecture](#1-webex-Connect-architecture)                           | Read & Understand         | EASY                | 5 min                 |
+| [Webex Connect provisioning](#2-webex-connect-provisioning)                           | Practical Lab         | EASY                | 5 min                 |
+| [Webex Connect provisioning verification](#3-webex-connect-provisioning-verification) | Practical Lab         | EASY                | 5 min                 |
 
 
 ## **Introduction**
@@ -148,7 +148,7 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 
 | Topic                                                             | Lab Type | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Overview of Connect menu items](#Overview–of-Connect–menu-items) | Read & Understand         | EASY                | 15 min                 |
+| [Overview of Connect menu items](#overview–of-connect–menu-items) | Read & Understand         | EASY                | 15 min                 |
 
 
 ## **Introduction**
@@ -256,7 +256,7 @@ The Settings session allows the administrator to review and manage users and tea
 
 | Topic                                                           | Lab Type | Dificulty Level | Estimated length |
 | --------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Overview of Engage menu items](#Overview-of-Engage-menu-items) | Read & Understand         | EASY                | 15 min                 |
+| [Overview of Engage menu items](#overview-of-engage-menu-items) | Read & Understand         | EASY                | 15 min                 |
 
 ## **Introduction**
 
@@ -349,11 +349,11 @@ Within the setting section the administrator can control some additional useful 
 
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [User Roles and Permissions](1-User-Roles–and-Permissions)                       | Read & Understand         | EASY                | 4 min                 |
-| [Users organization](2-Users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
-| [Login to Connect portal](3-Login-to-Connect-portal)                             | Practical Lab         | EASY                | 1 min                 |
-| [Add new users with administrator role](4-Add-new-users-with-administrator-role) | Practical Lab         | EASY                | 2 min                 |
-| [New user activation](5-New-user-activation)                                     | Practical Lab         | EASY                | 2 min                 |
+| [User Roles and Permissions](1-user-roles–and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
+| [Users organization](2-users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
+| [Login to Connect portal](3-login-to-connect-portal)                             | Practical Lab         | EASY                | 1 min                 |
+| [Add new users with administrator role](4-add-new-users-with-administrator-role) | Practical Lab         | EASY                | 2 min                 |
+| [New user activation](5-new-user-activation)                                     | Practical Lab         | EASY                | 2 min                 |
 
 ## **Introduction**
 
@@ -627,7 +627,7 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Understanding Connect Flows](Understanding-Connect-Flows)                       | Read & Understand         | EASY                | 20 min                 |
+| [Understanding Connect Flows](understanding-connect-flows)                       | Read & Understand         | EASY                | 20 min                 |
 
 ## Introduction
 
@@ -1645,10 +1645,10 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [SMS number procurement](#1-SMS-number-procurement)                           | Practical Lab         | EASY                | 5 min                 |
-| [Create SMS Asset and Register to WebexCC](#2-Create-SMS-Asset-and-Register-to-WebexCC)                           | Practical Lab         | EASY                | 5 min                 |
-| [Workflow Association](#3-Workflow-Association) | Practical Lab         | EASY                | 5 min                 |
-| [Modifying the Flow](#4-Modifying-the-Flow) | Practical Lab         | EASY                | 5 min                 |
+| [SMS number procurement](#1-sms-number-procurement)                           | Practical Lab         | EASY                | 5 min                 |
+| [Create SMS Asset and Register to WebexCC](#2-create-sms-asset-and-register-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
+| [Workflow Association](#3-workflow-association) | Practical Lab         | EASY                | 5 min                 |
+| [Modifying the Flow](#4-modifying-the-flow) | Practical Lab         | EASY                | 5 min                 |
 
 
 #### Lab Objective
@@ -2377,10 +2377,10 @@ Provide version control over all changes the administrator applies on that speci
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Navigate to BOT Builder and Create bot](#1-Navigate-to-BOT-Builder-and-Create-bot) | Practical Lab | MED          | 5 min           |
-| [Preview](#2-Preview) | Practical Lab | MED          | 5 min           |
-| [Bot testing](#3-Bot-testing) | Practical Lab | MED        | 5 min           |
-| [Curation](#4-Curation) | Practical Lab | MED         | 10 min           |
+| [Navigate to BOT Builder and Create bot](#1-navigate-to-bot-builder-and-create-bot) | Practical Lab | MED          | 5 min           |
+| [Preview](#2-preview) | Practical Lab | MED          | 5 min           |
+| [Bot testing](#3-bot-testing) | Practical Lab | MED        | 5 min           |
+| [Curation](#4-curation) | Practical Lab | MED         | 10 min           |
 
 
 ## Introduction
@@ -2458,9 +2458,9 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 | Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Create a new Task Bot](#1-Create-a-new-Task-Bot)             | Practical Lab | HARD            | 10 min            |
-| [Add the Task Bot to your flow](#2-Add-the-Task-Bot-to-your-flow)                       | Practical Lab     | HARD            | 15 min            |
-| [Testing](#3-Testing) | Practical Lab     | EASY            | 5 min            |
+| [Create a new Task Bot](#1-create-a-new-task-bot)             | Practical Lab | HARD            | 10 min            |
+| [Add the Task Bot to your flow](#2-add-the-task-bot-to-your-flow)                       | Practical Lab     | HARD            | 15 min            |
+| [Testing](#3-testing) | Practical Lab     | EASY            | 5 min            |
 
 ## Introduction
 
@@ -2914,9 +2914,9 @@ Custom Events use source files containing data that will be used by flows when s
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Creating an Inbound webhook flow](#1-Creating-an-Inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
-| [Creating a voice flow in flow control](#2-Creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
-| [Test the Inbound Webhook](#3-Test-the-Inbound-Webhook)  | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating a voice flow in flow control](#2-creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
+| [Test the Inbound Webhook](#3-test-the-inbound-webhook)  | Practical Lab | EASY          | 5 min           |
 
 
 ## Introduction
@@ -3278,8 +3278,8 @@ The error ***""description":"Chat ID provided does not exist","event":"conversat
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Adding a Custom Node](1#Adding-a-Custom-Node) | Practical Lab | MED           | 15 min           |
-| [Demo](#2-Demo) | Read & Understand | EASY          | 15 min           |
+| [Adding a Custom Node](1#adding-a-custom-node) | Practical Lab | MED           | 15 min           |
+| [Demo](#2-demo) | Read & Understand | EASY          | 15 min           |
 
 ## Introduction
 
@@ -3369,9 +3369,9 @@ Here a quick Demo via calling EP into Webhook to invoke custom node to update Wx
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Creating an Inbound webhook flow](#1-Creating-an-Inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
-| [Creating an Event in Webex Engage Portal](#2-Creating-an-Event-in-Webex-Engage-Portal)| Practical Lab | MED           | 10 min           |
-| [Test the Event Trigger](#3-Test-the-Event-Trigger) | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating an Event in Webex Engage Portal](#2-creating-an-event-in-webex-engage-portal)| Practical Lab | MED           | 10 min           |
+| [Test the Event Trigger](#3-test-the-event-trigger) | Practical Lab | EASY          | 5 min           |
 
 
 ## Introduction
@@ -3502,9 +3502,9 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 | Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Fetching and Reporting Global variable](#1-Fetching-and-Reporting-Global-variable) | Practical Lab | MED           | 15 min           |
-| [Configuring Flow variables](#2-Configuring-Flow-variables)| Practical Lab | MED           | 15 min           |
-| [Transfer Global and Flow variable values between Webex Connect flows](3#-Transfer-Global-and-Flow-variable-values-between-Webex-Connect-flows) | Practical Lab | MED           | 15 min           |
+| [Fetching and Reporting Global variable](#1-fetching-and-reporting-global-variable) | Practical Lab | MED           | 15 min           |
+| [Configuring Flow variables](#2-configuring-flow-variables)| Practical Lab | MED           | 15 min           |
+| [Transfer Global and Flow variable values between Webex Connect flows](3#-transfer-global-and-flow-variable-values-between-webex-connect-flows) | Practical Lab | MED           | 15 min           |
 
 
 ## Introduction
