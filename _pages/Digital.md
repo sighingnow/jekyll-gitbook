@@ -11,7 +11,7 @@ layout: post
 | [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Read & Understand + Practical Lab     | EASY            | 15 min           |
 | [Connect GUI overview](#lab122---connect-gui-overview) | Read & Understand     | EASY            | 15 min           |
 | [Engage GUI overview](#lab123---engage-gui-overview) | Read & Understand | EASY            | 15 min           |
-| [User Management in Connect](#lab124---user–management-in-connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
+| [User Management in Connect](#lab124---user-management-in-connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
 | [Digital Channels Pre-configuration](#lab125---digital-channels-pre---configuration) | Practical Lab | EASY            | 20 min           |
 | [Flow Builder](#lab126---flow-builder) | Read & Understand | EASY            | 20 min           |
 | [Email Channel Configuration](#lab127---email-channel-configuration) | Practical Lab | EASY            | 25 min           |
@@ -414,14 +414,14 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 > Please contact the Partner Success team (PSM) if there are any challenges identifying the Connect Owner details
 
-![UserLogin](/assets/images/DC_Login.png)
+![UserLogin](assets/images/DC_Login.png)
 
 ## **4. Add new users with administrator role**
 
 -   Once logged in to Connect, go to ‘Settings’ > ‘Teammates’
 -   Add a new user (must be a working emailID) and select ‘Full access’ role and click ‘Invite user’
 
-![AddUser](/assets/images/DC_AddUser.png)
+![AddUser](assets/images/DC_AddUser.png)
 
 ## **5. New user activation**
 
@@ -431,7 +431,7 @@ Connect allows the Owner to create local users in containers called **Groups** a
 -   The user will automatically login into the Connect portal.
 -   The user will have to inform the tenant Owner about the successful creation of the account > the Owner will go to ‘Settings’ > ‘Teammates’ > click ‘Edit’ for the specified user > mark the checkbox for Decrypt Logs > click ‘Save’
 
-![UserActivation](/assets/images/DC_UserActivation.png)
+![UserActivation](assets/images/DC_UserActivation.png)
 
 
 ---
