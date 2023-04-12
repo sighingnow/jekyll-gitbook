@@ -171,7 +171,7 @@ Move your mouse pointer on each icon of the menu to see its name and the availab
 This is the introduction video. It walks through the menu items and explains the purposes of each tab.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/4706e810-fe23-4176-88ba-dd027cc91593" width="100%" height="100%" title="WxConnect.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/4065cc46-1389-4ada-ae04-2e0954288a23" width="100%" height="100%" title="WxConnect.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 #### **1. Services**
