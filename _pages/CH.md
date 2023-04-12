@@ -265,11 +265,24 @@ update()
 
 # Bulk Operations
 
-> The following video outlines how to use the Bulk Configuration in Control Hub. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center.
+> In this section you will learn how to use the Bulk Configuration in Control Hub by creating a second team. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. This feature provides greater speed and efficiency to deploy and configure Webex Contact Center systems.
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/7719cc70-28fb-4c00-a3ba-251079dd72b3" width="100%" height="100%" title="February 07, 2023 at 11:01 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
+Bulk Operations is available for the following configuration object types:
+
+| ------------------- | -------------------- |
+| ------------------- | -------------------- |
+| Entry Point         | Auxiliary Code       |
+| Queue               | Agent Profile        |
+| Outdial Entry Point | Address Book         |
+| Outdial Queue       | Outdial ANI          |
+| Site                | Skill Definition     |
+| Team                | Skill Profile        |
+| Users               | Entry Point Mappings |
+| User Profiles       | Audio Files          |
+| Work Types          | Global Variable      |
+
+
+
 
 ### Create the second Team
 
@@ -277,24 +290,31 @@ update()
 
 - In the left pane navigate to **_Contact Center_** card.
 
-- Select **_Bulk Operations_** in the upper menu.
+- Select **_Bulk Operations_** in the Webex CC navigation pane from the left.
 
-- Click **_Create Bulk Operations_** button in the right corner.
+- Click **_Create Bulk Operations_** button in the right upper corner.
+
+![Bulk Menue](/assets/images/Bulk-1.gif)
 
 - In Step 1 select the configuration object **_Team_** in the drop-down list.
 
 - In the Export section enter the **MyTeam** as the file name and click **Next** button.
 
-- Once the task is **Completed** click on **_Download export file_** and open the csv file in the notepad.
+- Once the task is **Completed** click on **_Download export file_** button under the **Action** and open the csv file in the notepad.
 
 - The first line is the headers, it is mandatory to have it during the import process. Remove all lines from the CSV file except the first line with headers and the line with **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
+
+```csv
+NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
+xxxx_team1,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
+```
 
 - Rename the Team1 to **<w class="attendee_out">Your_Attendee_ID</w>_Team2** and save the file. You should have only 2 rows in the file.
   Example:
 
 ```csv
 NAME,SITE,TYPE,MULTIMEDIA PROFILE,SKILL PROFILE,DN,CAPACITY,DESKTOP LAYOUT
-pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
+xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 ```
 
 - Go back to the **Bulk Operations** menu and click **_Create Bulk Operations_** button again.
@@ -303,9 +323,9 @@ pod110_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - Click **Next** button and wait the results. The status should be shown as **Completed**.
 
-- Go to the Management Portal, click on **_Provisioning_** and **_Team_** and verify that the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** is created.
+- Go to the Management Portal, click on **_Provisioning_** -> **_Team_** and verify that the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** is created.
 
-- In the Management Portal you can directly associate the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** with your agent and supervisor.
+- In the Management Portal directly associate the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** with your agent and supervisor by adding your users to that team (__Advanced Settings -> Agents__).
 
 # Access to the Agent Desktop
 
