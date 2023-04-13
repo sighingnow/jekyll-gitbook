@@ -82,6 +82,8 @@ In this lab, we will configure all of the required elements to deliver a call in
 
 
 ### Fill in the form with the details provided and agent email address you created in the previous lab, then click "Update Directions" 
+>Please skip the task if you are doing the labs on the Gold Tenant. The task below is only for the Lab Tenant option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the data from the email into the corresponding fields.
+{: .block-tip }
 <form id="IVRdeets">
   
   <label for="DN">EP DN you were assigned:</label><br>
@@ -116,7 +118,7 @@ update()
 
 # Configuring tenant for Call Delivery
 
-⚠️ If you are using your Gold Tenant you can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}
+⚠️ If you are using your Gold Tenant you can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
 
 ### Create a queue
 1. Click on Provisioning > Entry Points/Queues > Queue
