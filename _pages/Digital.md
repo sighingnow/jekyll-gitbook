@@ -368,11 +368,12 @@ This lab is designed to introduce the Connect User Management structure. Through
 
 #### Quick Links
 
->Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
 
 
 #### Credentials
@@ -465,11 +466,12 @@ In this Lab, we will go through the tasks that are required to complete the gene
 
 #### Quick Links
 
->Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
 
 #### Credentials
 
@@ -773,7 +775,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Gmail: **[https://mail.google.com](https://mail.google.com)**\
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
@@ -1067,11 +1069,11 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
@@ -1414,11 +1416,11 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
@@ -1666,11 +1668,11 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
