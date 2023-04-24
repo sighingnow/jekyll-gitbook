@@ -57,10 +57,10 @@ This lab is designed to introduce the audience to the digital channels (Webex Co
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
@@ -368,11 +368,12 @@ This lab is designed to introduce the Connect User Management structure. Through
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+>Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
+> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
+> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
+> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+
 
 #### Credentials
 
