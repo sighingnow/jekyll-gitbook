@@ -61,7 +61,7 @@ This lab is designed to introduce the audience to the digital channels (Webex Co
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -372,7 +372,7 @@ This lab is designed to introduce the Connect User Management structure. Through
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -468,7 +468,7 @@ In this Lab, we will go through the tasks that are required to complete the gene
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -773,7 +773,7 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 > Gmail: **[https://mail.google.com](https://mail.google.com)**\
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -1071,7 +1071,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -1418,7 +1418,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -1670,7 +1670,7 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -1797,7 +1797,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -2402,7 +2402,7 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -2481,7 +2481,7 @@ In this lab we will be creating a Task Bot using the Bot Builder in Webex Connec
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -2643,7 +2643,7 @@ Option 2: Custom Event – Allows you to trigger rules or flows associated with 
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -2940,7 +2940,7 @@ In this lab, we will explore how an Inbound Webhook can be used to generate an e
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -3297,7 +3297,7 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
@@ -3393,7 +3393,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 > Cisco Doc: **[Official Documentation](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Generic_Topic.dita_47ceb6a2-e47c-4639-9a2c-dcde742cec2f-4)**
 
 #### Credentials
@@ -3527,7 +3527,7 @@ Both variables are transferable between flows. In the second part of this lab in
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
-> WxM Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
+> Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 #### Credentials
 
