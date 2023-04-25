@@ -713,7 +713,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 > **Note:** To create a new user, login to the Developer Portal.
 >
-> - Navigate to Users (under System Security) and click on New button.
+> Navigate to Users (under System Security) and click on New button.
 
 - From the **Filter navigator**, navigate to **Agent Workspace Home**.
 
