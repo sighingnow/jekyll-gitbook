@@ -679,17 +679,56 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 
 ## Part 4: Test Webex Contact Center Service Now Agent Desktop
 
-### a. Make an inbound test call from a number registered in ServiceNow CRM
+### a. Make an inbound test call from a number NOT registered in ServiceNow CRM
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/233cfa7d-78bf-41f3-91c2-bcb8b752c773" width="100%" height="100%" title="Test Inbound Calls Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-This part is coming soon !
+- From the **Filter navigator**, navigate to **Agent Workspace Home**.
 
-### b. Make an inbound test call from a number NOT registered in Zendesk CRM
+- Click on the phone icon on the bottom left corner and then on **Sign In**.
 
-This part is coming soon !
+- Sign in to Webex Contact Center Agent Desktop using agent credentials. This agent user needs to be part of the same team with which we had associated the Desktop Layout previously.
+
+- Make sure the agent is in available state and make a test call to your EP.
+
+- Upon accepting the call, you should be able to see the screenpop with a **new interaction** created.
+
+- "Opened For" field in the interaction will be blank as there is no matching customer record.
+
+- **Activity details** can be seen in the second vertical section and will be updated with the interaction.
+
+- If required, an incident can be created by clicking on the **Create Incident** button on the top right corner of the page.
+
+- Now hang up and wrap-up the call.
+
+### b. Make an inbound test call from a number registered in ServiceNow CRM
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+    <iframe src="https://app.vidcast.io/share/embed/5718590a-f798-4155-bc9f-55c3a24db0b3" width="100%" height="100%" title="Test Inbound Calls Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+> **Note:** To create a new user, login to the Developer Portal.
+> Navigate to Users (under System Security) and click on New button.
+
+- From the **Filter navigator**, navigate to **Agent Workspace Home**.
+
+- Click on the phone icon on the bottom left corner and then on **Sign In**.
+
+- Sign in to Webex Contact Center Agent Desktop using agent credentials. This agent user needs to be part of the same team with which we had associated the Desktop Layout previously.
+
+- Make sure the agent is in available state and make a test call to your EP.
+
+- Upon accepting the call, you should be able to see the screenpop with a **new interaction** created.
+
+- The interaction will be mapped with the matching customer record and "Opened For" field will be pre-populated with the customer name.
+
+- **Activity details** can be seen in the second vertical section and will be updated with the interaction.
+
+- If required, an incident can be created by clicking on the **Create Incident** button on the top right corner of the page.
+
+- Now hang up and wrap-up the call.
 
 # Zendesk integration
 
