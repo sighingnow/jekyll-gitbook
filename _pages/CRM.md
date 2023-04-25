@@ -709,6 +709,8 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
     <iframe src="https://app.vidcast.io/share/embed/5718590a-f798-4155-bc9f-55c3a24db0b3" width="100%" height="100%" title="Test Inbound Calls Part 2" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
+<br/>
+
 > **Note:** To create a new user, login to the Developer Portal.
 > Navigate to Users (under System Security) and click on New button.
 
