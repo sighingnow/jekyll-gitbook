@@ -516,19 +516,19 @@ The following are the top-level and most important properties to know for JSON l
 > A Custom Widget is a component with some specific encapsulated functionality, exported as a custom HTML element that is placed within the desktop.
 {: .block-warning}
 
-<br>
+
 > Watch the demo below to understand the ability to pass default Desktop parameters into your Custom widget. This will help developers understand how data is handled in the Desktop STORE and injected into widgets inside of Webex Contact Center desktop. 
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/7ca5247d-462b-4b49-859c-62bee86477a3" width="100%" height="100%" title="Part 1 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/7ca5247d-462b-4b49-859c-62bee86477a3" width="100%" height="100%" title="Part 1 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/6e211cd5-e0c6-4c38-a1dc-df647b60a0b3" width="100%" height="100%" title="Part 2 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/6e211cd5-e0c6-4c38-a1dc-df647b60a0b3" width="100%" height="100%" title="Part 2 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-
+<br>
 Below, you will find a breakdown of all possible data and type definitions that is available through the STORE key:
 -   **STORE.agent**: Agent profile info and settings. 
 -   **STORE.agentContact**: Agent tasks and interactions
@@ -538,16 +538,18 @@ Below, you will find a breakdown of all possible data and type definitions that 
 -   **STORE.dynamic**: Connector (smaller) or Desktop (larger) view area
 
 <br>
+> 
 > Check the [Developer guide](https://developer.webex-cx.com/documentation/guides/desktop/#custom-widgets) for more details about Custom Widgets.
+> 
 {: .block-warning}
 
 
 <br>
-<br>
 ## Custom Widget Examples
-> If you want to explore and play around with the possible types of custom widgets you can create. check the below Git repository with some samples: 
-> [https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples)
-{: .block-tip }
+> 
+> If you want to explore and play around with the possible types of custom widgets you can create. check the below **Git repository with some samples: 
+> [https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples)**
+{: .block-warning}
 
 
 
