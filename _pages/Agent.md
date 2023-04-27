@@ -58,6 +58,9 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
 > Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
+> Developer Portal: **[https://developer.webex-cx.com](https://developer.webex-cx.com/){:target="\_blank"}**\
+> API Samples Git Repository: **[https://github.com/CiscoDevNet/webex-contact-center-api-samples](https://github.com/CiscoDevNet/webex-contact-center-api-samples){:target="\_blank"}**\
+> Widgets Samples Git Repository: **[https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples){:target="\_blank"}**\
 
 ## Lab Section
 
@@ -97,7 +100,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 - Be aware that agents cannot access the Agent Desktop from multiple browsers or multiple tabs of the same browser window. In that case, a warning message will be displayed
 
-> The video below shows a demo about the agent login process and the available options.
+> The video below shows a demo about the agent login process and the available options:
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -106,7 +109,13 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 ## Agent Desktop Interface
 
-> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it.
+> The Desktop UI language is based on the language preference settings on your browser. Currently, it supports 29 languages:
+> 	Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, and Turkish.
+{: .block-tip }
+<br>
+<br>
+
+> Watch the following video, where each of the sections and their main options are explained. You will get a better idea of how the Agent Desktop look like and how to use it:
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -114,6 +123,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 </div>
 <br>
 ![Image1](/assets/images/AgentDesktopOverview.png)
+
 
 The Agent Desktop is divided in **6 sections**. In the image above you can see a general view of the Agent Desktop and where each section is located. We explain them all shortly:
 
@@ -131,7 +141,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 ## Calls Handling
 
-> In the following video you will see how to handle incoming calls and what are the different agent states.
+> In the following video you will see how to handle incoming calls and what are the different agent states:
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -195,6 +205,8 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 > Be aware that all entities that don't match with attendee IDs will be deleted
 {: .block-warning }
 
+
+
 ## Testing Incoming call
 
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
@@ -250,7 +262,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 ## Exploring User Profile
 
-> In this section, we will explore what are the available options and settings under the User Profile
+> In this section, we will explore what are the available options and settings under the User Profile.
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -287,7 +299,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 ## Outdial
 
-> In this section, we will test Outdial calls using different Outdial ANIs and Address Books
+> In this section, we will test Outdial calls using different Outdial ANIs and Address Books.
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -338,11 +350,45 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
+
+
 # Custom Desktop Layout
 
-## Basics about Custom Desktop Layouts
+## Basic JSON elements
 
-> In this video, you will learn the dekstop layout customization process. After watching this, you will be able to customize the Agent Desktop with a custom logo, custom title. You will also learn how to enable/disbale standard widgets.
+The following are the top-level and most important properties to know for JSON layout:
+
+-  **`appTitle`**: To specify a title on the horizontal header of the Desktop. The default title is `Webex Contact Center`. 
+
+- **`logo`**: To specify a URL for the company logo. If you do not provide a URL, then the Webex Contact Center logo appears by default.
+
+- **`taskPageIllustration`**: To specify a custom illustration for the task page based on organization preferences and brand alignment. When an agent signs in, the task page displays the configured illustration as a background. By default, the task page appears without illustration.
+   
+- **`stopNavigateOnAcceptTask`**: To determine whether to shift the focus to a newly accepted task, when the agent accepts the new task while working on a previous task. The default value is `false`.  
+
+- **`dragDropEnabled`**: To enable the drag-and-drop and resizing of the widgets on the custom pages, set the value to `true`. The default value is `false`.
+
+- **`notificationTimer`**: To set the duration (in seconds) after which the desktop notifications on the Desktop are automatically dismissed. The notification appears at the top-right corner of the Desktop. The default timeout value is 8 seconds. The valid range for timeout values is 1-10 seconds. For the timeout changes to take effect, the browser must be refreshed after the changes are made.
+
+- **`maximumNotificationCount`**: To set the number of desktop notifications to be displayed at a time on the Desktop. The default value is 3. The range for desktop notifications is 1-10. The desktop notifications are stacked. If there are many notifications, they appear with a slight delay depending on the `notificationTimer` settings.    
+
+- **`browserNotificationTimer`**: To set the duration (in seconds) after which the browser toaster notifications on the Desktop are automatically dismissed. Toaster is a native browser notification that appears only if the Desktop is not the active browser window or tab. The Desktop browser window or tab is inactive when
+
+- **`wxmConfigured`**: (Optional) To configure Webex Experience Management, set the value to `true`. The default value is `false`.
+  
+- **`desktopChatApp`**: To configure multiple Cisco-offered chat applications such as Webex App.
+
+- **`webexConfigured`**: Webex App along with its messaging, calling, and meeting functionalities, can be configured within the Desktop. This configuration allows agents to collaborate with other agents, supervisors, and subject matter experts (SMEs) in their organization without navigating away from the Desktop.
+
+- **`headerActions`**: To change the order of the icons on the horizontal header of the Desktop. The default order is as follows:  **`["webex", "outdial", "notification"]`**.
+
+- **`area`**: The `area` property is the core section of the Desktop Layout. You can define the layout as per the area.
+
+<br>
+
+## Personalize the title and logo
+
+> In this video, you will learn the desktop layout customization process. After watching this, you will be able to customize the Agent Desktop with a custom logo, custom title. You will also learn how to enable/disbale standard widgets:
 {: .block-tip }
 
 
@@ -351,7 +397,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 </div>
 
 <br>
-### Download default desktop Layout
+
 
 - Login to **[https://portal.wxcc-us1.cisco.com](https://portal.wxcc-us1.cisco.com){:target="\_blank"}** with admin credentials.
 
@@ -360,8 +406,6 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Click on **_New Layout_** button.
 
 - Click on **_Download_** button to download the **Default Desktop Layout.json** file.
-
-### Customize default desktop layout with logo and title & enable standard widgets
 
 - Open the **Default Desktop Layout.json** file with any text editor (e.g. Notepad, Sublime text).
 
@@ -373,7 +417,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - **_Save As_** JSON file with a distinguishable name.
 <br>
-### Upload the custom desktop layout and associate it to a team
+
 
 - Login as admin to **_Desktop Layout_** module in the **[Webex Contact Center Management Portal](https://portal.wxcc-us1.cisco.com){:target="\_blank"}**.
 
@@ -387,7 +431,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Click **_Save_** button to apply the layout.
 <br>
-### Verify the new custom desktop layout
+
 
 - Login to the **[Agent Desktop](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**.
 
@@ -427,13 +471,16 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - You should be able to see the order of components in the Horizontal header as per your configuration.
 <br>
-## Create custom widget & change default landing page
 
-> In this section, you will learn how to create a custom widget and how to change the default landing page in the Agent Desktop.
+## Create iFrame Widget & change default landing page
+
+> The iFrame widget is a special widget that can be used to embed a different application. The iFrame widget creates an HTML iFrame and renders your application.
+{: .block-warning}
+
+
+> In this section, you will learn how to create a iFrame widget and how to change the default landing page in the Agent Desktop. For this example, we are using Webex Contact Center Analyzer Report as a iFrame widget.
 {: .block-tip }
 
-> In this example, we are using Webex Contact Center Analyzer Report as a custom widget.
-{: .block-tip }
 
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -463,6 +510,49 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 <br>
 
+
+## Populate Custom Widget with desktop parameters
+
+> A Custom Widget is a component with some specific encapsulated functionality, exported as a custom HTML element that is placed within the desktop.
+{: .block-warning}
+
+<br>
+> Watch the demo below to understand the ability to pass default Desktop parameters into your Custom widget. This will help developers understand how data is handled in the Desktop STORE and injected into widgets inside of Webex Contact Center desktop. 
+{: .block-tip }
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/7ca5247d-462b-4b49-859c-62bee86477a3" width="100%" height="100%" title="Part 1 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/6e211cd5-e0c6-4c38-a1dc-df647b60a0b3" width="100%" height="100%" title="Part 2 of 2: Sample Widget 101 & passing parameters" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+
+Below, you will find a breakdown of all possible data and type definitions that is available through the STORE key:
+-   **STORE.agent**: Agent profile info and settings. 
+-   **STORE.agentContact**: Agent tasks and interactions
+-   **STORE.app**: Company logo, title and dark mode
+-   **STORE.auth**: Authentication token used for Single Sign On
+-   **STORE.generalNotifications**: Application notifications
+-   **STORE.dynamic**: Connector (smaller) or Desktop (larger) view area
+
+<br>
+> Check the [Developer guide](https://developer.webex-cx.com/documentation/guides/desktop/#custom-widgets) for more details about Custom Widgets.
+{: .block-warning}
+
+
+<br>
+<br>
+## Custom Widget Examples
+> If you want to explore and play around with the possible types of custom widgets you can create. check the below Git repository with some samples: 
+> [https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples)
+{: .block-tip }
+
+
+
+<br>
+<br>
 ---
 
   <script>
