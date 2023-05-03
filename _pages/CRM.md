@@ -682,7 +682,7 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 ### a. Make an inbound test call from a number NOT registered in ServiceNow CRM
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/233cfa7d-78bf-41f3-91c2-bcb8b752c773" width="100%" height="100%" title="Test Inbound Calls Part 1" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+    <iframe src="https://app.vidcast.io/share/embed/c6630fe1-ba1b-47aa-ac99-40418126efe3" width="100%" height="100%" title="Test Inbound Calls Part 1 (Updated 2nd May)" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 - From the **Filter navigator**, navigate to **Agent Workspace Home**.
