@@ -10,7 +10,7 @@ version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+baseurl:          '/blog'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
