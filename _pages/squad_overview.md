@@ -1,6 +1,6 @@
 ---
 title: Squad Overview
-author: Tao He
+author: Sachin
 date: 2022-02-04
 category: Jekyll
 layout: post
@@ -8,4 +8,4 @@ layout: post
 
 ## Goals (sprint, quarterly, annually)
 ## Team members roles, core work hours etc.
-## Current initiatives
+## Current Initiatives
