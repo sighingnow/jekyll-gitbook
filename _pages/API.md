@@ -127,7 +127,7 @@ Here is a summary:
 
 - Follow the instructions in the video to request access to your sample app.
 
-- The sample app is available here :https://github.com/CiscoDevNet/webex-contact-center-api-samples
+- The sample app is available here :https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/app-auth-sample
 
 - Follow the instructions in the video to clone the repository and run the app.
 
