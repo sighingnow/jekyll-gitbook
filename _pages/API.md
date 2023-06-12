@@ -298,7 +298,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 ### 3. Running the query
 
 - Click on run - notice that you will receive all the interaction ID's between that timeframe.
-- Run the query **https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/reporting-samples/graphql-sample/totalCallsByAni.graphql** to aggregate calls from a specific phone number.
+- Run the query **[https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/reporting-samples/graphql-sample/totalCallsByAni.graphql](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/reporting-samples/graphql-sample/totalCallsByAni.graphql){:target="_blank"}** to aggregate calls from a specific phone number.
 - NOTE : Change the line 11 to the ANI from your tenant.
 - Refer to docs section as shown in video to find explaination for each fields in the schema.
 - You can also run all the graphQL samples **[here](https://github.com/CiscoDevNet/webex-contact-center-api-samples/tree/main/graphql-sample){:target="_blank"}** 
