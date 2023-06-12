@@ -58,6 +58,8 @@ destination:      ./_site
 incremental:      false
 regenerate:       true
 
+google_analytics: G-X0KSF40MEY
+
 plugins:
   - jekyll-feed
   - jekyll-readme-index

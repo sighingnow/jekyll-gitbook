@@ -1,0 +1,150 @@
+{
+  "version": "0.0.6",
+  "appTitle": "Contact Center Desktop",
+  "logo": "",
+  "dragDropEnabled": false,
+  "notificationTimer": 8,
+  "maximumNotificationCount": 3,
+  "browserNotificationTimer": 8,
+  "wxmConfigured": false,
+  "webexAppConfigured": true,
+  "area": {
+    "headless": {
+      "id": "dw-headless",
+      "widgets": { "comp1": { "comp": "div" } },
+      "layout": { "areas": [["comp1"]], "size": { "cols": [1], "rows": [1] } }
+    },
+    "panel": {
+      "comp": "md-tabs",
+      "attributes": { "class": "widget-tabs" },
+      "children": [
+        {
+          "comp": "md-tab",
+          "attributes": { "slot": "tab", "class": "widget-pane-tab" },
+          "children": [{ "comp": "slot", "attributes": { "name": "IVR_TRANSCRIPT_TAB" } }],
+          "visibility": "IVR_TRANSCRIPT"
+        },
+        {
+          "comp": "md-tab-panel",
+          "attributes": { "slot": "panel", "class": "widget-pane" },
+          "children": [{ "comp": "slot", "attributes": { "name": "IVR_TRANSCRIPT" } }],
+          "visibility": "IVR_TRANSCRIPT"
+        },
+        {
+          "comp": "md-tab",
+          "attributes": { "slot": "tab" },
+          "children": [{ "comp": "slot", "attributes": { "name": "WXM_JOURNEY_TAB" } }],
+          "visibility": "WXM_JOURNEY"
+        },
+        {
+          "comp": "md-tab-panel",
+          "attributes": { "slot": "panel", "class": "widget-pane" },
+          "children": [
+            {
+              "comp": "agentx-wc-cloudcherry-widget",
+              "properties": {
+                "userModel": "$STORE.app.userModel",
+                "spaceId": "",
+                "metricsId": "",
+                "teamId": "$STORE.agent.teamName",
+                "ani": "$STORE.agentContact.taskSelected.ani",
+                "isDarkMode": "$STORE.app.darkMode"
+              },
+              "wrapper": {
+                "title": "Customer Experience Journey",
+                "maximizeAreaName": "app-maximize-area"
+              }
+            }
+          ],
+          "visibility": "WXM_JOURNEY"
+        },
+        {
+          "comp": "md-tab",
+          "attributes": { "slot": "tab", "class": "widget-pane-tab" },
+          "children": [{ "comp": "slot", "attributes": { "name": "CONTACT_HISTORY_TAB" } }]
+        },
+        {
+          "comp": "md-tab-panel",
+          "attributes": { "slot": "panel", "class": "widget-pane" },
+          "children": [{ "comp": "slot", "attributes": { "name": "CONTACT_HISTORY" } }]
+        },
+        {
+          "comp": "md-tab",
+          "attributes": { "slot": "tab", "class": "widget-pane-tab" },
+          "children": [{ "comp": "slot", "attributes": { "name": "SCREEN_POP_TAB" } }],
+          "visibility": "SCREEN_POP"
+        },
+        {
+          "comp": "md-tab-panel",
+          "attributes": { "slot": "panel", "class": "widget-pane" },
+          "children": [{ "comp": "slot", "attributes": { "name": "SCREEN_POP" } }],
+          "visibility": "SCREEN_POP"
+        }
+      ]
+    },
+    "navigation": [
+      {
+        "nav": {
+          "label": "Analyzer iFrame Widget",
+          "icon": "https://qaemailmedia.s3.amazonaws.com/d3116af2-20cd-4306-b471-0a44cc164308/AnalyzerReport_3323586588428918.png",
+          "iconType": "other",
+          "navigateTo": "iframe-widget",
+          "align": "top"
+        },
+        "page": {
+          "id": "iframe-widget",
+          "widgets": {
+            "left": {
+              "comp": "agentx-wc-iframe",
+              "attributes": {
+                "src": "https://analyzer-v2.wxcc-us1.cisco.com/analyzer/view/dashboard?tId=494&rId=100069"
+              }
+            }
+          },
+          "layout": {
+            "areas": [["left"]],
+            "size": {
+              "cols": [1],
+              "rows": [1]
+            }
+          }
+        }
+      },
+      {
+        "nav": {
+          "label": "Customer Experience Analytics",
+          "icon": "/app/images/wxm.bcd45cc3.svg",
+          "iconType": "other",
+          "navigateTo": "wxm-metrics",
+          "align": "top"
+        },
+        "page": {
+          "id": "wxm-metrics",
+          "widgets": {
+            "comp1": {
+              "comp": "agentx-wc-cloudcherry-widget",
+              "attributes": {
+                "metrics": true
+              },
+              "properties": {
+                "userModel": "$STORE.app.userModel",
+                "spaceId": "",
+                "metricsId": "",
+                "teamId": "$STORE.agent.teamName",
+                "isDarkMode": "$STORE.app.darkMode"
+              }
+            }
+          },
+          "layout": {
+            "areas": [["comp1"]],
+            "size": {
+              "cols": [1],
+              "rows": [1]
+            }
+          }
+        },
+        "visibility": "WXM_METRICS"
+      }
+    ]
+  }
+}
