@@ -292,7 +292,7 @@ Follow the instructions in the video to use Postman and create mutiple sites usi
 
 ### 2. Forming a graphQL query
 
- - In the interactive editor paste the query from github sample **[link](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/graphql-sample/simple.graphql){:target="_blank"}**
+ - In the interactive editor paste the query from github sample **[link](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/reporting-samples/graphql-sample/simple.graphql){:target="_blank"}**
  - NOTE : To and From should be changed according to your needs, it has to be epoch time in miliseconds, use this **[link](https://www.epochconverter.com/){:target="_blank"}** to convert.
 
 ### 3. Running the query
