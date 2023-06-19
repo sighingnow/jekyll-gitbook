@@ -4,11 +4,9 @@ author: Carles Duz Palau & Susan Quick
 date: 2022-10-10
 layout: post
 ---
-
-<script> 
-const lastMod = new Date(document.lastModified);
-document.write("<h5>Last-Modified:" +document.lastModified +"</h5>") ; 
-</script>
+```
+Last-modified: Tue, 20 Jun 2023
+```
 
 Work in progress. ETA is the end of July.
 

@@ -5,10 +5,9 @@ date: 2022-01-10
 layout: post
 ---
 
-<script> 
-const lastMod = new Date(document.lastModified);
-document.write("<h5>Last-Modified:" +document.lastModified) +"</h5>"; 
-</script>
+```
+Last-modified: Tue, 20 Jun 2023
+```
 
 
 <script>
