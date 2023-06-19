@@ -7,6 +7,10 @@ layout: post
 ```
 Last-Modified: Mon, 19 Jun 2023
 ```
+<script> 
+document.write("Last-Modified: " +document.lastModified); 
+</script>
+
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
