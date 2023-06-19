@@ -7,7 +7,7 @@ layout: post
 
 <script> 
 const lastMod = new Date(document.lastModified);
-document.write("<h5>Last-Modified:</h5>" +document.lastModified); 
+document.write("<h5>Last-Modified:" +document.lastModified) +"</h5>"; 
 </script>
 
 
