@@ -7,7 +7,7 @@ layout: post
 
 <script> 
 const lastMod = new Date(document.lastModified);
-document.write("<h5>Last-Modified:" +document.lastModified) ; 
+document.write("<h5>Last-Modified:" +document.lastModified +"</h5>") ; 
 </script>
 
 Work in progress. ETA is the end of July.
