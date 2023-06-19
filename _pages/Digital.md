@@ -621,7 +621,7 @@ This lab is designed to introduce the logic and methodology behind building flow
 
 #### 1. Flows summary
 
-Here below a brief list of key aspects of any flow in Webex Connect 
+Here below a brief list of key aspects of any flow in Webex Connect:
 	- Flows can be freely build by the admin following customers’ requirement
 	- Flows can be located in any Service, the Admin is free to organize Flows and Services following the desired order and naming convention.
 	- Flows can be triggered by Assets, Events or Webhooks.
