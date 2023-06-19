@@ -12,7 +12,7 @@ layout: post
 | [Connect GUI overview](#lab122---connect-gui-overview) | Read & Understand     | EASY            | 15 min           |
 | [Engage GUI overview](#lab123---engage-gui-overview) | Read & Understand | EASY            | 15 min           |
 | [User Management in Connect](#lab124---user-management-in-connect) | Read & Understand + Practical Lab | EASY            | 10 min           |
-| [Digital Channels Pre-configuration](#lab125---digital-channels-pre-configuration) | Practical Lab | EASY            | 20 min           |
+| [Digital Channels Pre-configuration](#lab125---digital-channels-pre-configuration) | Practical Lab | EASY            | 15 min           |
 | [Flow Builder](#lab126---flow-builder) | Read & Understand | EASY            | 20 min           |
 | [Email Channel Configuration](#lab127---email-channel-configuration) | Practical Lab | EASY            | 25 min           |
 | [Chat Channel Configuration](#lab128---chat-channel-configuration) | Practical Lab | EASY            | 30 min           |
@@ -449,7 +449,6 @@ Connect allows the Owner to create local users in containers called **Groups** a
 | Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Node Authorization for Webex CC Task and Engage nodes](1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
-| [Retrieve and upload CA flows in Connect](2-retrieve-and-upload-ca-flows-in-connect)                                       | Practical Lab         | EASY                | 5 min                 |
 | [Setup agents in the Management Portal (Agents, Team, MMP)](3-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
 | [Setup RONA timers](4-setup-rona-timers) | Practical Lab         | EASY                | 5 min                 |
 
@@ -504,33 +503,7 @@ Webex Connect is required to provide a valid access token for using various Webe
 - Click back button for being redirected back to Integrations page. Verify that the status of the authorizations is changed to Authorized.  
 ![Authorize](/assets/images/DC_Lab_12.5_8.gif)
 
-## 2. Retrieve and upload CA flows in Connect
-
-Every tenant must include Channel Agnostic (CA) flows. CA flows can be imported from the template folder in this GitHub page. CA flow can be added only once and will be automatically be used by all existing channel specific flows in the tenant when needed. Recommended to add these flow in a dedicated Service named “Agnostic Flows - DO NOT MODIFY”
-The agnostic flows consist of:
-- Task Routed - Adding an agent participant to a conversation;
-- Task Modified - Adding an agent to or removing an agent from an ongoing conversation (e.g., for chat transfer or conference);
-- Task Close - Closing the conversation;
-1. Download all flows from the GitHub page.
-2. Navigate to Webex Connect Flows -> v2.1.
- ![GitHub](/assets/images/DC_Lab_12.5_9.gif)
-3. Unzip All Files.
-4. Login to the Webex Connect portal with the admin account.
-5. Navigate to Services and click on CREATE NEW SERVICE.
- ![NewService](/assets/images/DC_Lab_12.5_10.png)
-6. Set your name Agnostic Flows DO NOT MODIFY in the Service Name and press on CREATE button. This will create a new service.
-Note You can choose a different Service name. It is just an example.
-7. In the service click on FLOWS -> CREATE FLOW.
- ![Flow](/assets/images/DC_Lab_12.5_11.png)
-8. In the FLOW NAME section set Task Close Flow.
-9. In the METHOD select Upload a flow. In ATTACHMENT click on CHOOSE FILE and select the Task Close Flow.workflow file.
-10. Now you can click on CREATE button.
- ![NewFlow](/assets/images/DC_Lab_12.5_12.png)
-11. In the new menu click SAVE and then MAKE LIVE. On pop up window click on MAKE LIVE again.
- ![Save](/assets/images/DC_Lab_12.5_13.gif)
-12. Go back and repeat steps 7 - 11 for Task Routed flow and Task Modified Flow. Select the corresponding names.
-
-## 3. Setup agents in the Management Portal (Agents, Team, MMP)
+## 2. Setup agents in the Management Portal (Agents, Team, MMP)
 
 This step shows how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user.
 
@@ -590,7 +563,7 @@ The users have the following pre-configuration
   ![User](/assets/images/DC_Lab_12.5_17.png)
 - Please follow the same steps for Supervisor user.
 
-## 4. Setup RONA timers
+## 3. Setup RONA timers
 If an agent doesn’t answer a contact request, the contact request will return to the queue and the agent state will change to Redirection on No Answer (RONA). In this task, you will play with the feature that allows administrators to override the default RONA timeout values at the tenant level for every channel type to suit the business needs of the organization. The available channels are:
 - Telephony
 - Chat
@@ -646,26 +619,17 @@ This lab is designed to introduce the logic and methodology behind building flow
 
 ## Understanding Connect Flows
 
-#### 1. Flow Types
+#### 1. Flows summary
 
-Inside connect there are two types of flows:
-
-- Channel Agnostics (CA) Flows
-	- Every tenant must include the following CA flows:
-		- **Task Routed** – The flow is invoked automatically by the agent when accepting an incoming conversation on the agent desktop.
-		- **Task Modified** - The flow is invoked automatically by the agent when adding or removing an agent from an ongoing conversation on the agent desktop (e.g., for chat transfer or conference).
-		- **Close Task** - The flow is invoked automatically by the agent when closing an ongoing conversation on the agent desktop.
-	- These three CA flows are required to be added only once per tenant. 
-	   > Recommendation: Create and reserve a dedicated Service named “Agnostic Flows – DO NOT MODIFY” specifically for these 3 flows. Once the flows are added lock the service (from the Settings section) to avoid any accidental changes.
-	
-	- The latest version of the CA flows can be collected from CA flows can be imported from this [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels/tree/main/Webex%20Connect%20Flows/v2.1).
-- Channel Specific (CS) Flows
-	- CS flows can be freely build by the admin following customers’ requirement
-	- CS flows can be located in any Service, the Admin is free to organize Flows and Services following the desired order and naming convention.
-	- CS flows can be triggered by Assets, Events or Webhooks.
-	- Every time a customer sends a new message, the associated Asset and CS Flow are triggered from their starting node.
-	- CS flows do not automatically associate incoming messages from the same users as part of the same thread.
-	- As reference, CS sample flows for each digital channel can be imported from this GitHub page.
+Here below a brief list of key aspects of any flow in Webex Connect 
+	- Flows can be freely build by the admin following customers’ requirement
+	- Flows can be located in any Service, the Admin is free to organize Flows and Services following the desired order and naming convention.
+	- Flows can be triggered by Assets, Events or Webhooks.
+	- Flows are built using and connecting functional nodes to execute the desired behaviour
+	- Every time a customer sends a new message, the associated Asset and then Flow are triggered from their starting node.
+	- Connect flows introduce the concept of Conversation: whenever a user has to send multiple messages via a single channel, which have to be considered as part of the same thread, the system shall create a Conversation ID, so to map and present all the messages together (from the user and from the agent).
+	- Flows do not automatically associate incoming messages from the same users/customers as part of the same thread, a dedicate node is required to check 
+	- As reference, sample flows for each digital channel can be imported from the GitHub page (links in channels specific labs).
 
 #### 2. Create new flows
 
@@ -705,7 +669,7 @@ When using nodes’ Output Variables inside the configuration of other nodes, ad
 	<iframe src="https://app.vidcast.io/share/embed/de1a70ff-5016-4bf0-8915-ec8b11374ce3" width="100%" height="100%" title="node.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-#### 4. Building a new Channel Specific flow
+#### 4. Building a new flow
 
 As for any contact center flow, before proceeding building a new flow it’s always recommended to collect all the requirements as well as a draft of the intended workflow.  
 In addition to this, for the digital channels it’s crucial to distinguish the type of use for the flow: as mentioned in the chapter 1, Connect flows are executed from their starting node any time they are triggered
