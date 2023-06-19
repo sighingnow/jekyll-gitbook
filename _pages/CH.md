@@ -4,11 +4,10 @@ author: Dmitry Bokatov & Mike Turnbow
 date: 2022-01-10
 layout: post
 ---
-```
-Last-Modified: Mon, 19 Jun 2023
-```
+
 <script> 
-document.write("Last-Modified: " +document.lastModified); 
+const lastMod = new Date(document.lastModified);
+document.write("<h5>Last-Modified:</h5>" +document.lastModified); 
 </script>
 
 
