@@ -58,16 +58,15 @@ This lab is designed to introduce the audience to the digital channels (Webex Co
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## **1. Webex Connect architecture**
@@ -369,18 +368,15 @@ This lab is designed to introduce the Connect User Management structure. Through
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## **1. User Roles and Permissions**
@@ -466,17 +462,15 @@ In this Lab, we will go through the tasks that are required to complete the gene
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## Configuration Order
@@ -498,9 +492,10 @@ Webex Connect is required to provide a valid access token for using various Webe
  ![Manage](/assets/images/DC_Lab_12.5_5.gif)
 - On the Manage Integrations page, scroll down to the Node Authorizations section. This section lists all the authorizations mapped to this integration. Click Action → Add Authorization associated with the WxCC Authorisation, where Auth Type is oauth2 and Status is Authorization Pending.
  ![Authorization](/assets/images/DC_Lab_12.5_6.png)
-- Enter the Authorization Name (for example: WxCC Authorisation) and click Authorize. As the result the pop-up appears where you need to enter your Cisco admin email address (cl1adminXXX@email.carehybrid.com) and click Sign in.
+- Enter the Authorization Name (for example: WxCC Authorisation) and click Authorize. As the result the pop-up appears where you need to enter your Cisco admin email address and click Sign In.
  ![Authenticate](/assets/images/DC_Lab_12.5_7.png)
 - Click back button for being redirected back to Integrations page. Verify that the status of the authorizations is changed to Authorized.  
+
 ![Authorize](/assets/images/DC_Lab_12.5_8.gif)
 
 ## 2. Setup agents in the Management Portal (Agents, Team, MMP)
@@ -525,8 +520,8 @@ The users have the following pre-configuration
 | Team2               | Team2 |
 
 1. Create new MultiMedia Profile
-- Login to Management Portal by accessing https://portal.wxcc-us1.cisco.com/portal.
-- Enter the admin email address (cl1adminXXX@email.carehybrid.com) and click Sign in.
+- Login to Management Portal (link provided in the Introduction section).
+- Enter the Admin email address and click Sign in.
 - Click on Provisioning and select Multimedia Profiles.
 - Click on + New Multimedia Profile to open Multimedia Profile configuration page.
 - Input Name as MMP.
@@ -584,7 +579,7 @@ If an agent doesn’t answer a contact request, the contact request will return 
 #### Verification: Access to the Agent Desktop
 
 > Note: To log in to the agent desktop, use either a separate web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
-- Navigate to https://desktop.wxcc-us1.cisco.com/ in a new browser or in incognito mode.
+- Navigate to the Agent Desktop (link provided in the Introduction section) in a new browser or in incognito mode.
 - Enter the agent’s email ID cl1agent**\<ID\>**@email.carehybrid.com.
 - Enter the Password for the appropriate Username.
 - In the Station Login pane, select “Extension” and put any number, for instance 1000.
@@ -730,23 +725,20 @@ In this lab you will be configuring **Gmail** Account settings, Email Assets, En
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received Email account credentials.
-3. You have successfully completed the previous Lab12.5 **Preconfiguration**.
+3. You have successfully completed the previous Lab12.5 **Pre-configuration**.
 
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Gmail: **[https://mail.google.com](https://mail.google.com)**\
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## Configuration Order
@@ -1034,17 +1026,15 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. \[Optional\] Create a service
@@ -1381,17 +1371,15 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Facebook Page configuration
@@ -1627,30 +1615,28 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 - WxCC Portal, Agent Desktop and Webex connect URL
 - Admin credentials to complete configurations in WxCC portal and Webex connect.
 - Agent Credentials to Handle the Chat
-- SMS number procurement process should be completed (Please work with your PSAM)
+- **SMS number procurement process should be completed (Please work with your PSM)**
 - SMS number should be assigned in your Webex Conenct tenant
 
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. SMS number procurement
 
 - SMS Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant
 - SMS Numbers are not assigned by default to any of the WxCC tenants.
-- Please note that Partners have to go through a procurement process and work with your respective PSAM to enable SMS and get numbers assigned to the gold tenant
+- Please note that Partners have to go through a procurement process and work with your respective PSM to enable SMS and get numbers assigned to the gold tenant
 - Once the procurement process is completed, SMS Numbers are assigned to the tenant by the backend operations team
 - Please complete this step before proceeding further.
 
@@ -1754,23 +1740,21 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 1. You received an admin credentials to configure in Management Portal and Webex Connect.
 2. You received the WhatsApp number associated with your tenant.
-3. You have successfully completed the previous Lab12.5 **Preconfiguration**
-4. **Note**: WhatsApp Numbers cannot be procured directly from the Webex Contact Center integrated Webex Connect tenant. For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.
+3. You have successfully completed the previous Lab12.5 **Pre-configuration**
+4. **WhatsApp Numbers cannot be procured directly from the Webex Contact Center integrated Webex Connect tenant (please work with your PSM). Note: For production use, please note that customers will have to work with Partners to go through a procurement process to enable WhatsApp and get numbers assigned to the tenant.**
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**\  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**\  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**\  
-> Workflows: **[GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels)**\
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\ 
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Verify WhatsApp Number Assignment
@@ -2366,16 +2350,15 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Navigate to BOT Builder and Create bot
@@ -2445,16 +2428,15 @@ In this lab we will be creating a Task Bot using the Bot Builder in Webex Connec
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Create a new Task Bot
@@ -2607,16 +2589,15 @@ Option 2: Custom Event – Allows you to trigger rules or flows associated with 
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Introduction to Event Scheduler
@@ -2904,16 +2885,15 @@ In this lab, we will explore how an Inbound Webhook can be used to generate an e
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Create an Inbound Webhook
@@ -3010,7 +2990,7 @@ Request Body:
 
 #### Lab Objective
 
-This section is designed to introduce troubleshooting capabilites available for digital channels in Webex Connect platform. In addition there examples of the most common issues and the ways of how to fix them.
+This section is designed to introduce troubleshooting capabilities available for digital channels in Webex Connect platform. In addition there examples of the most common issues and the ways of how to fix them.
 
 #### Pre-requisite
 
@@ -3022,7 +3002,7 @@ This section is designed to introduce troubleshooting capabilites available for 
 
 ## 1. Understanding of Webex Connect troubleshooting capabilities
 
->**Note:** Please check and make sure all configuration steps for digital channel have been completed succesfully before start troubleshooting it.
+>**Note:** Please check and make sure all configuration steps for digital channel have been completed successfully before start troubleshooting it.
 
 There are the following troubleshooting capabilities available for the administrator to troubleshoot issues in digital channels provided by Webex Connect:
 -  Export Logs tool
@@ -3031,7 +3011,7 @@ Let's consider how we can use both of them.
 
 #### 1.1. Export Logs tool
 
-This tool allows Webex Connect admin to download inbound and outbound log events as XLSX file for any Service / Asset / Digital Channel for desired timefrrame. The we can inspect this file to check, for example, whether the message was received or sent by corresponding component of Webex Connect platform.
+This tool allows Webex Connect admin to download inbound and outbound log events as XLSX file for any Service / Asset / Digital Channel for desired timeframe. The we can inspect this file to check, for example, whether the message was received or sent by corresponding component of Webex Connect platform.
 
 Please login to Connect Portal, then go to ***Tools*** -> ***Export Logs*** to access the tool.
 
@@ -3047,7 +3027,7 @@ Let's download all incoming messages received via ***Chat_Asset*** for the last 
 
 ![DC_Lab.12.19_Export_Logs_2](/assets/images/DC_Lab_12.19._Export_Logs_2.png)
 
-After the log file has been downloaded, we can open the file and see all inbound events, incliding timestamps, IDs and message text. We can use the file to check whether specific message rom the end user has been received by Webex Connect via selected Number or App (asset).
+After the log file has been downloaded, we can open the file and see all inbound events, including timestamps, IDs and message text. We can use the file to check whether specific message rom the end user has been received by Webex Connect via selected Number or App (asset).
 
 ![DC_Lab.12.19_Export_Logs_3](/assets/images/DC_Lab_12.19._Export_Logs_3.png)
 
@@ -3357,17 +3337,15 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-> Cisco Doc: **[Official Documentation](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/SetupandAdministrationGuide_2/b_mp-release-2/wxcc-new-digital-channels.html#Cisco_Generic_Topic.dita_47ceb6a2-e47c-4639-9a2c-dcde742cec2f-4)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Login to Webex Connect portal
@@ -3491,16 +3469,15 @@ Both variables are transferable between flows. In the second part of this lab in
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Fetching and Reporting Global Variable
