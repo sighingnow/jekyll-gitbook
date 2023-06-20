@@ -4,6 +4,12 @@ author: Dmitry Bokatov & Mike Turnbow
 date: 2022-01-10
 layout: post
 ---
+
+```
+Last-modified: Tue, 20 Jun 2023
+```
+
+
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
 	Object.entries(them).forEach((entry) => {
@@ -72,10 +78,12 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 # Introduction to the new Admin Experience
 
-> The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following video outlines the first portion of a new admin experience. This feature introduces, the new left navigation panel for Webex Contact Center in Control Hub.
+> The overall aim of admin consolidation is to provide a single pane of glass (SPOG) experience for administrators so that admins need not have frequent context switch by having to traverse different applications. The following video outlines the new features of a new admin experience. This introduces, the new left navigation panel for Webex Contact Center in Control Hub as well as other configuration settings which were migrated from the Management Portal.
+
+
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/53a2b628-e015-4fa2-89e8-b2c7a5a2ff03" width="100%" height="100%" title="February 06, 2023 at 4:59 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/8c40da99-5967-465a-8efb-092949d76c73" width="100%" height="100%" title="Introduction to the new Admin Experience" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 
@@ -84,7 +92,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 > The following video outlines the process to manage different types of users to the Customer tenant. Following the steps, you will add new users and set the Calling extension. While adding the user, we will see how to select user roles.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/715d21da-91cf-4890-82c9-c60da5c5e883" width="100%" height="100%" title="February 06, 2023 at 4:59 PM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/715d21da-91cf-4890-82c9-c60da5c5e883" width="100%" height="100%" title="Control Hub User Management Tasks" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 
