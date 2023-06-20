@@ -58,16 +58,15 @@ This lab is designed to introduce the audience to the digital channels (Webex Co
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## **1. Webex Connect architecture**
