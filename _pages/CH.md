@@ -5,7 +5,36 @@ date: 2022-01-10
 layout: post
 ---
 
-<script> document.addEventListener("DOMContentLoaded", function() { var lastModified = document.lastModified; var formattedDate = new Date(lastModified).toLocaleString("en-US", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" }); var container = document.createElement("div"); container.style.fontFamily = "Arial, sans-serif"; container.style.fontSize = "18px"; container.style.margin = "20px"; container.style.padding = "10px"; container.style.border = "1px solid #ccc"; container.style.backgroundColor = "#f9f9f9"; container.style.textAlign = "center"; var label = document.createElement("span"); label.textContent = "Last modified: "; container.appendChild(label); var dateElement = document.createElement("span"); dateElement.textContent = formattedDate; container.appendChild(dateElement); document.body.appendChild(container); }); </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var lastModified = document.lastModified;
+  var formattedDate = new Date(lastModified).toLocaleString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  var container = document.createElement("div");
+  container.style.fontFamily = "Arial, sans-serif";
+  container.style.fontSize = "18px";
+  container.style.margin = "20px";
+  container.style.padding = "10px";
+  container.style.border = "1px solid #ccc";
+  container.style.backgroundColor = "#f9f9f9";
+  container.style.textAlign = "center";
+
+  var label = document.createElement("span");
+  label.textContent = "Last modified: ";
+  container.appendChild(label);
+
+  var dateElement = document.createElement("span");
+  dateElement.textContent = formattedDate;
+  container.appendChild(dateElement);
+
+  document.body.appendChild(container);
+});
+</script>
 
 ```
 Last-modified: Tue, 20 Jun 2023
