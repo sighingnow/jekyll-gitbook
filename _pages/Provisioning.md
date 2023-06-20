@@ -17,10 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
   container.style.fontFamily = "Arial, sans-serif";
   container.style.fontSize = "18px";
   container.style.margin = "20px";
-  container.style.padding = "10px";
-  container.style.border = "1px solid #ccc";
-  container.style.backgroundColor = "#f9f9f9";
-  container.style.textAlign = "center";
+  container.style.padding = "10px";  
+  container.style.backgroundColor = "#f9f9f9";  
 
   var label = document.createElement("span");
   label.textContent = "Last modified: ";

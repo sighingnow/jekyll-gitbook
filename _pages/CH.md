@@ -19,10 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
   container.style.fontFamily = "Arial, sans-serif";
   container.style.fontSize = "18px";
   container.style.margin = "20px";
-  container.style.padding = "10px";
-  container.style.border = "1px solid #ccc";
-  container.style.backgroundColor = "#f9f9f9";
-  container.style.textAlign = "center";
+  container.style.padding = "10px";  
+  container.style.backgroundColor = "#f9f9f9";  
 
   var label = document.createElement("span");
   label.textContent = "Last modified: ";
@@ -78,7 +76,7 @@ Last-modified: Tue, 20 Jun 2023
 | ----------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
 | [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience)        | Watch & Understand | EASY   |  4 min        |
 | [Control Hub User Management Tasks](#control-hub-user-management-tasks)       | Practical Lab | EASY             | 10 min           |
-| [Management Portal User Configuration](#management-portal-user-configuration) | Practical Lab | EASY             | 5 min            |
+| [Contact Center User Configuration](#contact-center-user-configuration) | Practical Lab | EASY             | 5 min            |
 | [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY             | 5 min            |
 | [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY             | 10 min           |
 
@@ -102,7 +100,6 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 ### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com){:target="\_blank"}**\
-> Portal: **[https://portal.wxcc-us1.cisco.com/](https://portal.wxcc-us1.cisco.com/){:target="\_blank"}**\
 > Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com){:target="\_blank"}**\
 
 ## Lab Section
@@ -220,7 +217,7 @@ update()
 
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
-# Management Portal User Configuration
+# Contact Center User Configuration
 
 > The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Configuration and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
