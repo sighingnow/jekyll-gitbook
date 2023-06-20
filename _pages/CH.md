@@ -5,9 +5,12 @@ date: 2022-01-10
 layout: post
 ---
 
-
- <p>Last Modified1: {{ .Lastmod.Format "2 January 2006" }}</p>
-{{ git_page_last_updated }}
+<script>
+if (Date.parse(document.lastModified) != 0)
+    document.write('<p><hr><small><i>Last modified: '
+                   + document.lastModified
+                   + '</i></small>');
+</script>
 
 ```
 Last-modified: Tue, 20 Jun 2023
