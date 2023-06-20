@@ -492,9 +492,10 @@ Webex Connect is required to provide a valid access token for using various Webe
  ![Manage](/assets/images/DC_Lab_12.5_5.gif)
 - On the Manage Integrations page, scroll down to the Node Authorizations section. This section lists all the authorizations mapped to this integration. Click Action → Add Authorization associated with the WxCC Authorisation, where Auth Type is oauth2 and Status is Authorization Pending.
  ![Authorization](/assets/images/DC_Lab_12.5_6.png)
-- Enter the Authorization Name (for example: WxCC Authorisation) and click Authorize. As the result the pop-up appears where you need to enter your Cisco admin email address (cl1adminXXX@email.carehybrid.com) and click Sign in.
+- Enter the Authorization Name (for example: WxCC Authorisation) and click Authorize. As the result the pop-up appears where you need to enter your Cisco admin email address and click Sign In.
  ![Authenticate](/assets/images/DC_Lab_12.5_7.png)
 - Click back button for being redirected back to Integrations page. Verify that the status of the authorizations is changed to Authorized.  
+
 ![Authorize](/assets/images/DC_Lab_12.5_8.gif)
 
 ## 2. Setup agents in the Management Portal (Agents, Team, MMP)
@@ -519,8 +520,8 @@ The users have the following pre-configuration
 | Team2               | Team2 |
 
 1. Create new MultiMedia Profile
-- Login to Management Portal by accessing https://portal.wxcc-us1.cisco.com/portal.
-- Enter the admin email address (cl1adminXXX@email.carehybrid.com) and click Sign in.
+- Login to Management Portal (link provided in the introduction section).
+- Enter the Admin email address and click Sign in.
 - Click on Provisioning and select Multimedia Profiles.
 - Click on + New Multimedia Profile to open Multimedia Profile configuration page.
 - Input Name as MMP.
