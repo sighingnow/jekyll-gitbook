@@ -368,18 +368,15 @@ This lab is designed to introduce the Connect User Management structure. Through
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## **1. User Roles and Permissions**
@@ -465,17 +462,15 @@ In this Lab, we will go through the tasks that are required to complete the gene
 #### Quick Links
 
 > Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
-> Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)**\
+> US Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
+> US Agent Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> UK Portal: **[https://portal.wxcc-eu1.cisco.com/portal](https://portal.wxcc-eu1.cisco.com/portal)**  
+> UK Agent Desktop: **[https://desktop.wxcc-eu1.cisco.com](https://desktop.wxcc-eu1.cisco.com/)**  
+> EMEA Portal: **[https://portal.wxcc-eu2.cisco.com/portal](https://portal.wxcc-eu2.cisco.com/portal)**  
+> EMEA Agent Desktop: **[https://desktop.wxcc-eu2.cisco.com](https://desktop.wxcc-eu2.cisco.com/)**  
+> ANZ Portal: **[https://portal.wxcc-anz1.cisco.com/portal](https://portal.wxcc-anz1.cisco.com/portal)**  
+> ANZ Agent Desktop: **[https://desktop.wxcc-anz1.cisco.com](https://desktop.wxcc-anz1.cisco.com/)**  
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
-
-
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## Configuration Order
@@ -1626,7 +1621,7 @@ This lab is designed to complete required SMS configurations in Webex Connect. Y
 - WxCC Portal, Agent Desktop and Webex connect URL
 - Admin credentials to complete configurations in WxCC portal and Webex connect.
 - Agent Credentials to Handle the Chat
-- SMS number procurement process should be completed (Please work with your PSAM)
+- SMS number procurement process should be completed (Please work with your PSM)
 - SMS number should be assigned in your Webex Conenct tenant
 
 #### Quick Links
@@ -1649,7 +1644,7 @@ Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSu
 
 - SMS Numbers cannot be procured directly from the WxCC integrated Webex Connect tenant
 - SMS Numbers are not assigned by default to any of the WxCC tenants.
-- Please note that Partners have to go through a procurement process and work with your respective PSAM to enable SMS and get numbers assigned to the gold tenant
+- Please note that Partners have to go through a procurement process and work with your respective PSM to enable SMS and get numbers assigned to the gold tenant
 - Once the procurement process is completed, SMS Numbers are assigned to the tenant by the backend operations team
 - Please complete this step before proceeding further.
 
