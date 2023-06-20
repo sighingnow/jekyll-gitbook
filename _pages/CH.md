@@ -5,13 +5,6 @@ date: 2022-01-10
 layout: post
 ---
 
-<script>
-if (Date.parse(document.lastModified) != 0)
-    document.write('<p><hr><small><i>Last modified: '
-                   + document.lastModified
-                   + '</i></small>');
-</script>
-
 ```
 Last-modified: Tue, 20 Jun 2023
 ```
