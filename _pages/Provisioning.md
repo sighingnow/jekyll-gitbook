@@ -4,33 +4,7 @@ author: Yaroslav Bondar & Abdul Iraqi
 date: 2022-01-01
 layout: post
 ---
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var lastModified = document.lastModified;
-  var formattedDate = new Date(lastModified).toLocaleString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
 
-  var container = document.createElement("div");
-  container.style.fontFamily = "Arial, sans-serif";
-  container.style.fontSize = "18px";
-  container.style.margin = "20px";
-  container.style.padding = "10px";  
-  container.style.backgroundColor = "#f9f9f9";  
-
-  var label = document.createElement("span");
-  label.textContent = "Last modified: ";
-  container.appendChild(label);
-
-  var dateElement = document.createElement("span");
-  dateElement.textContent = formattedDate;
-  container.appendChild(dateElement);
-
-  document.body.appendChild(container);
-});
-</script>
 
 ## Webex Contact Center Provisioning
 This is a supportive videos that do not require any actions since your tenant is already provisioned. Videos demonstrate the initial provisioning tasks for New Webex Contact Center as well as applying production subscriptions to existing organzations.

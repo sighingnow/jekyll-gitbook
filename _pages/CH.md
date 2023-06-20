@@ -6,33 +6,8 @@ layout: post
 ---
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  var lastModified = document.lastModified;
-  var formattedDate = new Date(lastModified).toLocaleString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
-  var container = document.createElement("div");
-  container.style.fontFamily = "Arial, sans-serif";
-  container.style.fontSize = "18px";
-  container.style.margin = "20px";
-  container.style.padding = "10px";  
-  container.style.backgroundColor = "#f9f9f9";  
-
-  var label = document.createElement("span");
-  label.textContent = "Last modified: ";
-  container.appendChild(label);
-
-  var dateElement = document.createElement("span");
-  dateElement.textContent = formattedDate;
-  container.appendChild(dateElement);
-
-  document.body.appendChild(container);
-});
-</script>
+ <p>Last Modified1: {{ .Lastmod.Format "2 January 2006" }}</p>
+{{ git_page_last_updated }}
 
 ```
 Last-modified: Tue, 20 Jun 2023
@@ -398,6 +373,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 ### 3. Agent Desktop Login
 
 > **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
+> Depending on your tenant's location the agent ULR link can be different. The example below is for the US DC.
 {: .block-tip }
 
 - Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the different browser or in incognito mode.
