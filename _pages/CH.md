@@ -5,6 +5,8 @@ date: 2022-01-10
 layout: post
 ---
 
+<script> document.addEventListener("DOMContentLoaded", function() { var lastModified = document.lastModified; var formattedDate = new Date(lastModified).toLocaleString("en-US", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" }); var container = document.createElement("div"); container.style.fontFamily = "Arial, sans-serif"; container.style.fontSize = "18px"; container.style.margin = "20px"; container.style.padding = "10px"; container.style.border = "1px solid #ccc"; container.style.backgroundColor = "#f9f9f9"; container.style.textAlign = "center"; var label = document.createElement("span"); label.textContent = "Last modified: "; container.appendChild(label); var dateElement = document.createElement("span"); dateElement.textContent = formattedDate; container.appendChild(dateElement); document.body.appendChild(container); }); </script>
+
 ```
 Last-modified: Tue, 20 Jun 2023
 ```
@@ -191,10 +193,10 @@ update()
 
 # Management Portal User Configuration
 
-> The following video outlines how to access the management portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Management Portal and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
+> The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Configuration and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/dd077d51-a8f1-4e01-9f52-da3ce1c65cf3" width="100%" height="100%" title="February 07, 2023 at 10:22 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/84f8c6ad-5812-4e8b-85e6-935c49f1fcc3" width="100%" height="100%" title="February 07, 2023 at 10:22 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 | **Entity**          | **Name**                                                |
@@ -205,72 +207,68 @@ update()
 
 
 
-> **NOTE:** the **Attendee ID** should be provided with the admin credentionals. You can share your tenant and dial number with your colleagues so they can do the configuration in parallel. In that case, the **Attendee ID** is the same for all of you, but you can add a sub prefix with the number. \_Ex: attendeeID**1**\_MMP, attendeeID**2**\_MMP, etc.
+> **NOTE:** If you are using the **Lab Tenant** the **Attendee ID** should be user as a prefix in the name for all your configurations.
 > {: .block-tip }
 
 ### 1. Create new Multimedia Profile
 
-- Login with admin credentionals to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
+- Login with admin credentials to Control Hub by accessing [https://admin.webex.com](https://admin.webex.com){:target="\_blank"}.
 
 - In the left pane navigate to **_Contact Center_** card.
 
 - Click **_Settings_** in the upper menu.
 
-- Scroll down to the **_Advanced Configuration_** section and click on **_Go to Webex Contact Center Management Portal_**.
+- Scroll down in the left navigation panel to the **_DESKTOP EXPERIENCE_** section and click on **_Multimedia Profiles_**.
 
-- Ensure that browser pop up blockers are not blocking the **_Admin Portal_** pop up.
-
-- In the Management Portal click on **_Provisioning_** and select **_Multimedia Profiles_**.
-
-- Click on `+ New Multimedia Profile` to open Multimedia Profile configuration page.
+- Click on `Create Multimedia Profile` button.
 
 - Input Name as **<w class="attendee_out">Your_Attendee_ID</w>_MMP**.
 
-- In the Media Details section, select the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, and click **_Save_**.
+- In the Media Details section, leave the **Blended** mode and input `1` for **_Voice_**, `3` for **_Chat_**, `3` for **_Email_**, `3` for **_Social_**, and click **_Create_** button in the lower right corner.
 
 ### 2. Create new Site
 
-- Navigate to **_Provisioning_** and select **_Site_**.
+- Navigate to **_USER MANAGEMENT_** in the left navigation panel and select **_Sites_**.
 
-- Click on `+ New Site` button and provide the Name as **<w class="attendee_out">Your_Attendee_ID</w>_Site**.
+- Click on `Create Site` button and provide the Name as **<w class="attendee_out">Your_Attendee_ID</w>_Site**.
 
-- Select your MMP in the **_Multimedia Profile_** drop down list and hit **_Save_**.
+- Select your MMP in the **_Multimedia profile_** drop down list and hit **_Create_**.
 
 ### 3. Create new Team
 
-- Navigate to **_Provisioning_** and select **_Team_**.
+- Navigate to **_Teams_** under the **_USER MANAGEMENT_**.
 
-- Click on `+ New Team`.
-
-- Select you site from the _Site_ drop-down.
+- Click on `Create Team`.
 
 - Input _Name_ as **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
-- Use the default **_Type_** `Agent Based`.
+- Select your site from the **_Parent Site_** drop-down.
 
-- Select your MMP in the _Multimedia Profile_ drop-down.
+- Select the **_team type_** `Agent Based`.
 
-- Left as a default value **_Global Layout_** in the **_Desktop Layout_** drop-down and **_Save_** the configuration.
+- Select your **_Multimedia profile_**.
 
-### 4. Activate users in the Management Portal
+- Left as a default value **_Global Layout_** in the **_Desktop layout_** drop-down and click on **_Create_** button.
 
-- Click on **_Provisioning_** and select **_Users_**.
+### 4. Activate the Contact Center Settings for the users 
 
-- Click on `...` for the agent, to launch the **_Edit_** view for a particular User configuration.
+- Navigate to **_Contact Center Users_** under the **_USER MANAGEMENT_**.
+
+- Find your and select the agent, to launch the **_Edit_** view for a particular User configuration.
 
 - Click on **_Contact Center Enabled_** toggle to move it to **_On_**.
 
 - In the **_Agent Settings_** section, select your site in the **_Site_** drop-down.
 
-- Click the **_Teams_** area and select your team1
+- Click the **_Teams_** area and select your team
 
-- Select the default **_Agent-Profile_** in the **_Agent Profile_** drop-down list.
+- Select the default **_Agent-Profile_** in the **_Desktop Profile_** drop-down list.
 
 - Choose the **_Multimedia Profile_** and hit **_Save_**.
 
-- Make sure that the user are now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
+- In the User's table make sure that the agent is now shown with the **_Contact Center Enabled_** flag as `Yes` and **_Status_** as `Active`.
 
-- Repeat the same steps as above for your supervisor.
+- Repeat the steps above for the supervisor.
 
 # Bulk Operations
 
