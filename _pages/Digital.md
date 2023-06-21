@@ -4,7 +4,9 @@ author: Davide Telari, Yurii Ulianov, Iranthi Ulluwishewa, David Ng, Naveen Kuma
 date: 2022-12-12
 layout: post 
 ---
-
+```
+Last modified: Tue, 20 Jun 2023
+```
 
 | Topic                                                                                                                        | Lab Type          | Dificulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |

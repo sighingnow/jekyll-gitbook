@@ -5,6 +5,10 @@ date: 2022-02-02
 category: Jekyll
 layout: post
 ---
+```
+Last modified: Thu, 13 Apr 2023
+```
+
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
 	Object.entries(them).forEach((entry) => {

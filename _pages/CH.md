@@ -4,11 +4,9 @@ author: Dmitry Bokatov & Mike Turnbow
 date: 2022-01-10
 layout: post
 ---
-
 ```
-Last-modified: Tue, 20 Jun 2023
+Last modified: Wed, 21 Jun 2023
 ```
-
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
