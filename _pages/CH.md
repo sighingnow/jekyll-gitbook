@@ -43,7 +43,7 @@ Last modified: Wed, 21 Jun 2023
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience)        | Watch & Understand | EASY   |  4 min        |
+| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience)        | Watch & Understand | EASY   |  10 min        |
 | [Control Hub User Management Tasks](#control-hub-user-management-tasks)       | Practical Lab | EASY             | 10 min           |
 | [Contact Center User Configuration](#contact-center-user-configuration) | Practical Lab | EASY             | 5 min            |
 | [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY             | 5 min            |
