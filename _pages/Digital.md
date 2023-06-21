@@ -947,7 +947,7 @@ Now create a new client ID that will be used to identify your application to Goo
 ## 4. Create/Upload Email flow
 
 - Download the email flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
-- Navigate to **Webex Connect Flows** -> **v2.1** -> **Email Inbound Flow.workflow.zip**, select the zip file and click download.
+- Navigate to **Webex Connect Flows** -> **v3.0** ->**Template** -> **Media Specific Workflows** -> **Email Inbound Flow.workflow.zip**, select the zip file and click download.
 - Unzip the downloaded file.
 - Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
 - In the service click on **FLOWS** -> **CREATE FLOW** .
@@ -1498,7 +1498,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 - Download the default Facebook Inbound flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
 
-- Navigate to **Webex Connect Flows** -> **v2.1** -> **Facebook Inbound Flow.workflow.zip**, select the zip file and click download.
+- Navigate to **Webex Connect Flows** -> **v3.0** ->**Template** -> **Media Specific Workflows** -> **Facebook Inbound Flow.workflow.zip**, select the zip file and click download.
 
 - Unzip the downloaded file.
 
@@ -1835,7 +1835,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 ## 4. Create/Upload WhatsApp flow
 
 - Download the WhatsApp flow from the [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
-- Navigate to **Webex Connect Flows** -> **v2.1** -> **WAB Inbound Flow.workflow.zip**, select the zip file and click download.
+- Navigate to **Webex Connect Flows** -> **v3.0** ->**Template** -> **Media Specific Workflows** -> **Whatsapp Inbound Flow.workflow.zip**, select the zip file and click download.
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow1.png)
 
