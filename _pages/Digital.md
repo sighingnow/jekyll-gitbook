@@ -1843,7 +1843,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 - Go to Webex Connect, click on **Services** and select the service in which the Asset is created in step 2. It should be **My First Service**
 - In the service click on **FLOWS** -> **CREATE FLOW** 
 - Enter the **FLOW NAME** as **WhatsApp Inbound Flow**, select the **TYPE** as **Work Flow** and under **METHOD** select **Upload a flow**.
-- Drag and drop the **WAB Inbound Flow.workflow** flow that is downloaded in zip file, click **CREATE**
+- Drag and drop the **Whatsapp Inbound Flow.workflow** flow that is downloaded in zip file, click **CREATE**
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow2.png)
 
