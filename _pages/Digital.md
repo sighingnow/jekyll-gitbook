@@ -1690,7 +1690,7 @@ From the left side pane, click on Assets ---> Numbers
 
 - Open the Resolve Conversation Node in the flow. Select the flow id from the URL and enter it in the Flow ID box and click Save.
   
-  /assets/images/12.10.8.1.png
+  ![12.10.8.1](/assets/images/12.10.8.1.png)
 
 - Open the Queue Task Node in the flow. Select the Queue that you created in an earlier step and click Save.
 
