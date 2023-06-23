@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "2b96db1c85a1d1b0",
+    "id": "ca6a5ec3317615e3",
     "type": "split",
     "children": [
       {
-        "id": "6b8e2ae14d809a53",
+        "id": "e510214da0b56d69",
         "type": "tabs",
         "children": [
           {
-            "id": "bf0e46d9f8344ffa",
+            "id": "9c15bc5ea1ebd71a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d35d7d2760903b00",
+    "id": "1bd231aa8923c2ca",
     "type": "split",
     "children": [
       {
-        "id": "b904510c2d8f6148",
+        "id": "ce591a503ed8dc2b",
         "type": "tabs",
         "children": [
           {
-            "id": "6d83404b99e823e7",
+            "id": "9db5c9c95ea6fdae",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "154e5d91bb109dde",
+            "id": "ffa0452ab9d7918a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "30de95335cb0ffbe",
+            "id": "06a25a89a1b1334d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,15 +72,15 @@
     "width": 300
   },
   "right": {
-    "id": "db252349f5a462c3",
+    "id": "f9a07793818d315d",
     "type": "split",
     "children": [
       {
-        "id": "8e95abd543c3efa5",
+        "id": "90653c02181925b6",
         "type": "tabs",
         "children": [
           {
-            "id": "c993d251bc6ae840",
+            "id": "f4b4b8e851567de3",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -97,7 +97,7 @@
             }
           },
           {
-            "id": "5367d6ae76711240",
+            "id": "a55fc16fceb41ecf",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -109,7 +109,7 @@
             }
           },
           {
-            "id": "abbb389a58524ac2",
+            "id": "13bafabc786db610",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,7 +120,7 @@
             }
           },
           {
-            "id": "554a3b91d7f170ec",
+            "id": "f1bd54cba50b9934",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -146,12 +146,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6d83404b99e823e7",
-  "lastOpenFiles": [
-    "webexcc.github.io/assets/images/12.10.6.png",
-    "webexcc.github.io/assets/images/1.jpg",
-    "webexcc.github.io/_pages/Digital.md",
-    "webexcc.github.io/assets/images/12.10.6.png",
-    "Untitled.md"
-  ]
+  "active": "9c15bc5ea1ebd71a",
+  "lastOpenFiles": []
 }
