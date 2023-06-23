@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/CH.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/CH.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/CH.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Digital.md"
+                "file": "_pages/CH.md"
               }
             }
           }
@@ -146,13 +146,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6da6a18c56dd0565",
+  "active": "5bd257f1c78189bf",
   "lastOpenFiles": [
-    "assets/images/12.10.8.png",
-    "assets/images/12.10.9.png",
-    "assets/images/12.10.8.1.png",
-    "assets/images/12.10.8.1.png.md",
+    "assets/images/SSO/13.png",
+    "assets/images/SSO/12.png",
+    "assets/images/SSO/10.png",
+    "assets/images/SSO/9.png",
+    "assets/images/SSO/8.png",
+    "assets/images/SSO/7.png",
+    "assets/images/SSO/6.png",
+    "assets/images/SSO/5.png",
+    "assets/images/SSO/4.png",
+    "assets/images/SSO/3.png",
+    "assets/images/SSO/2.png",
+    "_pages/CH.md",
+    "assets/images/Single.md",
+    "assets/images/SSO",
+    "_pages/Provisioning.md",
+    "_pages/API.md",
+    "_pages/Calabrio.md",
+    "_pages/CRM.md",
+    "_pages/WxM.md",
+    "_pages/Supervisor.md",
+    "_pages/IVR.md",
+    "_pages/CCAI.md",
+    "_pages/Analyzer.md",
+    "_pages/Agent.md",
+    "_pages/Acqueon.md",
     "_pages/Digital.md",
-    "_pages/Provisioning.md"
+    "assets/images/12.10.8.1.png.md"
   ]
 }
