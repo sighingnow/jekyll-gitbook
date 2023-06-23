@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "b9408004dd229d3e",
+    "id": "07fc17ca93b5b6c5",
     "type": "split",
     "children": [
       {
-        "id": "6510cda243ba9af6",
+        "id": "d1b072783b9f9a59",
         "type": "tabs",
         "children": [
           {
-            "id": "6da6a18c56dd0565",
+            "id": "b3cad041c1fc580a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "290453320634218f",
+    "id": "b44b47cbcf6d8a13",
     "type": "split",
     "children": [
       {
-        "id": "bbbb98026cf224d3",
+        "id": "41ea0a95800710c6",
         "type": "tabs",
         "children": [
           {
-            "id": "5bd257f1c78189bf",
+            "id": "036e0849be9b9f6c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,22 +43,30 @@
             }
           },
           {
-            "id": "e60fa62fdbcb8ec1",
+            "id": "a2ffb5f67a6c27a0",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "a14a954e9a02ef2c",
+            "id": "b3ae6579da03fd9d",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "554d6a73cf97af59",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,15 +80,15 @@
     "width": 300
   },
   "right": {
-    "id": "2ed0d71e009ca26e",
+    "id": "14c50c79c8d5810e",
     "type": "split",
     "children": [
       {
-        "id": "573e90e9d7e15b40",
+        "id": "376a4db61ac65b32",
         "type": "tabs",
         "children": [
           {
-            "id": "8587f595e35d5a5e",
+            "id": "413e46a65e2bc9e5",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -97,7 +105,7 @@
             }
           },
           {
-            "id": "387b18eec1bdc6da",
+            "id": "4bff4cc19e252010",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -109,7 +117,7 @@
             }
           },
           {
-            "id": "8567b967c6cb02b6",
+            "id": "2fc897b5b7e0644d",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,7 +128,7 @@
             }
           },
           {
-            "id": "46225efc8a07f66e",
+            "id": "e2652a385d1ed9cb",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -128,13 +136,21 @@
                 "file": "_pages/CH.md"
               }
             }
+          },
+          {
+            "id": "a81ac30bcea33a16",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,14 +159,13 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5bd257f1c78189bf",
+  "active": "b3cad041c1fc580a",
   "lastOpenFiles": [
-    "assets/images/SSO/13.png",
-    "assets/images/SSO/12.png",
-    "assets/images/SSO/10.png",
+    "assets/images/Single.md",
     "assets/images/SSO/9.png",
     "assets/images/SSO/8.png",
     "assets/images/SSO/7.png",
@@ -159,21 +174,36 @@
     "assets/images/SSO/4.png",
     "assets/images/SSO/3.png",
     "assets/images/SSO/2.png",
-    "_pages/CH.md",
-    "assets/images/Single.md",
+    "assets/images/SSO/13.png",
+    "assets/images/SSO/12.png",
     "assets/images/SSO",
-    "_pages/Provisioning.md",
-    "_pages/API.md",
-    "_pages/Calabrio.md",
-    "_pages/CRM.md",
     "_pages/WxM.md",
     "_pages/Supervisor.md",
+    "_pages/Provisioning.md",
     "_pages/IVR.md",
-    "_pages/CCAI.md",
-    "_pages/Analyzer.md",
-    "_pages/Agent.md",
-    "_pages/Acqueon.md",
     "_pages/Digital.md",
-    "assets/images/12.10.8.1.png.md"
+    "_pages/CRM.md",
+    "_pages/CH.md",
+    "_pages/CCAI.md",
+    "_pages/Acqueon.md",
+    "_pages/Agent.md",
+    "_pages/Analyzer.md",
+    "_pages/API.md",
+    "_pages/Calabrio.md",
+    "assets/images/OnboardingProcess",
+    "assets/images/mailinator-1.gif.md",
+    "Untitled.canvas",
+    "assets/gitbook/form.js.md",
+    "assets/files/flow_template.json.zip",
+    "assets/files/ESD_default_layout.json.zip",
+    "support.md",
+    "files/ESD_default_layout.json.md",
+    "files",
+    "assets/images/IVR",
+    "assets/files/lab_wav.zip",
+    "assets/files/flow_template.json",
+    "assets/files/ESD_default_layout.json",
+    "assets/files",
+    "README.md"
   ]
 }

@@ -41,14 +41,15 @@ Last modified: Wed, 21 Jun 2023
 
 ## Table of Contents
 
-| Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
-| ----------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience)        | Watch & Understand | EASY   |  10 min        |
-| [Control Hub User Management Tasks](#control-hub-user-management-tasks)       | Practical Lab | EASY             | 10 min           |
-| [Contact Center User Configuration](#contact-center-user-configuration) | Practical Lab | EASY             | 5 min            |
-| [Bulk Operations](#bulk-operations)                                           | Practical Lab | EASY             | 5 min            |
-| [Single Sign-on- OKTA IdP ](#single-sign-on)                                  | Practical Lab | MID              | 15 min           |
-| [Access to the Agent Desktop](#access-to-the-agent-desktop)                   | Practical Lab | EASY             | 10 min           |    
+| Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |     |     |     |     |
+| ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- | --- | --- | --- | --- |
+| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience) | Watch & Understand | EASY             | 10 min           |     |     |     |     |
+| [Control Hub User Management Tasks](#control-hub-user-management-tasks)               | Practical Lab      | EASY             | 10 min           |     |     |     |     |
+| [Contact Center User Configuration](#contact-center-user-configuration)               | Practical Lab      | EASY             | 5 min            |     |     |     |     |
+| [Bulk Operations](#bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |     |     |     |     |
+| [Access to the Agent Desktop](#access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |     |     |     |     |
+| [Bonus: Single Sign-on- OKTA IdP ](#bonus-single-sign-on)                                          | Practical Lab      | MID              | 15 min           |     |     |     |     |
+                                                                                      |                    |                  |                  |     |     |     |     |
 
 
 ## Overview of the lab:
@@ -332,62 +333,6 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 - In the Management Portal directly associate the **<w class="attendee_out">Your_Attendee_ID</w>_Team2** with your agent and supervisor by adding your users to that team (__Advanced Settings -> Agents__).
 
 
-# Single Sign-on -OKTA IdP
-
-In this section you will learn how to use the Bulk Configuration in Control Hub by creating a second team. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. This feature provides greater speed and efficiency to deploy and configure Webex Contact Center systems.
-
-- From the customer view in [https://admin.webex.com](https://admin.webex.com/), go to Management > Organization Settings, and then scroll to Authentication, and then toggle on the Single sign-on setting to start the setup wizard.
-
-- Select SAML as the identity provider and click Next.
-
-![SSO1](/assets/images/SSO/1.png)
-
--  Choose the self signed by Cisco certificate and download the metadata and click Next.
-
-![SSO2](/assets/images/SSO/2.png)
-
-- Sign in to the Okta Tenant (example.okta.com, where example is your company or organization name) as an administrator, go to Applications, and then click Browse App Catalog. Search for "Cisco Webex" and add the application to your tenant.
-
-![SSO4](/assets/images/SSO/4.png)
-
-- Click Next and then click SAML 2.0.
-
-- In your browser, open the metadata file that you downloaded from Control Hub. Copy the URLs for the **entityID** (at the top of the file) and the **assertionConsumerService location** (at the bottom of the file)
-
-![SSO5](/assets/images/SSO/5.png)
-![SSO6](/assets/images/SSO/6.png)
-
--On the **Cisco Webex** tab in Okta, click on **Sign On** and then click on edit.Scroll to **Advanced Sign-on Settings**, and then paste the Entity ID and Assertion Consumer Service values that you copied from the Control Hub metadata file and then save changes.
-
-![SSO7](/assets/images/SSO/7.png)
-
-- Click **Sign On** and then download the Okta metadata file. You'll import this file back into your Control Hub instance
-
-![SSO8](/assets/images/SSO/8.png)
-
-
-- Click **Assignments**, choose all the users and any relevant groups that you want to associate with apps and services managed in Control Hub, click **Assign** and then click **Done**.
-
-![SSO9](/assets/images/SSO/9.png)
-
-- Return back to Contro Hub.If Control Hub is no longer open in the browser tab, from the customer view in [https://admin.webex.com](https://admin.webex.com/), go to Management > Organization Settings, scroll to Authentication, and then choose Actions > Import Metadata
-
-- On the Import IdP Metadata page, either drag and drop the IdP metadata file onto the page or use the file browser option to locate and upload the metadata file. Click Next.
-
-![SSO10](/assets/images/SSO/10.png)
- - At the next page just click Next
-
-- Select **Test SSO setup**, and when a new browser tab opens, authenticate with the IdP by signing in.
-
-![SSO12](/assets/images/SSO/12.png)
-
-
-- Return to the Control Hub browser tab. If the test was successful, select Successful test. Turn on SSO and click Next.
-
-![SSO13](/assets/images/SSO/13.png)
-
-***Congratulations! You have successfully turned on SSO for your tenant***
-
 # Access to the Agent Desktop
 
 > By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number where you want to receive the calls.
@@ -446,7 +391,67 @@ In this section you will learn how to use the Bulk Configuration in Control Hub 
 ![Agent Sign In](/assets/images/AG-2.gif)
 
 
-Now you can continue with the next section.
+Now you can continue with Lab 2 or try the bonus SSO task below.
+
+# Bonus: Single Sign-on -OKTA IdP
+
+>In this section you will learn how to enable Single sign-on (SSO) in Control Hub. It enables users to sign in to Webex securely by authenticating to your organizations common identity provider (IdP). The Webex App uses the Webex service to communicate with the Webex Platform Identity Service. The identity service authenticates with your identity provider (IdP)
+
+> **NOTE:** Please skip that task If you are using the **Lab Tenant**, this task can be configured only on your Gold Tenant. Inform other users on your tenant since the non SSO accounts will be deactivated.
+> {: .block-warning }
+ 
+- From the customer view in [https://admin.webex.com](https://admin.webex.com/), go to Management > Organization Settings, and then scroll to Authentication, and then toggle on the Single sign-on setting to start the setup wizard.
+
+- Select SAML as the identity provider and click Next.
+
+![SSO1](/assets/images/SSO/1.png)
+
+-  Choose the self signed by Cisco certificate and download the metadata and click Next.
+
+![SSO2](/assets/images/SSO/2.png)
+
+- Sign in to the Okta Tenant (example.okta.com, where example is your company or organization name) as an administrator, go to Applications, and then click Browse App Catalog. Search for "Cisco Webex" and add the application to your tenant.
+
+![SSO4](/assets/images/SSO/4.png)
+
+- Click Next and then click SAML 2.0.
+
+- In your browser, open the metadata file that you downloaded from Control Hub. Copy the URLs for the **entityID** (at the top of the file) and the **assertionConsumerService location** (at the bottom of the file)
+
+![SSO5](/assets/images/SSO/5.png)
+![SSO6](/assets/images/SSO/6.png)
+
+-On the **Cisco Webex** tab in Okta, click on **Sign On** and then click on edit.Scroll to **Advanced Sign-on Settings**, and then paste the Entity ID and Assertion Consumer Service values that you copied from the Control Hub metadata file and then save changes.
+
+![SSO7](/assets/images/SSO/7.png)
+
+- Click **Sign On** and then download the Okta metadata file. You'll import this file back into your Control Hub instance
+
+![SSO8](/assets/images/SSO/8.png)
+
+
+- Click **Assignments**, choose all the users and any relevant groups that you want to associate with apps and services managed in Control Hub, click **Assign** and then click **Done**.
+
+![SSO9](/assets/images/SSO/9.png)
+
+- Return back to Contro Hub.If Control Hub is no longer open in the browser tab, from the customer view in [https://admin.webex.com](https://admin.webex.com/), go to Management > Organization Settings, scroll to Authentication, and then choose Actions > Import Metadata
+
+- On the Import IdP Metadata page, either drag and drop the IdP metadata file onto the page or use the file browser option to locate and upload the metadata file. Click Next.
+
+![SSO10](/assets/images/SSO/10.png)
+ - At the next page just click Next
+
+- Select **Test SSO setup**, and when a new browser tab opens, authenticate with the IdP by signing in.
+
+![SSO12](/assets/images/SSO/12.png)
+
+
+- Return to the Control Hub browser tab. If the test was successful, select Successful test. Turn on SSO and click Next.
+
+![SSO13](/assets/images/SSO/13.png)
+
+***Congratulations! You have successfully turned on SSO for your tenant***
+
 
 ---
 
