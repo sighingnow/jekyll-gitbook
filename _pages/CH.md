@@ -41,15 +41,14 @@ Last modified: Wed, 21 Jun 2023
 
 ## Table of Contents
 
-| Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |     |     |     |     |
-| ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- | --- | --- | --- | --- |
-| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience) | Watch & Understand | EASY             | 10 min           |     |     |     |     |
-| [Control Hub User Management Tasks](#control-hub-user-management-tasks)               | Practical Lab      | EASY             | 10 min           |     |     |     |     |
-| [Contact Center User Configuration](#contact-center-user-configuration)               | Practical Lab      | EASY             | 5 min            |     |     |     |     |
-| [Bulk Operations](#bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |     |     |     |     |
-| [Access to the Agent Desktop](#access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |     |     |     |     |
-| [Bonus: Single Sign-on- OKTA IdP ](#bonus-single-sign-on)                                          | Practical Lab      | MID              | 15 min           |     |     |     |     |
-                                                                                      |                    |                  |                  |     |     |     |     |
+| Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |
+| ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
+| [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience) | Watch & Understand | EASY             | 10 min           |
+| [Control Hub User Management Tasks](#control-hub-user-management-tasks)               | Practical Lab      | EASY             | 10 min           |
+| [Contact Center User Configuration](#contact-center-user-configuration)               | Practical Lab      | EASY             | 5 min            |
+| [Bulk Operations](#bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |
+| [Access to the Agent Desktop](#access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |
+| [Bonus: Single Sign-on- OKTA IdP ](#bonus-single-sign-on)                             | Practical Lab (optional)      | MID              | 15 min           |
 
 
 ## Overview of the lab:
