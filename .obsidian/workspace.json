@@ -1,22 +1,18 @@
 {
   "main": {
-    "id": "ca6a5ec3317615e3",
+    "id": "b9408004dd229d3e",
     "type": "split",
     "children": [
       {
-        "id": "e510214da0b56d69",
+        "id": "6510cda243ba9af6",
         "type": "tabs",
         "children": [
           {
-            "id": "9c15bc5ea1ebd71a",
+            "id": "6da6a18c56dd0565",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "webexcc.github.io/_pages/Digital.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -25,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1bd231aa8923c2ca",
+    "id": "290453320634218f",
     "type": "split",
     "children": [
       {
-        "id": "ce591a503ed8dc2b",
+        "id": "bbbb98026cf224d3",
         "type": "tabs",
         "children": [
           {
-            "id": "9db5c9c95ea6fdae",
+            "id": "5bd257f1c78189bf",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +39,7 @@
             }
           },
           {
-            "id": "ffa0452ab9d7918a",
+            "id": "e60fa62fdbcb8ec1",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +54,7 @@
             }
           },
           {
-            "id": "06a25a89a1b1334d",
+            "id": "a14a954e9a02ef2c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,20 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "f9a07793818d315d",
+    "id": "2ed0d71e009ca26e",
     "type": "split",
     "children": [
       {
-        "id": "90653c02181925b6",
+        "id": "573e90e9d7e15b40",
         "type": "tabs",
         "children": [
           {
-            "id": "f4b4b8e851567de3",
+            "id": "8587f595e35d5a5e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "webexcc.github.io/_pages/Digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +92,18 @@
             }
           },
           {
-            "id": "a55fc16fceb41ecf",
+            "id": "387b18eec1bdc6da",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "webexcc.github.io/_pages/Digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "13bafabc786db610",
+            "id": "8567b967c6cb02b6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,13 +114,11 @@
             }
           },
           {
-            "id": "f1bd54cba50b9934",
+            "id": "46225efc8a07f66e",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "webexcc.github.io/_pages/Digital.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,6 +138,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9c15bc5ea1ebd71a",
+  "active": "6da6a18c56dd0565",
   "lastOpenFiles": []
 }
