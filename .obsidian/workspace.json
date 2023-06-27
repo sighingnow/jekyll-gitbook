@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "07fc17ca93b5b6c5",
+    "id": "959b6129c00a7ae4",
     "type": "split",
     "children": [
       {
-        "id": "d1b072783b9f9a59",
+        "id": "1c30d1758de1937d",
         "type": "tabs",
         "children": [
           {
-            "id": "b3cad041c1fc580a",
+            "id": "ba075c8f89507347",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/Digital.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b44b47cbcf6d8a13",
+    "id": "6479f561f1efcfa6",
     "type": "split",
     "children": [
       {
-        "id": "41ea0a95800710c6",
+        "id": "00cc1e748905b356",
         "type": "tabs",
         "children": [
           {
-            "id": "036e0849be9b9f6c",
+            "id": "c7612fa5af166412",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,22 +43,22 @@
             }
           },
           {
-            "id": "a2ffb5f67a6c27a0",
+            "id": "f108f4661fe85b81",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "b3ae6579da03fd9d",
+            "id": "afb6dbcf62d731ac",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -66,7 +66,7 @@
             }
           },
           {
-            "id": "554d6a73cf97af59",
+            "id": "2101a99d9b305e7d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -80,20 +80,20 @@
     "width": 300
   },
   "right": {
-    "id": "14c50c79c8d5810e",
+    "id": "162a2ea39a4b5a54",
     "type": "split",
     "children": [
       {
-        "id": "376a4db61ac65b32",
+        "id": "82a3438c937c1b24",
         "type": "tabs",
         "children": [
           {
-            "id": "413e46a65e2bc9e5",
+            "id": "9bc4ed7e5225dd8e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/Digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,19 +105,19 @@
             }
           },
           {
-            "id": "4bff4cc19e252010",
+            "id": "2bdc5a4a20df43f3",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/Digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "2fc897b5b7e0644d",
+            "id": "6d562acf09cd09c8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -128,29 +128,21 @@
             }
           },
           {
-            "id": "e2652a385d1ed9cb",
+            "id": "a5331ebe04c6c059",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/CH.md"
+                "file": "_pages/Digital.md"
               }
             }
-          },
-          {
-            "id": "a81ac30bcea33a16",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -159,12 +151,15 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "b3cad041c1fc580a",
+  "active": "ba075c8f89507347",
   "lastOpenFiles": [
+    "assets/images/12.21_8.png",
+    "_pages/Digital.md",
+    "assets/images/mailinator-1.gif.md",
+    "assets/images/mailinator-1.gif",
     "assets/images/Single.md",
     "assets/images/SSO/9.png",
     "assets/images/SSO/8.png",
@@ -175,35 +170,28 @@
     "assets/images/SSO/3.png",
     "assets/images/SSO/2.png",
     "assets/images/SSO/13.png",
-    "assets/images/SSO/12.png",
     "assets/images/SSO",
-    "_pages/WxM.md",
+    "assets/images/OnboardingProcess",
+    "assets/files/flow_template.json.zip",
+    "assets/files/ESD_default_layout.json.zip",
+    "Untitled.canvas",
     "_pages/Supervisor.md",
     "_pages/Provisioning.md",
+    "conflict-files-obsidian-git.md",
+    "files/ESD_default_layout.json.md",
+    "files",
+    "_pages/Acqueon.md",
+    "assets/files/ESD_default_layout.json",
+    "README.md",
+    "_pages/WxM.md",
     "_pages/IVR.md",
-    "_pages/Digital.md",
     "_pages/CRM.md",
     "_pages/CH.md",
     "_pages/CCAI.md",
-    "_pages/Acqueon.md",
-    "_pages/Agent.md",
-    "_pages/Analyzer.md",
-    "_pages/API.md",
     "_pages/Calabrio.md",
-    "assets/images/OnboardingProcess",
-    "assets/images/mailinator-1.gif.md",
-    "Untitled.canvas",
-    "assets/gitbook/form.js.md",
-    "assets/files/flow_template.json.zip",
-    "assets/files/ESD_default_layout.json.zip",
-    "support.md",
-    "files/ESD_default_layout.json.md",
-    "files",
-    "assets/images/IVR",
-    "assets/files/lab_wav.zip",
-    "assets/files/flow_template.json",
-    "assets/files/ESD_default_layout.json",
-    "assets/files",
-    "README.md"
+    "_pages/Analyzer.md",
+    "_pages/Agent.md",
+    "assets/images/DC_Lab_12.12._Create_Connect_6.png.md",
+    "assets/images/DC_Lab_12.8._Verify_1.png.md"
   ]
 }
