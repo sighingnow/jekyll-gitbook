@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/IVR.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/IVR.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/IVR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/CH.md"
+                "file": "_pages/IVR.md"
               }
             }
           },
@@ -159,12 +159,13 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "b3cad041c1fc580a",
+  "active": "036e0849be9b9f6c",
   "lastOpenFiles": [
+    "_pages/CH.md",
+    "_pages/IVR.md",
     "assets/images/Single.md",
     "assets/images/SSO/9.png",
     "assets/images/SSO/8.png",
@@ -180,10 +181,8 @@
     "_pages/WxM.md",
     "_pages/Supervisor.md",
     "_pages/Provisioning.md",
-    "_pages/IVR.md",
     "_pages/Digital.md",
     "_pages/CRM.md",
-    "_pages/CH.md",
     "_pages/CCAI.md",
     "_pages/Acqueon.md",
     "_pages/Agent.md",
