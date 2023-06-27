@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6cec455a217805ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Digital.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           }
@@ -154,10 +167,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba075c8f89507347",
+  "active": "6cec455a217805ad",
   "lastOpenFiles": [
-    "assets/images/12.21_8.png",
     "_pages/Digital.md",
+    "conflict-files-obsidian-git.md",
+    "assets/images/12.21_8.png",
     "assets/images/mailinator-1.gif.md",
     "assets/images/mailinator-1.gif",
     "assets/images/Single.md",
@@ -169,7 +183,6 @@
     "assets/images/SSO/4.png",
     "assets/images/SSO/3.png",
     "assets/images/SSO/2.png",
-    "assets/images/SSO/13.png",
     "assets/images/SSO",
     "assets/images/OnboardingProcess",
     "assets/files/flow_template.json.zip",
@@ -177,7 +190,6 @@
     "Untitled.canvas",
     "_pages/Supervisor.md",
     "_pages/Provisioning.md",
-    "conflict-files-obsidian-git.md",
     "files/ESD_default_layout.json.md",
     "files",
     "_pages/Acqueon.md",
