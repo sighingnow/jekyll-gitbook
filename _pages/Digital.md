@@ -3226,9 +3226,9 @@ The error ***""description":"Chat ID provided does not exist","event":"conversat
 
 ## Table of Contents
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Adding a Custom Node](1#adding-a-custom-node) | Practical Lab | MED           | 15 min           |
+| [Adding a Custom Node](#1-adding-a-custom-node) | Practical Lab | MED           | 15 min           |
 | [Demo](#2-demo) | Read & Understand | EASY          | 15 min           |
 
 ## Introduction
