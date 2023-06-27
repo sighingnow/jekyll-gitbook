@@ -8,7 +8,7 @@ layout: post
 Last modified: Tue, 20 Jun 2023
 ```
 
-| Topic                                                                                                                        | Lab Type          | Dificulty Level | Estimated length |
+| Topic                                                                                                                        | Lab Type          | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Architecture Overview and Provisioning](#lab121---architecture-overview-and-provisioning) | Read & Understand + Practical Lab     | EASY            | 15 min           |
 | [Connect GUI overview](#lab122---connect-gui-overview) | Read & Understand     | EASY            | 15 min           |
@@ -40,7 +40,7 @@ Last modified: Tue, 20 Jun 2023
 
 ## **Table of Contents**
 
-| Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                                                 | Lab Type | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Webex Connect architecture](#1-webex-connect-architecture)                           | Read & Understand         | EASY                | 5 min                 |
 | [Webex Connect provisioning](#2-webex-connect-provisioning)                           | Practical Lab         | EASY                | 5 min                 |
@@ -147,7 +147,7 @@ Users in Engage are automatically synchronized with Webex Control Hub.
 
 ## **Table of Contents**
 
-| Topic                                                             | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                             | Lab Type | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Overview of Connect menu items](#overview-of-connect-menu-items) | Read & Understand         | EASY                | 15 min                 |
 
@@ -255,7 +255,7 @@ The Settings session allows the administrator to review and manage users and tea
 
 ## **Table of Contents**
 
-| Topic                                                           | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                           | Lab Type | Difficulty Level | Estimated length |
 | --------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Overview of Engage menu items](#overview-of-engage-menu-items) | Read & Understand         | EASY                | 15 min                 |
 
@@ -348,7 +348,7 @@ Within the setting section the administrator can control some additional useful 
 
 ## **Table of Contents**
 
-| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [User Roles and Permissions](#1-user-roles–and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
 | [Users organization](#2-users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
@@ -444,7 +444,7 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 ## Table of Contents
 
-| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Node Authorization for Webex CC Task and Engage nodes](1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
 | [Setup agents in the Management Portal (Agents, Team, MMP)](3-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
@@ -598,7 +598,7 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 ## Table of Contents
 
-| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Understanding Connect Flows](understanding-connect-flows)                       | Read & Understand         | EASY                | 20 min                 |
 
@@ -706,7 +706,7 @@ Once a flow is set to go live, it will take approx. 2 minute before showing the 
 
 ## Table of Contents
 
-| Topic                                                                            | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Gmail account configuration](#1-gmail-account-configuration) | Practical Lab | EASY | 5 min |
 | [Create Email Asset and Register to WebeXCC](#2-create-email-asset-and-register-to-webexcc)  | Practical Lab | EASY | 5 min |
@@ -995,7 +995,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ## Table of Contents
 
-| Topic                                                                     | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                     | Lab Type      | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [\[Optional\] Create a service](#1-optional-create-a-service)            | Practical Lab | EASY            | 3 min            |
 | [Configure and Register Chat Asset](#2-configure-and-register-chat-asset) | Practical Lab | EASY            | 3 min            |
@@ -1346,7 +1346,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ## Table of Contents
 
-| Topic                                                                                 | Lab Type | Dificulty Level | Estimated length |
+| Topic                                                                                 | Lab Type | Difficulty Level | Estimated length |
 | ------------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Facebook Page configuration](#1-facebook-page-configuration)                           | Practical Lab         | EASY                | 5 min                 |
 | [Facebook Messenger Asset creation and Register to Webex CC](#2-facebook-messenger-asset-creation-and-register-to-webex-cc)                           | Practical Lab         | EASY                | 5 min                 |
@@ -1600,7 +1600,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ## Table of Contents
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [SMS number procurement](#1-sms-number-procurement)                           | Practical Lab         | EASY                | 5 min                 |
 | [Create SMS Asset and Register to WebexCC](#2-create-sms-asset-and-register-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
@@ -1725,7 +1725,7 @@ From the left side pane, click on Assets ---> Numbers
 ## Table of Contents
 
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Verify WhatsApp Number Assignment](#1-verify-whatsapp-number-assignment)                           | Practical Lab         | EASY                | 5 min                 |
 | [WhatsApp Asset registration to WebexCC](#2-whatsapp-asset-registration-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
@@ -1915,7 +1915,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ## Table of Contents
 
-| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| Topic                                                                   | Lab Type          | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding Connect Templates](#1-understanding-connect-templates)             | Read & Understand | EASY            | 5 min            |
 | [Create Chat Templates in Connect](#2-create-chat-templates-in-connect)                       | Read & Understand     | EASY            | 5 min            |
@@ -2011,7 +2011,7 @@ Let's create SMS template which notifies end user after incoming request over SM
 
 ## Table of Contents
 
-| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| Topic                                                                   | Lab Type          | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding Engage Templates](#1-understanding-engage-templates)             | Read & Understand | EASY            | 5 min            |
 | [\[Optional\] Create Engage Template Group](#2-optional-create-engage-template-group)                       | Read & Understand     | EASY            | 5 min            |
@@ -2156,7 +2156,7 @@ Here are few key points to note about Engage templates which provide better unde
 
 ## Table of Contents
 
-| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| Topic                                                                   | Lab Type          | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding Connect Bots](#1-understanding-connect-bots)             | Read & Understand | MED            | 5 min            |
 | [Access and navigation](#2-access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
@@ -2329,7 +2329,7 @@ Provide version control over all changes the administrator applies on that speci
 
 ## Table of Contents
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Navigate to BOT Builder and Create bot](#1-navigate-to-bot-builder-and-create-bot) | Practical Lab | MED          | 5 min           |
 | [Preview](#2-preview) | Practical Lab | MED          | 5 min           |
@@ -2409,7 +2409,7 @@ This lab is designed to complete a new QnA bot creation, new article creation an
 
 ## Table of Contents
 
-| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| Topic                                                                   | Lab Type          | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Create a new Task Bot](#1-create-a-new-task-bot)             | Practical Lab | HARD            | 10 min            |
 | [Add the Task Bot to your flow](#2-add-the-task-bot-to-your-flow)                       | Practical Lab     | HARD            | 15 min            |
@@ -2565,7 +2565,7 @@ Time to test your new configuration:
 
 ## Table of Contents
 
-| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| Topic                                                                   | Lab Type          | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Introduction to Event Scheduler](#1-introduction-to-event-scheduler)             | Read & Understand | HARD            | 5 min            |
 | [Schedule SMS Event](#2-schedule-sms-event)                       | Practical Lab     | HARD            | 5 min            |
@@ -2863,7 +2863,7 @@ Custom Events use source files containing data that will be used by flows when s
 
 ## Table of Contents
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
 | [Creating a voice flow in flow control](#2-creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
@@ -2982,7 +2982,7 @@ Request Body:
 
 ## Table of Contents
 
-| Topic                                                                   | Lab Type          | Dificulty Level | Estimated length |
+| Topic                                                                   | Lab Type          | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding of Webex Connect troubleshooting capabilities](#1-understanding-of-webex-connect-troubleshooting-capabilities)             | Read & Understand | MED            | 15 min            |
 | [Debugging a flow](#2-debugging-a-flow)                       | Read & Understand     | MED            | 15 min            |
@@ -3317,9 +3317,9 @@ Here a quick Demo via calling EP into Webhook to invoke custom node to update Wx
 
 ## Table of Contents
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow1) | Practical Lab | MED           | 15 min           |
+| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
 | [Creating an Event in Webex Engage Portal](#2-creating-an-event-in-webex-engage-portal)| Practical Lab | MED           | 10 min           |
 | [Test the Event Trigger](#3-test-the-event-trigger) | Practical Lab | EASY          | 5 min           |
 
@@ -3351,7 +3351,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 
-## 1. Creating an Inbound webhook flow
+## 1. Creating an Inbound Webhook flow
 
 - Login to Webex Connect portal. From Left column, navigate to Assets--> Integrations
 
@@ -3448,7 +3448,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 
 ## Table of Contents
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Fetching and Reporting Global variable](#1-fetching-and-reporting-global-variable) | Practical Lab | MED           | 15 min           |
 | [Configuring Flow variables](#2-configuring-flow-variables)| Practical Lab | MED           | 15 min           |
