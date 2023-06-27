@@ -3351,9 +3351,9 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
 
-## 1. Login to Webex Connect portal
+## 1. Creating an Inbound webhook flow
 
--   From Left column, navigate to Assets--> Integrations
+- Login to Webex Connect portal. From Left column, navigate to Assets--> Integrations
 
 ![12.21_1](/assets/images/12.21_1.png)
 

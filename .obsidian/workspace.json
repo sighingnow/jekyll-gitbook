@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#2-creating-an-event-in-webex-engage-portal",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -149,6 +149,8 @@
   },
   "active": "87ed3694b7aab2ba",
   "lastOpenFiles": [
+    "_pages/CRM.md",
+    "_pages/Digital.md",
     "assets/images/Single.md",
     "assets/images/SSO/9.png",
     "assets/images/SSO/8.png",
@@ -160,8 +162,6 @@
     "assets/images/SSO/2.png",
     "assets/images/SSO/13.png",
     "assets/images/SSO/12.png",
-    "assets/images/SSO",
-    "_pages/CRM.md",
-    "_pages/Digital.md"
+    "assets/images/SSO"
   ]
 }
