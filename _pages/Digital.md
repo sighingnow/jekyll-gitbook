@@ -1225,7 +1225,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 >***Note***: Chat Inbound Flow is triggered whenever end user started new chat session or sent a message via existing one.
 
 -  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
--  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Inbound Flow.workflow.zip*** and click ***Download***.
+-  Goto to ***Webex Connect Flows*** -> ***v3.0*** -> ***Template*** -> ***Media Specific Workflows*** -> ***Live Chat Inbound Flow.workflow.zip*** and click ***Download***.
 -  Unzip the file.
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
 -  In the service click on **Flows** -> **Create Flow** .
@@ -1245,19 +1245,13 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 ![DC_Lab.12.8_Create_Flow_4](/assets/images/DC_Lab_12.8._Create_Flow_4.png)
 
--  In the ***Receive*** node also, select the same ***Chat_Template*** in ***Form Template*** drop-down list and save changes.
+-  In the ***Receive*** node also, select the same ***Chat_Template*** in ***Form Template*** drop-down list.
 
 ![DC_Lab.12.8_Create_Flow_5](/assets/images/DC_Lab_12.8._Create_Flow_5.png)
 
--  In ***Create Task*** node check and make sure the values of parameters in ***Customer Details*** section corresponds to the values of the same parameters under ***Receive*** -> ***InApp - Form Response*** section. Then save the node.
+- Go to ***Transition Actions (Optional)*** tab of ***Receive*** node, check and make sure the values of ***customerName*** and ***customerEmail***  variables corresponds to the names of web chat template fields in ***Output Variables*** -> ***Receive*** -> ***InApp - Form Response*** section on the right pane. Correct the values if needed and save the node.
 
->***Note:*** If you need to modify values in ***Customer Details*** section, please do it manually by copying them from the table below. Please ***DO NOT*** modify the values in ***Customer Details*** section by clicking on parameters under ***Receive*** -> ***InApp - Form Response*** section.
-
-| **Parameter Name**   | **Parameter Value**                        |
-| ---------------- | -------------------------------------- |
-| Customer ID      | $(n38.inappmessaging.formFields.Email) |
-| Customer Name    | $(n38.inappmessaging.formFields.Name)  |
-| LIVECHAT USER ID | $(n38.inappmessaging.formFields.Email) |
+>***Note***: The value of each variable has the following format: ***$(NodeID.OutputVariableName)***. In our case NodeID is 2438 (you can find it in the left bottom corner of ***Receive*** window), ***OutputVariableName*** is just exact name from ***Output Variables*** -> ***Receive*** -> ***InApp - Form Response*** section on the right pane.
 
 ![DC_Lab.12.8_Create_Flow_6](/assets/images/DC_Lab_12.8._Create_Flow_6.png)
 

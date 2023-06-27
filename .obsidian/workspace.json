@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6cec455a217805ad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "_pages/Digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "_pages/Digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "_pages/Digital.md"
               }
             }
           }
@@ -167,10 +154,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6cec455a217805ad",
+  "active": "ba075c8f89507347",
   "lastOpenFiles": [
-    "_pages/Digital.md",
     "conflict-files-obsidian-git.md",
+    "_pages/Digital.md",
     "assets/images/12.21_8.png",
     "assets/images/mailinator-1.gif.md",
     "assets/images/mailinator-1.gif",
