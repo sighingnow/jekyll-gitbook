@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "e87a0c247ed2cfa6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "_pages/Digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "_pages/Digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "_pages/Digital.md"
               }
             }
           }
@@ -167,10 +154,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e87a0c247ed2cfa6",
+  "active": "ba075c8f89507347",
   "lastOpenFiles": [
-    "_pages/Digital.md",
     "conflict-files-obsidian-git.md",
+    "_pages/Digital.md",
     "assets/images/DC_Lab_12.8._Create_Flow_8_2.png",
     "assets/images/DC_Lab_12.8._Create_Flow_8_1.png",
     "assets/images/DC_Lab_12.8._Create_Flow_7_1.png",
