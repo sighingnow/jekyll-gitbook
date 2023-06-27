@@ -1272,7 +1272,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Flow_8_2](/assets/images/DC_Lab_12.8._Create_Flow_8_2.png)
 
 -  Click on ***Save*** button on top right corner to save the entire flow.
--  Finally click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
+-  Click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
 >***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please close Make Live window, open it one more time, select the asset again and press ***Make Live*** button one more time.
 
@@ -1284,7 +1284,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 >***Note***: Chat Close Flow is triggered every time whenever the end user closed the conversation thread from the widget.
 
 -  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
--  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download.***
+-  Go to ***Webex Connect Flows*** -> ***v3.0*** -> ***Template*** -> ***Media Specific Workflows*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download.***
 -  Unzip the file.
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
 -  In the service click on **Flows** -> **Create Flow**.
@@ -1298,9 +1298,9 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Closed_Flow_2](/assets/images/DC_Lab_12.8._Create_Closed_Flow_2.png)
 
 -  Click on ***Save*** button on top right corner to save the entire flow.
--  Finally click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click on ***Make Live***. Wait around 2-3 minutes until flow goes live.
+-  Click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click on ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
->***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
+>***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please close Make Live window, open it one more time, select the asset again and press ***Make Live*** button one more time.
 
 ![DC_Lab.12.8_Create_Closed_Flow_3](/assets/images/DC_Lab_12.8._Create_Closed_Flow_3.png)
 
