@@ -6,14 +6,15 @@ category: Jekyll
 layout: post
 ---
 
-## Formatting Guide for Writing User Guide
+## User Guide Formatting: Best Practices and Guidelines
 
 This style guide provides guidelines for writing user guide documentation for Rapyuta Robotics. It aims to ensure consistency and readability across the documentation.
 
 ### Headings
 
 - Use appropriate heading levels to structure the content.
-- Use title case for all headings
+- Use title case for all headings upto level 3
+- Use sentence case for level 4 heading
 
 -   1.  ==========  for title
     2.  ----------  for the second level
@@ -32,7 +33,7 @@ This style guide provides guidelines for writing user guide documentation for Ra
   Third Level
   ~~~~~~~~~~~
  
-  Fourth Level
+  Fourth level
   """""""""""
   ```   
 
@@ -46,9 +47,9 @@ Example: "Rapyuta Robotics provides a Graphical User Interface (GUI) for easy na
 
 ### Bold and Italics
 
-- Use **bold** to highlight UI elements, buttons, menus selections, tabs
-- Use *italics* when introducing new terms for the first time, page or screen names
-
+- Use **bold** to highlight UI elements, buttons, menus selections, tabs, modal window. 
+- Use *italics* when introducing new terms for the first time, page or screen names.
+- When referring to a UI element, it is important to use the case as used in the actual user interface. 
 
 ### Code 
 
@@ -102,9 +103,9 @@ Events may be retrieved using the ``GET /v1/events/`` API endpoint.
 
 ### Figures
 
-- When including figures or images in the documentation, follow these guidelines:
+When including figures or images in the documentation, follow these guidelines:
 - Use a meaningful alt text for accessibility.
-- Use sentence case for figure names
+- Use sentence case for figure names.
 - Example:
 
   ```
@@ -119,20 +120,19 @@ Events may be retrieved using the ``GET /v1/events/`` API endpoint.
 
 #### Ordered Lists
 
-- Should be numbered
-- Start each list item with a capital letter.
+- Use `#` for ordered lists.
+- Use sentence case for lists.
 - To be used to denote a series of steps or sequential items
 
 #### Unordered Lists
 
-- Use `#` for unordered lists
-- Start each list item with a capital letter.
-
+- Use `-` for unordered lists.
+- Use sentence case for lists.
 
 ### Notes/Cautions/Admonitions
 
 - The `.. note::` shortcode is used to display a note to the reader.
-- The `.. note::` shortcode should be follow the exact structure (line space, tab space) as below:
+- The `.. note::` shortcode should be follow this syntax (line space, tab space). For example, 
   
   ```
    .. note::
@@ -157,10 +157,10 @@ When creating tables, follow these guidelines:
 - Example:
   
   ```
-  Table 1: Sample Table
+  Table 1: Sample table
 
   | Column 1 | Column 2 |
   |----------|----------|
-| Data 1   | Data 2   |
+  | Data 1   | Data 2   |
 
   ```
