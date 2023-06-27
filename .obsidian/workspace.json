@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4a88a7d43ad39463",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/IVR.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/IVR.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/IVR.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -162,10 +175,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "036e0849be9b9f6c",
+  "active": "4a88a7d43ad39463",
   "lastOpenFiles": [
-    "_pages/CH.md",
     "_pages/IVR.md",
+    "conflict-files-obsidian-git.md",
+    "_pages/CH.md",
     "assets/images/Single.md",
     "assets/images/SSO/9.png",
     "assets/images/SSO/8.png",

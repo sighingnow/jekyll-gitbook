@@ -4,6 +4,7 @@ author: Krishna Tyagi & Mike Turnbow & George Kovanis
 date: 2022-05-05
 layout: post
 ---
+
 ```
 Last modified: Mon, 20 Feb 2023
 ```
@@ -645,6 +646,8 @@ We will create a new Dashboard using the below visualizations which we have crea
 | [Preferred Agent Reporting](#5-preferred-agent-reporting)                     | Practical Lab | EASY            | 15 min           |
 
 ## 1. Queue Based Reporting
+
+> **NOTE:** Queue Based Reporting feature is still **in development** and not yet GA. Please discuss with your PSM/CSM if you want to enable and test this feature in your own tenant.
 
 Queue Based Reports offer the standard fields and measures you know but aggregated at Queue level (i.e. Per Queue level & Per Agent Level Metrics).
 
