@@ -1,39 +1,52 @@
 {
   "main": {
-    "id": "959b6129c00a7ae4",
+    "id": "d4208eda57cc4ca3",
     "type": "split",
     "children": [
       {
-        "id": "1c30d1758de1937d",
+        "id": "87b2c434c9b61e8d",
         "type": "tabs",
         "children": [
           {
-            "id": "ba075c8f89507347",
+            "id": "1424830f5ce40d09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "support.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e7b3c96467f4f4e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_pages/Provisioning.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "6479f561f1efcfa6",
+    "id": "abab725b9c29cc00",
     "type": "split",
     "children": [
       {
-        "id": "00cc1e748905b356",
+        "id": "0094d887c5341deb",
         "type": "tabs",
         "children": [
           {
-            "id": "c7612fa5af166412",
+            "id": "3b96ed7e2b99cfa2",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +56,7 @@
             }
           },
           {
-            "id": "f108f4661fe85b81",
+            "id": "01d606000aab9e01",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +71,7 @@
             }
           },
           {
-            "id": "afb6dbcf62d731ac",
+            "id": "b21ea11e07a764a1",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -66,7 +79,7 @@
             }
           },
           {
-            "id": "2101a99d9b305e7d",
+            "id": "dc735bf45bffbc0d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -80,20 +93,20 @@
     "width": 300
   },
   "right": {
-    "id": "162a2ea39a4b5a54",
+    "id": "1a964129c454dcd3",
     "type": "split",
     "children": [
       {
-        "id": "82a3438c937c1b24",
+        "id": "e7f7308210913500",
         "type": "tabs",
         "children": [
           {
-            "id": "9bc4ed7e5225dd8e",
+            "id": "c2397e45953837d0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Provisioning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,19 +118,19 @@
             }
           },
           {
-            "id": "2bdc5a4a20df43f3",
+            "id": "3a04b0c1af92bdac",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/Provisioning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6d562acf09cd09c8",
+            "id": "1692dccdcfa3fc1a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -128,12 +141,12 @@
             }
           },
           {
-            "id": "a5331ebe04c6c059",
+            "id": "36fca9f4b0cba910",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Digital.md"
+                "file": "_pages/Provisioning.md"
               }
             }
           }
@@ -154,43 +167,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba075c8f89507347",
+  "active": "e7b3c96467f4f4e5",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "_pages/Digital.md",
-    "assets/images/DC_Lab_12.8._Create_Flow_8_2.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_8_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_7_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_6_2.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_6_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_5_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_4_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_3_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_9_1.png",
-    "assets/images/12.21_8.png",
-    "assets/images/mailinator-1.gif.md",
-    "assets/images/Single.md",
-    "assets/images/SSO",
-    "assets/images/OnboardingProcess",
-    "assets/files/flow_template.json.zip",
-    "assets/files/ESD_default_layout.json.zip",
-    "Untitled.canvas",
-    "_pages/Supervisor.md",
-    "_pages/Provisioning.md",
     "files/ESD_default_layout.json.md",
     "files",
-    "_pages/Acqueon.md",
-    "assets/files/ESD_default_layout.json",
-    "README.md",
-    "_pages/WxM.md",
-    "_pages/IVR.md",
-    "_pages/CRM.md",
-    "_pages/CH.md",
-    "_pages/CCAI.md",
-    "_pages/Calabrio.md",
-    "_pages/Analyzer.md",
+    "assets/images/mailinator-1.gif.md",
+    "assets/images/mailinator-1.gif",
+    "assets/images/Single.md",
+    "assets/images/SSO/9.png",
+    "assets/images/SSO/8.png",
+    "assets/images/SSO/7.png",
+    "assets/images/SSO/6.png",
+    "assets/images/SSO/5.png",
+    "assets/images/SSO/4.png",
+    "assets/images/SSO/13.png",
+    "assets/images/SSO/3.png",
+    "assets/images/SSO/2.png",
+    "assets/images/SSO",
+    "assets/images/OnboardingProcess",
+    "assets/images/IVR",
+    "assets/images/Analyzer/CustomDesktopLayout_v1.json",
+    "assets/images/Analyzer/Analyzer_Import.zip",
+    "assets/images/Analyzer",
+    "assets/files/lab_wav.zip",
+    "assets/files/flow_template.json.zip",
+    "assets/files/flow_template.json",
+    "_pages/Provisioning.md",
     "_pages/Agent.md",
-    "assets/images/DC_Lab_12.12._Create_Connect_6.png.md",
-    "assets/images/DC_Lab_12.8._Verify_1.png.md"
+    "_pages/WxM.md",
+    "_pages/CH.md",
+    "_pages/API.md"
   ]
 }
