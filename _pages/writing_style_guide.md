@@ -15,11 +15,13 @@ This style guide provides guidelines for writing user guide documentation for Ra
 - Use appropriate heading levels to structure the content.
 - Use title case for all headings upto level 3
 - Use sentence case for level 4 heading
+- Rule:
+  - The length of the underline must be at least as long as the title itself
 
--   1.  ==========  for title
-    2.  ----------  for the second level
-    3.  ~~~~~~~~~~  for the third  level
-    4.  """"""""""  for the fourth level
+-   1.  `==========`  for title
+    2.  `----------`  for the second level subsection
+    3.  `~~~~~~~~~~`  for the third  level subsection
+    4.  `""""""""""`  for the fourth level subsection
 
 - Example:
 
@@ -34,7 +36,7 @@ This style guide provides guidelines for writing user guide documentation for Ra
   ~~~~~~~~~~~
  
   Fourth level
-  """""""""""
+  """""""""""""
   ```   
 
 ### Abbreviations and Acronyms
@@ -73,7 +75,7 @@ Example: "Rapyuta Robotics provides a Graphical User Interface (GUI) for easy na
 
 ### Inline Commands
 
-Inline commands should be denoted by double backticks ``inline code here``.
+Inline commands should be surrounded by double backticks ``
 
 For example:
 
@@ -116,18 +118,57 @@ When including figures or images in the documentation, follow these guidelines:
     Figure: Workflow Diagram
   ```
 
+### Periods
+
+- Use periods at the end of complete sentences (instructions, explanations, etc).
+- Omit periods in sentence fragments or lists that are incomplete. For example:
+  
+  ```
+  1. Select the desired item from the dropdown menu
+  2. Adjust the slider to your preferred level
+  3. Press the **Enter** key to confirm
+  ```
+
+- If the list item is a complete sentence or phrase, use "periods" at the end of each list item. For example:
+
+  ```
+  1. Turn on the device.
+  2. Press the power button.
+  3. Adjust the settings.
+  ```
+
 ### Lists
 
 #### Ordered Lists
 
 - Use `#` for ordered lists.
-- Use sentence case for lists.
+- Use sentence case for ordered lists.
 - To be used to denote a series of steps or sequential items
+
 
 #### Unordered Lists
 
 - Use `-` for unordered lists.
-- Use sentence case for lists.
+- Use sentence case for unordered lists.
+
+#### When to use ordered and unordered lists?
+
+**Ordered lists**: For sequential steps or instructions that must be followed in a specific order. For example:
+
+```
+1. Connect the power cable.
+2. Press the power button.
+3. Select your language.
+4. Agree to the terms and conditions.
+```
+
+**Unordered lists**:  When you have a list of items that are not necessarily related in terms of order or priority, an unordered list is suitable. For example:
+
+```
+- Lightweight design
+- Waterproof
+- Long battery life
+```
 
 ### Notes/Cautions/Admonitions
 
@@ -152,15 +193,35 @@ When including figures or images in the documentation, follow these guidelines:
 
 When creating tables, follow these guidelines:
 
-- Use the appropriate Markdown syntax for creating tables.
+- Use the appropriate RST syntax for creating tables.
 - Include a clear and concise caption above the table, using sentence case.
-- Example:
-  
-  ```
-  Table 1: Sample table
+- There are two directives you can use for tables: `csv-table` and `list-table`. 
 
-  | Column 1 | Column 2 |
-  |----------|----------|
-  | Data 1   | Data 2   |
+  - The `csv-table` directive allows you to import the data directly from a CSV file and render it as a table in your documentation. For example:
 
-  ```
+    ```
+    .. csv-table:: My CSV Table
+       :file: my_table.csv
+       :header-rows: 1
+    ```
+
+  - The `list-table` directive is used to manually define and specify the content of the table using RST syntax. For example:
+
+    ```
+    .. list-table:: My List Table
+       :widths: 20 30
+       :header-rows: 1
+
+       * - Column 1
+         - Column 2
+       * - Row 1
+         - Cell 1,1
+       * - Row 2
+         - Cell 2,1
+    ```
+
+### Rapyuta Robotics Design System
+
+Explore our branding guidelines, including colors, icons, and UI elements, and more in our comprehensive resource.
+
+[Figma link](https://www.figma.com/file/AIbYRXbxFMYJOWCGzF8VIg/rr_design_system?type=design&node-id=808%3A3576&mode=design&t=CkEHMdR9mQdcBQeL-1).
