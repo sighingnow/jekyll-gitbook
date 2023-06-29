@@ -108,12 +108,13 @@ Events may be retrieved using the ``GET /v1/events/`` API endpoint.
 When including figures or images in the documentation, follow these guidelines:
 - Use a meaningful alt text for accessibility.
 - Use sentence case for figure names.
-- Example:
+- Include the custom `:class: figure-center-width-500` or `:class: figure-center-width-800` directive depending on the size of the image. This class will center align the image with width `500` or `800`. For example:
 
   ```
   .. figure:: path/to/figure.png
     :alt: Workflow Diagram
     :width: 400px
+    :class: figure-center-width-500
 
     Figure: Workflow Diagram
   ```
@@ -194,23 +195,26 @@ When including figures or images in the documentation, follow these guidelines:
 When creating tables, follow these guidelines:
 
 - Use the appropriate RST syntax for creating tables.
-- Include a clear and concise caption above the table, using sentence case.
+- Include a clear and concise caption above the table, using sentence case (Prefix the table caption with "Table: Table title")
+- Include `:align: center` directive to align the table to center.
 - There are two directives you can use for tables: `csv-table` and `list-table`. 
 
   - The `csv-table` directive allows you to import the data directly from a CSV file and render it as a table in your documentation. For example:
 
     ```
-    .. csv-table:: My CSV Table
+    .. csv-table:: Table: My CSV table
        :file: my_table.csv
        :header-rows: 1
+       :align: center
     ```
 
   - The `list-table` directive is used to manually define and specify the content of the table using RST syntax. For example:
 
     ```
-    .. list-table:: My List Table
+    .. list-table:: Table: My list table
        :widths: 20 30
        :header-rows: 1
+       :align: center
 
        * - Column 1
          - Column 2
