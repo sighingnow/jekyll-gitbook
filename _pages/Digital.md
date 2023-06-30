@@ -3471,7 +3471,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 
 #### Lab Objective
 
-This lab walks through the configuration of Global and Flow variables for digital channels. The behaviour of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
+This lab walks through the configuration of Global and Flow variables for digital channels. The behavior of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
 
 Both variables are transferable between flows. In the second part of this lab in 12.24.3, we will configure the transfer of chat form entries received in the inbound chat flow to routed flow when agent accepts the inbound chat.
 
