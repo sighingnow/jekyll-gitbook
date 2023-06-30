@@ -1613,7 +1613,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 | [SMS number procurement](#1-sms-number-procurement)                           | Practical Lab         | EASY                | 5 min                 |
 | [Create SMS Asset and Register to WebexCC](#2-create-sms-asset-and-register-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
 | [Workflow Association](#3-workflow-association) | Practical Lab         | EASY                | 5 min                 |
-| [Modifying the Flow](#4-modifying-the-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Modifying the Flow](#4modifying-the-flow) | Practical Lab         | EASY                | 5 min                 |
 
 
 #### Lab Objective
