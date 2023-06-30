@@ -3464,7 +3464,7 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Fetching and Reporting Global variable](#1-fetching-and-reporting-global-variable) | Practical Lab | MED           | 15 min           |
 | [Configuring Flow variables](#2-configuring-flow-variables)| Practical Lab | MED           | 15 min           |
-| [Transfer Global and Flow variable values between Webex Connect flows](#3transfer-global-and-flow-variable-values-between-webex-connect-flows) | Practical Lab | MED           | 15 min           |
+| [Transfer Global and Flow variable values between Webex Connect flows](#3-transfer-global-and-flow-variable-values-between-webex-connect-flows) | Practical Lab | MED           | 15 min           |
 
 
 ## Introduction
