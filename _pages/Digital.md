@@ -447,7 +447,7 @@ Connect allows the Owner to create local users in containers called **Groups** a
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Node Authorization for Webex CC Task and Engage nodes](#1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
-| [Setup agents in the Management Portal (Agents, Team, MMP)](#2setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
+| [Setup agents in the Management Portal (Agents, Team, MMP)](#2-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
 | [Setup RONA timers](#3-setup-rona-timers) | Practical Lab         | EASY                | 5 min                 |
 
 ## Introduction
