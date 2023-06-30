@@ -1862,7 +1862,7 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow3.png)
 
-- Open Custom variables and update the value for **WANumber** , **WANumber_Countrycode** and **appid** (These are the values that were identified in Step-1)
+- Open Custom variables and update the value for **WANumber** and **appid** (These are the values that were identified in Step-1) and click on **SAVE**.
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow4.png)
 
