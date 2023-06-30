@@ -1548,6 +1548,9 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ![DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow](/assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow6.jpg)
 
+- Go to ***Resolve Conversation*** node and fill in ***Flow Id*** field with ***flowId*** value copied from the address bar of web browser tab. Then save changes.
+ ![DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow](/assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flowID.png)
+ 
 - Finally click on Make Live on top right corner
   
 ![DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow](/assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow7.jpg)
@@ -1866,6 +1869,10 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 - In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **WhatsApp_Queue** and click on **SAVE**.
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow5.png)
+
+- Go to ***Resolve Conversation*** node and fill in ***Flow Id*** field with ***flowId*** value copied from the address bar of web browser tab. Then save changes.
+
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flowID.png)
 
 - Finally click on Make Live on top right corner and click Make Live.
 

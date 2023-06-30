@@ -146,8 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9bcb2365582083a6",
+  "active": "87ed3694b7aab2ba",
   "lastOpenFiles": [
+    "assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flowID.png",
+    "assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flowID.png",
     "assets/images/DC_Lab.12.7_Create-Upload_Email_flow_flowid.png",
     "assets/images/DC_Lab_12.8._Create_Flow_9_1.png",
     "assets/images/DC_Lab_12.8._Create_Flow_8_2.png",
@@ -157,11 +159,9 @@
     "assets/images/DC_Lab_12.8._Create_Flow_6_1.png",
     "assets/images/DC_Lab_12.8._Create_Flow_5_1.png",
     "assets/images/DC_Lab_12.8._Create_Flow_4_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_3_1.png",
     "_pages/CRM.md",
     "_pages/Digital.md",
     "assets/images/Single.md",
-    "assets/images/SSO/9.png",
     "assets/images/SSO"
   ]
 }
