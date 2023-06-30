@@ -15,10 +15,9 @@ This style guide provides guidelines for writing user guide documentation for Ra
 - Use appropriate heading levels to structure the content.
 - Use title case for all headings upto level 3
 - Use sentence case for level 4 heading
-- Rule:
-  - The length of the underline must be at least as long as the title itself
+- Rule: The length of the underline must be at least as long as the title itself
 
--   1.  `==========`  for title
+    1.  `==========`  for title
     2.  `----------`  for the second level subsection
     3.  `~~~~~~~~~~`  for the third  level subsection
     4.  `""""""""""`  for the fourth level subsection
@@ -56,8 +55,7 @@ Example: "Rapyuta Robotics provides a Graphical User Interface (GUI) for easy na
 ### Code 
 
 - Use `.. code-block::` directive to highlight and format code or command-line examples.
-- Specify the language for syntax highlighting after the `::`.
-- For example:
+- Specify the language for syntax highlighting after the `::`. For example:
   
   ```
   ..  code-block:: json
@@ -113,10 +111,9 @@ When including figures or images in the documentation, follow these guidelines:
   ```
   .. figure:: path/to/figure.png
     :alt: Workflow Diagram
-    :width: 400px
     :class: figure-center-width-500
 
-    Figure: Workflow Diagram
+    Figure: Workflow diagram
   ```
 
 ### Periods
