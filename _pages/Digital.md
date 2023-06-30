@@ -2173,7 +2173,7 @@ Here are few key points to note about Engage templates which provide better unde
 | [Understanding Connect Bots](#1-understanding-connect-bots)             | Read & Understand | MED            | 5 min            |
 | [Access and navigation](#2-access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
 | [Understand and navigate Q&A Bots](#3-understand-and-navigate-q&a-bots) | Read & Understand     | MED            | 5 min            |
-| [Understand and navigate Task Bots](#3-understand-and-navigate-task-bots) | Read & Understand     | MED            | 5 min            |
+| [Understand and navigate Task Bots](#4-understand-and-navigate-task-bots) | Read & Understand     | MED            | 5 min            |
 
 ## Introduction
 
@@ -2188,7 +2188,7 @@ This lab is designed to introduce the Bot Builder interface, which is used for t
 
 ## 1. Understanding Connect Bots
 
-Bot Builder is a cloud-based bot platform that allows enterprises to create bots. It includes Bot creation, testing, hosting, analysing, and editing capabilities. The key features of Bot Builder include:
+Bot Builder is a cloud-based bot platform that allows enterprises to create bots. It includes Bot creation, testing, hosting, analyzing, and editing capabilities. The key features of Bot Builder include:
 
 - Rules for handling flows
 - Ability to retain context
@@ -2205,7 +2205,7 @@ There are three types of Bots that can be integrated within a Connect flow:
 
 - **Q&A Bots** – are knowledge-driven bots whose knowledge base consists of a series of possible questions (with their alternative syntax) and related answers.
 - **Task Bots** – enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand.
-- **NLP Pipelines** – is a solution to build customised bots by defining the desired behaviours, without using the features already provided by Q&A and Task bots.
+- **NLP Pipelines** – is a solution to build customized bots by defining the desired behaviors, without using the features already provided by Q&A and Task bots.
 
 ## 2. Access and navigation
 
