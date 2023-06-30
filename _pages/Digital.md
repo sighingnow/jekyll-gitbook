@@ -966,6 +966,10 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_3.png)
 
+- Go to ***Resolve Conversation*** node and fill in ***Flow Id*** field with ***flowId*** value copied from the address bar of web browser. Then save changes.
+
+![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_flowid.png)
+ 
 - Finally click on Make Live on top right corner -> Select the Application/Asset that we have created and click Make Live.
 
 ![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_4.png)

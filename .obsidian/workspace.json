@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 326.5
   },
   "right": {
     "id": "be1343f50637eb35",
@@ -146,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "87ed3694b7aab2ba",
+  "active": "9bcb2365582083a6",
   "lastOpenFiles": [
     "assets/images/DC_Lab.12.7_Create-Upload_Email_flow_flowid.png",
     "assets/images/DC_Lab_12.8._Create_Flow_9_1.png",
