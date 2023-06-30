@@ -600,7 +600,7 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Understanding Connect Flows](understanding-connect-flows)                       | Read & Understand         | EASY                | 20 min                 |
+| [Understanding Connect Flows](#understanding-connect-flows)                       | Read & Understand         | EASY                | 20 min                 |
 
 ## Introduction
 
