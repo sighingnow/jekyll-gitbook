@@ -350,7 +350,7 @@ Within the setting section the administrator can control some additional useful 
 
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [User Roles and Permissions](#1user-roles–and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
+| [User Roles and Permissions](#1-user-roles–and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
 | [Users organization](#2-users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
 | [Login to Connect portal](#3-login-to-connect-portal)                             | Practical Lab         | EASY                | 1 min                 |
 | [Add new users with administrator role](#4-add-new-users-with-administrator-role) | Practical Lab         | EASY                | 2 min                 |
@@ -447,7 +447,7 @@ Connect allows the Owner to create local users in containers called **Groups** a
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Node Authorization for Webex CC Task and Engage nodes](#1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
-| [Setup agents in the Management Portal (Agents, Team, MMP)](#2-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
+| [Setup agents in the Management Portal (Agents, Team, MMP)](#2setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
 | [Setup RONA timers](#3-setup-rona-timers) | Practical Lab         | EASY                | 5 min                 |
 
 ## Introduction
@@ -614,7 +614,7 @@ This lab is designed to introduce the logic and methodology behind building flow
 2.  Admin credentials to login to Connect administration portal.
 
 
-## Understanding Connect Flows
+## 1. Understanding Connect Flows
 
 #### 1. Flows summary
 
