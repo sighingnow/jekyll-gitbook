@@ -3331,9 +3331,9 @@ Here a quick Demo via calling EP into Webhook to invoke custom node to update Wx
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
-| [Creating an Event in Webex Engage Portal](#2-creating-an-event-in-webex-engage-portal)| Practical Lab | MED           | 10 min           |
-| [Test the Event Trigger](#3-test-the-event-trigger) | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating an Event in Webex Engage Portal](#2creating-an-event-in-webex-engage-portal)| Practical Lab | MED           | 10 min           |
+| [Test the Event Trigger](#3test-the-event-trigger) | Practical Lab | EASY          | 5 min           |
 
 
 ## Introduction
