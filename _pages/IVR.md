@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 ```
-Last modified: Thu, 13 Apr 2023
+Last modified: Tue, 27 Jun 2023
 ```
 
 <script>
@@ -38,6 +38,7 @@ Last modified: Thu, 13 Apr 2023
 
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
+| [Introduction to Flow Designer](#introduction-to-flow-designer) | Watch & Understand | EASY    | 10 min|  
 | [Configuring tenant for Call Delivery](#configuring-tenant-for-call-delivery)        | Practical Lab | EASY            | 10 min           |
 | [Adding a comfort message while a call is in queue](#adding-a-comfort-message-while-a-call-is-in-queue) | Practical Lab | EASY            | 8 min            |
 | [Creating alternating comfort messages while a call is in queue](#creating-alternating-comfort-messages-while-a-call-is-in-queue)                                           | Practical Lab | EASY            | 15 min            |
@@ -118,6 +119,13 @@ update()
 ---
 
 ## Lab Section
+
+# Introduction to Flow Designer
+> Flow designer is a simple drag-and-drop user interface (UI) to define the flows. The following video explains the Flow Designer layout, activity library, and terminology used in the Flow Designer.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/47f262bb-b0a4-4222-9347-db942e21d5e3" width="100%" height="100%" title="Introduction to Flow Designer" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 
 # Configuring tenant for Call Delivery

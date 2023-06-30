@@ -496,7 +496,7 @@ The following are the top-level and most important properties to know for JSON l
 - Open the desktop layout file with any text editor (e.g. Notepad, Sublime text).
 
 - Create another section under **_navigation_** similar to that of existing Customer Experience Analytics.
-  > Check out this sample [Analyzer_iFrame_Widget.json](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/iframe-widget-sample/Analyzer_iFrame_Widget_Layout.json)
+  > Check out this sample [Analyzer_iFrame_Widget.json](https://github.com/CiscoDevNet/webex-contact-center-api-samples/blob/main/widget-samples/iframe-widget-sample/Analyzer_iFrame_Widget_Layout.json)
 
 - In the new section, add the **_label_** key value with your choice.
 
@@ -543,18 +543,35 @@ Below, you will find a breakdown of all possible data and type definitions that 
 
 <br>
 > 
-> Check the [Developer guide](https://developer.webex-cx.com/documentation/guides/desktop/#custom-widgets) for more details about Custom Widgets.
-> 
+> Check the **[Developer guide](https://developer.webex-cx.com/documentation/guides/desktop/#custom-widgets)** for more details about Custom Widgets.
 {: .block-warning}
 
-
-<br>
-## Custom Widget Examples
-> 
-> If you want to explore and play around with the possible types of custom widgets you can create. check the below **Git repository with some samples: 
+> If you want to explore and play around with the possible types of custom widgets you can create, check the below **Git repository with some samples: 
 > [https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples](https://github.com/CiscoDevNet/webex-contact-center-widget-starter/tree/master/Examples)**
 {: .block-warning}
 
+<br>
+## JavaScript SDK and Modules
+> Desktop JavaScript SDK is an npm package that allows you to request up-to-date information from the Desktop. Using the SDK, you can request information such as agent details, assigned tasks, details of specific tasks, current browser locale, and the authentication token for Single Sign-On (SSO) integration.
+{: .block-warning}
+
+- To start using the JavaScript SDK, run the following command in your project folder: `npm install @wxcc-desktop/sdk --save` or `yarn add @wxcc-desktop/sdk`.
+
+- Once you have installed the package in your project, include it in the appropriate component file following the ES6 import pattern: `import {Desktop} from "@wxcc-desktop/sdk";`.
+
+- `Desktop` is the root module of the JavaScript SDK. The root module provides a reference to the following sub-modules:
+  - Configuration Module
+  - Localization Module
+  - Actions Module
+  - Logger Module
+  - Agent State Information Module
+  - Agent Contact Module
+  - Dialer Module
+  - Screen Pop Module
+  - Shortcut Key Module
+  - Call Monitoring Module
+
+- Check the [Developer Guide](https://developer.webex-cx.com/documentation/guides/desktop#javascript-sdk-and-modules) for more details about each module.
 
 
 <br>

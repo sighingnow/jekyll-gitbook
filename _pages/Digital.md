@@ -1225,7 +1225,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 >***Note***: Chat Inbound Flow is triggered whenever end user started new chat session or sent a message via existing one.
 
 -  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
--  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Inbound Flow.workflow.zip*** and click ***Download***.
+-  Goto to ***Webex Connect Flows*** -> ***v3.0*** -> ***Template*** -> ***Media Specific Workflows*** -> ***Live Chat Inbound Flow.workflow.zip*** and click ***Download***.
 -  Unzip the file.
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
 -  In the service click on **Flows** -> **Create Flow** .
@@ -1239,43 +1239,44 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 
 -  You will be redirected to the new flow opened in the flow builder. Click ***Save*** to save the changes.
 
-![DC_Lab.12.8_Create_Flow_3](/assets/images/DC_Lab_12.8._Create_Flow_3.png)
+![DC_Lab.12.8_Create_Flow_3_1](/assets/images/DC_Lab_12.8._Create_Flow_3_1.png)
 
 -  In the ***Pre-chat form*** node the ***Form Template*** needs to be selected as ***Chat_Template*** created in step 5 above. Press ***Save*** button to save changes in node configuration.
 
-![DC_Lab.12.8_Create_Flow_4](/assets/images/DC_Lab_12.8._Create_Flow_4.png)
+![DC_Lab.12.8_Create_Flow_4_1](/assets/images/DC_Lab_12.8._Create_Flow_4_1.png)
 
--  In the ***Receive*** node also, select the same ***Chat_Template*** in ***Form Template*** drop-down list and save changes.
+-  In the ***Receive*** node also, select the same ***Chat_Template*** in ***Form Template*** drop-down list.
 
-![DC_Lab.12.8_Create_Flow_5](/assets/images/DC_Lab_12.8._Create_Flow_5.png)
+![DC_Lab.12.8_Create_Flow_5_1](/assets/images/DC_Lab_12.8._Create_Flow_5_1.png)
 
--  In ***Create Task*** node check and make sure the values of parameters in ***Customer Details*** section corresponds to the values of the same parameters under ***Receive*** -> ***InApp - Form Response*** section. Then save the node.
+- Go to ***Transition Actions (Optional)*** tab of ***Receive*** node, check and make sure the values of ***customerName*** and ***customerEmail***  variables corresponds to the names of web chat template fields in ***Output Variables*** -> ***Receive*** -> ***InApp - Form Response*** section on the right pane. Correct the values if needed and save the node.
 
->***Note:*** If you need to modify values in ***Customer Details*** section, please do it manually by copying them from the table below. Please ***DO NOT*** modify the values in ***Customer Details*** section by clicking on parameters under ***Receive*** -> ***InApp - Form Response*** section.
+>***Note***: The value of each variable has the following format: ***$(NodeID.OutputVariableName)***. In our case NodeID is 2438 (you can find it in the left bottom corner of ***Receive*** window), ***OutputVariableName*** is just exact name from ***Output Variables*** -> ***Receive*** -> ***InApp - Form Response*** section on the right pane.
 
-| **Parameter Name**   | **Parameter Value**                        |
-| ---------------- | -------------------------------------- |
-| Customer ID      | $(n38.inappmessaging.formFields.Email) |
-| Customer Name    | $(n38.inappmessaging.formFields.Name)  |
-| LIVECHAT USER ID | $(n38.inappmessaging.formFields.Email) |
+![DC_Lab.12.8_Create_Flow_6_1](/assets/images/DC_Lab_12.8._Create_Flow_6_1.png)
 
-![DC_Lab.12.8_Create_Flow_6](/assets/images/DC_Lab_12.8._Create_Flow_6.png)
+-  Go to ***Resolve Conversation*** node and fill in ***Flow Id*** field with ***flowId*** value copied from the address bar of web browser tab. In this example, Flow Id is 4464. Then save changes.
 
--  After ***Create Task*** node is saved, please open it again and check that the parameters in ***Customer Details*** section are not empty. If they are empty, please correct them manually and save the node one more time.
+![DC_Lab.12.8_Create_Flow_6_2](/assets/images/DC_Lab_12.8._Create_Flow_6_2.png)
+
 -  In ***Queue Task*** node select ***Queue Name*** as ***Chat_Q*** created in Webex CC Management Portal in step 4 above and save changes.
 
-![DC_Lab.12.8_Create_Flow_7](/assets/images/DC_Lab_12.8._Create_Flow_7.png)
+![DC_Lab.12.8_Create_Flow_7_1](/assets/images/DC_Lab_12.8._Create_Flow_7_1.png)
 
--  Click on ***Settings*** (gear icon) on top right corner of flow builder window and go to ***Custom variables*** tab. Here enter ***appid*** as the ***App ID*** of the asset created in step 2 above. In addition. enter ***liveChatDomain*** as **`www.w3schools.com`** and save changes.
+-  Click on ***Settings*** (gear icon) on top right corner of flow builder window and disable ***Descriptive logs*** on ***General*** tab.
+ 
+![DC_Lab.12.8_Create_Flow_8_1](/assets/images/DC_Lab_12.8._Create_Flow_8_1.png)
 
-![DC_Lab.12.8_Create_Flow_8](/assets/images/DC_Lab_12.8._Create_Flow_8.png)
+- Then go to ***Custom variables*** tab. Here enter ***appId*** as the ***App ID*** of the asset created in step 2 above. In addition. enter ***liveChatDomain*** as **`www.w3schools.com`** and save changes.
+
+![DC_Lab.12.8_Create_Flow_8_2](/assets/images/DC_Lab_12.8._Create_Flow_8_2.png)
 
 -  Click on ***Save*** button on top right corner to save the entire flow.
--  Finally click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
+-  Click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
->***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
+>***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please close Make Live window, open it one more time, select the asset again and press ***Make Live*** button one more time.
 
-![DC_Lab.12.8_Create_Flow_9](/assets/images/DC_Lab_12.8._Create_Flow_9.png)
+![DC_Lab.12.8_Create_Flow_9_1](/assets/images/DC_Lab_12.8._Create_Flow_9_1.png)
 
 
 ## 8. Create Chat Close Flow
@@ -1283,7 +1284,7 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 >***Note***: Chat Close Flow is triggered every time whenever the end user closed the conversation thread from the widget.
 
 -  Navigate to GitHub page with Webex Connect Flows - [GitHub page](https://github.com/CiscoDevNet/webexcc-digital-channels).
--  Goto to ***Webex Connect Flows*** -> ***v2.1*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download.***
+-  Go to ***Webex Connect Flows*** -> ***v3.0*** -> ***Template*** -> ***Media Specific Workflows*** -> ***Live Chat Close Flow.workflow.zip*** and click ***Download.***
 -  Unzip the file.
 -  Go to Connect Portal, click on **Services** and select the service in which the Asset is created in step 2 above. It should be ***My First Service***.
 -  In the service click on **Flows** -> **Create Flow**.
@@ -1297,9 +1298,9 @@ We will be configuring Service, Chat Assets, Entry Point, Queue, Chat Template, 
 ![DC_Lab.12.8_Create_Closed_Flow_2](/assets/images/DC_Lab_12.8._Create_Closed_Flow_2.png)
 
 -  Click on ***Save*** button on top right corner to save the entire flow.
--  Finally click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click on ***Make Live***. Wait around 2-3 minutes until flow goes live.
+-  Click on ***Make Live*** on top right corner (near ***Save*** button) then select the ***Application*** as ***Chat_Asset*** in pop-up window and click on ***Make Live***. Wait around 2-3 minutes until flow goes live.
 
->***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please press it one more time.
+>***Note***: If there is ***Forbidden*** message after you pressed ***Make Live*** button, please close Make Live window, open it one more time, select the asset again and press ***Make Live*** button one more time.
 
 ![DC_Lab.12.8_Create_Closed_Flow_3](/assets/images/DC_Lab_12.8._Create_Closed_Flow_3.png)
 

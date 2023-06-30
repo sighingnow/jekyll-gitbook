@@ -15,7 +15,7 @@ Last modified: Mon, 10 Apr 2023
 | [Assign supervisor license to the user](#assign-supervisor-license-to-the-user)        | Practical Lab | EASY             | 5 min           |
 | [Configure supervisor in Management Portal](#configure-supervisor-in-management-portal) | Practical Lab | EASY             | 10 min            |
 | [Supervisor Experience](#supervisor-experience)                                          | Practical Lab | EASY             | 15 min            |      |
-| [Supervisor capabilities Feedback](#supervisor-capabilities-feedback)                   | Practical Lab | EASY            | 2 min                                                                                      |               |                  |                  |
+
 
 
 ## **Introduction**
@@ -259,13 +259,6 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 ![Lab_4_ESD](/assets/images/Lab4_ESD_16_monitor.png)
 
-
-
-# Supervisor capabilities Feedback
-
-We are seeking your feedback on the Agent's and Supervisor's capabilities. Please share your opinion by participating in this survey. This will help to improve the quality of the products. 
-
-<iframe width="1024" height="800" src="https://app.smartsheet.com/b/form/adb4f91491ec4a4a9c2dc106c7b65db0" title="Webex Contact Center – Partner Survey" frameborder="0" allow="accelerometer; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
