@@ -2344,9 +2344,9 @@ Provide version control over all changes the administrator applies on that speci
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Navigate to BOT Builder and Create bot](#1-navigate-to-bot-builder-and-create-bot) | Practical Lab | MED          | 5 min           |
-| [Preview](#2-preview) | Practical Lab | MED          | 5 min           |
-| [Bot testing](#3-bot-testing) | Practical Lab | MED        | 5 min           |
-| [Curation](#4-curation) | Practical Lab | MED         | 10 min           |
+| [Preview](#2preview) | Practical Lab | MED          | 5 min           |
+| [Bot testing](#3bot-testing) | Practical Lab | MED        | 5 min           |
+| [Curation](#4curation) | Practical Lab | MED         | 10 min           |
 
 
 ## Introduction
@@ -2579,9 +2579,9 @@ Time to test your new configuration:
 
 | Topic                                                                   | Lab Type          | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
-| [Introduction to Event Scheduler](#1-introduction-to-event-scheduler)             | Read & Understand | HARD            | 5 min            |
-| [Schedule SMS Event](#2-schedule-sms-event)                       | Practical Lab     | HARD            | 5 min            |
-| [Schedule Custom Event](#3-schedule-custom–event) | Practical Lab     | EASY            | 10 min            |
+| [Introduction to Event Scheduler](#1introduction-to-event-scheduler)             | Read & Understand | HARD            | 5 min            |
+| [Schedule SMS Event](#2schedule-sms-event)                       | Practical Lab     | HARD            | 5 min            |
+| [Schedule Custom Event](#3schedule-custom–event) | Practical Lab     | EASY            | 10 min            |
 
 
 ## Introduction
@@ -2877,9 +2877,9 @@ Custom Events use source files containing data that will be used by flows when s
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
-| [Creating a voice flow in flow control](#2-creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
-| [Test the Inbound Webhook](#3-test-the-inbound-webhook)  | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating a voice flow in flow control](#2creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
+| [Test the Inbound Webhook](#3test-the-inbound-webhook)  | Practical Lab | EASY          | 5 min           |
 
 
 ## Introduction
