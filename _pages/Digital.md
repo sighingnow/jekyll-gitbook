@@ -2172,7 +2172,7 @@ Here are few key points to note about Engage templates which provide better unde
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding Connect Bots](#1-understanding-connect-bots)             | Read & Understand | MED            | 5 min            |
 | [Access and navigation](#2-access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
-| [Understand and navigate Q&A Bots](#3-understand-and-navigate-q&a-bots) | Read & Understand     | MED            | 5 min            |
+| [Understand and navigate Q&A Bots](#3understand-and-navigate-q&a-bots) | Read & Understand     | MED            | 5 min            |
 | [Understand and navigate Task Bots](#4-understand-and-navigate-task-bots) | Read & Understand     | MED            | 5 min            |
 
 ## Introduction
