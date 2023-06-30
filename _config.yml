@@ -1,7 +1,7 @@
 # Configurations
-title:            About
-longtitle:        About this page
-author:           Sachin
+title:            Jekyll Gitbook
+longtitle:        Jekyll Gitbook
+author:           HE Tao
 email:            sighingnow@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
