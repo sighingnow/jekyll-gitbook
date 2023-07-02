@@ -14,12 +14,12 @@ This is a supportive videos that do not require any actions since your tenant is
 ## Table of Contents
 
 
-| Topic                                                                                    | Lab Type      | Dificulty Level | Estimated length |
+| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Part 1: How to create Webex Contact Center Trial](#lab-0-part-1-how-to-create-webex-contact-center-trial) | Watch & Understand | EASY            | 8 min           |
-| [Part 2: How to create Webex Contact Center Trial remotely](#lab-0-part-2-how-to-create-webex-contact-center-trial-remotely)              | Watch & Understand | EASY            | 11 min           |
-| [Part 3: Provisioning with Creating a New Customer Organization](#lab-0-part-3-provisioning-with-creating-a-new-customer-organization)                       | Watch & Understand | EASY            | 11 min            |
-| [Part 4: Provisioning on existing Customer Organization](#lab-0-part-4-provisioning-on-existing-customer-organization)                       | Watch & Understand | EASY            | 9 min            |
+| [Part 1: How to create Webex Contact Center Trial](#lab-0-part-1-how-to-create-webex-contact-center-trial) | Watch & Understand | EASY            | 6 min           |
+| [Part 2: Provisioning with Creating a New Customer Organization](#lab-0-part-3-provisioning-with-creating-a-new-customer-organization)                       | Watch & Understand | EASY            | 9 min            |
+| [Part 3: Provisioning on existing Customer Organization](#lab-0-part-4-provisioning-on-existing-customer-organization)                       | Watch & Understand | EASY            | 7 min            |
+| [RTMS Overview](#RTMS Overview)                       | Watch & Understand | EASY            | 25 min            |
 
 
 # How to create Webex Contact Center Trial
@@ -28,19 +28,11 @@ This video demonstrates the process of creation Webex Contact Center Trial. To c
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/0b8e2ef2-1045-477c-8ab2-3367568a0113" width="100%" height="100%" title="Creating Webex Contact Center Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/fec4d3dd-b168-4604-b130-080457feb703" width="100%" height="100%" title="Creating Webex Contact Center Trial" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 
-# How to create Webex Contact Center Trial remotely
 
-The video shows how to set up a Webex Contact Center Trial Tenant Remotely. This is not a common way of creating a trial but one of the scenarios to use this type of provisioning is when Partner administrator went on holidays and there is no one who can add a Webex Contact Center Trial to an existing customer organization. This demonstration shows how to add Webex Contact Center Trial to an existing organization by using another Partner Hub. CSM can perform a role of remote Partner Administrator.
-> Note: Customer organization must exist.
-{: .block-tip } 
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/07e770f8-19c2-4f65-91d2-f0809bfcb243" width="100%" height="100%" title="Creating Webex Contact Center Trial Remotely" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
 
 # Provisioning with Creating a New Customer Organization
 This video demonstrates how to create a new Customer organization by using Provisioning email generated in Web Order.
@@ -48,23 +40,41 @@ This video demonstrates how to create a new Customer organization by using Provi
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/7003a715-79d3-47bb-b6c4-5c8802d19353" width="100%" height="100%" title="Provisioning New Webex Contact Center" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/d2868402-dd55-4a83-8dc1-9e984d787143" width="100%" height="100%" title="Provisioning New Webex Contact Center" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 ---
 
 
 # Provisioning on existing Customer Organization
-This video demonstrates how to apply Webex COntact Center subscription to an existing Customer organization by using Provisioning email generated in Web Order. In our example the organization has  a Webex Calling tenant already deployed.
+This video demonstrates how to apply Webex Contact Center subscription to an existing Customer organization by using Provisioning email generated in Web Order. In our example the organization has  a Webex Calling tenant already deployed.
 >Note: Demonstration was done on Cisco internal lab environment and some options will not be visible in your production environment.
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/7fff8b9a-d38d-4c75-afd1-c535bf84dec3" width="100%" height="100%" title="Provisioning on existing Customer Organization.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/embed/21310ae1-5a7b-43d5-af28-6986785aa0d3" width="100%" height="100%" title="Provisioning on existing Customer Organization.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 
 ---
 
+
+# RTMS Overview
+Please use the below PDFs with supportive videos. It covers:
+
+•How RTMS works
+•Why we use the new media layer
+•option that a customer selects to process their media
+•What countries/regions are covered/will be covered
+•RTMS General Features (what it supports today and what is in roadmap)
+•Regional Media
+
+RTMS: Launch: [https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63](https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63)
+
+RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893)
+
+![[RTMS GA Launch 1.pdf]]
+
+![[RTMS EA Regional Media.pdf]]
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
