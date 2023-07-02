@@ -167,8 +167,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7b3c96467f4f4e5",
+  "active": "3b96ed7e2b99cfa2",
   "lastOpenFiles": [
+    "files/RTMS GA Launch.pdf",
+    "files/RTMS EA Regional Media.pdf",
     "_pages/IVR.md",
     "_pages/Agent.md",
     "_pages/CCAI.md",
@@ -195,7 +197,6 @@
     "assets/images/IVR",
     "assets/images/Analyzer/CustomDesktopLayout_v1.json",
     "assets/images/Analyzer/Analyzer_Import.zip",
-    "assets/images/Analyzer",
     "_pages/WxM.md",
     "_pages/CH.md",
     "_pages/API.md"
