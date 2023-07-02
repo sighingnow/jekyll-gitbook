@@ -9,7 +9,7 @@ Last modified: Tue, 28 Jun 2023
 ```
 
 ## Webex Contact Center Provisioning
-This is a supportive videos that do not require any actions since your tenant is already provisioned. Videos demonstrate the initial provisioning tasks for New Webex Contact Center as well as applying production subscriptions to existing organzations.
+This is a supportive videos that do not require any actions since your tenant is already provisioned. Videos demonstrate the initial provisioning tasks for New Webex Contact Center as well as applying production subscriptions to existing organizations.
 
 ## Table of Contents
 
