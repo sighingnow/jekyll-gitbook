@@ -17,9 +17,11 @@ This is a supportive videos that do not require any actions since your tenant is
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Part 1: How to create Webex Contact Center Trial](#lab-0-part-1-how-to-create-webex-contact-center-trial) | Watch & Understand | EASY            | 6 min           |
-| [Part 2: Provisioning with Creating a New Customer Organization](#lab-0-part-3-provisioning-with-creating-a-new-customer-organization)                       | Watch & Understand | EASY            | 9 min            |
-| [Part 3: Provisioning on existing Customer Organization](#lab-0-part-4-provisioning-on-existing-customer-organization)                       | Watch & Understand | EASY            | 7 min            |
-| [RTMS Overview]()                       | Watch & Understand | EASY            | 25 min            |
+| [Part 2: Provisioning with Creating a New Customer Organization](#lab-0-part-2-provisioning-with-creating-a-new-customer-organization)                       | Watch & Understand | EASY            | 9 min            |
+| [Part 3: Provisioning on existing Customer Organization](#lab-0-part-3-provisioning-on-existing-customer-organization)                       | Watch & Understand | EASY            | 7 min            |
+| [RTMS Overview](#rtms-overview)                       | Watch & Understand | EASY            | 25 min            |
+| [Webex Contact Center Developer Sandbox](#webex-contact-center-developer-sandbox)                       | Read & Understand | EASY            | 30 min            |
+
 
 
 # How to create Webex Contact Center Trial
@@ -72,6 +74,12 @@ RTMS: Launch: [RTMS GA Launch.pdf](https://github.com/WebexCC/webexcc.github.io/
 <br>
 RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893)<br>
 RTMS Regional Media: [RTMS EA Regional Media.pdf](https://github.com/WebexCC/webexcc.github.io/blob/428cc7437e03d343b5abd3a4ab1a366b9c8b6f9e/files/RTMS%20EA%20Regional%20Media.pdf)
+
+# Webex Contact Center Developer Sandbox
+A Contact Center Developer Sandbox provides you with administrator access to a licensed Webex organization. A licensed org lets you create and test capabilities of the Webex platform not available with Webex free plans.
+
+To get started with a Sandbox please follow the instructions in [Contact Center for Developers portal](https://developer.webex-cx.com/sandbox).
+
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
