@@ -65,16 +65,13 @@ Please use the below PDFs with supportive videos. It covers:
 •Why we use the new media layer
 •option that a customer selects to process their media
 •What countries/regions are covered/will be covered
-•RTMS General Features (what it supports today and what is in roadmap)
-•Regional Media
+•RTMS General Features (what it supports today and what is in roadmap)•Regional Media
 
 RTMS: Launch: [https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63](https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63)
+RTMS: Launch: [RTMS GA Launch.pdf](https://github.com/WebexCC/webexcc.github.io/blob/428cc7437e03d343b5abd3a4ab1a366b9c8b6f9e/files/RTMS%20GA%20Launch.pdf)
 
 RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893)
-
-![[RTMS GA Launch 1.pdf]]
-
-![[RTMS EA Regional Media.pdf]]
+RTMS Regional Media: [RTMS EA Regional Media.pdf](https://github.com/WebexCC/webexcc.github.io/blob/428cc7437e03d343b5abd3a4ab1a366b9c8b6f9e/files/RTMS%20EA%20Regional%20Media.pdf)
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
