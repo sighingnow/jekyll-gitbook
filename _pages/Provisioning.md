@@ -19,7 +19,7 @@ This is a supportive videos that do not require any actions since your tenant is
 | [Part 1: How to create Webex Contact Center Trial](#lab-0-part-1-how-to-create-webex-contact-center-trial) | Watch & Understand | EASY            | 6 min           |
 | [Part 2: Provisioning with Creating a New Customer Organization](#lab-0-part-3-provisioning-with-creating-a-new-customer-organization)                       | Watch & Understand | EASY            | 9 min            |
 | [Part 3: Provisioning on existing Customer Organization](#lab-0-part-4-provisioning-on-existing-customer-organization)                       | Watch & Understand | EASY            | 7 min            |
-| [RTMS Overview]                       | Watch & Understand | EASY            | 25 min            |
+| [RTMS Overview]()                       | Watch & Understand | EASY            | 25 min            |
 
 
 # How to create Webex Contact Center Trial
@@ -61,7 +61,7 @@ This video demonstrates how to apply Webex Contact Center subscription to an exi
 # RTMS Overview
 Please use the below PDFs with supportive videos. It covers:
 
-•How RTMS works
+•How RTMS works<br>
 •Why we use the new media layer<br>
 •option that a customer selects to process their media<br>
 •What countries/regions are covered/will be covered<br>
