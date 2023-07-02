@@ -446,9 +446,9 @@ Connect allows the Owner to create local users in containers called **Groups** a
 
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Node Authorization for Webex CC Task and Engage nodes](1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
-| [Setup agents in the Management Portal (Agents, Team, MMP)](3-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
-| [Setup RONA timers](4-setup-rona-timers) | Practical Lab         | EASY                | 5 min                 |
+| [Node Authorization for Webex CC Task and Engage nodes](#1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
+| [Setup agents in the Management Portal (Agents, Team, MMP)](#2-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
+| [Setup RONA timers](#3-setup-rona-timers) | Practical Lab         | EASY                | 5 min                 |
 
 ## Introduction
 
@@ -600,7 +600,7 @@ If an agent doesn’t answer a contact request, the contact request will return 
 
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [Understanding Connect Flows](understanding-connect-flows)                       | Read & Understand         | EASY                | 20 min                 |
+| [Understanding Connect Flows](#1-understanding-connect-flows)                       | Read & Understand         | EASY                | 20 min                 |
 
 ## Introduction
 
@@ -614,7 +614,7 @@ This lab is designed to introduce the logic and methodology behind building flow
 2.  Admin credentials to login to Connect administration portal.
 
 
-## Understanding Connect Flows
+## 1. Understanding Connect Flows
 
 #### 1. Flows summary
 
@@ -966,6 +966,10 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_3.png)
 
+- Go to ***Resolve Conversation*** node and fill in ***Flow Id*** field with ***flowId*** value copied from the address bar of web browser. Then save changes.
+
+![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_flowid.png)
+ 
 - Finally click on Make Live on top right corner -> Select the Application/Asset that we have created and click Make Live.
 
 ![DC_Lab.12.7_Create-Upload_Email_flow](/assets/images/DC_Lab.12.7_Create-Upload_Email_flow_4.png)
@@ -1544,6 +1548,9 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 
 ![DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow](/assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow6.jpg)
 
+- Go to ***Resolve Conversation*** node and fill in ***Flow Id*** field with ***flowId*** value copied from the address bar of web browser tab. Then save changes.
+ ![DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow](/assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flowID.png)
+ 
 - Finally click on Make Live on top right corner
   
 ![DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow](/assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flow7.jpg)
@@ -1606,7 +1613,7 @@ In this lab you will be configuring Service, Chat Assets, Entry Point, Queue, Ch
 | [SMS number procurement](#1-sms-number-procurement)                           | Practical Lab         | EASY                | 5 min                 |
 | [Create SMS Asset and Register to WebexCC](#2-create-sms-asset-and-register-to-webexcc)                           | Practical Lab         | EASY                | 5 min                 |
 | [Workflow Association](#3-workflow-association) | Practical Lab         | EASY                | 5 min                 |
-| [Modifying the Flow](#4-modifying-the-flow) | Practical Lab         | EASY                | 5 min                 |
+| [Modifying the Flow](#4modifying-the-flow) | Practical Lab         | EASY                | 5 min                 |
 
 
 #### Lab Objective
@@ -1855,13 +1862,17 @@ In this lab you will be configuring **WhatsApp** number settings, Assets, Entry 
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow3.png)
 
-- Open Custom variables and update the value for **WANumber** , **WANumber_Countrycode** and **appid** (These are the values that were identified in Step-1)
+- Open Custom variables and update the value for **WANumber** and **appid** (These are the values that were identified in Step-1) and click on **SAVE**.
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow4.png)
 
 - In the created workflow find the **Queue Task**, click twice, select the **QUEUE NAME** as **WhatsApp_Queue** and click on **SAVE**.
 
 ![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flow5.png)
+
+- Go to ***Resolve Conversation*** node and fill in ***Flow Id*** field with ***flowId*** value copied from the address bar of web browser tab. Then save changes.
+
+![DC_Lab_12.11_Create-Upload_Whatsapp_flow](/assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flowID.png)
 
 - Finally click on Make Live on top right corner and click Make Live.
 
@@ -2161,8 +2172,8 @@ Here are few key points to note about Engage templates which provide better unde
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding Connect Bots](#1-understanding-connect-bots)             | Read & Understand | MED            | 5 min            |
 | [Access and navigation](#2-access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
-| [Understand and navigate Q&A Bots](#3-understand-and-navigate-q&a-bots) | Read & Understand     | MED            | 5 min            |
-| [Understand and navigate Task Bots](#3-understand-and-navigate-task-bots) | Read & Understand     | MED            | 5 min            |
+| [Understand and navigate Q&A Bots](#3understand-and-navigate-q&a-bots) | Read & Understand     | MED            | 5 min            |
+| [Understand and navigate Task Bots](#4-understand-and-navigate-task-bots) | Read & Understand     | MED            | 5 min            |
 
 ## Introduction
 
@@ -2177,7 +2188,7 @@ This lab is designed to introduce the Bot Builder interface, which is used for t
 
 ## 1. Understanding Connect Bots
 
-Bot Builder is a cloud-based bot platform that allows enterprises to create bots. It includes Bot creation, testing, hosting, analysing, and editing capabilities. The key features of Bot Builder include:
+Bot Builder is a cloud-based bot platform that allows enterprises to create bots. It includes Bot creation, testing, hosting, analyzing, and editing capabilities. The key features of Bot Builder include:
 
 - Rules for handling flows
 - Ability to retain context
@@ -2194,7 +2205,7 @@ There are three types of Bots that can be integrated within a Connect flow:
 
 - **Q&A Bots** – are knowledge-driven bots whose knowledge base consists of a series of possible questions (with their alternative syntax) and related answers.
 - **Task Bots** – enable multi-turn conversations where a bot can obtain relevant data from users to perform the task at hand.
-- **NLP Pipelines** – is a solution to build customised bots by defining the desired behaviours, without using the features already provided by Q&A and Task bots.
+- **NLP Pipelines** – is a solution to build customized bots by defining the desired behaviors, without using the features already provided by Q&A and Task bots.
 
 ## 2. Access and navigation
 
@@ -2333,9 +2344,9 @@ Provide version control over all changes the administrator applies on that speci
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Navigate to BOT Builder and Create bot](#1-navigate-to-bot-builder-and-create-bot) | Practical Lab | MED          | 5 min           |
-| [Preview](#2-preview) | Practical Lab | MED          | 5 min           |
-| [Bot testing](#3-bot-testing) | Practical Lab | MED        | 5 min           |
-| [Curation](#4-curation) | Practical Lab | MED         | 10 min           |
+| [Preview](#2preview) | Practical Lab | MED          | 5 min           |
+| [Bot testing](#3bot-testing) | Practical Lab | MED        | 5 min           |
+| [Curation](#4curation) | Practical Lab | MED         | 10 min           |
 
 
 ## Introduction
@@ -2866,9 +2877,9 @@ Custom Events use source files containing data that will be used by flows when s
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
-| [Creating a voice flow in flow control](#2-creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
-| [Test the Inbound Webhook](#3-test-the-inbound-webhook)  | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating a voice flow in flow control](#2creating-a-voice-flow-in-flow-control)| Practical Lab | HARD           | 15 min           |
+| [Test the Inbound Webhook](#3test-the-inbound-webhook)  | Practical Lab | EASY          | 5 min           |
 
 
 ## Introduction
@@ -3320,9 +3331,9 @@ Here a quick Demo via calling EP into Webhook to invoke custom node to update Wx
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Creating an Inbound webhook flow](#1-creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
-| [Creating an Event in Webex Engage Portal](#2-creating-an-event-in-webex-engage-portal)| Practical Lab | MED           | 10 min           |
-| [Test the Event Trigger](#3-test-the-event-trigger) | Practical Lab | EASY          | 5 min           |
+| [Creating an Inbound webhook flow](#1creating-an-inbound-webhook-flow) | Practical Lab | MED           | 15 min           |
+| [Creating an Event in Webex Engage Portal](#2creating-an-event-in-webex-engage-portal)| Practical Lab | MED           | 10 min           |
+| [Test the Event Trigger](#3test-the-event-trigger) | Practical Lab | EASY          | 5 min           |
 
 
 ## Introduction
@@ -3453,14 +3464,14 @@ This lab walks through the configuration of Events and Triggers in the Webex Con
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Fetching and Reporting Global variable](#1-fetching-and-reporting-global-variable) | Practical Lab | MED           | 15 min           |
 | [Configuring Flow variables](#2-configuring-flow-variables)| Practical Lab | MED           | 15 min           |
-| [Transfer Global and Flow variable values between Webex Connect flows](3#-transfer-global-and-flow-variable-values-between-webex-connect-flows) | Practical Lab | MED           | 15 min           |
+| [Transfer Global and Flow variable values between Webex Connect flows](#3-transfer-global-and-flow-variable-values-between-webex-connect-flows) | Practical Lab | MED           | 15 min           |
 
 
 ## Introduction
 
 #### Lab Objective
 
-This lab walks through the configuration of Global and Flow variables for digital channels. The behaviour of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
+This lab walks through the configuration of Global and Flow variables for digital channels. The behavior of these variables are the same as how they would work for telephony flows. Global variables are centrally configured and reported in WxCC and they are fetch via flows in Webex Connect. Flow variables are configured locally within Webex Connect flows and are not reportable.
 
 Both variables are transferable between flows. In the second part of this lab in 12.24.3, we will configure the transfer of chat form entries received in the inbound chat flow to routed flow when agent accepts the inbound chat.
 

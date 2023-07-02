@@ -1,52 +1,39 @@
 {
   "main": {
-    "id": "d4208eda57cc4ca3",
+    "id": "18ebc74bf3ae857f",
     "type": "split",
     "children": [
       {
-        "id": "87b2c434c9b61e8d",
+        "id": "1ef33918791f8fd9",
         "type": "tabs",
         "children": [
           {
-            "id": "1424830f5ce40d09",
+            "id": "87ed3694b7aab2ba",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "support.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e7b3c96467f4f4e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "_pages/Digital.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "abab725b9c29cc00",
+    "id": "870f1515136609b0",
     "type": "split",
     "children": [
       {
-        "id": "0094d887c5341deb",
+        "id": "d0188041ae7c8f98",
         "type": "tabs",
         "children": [
           {
-            "id": "3b96ed7e2b99cfa2",
+            "id": "9bcb2365582083a6",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,12 +43,12 @@
             }
           },
           {
-            "id": "01d606000aab9e01",
+            "id": "1c96304f145564c7",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#2-creating-an-event-in-webex-engage-portal",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,15 +58,7 @@
             }
           },
           {
-            "id": "b21ea11e07a764a1",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "dc735bf45bffbc0d",
+            "id": "917e2c9c062e49b5",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -90,23 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 326.5
   },
   "right": {
-    "id": "1a964129c454dcd3",
+    "id": "be1343f50637eb35",
     "type": "split",
     "children": [
       {
-        "id": "e7f7308210913500",
+        "id": "ccc91e417644bf6e",
         "type": "tabs",
         "children": [
           {
-            "id": "c2397e45953837d0",
+            "id": "9153b97f657b4f3b",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "_pages/Digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,19 +97,19 @@
             }
           },
           {
-            "id": "3a04b0c1af92bdac",
+            "id": "2cbd9865eee640f0",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "_pages/Digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "1692dccdcfa3fc1a",
+            "id": "747935db868bec3e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -141,12 +120,12 @@
             }
           },
           {
-            "id": "36fca9f4b0cba910",
+            "id": "71a284d3f6c86d3a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Provisioning.md"
+                "file": "_pages/Digital.md"
               }
             }
           }
@@ -167,35 +146,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7b3c96467f4f4e5",
+  "active": "87ed3694b7aab2ba",
   "lastOpenFiles": [
-    "files/ESD_default_layout.json.md",
-    "files",
-    "assets/images/mailinator-1.gif.md",
-    "assets/images/mailinator-1.gif",
+    "assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flowID.png",
+    "assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flowID.png",
+    "assets/images/DC_Lab.12.7_Create-Upload_Email_flow_flowid.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_9_1.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_8_2.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_8_1.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_7_1.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_6_2.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_6_1.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_5_1.png",
+    "assets/images/DC_Lab_12.8._Create_Flow_4_1.png",
+    "_pages/CRM.md",
+    "_pages/Digital.md",
     "assets/images/Single.md",
-    "assets/images/SSO/9.png",
-    "assets/images/SSO/8.png",
-    "assets/images/SSO/7.png",
-    "assets/images/SSO/6.png",
-    "assets/images/SSO/5.png",
-    "assets/images/SSO/4.png",
-    "assets/images/SSO/13.png",
-    "assets/images/SSO/3.png",
-    "assets/images/SSO/2.png",
-    "assets/images/SSO",
-    "assets/images/OnboardingProcess",
-    "assets/images/IVR",
-    "assets/images/Analyzer/CustomDesktopLayout_v1.json",
-    "assets/images/Analyzer/Analyzer_Import.zip",
-    "assets/images/Analyzer",
-    "assets/files/lab_wav.zip",
-    "assets/files/flow_template.json.zip",
-    "assets/files/flow_template.json",
-    "_pages/Provisioning.md",
-    "_pages/Agent.md",
-    "_pages/WxM.md",
-    "_pages/CH.md",
-    "_pages/API.md"
+    "assets/images/SSO"
   ]
 }
