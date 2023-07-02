@@ -169,6 +169,10 @@
   },
   "active": "e7b3c96467f4f4e5",
   "lastOpenFiles": [
+    "_pages/IVR.md",
+    "_pages/Agent.md",
+    "_pages/CCAI.md",
+    "_pages/Provisioning.md",
     "RTMS EA Regional Media.pdf",
     "RTMS GA Launch 1.pdf",
     "RTMS GA Launch.pdf",
@@ -192,9 +196,6 @@
     "assets/images/Analyzer/CustomDesktopLayout_v1.json",
     "assets/images/Analyzer/Analyzer_Import.zip",
     "assets/images/Analyzer",
-    "assets/files/lab_wav.zip",
-    "_pages/Provisioning.md",
-    "_pages/Agent.md",
     "_pages/WxM.md",
     "_pages/CH.md",
     "_pages/API.md"
