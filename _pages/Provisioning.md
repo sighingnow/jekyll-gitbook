@@ -23,7 +23,7 @@ This is a supportive videos that do not require any actions since your tenant is
 
 
 # How to create Webex Contact Center Trial
-This video demonstrates the proces of creation Webex Contact Center Trial. To create a Trial it is not necessary to go through the ordering process. Trial tenants are a great option for partners who are willing to start with the configuration before billing started. 
+This video demonstrates the process of creation Webex Contact Center Trial. To create a Trial it is not necessary to go through the ordering process. Trial tenants are a great option for partners who are willing to start with the configuration before billing started. 
 > NOTE: By default the Webex Contact Center trial feature is not available in Partner Hubs. It can be activated only after approval. Please contact your PSM/CSM.
 {: .block-tip }
 
