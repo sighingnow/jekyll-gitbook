@@ -19,7 +19,7 @@ This is a supportive videos that do not require any actions since your tenant is
 | [Part 1: How to create Webex Contact Center Trial](#lab-0-part-1-how-to-create-webex-contact-center-trial) | Watch & Understand | EASY            | 6 min           |
 | [Part 2: Provisioning with Creating a New Customer Organization](#lab-0-part-3-provisioning-with-creating-a-new-customer-organization)                       | Watch & Understand | EASY            | 9 min            |
 | [Part 3: Provisioning on existing Customer Organization](#lab-0-part-4-provisioning-on-existing-customer-organization)                       | Watch & Understand | EASY            | 7 min            |
-| [RTMS Overview](#RTMS Overview)                       | Watch & Understand | EASY            | 25 min            |
+| [RTMS Overview]                       | Watch & Understand | EASY            | 25 min            |
 
 
 # How to create Webex Contact Center Trial
@@ -62,15 +62,15 @@ This video demonstrates how to apply Webex Contact Center subscription to an exi
 Please use the below PDFs with supportive videos. It covers:
 
 •How RTMS works
-•Why we use the new media layer
-•option that a customer selects to process their media
-•What countries/regions are covered/will be covered
-•RTMS General Features (what it supports today and what is in roadmap)•Regional Media
+•Why we use the new media layer<br>
+•option that a customer selects to process their media<br>
+•What countries/regions are covered/will be covered<br>
+•RTMS General Features (what it supports today and what is in roadmap)•Regional Media<br>
 
-RTMS: Launch: [https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63](https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63)
+RTMS: Launch: [https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63](https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63)<br>
 RTMS: Launch: [RTMS GA Launch.pdf](https://github.com/WebexCC/webexcc.github.io/blob/428cc7437e03d343b5abd3a4ab1a366b9c8b6f9e/files/RTMS%20GA%20Launch.pdf)
-
-RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893)
+<br>
+RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893)<br>
 RTMS Regional Media: [RTMS EA Regional Media.pdf](https://github.com/WebexCC/webexcc.github.io/blob/428cc7437e03d343b5abd3a4ab1a366b9c8b6f9e/files/RTMS%20EA%20Regional%20Media.pdf)
 
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
