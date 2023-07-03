@@ -350,7 +350,7 @@ Within the setting section the administrator can control some additional useful 
 
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
-| [User Roles and Permissions](#1-user-roles–and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
+| [User Roles and Permissions](#1-user-roles-and-permissions)                       | Read & Understand         | EASY                | 4 min                 |
 | [Users organization](#2-users-organization)                                       | Read & Understand         | EASY                | 1 min                 |
 | [Login to Connect portal](#3-login-to-connect-portal)                             | Practical Lab         | EASY                | 1 min                 |
 | [Add new users with administrator role](#4-add-new-users-with-administrator-role) | Practical Lab         | EASY                | 2 min                 |

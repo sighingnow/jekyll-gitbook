@@ -1,52 +1,39 @@
 {
   "main": {
-    "id": "d4208eda57cc4ca3",
+    "id": "9e47a7babe403d98",
     "type": "split",
     "children": [
       {
-        "id": "87b2c434c9b61e8d",
+        "id": "fd7644420c8de347",
         "type": "tabs",
         "children": [
           {
-            "id": "1424830f5ce40d09",
+            "id": "06a09695ba818c6d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "support.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e7b3c96467f4f4e5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "_pages/Digital.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "abab725b9c29cc00",
+    "id": "0280a038e0cce27f",
     "type": "split",
     "children": [
       {
-        "id": "0094d887c5341deb",
+        "id": "a7d0df102ac8456e",
         "type": "tabs",
         "children": [
           {
-            "id": "3b96ed7e2b99cfa2",
+            "id": "79951ecc8109c94f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +43,7 @@
             }
           },
           {
-            "id": "01d606000aab9e01",
+            "id": "7dbdcc6aaa77a3e4",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,15 +58,7 @@
             }
           },
           {
-            "id": "b21ea11e07a764a1",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          },
-          {
-            "id": "dc735bf45bffbc0d",
+            "id": "25f8a12183e5027f",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -93,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "1a964129c454dcd3",
+    "id": "c7409f59127b71b9",
     "type": "split",
     "children": [
       {
-        "id": "e7f7308210913500",
+        "id": "3bd53babf55dfb25",
         "type": "tabs",
         "children": [
           {
-            "id": "c2397e45953837d0",
+            "id": "5e51801daec10e2d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "_pages/Digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,19 +97,19 @@
             }
           },
           {
-            "id": "3a04b0c1af92bdac",
+            "id": "97459577d362c719",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "_pages/Digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "1692dccdcfa3fc1a",
+            "id": "e034a0c13504aeef",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -141,12 +120,12 @@
             }
           },
           {
-            "id": "36fca9f4b0cba910",
+            "id": "18b43c395ccaf2d5",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Provisioning.md"
+                "file": "_pages/Digital.md"
               }
             }
           }
@@ -164,27 +143,14 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3b96ed7e2b99cfa2",
+  "active": "06a09695ba818c6d",
   "lastOpenFiles": [
     "files/RTMS GA Launch.pdf",
     "files/RTMS EA Regional Media.pdf",
-    "_pages/IVR.md",
-    "_pages/Agent.md",
-    "_pages/CCAI.md",
-    "_pages/Provisioning.md",
-    "RTMS EA Regional Media.pdf",
-    "RTMS GA Launch 1.pdf",
-    "RTMS GA Launch.pdf",
-    "assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flowID.png",
-    "assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flowID.png",
-    "assets/images/DC_Lab.12.7_Create-Upload_Email_flow_flowid.png",
-    "files/ESD_default_layout.json.md",
-    "files",
-    "assets/images/mailinator-1.gif.md",
-    "assets/images/mailinator-1.gif",
     "assets/images/Single.md",
     "assets/images/SSO/9.png",
     "assets/images/SSO/8.png",
@@ -192,13 +158,14 @@
     "assets/images/SSO/6.png",
     "assets/images/SSO/5.png",
     "assets/images/SSO/4.png",
+    "assets/images/SSO/3.png",
+    "assets/images/SSO/2.png",
+    "assets/images/SSO/13.png",
+    "assets/images/SSO/12.png",
     "assets/images/SSO",
-    "assets/images/OnboardingProcess",
-    "assets/images/IVR",
-    "assets/images/Analyzer/CustomDesktopLayout_v1.json",
-    "assets/images/Analyzer/Analyzer_Import.zip",
-    "_pages/WxM.md",
-    "_pages/CH.md",
-    "_pages/API.md"
+    "RTMS GA Launch.pdf",
+    "RTMS GA Launch 1.pdf",
+    "RTMS EA Regional Media.pdf",
+    "_pages/Digital.md"
   ]
 }
