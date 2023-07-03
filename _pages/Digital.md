@@ -861,7 +861,7 @@ Now create a new client ID that will be used to identify your application to Goo
 | Authorization URL | https://accounts.google.com/o/oauth2/auth |
 | Scope | https://mail.google.com/ https://www.googleapis.com/auth/gmail.send |
 | Access Token URL | https://oauth2.googleapis.com/token |
-| Refresh Token URL | [https://accounts.google.com/o/oauth2/auth](https://accounts.google.com/o/oauth2/auth) |
+| Refresh Token URL | https://oauth2.googleapis.com/token |
 
 > where \<ID\> is your POD ID
 
