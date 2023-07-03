@@ -61,20 +61,23 @@ This video demonstrates how to apply Webex Contact Center subscription to an exi
 
 
 # RTMS Overview
-Please use the below PDFs with supportive videos. It covers:
 
-•How RTMS works<br>
-•Why we use the new media layer<br>
-•option that a customer selects to process their media<br>
-•What countries/regions are covered/will be covered<br>
-•RTMS General Features (what it supports today and what is in roadmap)<br>
-•Regional Media<br>
+> Real Time Media Services (RTMS) is a media processing layer for Webex Contact Center customers. This video will discuss what RTMS is, how it fits into the existing Webex Contact Center ecosystem, the customer onboarding process and a brief description of our roadmap and feature support.
 
-RTMS: Launch: [https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63](https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63){:target="\_blank"}<br>
-RTMS: Launch: [RTMS GA Launch.pdf](https://webexcc.github.io/files/RTMS%20GA%20Launch.pdf)
-<br><br>
-RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893){:target="\_blank"}<br>
-RTMS Regional Media: [RTMS EA Regional Media.pdf](https://webexcc.github.io/files/RTMS%20EA%20Regional%20Media.pdf)
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/425661cc-0d89-4d4a-a7a0-6dcc2604de63" width="100%" height="100%" title="RTMS Launch" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+RTMS PDF: [RTMS GA Launch.pdf](https://webexcc.github.io/files/RTMS%20GA%20Launch.pdf)
+
+
+>RTMS is a media processing layer for Webex Contact Center customers. This video will discuss what RTMS regional media is, how it fits into the existing Webex Contact Center ecosystem, the customer activation process and configuration of regional media.
+
+<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/5db4d59a-e80a-465a-b254-574afa969893" width="100%" height="100%" title="RTMS Regional Media" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
+
+RTMS Regional Media PDF: [RTMS EA Regional Media.pdf](https://webexcc.github.io/files/RTMS%20EA%20Regional%20Media.pdf)
 
 # Webex Contact Center Developer Sandbox
 A Contact Center Developer Sandbox provides you with administrator access to a licensed Webex organization. A licensed org lets you create and test capabilities of the Webex platform not available with Webex free plans.
