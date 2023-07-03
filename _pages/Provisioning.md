@@ -70,10 +70,10 @@ Please use the below PDFs with supportive videos. It covers:
 •RTMS General Features (what it supports today and what is in roadmap)<br>
 •Regional Media<br>
 
-RTMS: Launch: [https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63](https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63)<br>
+RTMS: Launch: [https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63](https://app.vidcast.io/share/425661cc-0d89-4d4a-a7a0-6dcc2604de63){:target="\_blank"}<br>
 RTMS: Launch: [RTMS GA Launch.pdf](https://webexcc.github.io/files/RTMS%20GA%20Launch.pdf)
 <br><br>
-RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893)<br>
+RTMS Regional Media: [https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893](https://app.vidcast.io/share/5db4d59a-e80a-465a-b254-574afa969893){:target="\_blank"}<br>
 RTMS Regional Media: [RTMS EA Regional Media.pdf](https://webexcc.github.io/files/RTMS%20EA%20Regional%20Media.pdf)
 
 # Webex Contact Center Developer Sandbox
