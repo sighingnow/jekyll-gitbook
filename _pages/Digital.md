@@ -447,7 +447,7 @@ Connect allows the Owner to create local users in containers called **Groups** a
 | Topic                                                                            | Lab Type | Difficulty Level | Estimated length |
 | -------------------------------------------------------------------------------- | -------- | --------------- | ---------------- |
 | [Node Authorization for Webex CC Task and Engage nodes](#1-node-authorization-for-webex-cc-task-and-engage-nodes)                       | Practical Lab         | EASY                | 5 min                 |
-| [Setup agents in the Management Portal (Agents, Team, MMP)](#2-setup-agents-in-the–management-portal-agents-team-mmp)                             | Practical Lab         | EASY                | 5 min                 |
+| [Setup Agents in the Management Portal](#2-setup-agents-in-the-management-portal)                             | Practical Lab         | EASY                | 5 min                 |
 | [Setup RONA timers](#3-setup-rona-timers) | Practical Lab         | EASY                | 5 min                 |
 
 ## Introduction
@@ -500,7 +500,7 @@ Webex Connect is required to provide a valid access token for using various Webe
 
 ![Authorize](/assets/images/DC_Lab_12.5_8.gif)
 
-## 2. Setup agents in the Management Portal (Agents, Team, MMP)
+## 2. Setup Agents in the Management Portal
 
 This step shows how to access the admin portal and navigate the different configuration menus to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center user.
 
@@ -2172,7 +2172,7 @@ Here are few key points to note about Engage templates which provide better unde
 | ----------------------------------------------------------------------- | ----------------- | --------------- | ---------------- |
 | [Understanding Connect Bots](#1-understanding-connect-bots)             | Read & Understand | MED            | 5 min            |
 | [Access and navigation](#2-access-and-navigation)                       | Read & Understand     | EASY            | 5 min            |
-| [Understand and navigate Q&A Bots](#3understand-and-navigate-q&a-bots) | Read & Understand     | MED            | 5 min            |
+| [Understand and navigate Q&A Bots](#3-understand-and-navigate-qa-bots) | Read & Understand     | MED            | 5 min            |
 | [Understand and navigate Task Bots](#4-understand-and-navigate-task-bots) | Read & Understand     | MED            | 5 min            |
 
 ## Introduction
