@@ -827,7 +827,7 @@ Now create a new client ID that will be used to identify your application to Goo
 
 - Select `Web application` in the **Application type**
 - You can leave the default name. The name of your OAuth 2.0 client is only used to identify the client in the Google Cloud console and will not be shown to application users. 
-- In the **Authorized redirect URIs** section click **ADD URI** button and set `https://cl1pod\<ID\>.imiconnect.io/callback` where \<ID\> is your tenant number. Click **CREATE** button in the end.
+- In the **Authorized redirect URIs** section click **ADD URI** button and set `https://cl1pod\<ID\>.webexconnect.io/callback` where \<ID\> is your tenant number. Click **CREATE** button in the end.
 
 ![DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_2](/assets/images/DC_Lab.12.7_Credentials_and_authentication_with_OAuth_2.0_2.png)
 
