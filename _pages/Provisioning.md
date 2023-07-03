@@ -1,7 +1,7 @@
 ---
 title: Lab 0 - Provisioning
 author: Yaroslav Bondar
-date: 2023-07-02
+date: 2022-01-01
 layout: post
 ---
 ```
