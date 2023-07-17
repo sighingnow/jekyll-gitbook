@@ -4,7 +4,7 @@ longtitle:        Elmagenta
 author:           Elmagenta
 email:            elmagenta00@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  Docker guides and more!
 
 version:          1.0
 gitbook_version:  3.2.3
