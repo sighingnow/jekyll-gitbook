@@ -1,8 +1,8 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Elmagenta
+longtitle:        Elmagenta
+author:           Elmagenta
+email:            elmagenta00@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
 
@@ -14,7 +14,7 @@ baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
-remote_theme: sighingnow/jekyll-gitbook
+#remote_theme: sighingnow/jekyll-gitbook
 
 toc:
   enabled: true
