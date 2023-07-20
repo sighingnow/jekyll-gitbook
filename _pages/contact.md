@@ -6,4 +6,7 @@ category: Jekyll
 layout: post
 ---
 
-This is an contact page.
+My contacts, use them if you find some errors or if you think i should add something.
+I will NOT provide support if they don't work (at least not for now).
+
+Email: elmagenta00@gmail.com
