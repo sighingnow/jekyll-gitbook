@@ -8,7 +8,7 @@ layout: post
 
 Default File Browser installation
 
-```docker
+```yaml
 version: "3"
 services:
   filebrowser:
@@ -28,7 +28,7 @@ The difference is that with this folder mounting i can mount a folder, in this c
 Why doing this?
 Cause in File Browser you can give an user the access to ONE SINGLE FOLDER but with this structure of mounting i can give access to a user more folders by giving it the access to the more generic one.
 
-```docker
+```yaml
 version: "3"
 services:
   filebrowser:
