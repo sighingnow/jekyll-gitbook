@@ -53,17 +53,17 @@ volumes:
       device: 
   MyVolume2:
     driver_opts:
-      type: cifs
+      type: 
       o:
       device:
   MyVolume3:
     driver_opts:
-      type: cifs
+      type: 
       o:
       device:
   MyVolume4:
     driver_opts:
-      type: cifs
+      type: 
       o:
       device:
 ```
