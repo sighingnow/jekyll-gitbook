@@ -6,4 +6,4 @@ category: Jekyll
 layout: post
 ---
 
-This is an about page.
+Hi, i'm a 25th years old Data Science student, i'm doing these guides more for a personal note to not forget how I did these compose working, but feel free to try them and see if they work to you too!
