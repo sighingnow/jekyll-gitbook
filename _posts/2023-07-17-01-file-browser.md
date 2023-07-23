@@ -4,6 +4,7 @@ author: Elmagenta
 date: 2023-07-17
 category: Jekyll
 layout: post
+cover: /assets/filebrowser.png
 ---
 
 Default File Browser installation
