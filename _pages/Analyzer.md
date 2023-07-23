@@ -54,7 +54,7 @@ Enter your attendee ID below and click on `SAVE`. This will update any relevant 
 
   - If you have not create these users yet, please follow the steps from [Lab 1 - Admin Experience](https://webexcc.github.io/pages/CH/#control-hub-user-management-task) to create both of them.
 
-- For `Lab 5` exercises, we will need to generate some data that include global variables, callback requests as well as preferred agent routing. To do so, a flow template named `AnalyzerLab_Flow` has been created (If you do not have the flow, you can download it from ![here](https://webexcc.github.io/assets/files/AnalyzerLab_Flow.json)). To create your own flow based on that and generate data, please do the following steps:
+- For `Lab 5` exercises, we will need to generate some data that include global variables, callback requests as well as preferred agent routing. To do so, a flow template named `AnalyzerLab_Flow` has been created (If you do not have the flow, you can download it from [here](https://webexcc.github.io/assets/files/AnalyzerLab_Flow.json) ). To create your own flow based on that and generate data, please do the following steps:
 
   - Go to `Admin Portal -> Routing Strategy -> Flows`.
 
