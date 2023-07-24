@@ -1,7 +1,7 @@
 # Configurations
-title:            Jekyll Gitbook
+title:            Fyde Documentation
 longtitle:        Jekyll Gitbook
-author:           HE Tao
+author:           Fyde
 email:            sighingnow@gmail.com
 description: >
   Build Jekyll site with the GitBook style.
