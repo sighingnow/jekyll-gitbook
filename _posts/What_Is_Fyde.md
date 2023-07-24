@@ -1,7 +1,7 @@
 ---
-title: Why Jekyll with GitBook
-author: Tao He
-date: 2019-04-27
+title: What is Fyde ?
+author: Fyde
+date: 2023-24-07
 category: Jekyll
 layout: post
 ---
