@@ -1,10 +1,8 @@
 # Configurations
 title:            Fyde Documentation
-longtitle:        Jekyll Gitbook
 author:           Fyde
-email:            sighingnow@gmail.com
-description: >
-  Build Jekyll site with the GitBook style.
+description: > 
+Documentation for Fyde smart contracts.
 
 version:          1.0
 gitbook_version:  3.2.3
