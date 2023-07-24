@@ -6,6 +6,17 @@ permalink: /
 
 Make Jelly site have a GitBook look!
 
+Why this repo
+-------------
+
+long contents .....
+
+1. e
+2. f
+3. g
+4. h
+
+
 ## Demo
 
 Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
