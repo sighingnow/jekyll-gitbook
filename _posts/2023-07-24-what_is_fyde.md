@@ -1,7 +1,7 @@
 ---
 title: What is Fyde ?
 author: Fyde
-date: 2023-24-07
+date: 2023-07-24
 category: Jekyll
 layout: post
 ---
