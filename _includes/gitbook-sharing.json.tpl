@@ -8,7 +8,6 @@
                 "telegram_link": "https://t.me",
                 "instapaper": false,
                 "twitter": true,
-                "twitter_link: "https://twitter.com/FydeTreasury",
                 "vk": false,
                 "weibo": false
             },
