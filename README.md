@@ -14,7 +14,25 @@ Fyde introduces an on-chain exchange pool, where tokens over a range of sub-sect
 
 ## How it works ? 
 
-
+TODO : Andrey can you write few lines explaining the protocol as you would for the whitepaper
 
 
 ## Architecture
+
+```mermaid
+sequenceDiagram
+    actor User
+    Note over Relayer: Monitor request <br/> with gelato
+    User ->> Relayer: Request governance deposit <br/> forward gas for relayer
+    Relayer ->> Fyde: Gelato trigger <br/> processRequest
+    OracleModule ->> Fyde: Return quote for deposit
+    Note over Fyde: Compute process parameters <br/> (sharesToMint, tax, usdVal)
+    User ->> Fyde: Transfer assets
+    GovernanceModule ->> UserProxy: Create user proxy
+    GovernanceModule ->> Fyde: Return user proxy
+    GovernanceModule ->>  User: Mint sTRSY-assets
+    Fyde ->> UserProxy: Transfer assets
+    Note over Fyde: Log accounting assets
+    Fyde ->> GovernanceModule: Mint TRSY
+    Note over Fyde: Mint tax to Fyde
+```
