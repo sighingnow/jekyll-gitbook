@@ -19,4 +19,12 @@ TODO : Andrey can you write few lines explaining the protocol as you would for t
 
 ## Architecture
 
+The protocol architecture is composed of four main smart contracts:
+
+- The Relayer: contains the entry points into the protocol for external users, as well as the protocol automation logic.
+- Fyde: contains the main logic of the protocol, allowing for depositing, withdrawing, and swapping assets.
+- OracleModule: allows for obtaining on-chain pricing of assets.
+- GovernanceModule: contains the logic allowing a user to retain governance rights over their assets.
+  
+
 ![Architecture](/illustrations/ContractOverview.png)
