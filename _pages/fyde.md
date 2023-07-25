@@ -27,3 +27,7 @@ Users can swap assetIn for assetOut. During the swap, we exchange the USD value 
 ### Deposit tax
 
 This system is encapsulated by the following function, which charges no tax if the deposit remains underneath the target concentration of the token pool. A tax proportional to the difference between the current ($C_{i}$) and target concentrations ($C_{i}^0$) will be levied on the portion of assets that are deposited into overweight pools ($D_{i}^a$). This tax is calculated for every pool being deposited into, where $D_{i}$ is the USDC value of each individual deposit and $T_{D}$ is the sum of all deposits.
+
+\begin{equation}
+D^a_i = \min\left(\max\left(D_i + T_{VL}(C_i - C^0_i) - T_DC^0_i,0\right),D_i\right)\ .
+\end{equation}
