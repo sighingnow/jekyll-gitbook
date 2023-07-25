@@ -1,0 +1,25 @@
+# .github/workflows/render-md-mermaid.yml
+
+name: render-md-mermaid
+
+on:
+  push:
+    paths:
+      - '**.md'
+
+jobs:
+  render-md-mermaid:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Render images for every Mermaid diagram in all Markdown files (*.md) in the repo
+        uses: nielsvaneck/render-md-mermaid@v2
+
+      - name: Commit rendered png and svg files
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: "*[.svg,.png]"
+          commit_message: automatically rendered mermaid diagrams
