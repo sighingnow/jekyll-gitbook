@@ -1,10 +1,12 @@
 ---
-title: Fyde
+title: Fyde contract
 author: Fyde  
 date: 2022-02-04
 category: Jekyll
 layout: post
 ---
+
+## Main overview
 
 The Fyde contract serves as the core contract of the Fyde protocol. It handles the logic for depositing, withdrawing, and swapping assets within the protocol.
 
@@ -15,3 +17,13 @@ Approved assets can be deposited by users, and upon deposit, TRSY is minted to t
 Users can withdraw assets by burning their TRSY, using a mechanism similar to depositing. For example, if a user has 50,000 TRSY and the total value locked (TVL) is 1 million USD, with a total circulation of 500,000 TRSY, the user owns 10% of the index pool and can withdraw the equivalent of 100,000 USD.
 
 Users can swap assetIn for assetOut. During the swap, we exchange the USD value of assetIn for an amount of assetOut with the same USD value.
+
+
+## Smart contract overview
+
+
+## Computation of the tax 
+
+### Deposit tax
+
+This system is encapsulated by the following function, which charges no tax if the deposit remains underneath the target concentration of the token pool. A tax proportional to the difference between the current ($C_{i}$) and target concentrations ($C_{i}^0$) will be levied on the portion of assets that are deposited into overweight pools ($D_{i}^a$). This tax is calculated for every pool being deposited into, where $D_{i}$ is the USDC value of each individual deposit and $T_{D}$ is the sum of all deposits.

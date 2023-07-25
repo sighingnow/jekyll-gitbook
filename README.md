@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Introduction to Fyde
+title: Introduction to Fyde protocol
 permalink: /
 ---
 
