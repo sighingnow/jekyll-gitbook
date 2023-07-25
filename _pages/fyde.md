@@ -35,6 +35,7 @@ The Fyde contract is primarily responsible for executing the logic related to de
 - Tax: calculates potential taxes on deposits, withdrawals, and swaps.
 
 ![Fyde](fyde.png)
+<img src="{{site.baseurl}}/illustrations/fyde.png">
 
 
 ## Computation of the tax 
