@@ -34,7 +34,7 @@ The Fyde contract is primarily responsible for executing the logic related to de
 - Quarantine List: TO DO
 - Tax: calculates potential taxes on deposits, withdrawals, and swaps.
 
-![Fyde](../illustrations/fyde.png)
+![Fyde](../illustrations/fyde.PNG)
 
 
 ## Computation of the tax 
