@@ -7,7 +7,6 @@ gem "jekyll"
 gem 'jekyll-feed'
 gem 'jekyll-readme-index'
 gem 'jemoji'
-gem 'jekyll-mermaid'
 gem 'webrick'
 
 # gem "rails"
