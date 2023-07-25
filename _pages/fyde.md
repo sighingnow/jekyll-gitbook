@@ -19,7 +19,22 @@ Users can withdraw assets by burning their TRSY, using a mechanism similar to de
 Users can swap assetIn for assetOut. During the swap, we exchange the USD value of assetIn for an amount of assetOut with the same USD value.
 
 
+TO DO : Add info about the case of governance deposit
+
+
 ## Smart contract overview
+
+The Fyde contract is primarily responsible for executing the logic related to depositing and withdrawing funds from the index pool and the governance pool. Additionally, the Fyde contract inherits the logic of the following modules:
+
+- TRSY: an ERC20 used to represent the pool in the form of shares (similar to the logic of vault 4626)
+- AddressRegistry: contains the addresses of contracts that interact with the protocol
+- ProtocolState: contains the accounting logic of the protocol, as well as various parameters for the protocol
+- GovernanceAccess: TO DO
+- AssetRegistry: contains the logic for adding assets to the protocol
+- Quarantine List: TO DO
+- Tax: calculates potential taxes on deposits, withdrawals, and swaps.
+
+![Fyde](/illustrations/Fyde.png)
 
 
 ## Computation of the tax 
@@ -57,3 +72,8 @@ With the total value of TRSY tokens transferred to the tax contract being:
 \begin{equation}
   T_{tax} = \sum_{i=1}^N T^{tax}_i\ .
 \end{equation}
+
+
+## Quarantine list
+
+TODO Add infos
