@@ -1,0 +1,9 @@
+sequenceDiagram
+    actor User
+    Note over Relayer: Monitor request <br/> with gelato
+    User ->> Relayer: Request governance withdraw <br/> forward gas for relayer
+    Relayer ->> Fyde: Gelato trigger <br/> processRequest
+    OracleModule ->> Fyde: Return quote for withdraw
+    Note over GovernanceModule: Log accounting
+    Fyde ->> UserProxy: Burn TRSY
+    UserProxy ->> User: Transfer asset

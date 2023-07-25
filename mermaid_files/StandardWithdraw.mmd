@@ -1,0 +1,13 @@
+sequenceDiagram
+    actor User
+    Note over Relayer: Monitor request <br/> with gelato
+    User ->> Relayer: Request standard withdraw <br/> forward gas for relayer
+    Relayer ->> Fyde: Gelato trigger <br/> processRequest
+    OracleModule ->> Fyde: Return quote for withdraw
+    Note over Fyde: Compute process parameters <br/> (sharesToBurn, tax, usdVal)
+    Fyde ->> User: Burn TRSY
+    Note over Fyde: Mint tax
+    Fyde ->> User: Transfer assets
+    Note over Fyde: Log accounting assets
+   
+   
