@@ -1,0 +1,13 @@
+sequenceDiagram
+    actor User
+    Note over Relayer: Keepers monitor pending request
+    User ->> Relayer: Request swap <br/> forward gas for relayer
+    Relayer ->> Fyde: Keepers trigger <br/> processRequest
+    OracleModule ->> Fyde: Return quote for assetIn <br/> and assetOut price
+    Note over Fyde: Compute swap parameters <br/> (tax, incentives)
+    Note over Fyde: Log accounting assets
+    User ->> Fyde: Transfer assetIn
+    Fyde ->> User: Transfer assetOut
+    
+
+
