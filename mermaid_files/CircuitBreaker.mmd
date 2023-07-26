@@ -1,0 +1,24 @@
+flowchart TD
+	A[Write OracleData] --> B
+    A --> BB
+    subgraph ChainlinkChecker
+    B[Price up to date ?] -- "Yes" --> D
+    B[Price up to date ?] -- "No" --> E
+    C[Chainlink data correct ?] -- "Yes" --> D
+    C[Chainlink data correct ?] -- "No" --> E
+    D[Keep chainlink price] --> Out
+    E[Invalid chainlink price] --> Out
+    Out[Return adjusted oracle data]
+
+    end
+    subgraph UniswapChecker
+    BB[Short and long TWAP in range ?] -- "Yes" --> DD
+    BB[Short and long TWAP in range ?] -- "No" --> EE
+    CC[Uniswap data correct ?] -- "Yes" --> DD
+    CC[Uniswap data correct ?] -- "No" --> EE
+    DD[Keep Uniswap long TWAP] --> Outt[Return adjusted oracle data]
+    EE[Invalid Uniswap price] --> Outt[Return adjusted oracle data]
+
+    end
+    Out --> Out2[OracleData]
+    Outt -->Out2

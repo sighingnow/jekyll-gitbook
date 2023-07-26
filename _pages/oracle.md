@@ -12,7 +12,12 @@ The Fyde Protocol enables people to deposit their assets to mint TRSY, burn thei
 ## Fyde's oracle design
 Fyde uses a combination of Chainlink and Uniswap V3 TWAP oracles with a 30 minutes time window. Whenever there is a need for an oracle value, the protocol will aggregate price from Chainlink and Uniswap V3 TWAP and implement various circuit breaker along the aggregation.
 
+This diagram shows the oracle flow in Fyde:
 
 <img src="{{site.baseurl}}/illustrations/OracleFlow.svg">
 
+* see next graph for the circuit breaker implementation
+
+
+<img src="{{site.baseurl}}/illustrations/CircuitBreaker.svg">
 
