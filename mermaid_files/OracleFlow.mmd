@@ -1,0 +1,22 @@
+flowchart TD
+	subgraph UniswapAdapter
+	AA[Get TWAP from Uniswap V3 pool]
+	end
+	subgraph ChainlinkAdapter
+	BB[Get price from asset feed]
+	CC[Get quote price : ETH/USD, USDC/USD...]
+	end
+	AA --> DD[Write OracleData]
+	BB --> DD
+	CC --> DD
+	DD --> EE[Check if chainlink & uniswap</br> data are valid*]
+    EE --> F1[Chainlink & Uniswap valid]
+    F1 --> F11[Oracles price deviated ?]
+    F11 --"No" --> F111[Return mean price]
+    F11 --"Yes"--> F112[Return 0]
+    EE --> F2[Only chainlink valid]
+    F2 --> F21[Return chainlink price]
+    EE --> F3[Only uniswap valid]
+    F3 --> F31[Return uniswap price]
+    EE --> F4[No valid oracles]  
+    F4 --> F41[Return 0]

@@ -1,8 +1,8 @@
 sequenceDiagram
     actor User
-    Note over Relayer: Monitor request <br/> with gelato
+    Note over Relayer: Keepers monitor pending request
     User ->> Relayer: Request standard deposit <br/> forward gas for relayer
-    Relayer ->> Fyde: Gelato trigger <br/> processRequest
+    Relayer ->> Fyde: Keepers trigger <br/> processRequest
     OracleModule ->> Fyde: Return quote for deposit
     Note over Fyde: Compute process parameters <br/> (sharesToMint, tax, usdVal)
     User ->> Fyde: Transfer assets
