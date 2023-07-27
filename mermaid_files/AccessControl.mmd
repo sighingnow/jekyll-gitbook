@@ -1,0 +1,9 @@
+flowchart LR
+	Relayer
+    User --Request Action --> Relayer
+    Keepers --Update AUM <br/> processRequest --> Relayer
+    Guard --Can pause and quarantine --> Relayer
+    IncentiveManager -- Can update incentiveFactor--> Relayer
+    Owner --EOA access admin functions --> Fyde
+    Owner --EOA access admin functions --> Relayer
+    Relayer --Relay  --> Fyde

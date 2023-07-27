@@ -8,7 +8,10 @@ layout: post
 
 ## Main overview
 
-The relayer serves as the primary entry point for external users through the request functions (requestDeposit, requestWithdraw, requestSwap). A keeper, such as Gelato bot or Fyde keeper monitor the relayer and then processes the request and passes as input the protocolAUM (which will be used for further computation), which represents the protocol's total value locked (TVL) in USD.
+The role of the relayer is twofold : 
+- First, it serves as the entry point for external users to interact with the protocol through request functions (requestDeposit, requestWithdraw, requestSwap).
+- Second, it is used for settlement automation in Fyde through monitoring and updating the protocol AUM, and it manages the process request. Automation is monitored by external keepers, such as Gelato Network and our Fyde Keeper bot.
+
 
 ## Why is a relayer necessary? 
 
@@ -19,7 +22,7 @@ In designing our protocol, we chose to denominate assets and TVL in USD, with on
 
 ### Requesting
 
-Users are calling the requests function to express their action's intent with somes parameters such as : assets, amounts, keep the governance rights, slippage parameters. Then the request is push into the relayer queue and wait to be processed by a keeper. When user are making a request they will also forward some eth in order to pay the gas fees of the keeper.
+Users are calling the requests function to express their action's intent with somes parameters such as : assets, amounts, keep the governance rights, slippage parameters. Then the request is push into the relayer queue and wait to be processed by a keeper. When user are making a request they will also forward some eth in order to pay the gas fees of the keeper. (See User flow section)
 
 ### Processing
 
@@ -29,6 +32,25 @@ The keepers (currently Gelato Bot and a own made keeper) monitor the relayer que
 ### AUM monitoring and protection from keeper manipulation
 
 
-Since the keeper provides a crucial input value for the protocol's operation (protocolAUM), it opens up an important attack vector. For this reason, we store the protocolAUM value inside the fyde contract as well. When the keeper calls the process function, we ensure that the input value falls within a reasonable range to prevent manipulation attacks.
+Since the keeper provides a crucial input for the protocol's operation (protocolAUM), it opens up an important attack vector. For this reason, we store the protocolAUM value inside the fyde contract as well. When the keeper calls the processRequest function, we ensure that the input value falls within a reasonable range to prevent manipulation attacks.
 
-The protocolAUM value is also monitored by the keepers. If the off-chain value deviates beyond a certain percentage, the keeper is triggered to update the internal value to maintain a consistent on-chain protocolAUM value. However, the keepers' actions are limited, and they can only update the protocolAUM within a coherent range to prevent atomic manipulation and draining the protocol.
+The protocolAUM value is also monitored by off-chain keepers. If the off-chain value deviates beyond a certain percentage, the keeper is triggered to update the internal value to maintain a consistent on-chain protocolAUM value. However, the keepers' actions are limited, and they can only update the protocolAUM within a coherent range to prevent atomic manipulation and draining the protocol in a single tx. By doing so, even if the gelato network is compromised or the private key of the Fyde keeper is stolen, the protocol is protected from single tx manipulation attacks, giving us time to react and pause the protocol.
+
+
+### Access control and role
+
+Relayer inherit access control logic, with the following roles : 
+- User : If whitelist activated only specific user can interact, if zero address is whitelisted, it removes the whitelist logic.
+- Owner : Can add/remove the roles below (functions are triggered manually, this will be a Gnosis Safe multisig)
+Following roles can have multiple addresses assigned : 
+- Keeper : Gelato network and Fyde keeper for updatingAUM and processRequest
+- Guard : Can pause/unpause the protocol and add asset to quarantine list
+- IncentiveManager : Can set swap incentiveFactor on Fyde
+
+<img src="{{site.baseurl}}/illustrations/AccessControl.svg">
+
+
+
+## Quarantine list
+
+In the context of our portfolio management strategy, we may have to quarantine assets based on our risk management strategy. When an asset is quarantined, action for this given asset (deposit, withdraw and swap) are disabled. The quarantine list is managed by the guard role. 

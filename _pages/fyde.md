@@ -76,7 +76,3 @@ With the total value of TRSY tokens transferred to the tax contract being:
   T_{tax} = \sum_{i=1}^N T^{tax}_i\ .
 \end{equation}
 
-
-## Quarantine list
-
-TODO Add infos
