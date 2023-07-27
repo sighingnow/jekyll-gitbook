@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Provisioning.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Provisioning.md"
+                "file": "README.md"
               }
             }
           },
@@ -177,11 +177,18 @@
   },
   "active": "07f2f527ec4d932a",
   "lastOpenFiles": [
+    "_pages/JDS_XM.md",
     "_pages/CH.md",
-    "_pages/Provisioning.md",
-    "_pages/IVR.md",
-    "conflict-files-obsidian-git.md",
     "_pages/Supervisor.md",
+    "_pages/Provisioning.md",
+    "_pages/Calabrio.md",
+    "_pages/IVR.md",
+    "_pages/Digital.md",
+    "_pages/CRM.md",
+    "assets/images/maildrop.gif",
+    "_pages/Agent.md",
+    "assets/files/AnalyzerLab_Flow.json",
+    "conflict-files-obsidian-git.md",
     "files/RTMS GA Launch.pdf",
     "files/RTMS EA Regional Media.pdf",
     "assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flowID.png",
@@ -193,22 +200,16 @@
     "assets/images/DC_Lab_12.8._Create_Flow_6_1.png",
     "assets/images/DC_Lab_12.8._Create_Flow_5_1.png",
     "assets/images/DC_Lab_12.8._Create_Flow_4_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_3_1.png",
     "RTMS GA Launch.pdf",
     "RTMS GA Launch 1.pdf",
     "RTMS EA Regional Media.pdf",
     "Untitled.canvas",
     "assets/images/Single.md",
     "assets/images/SSO",
-    "_pages/WxM.md",
-    "_pages/Digital.md",
-    "_pages/CRM.md",
     "_pages/CCAI.md",
     "_pages/Acqueon.md",
-    "_pages/Agent.md",
     "_pages/Analyzer.md",
     "_pages/API.md",
-    "_pages/Calabrio.md",
     "assets/images/OnboardingProcess",
     "assets/images/mailinator-1.gif.md",
     "assets/gitbook/form.js.md",
@@ -216,7 +217,6 @@
     "assets/files/ESD_default_layout.json.zip",
     "support.md",
     "files/ESD_default_layout.json.md",
-    "files",
     "README.md"
   ]
 }

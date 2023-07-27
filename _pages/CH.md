@@ -140,16 +140,16 @@ update()
 ### 2. Add agent and supervisor users and set the calling extensions
 
 > As a result of the task below you should add two new users to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
-> For agent and supervisor, you can use the https://mailinator.com/ which allows you to create a temporary account without registration. We allow to use mailinator on the current **Lab Tenant** because those accounts do not have admin permissions and the international calls are disabled. 
+> For agent and supervisor, you can use the [https://maildrop.cc/](https://maildrop.cc/){:target="\_blank"} which allows you to create a temporary account without registration. We allow to use of maildrop registrations on the current **Lab Tenant** only without admin permissions (only for agents and supervisors). 
 
-> We don't recommend using the mailinator accounts on your **Gold Tenant** due to security reasons (an attacker can gain access to your tenant). 
+> We don't recommend using the maildrop accounts on your **Gold Tenant** due to security reasons (an attacker can easily gain access to your tenant). 
 {: .block-warning }
 
 
 | **User Role** | **User email**                                                                | **User Extension** |
 | ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class="attendee_out">AttendeeID</w>_agent1@mailinator.com      | <w class= "agentEXT_out">Your Agent Extension</w> |
-| Supervisor    | <w class="attendee_out">AttendeeID</w>_supervisor1@mailinator.com | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
+| Agent         | <w class="attendee_out">AttendeeID</w>_agent@maildrop.cc      | <w class= "agentEXT_out">Your Agent Extension</w> |
+| Supervisor    | <w class="attendee_out">AttendeeID</w>_supervisor@maildrop.cc | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
 
 
 
@@ -183,9 +183,10 @@ update()
 
 - Click **_Save_** and **_Close_** to confirm the changes.
 
-- Validate the users by going to the assigned email account. Open the Control Hub validation email and follow the **Cisco Webex** instructions to activate the both accounts.
-![mailinator](/assets/images/mailinator-1.gif)
+- Validate the users by going to the email account (such as [https://maildrop.cc/](https://maildrop.cc/){:target="\_blank"}). Open the Control Hub validation email and follow the **Cisco Webex** instructions to activate the both accounts. 
 
+![mailinator](/assets/images/maildrop.gif)
+ 
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
 # Contact Center User Configuration

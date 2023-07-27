@@ -17,11 +17,11 @@ This lab covers Webex Contact Center Agent Desktop integration with the most pop
 ## Table of Contents
 
 | Topic                                                                     | Lab Type      | Difficulty Level | Estimated length |
-| ------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- | --- | --- | --- |
+| ------------------------------------------------------------------------- | ------------- | ---------------- | ---------------- | 
 | [Salesforce integration](#salesforce-integration)                         | Practical Lab | MID              | 35 min           |
 | [Microsoft Dynamics 365 integration](#microsoft-dynamics-365-integration) | Practical Lab | MID              | 30 min           |
 | [Service Now integration](#service-now-integration)                       | Practical Lab | MID              | TBD              |     |
-| [Zendesk integration](#zendesk-integration)                               | Practical Lab | MID              | 25 min           |     |     |     |
+| [Zendesk integration](#zendesk-integration)                               | Practical Lab | MID              | 25 min           | 
 
 # Salesforce integration
 
