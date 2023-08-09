@@ -92,7 +92,8 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 <form id="attendee-form">
       <label for="attendee-id">Attendee ID</label>
       <input type="text" name="attendee-id" id="attendee-id" onChange="update()"/>
-      <button type="submit" id="save">SAVE</button>
+      <button onclick="update()">SAVE</button>
+      
 </form>
 <script src="/assets/gitbook/form.js"></script>
 
