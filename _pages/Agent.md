@@ -6,8 +6,24 @@ layout: post
 ---
 
 ```
-Last modified: Mon, 19 Jun 2023
+Last modified: Mon, 9 Aug 2023
 ```
+
+<script>
+    function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
+	Object.entries(them).forEach((entry) => {
+    Array.from(document.getElementsByClassName(entry[0])).forEach((element,index) => 
+    {
+      console.log(document.getElementsByClassName(entry[0])[index].innerHTML); 
+      document.getElementsByClassName(entry[0])[index].innerHTML = entry[1];
+    })})
+
+  event.preventDefault()
+   if(document.forms["attendee-form"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
+  }  
+  }
+</script>
 
 ## Overview of the lab:
 
@@ -75,10 +91,16 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 <div class="alert"></div>
 <form id="attendee-form">
       <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" />
-      <button type="submit" id="save">SAVE</button>
+      <input type="text" name="attendee-id" id="attendee-id" onChange="update()"/>
+      <button onclick="update()">SAVE</button>
+      
 </form>
 <script src="/assets/gitbook/form.js"></script>
+
+<script>
+document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+update()
+</script>
 
 # Agent Desktop Overview
 
@@ -192,7 +214,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 | -------------------- | ---------------------------------------------------------------------- |
 | Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
 | Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
-| Agent Profile        | <w class = "attendee-class">attendeeID</w>\_agentProfile               |
+| Desktop Profile        | <w class = "attendee-class">attendeeID</w>\_desktopProfile               |
 | Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
 | Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
 | Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
@@ -203,7 +225,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 | Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
 | Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
 
-> **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your _attendeeID_ is provided in the email in the **"Attendee ID"** line.
+> **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
 {: .block-warning }
 
 > Be aware that all entities that don't match with attendee IDs will be deleted
@@ -223,7 +245,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
   - You can also configure _Auto Wrapup and RONA timeouts_
 
 <br>
-- Now open the **Management Portal** and navigate to _Provisioning > Agent Profiles_ and edit _your Agent Profile_:
+- Now open the **Management Portal** and navigate to _Provisioning > Desktop Profiles_ and edit _your Desktop Profile_:
 	- In the **Collaboration** tab:
 		- Set the **Buddy Teams** to **`All`**
 		- Enable **`Consult to Queue`**
@@ -312,45 +334,46 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 <br>
 - Navigate to _Management Portal > Provisioning > Outdial ANI_
   - Click on **`New Outdial ANI`**
-  - Name: <w class = "attendee-class">_attendeeID_</w>\_outdialANI
+  - Name: <w class = "attendee-class">attendeeID</w>\_outdialANI
   - Add Outdial ANI entry
-    - Name: <w class = "attendee-class">_attendeeID_</w>\_outdialANIEntry1
+    - Name: <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1
     - Number: Select your mapped DN
 
 <br>
 - Navigate to _Management Portal > Provisioning > Address Book_
 	- Click on **`New Address Book`**
-	- Name: <w class = "attendee-class">_attendeeID_</w>\_addressBook
+	- Name: <w class = "attendee-class">attendeeID</w>\_addressBook
 	- Parent Type: **`Site`**
 	- Add Address Book entries
-		- Name: <w class = "attendee-class">_attendeeID_</w>\_addressBookEntry1
-		- Only US numbers are supported. For example: +18662293239 (Cisco Helpdesk)
+		- Name: <w class = "attendee-class">attendeeID</w>\_addressBookEntry1
+		- International calls are disabled, **so only US numbers are supported**. For example: +18662293239 (Cisco Helpdesk)
 
 <br>
-- Navigate to _Management Portal > Provisioning > Agent Profiles_
-	- Search for _your Agent Profile_ and make sure that **Outdial is enabled and your Outdial EP selected**
+- Navigate to _Management Portal > Provisioning > Desktop Profiles_
+	- Search for _your Desktop Profile_ and make sure that **Outdial is enabled and `Outdial Entry Point-1` (created by the system) selected**
 	- Select _your Outdial ANI_
 
 <br>
 - Navigate to _Management Portal > Tenant > Settings_
-	- Check what is the **Default Outdial ANI**
+	- See the number of the **Default Outdial ANI**
 
 > **This is a required setting at tenant level, so PLEASE DON'T EDIT IT**
 {: .block-danger }
 
 <br>
-- Now, login in the **Agent Desktop** with _your Agent1_ and using the Webex Extension
-	- Input your personal phone number
+- Now, login in the **Agent Desktop** with _your Agent1_ with the Webex Extension of the Agent
+	- Open the Outdial on the Horizontal Header
+  - Input your personal phone number
 	- **Don't select any Outdial ANI**
 	- Click on the telephone button to place the call
-	- The call will be delivered to your phone number with the tenant **Default Outdial ANI**
+	- The call will be delivered to your phone number from the **Default Outdial ANI** defined at Tenant level
 	- Now repeat the same but **choosing _your Outdial ANI_** configured before. You will see that the call is coming with a different ANI
 
 <br>
 
 - Finally, let's see how **Adress Book** works
   - Open the Outdial window and swith to the Address Book tab
-  - You will see the the list of entries of _your Address Book_ configured before
+  - You will see the the list of entries of <w class = "attendee-class">attendeeID</w>\_addressBook configured before
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
@@ -427,9 +450,9 @@ The following are the top-level and most important properties to know for JSON l
 
 - Click on **_New Layout_**.
 
-- Provide the following **name**: <w class = "attendee-class">_attendeeID_</w>\_desktopLayout
+- Provide the following **name**: <w class = "attendee-class">attendeeID</w>\_desktopLayout
 
-- Select <w class = "attendee-class">_attendeeID_</w>\_team2 as Team.
+- Select <w class = "attendee-class">attendeeID</w>\_team2 as Team.
 
 - Click **_Upload_** button to upload the modified JSON file.
 
@@ -441,7 +464,7 @@ The following are the top-level and most important properties to know for JSON l
 
 - Open the **_User Profile_** and click on the arrow `>` under **_Team_**.
 
-- Change the team of the agent to <w class = "attendee-class">_attendeeID_</w>\_team2
+- Change the team of the agent to <w class = "attendee-class">attendeeID</w>\_team2
 
 - Click on **_Save Team Selection_**.
 
@@ -534,7 +557,7 @@ The following are the top-level and most important properties to know for JSON l
 
 <br>
 Below, you will find a breakdown of all possible data and type definitions that is available through the STORE key:
--   **STORE.agent**: Agent profile info and settings. 
+-   **STORE.agent**: Desktop profile info and settings. 
 -   **STORE.agentContact**: Agent tasks and interactions
 -   **STORE.app**: Company logo, title and dark mode
 -   **STORE.auth**: Authentication token used for Single Sign On
