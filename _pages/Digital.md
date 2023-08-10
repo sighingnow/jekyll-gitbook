@@ -676,17 +676,12 @@ For this reason the administrator should initially clarify if the flow shall be 
 For all the flows where you expect to have an ongoing conversation, your flow shall be built with an initial check, ideally after the starting node, where you will need to check if the incoming message is part, or not of an existing conversation, so to appropriately manage and route it accordingly. Here below a recommended flow structure:
 
 1. Accept incoming message via dedicated channel node.
-2. Check (using the ‘Search Conversation’ node) if the incoming message
-	1. Is part to an active/ongoing conversation with an agent. If so, use the ‘Append Conversation’ node to add the incoming message at the bottom of the appropriate ongoing conversation.
-	2. Comes from a customer who is reaching the flow for the first time. If so, Create a new Conversation ID using the ‘Create Conversation’ node, and eventually route it to an agent.
-	3. Comes from a customer who was in a past and terminated conversation. If so, restart the previous conversation by using the ‘Re-open Conversation’ node, and eventually route it again to an agent.
+2. Use the Resolve Conversation node to verify if the incoming message shall trigger the creation of a new Conversation ID ("created" outcome) or if such message shall be **appended** to an existing Conversation ID ("appended" outcome). The Resolve Conversation node also offer two additional outcomes, which allow the administrators to further customize their flows: "accepted" is triggered when the node receive the message (it might allow admins to add a confirmation response the system has successfully received the query), "reopened" is triggered when the same customer was already in a conversation with the system in the past, but that conversation was terminated by one of the 2 sides (or timed out).
+3. Use the Queue Task node to queue the incoming message to the desired queue/team after the "created" and "reopened" outcomes only.
+4. Connect the Close Task node for any failure outcomes for any nodes connected after the Append Conversation node. This will ensure the Conversation ID you created is properly terminated even if your flow experience some issues.
 
-Before sending a new conversation to the desired queue, you have to create a Task ID: while the Conversation ID is used by Connect to group all incoming massage in a unique thread, the Task ID is used for the Webex Contact Center to map that conversation with a specific queue and then an agent. Use the Create Task node to create such ID and then connect it to the Queue Task node.
+When building a flow it is also recommend to appropriately handle the potential failure of each node by including messages back to the customer informing them about an ongoing issue.
 
-When building a flow it is also recommend to appropriately handle the potential failure of each node by:
-
-- Including messages back to the customer informing them about an ongoing issue.
-- Terminating (Closing) any active conversation or task.
 
 #### 5. Activating a flow
 
