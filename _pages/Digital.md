@@ -3256,11 +3256,6 @@ This lab walks you through the creation of custom node and a demo of its usage. 
 > Webex Connect Portal: **[https://wxcctrainingpod29.us.webexconnect.io](https://wxcctrainingpod29.us.webexconnect.io)** 
 > Webex Connect Documentation: **[https://help.imiconnect.io/](https://help.imiconnect.io/)**
 
-#### Credentials
-
-**Account** | **Username** | **Password**
---- | --- | ---
-Webex Connect (Tenant Admin) | wxconnecttechsummit@email.carehybrid.com | T3chSumm!t2023
 
 
 ## 1. Adding a Custom Node

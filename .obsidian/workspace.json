@@ -4,11 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "fef8a9f51f3cdb83",
+        "id": "d1b072783b9f9a59",
         "type": "tabs",
         "children": [
           {
-            "id": "dc2ad215ff25f02f",
+            "id": "b3cad041c1fc580a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_pages/Provisioning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "07f2f527ec4d932a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ad51cea2526d22f0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -150,8 +175,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -163,10 +187,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dc2ad215ff25f02f",
+  "active": "ad51cea2526d22f0",
   "lastOpenFiles": [
     "_pages/Provisioning.md",
-    "README.md",
     "_pages/JDS_XM.md",
     "_pages/CH.md",
     "_pages/Supervisor.md",
@@ -205,6 +228,7 @@
     "assets/files/flow_template.json.zip",
     "assets/files/ESD_default_layout.json.zip",
     "support.md",
-    "files/ESD_default_layout.json.md"
+    "files/ESD_default_layout.json.md",
+    "README.md"
   ]
 }
