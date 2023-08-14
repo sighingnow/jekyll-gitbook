@@ -235,9 +235,6 @@ update()
 
 ### Create your Entry Point
 
-⚠️**Your Entry Point has already been created as EP_<w class="attendee_out">AttendeeID</w>.  In this step you only need to search for it and update the flow field.**
-
-
 1. Click on Provisioning > Entry Points/Queues > Entry point
 2. Click Create new Entry point [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEP.gif){:target="\_blank"}
     > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
@@ -257,8 +254,6 @@ update()
     > ---
 
 ### Create your Entry Point mapping
-
-⚠️**Your Entry Point has already been mapped for you.  You can skip this step.**
 
 1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEPmap.gif){:target="\_blank"}
 2. Click new mapping
