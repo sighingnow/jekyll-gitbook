@@ -13,7 +13,6 @@
 .book.with-summary .book-body .book-header {
     position: fixed;
     width: calc(100% - 300px);
-    overflow-x: hidden;
 }
 
 .book-body .body-inner {
@@ -42,6 +41,11 @@
     .book-body .body-inner .navigation {
         max-width: calc(50% - 3px);
         width: calc(50% - 3px);
+    }
+
+    .book.with-summary .book-body .book-header {
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
 }
 
