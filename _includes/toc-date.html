@@ -11,7 +11,7 @@
         function mobilePageScrollToAnchor(element) {
             $(element).closest('li.chapter').find('ul>li').removeClass('active');
             $(element).parent().addClass('active');
-            if ($(document).width() <= 1024) {
+            if ($(document).width() <= 1240) {
                 $('div.body-inner').animate({scrollTop: $($(element).attr('href')).get(0).offsetTop});
             }
             return true;
