@@ -6,7 +6,7 @@ category: Jekyll
 layout: post
 ---
 
-The jekyll-theme supports tips, warnings, and dangers blocks and the style is referred
+This jekyll-theme supports tips, warnings, and dangers blocks and the style is referred
 from [the discord.js website][1].
 
 You could have the following [markdown attributes (supported by kramdown)][2]:

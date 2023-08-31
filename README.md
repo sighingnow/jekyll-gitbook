@@ -166,6 +166,24 @@ The effect can be previewed from
 
 [https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html)
 
+## Diagrams with mermaid.js
+
+This jekyll-theme supports [mermaid.js](https://mermaid.js.org/) to render diagrams
+in markdown.
+
+To enable the mermaid support, you need to set `mermaid: true` in the front matter
+of your post.
+
+```markdown
+---
+mermaid: true
+---
+```
+
+The example can be previewed from
+
+[https://sighingnow.github.io/jekyll-gitbook/jekyll/2023-08-31-mermaid.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2023-08-31-mermaid.html)
+
 ## License
 
 This work is open sourced under the Apache License, Version 2.0.

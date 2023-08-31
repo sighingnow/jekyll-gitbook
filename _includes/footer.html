@@ -14,6 +14,14 @@
 <script src="{{site.baseurl}}/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
 <script src="{{site.baseurl}}/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
 
+<!-- introduce mathjax support -->
+{% include mathjax.html %}
+
+<!-- introduce per-page mermaid support -->
+{% if page.mermaid %}
+    {% include mermaid.html %}
+{% endif %}
+
 {% if site.extra_footer_js %}
     {%- for extra_js in site.extra_header_js -%}
         {%- assign starts_with = extra_js | slice: 0,4  -%}

@@ -265,6 +265,11 @@
     color: var(--c-danger-title);
 }
 
+pre:has(code.language-mermaid[data-processed="true"]) {
+    background-color: #ffffff;
+    text-align: center;
+}
+
 :root {
     --c-tip: #42b983;
     --c-tip-bg: #e2f5ec;
