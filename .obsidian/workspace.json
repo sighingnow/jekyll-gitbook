@@ -140,7 +140,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/JDS_XM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +156,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/JDS_XM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,9 +177,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_pages/JDS_XM.md"
-              }
+              "state": {}
             }
           },
           {
@@ -219,7 +215,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dcb40eb55f1fcc91",
+  "active": "a81ac30bcea33a16",
   "lastOpenFiles": [
     "_pages/JDS_XM.md",
     "_pages/IVR.md",
