@@ -1,11 +1,11 @@
 ---
 title: Lab 1 - Admin Experience
-author: Dmitry Bokatov & Mike Turnbow
-date: 2022-01-10
+author: Dmitry Bokatov
+date: 2022-01-02
 layout: post
 ---
 ```
-Last modified: Wed, 21 Jun 2023
+Last modified: Wed, 20 Sep 2023
 ```
 
 <script>
@@ -18,24 +18,9 @@ Last modified: Wed, 21 Jun 2023
     })})
 
   event.preventDefault()
-  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
-    localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
-  }
   if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
     localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
   }  
-  if(document.forms["IVRdeets"][2].value != "Agent Email"){
-    localStorage.setItem("agentEmail",document.forms["IVRdeets"][2].value)
-  } 
-  if(document.forms["IVRdeets"][3].value != "Agent Extension"){
-    localStorage.setItem("agentEXT",document.forms["IVRdeets"][3].value)
-  }
-  if(document.forms["IVRdeets"][4].value != "Supervisor Email"){
-    localStorage.setItem("supervisorEmail",document.forms["IVRdeets"][4].value)
-  } 
-  if(document.forms["IVRdeets"][5].value != "Supervisor Extension"){
-    localStorage.setItem("supervisorEXT",document.forms["IVRdeets"][5].value)
-  }
   }
 </script>
 
@@ -48,25 +33,25 @@ Last modified: Wed, 21 Jun 2023
 | [Contact Center User Configuration](#contact-center-user-configuration)               | Practical Lab      | EASY             | 5 min            |
 | [Bulk Operations](#bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |
 | [Access to the Agent Desktop](#access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |
-| [Bonus: Single Sign-on- OKTA IdP ](#bonus-single-sign-on)                             | Practical Lab (optional)      | MID              | 15 min           |
+| [Bonus: Single Sign-on with OKTA IdP](#bonus-single-sign-on-with-okta-idp)                             | Practical Lab (optional)      | MID              | 15 min           |
 
 
 ## Overview of the lab:
 
-In this Lab, we will go through the tasks that are required to complete the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
-You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant**.
+In this Lab, we will go through Admin UI by completing the tasks that are required for the general pre-configuration of a tenant. These tasks are to be undertaken by a customer administrator. By following each of the steps, you would have prepared your tenant to begin configuring different services offered by the platform. At the end of the lab, you should be able to log in to an agent interface with the configured user extension.
+You can do the tasks from the lab guide either on the **Lab Tenant** (you need to request access from the lab support team) or you can do it directly on your **Gold Tenant** / personal tenant.
 
 ## Introduction
 
 ### Lab Objective
 
 - This lab is designed to help you do the initial setup and configuration of the tenant.
-- The lab contains multiple exercises on Control Hub and Admin Portal to make you comfortable with the Webex Contact Center application.
+- The lab contains multiple exercises on Control Hub (Admin Portal) to make you comfortable with the Webex Contact Center application.
 
 ### Pre-requisites
 
-- You have Admin access to Control Hub (Lab Tenant or Gold Tenant)
-- You have the dialed number registered on the Control Hub
+- You have Admin access to Control Hub 
+- You have the PSTN number (dialed number) registered on the Control Hub
 
 ### Quick Links
 
@@ -98,40 +83,23 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ### 1. Define your Attendee ID and Other parameters
 
->Please skip the task 1 if you are doing the labs on the Gold Tenant. The task below is only for the Lab Tenant option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the data from the email into the corresponding fields.
+>Please skip **task #1** if you are doing the labs on the **Gold Tenant**. The task below is only for the **Lab Tenant** option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the Attendee ID number from the email into the corresponding field.
 {: .block-tip }
 
 <form id="IVRdeets">
 
-  <label for="DN">EP DN you were assigned:</label>
-  <input type="tel" id="DN" name="DN" onChange="update()"><br>
-
   <label for="attendee">Attendee ID:</label>
   <input type="text" id="attendee" name="attendee" onChange="update()"><br>
 
-  <label for="agent">Agent Email Address:</label>
-  <input type="email" id="agent" name="agent" onChange="update()"><br>
-
-  <label for="agentEXT">Agent Extension:</label>
-  <input type="number" id="agentEXT" name="agentEXT" onChange="update()"><br>
-
-  <label for="supervisor">Supervisor Email Address:</label>
-  <input type="email" id="supervisor" name="supervisor" onChange="update()"><br>
-
-  <label for="supervisorEXT">Supervisor Extension:</label>
-  <input type="number" id="supervisorEXT" name="supervisorEXT" onChange="update()"><br>
 <br>
 
   <button onclick="update()">Save</button>
 </form>
 
 <script>
-document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
-document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
-document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
-document.forms["IVRdeets"][3].value = localStorage.getItem("agentEXT") || "Agent Extension"
-document.forms["IVRdeets"][4].value = localStorage.getItem("supervisorEmail") || "Supervisor Email"
-document.forms["IVRdeets"][5].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
+document.forms["IVRdeets".slice(-3)][0].value = localStorage.getItem("DN") || "DN"
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
+
 
 update()
 </script>
@@ -139,18 +107,20 @@ update()
 
 ### 2. Add agent and supervisor users and set the calling extensions
 
-> As a result of the task below you should add two new users to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
-> For agent and supervisor, you can use the [https://maildrop.cc/](https://maildrop.cc/){:target="\_blank"} which allows you to create a temporary account without registration. We allow to use of maildrop registrations on the current **Lab Tenant** only without admin permissions (only for agents and supervisors). 
-
-> We don't recommend using the maildrop accounts on your **Gold Tenant** due to security reasons (an attacker can easily gain access to your tenant). 
+> We don't recommend using the @maildrop.cc or @mailinator.com accounts on your **Gold Tenant** due to security reasons. An attacker can easily gain access to your tenant and execute the outbound calls. 
 {: .block-warning }
+
+> - As a result of the task below you should add two new users (agent and supervisor) to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
+> - Please skip **task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below. 
+{: .block-tip }
+
+
 
 
 | **User Role** | **User email**                                                                | **User Extension** |
 | ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class="attendee_out">AttendeeID</w>_agent@maildrop.cc      | <w class= "agentEXT_out">Your Agent Extension</w> |
-| Supervisor    | <w class="attendee_out">AttendeeID</w>_supervisor@maildrop.cc | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
-
+| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | None - WebRTC |
+| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | 1<w class="attendee_out">AttendeeID</w> |
 
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
@@ -393,7 +363,7 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 Now you can continue with Lab 2 or try the bonus SSO task below.
 
-# Bonus: Single Sign-on -OKTA IdP
+# Bonus: Single Sign-on with OKTA IdP
 
 >In this section you will learn how to enable Single sign-on (SSO) in Control Hub. It enables users to sign in to Webex securely by authenticating to your organizations common identity provider (IdP). The Webex App uses the Webex service to communicate with the Webex Platform Identity Service. The identity service authenticates with your identity provider (IdP)
 
