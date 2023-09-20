@@ -83,7 +83,7 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 
 ### 1. Define your Attendee ID and Other parameters
 
->Please skip **task #1** if you are doing the labs on the **Gold Tenant**. The task below is only for the **Lab Tenant** option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the Attendee ID number from the email into the corresponding field.
+>Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**. The task below is only for the **Lab Tenant** option where you have received an email with the Lab tenant credentials. In a such case, please copy and paste the Attendee ID number from the email into the corresponding field (Example: IDXXX).
 {: .block-tip }
 
 <form id="IVRdeets">
@@ -97,7 +97,6 @@ You can do the tasks from the lab guide either on the **Lab Tenant** (you need t
 </form>
 
 <script>
-document.forms["IVRdeets".slice(-3)][0].value = localStorage.getItem("DN") || "DN"
 document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
 
 
@@ -111,16 +110,16 @@ update()
 {: .block-warning }
 
 > - As a result of the task below you should add two new users (agent and supervisor) to the Control Hub and assign Webex CC Agent and Supervisor licenses. 
-> - Please skip **task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below. 
+> - Please **SKIP task #2** if you are working with the **Lab Tenant**. This tenant is integrated with SSO where the agents and supervisors have been pre-created according to the table below. 
 {: .block-tip }
 
 
 
 
-| **User Role** | **User email**                                                                | **User Extension** |
-| ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | None - WebRTC |
-| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | 1<w class="attendee_out">AttendeeID</w> |
+| **User Role** | **User email**                                                                | **Endpoint** |
+| ------------- | ----------------------------------------------------------------------------- | ------------- | 
+| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
+| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
 
 
 - Login to the [Control Hub](https://admin.webex.com){:target="\_blank"} with the admin account.
@@ -153,15 +152,13 @@ update()
 
 - Click **_Save_** and **_Close_** to confirm the changes.
 
-- Validate the users by going to the email account (such as [https://maildrop.cc/](https://maildrop.cc/){:target="\_blank"}). Open the Control Hub validation email and follow the **Cisco Webex** instructions to activate the both accounts. 
-
-![mailinator](/assets/images/maildrop.gif)
+- Validate the users by going to the email account. Open the Control Hub validation email and follow the **Cisco Webex** instructions to activate the both accounts. 
  
 - Refresh the **_Users_** page in the Control Hub, make sure that both users are in **Active** status.
 
 # Contact Center User Configuration
 
-> The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also see how to navigate to the Webex Contact Center Configuration and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
+> The following video outlines how to create a Site, Team, and Multimedia Profile that will be assigned to the Contact Center users. We will also learn how to navigate to the Webex Contact Center admin section and how to associate customer-created Site, Team, and Multi-Media Profile with new users.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/84f8c6ad-5812-4e8b-85e6-935c49f1fcc3" width="100%" height="100%" title="February 07, 2023 at 10:22 AM" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
@@ -175,7 +172,7 @@ update()
 
 
 
-> **NOTE:** If you are using the **Lab Tenant** the **Attendee ID** should be user as a prefix in the name for all your configurations.
+> **NOTE:** If you are using the **Lab Tenant** the **Attendee ID** should be used as a name prefix for all your configurations.
 > {: .block-tip }
 
 ### 1. Create new Multimedia Profile
@@ -238,11 +235,15 @@ update()
 
 - Repeat the steps above for the supervisor.
 
+### 5. Use that form for providing the Admin UI feedback.
+
+<iframe src="https://ciscocx.qualtrics.com/jfe/form/SV_24dB79hF0fqG2KW" height="100%" width="100%" frameBorder="0" style="min-height: 1024px;" title="Admin UI Feedback"></iframe>
+
 # Bulk Operations
 
 > In this section you will learn how to use the Bulk Configuration in Control Hub by creating a second team. As an administrator, you can use Bulk Operations to create, modify, import, or export configuration objects in Webex Contact Center. This feature provides greater speed and efficiency to deploy and configure Webex Contact Center systems.
 
-Bulk Operations is available for the following configuration object types:
+Bulk Operations are available for the following configuration object types:
 
 | ------------------- | -------------------- |
 | ------------------- | -------------------- |
@@ -305,14 +306,16 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 # Access to the Agent Desktop
 
-> By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number where you want to receive the calls.
+> By following the steps below, you will log in to the Agent Desktop with your credentials and indicate the number (DN) where you want to receive the calls.
 
-> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the US numbers you can use that for sign in as an agent or supervisor. Otherwise, please download the Webex App according to the steps below.
+> The Lab Tenant is located in the US datacenter. It does not allow outbound international calls. If you have the U.S. numbers you can use that for sign in as an agent or supervisor. Otherwise, please WebRTC for agent and download the Webex App for supervisor according to the steps below.
 {: .block-warning }
 
 ### 1. Download and Login in the Webex app for PC or Mac
 
-> **Note:** You would need two Webex app for placing calls to Entry Point and accepting on the agent side. Alternatively, if you have a US number, you can use it as an agent's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **agent** account.
+>Please **SKIP task #1** if you are doing the labs on the **Gold Tenant**.
+
+> For the **Lab Tenant** you would need Webex app for placing calls to Entry Point and sign in as supervisor. Alternatively, if you have the US number, you can use it as an supervisor's extension. This tenant does not allow numbers outside of the United States. In this lab, we will use the Webex app for your PC or Mac for the **supervisor** account.
 {: .block-warning }
 
 - Download the Webex app from **[https://www.webex.com/downloads.html](https://www.webex.com/downloads.html){:target="\_blank"}**.
@@ -321,44 +324,33 @@ xxxx_team2,pod110_Site,AGENT,pod110_MMP,,,,Global Layout
 
 - Install the application on your PC/Mac.
 
-- Open Webex app and сlick **Sign In**. Specify the agent credentials.
+- Open Webex app and сlick **Sign In**. Specify the supervisor credentials.
 
-### 2. Download and Login in the Webex app for mobile
 
-> **Note:** If you are using the **Lab Tenant**, you will need 2 Webex apps. One for placing a call to Entry Point (it is needed for making free calls to EP) and another for accepting the call on the agent side. In this lab, we will use, as an example, the Webex mobile app for the **supervisor** account.
+### 2. Agent Desktop Login
+
+> **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent the browser caching issues with admin and agent credentials.
+> Depending on your tenant's location the agent ULR link can be different. The example below is for the tenant in the US datacenter.
 {: .block-tip }
 
-- Open the Application Manager (**Play Store** or **App Store**) on your mobile phone.
-
-- Search for **_Webex_**.
-
-- **Download** and **Open** the Webex app.
-
-- Set **_Email address_** and **_Password_** of the supervisor account.
-
-> **Note:** Make sure that you give access to the phone's microphone for the webex app.
-
-### 3. Agent Desktop Login
-
-> **Note**: To log in to the agent desktop, use either a different web browser or a new incognito web page. This will prevent any browser caching issues with admin and agent credentials.
-> Depending on your tenant's location the agent ULR link can be different. The example below is for the US DC.
-{: .block-tip }
-
-- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the different browser or in incognito mode.
+- Navigate to **[https://desktop.wxcc-us1.cisco.com/](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}** in the chrome browser with the incognito mode.
 
 - Enter the agent’s **email ID** which you created in the previous task.
 
 - Enter the **Password** for the appropriate username.
 
-- In the **_Station Credentials_** pane, select **"Extension"** and input the configured number for that user.
-
-> **Note:** If you have the US number, you can use it instead of the agent's Extension during sign-in. 
-{: .block-tip }
+- In the **_Station Credentials_** pane, select **"Desktop"**.
 
 - Select the team **<w class="attendee_out">Your_Attendee_ID</w>_Team1**.
 
-- Click **_Submit_**. Make sure that you are successfully logged in to the Agent Desktop.
+- Click **_Submit_** button. The browser may ask you to confirm use the microphone from the browser. 
+
+- Make sure that you are successfully logged in to the Agent Desktop.
+
 ![Agent Sign In](/assets/images/AG-2.gif)
+
+
+
 
 
 Now you can continue with Lab 2 or try the bonus SSO task below.
