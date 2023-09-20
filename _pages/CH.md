@@ -30,7 +30,7 @@ Last modified: Wed, 20 Sep 2023
 | ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
 | [Introduction to the new Admin Experience](#introduction-to-the-new-admin-experience) | Watch & Understand | EASY             | 10 min           |
 | [Control Hub User Management Tasks](#control-hub-user-management-tasks)               | Practical Lab      | EASY             | 10 min           |
-| [Contact Center User Configuration](#contact-center-user-configuration)               | Practical Lab      | EASY             | 5 min            |
+| [Contact Center User Configuration](#contact-center-user-configuration)               | Practical Lab      | EASY             | 10 min            |
 | [Bulk Operations](#bulk-operations)                                                   | Practical Lab      | EASY             | 5 min            |
 | [Access to the Agent Desktop](#access-to-the-agent-desktop)                           | Practical Lab      | EASY             | 10 min           |
 | [Bonus: Single Sign-on with OKTA IdP](#bonus-single-sign-on-with-okta-idp)                             | Practical Lab (optional)      | MID              | 15 min           |
@@ -237,7 +237,7 @@ update()
 
 ### 5. Use that form for providing the Admin UI feedback.
 
-<iframe src="https://ciscocx.qualtrics.com/jfe/form/SV_24dB79hF0fqG2KW" height="100%" width="100%" frameBorder="0" style="min-height: 1250px;" title="Admin UI Feedback"></iframe>
+<iframe src="https://ciscocx.qualtrics.com/jfe/form/SV_24dB79hF0fqG2KW" height="100%" width="100%" frameBorder="0" style="min-height: 1280px;" title="Admin UI Feedback"></iframe>
 
 # Bulk Operations
 
