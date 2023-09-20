@@ -2087,27 +2087,25 @@ Here are few key points to note about Engage templates which provide better unde
 | **Parameter Name**    | **Parameter Value**                                           |
 | ----------------- | --------------------------------------------------------- |
 | Template DI       | HelloTemplate                                             |
-| Is Start Template | Enabled                                                   |
 | Template Text     | Hello @@system.customer_name@@, How can I help you today? |
 | Lock Template     | Disabled                                                  |
-| Shared across     | Default                                                   |
 
 >***Note:*** Please pay your attention that we used ***system.customer_name*** variable in ***Template Text*** field. You can see the list of all supported variables and select the required one when typing @@ in the field.  
 
 >***Note:*** You can lock the template by enabling ***Lock Template*** toggle. In this case agent will not be allowed to modify the text of the template before sending the message to the end user.
 
-![DC_Lab.12.13_Create_Engage_5](/assets/images/DC_Lab_12.13._Create_Engage_5.png)
+![DC_Lab.12.13_Create_Engage_5](/assets/images/DC_Lab_12.13._Create_Engage_5_1.png)
 
--  You can edit or delete the template by clicing on corresponding icon in the ***Actions*** column in the table with template details.
+-  You can edit or delete the template by clicking on corresponding icon in the ***Actions*** column in the table with template details.
 
-![DC_Lab.12.13_Create_Engage_6](/assets/images/DC_Lab_12.13._Create_Engage_6.png)
+![DC_Lab.12.13_Create_Engage_6](/assets/images/DC_Lab_12.13._Create_Engage_6_1.png)
 
 
 ## 4. Bulk Upload of Engage Templates
 
 -  Go to ***Assets*** -> ***Templates***, click on ***Upload template*** button.
 
-![DC_Lab.12.13_Bulk_Engage_1](/assets/images/DC_Lab_12.13._Bulk_Engage_1.png)
+![DC_Lab.12.13_Bulk_Engage_1](/assets/images/DC_Lab_12.13._Bulk_Engage_1_1.png)
 
 -  Click on ***Download sample file here*** link to download CSV sample file.
 
@@ -2129,17 +2127,9 @@ Here are few key points to note about Engage templates which provide better unde
 
 ![DC_Lab.12.13_Bulk_Engage_6](/assets/images/DC_Lab_12.13._Bulk_Engage_6.png)
 
--  Click on pencil icon in ***Actions*** column of the row with uploaded template to edit it and assign the category.
+-  Uploaded template will be added to the list.
 
-![DC_Lab.12.13_Bulk_Engage_7](/assets/images/DC_Lab_12.13._Bulk_Engage_7.png)
-
--  Set ***Is End Template*** toggle and save changes.
-
-![DC_Lab.12.13_Bulk_Engage_8](/assets/images/DC_Lab_12.13._Bulk_Engage_8.png)
-
--  Check and make sure that proper gategory has been successfully assigned to the uploaded template.
-
-![DC_Lab.12.13_Bulk_Engage_9](/assets/images/DC_Lab_12.13._Bulk_Engage_9.png)
+![DC_Lab.12.13_Bulk_Engage_7](/assets/images/DC_Lab_12.13._Bulk_Engage_7_1.png)
 
 
 ## 5. Verify Engage Template in Agent Desktop
