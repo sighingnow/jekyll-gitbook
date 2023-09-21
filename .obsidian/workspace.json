@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/JDS_XM.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/JDS_XM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/Digital.md",
+                "file": "_pages/JDS_XM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/Digital.md"
+                "file": "_pages/JDS_XM.md"
               }
             }
           }
@@ -156,6 +156,12 @@
   },
   "active": "ba075c8f89507347",
   "lastOpenFiles": [
+    "customer-journey-data-services-introduction.md",
+    "_pages/JDS_XM.md",
+    "_pages/IVR.md",
+    "_pages/CH.md",
+    "_pages/Provisioning.md",
+    "_pages/Digital.md",
     "assets/images/DC_Lab_12.13._Bulk_Engage_7_1.png",
     "assets/images/DC_Lab_12.13._Bulk_Engage_1_1.png",
     "assets/images/DC_Lab_12.13._Create_Engage_6_1.png",
@@ -167,12 +173,9 @@
     "assets/images/DC_Lab_12.11_Create-Upload_Whatsapp_flowID.png",
     "assets/images/DC_Lab.12.7_Create-Upload_Email_flow_flowid.png",
     "assets/files/AnalyzerLab_Flow.json",
-    "_pages/JDS_XM.md",
     "conflict-files-obsidian-git.md",
-    "_pages/Digital.md",
     "assets/images/DC_Lab_12.8._Create_Flow_8_2.png",
     "assets/images/DC_Lab_12.8._Create_Flow_8_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_7_1.png",
     "assets/images/mailinator-1.gif.md",
     "assets/images/Single.md",
     "assets/images/SSO",
@@ -181,16 +184,13 @@
     "assets/files/ESD_default_layout.json.zip",
     "Untitled.canvas",
     "_pages/Supervisor.md",
-    "_pages/Provisioning.md",
     "files/ESD_default_layout.json.md",
     "files",
     "_pages/Acqueon.md",
     "assets/files/ESD_default_layout.json",
     "README.md",
     "_pages/WxM.md",
-    "_pages/IVR.md",
     "_pages/CRM.md",
-    "_pages/CH.md",
     "_pages/CCAI.md",
     "_pages/Calabrio.md",
     "_pages/Analyzer.md",
