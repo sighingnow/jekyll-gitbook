@@ -110,15 +110,15 @@ In this lab, we will configure all the required elements to collect and view end
     >
 7. Save the survey from the bottom right corner
 
-    ---
+---
 
 ### Add the feedback activity to your flow
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
    > The file will open in a separate window.  
-   >
    
-
-    ---
+   
+   
+---
 
 ### Provide a survey response
 
