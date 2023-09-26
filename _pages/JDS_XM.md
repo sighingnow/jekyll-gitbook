@@ -64,14 +64,20 @@ In this lab, we will configure all the required elements to collect and view end
 # Configure Post Call IVR Survey
 
 ### Create a survey
-1. Click on Contact Center under Services from Control Hub
-      <img src="/assets/images/EM/contactCenter.gif">
-    ---
-1. Click 
-    > Name your 
-    >
-    >
-    >> Click 
+1. Click on Contact Center under Services from Control Hub 
+>      <img src="/assets/images/EM/contactCenter.gif">
+2. Under Contact Center, click on Surveys
+    > <img src="/assets/images/EM/survey.gif">
+3.  Click the "Create new survey" button on the top-right corner of the Survey page
+    >Select Survey type as IVR
+    >> <img src="/assets/images/EM/surveyType.png">
+    >Provide a name for your survey
+    >> <img src="/assets/images/EM/surveyName.png">
+    >Choose the languages for the survey from the drop-down
+    >> <img src="/assets/images/EM/languageSupport.png">
+    >> 
+    >> 
+    >> Demo Survey Name for IVR: Demo IVR 
     >>
     >> Select 
     >>
