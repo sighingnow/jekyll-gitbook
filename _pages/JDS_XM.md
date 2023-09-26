@@ -73,10 +73,10 @@ In this lab, we will configure all the required elements to collect and view end
     > 
 3.  Click the "Create new survey" button on the top-right corner of the Survey page
     >Select Survey type as IVR
-    >> <img src="/assets/images/EM/surveyType.png">
+    >> <img src="/assets/images/EM/surveyType.gif">
     >>
     >Provide a name for your survey
-    >> <img src="/assets/images/EM/surveyName.png">
+    >> <img src="/assets/images/EM/surveyName.gif">
     >>
     >Choose the additional languages for the survey from the drop-down (optional)
     >> <img src="/assets/images/EM/languageSupport.png">
@@ -113,22 +113,34 @@ In this lab, we will configure all the required elements to collect and view end
 ---
 
 ### Add the feedback activity to your flow
-1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
-   > The file will open in a separate window.  
-   
+
+1. Open your flow created from the earlier labs
+2. Introduce a menu in your flow and prompt the caller to optin to the survey
+3. Drag and drop two set variable nodes into your main flow and assign true and false values for the Global_FeedbackSurveyOptin variable
+4. Navigate to the Event flows page
+5. Add the Feedback V2 node to the AgentDisconnected Activity
+6. Select the voice based survey 
+7. Set the timeout value 
+8. Validate and Publish the flow
    
    
 ---
 
 ### Provide a survey response
 
-1. Click on 
-    >
+1. Login to your Agent Desktop and make your state Available
+2. Dial your DN and accept the incoming voice interaction
+3. Choose 1 to optin to the survey
+4. End the interaction from the Agent Desktop 
+5. Provide a rating on the scale 0-9
+
 
 ---
 ### Download and validate the survey response
 
-1. Click on 
+1. Navigate to the Surveys page on Control Hub
+2. Click on the download button on the far right of your survey
+3. Verify your response in the excel sheet to the one you provided
 
 ---
 # Configure Post Interaction Digital Survey 
