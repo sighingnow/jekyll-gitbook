@@ -96,10 +96,10 @@ In this lab, we will configure all the required elements to collect and view end
     >><img src="/assets/images/EM/addNPS.gif">
     >>
     >Choose the corresponding audio file for the NPS question and upload
-    >><img src="/assets/images/EM/uploadNPS.png">
+    >><img src="/assets/images/EM/uploadNPS.gif">
     >>
     >Under Question to show on reporting type the column name as "NPS Score"
-    >><img src="/assets/images/EM/npsReporting.png">
+    >><img src="/assets/images/EM/NPSReporting.gif">
     >>
 6. Update Error handling settings (optional)
     >Upload audio files for Invalid Input and Timeout by clicking on Choose a file under each section
