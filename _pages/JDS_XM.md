@@ -92,7 +92,7 @@ In this lab, we will configure all the required elements to collect and view end
     >Repeat steps for Thank you note
     >>
 5. Add a question to your survey
-    >Select the NPS question from the dropdown by clicking + Add a question
+    >Select the NPS question from the drop-down by clicking + Add a question
     >><img src="/assets/images/EM/addNPS.gif">
     >>
     >Choose the corresponding audio file for the NPS question and upload
@@ -104,7 +104,7 @@ In this lab, we will configure all the required elements to collect and view end
 6. Update Error handling settings (optional)
     >Upload audio files for Invalid Input and Timeout by clicking on Choose a file under each section
     >
-    >Set the maximum number of invalid inputs and timeouts allowed from the dropdown
+    >Set the maximum number of invalid inputs and timeouts allowed from the drop-down
     >
     >Choose an audio file for exceeding maximum tries
     >
@@ -114,14 +114,24 @@ In this lab, we will configure all the required elements to collect and view end
 
 ### Add the feedback activity to your flow
 
-1. Open your flow created from the earlier labs
-2. Introduce a menu in your flow and prompt the caller to optin to the survey
-3. Drag and drop two set variable nodes into your main flow and assign true and false values for the Global_FeedbackSurveyOptin variable
-4. Navigate to the Event flows page
-5. Add the Feedback V2 node to the AgentDisconnected Activity
-6. Select the voice based survey 
-7. Set the timeout value 
-8. Validate and Publish the flow
+1. Open your flow created from Lab 2 - IVR Contact Routing
+2. Introduce a Menu into your main flow to prompt the caller to opt-in for the survey
+    > Upload an audio file for the opt-in menu
+    >
+    >Set two Custom Menu Links, digit 1 for opt-in and digit 2 for opt-out
+    >
+3.  Assign true and false values for the Global_FeedbackSurveyOptin variable
+    >Drag and drop two set variable nodes into your main flow
+    >
+    >Set the Global_FeedbackSurveyOptin variable as true in one node and false in the other
+    >
+    >Connect Custom Menu Links for digit 1 to the set variable node with opt-in set as true and for digit 2 and error handling to the node set as false
+    >
+1. Navigate to the Event flows page
+2. Add the Feedback V2 node to the AgentDisconnected Activity
+3. Select the voice based survey 
+4. Set the timeout value 
+5. Validate and Publish the flow
    
    
 ---
