@@ -12,9 +12,9 @@ Last modified: Tue, 27 Jul 2023
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [[#Introduction to Experience Management Post Interaction and Post Call Surveys]] | Watch & Understand | EASY            | 7 min            |
-| [[#Configure Post Call IVR Survey]] | Practical Lab | EASY | 10 min |
-| [[#Configure Post Interaction Digital Survey]] | Practical Lab | EASY | 10 min |
+| [Introduction to Experience Management](#Introduction-to-Experience-Management-Post-Interaction-and-Post-Call-Surveys) | Watch & Understand | EASY            | 7 min            |
+| [Configure Post Call IVR Survey](#Configure-Post-Call-IVR-Survey) | Practical Lab | EASY | 10 min |
+| [Configure Post Interaction Digital Survey](#Configure-Post-Interaction-Digital-Survey) | Practical Lab | EASY | 10 min |
 | [Customer Journey Data Services Introduction](customer-journey-data-services-introduction) | Watch & Understand | EASY | 5 min |
 
 ## Overview of the lab:
@@ -60,33 +60,53 @@ In this lab, we will configure all the required elements to collect and view end
 	<iframe src="https://app.vidcast.io/share/embed/0049a028-85b6-4b56-90f7-1fc696201ea3" width="100%" height="100%" title="Introduction to Experience Management" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
+	---
 ## Lab Section
 # Configure Post Call IVR Survey
 
 ### Create a survey
 1. Click on Contact Center under Services from Control Hub 
     > <img src="/assets/images/EM/contactCenter.gif">
+    > 
 2. Under Contact Center, click on Surveys
     > <img src="/assets/images/EM/survey.gif">
+    > 
 3.  Click the "Create new survey" button on the top-right corner of the Survey page
     >Select Survey type as IVR
     >> <img src="/assets/images/EM/surveyType.png">
+    >>     ---
     >Provide a name for your survey
     >> <img src="/assets/images/EM/surveyName.png">
-    >Choose the languages for the survey from the drop-down
+    >>     ---
+    >Choose the additional languages for the survey from the drop-down (optional)
     >> <img src="/assets/images/EM/languageSupport.png">
-    >> 
-    >> 
-    >> Demo Survey Name for IVR: Demo IVR 
-    >>
-    >> Select 
-    >>
-    >
-    > ---
-    >
-    > []()
-    >
-    > Save
+    >>     ---
+    >Click on Next
+4. Add audio files to the Welcome and Thank you notes
+    >Click on the pencil icon to the right
+    >>  <img src="/assets/images/EM/welcomeThankyou.png">
+    >>      ---
+    >Select Choose a file when the note expands, pick the audio file and upload
+    >> <img src="/assets/images/EM/editWelcome.png">
+    >>     ---
+    >Repeat steps for Thank you note
+    >>     ---
+5. Add a question to your survey
+    >Select the NPS question from the dropdown by clicking + Add a question
+    ><img src="/assets/images/EM/addNPS.gif">
+    >>     ---
+    >Choose the corresponding audio file for the NPS question and upload
+    >><img src="/assets/images/EM/uploadNPS.png">
+    >>     ---
+    >Under Question to show on reporting type the column name as "NPS Score"
+    >><img src="/assets/images/EM/npsReporting.png">
+    >>     ---
+6. Update Error handling settings (optional)
+    >Upload audio files for Invalid Input and Timeout by clicking on Choose a file under each section
+    >Set the maximum number of invalid inputs and timeouts allowed from the dropdown
+    >Choose an audio file for exceeding maximum tries
+    >>     ---
+7. Save the survey from the bottom right corner
 
     ---
 
