@@ -84,10 +84,10 @@ In this lab, we will configure all the required elements to collect and view end
     >Click on Next
 4. Add audio files to the Welcome and Thank you notes
     >Click on the pencil icon to the right
-    >>  <img src="/assets/images/EM/welcomeThankyou.png">
+    >>  <img src="/assets/images/EM/welcomeThankyou.gif">
     >>
     >Select Choose a file when the note expands, pick the audio file and upload
-    >> <img src="/assets/images/EM/editWelcome.png">
+    >> <img src="/assets/images/EM/uploadWelcome.gif">
     >>
     >Repeat steps for Thank you note
     >>
