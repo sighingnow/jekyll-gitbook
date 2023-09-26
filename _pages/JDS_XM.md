@@ -57,16 +57,17 @@ In this lab, we will configure all the required elements to collect and view end
 > Experience Management is a next-gen tool that facilitates post interaction surveys and outcomes. It allows you to track and measure customer satisfaction using anchor metrics like Net Promoter Score (NPS), Customer Effort Score (CES), and Customer Satisfaction (CSAT). Webex Contact Center brings in an integration of Experience Management for its post call survey interactive voice response (PCS IVR) and digital channels.
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="" width="100%" height="100%" title="Introduction to Experience Management" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="https://app.vidcast.io/share/0049a028-85b6-4b56-90f7-1fc696201ea3" width="100%" height="100%" title="Introduction to Experience Management" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
 ## Lab Section
 # Configure Post Call IVR Survey
 
 ### Create a survey
-1. Click on 
+1. Click on Contact Center under Services from Control Hub
+      <img src="/assets/images/EM/contactCenter.gif">
     ---
-2. Click 
+1. Click 
     > Name your 
     >
     >
