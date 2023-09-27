@@ -167,7 +167,7 @@ In this lab, we will configure all the required elements to collect and view end
     >Example Flow
     >><img src="/assets/images/EM/feedbackV2.png">
     >>
-9. Validate and Publish the flow
+8. Validate and Publish the flow
    
    
 ---
