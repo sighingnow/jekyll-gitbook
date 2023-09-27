@@ -287,8 +287,8 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 	- Select **`Desktop`** as telephony option
   - Under _User Profile > User Settings_, click on **Speaker and Microphone** to set them
   - Click on **Test Your Network** option, under _Help_, to check your internet connectivity speed, latency and jitter
-	- Move to **`Available`** state
-	- Make a call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+  - Move to **`Available`** state
+  - Make a call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
     - We suggest to use the Webex App installed and enabled for your Supervisor user to place the incoming call. If you prefer, you could also do it from your phone number directly.
 
 <br>
@@ -329,7 +329,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Navigate to the _Management Portal > Provisioning > Teams_
 	- Find _your Team 2_ and click on `Edit`
 	- Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied. 
-	- Change the **Multimedia Profile** of the team from <w class="attendee_out">AttendeeID</w>_MMP` to `Default_Telephony_Profile
+	- Change the **Multimedia Profile** of the team from `<w class="attendee_out">AttendeeID</w>_MMP` to `Default_Telephony_Profile`
 
 <br>
 - Now, login in the **Agent Desktop** selecting <w class="attendee_out">AttendeeID</w>_team1
