@@ -53,7 +53,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 ### Pre-requisite
 
-1. You need **2 devices** where you can install **Webex App** (example: your laptop and mobile phone).
+1. You need to have **Webex App** installed in your laptop or mobile phone to place calls. If you prefer, you could also do it from your phone number directly.
 
    - You will need an extra device (your personal phone for example) to test Consult and Conference functionalities
 
@@ -64,7 +64,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
    - You have agent's access to the Agent Desktop
    - You have the supervisor's access to the Tenant Management Portal.
    - Agent is part of 2 Teams.
-   - Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
+   - Webex Calling extension is assigned to the supervisor user.
 
 3. You also must complete the **Lab 2: IVR Contact Routing:**
    - Simple flow configured and making a call tested
@@ -110,15 +110,21 @@ update()
 
 - Once you're in the login page, enter the agent credentials (username and password)
 
-- Agents will need to input the number where they need to receive incoming and outdial calls
-  - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
-  - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
 
-- They can choose between Dial Number or Extension
-	- Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
 
-    - Dial Number: E.164 format phone number
-    	- If you check the __International Dialing Format__ box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
+- Based on the _Voice Channel Options_ set at the _Desktop Profile_ of the agent, the following telephony options can be:
+  - **Dial Number**: E.164 format phone number where agent will receive incoming and outdial calls.
+    - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
+    - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
+    - If you check the __International Dialing Format__ box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code.
+
+	- **Extension**: Internal extension where agent will receive incoming and outdial calls. This option it's just valid in case the agent is using Webex Calling or some other softphone as calling endpoint.
+
+  - **Desktop**: This is the new **WebRTC** option, it allows to receive inbound and make outbound calls through the internet, without the need of any phone or softphone. You can watch a Vidcast with the overview of this feature below. 
+
+  <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/1ee925db-b8dd-4541-a873-ab2046ab0393" width="100%" height="100%" title="WebRTC Overview" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Select one of the possible teams from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams
 
@@ -132,6 +138,7 @@ update()
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
+
 
 ## Agent Desktop Interface
 
@@ -200,20 +207,25 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Either for **Consult and Transfer** you have the following options:
 
-  - _Agent_: You can either select an agent from the drop-down list, or use the search field to filter the list. The drop-down list displays the names of available agents.
+  - __Agent__: You can either select an agent from the drop-down list, or use the search field to filter the list. The drop-down list displays the names of available agents.
 
-  - _Queue_: You can select a Queue or Entry Point from the drop-down list, or use the search field to filter the list. The drop-down list displays the queues that are available to transfer the call.
+  - __Queue__: You can select a Queue or Entry Point from the drop-down list, or use the search field to filter the list. The drop-down list displays the queues that are available to transfer the call.
 
-  - _DN_: You can enter a name or number; select a name or number from the drop-down list; or use the search field to filter the list. The drop-down list shows the grouped list of contacts in your address book. Names are listed along with the numbers for the contacts in the address book.
+  - __DN__: You can enter a name or number; select a name or number from the drop-down list; or use the search field to filter the list. The drop-down list shows the grouped list of contacts in your address book. Names are listed along with the numbers for the contacts in the address book.
 
 - **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
+
+- Only when using __WebRTC__:
+  - **Mute/Unmute**: Agents can silence themself in case they don't want to be heard for a moment. Similar as the function in Webex Calling/Meetings. 
+
+  - **Keypad**: In case agent needs to insert some digit or number during a call. Similar as the function in Webex Calling/Meetings.
 
 # Basic Features
 
 | **Entity**           | **Name**                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
-| Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
-| Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
+| Agent 1              | wxcclabs+agent_<w class = "attendee-class">attendeeID</w>@gmail.com       |
+| Supervisor 1         | wxcclabs+supvr_<w class = "attendee-class">attendeeID</w>@gmail.com |
 | Desktop Profile        | <w class = "attendee-class">attendeeID</w>\_desktopProfile               |
 | Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
 | Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
@@ -238,6 +250,13 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 {: .block-tip }
 
+> If you're using the **shared lab tenant**, we propose to complete the lab using this option.
+{: .block-warning }
+
+> If you're using your **Gold Tenant**, be aware that this option only works with RTMS media stack. Firefox browser is still not supported.
+{: .block-warning }
+
+
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
 - Login with your administrator user in the **Control Hub** and navigate to _Services > Contact Center > Settings > Desktop_
@@ -249,6 +268,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 	- In the **Collaboration** tab:
 		- Set the **Buddy Teams** to **`All`**
 		- Enable **`Consult to Queue`**
+  
+  - In the **Voice Channel Options** tab:
+    - Set the options you want to enable: _Dial Number_, _Extension_ or _Desktop_ 
 
 <br>
 
@@ -259,13 +281,16 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 <br>
 - Now place it's time to test the incoming call
-	- Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user 
-	- Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
+	- Login the **Agent Desktop* with _yourAgent1 user_ 
+	- Select **Desktop** as telephony option
+  - Under _User Profile > User Settings_, click on _Speaker and Microphone_ to set them
+  - Click on _Test Your Network_ option, under _Help_, to check your internet connectivity speed, latency and jitter
 	- Move to **`Available`** state
-	- Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+	- Make a call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+    - We suggest to use the Webex App installed and enabled for your Supervisor user to place the incoming call. If you prefer, you could also do it from your phone number directly.
 
 <br>
-- Accept the call in the Webex App of _your Agent 1_
+- Accept the call from the *Agent Desktop* 
 	- Check the **CAD variables** and try to edit any Global Variable
 	- Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
 
