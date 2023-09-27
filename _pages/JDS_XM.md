@@ -83,7 +83,7 @@ In this lab, we will configure all the required elements to collect and view end
     >>
     >Click on Next
     >
-1. Add audio files to the Welcome and Thank you notes
+4. Add audio files to the Welcome and Thank you notes
     >Click on the pencil icon to the right
     >>  <img src="/assets/images/EM/welcomeThankyou.gif">
     >>
