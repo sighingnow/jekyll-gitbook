@@ -164,8 +164,9 @@ In this lab, we will configure all the required elements to collect and view end
     >Timeout: 10
     >
 7. Complete the flow by adding a Disconnect Contact node after the Feedback V2 node
-    ><img src="/assets/images/EM/feedbackV2.png">
-    >
+    >Example Flow
+    >><img src="/assets/images/EM/feedbackV2.png">
+    >>
 9. Validate and Publish the flow
    
    
