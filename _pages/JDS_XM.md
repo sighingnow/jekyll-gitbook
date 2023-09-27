@@ -75,14 +75,15 @@ In this lab, we will configure all the required elements to collect and view end
     >Select Survey type as IVR
     >> <img src="/assets/images/EM/surveyType.gif">
     >>
-    >Provide a name for your survey
+    >Provide a name for your survey appended with your Attendee ID
     >> <img src="/assets/images/EM/surveyName.gif">
     >>
     >Choose the additional languages for the survey from the drop-down (optional)
     >> <img src="/assets/images/EM/languageSupport.png">
     >>
     >Click on Next
-4. Add audio files to the Welcome and Thank you notes
+    >
+1. Add audio files to the Welcome and Thank you notes
     >Click on the pencil icon to the right
     >>  <img src="/assets/images/EM/welcomeThankyou.gif">
     >>
@@ -115,23 +116,57 @@ In this lab, we will configure all the required elements to collect and view end
 ### Add the feedback activity to your flow
 
 1. Open your flow created from Lab 2 - IVR Contact Routing
-2. Introduce a Menu into your main flow to prompt the caller to opt-in for the survey
-    > Upload an audio file for the opt-in menu
+2. Introduce a Menu into your main flow to prompt the caller to opt-in for the survey in between the NewPhoneContact event and the Queue Contact node
+    > Activity Label: surveyOptin
     >
-    >Set two Custom Menu Links, digit 1 for opt-in and digit 2 for opt-out
+    > Prompt: .wav
+    >
+    > Make Prompt Interruptible: True
+    >
+    > Digit Number - 1 
+    > Link Description: Opt-In
+    >
+    > Digit Number - 2 
+    > Link Description: Opt-Out
     >
 3.  Assign true and false values for the Global_FeedbackSurveyOptin variable
-    >Drag and drop two set variable nodes into your main flow
+    >Drag and drop two Set Variable nodes into your main flow after the Menu
     >
-    >Set the Global_FeedbackSurveyOptin variable as true in one node and false in the other
+    >Click on the first Set Variable node
+    >>Activity Label: OptIn
+    >>Variable: Global_FeedbackSurveyOptin
+    >>Set Value: TRUE
+    >>
+    >Click on the second Set Variable node
+    >>Activity Label: OptOut
+    >>Variable: Global_FeedbackSurveyOptin
+    >>Set Value: False
+    >>
+4. Connect the nodes together
+    >Connect Custom Menu Links for digit 1 to the Set Variable node with Global_FeedbackSurveyOptin set as true
     >
-    >Connect Custom Menu Links for digit 1 to the set variable node with opt-in set as true and for digit 2 and error handling to the node set as false
+    >Connect Digit 2 and error handling links to the Set Variable node with Global_FeedbackSurveyOptin set as false
     >
-1. Navigate to the Event flows page
-2. Add the Feedback V2 node to the AgentDisconnected Activity
-3. Select the voice based survey 
-4. Set the timeout value 
-5. Validate and Publish the flow
+    >Connect the Set Variable blocks back to your flow before Queue Contact
+    >
+    >Example Flow
+    >><img src="/assets/images/EM/surveyOptin.png">
+    >>
+5. Navigate to the Event Flows tab
+6. Add the Feedback V2 node
+    >Connect the Feedback V2 node to the AgentDisconnected Activity
+    >
+    >Click on the Feedback V2 node
+    >
+    >Activity Label: PCS_IVR
+    >Survey Method: Voice Based 
+    >Select survey created earlier from drop-down
+    >Timeout: 10
+    >
+7. Complete the flow by adding a Disconnect Contact node after the Feedback V2 node
+    ><img src="/assets/images/EM/feedbackV2.png">
+    >
+9. Validate and Publish the flow
    
    
 ---
