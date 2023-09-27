@@ -159,7 +159,7 @@ In this lab, we will configure all the required elements to collect and view end
     >Click on the Feedback V2 node
     >
     >Activity Label: PCS_IVR
-    >Survey Method: Voice Based 
+    >Survey Method: Voice Based
     >Select survey created earlier from drop-down
     >Timeout: 10
     >
