@@ -175,8 +175,8 @@ In this lab, we will configure all the required elements to collect and view end
 ### Provide a survey response
 
 1. Login to your Agent Desktop and make your state Available
-2. Dial your DN and accept the incoming voice interaction
-3. Choose 1 to optin to the survey
+2. Dial your designated DN and accept the incoming voice interaction
+3. Provide the DTMF input 1 to opt-in to the survey
 4. End the interaction from the Agent Desktop 
 5. Provide a rating on the scale 0-9
 
