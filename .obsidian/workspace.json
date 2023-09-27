@@ -1,60 +1,14 @@
 {
   "main": {
-    "id": "07fc17ca93b5b6c5",
+    "id": "959b6129c00a7ae4",
     "type": "split",
     "children": [
       {
-        "id": "d1b072783b9f9a59",
+        "id": "1c30d1758de1937d",
         "type": "tabs",
         "children": [
           {
-            "id": "b3cad041c1fc580a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_pages/Provisioning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "07f2f527ec4d932a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ad51cea2526d22f0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "support.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ef49425604e0b69a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.5"
-              }
-            }
-          },
-          {
-            "id": "dcb40eb55f1fcc91",
+            "id": "ba075c8f89507347",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -64,35 +18,22 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "be0fe49a39d7c6d5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_pages/CH.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "b44b47cbcf6d8a13",
+    "id": "6479f561f1efcfa6",
     "type": "split",
     "children": [
       {
-        "id": "41ea0a95800710c6",
+        "id": "00cc1e748905b356",
         "type": "tabs",
         "children": [
           {
-            "id": "036e0849be9b9f6c",
+            "id": "c7612fa5af166412",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -102,22 +43,22 @@
             }
           },
           {
-            "id": "a2ffb5f67a6c27a0",
+            "id": "f108f4661fe85b81",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
             }
           },
           {
-            "id": "b3ae6579da03fd9d",
+            "id": "afb6dbcf62d731ac",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -125,7 +66,7 @@
             }
           },
           {
-            "id": "554d6a73cf97af59",
+            "id": "2101a99d9b305e7d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -139,20 +80,20 @@
     "width": 300
   },
   "right": {
-    "id": "14c50c79c8d5810e",
+    "id": "162a2ea39a4b5a54",
     "type": "split",
     "children": [
       {
-        "id": "376a4db61ac65b32",
+        "id": "82a3438c937c1b24",
         "type": "tabs",
         "children": [
           {
-            "id": "413e46a65e2bc9e5",
+            "id": "9bc4ed7e5225dd8e",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/JDS_XM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,19 +105,19 @@
             }
           },
           {
-            "id": "4bff4cc19e252010",
+            "id": "2bdc5a4a20df43f3",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/CH.md",
+                "file": "_pages/JDS_XM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "2fc897b5b7e0644d",
+            "id": "6d562acf09cd09c8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -187,43 +128,21 @@
             }
           },
           {
-            "id": "e2652a385d1ed9cb",
+            "id": "a5331ebe04c6c059",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/CH.md"
-              }
-            }
-          },
-          {
-            "id": "a81ac30bcea33a16",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_pages/Analyzer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "658a6c6e3aacd1bc",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency"
+                "file": "_pages/JDS_XM.md"
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -235,48 +154,50 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be0fe49a39d7c6d5",
+  "active": "ba075c8f89507347",
   "lastOpenFiles": [
-    "support.md",
-    "_pages/CH.md",
-    "assets/images/AG-2.gif",
-    "assets/images/AG-2 1.gif",
-    "_pages/Agent.md",
-    "_pages/Acqueon.md",
-    "conflict-files-obsidian-git.md",
-    "_pages/Analyzer.md",
-    "_pages/Supervisor.md",
-    "README.md",
-    "_pages/API.md",
-    "_pages/Calabrio.md",
-    "_pages/CCAI.md",
-    "_pages/Digital.md",
+    "assets/images/EM/feedbackV2.png",
+    "assets/images/EM/PCS_IVR_23.png",
     "_pages/IVR.md",
     "_pages/JDS_XM.md",
+    "assets/images/EM/surveyOptin.png",
+    "assets/images/EM/surveyType.gif",
+    "assets/images/EM/PCS_IVR_22.png",
+    "assets/images/EM/NPSReporting.gif",
+    "assets/images/EM/uploadNPS.gif",
+    "assets/images/EM/Untitled.gif",
+    "assets/images/EM/editWelcome.png",
+    "assets/images/EM/uploadWelcome.gif",
+    "assets/images/EM/welcomeThankyou.gif",
+    "assets/images/EM/Contactcenter",
+    "assets/images/EM",
+    "assets/images/IVR/Untitled",
+    "conflict-files-obsidian-git.md",
+    "customer-journey-data-services-introduction.md",
+    "_pages/CH.md",
     "_pages/Provisioning.md",
-    "files/RTMS EA Regional Media.pdf",
+    "_pages/Digital.md",
     "files/RTMS GA Launch.pdf",
-    "assets/images/DC_Lab_12.13._Create_Engage_6_1.png",
-    "assets/images/DC_Lab_12.13._Create_Engage_5_1.png",
-    "assets/images/DC_Lab_12.13._Bulk_Engage_7_1.png",
-    "assets/images/DC_Lab_12.13._Bulk_Engage_1_1.png",
-    "_pages/CRM.md",
-    "assets/images/maildrop.gif",
+    "files/RTMS EA Regional Media.pdf",
     "assets/files/AnalyzerLab_Flow.json",
-    "assets/images/DC_Lab_12.9_Create-Upload_Facebook_Messenger_flowID.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_9_1.png",
-    "assets/images/DC_Lab_12.8._Create_Flow_8_2.png",
-    "RTMS GA Launch.pdf",
-    "RTMS GA Launch 1.pdf",
-    "RTMS EA Regional Media.pdf",
-    "Untitled.canvas",
+    "assets/images/mailinator-1.gif.md",
     "assets/images/Single.md",
     "assets/images/SSO",
     "assets/images/OnboardingProcess",
-    "assets/images/mailinator-1.gif.md",
-    "assets/gitbook/form.js.md",
     "assets/files/flow_template.json.zip",
     "assets/files/ESD_default_layout.json.zip",
-    "files/ESD_default_layout.json.md"
+    "Untitled.canvas",
+    "_pages/Supervisor.md",
+    "files/ESD_default_layout.json.md",
+    "_pages/Acqueon.md",
+    "README.md",
+    "_pages/WxM.md",
+    "_pages/CRM.md",
+    "_pages/CCAI.md",
+    "_pages/Calabrio.md",
+    "_pages/Analyzer.md",
+    "_pages/Agent.md",
+    "assets/images/DC_Lab_12.12._Create_Connect_6.png.md",
+    "assets/images/DC_Lab_12.8._Verify_1.png.md"
   ]
 }

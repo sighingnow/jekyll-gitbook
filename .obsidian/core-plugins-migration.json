@@ -26,5 +26,9 @@
   "file-recovery": true,
   "publish": false,
   "sync": false,
+<<<<<<< HEAD
+  "properties": false
+=======
   "properties": true
+>>>>>>> origin/master
 }
