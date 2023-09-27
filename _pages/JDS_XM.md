@@ -124,24 +124,30 @@ In this lab, we will configure all the required elements to collect and view end
     > Make Prompt Interruptible: True
     >
     > Digit Number - 1 
-    > Link Description: Opt-In
+    >>Link Description: Opt-In
     >
     > Digit Number - 2 
-    > Link Description: Opt-Out
+    >>Link Description: Opt-Out
     >
 3.  Assign true and false values for the Global_FeedbackSurveyOptin variable
     >Drag and drop two Set Variable nodes into your main flow after the Menu
     >
     >Click on the first Set Variable node
     >>Activity Label: OptIn
+    >>
     >>Variable: Global_FeedbackSurveyOptin
+    >>
     >>Set Value: TRUE
     >>
+    >
     >Click on the second Set Variable node
     >>Activity Label: OptOut
+    >>
     >>Variable: Global_FeedbackSurveyOptin
+    >>
     >>Set Value: False
     >>
+    >
 4. Connect the nodes together
     >Connect Custom Menu Links for digit 1 to the Set Variable node with Global_FeedbackSurveyOptin set as true
     >
@@ -157,11 +163,14 @@ In this lab, we will configure all the required elements to collect and view end
     >Connect the Feedback V2 node to the AgentDisconnected Activity
     >
     >Click on the Feedback V2 node
-    >
-    >Activity Label: PCS_IVR
-    >Survey Method: Voice Based
-    >Select survey created earlier from drop-down
-    >Timeout: 10
+    >>Activity Label: PCS_IVR
+    >>
+    >>Survey Method: Voice Based
+    >>
+    >>Select survey created earlier from drop-down
+    >>
+    >>Timeout: 10
+    >>
     >
 7. Complete the flow by adding a Disconnect Contact node after the Feedback V2 node
     >Example Flow
