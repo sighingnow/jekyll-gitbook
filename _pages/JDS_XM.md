@@ -12,9 +12,9 @@ Last modified: Tue, 27 Jul 2023
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Introduction to Experience Management](#introduction-to-experience-Management-Post-Interaction-and-Post-Call-Surveys) | Watch & Understand | EASY            | 7 min            |
-| [Configure Post Call IVR Survey](#Configure-Post-Call-IVR-Survey) | Practical Lab | EASY | 10 min |
-| [Configure Post Interaction Digital Survey](#Configure-Post-Interaction-Digital-Survey) | Practical Lab | EASY | 10 min |
+| [Introduction to Experience Management](#introduction-to-experience-management-post-interaction-and-post-call-surveys) | Watch & Understand | EASY            | 7 min            |
+| [Configure Post Call IVR Survey](#configure-post-call-ivr-survey) | Practical Lab | EASY | 10 min |
+| [Configure Post Interaction Digital Survey](#configure-post-interaction-digital-survey) | Practical Lab | EASY | 10 min |
 | [Customer Journey Data Services Introduction](customer-journey-data-services-introduction) | Watch & Understand | EASY | 5 min |
 
 ## Overview of the lab:
