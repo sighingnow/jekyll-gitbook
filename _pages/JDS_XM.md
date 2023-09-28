@@ -115,11 +115,14 @@ In this lab, we will configure all the required elements to collect and view end
 
 ### Add the feedback activity to your flow
 
+> **NOTE:** Refer to the Lab 2 - IVR Contact Routing if you are unfamiliar with working on flow designer
+{: .block-warning }
+
 1. Open your flow created from Lab 2 - IVR Contact Routing
 2. Introduce a Menu into your main flow to prompt the caller to opt-in for the survey in between the NewPhoneContact event and the Queue Contact node
     > Activity Label: surveyOptin
     >
-    > Prompt: .wav
+    > Prompt: OptinMenu.wav
     >
     > Make Prompt Interruptible: True
     >
@@ -199,8 +202,13 @@ In this lab, we will configure all the required elements to collect and view end
 1. Navigate to the Surveys page on Control Hub
 2. Click on the download button on the far right of your survey
     > <img src="/assets/images/EM/downloadResponse.gif">
-    > 
-4. Verify your response in the excel sheet to the one you provided
+    >
+3. Select the date range for the survey response period as Last 7 days and click Download
+    > <img src="/assets/images/EM/downloadDate.gif">
+    >
+4. Verify your response in the excel sheet to the one you provided on the call
+    > <img src="/assets/images/EM/surveyReport.png">
+    >
 
 ---
 # Configure Post Interaction Digital Survey 
