@@ -1,12 +1,12 @@
 ---
 title: Lab 3 - Agent Desktop
 author: Gorka Antona Santamaria & Neha Wuthoo
-date: 2022-03-03
+date: 2023-09-27
 layout: post
 ---
 
 ```
-Last modified: Mon, 9 Aug 2023
+Last modified: Wed, 27 Sept 2023
 ```
 
 <script>
@@ -19,8 +19,8 @@ Last modified: Mon, 9 Aug 2023
     })})
 
   event.preventDefault()
-   if(document.forms["attendee-form"][1].value != "Your Attendee ID"){
-    localStorage.setItem("attendeeID",document.forms["attendee-form"][1].value)
+  if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
+    localStorage.setItem("attendeeID",document.forms["IVRdeets"][1].value)
   }  
   }
 </script>
@@ -53,7 +53,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 
 ### Pre-requisite
 
-1. You need **2 devices** where you can install **Webex App** (example: your laptop and mobile phone).
+1. You need to have **Webex App** installed in your laptop or mobile phone to place calls. If you prefer, you could also do it from your phone number directly.
 
    - You will need an extra device (your personal phone for example) to test Consult and Conference functionalities
 
@@ -64,7 +64,7 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
    - You have agent's access to the Agent Desktop
    - You have the supervisor's access to the Tenant Management Portal.
    - Agent is part of 2 Teams.
-   - Webex Calling extensions are assigned to a WxCC users (agent and supervisor).
+   - Webex Calling extension is assigned to the supervisor user.
 
 3. You also must complete the **Lab 2: IVR Contact Routing:**
    - Simple flow configured and making a call tested
@@ -88,17 +88,19 @@ At the end of the lab, you should be able to handle calls as an agent, perform s
 > Please submit the form with your Attendee ID. All configuration items in the lab guide will be renamed with that prefix.
 {: .block-tip }
 
-<div class="alert"></div>
-<form id="attendee-form">
-      <label for="attendee-id">Attendee ID</label>
-      <input type="text" name="attendee-id" id="attendee-id" onChange="update()"/>
-      <button onclick="update()">SAVE</button>
-      
-</form>
-<script src="/assets/gitbook/form.js"></script>
+<form id="IVRdeets">
 
+  <label for="attendee">Attendee ID:</label>
+  <input type="text" id="attendee" name="attendee" onChange="update()"><br>
+
+<br>
+
+  <button onclick="update()">Save</button>
+</form>
 <script>
-document.forms["attendee-form"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
+document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID"
+
+
 update()
 </script>
 
@@ -110,15 +112,21 @@ update()
 
 - Once you're in the login page, enter the agent credentials (username and password)
 
-- Agents will need to input the number where they need to receive incoming and outdial calls
-  - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
-  - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
 
-- They can choose between Dial Number or Extension
-	- Extension: Just in case the agent is using Webex Calling or some other softphone as calling endpoint
 
-    - Dial Number: E.164 format phone number
-    	- If you check the __International Dialing Format__ box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code
+- Based on the _Voice Channel Options_ set at the _Desktop Profile_ of the agent, the following telephony options can be:
+  - **Dial Number**: E.164 format phone number where agent will receive incoming and outdial calls.
+    - If your administrator configures the default Dial Number (DN), the default DN is prepopulated in the Dial Number and Extension fields.
+    - If your administrator restricts the DN to the default DN, you cannot edit the prepopulated DN when signing in to the Agent Desktop.
+    - If you check the __International Dialing Format__ box, you can choose the country code based on your geographical location from the drop-down list. You can also enter a country code or country name to filter the list. Dial numbers are validated based on the country code.
+
+	- **Extension**: Internal extension where agent will receive incoming and outdial calls. This option it's just valid in case the agent is using Webex Calling or some other softphone as calling endpoint.
+
+  - **Desktop**: This is the new **WebRTC** option, it allows to receive inbound and make outbound calls through the internet, without the need of any phone or softphone. You can watch a Vidcast with the overview of this feature below. 
+
+  <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/1ee925db-b8dd-4541-a873-ab2046ab0393" width="100%" height="100%" title="WebRTC Overview" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+</div>
 
 - Select one of the possible teams from the list. Agents can belong to multiple teams, but they can only receive calls of 1 specific teams
 
@@ -132,6 +140,7 @@ update()
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
 	<iframe src="https://app.vidcast.io/share/embed/e4b450ff-9d3f-424d-96bb-2f0988b81743" width="100%" height="100%" title="Station Login" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
+
 
 ## Agent Desktop Interface
 
@@ -200,30 +209,35 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Either for **Consult and Transfer** you have the following options:
 
-  - _Agent_: You can either select an agent from the drop-down list, or use the search field to filter the list. The drop-down list displays the names of available agents.
+  - __Agent__: You can either select an agent from the drop-down list, or use the search field to filter the list. The drop-down list displays the names of available agents.
 
-  - _Queue_: You can select a Queue or Entry Point from the drop-down list, or use the search field to filter the list. The drop-down list displays the queues that are available to transfer the call.
+  - __Queue__: You can select a Queue or Entry Point from the drop-down list, or use the search field to filter the list. The drop-down list displays the queues that are available to transfer the call.
 
-  - _DN_: You can enter a name or number; select a name or number from the drop-down list; or use the search field to filter the list. The drop-down list shows the grouped list of contacts in your address book. Names are listed along with the numbers for the contacts in the address book.
+  - __DN__: You can enter a name or number; select a name or number from the drop-down list; or use the search field to filter the list. The drop-down list shows the grouped list of contacts in your address book. Names are listed along with the numbers for the contacts in the address book.
 
 - **Conference**: To start a three-way conference call between you, the customer and another agent. For this option, you (primary agent) must have initiated a consult call. Click Transfer to transfer the call to the consulting agent. The consulted agent can exit the call by clicking Exit Conference, and the call continues between the primary agent and the customer. Only the primary agent can end the Conference.
+
+- Only when using __WebRTC__:
+  - **Mute/Unmute**: Agents can silence themself in case they don't want to be heard for a moment. Similar as the function in Webex Calling/Meetings. 
+
+  - **Keypad**: In case agent needs to insert some digit or number during a call. Similar as the function in Webex Calling/Meetings.
 
 # Basic Features
 
 | **Entity**           | **Name**                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
-| Agent 1              | <w class = "attendee-class">attendeeID</w>_agent1@mailinator.com       |
-| Supervisor 1         | <w class = "attendee-class">attendeeID</w>\_supervisor1@mailinator.com |
-| Desktop Profile        | <w class = "attendee-class">attendeeID</w>\_desktopProfile               |
-| Entry Point          | <w class = "attendee-class">attendeeID</w>\_EP                         |
-| Queue                | <w class = "attendee-class">attendeeID</w>\_Q                          |
-| Team 1               | <w class = "attendee-class">attendeeID</w>\_team1                      |
-| Team 2               | <w class = "attendee-class">attendeeID</w>\_team2                      |
-| Outdial ANI          | <w class = "attendee-class">attendeeID</w>\_outdialANI                 |
-| Outdial ANI Entry 1  | <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1           |
-| Address Book         | <w class = "attendee-class">attendeeID</w>\_addressBook                |
-| Address Book Entry 1 | <w class = "attendee-class">attendeeID</w>\_addressBookEntry1          |
-| Multimedia Profile   | <w class = "attendee-class">attendeeID</w>\_MMP                        |
+| Agent 1              | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com       |
+| Supervisor 1         | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com |
+| Desktop Profile      | <w class="attendee_out">AttendeeID</w>_desktopProfile               |
+| Entry Point          | <w class="attendee_out">AttendeeID</w>_EP                         |
+| Queue                | <w class="attendee_out">AttendeeID</w>_Q                          |
+| Team 1               | <w class="attendee_out">AttendeeID</w>_team1                      |
+| Team 2               | <w class="attendee_out">AttendeeID</w>_team2                      |
+| Outdial ANI          | <w class="attendee_out">AttendeeID</w>_outdialANI                 |
+| Outdial ANI Entry 1  | <w class="attendee_out">AttendeeID</w>_outdialANIEntry1           |
+| Address Book         | <w class="attendee_out">AttendeeID</w>_addressBook                |
+| Address Book Entry 1 | <w class="attendee_out">AttendeeID</w>_addressBookEntry1          |
+| Multimedia Profile   | <w class="attendee_out">AttendeeID</w>_MMP                        |
 
 > **NOTE:** Please create all the tenant entities following the naming convention mentioned specified in the table above. Your attendeeID is provided in the email in the **"Attendee ID"** line.
 {: .block-warning }
@@ -238,6 +252,13 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 > In this section, you will will interact as an agent and test an Incoming call. Review the video of the lab section above to understand the different call handling options.
 {: .block-tip }
 
+> If you're using the **shared lab tenant**, we propose to complete the lab using **Desktop (WebRTC)** telephony option.
+{: .block-warning }
+
+> If you're using your **Gold Tenant**, be aware that **WebRTC** option only works with **RTMS** media stack. Firefox browser is still not supported.
+{: .block-warning }
+
+
 - In order to test properly an incoming call, first we need to make sure that we have all the call handling options enabled
 
 - Login with your administrator user in the **Control Hub** and navigate to _Services > Contact Center > Settings > Desktop_
@@ -249,6 +270,9 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 	- In the **Collaboration** tab:
 		- Set the **Buddy Teams** to **`All`**
 		- Enable **`Consult to Queue`**
+  
+  - In the **Voice Channel Options** tab:
+    - Set the options you want to enable: _Dial Number_, _Extension_ or _Desktop_ 
 
 <br>
 
@@ -259,13 +283,16 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 <br>
 - Now place it's time to test the incoming call
-	- Login in both in the **Agent Desktop** and **Webex App** with _your Agent 1_ user 
-	- Input the corresponding Webex App Extension in the Agent Desktop Station Login (you can check this info in the Users module of Control Hub)
-	- Move to **`Available`** state
-	- Place an incoming call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+	- Login the **Agent Desktop** with _yourAgent1 user_ 
+	- Select **`Desktop`** as telephony option
+  - Under _User Profile > User Settings_, click on **Speaker and Microphone** to set them
+  - Click on **Test Your Network** option, under _Help_, to check your internet connectivity speed, latency and jitter
+  - Move to **`Available`** state
+  - Make a call to the DN mapped to your EP (You should have mapped your EP in Lab 2)
+    - We suggest to use the Webex App installed and enabled for your Supervisor user to place the incoming call. If you prefer, you could also do it from your phone number directly.
 
 <br>
-- Accept the call in the Webex App of _your Agent 1_
+- Accept the call from the *Agent Desktop* 
 	- Check the **CAD variables** and try to edit any Global Variable
 	- Change to **`Engage - Idle`**. This way you will not receive any other digital channel requests
 
@@ -278,7 +305,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
     - End-customer be redirected to a common EP already created
   - **End** the call (this can be done from customer or agent perspective) and select any **Wrap-up code**
 
-> For this part, you will need a third calling device for interacting as aSupervisor
+> For this part, you will need a third calling device for interacting as a Supervisor
 {: .block-warning }
 <br>
 - Now, using a different browser, login in the **Agent Desktop** with _your Supervisor_ user and move to **`Available`** status
@@ -302,13 +329,13 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 - Navigate to the _Management Portal > Provisioning > Teams_
 	- Find _your Team 2_ and click on `Edit`
 	- Check _your User settings_ and make sure that there is not **Multimedia Profile** assigned. **User settings have preference over Team setting**, so the Multimedia Profile at User level will be applied. 
-	- Change the **Multimedia Profile** of the team from <w class = "attendee-class">attendeeID</w>\_MMP` to `Default_Telephony_Profile
+	- Change the **Multimedia Profile** of the team from `<w class="attendee_out">AttendeeID</w>_MMP` to `Default_Telephony_Profile`
 
 <br>
-- Now, login in the **Agent Desktop** selecting <w class = "attendee-class">attendeeID</w>\_team1
+- Now, login in the **Agent Desktop** selecting <w class="attendee_out">AttendeeID</w>_team1
 	- Open _your User Profile_ and check that the **Channel Capacity**
 	- Now, click on _your Team_, you will see a dropdown list with other available Teams
-	- Click on <w class = "attendee-class">attendeeID</w>\_team2 
+	- Click on <w class="attendee_out">AttendeeID</w>_team2 
 	- **`Save Team Selection`** to confirm that you want to change a team
 
 <br>
@@ -334,18 +361,18 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 <br>
 - Navigate to _Management Portal > Provisioning > Outdial ANI_
   - Click on **`New Outdial ANI`**
-  - Name: <w class = "attendee-class">attendeeID</w>\_outdialANI
+  - Name: <w class="attendee_out">AttendeeID</w>_outdialANI
   - Add Outdial ANI entry
-    - Name: <w class = "attendee-class">attendeeID</w>\_outdialANIEntry1
+    - Name: <w class="attendee_out">AttendeeID</w>_outdialANIEntry1
     - Number: Select your mapped DN
 
 <br>
 - Navigate to _Management Portal > Provisioning > Address Book_
 	- Click on **`New Address Book`**
-	- Name: <w class = "attendee-class">attendeeID</w>\_addressBook
+	- Name: <w class="attendee_out">AttendeeID</w>_addressBook
 	- Parent Type: **`Site`**
 	- Add Address Book entries
-		- Name: <w class = "attendee-class">attendeeID</w>\_addressBookEntry1
+		- Name: <w class="attendee_out">AttendeeID</w>_addressBookEntry1
 		- International calls are disabled, **so only US numbers are supported**. For example: +18662293239 (Cisco Helpdesk)
 
 <br>
@@ -373,7 +400,7 @@ The Agent Desktop is divided in **6 sections**. In the image above you can see a
 
 - Finally, let's see how **Adress Book** works
   - Open the Outdial window and swith to the Address Book tab
-  - You will see the the list of entries of <w class = "attendee-class">attendeeID</w>\_addressBook configured before
+  - You will see the the list of entries of <w class="attendee_out">AttendeeID</w>_addressBook configured before
   - You can search by entry name or DN
   - Try to call any of the numbers in the list
 
@@ -450,9 +477,9 @@ The following are the top-level and most important properties to know for JSON l
 
 - Click on **_New Layout_**.
 
-- Provide the following **name**: <w class = "attendee-class">attendeeID</w>\_desktopLayout
+- Provide the following **name**: <w class="attendee_out">AttendeeID</w>_desktopLayout
 
-- Select <w class = "attendee-class">attendeeID</w>\_team2 as Team.
+- Select <w class="attendee_out">AttendeeID</w>_team2 as Team.
 
 - Click **_Upload_** button to upload the modified JSON file.
 
@@ -464,7 +491,7 @@ The following are the top-level and most important properties to know for JSON l
 
 - Open the **_User Profile_** and click on the arrow `>` under **_Team_**.
 
-- Change the team of the agent to <w class = "attendee-class">attendeeID</w>\_team2
+- Change the team of the agent to <w class="attendee_out">AttendeeID</w>_team2
 
 - Click on **_Save Team Selection_**.
 
