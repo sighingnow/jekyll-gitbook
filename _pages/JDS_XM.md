@@ -12,7 +12,7 @@ Last modified: Tue, 27 Jul 2023
 
 | Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
 | ---------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Introduction to Experience Management](#Introduction-to-Experience-Management-Post-Interaction-and-Post-Call-Surveys) | Watch & Understand | EASY            | 7 min            |
+| [Introduction to Experience Management](#introduction-to-experience-Management-Post-Interaction-and-Post-Call-Surveys) | Watch & Understand | EASY            | 7 min            |
 | [Configure Post Call IVR Survey](#Configure-Post-Call-IVR-Survey) | Practical Lab | EASY | 10 min |
 | [Configure Post Interaction Digital Survey](#Configure-Post-Interaction-Digital-Survey) | Practical Lab | EASY | 10 min |
 | [Customer Journey Data Services Introduction](customer-journey-data-services-introduction) | Watch & Understand | EASY | 5 min |
@@ -183,6 +183,9 @@ In this lab, we will configure all the required elements to collect and view end
 
 ### Provide a survey response
 
+> **NOTE:** Refer to the section Basic Features in Lab 3 - Agent Desktop if you are unfamiliar with testing an incoming call
+{: .block-warning }
+
 1. Login to your Agent Desktop and make your state Available
 2. Dial your designated DN and accept the incoming voice interaction
 3. Provide the DTMF input 1 to opt-in to the survey
@@ -195,7 +198,9 @@ In this lab, we will configure all the required elements to collect and view end
 
 1. Navigate to the Surveys page on Control Hub
 2. Click on the download button on the far right of your survey
-3. Verify your response in the excel sheet to the one you provided
+    > <img src="/assets/images/EM/downloadResponse.gif">
+    > 
+4. Verify your response in the excel sheet to the one you provided
 
 ---
 # Configure Post Interaction Digital Survey 
