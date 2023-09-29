@@ -94,7 +94,7 @@ In this lab, we will configure all the required elements to collect and view end
     >>
 5. Add a question to your survey
     >Select the NPS question from the drop-down by clicking + Add a question
-    >><img src="/assets/images/EM/addNPS.gif">
+    >><img src="/assets/images/EM/addNPS.gif" width="200">
     >>
     >Choose the corresponding audio file, nps.wav for the NPS question and upload  ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
     >><img src="/assets/images/EM/uploadNPS.gif">
