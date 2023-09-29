@@ -96,7 +96,7 @@ In this lab, we will configure all the required elements to collect and view end
     >Select the NPS question from the drop-down by clicking + Add a question
     >><img src="/assets/images/EM/addNPS.gif">
     >>
-    >Choose the corresponding audio file, nps.wav for the NPS question and upload  ([Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"})
+    >Choose the corresponding audio file, nps.wav for the NPS question and upload  ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
     >><img src="/assets/images/EM/uploadNPS.gif">
     >>
     >Under Question to show on reporting type the column name as "NPS Score"
@@ -122,7 +122,7 @@ In this lab, we will configure all the required elements to collect and view end
 2. Introduce a Menu into your main flow to prompt the caller to opt-in for the survey in between the NewPhoneContact event and the Queue Contact node
     > Activity Label: surveyOptin
     >
-    > Prompt: OptinMenu.wav  ([Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"})
+    > Prompt: OptinMenu.wav  ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
     >
     > Make Prompt Interruptible: True
     >
