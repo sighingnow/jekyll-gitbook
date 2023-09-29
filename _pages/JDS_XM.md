@@ -83,7 +83,7 @@ In this lab, we will configure all the required elements to collect and view end
     >>
     >Click on Next
     >
-4. Add audio files to the Welcome and Thank you notes ([Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"})
+4. Add audio files to the Welcome and Thank you notes ([Audio Files](https://webexcc.github.io/assets/files/Survey_wav.zip){:target="\_blank"})
     >Click on the pencil icon to the right
     >>  <img src="/assets/images/EM/welcomeThankyou.gif">
     >>
