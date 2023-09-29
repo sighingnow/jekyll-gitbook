@@ -15,7 +15,7 @@ Last modified: Tue, 27 Jul 2023
 | [Introduction to Experience Management](#introduction-to-experience-management-post-interaction-and-post-call-surveys) | Watch & Understand | EASY            | 7 min            |
 | [Configure Post Call IVR Survey](#configure-post-call-ivr-survey) | Practical Lab | EASY | 10 min |
 | [Configure Post Interaction Digital Survey](#configure-post-interaction-digital-survey) | Practical Lab | EASY | 10 min |
-| [Customer Journey Data Services Introduction](customer-journey-data-services-introduction) | Watch & Understand | EASY | 5 min |
+| [Customer Journey Data Services Introduction](customer-journey-data-services-introduction) | Watch & Understand | EASY | N/A |
 
 ## Overview of the lab:
 In this lab, we will configure all the required elements to collect and view end-customer feedback using the new Experience Management.
@@ -66,7 +66,7 @@ In this lab, we will configure all the required elements to collect and view end
 
 ### Create a survey
 1. Click on Contact Center under Services from Control Hub 
-    > <img src="/assets/images/EM/contactCenter.gif">
+    > <img src="/assets/images/EM/contactCenter.gif" width="200">
     > 
 2. Under Contact Center, click on Surveys
     > <img src="/assets/images/EM/survey.gif">
