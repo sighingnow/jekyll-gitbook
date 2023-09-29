@@ -69,7 +69,7 @@ In this lab, we will configure all the required elements to collect and view end
     > <img src="/assets/images/EM/contactCenter.gif" width="200">
     > 
 2. Under Contact Center, click on Surveys
-    > <img src="/assets/images/EM/survey.gif">
+    > <img src="/assets/images/EM/survey.gif" width="200">
     > 
 3.  Click the "Create new survey" button on the top-right corner of the Survey page
     >Select Survey type as IVR
