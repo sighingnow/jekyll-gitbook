@@ -9,12 +9,12 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://ohhoo0.github.io'
+baseurl:          '/ohhoo0'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
-remote_theme: sighingnow/jekyll-gitbook
+remote_theme: ohhoo0/fyxgitbook
 
 toc:
   enabled: true
