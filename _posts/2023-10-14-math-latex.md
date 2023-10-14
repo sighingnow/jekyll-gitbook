@@ -10,13 +10,11 @@ mermaid: true
 This jekyll-theme supports [MathJax](https://www.mathjax.org/) to render $\LaTeX$
 and mathematics expressions.
 
-```markdown
 > ##### TIP
 >
 > Currently, Kramdown uses double dollar sign delimiters for inline and display math:
-> https://kramdown.gettalong.org/syntax.html#math-blocks.
+> [https://kramdown.gettalong.org/syntax.html#math-blocks](https://kramdown.gettalong.org/syntax.html#math-blocks).
 {: .block-tip }
-```
 
 e.g.,
 
