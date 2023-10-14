@@ -30,3 +30,8 @@
         </div>
     </div>
 </div>
+
+<!-- introduce per-page mermaid support -->
+{% if page.mermaid %}
+    {% include mermaid.html %}
+{% endif %}
