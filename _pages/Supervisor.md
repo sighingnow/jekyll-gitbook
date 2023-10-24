@@ -26,30 +26,29 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 #### **Pre-requisite**
 
-1.  Admin credentials to login to Control Hub and Webex Contact Center administration portal.
-2.  At least one admin and one supervisor users with extensions have been created on Control Hub  according to the instructions provided in ***Lab 1 - Admin Experience***.
-4.  Standard or Premium agent license is assigned to agent's account on Control Hub.
-5.  Agent account is configured on Webex CC management portal and you are able to sign in as an agent.
+1.  Admin credentials for sign-in to Control Hub.
+2.  At least one admin and one supervisor user with extensions have been created on Control Hub  according to the instructions provided in ***Lab 1 - Admin Experience***.
+4.  Standard or Premium agent license is assigned to the agent's account on Control Hub.
+5.  The agent account is configured on the Webex CC management portal and you are able to sign in as an agent.
 
 #### Example of agent and supervisor users on Control Hub 
 
-| **User Role** | **User email**                                                                | **User Extension** |
-| ------------- | ----------------------------------------------------------------------------- | ------------------ |
-| Agent         | <w class="attendee_out">Your_Attendee_ID</w>_agent1@Your_Domain      | <w class= "agentEXT_out">Your Agent Extension</w> |
-| Supervisor    | <w class="attendee_out">Your_Attendee_ID</w>_supervisor1@Your_Domain | <w class= "supervisorEXT_out">Your Supervisor Extension</w> |
+| **User Role** | **User email**                                                                | **Endpoint** |
+| ------------- | ----------------------------------------------------------------------------- | ------------- | 
+| Agent         | wxcclabs+agent_<w class="attendee_out">AttendeeID</w>@gmail.com | WebRTC |
+| Supervisor    | wxcclabs+supvr_<w class="attendee_out">AttendeeID</w>@gmail.com | Webex App |
 
-
->**Note:** Please refer ***Lab 1 - Admin Experiense*** if you need to add agent or supervisor users on Control Hub.
+>**Note:** Please refer ***Lab 1 - Admin Experience*** if you need to add agent or supervisor users on Control Hub.
 
 #### Quick Links
 
-> Control Hub: **[https://admin.webex.com](https://admin.webex.com/)**  
-> Webex CC Management Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal)**  
-> Agent / Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/)**  
+> Control Hub: **[https://admin.webex.com](https://admin.webex.com/){:target="\_blank"}**  
+> Webex CC Management Portal: **[https://portal.wxcc-us1.cisco.com/portal](https://portal.wxcc-us1.cisco.com/portal){:target="\_blank"}**  
+> Agent / Supervisor Desktop: **[https://desktop.wxcc-us1.cisco.com](https://desktop.wxcc-us1.cisco.com/){:target="\_blank"}**  
 
 # Assign supervisor license to the user
 
--  Login to Control Hub under organization admin account.
+-  Login to Control Hub under the organization admin account.
 -  Go to ***Users***, click on supervisor's account, scroll dow to ***Licenses*** section and press ***Edit Licenses*** button.
 
 ![Lab_4_Supervisor_Config_1](/assets/images/DC_Lab_4_Supervisor_Config_1.png)
@@ -75,9 +74,9 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 ![Lab_4_Supervisor_Config_6](/assets/images/DC_Lab_4_Supervisor_Config_6.png)
 
 
-# Configure supervisor in Management Portal
+# Configure supervisor in the Management Portal
 
--  Download the latest [Supervisor Desktop Layout JSON](https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/Supervisor-Call-Recordings-review-and-playback/Supervisor_Call_Recordings_review_and_playback_default-config.json) file with Call Recordings feature.
+-  Download the latest [Supervisor Desktop Layout JSON](https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/Supervisor-Call-Recordings-review-and-playback/Supervisor_Call_Recordings_review_and_playback_default-config.json){:target="\_blank"} file with Call Recordings feature.
 
 -  Open the file in any JSON editor, check, and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
 	- ***supervisor*** section is used when the user signs in to supervisor desktop with ***Supervisor*** role.
