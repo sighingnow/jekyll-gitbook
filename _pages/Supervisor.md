@@ -5,7 +5,7 @@ date: 2022-04-04
 layout: post
 ---
 ```
-Last modified: Mon, 10 Apr 2023
+Last modified: Tue, 24 Oct 2023
 ```
 
 ## Table of Contents
@@ -77,8 +77,9 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 # Configure supervisor in Management Portal
 
--  Download [Desktop Layout JSON](https://webexcc.github.io/assets/files/ESD_default_layout.json.zip) file for supervisor from GitHub.
--  Open the file in any JSON editor, check and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
+-  Download the latest [Supervisor Desktop Layout JSON](https://www.cisco.com/c/dam/en/us/td/docs/voice_ip_comm/cust_contact/contact_center/webexcc/Supervisor-Call-Recordings-review-and-playback/Supervisor_Call_Recordings_review_and_playback_default-config.json) file with Call Recordings feature.
+
+-  Open the file in any JSON editor, check, and make sure it contains ***supervisor*** and ***supervisorAgent*** sections.
 	- ***supervisor*** section is used when the user signs in to supervisor desktop with ***Supervisor*** role.
 	- ***supervisorAdmin*** section is used when the user signs in to supervisor desktop with ***Supervisor and Agent*** role.
 
@@ -96,7 +97,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 ![Lab_4_WebexCC_Config_4](/assets/images/DC_Lab_4_Supervisor_WebexCC_4.png)
 
--  Choose proper ***Site*** from drop-down list according to the lab guide, provide ***Name***, select ***Desktop Layout*** for supervisor created at the previous step and save the team.
+-  Choose the proper ***Site*** from the drop-down list according to the lab guide, provide ***Name***, select ***Desktop Layout*** for the supervisor created at the previous step, and save the team.
 
 ![Lab_4_WebexCC_Config_5](/assets/images/DC_Lab_4_Supervisor_WebexCC_5.png)
 
@@ -104,7 +105,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 ![Lab_4_WebexCC_Config_6](/assets/images/DC_Lab_4_Supervisor_WebexCC_6.png)
 
--  Provide proper user profile name and go to ***Module Settings*** tab.
+-  Provide the proper user profile name and go to the ***Module Settings*** tab.
 
 ![Lab_4_WebexCC_Config_7](/assets/images/DC_Lab_4_Supervisor_WebexCC_7.png)
 
@@ -112,7 +113,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 ![Lab_4_WebexCC_Config_8](/assets/images/DC_Lab_4_Supervisor_WebexCC_8.png)
 
--  Scroll to the bottom of the page and save supervisor profile.
+-  Scroll to the bottom of the page and save the supervisor profile.
 
 ![Lab_4_WebexCC_Config_9](/assets/images/DC_Lab_4_Supervisor_WebexCC_9.png)
 
@@ -125,9 +126,9 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 | **Parameter Name**             | **Parameter Value**                               |
 | -------------------------- | --------------------------------------------- |
 | Contact Center Enabled     | Yes                                           |
-| Primary Team               | Select supervisor team created above          |
-| Site                       | Select proper site according the to lab guide |
-| Teams                      | Add teams which supervisor can use when signing in as an agent |
+| Primary Team               | Select the supervisor team created above          |
+| Site                       | Select the proper site according the to lab guide |
+| Teams                      | Add teams that the supervisor can use when signing in as an agent |
 | Agent Profile              | Select the default one - ***Agent-Profile***        |
 | Multimedia Profile         | Select the default one - ***Default_Multimedia_Profile*** | 
 
@@ -136,7 +137,7 @@ This lab is designed to introduce the audience to the Extensible Supervisor Desk
 
 # Supervisor Experience
 
-In this section you will act as a supervisor and perform activities. The Supervisor Desktop provides a holistic supervisor experience within a centralized interface. It enables supervisors to manage, monitor, assess, guide, and assist agents. It also enables administrators to customize the Supervisor Desktop with widgets to address specific Contact Center business needs
+In this section, you will act as a supervisor and perform activities. The Supervisor Desktop provides a holistic supervisor experience within a centralized interface. It enables supervisors to manage, monitor, assess, guide, and assist agents. It also enables administrators to customize the Supervisor Desktop with widgets to address specific Contact Center business needs
 
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
@@ -146,8 +147,8 @@ In this section you will act as a supervisor and perform activities. The Supervi
 
 #### **Pre-requisite**
 
-1.  a supervisor user configured as described above
-2.  one agent logged in and in conversation with a customer so you can monitor the call.
+1.  A supervisor user configured as described above
+2.  One agent logged in and in conversation with a customer so you can monitor the call.
 
 #### **Supervisor Log in**
 
@@ -160,18 +161,18 @@ In this section you will act as a supervisor and perform activities. The Supervi
 
 - When you sign in to the **Supervisor Desktop**, the appearance depends on how the Webex Contact Center administrator has configured the desktop layout. The **Supervisor Desktop** display size must be greater than 500 x 500 pixels (width x height). You must set your web browser zoom to 100% for the best experience with the Supervisor Desktop. With this lab layout you get : 
 
-1. **Home Page**: Displays a user friendly interface that provides a consolidated view of key contact center metrics and filters. This is the default landing page in the Supervisor Desktop. The administrator can customize the Home Page in the layout JSON file.
-2. **Task**: Displays all the tasks when you sign in to the Desktop in dual role (supervisor and agent) or as a supervisor, interactions such as voice, chat, email, and social messaging conversations, along with monitoring. The icon displays a badge indicating the number of requests that you have not accepted across various channels.
+1. **Home Page**: Displays a user-friendly interface that provides a consolidated view of key contact center metrics and filters. This is the default landing page in the Supervisor Desktop. The administrator can customize the Home Page in the layout JSON file.
+2. **Task**: Displays all the tasks when you sign in to the Desktop in a dual role (supervisor and agent) or as a supervisor, interactions such as voice, chat, email, and social messaging conversations, along with monitoring. The icon displays a badge indicating the number of requests that you have not accepted across various channels.
 3. **Team Performance**: Displays real-time information about an agent and a consolidated view of an agent’s performance as part of the team. You can also monitor and send 1:1 messages to an agent.
   
-Note the **Supervisor Desktop** UI supports localization in 30 languages. The following are the supported languages:
-Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US),Finnish,French, German, Hungarian, Italian,Japanese, Korean, Norwegian,Polish,Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian. The Supervisor Desktop UI language is based on the language preference settings on your browser. For example, let us consider that you have selected the preferred language as French on the Google Chrome browser. When you launch the Supervisor Desktop in the Google Chrome browser, the Supervisor Desktop UI appears in Français (French).
+> Note the **Supervisor Desktop** UI supports localization in 30 languages. The following are the supported languages:
+> Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, Dutch, English (UK), English (US), Finnish, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese (Brazil), Portuguese (Portugal), Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swedish, Turkish, and Ukrainian. The Supervisor Desktop UI language is based on the language preference settings on your browser. For example, let us consider that you have selected the preferred language as French on the Google Chrome browser. When you launch the Supervisor Desktop in the Google Chrome browser, the Supervisor Desktop UI appears in Français (French).
 
 - **Home Page** : 
 
 ![Lab_4_ESD](/assets/images/Lab4_ESD_2.png)
 
-- click on the third menu option, you now see the **Team Performance Details** page where your agents activities are displayed : status, call duration, team, ... In the last column, you are presented two options : **chat** or **monitor**. The monitoring option is obvisously only enabled when an agent is in conversation with a customer otherwise the icon will be greyed.
+- click on the third menu option, and now you should see the **Team Performance Details** page where your agent's activities are displayed: status, call duration, team, etc. In the last column, you are presented with two options: **chat** or **monitor**. The monitoring option is obviously only enabled when an agent is in conversation with a customer otherwise the icon will be greyed.
   
 ![Lab_4_ESD](/assets/images/Lab4_ESD_3.png)
 
@@ -185,15 +186,15 @@ Bulgarian, Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish, 
 | Phone Number           | Dial number or extension of the agent signed in.|
 | Site                   | Name of the site with which the agent is associated.|
 | Team                   | Name of the team with which the agent is associated.|
-| Channels               | The mode of communication through which an agent can communicate.For example, voice call.|
+| Channels               | The mode of communication through which an agent can communicate. For example, voice calls.|
 | Contact Queue          | Name of the queue from where the agent receives the incoming call.|
 | Contact Status         | The status of the agent in an active call. Example: Connected, Consulting, Conference, or Wrap up|
-| Time in Contact Status | The time spent by an agent in an active call. For example, the time an agent is in conference call.|
+| Time in Contact Status | The time spent by an agent in an active call. For example, the time an agent is in a conference call.|
 | Total Contact Duration  | Total duration of the contact from when it was first connected (including any other state like consult or conference in the same contact). The time elapsed since the agent accepted the request. The connected timer format is hh:mm:ss (for example, 01:10:25).|
-| Sign In Time           | The time an agent has signed in to theSupervisor Desktop. The date and time format is dynamic and displays according to location.|
-| Action                 | You can perform the following actions:• Review and Monitor - Based on the privilege provided by Administrator as part of user profile, you can review and monitor an ongoing agent call silently. • Send1:1 message to Agent – Based on the privilege provided by Administrator as part of user profile, you can send 1:1 message to an agent.|
+| Sign In Time           | The time an agent has signed in to the Supervisor Desktop. The date and time format is dynamic and displays according to location.|
+| Action                 | You can perform the following actions:• Review and Monitor - Based on the privilege provided by Administrator as part of user profile, you can review and monitor an ongoing agent call silently. • Send1:1 message to Agent – Based on the privilege provided by Administrator as part of a user profile, you can send a 1:1 message to an agent.|
 
-- you can customize this view to show / hide columns or group information at your convenience.
+- you can customize this view to show/hide columns or group information at your convenience.
 
 ![Lab_4_ESD](/assets/images/Lab4_ESD_32.png)
 
@@ -247,15 +248,15 @@ Collaboration between agents and supervisors can help your Contact Center to be 
 
 #### **Particular case when a supervisor is also an agent**
 
-- When you sign in to the Supervisor Desktop, you can - depending or your team assignement - choose either the supervisor role or supervisor AND agent role.
+- When you sign in to the Supervisor Desktop, you can - depending or your team assignment - choose either the supervisor role or supervisor AND agent role.
 
 ![Lab_4_ESD](/assets/images/Lab4_ESD_14_monitor.png)
 
-- In the case, the supervisor experience is a bit different as your agent status appears in the header section of the Desktop.
+- In this case, the supervisor experience is a bit different as your agent status appears in the header section of the Desktop.
 
 ![Lab_4_ESD](/assets/images/Lab4_ESD_15_monitor.png)
 
-- If, as a supervisor, you chose to monitor a call, your status is set to **Engaged** and you cannot take other calls as an agent.
+- If, as a supervisor, you choose to monitor a call, your status is set to **Engaged** and you cannot take other calls as an agent.
 
 ![Lab_4_ESD](/assets/images/Lab4_ESD_16_monitor.png)
 
