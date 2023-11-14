@@ -263,7 +263,7 @@ The Settings session allows the administrator to review and manage users and tea
 
 #### **Lab Objective**
 
-This lab is designed to introduce the Connect interface, which is used for the configuration and orchestration of all digital channels. In this lab you will not find configuration steps, the goal is to understand the purpose and use of each menu item.
+This lab is designed to introduce the Engage interface, which is used for the configuration and orchestration of all digital channels. In this lab you will not find configuration steps, the goal is to understand the purpose and use of each menu item.
 
 #### **Pre-requisite**
 
