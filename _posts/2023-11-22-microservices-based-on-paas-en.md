@@ -34,6 +34,10 @@ The list of application’s services is defined as follows:
 # III. Deploying the application on FPT Smart Cloud’s PaaS
 
 ## 1. PaaS deployment architecture
+
+![alt text for screen readers](../images/paas-deployment.png "PaaS Deployment")
+
+
 ## 2. Building PaaS components
 ### 2.1. Kubernetes
 ### 2.2. Container Registry
