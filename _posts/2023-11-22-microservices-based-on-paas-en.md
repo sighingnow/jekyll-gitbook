@@ -31,3 +31,25 @@ The list of application’s services is defined as follows:
 
 
 
+# III. Deploying the application on FPT Smart Cloud’s PaaS
+
+## 1. PaaS deployment architecture
+## 2. Building PaaS components
+### 2.1. Kubernetes
+### 2.2. Container Registry
+### 2.3. Kafka
+### 2.4. Mysql
+### 2.5. Redis
+### 2.6. Load Balancing
+### 2.7. Monitoring
+## 3. Preparing environment variables
+## 4. Deploying the application on PaaS
+## 5. Configure Load Balancer
+## 6. Configure Monitoring
+
+# IV. Monitoring
+## Kubernetes
+## Database
+## Caching
+## Operating System
+## Application Performance
