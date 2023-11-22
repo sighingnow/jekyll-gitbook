@@ -17,7 +17,6 @@ The application consists of 4 main layers:
 
 The list of application’s services is defined as follows:
 
-<div class="table-wrapper" markdown="block">
 
 ||Services|Programming Language|Description|
 |:-:|:-:|:-:|:-:|
@@ -29,7 +28,6 @@ The list of application’s services is defined as follows:
 |6|Comment|C# (.Net)|APIs that are used for handling logic for adding, editing, and deleting a post’s comments.|
 |7|Message|Java|APIs that are used for handling logic for sending messages.|
 |8|Message Worker|Java|Websockets for receiving messages.|
-</div>
 
 
 
