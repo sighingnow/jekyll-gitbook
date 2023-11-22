@@ -35,7 +35,7 @@ The list of application’s services is defined as follows:
 
 ## 1. PaaS deployment architecture
 
-![alt text for screen readers](../images/paas-deployment.png "PaaS Deployment")
+![alt text for screen readers](../fptcloud-samples/images/paas-deployment.png "PaaS Deployment")
 
 
 ## 2. Building PaaS components
