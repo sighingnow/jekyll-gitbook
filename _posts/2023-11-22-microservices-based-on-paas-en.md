@@ -17,3 +17,19 @@ The application consists of 4 main layers:
 
 The list of application’s services is defined as follows:
 
+<div class="table-wrapper" markdown="block">
+
+||Services|Programming Language|Description|
+|:-:|:-:|:-:|:-:|
+|1|Frontend|Javascript (React)|Provides a graphical interface to the end users and sends API requests to Kong Gateway|
+|2|Authentication|JavaScript (Nodejs)|APIs that are used for token authorization and determining the user’s role through tokens.|
+|3|Post|Python|APIs that are used for handling logic for adding, editing, and deleting posts.|
+|4|Tag|Python|APIs that are used for handling logic for adding, editing, and deleting tags|
+|5|Category|Python|APIs that are used for handling logic for adding, editing, and deleting post categories.|
+|6|Comment|C# (.Net)|APIs that are used for handling logic for adding, editing, and deleting a post’s comments.|
+|7|Message|Java|APIs that are used for handling logic for sending messages.|
+|8|Message Worker|Java|Websockets for receiving messages.|
+</div>
+
+
+
