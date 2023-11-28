@@ -19,7 +19,7 @@ Last modified: Tue, 27 Jun 2023
     })})
 
   event.preventDefault()
-  if(document.forms["IVRdeets"][0].value != "Your EP DN"){
+  if(document.forms["IVRdeets"][0].value != "Your Support Number"){
     localStorage.setItem("EPDN",document.forms["IVRdeets"][0].value)
   }
    if(document.forms["IVRdeets"][1].value != "Your Attendee ID"){
@@ -91,7 +91,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 {: .block-tip }
 <form id="IVRdeets">
   
-  <label for="DN">EP DN you were assigned:</label><br>
+  <label for="DN">Support Number you were assigned:</label><br>
   <input type="tel" id="DN" name="DN" onChange="update()"><br>
   
   <label for="attendee">Attendee ID:</label><br>
@@ -108,7 +108,7 @@ In this lab, we will configure all of the required elements to deliver a call in
 </form>
 
 <script>
-document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your EP DN"
+document.forms["IVRdeets"][0].value = localStorage.getItem("EPDN") || "Your Support Number"
 document.forms["IVRdeets"][1].value = localStorage.getItem("attendeeID") || "Your Attendee ID" 
 document.forms["IVRdeets"][2].value = localStorage.getItem("agentEmail") || "Agent Email"
 document.forms["IVRdeets"][3].value = localStorage.getItem("supervisorEXT") || "Supervisor Extension"
@@ -268,7 +268,7 @@ update()
     >>
     >> In Webex Calling location, select "Office"
     >>
-    >> In Available Numbers select <w class= "DN_out" >Your EP DN</w>
+    >> In Available Numbers select <w class= "DN_out" >Your Support Number</w>
     >>
     >> Click the check mark
     >
@@ -278,7 +278,7 @@ update()
 
 
 ### Test your configuration
-1. Call <w class= "DN_out" >Your EP DN</w> from your supervisor extension
+1. Call <w class= "DN_out" >Your Support Number</w> from your supervisor extension
     > You should hear the greeting message and then the music in queue
     >
     > Go available in the agent desktop
@@ -322,7 +322,7 @@ update()
    > [Compare](https://webexcc.github.io/../../../assets/images/IVR/comfortMessage.JPG){:target="\_blank"}
    >
    > ---
-8. Place a test call to <w class= "DN_out" >Your EP DN</w>
+8. Place a test call to <w class= "DN_out" >Your Support Number</w>
    > Did you hear the comfort message every 15 seconds?
    >
    > ---
@@ -371,7 +371,7 @@ update()
 11. Connect the False node edge from evenOdd to websiteMessage
 12. Connect the end of websiteMessage node to the Play Music node
 13. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/altMessages.JPG){:target="\_blank"}
-14. Place a test call to <w class= "DN_out" >Your EP DN</w>
+14. Place a test call to <w class= "DN_out" >Your Support Number</w>
     > Did you hear the comfort message and website message alternate every 15 seconds?
     >
     > ---
@@ -470,7 +470,7 @@ update()
    ---
 16. Connect advance to positionCheck  
 17. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/aniRead.JPG){:target="\_blank"}
-18. Place a test call to <w class= "DN_out" >Your EP DN</w>
+18. Place a test call to <w class= "DN_out" >Your Support Number</w>
     > When you are given the option for a callback, press 1.
     >> Did you hear your 10 digit callback number being read back?
 
@@ -542,7 +542,7 @@ update()
 12. Connect resetPosition to rcontext
 13. Connect rcontext to rDigit_set
 14. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/changeNumber.JPG){:target="\_blank"}
-15. Place a test call to <w class= "DN_out" >Your EP DN</w>
+15. Place a test call to <w class= "DN_out" >Your Support Number</w>
     > When you are given the option for a callback, press 1.
     >
     > Press 2 to enter a different number.
@@ -673,7 +673,7 @@ update()
 26. Connect callbackConfirm to Disconnect Contact
 27. Connect the No-Input Timeout and Unmatched Entry node edges from needExt to Disconnect Contact
 28. Publish your flow [Compare](https://webexcc.github.io/../../../assets/images/IVR/collectExt.JPG){:target="\_blank"}
-29. Place a test call to <w class= "DN_out" >Your EP DN</w>
+29. Place a test call to <w class= "DN_out" >Your Support Number</w>
     > Press one to receive a callback 
     >
     > Press one to keep the number which was read back
