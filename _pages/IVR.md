@@ -135,7 +135,7 @@ update()
 ### Create a queue
 
  1. <details> <summary>In the left pane of Control Hub > Select Contact Center > Queues</summary>
-     <img src="../assets/images/IVR/openQueueNew.gif" style="height:350">
+     <img src="/assets/images/IVR/openQueueNew.gif" style="height:350">
      </details>
 
 1. Click Create Queue
@@ -184,23 +184,25 @@ update()
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
    > The file will open in a separate window.  
    >
-   > <details> <summary>If using Firefox, Select the save option. </summary>
-   >
-   > <img src="/assets/images/IVR/saveJson.gif">
-   >
-   > </details>
-   >
-   > <details> <summary>If using Chrome or Edge, right click and select save. </summary>
-   >
-   > <img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
-   >
-   > </details>
-   >
-   > <details> <summary>If using Chrome on a MAC, click the share icon in the URL bar and select save. </summary>
-   >
-   > <img src="/assets/images/IVR/saveJsonChromeMac.gif" width="243">
-   >
-   > </details>
+   >> <details> <summary>If using Firefox, Select the save option. </summary>
+   >>
+   >> <img src="/assets/images/IVR/saveJson.gif">
+   >>
+   >> </details>
+   >>
+   >> <details> <summary>If using Chrome or Edge, right click and select save. </summary>
+   >>
+   >> <img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
+   >>
+   >> </details>
+   >>
+   >> <details> <summary>If using Chrome on a MAC, click the share icon in the URL bar and select save. </summary>
+   >>
+   >> <img src="/assets/images/IVR/saveJsonChromeMac.gif" width="243">
+   >>
+   >> </details>
+   >>
+   
    
 
 2. In the left pane of Control Hub, click Flows
