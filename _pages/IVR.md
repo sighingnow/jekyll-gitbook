@@ -133,20 +133,24 @@ update()
 ⚠️ If you are using your Gold Tenant you can use this link to download the [Audio Files](https://webexcc.github.io/assets/files/lab_wav.zip){:target="\_blank"}. Those files are already pre-uploaded on the Lab Tenant.
 
 ### Create a queue
-1. Click on Provisioning > Entry Points/Queues > Queue
-    > <img src="../assets/images/IVR/openQueue.gif">
-    ---
-2. Click New Queue
+
+ 1. <details> <summary>In the left pane of Control Hub > Select Contact Center > Queues</summary>
+     <img src="../assets/images/IVR/openQueueNew.gif" style="height:350">
+     </details>
+
+1. Click Create Queue
     > Name your queue Q_<w class="attendee_out">AttendeeID</w>
     >
     > Description: optional
+    >
+    > Queue Type: Inbound Queue
     >
     > Channel Type: Telephony
     >
     > Queue Routing Type: Longest Available Agent
     > 
     > Call Distribution:
-    >> Click Add Group
+    >> Click Create Group
     >>
     >> Select <w class="attendee_out">Your_Attendee_ID</w>_Team1
     >>
@@ -158,7 +162,7 @@ update()
     >>
     >> After: 60 Seconds in queue
     >>
-    >> Add Group as: Last
+    >> Priority: 2
     >>
     >> Save Group
     >>
@@ -180,23 +184,32 @@ update()
 1. Download the [Flow Template](https://webexcc.github.io/../../../assets/files/flow_template.json){:target="\_blank"}
    > The file will open in a separate window.  
    >
-   > If using Firefox, Select the save option.
+   > <details> <summary>If using Firefox, Select the save option. </summary>
    >
    > <img src="/assets/images/IVR/saveJson.gif">
    >
-   > If using Chrome or Edge, right click and select save.
+   > </details>
    >
-   ><img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
+   > <details> <summary>If using Chrome or Edge, right click and select save. </summary>
+   >
+   > <img src="/assets/images/IVR/saveJsonChrome.gif" width="243">
+   >
+   > </details>
+   >
+   > <details> <summary>If using Chrome on a MAC, click the share icon in the URL bar and select save. </summary>
+   >
+   > <img src="/assets/images/IVR/saveJsonChromeMac.gif" width="243">
+   >
+   > </details>
    
-      ---
-2. Click Routing Strategy <img src="/assets/images/IVR/rsToFlow.gif" Align= "right" height="200">
-3. Click on Flows in the top ribbon 
-4. Click Import
-5. Select flow_template
-<br><br><br><br><br><br><br><br>
-6. Click the ellipsis next to the newly imported flow_template and select Open 
-   > <img src="/assets/images/IVR/openFlow.JPG" height="40">
-   > 
+
+2. In the left pane of Control Hub, click Flows
+3. Click Manage Flows
+4. Click Import Flows
+5. Click Choose file or drag the flow template into the upload box
+6. Click Import
+
+7. Click the name of the newly imported flow_template  
    > Rename the flow to <w class="attendee_out">AttendeeID</w>_TechSummit by clicking on the pencil icon at the top of the screen, next to the flow name
    >
    > Click on the Play Message node
@@ -233,11 +246,11 @@ update()
 
 
 
-### Create your Entry Point
+### Create your Channel
 
-1. Click on Provisioning > Entry Points/Queues > Entry point
-2. Click Create new Entry point [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEP.gif){:target="\_blank"}
-    > Name your Entry Point EP_<w class="attendee_out">AttendeeID</w>
+1. In the left pane of Control Hub, click Channels
+2. Click Create Channel
+    > Name your Channel EP_<w class="attendee_out">AttendeeID</w>
     >
     > Description: optional
     >
@@ -245,23 +258,19 @@ update()
     >
     > Service Level Threshold: 60
     >
-    > Flow: <w class="attendee_out">AttendeeID</w>_TechSummit
+    > Routing Flow: <w class="attendee_out">AttendeeID</w>_TechSummit
     >
     > Music on Hold: defaultmusic_on_hold.wav
     >
-    > Click Save
+    > In Support Number section:
     >
-    > ---
-
-### Create your Entry Point mapping
-
-1. Click on Provisioning > Entry Point Mapping [Show Me](https://webexcc.github.io/../../../assets/images/IVR/openEPmap.gif){:target="\_blank"}
-2. Click new mapping
-    > In location, select "Office"
-    >
-    > In Available Numbers select <w class= "DN_out" >Your EP DN</w>
-    >
-    > In Entry point select EP_<w class="attendee_out">AttendeeID
+    >> Click Add
+    >>
+    >> In Webex Calling location, select "Office"
+    >>
+    >> In Available Numbers select <w class= "DN_out" >Your EP DN</w>
+    >>
+    >> Click the check mark
     >
     > Click Save
     >
