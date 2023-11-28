@@ -134,7 +134,7 @@ update()
 
 ### Create a queue
 1. Click on Provisioning > Entry Points/Queues > Queue
-    > <img src="/assets/images/IVR/openQueue.gif">
+    > <img src="../assets/images/IVR/openQueue.gif">
     ---
 2. Click New Queue
     > Name your queue Q_<w class="attendee_out">AttendeeID</w>
