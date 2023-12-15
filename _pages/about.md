@@ -13,7 +13,6 @@ I am an Analytics Engineer consultant at Xebia Data (9 years of experience worki
 
 My ideal working week involves learning new technologies, writing difficult functions, teaching organizations about data, and networking at a Meetup.
 
-
 # Contact
 - Email: juan.perafan@xebia.com
 - [LinkedIn](https://www.linkedin.com/in/jmperafan/)
