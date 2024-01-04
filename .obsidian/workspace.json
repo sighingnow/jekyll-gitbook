@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1c30d1758de1937d",
+        "id": "3fa73868136b4532",
         "type": "tabs",
         "children": [
           {
-            "id": "ba075c8f89507347",
+            "id": "2672355a05b54dec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_pages/JDS_XM.md",
+                "file": "_pages/Digital.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_pages/JDS_XM.md",
+                "file": "_pages/Digital.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_pages/JDS_XM.md",
+                "file": "_pages/Digital.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_pages/JDS_XM.md"
+                "file": "_pages/Digital.md"
               }
             }
           }
@@ -154,21 +154,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ba075c8f89507347",
+  "active": "2672355a05b54dec",
   "lastOpenFiles": [
-    "_pages/IVR.md",
+    "assets/images/email_copy_debug.gif",
+    "_pages/Digital.md",
+    "assets/images/LAB2_email/OneTransaction.png.md",
+    "assets/images/LAB2_email",
+    "assets/images/DebugConsole3.png",
+    "assets/images/OneTransaction.png",
+    "assets/images/email_paste_debug.gif",
+    "assets/images/emailConfirmation.png",
+    "assets/images/CheckPopSetting.png",
+    "Untitled.md",
+    "assets/icons/6.png",
+    "assets/icons/5.png",
+    "assets/icons/4.png",
+    "assets/icons/3.png",
+    "assets/icons",
     "_pages/JDS_XM.md",
-    "assets/images/EM/surveyReport.png",
-    "assets/images/EM/Screenshot 2023-09-28 at 4.29.23 PM.png",
-    "assets/images/EM/downloadDate.gif",
-    "assets/images/EM/Untitled.gif",
-    "assets/images/EM/downloadResponse.gif",
-    "assets/images/EM/downloadReport.gif",
-    "assets/images/EM/NPSReporting.gif",
-    "assets/images/EM/feedbackV2.png",
-    "assets/images/EM/addNPS.gif",
+    "_pages/IVR.md",
     "_pages/Agent.md",
-    "assets/images/EM/PCS_IVR_23.png",
     "assets/images/EM/Contactcenter",
     "assets/images/EM",
     "assets/images/IVR/Untitled",
@@ -176,7 +181,6 @@
     "customer-journey-data-services-introduction.md",
     "_pages/CH.md",
     "_pages/Provisioning.md",
-    "_pages/Digital.md",
     "files/RTMS GA Launch.pdf",
     "files/RTMS EA Regional Media.pdf",
     "assets/files/AnalyzerLab_Flow.json",
@@ -184,8 +188,6 @@
     "assets/images/Single.md",
     "assets/images/SSO",
     "assets/images/OnboardingProcess",
-    "assets/files/flow_template.json.zip",
-    "assets/files/ESD_default_layout.json.zip",
     "Untitled.canvas",
     "_pages/Supervisor.md",
     "files/ESD_default_layout.json.md",

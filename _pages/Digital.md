@@ -886,23 +886,40 @@ Now create a new client ID that will be used to identify your application to Goo
 
 ![DC_Lab.12.7_Add_forwarding_Address_3](/assets/images/DC_Lab.12.7_Add_forwarding_Address_3.gif)
 
-- Go back to Webex Connect and click on **Tools** -> **Export Logs**. 
+- In order to fetch the confirmation email, go back to Webex Connect and click on the **Debug Console** Menu on the left pane, select `Query Historical Logs` – `Channel = Email` – `Date Range = Today/Last Hour`.  Click the **Search** button.  
 
-- Under Inbound logs, Select the App that was created -> Select Channel Event as `Incoming Email` -> Select the period as `Today`. Wait until status is changed to **Ready for download** and click **Download** icon. 
+![DebugConsole3](/assets/images/DebugConsole3.png)
 
-![DC_Lab.12.7_Add_forwarding_Address_4](/assets/images/DC_Lab.12.7_Add_forwarding_Address_4.gif)
+- You should only have 1 transaction in your logs at this point.  Click the **Message ID** Link for `Event Handled`
 
-- Once a log file is downloaded, open the log file, under the **Subject** column, copy the confirmation code. 
+![OneTransaction](/assets/images/OneTransaction.png)
 
-![DC_Lab.12.7_Add_forwarding_Address](/assets/images/DC_Lab.12.7_Add_forwarding_Address_5.png)
+- Click the **decrypt logs** button, then click the **Trace Details** link for that transaction. Click the **copy** button next to the Data entry in the lower right pane.  
 
-- Go back to the Gmail account, paste the code in the email account verification section and click verify.
+![email_copy debug](/assets/images/email_copy_debug.gif)
 
-![DC_Lab.12.7_Add_forwarding_Address](/assets/images/DC_Lab.12.7_Add_forwarding_Address_6.png)
+- Paste the copied data from the debug logs into the empty field below and press the Get URL button.  This will pull out the forwarding verification URL that google sent you.  
 
-- Select **Forward a copy of incoming mail to** the verified address and click **Save Changes**.
+<textarea id="jsonETL" style="width: 1352px; height: 96px;">Delete this text and enter copied text here</textarea>
+<button onclick="update()">Get URL</button>
+<script>
+    function update(){
+        x = JSON.parse(document.getElementById("jsonETL").value);
+        document.getElementById("jsonETL").value = x["email.message"].replaceAll("\\r\\n","\r\n").replaceAll("\\/","/").substring(x["email.message"].replaceAll("\\r\\n","\r\n").replaceAll("\\/","/").search("http"),x["email.message"].replaceAll("\\r\\n","\r\n").replaceAll("\\/","/").search("Ifyouclick|If you click")).trim()
+    }
+</script>
 
-![DC_Lab.12.7_Add_forwarding_Address](/assets/images/DC_Lab.12.7_Add_forwarding_Address_7.png)
+- Paste the URL into a new browser tab and hit **Enter**.  Click the **Confirm** button to OK the forwarding.
+
+![email_paste_debug](/assets/images/email_copy_debug.gif)
+
+- You will get a confirmation message
+
+![emailConfirmation](/assets/images/emailConfirmation.png)
+
+- Back in the settings of your Gmail account, forwarding should be reflected in the Forwarding and POP/IMAP tab.
+
+![CheckPopSetting](/assets/images/CheckPopSetting.png)
 
 ## 3. Email Entry Point and Queue creation
 
