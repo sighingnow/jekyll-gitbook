@@ -1,8 +1,7 @@
 # Configurations
 title:            얼렁뚱땅 코드 저장소
-# longtitle:        xxumin Gitbook
-# author:           Sumin
-# email:            
+author:           xxumin
+      
 description: >
   Build Jekyll site with the GitBook style.
 
@@ -10,7 +9,7 @@ version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://xxumin.github.io'
-baseurl:          '/jekyll-gitbook'
+baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
