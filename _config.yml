@@ -14,7 +14,7 @@ baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
-theme: sighingnow/jekyll-gitbook
+remote_theme: sighingnow/jekyll-gitbook
 
 toc:
   enabled: true
