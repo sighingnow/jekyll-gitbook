@@ -24,6 +24,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 
 
+
 ## Introduction
 
 ### Lab Objective
@@ -214,6 +215,9 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 - Feel free to play around with various phrases as responses to the virtual agent and see if it is able to handle them properly.
 
+# Configure Dialogflow CX Virutal Agent
+
+Test
 
 ---
 
@@ -221,3 +225,5 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 <p style="text-align:center"><strong>Congratulations, you have completed this lab! You can continue with the next one.</strong></p>
 		
 <p style="text-align:center;"><img src="/assets/gitbook/images/webex.png" width="100"></p>	
+
+#
