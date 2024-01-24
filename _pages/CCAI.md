@@ -219,6 +219,9 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 Test
 
+<img src="/assets/images/CX/2023-12-23_22h21_31.png">
+
+
 ---
 
 
