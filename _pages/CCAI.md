@@ -217,6 +217,24 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 # Configure Dialogflow CX Virutal Agent
 
+## Introduction
+ 
+
+This document describes how to configure the Dialogflow CX Virtual Agent. 
+
+
+### Prerequisites
+ 
+### Requirements
+ 
+Cisco recommends that you have knowledge of these topics:
+
+- Webex Contact Center (WxCC) 2.0
+  
+- Webex Contact Center Adminstrator access to the tenant
+  
+- Google Dialogflow CX 
+
 Test
 
 <img src="/assets/images/CX/2023-12-23_22h21_31.png">
