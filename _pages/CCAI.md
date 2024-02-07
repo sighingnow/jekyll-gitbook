@@ -218,10 +218,8 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 # Configure Dialogflow CX Virutal Agent
 
 ## Introduction
- 
 
-This document describes how to configure the Dialogflow CX Virtual Agent. 
-
+This lab describes how to configure the Dialogflow CX Virtual Agent. 
 
 ### Prerequisites
  
@@ -235,9 +233,77 @@ Cisco recommends that you have knowledge of these topics:
   
 - Google Dialogflow CX 
 
-Test
+
+## Addresses and Credentials
+
+- Webex Control Hub: https://admin.webex.com
+  
+- Webex Contact Center Management Portal: https://portal-v2.wxcc-us1.cisco.com/portal
+  
+- Google Cloud Portal Console: https://console.cloud.google.com
+  
+- Google Dialogflow CX: https://dialogflow.cloud.google.com/cx
+
+## Introduction to Webex Contact Center with Google CCAI
+
+The Webex Contact Center with Google CCAI is the integration that allows the use of Google Text-To-Speech, Natural Language Understanding and Virtual Agent technologies with Webex Contact Center.
+
+Dialogflow CX is designed for building complex, multi-turn conversations that involve multiple steps and decision points. It provides tools for creating conversational flows, managing context, handling user intents and entities, and integrating with other applications. Think of conversations that have many turns and where you want to track the interaction content very deeply. These types of conversations typically happen on the phone line to a Contact Center where people ask all types of questions, and the Virtual Agent needs to listen in and provide the answers. It does not mean that you cannot build complex flow using Dialogflow Essentials, which is another version of Dialogflow, but you would need to use a lot of code around it to build a whole framework to achieve complicated logic. But with Dialogflow CX flow builder interface it is no longer the case as the graphical interface lets developers design and build conversational AI applications without requiring extensive coding skills.
+
+Webex Contact Center now supports Dialogflow CX integration and using this article, you can configure and test the solution.
+
+The integration requires you to do configuration in multiple portals: Google Cloud Platform and Google Dialogflow CX, Webex Control Hub, and Webex Contract Center.
+
+ ## Provisioning
+ 
+### Objectives
+
+The objective of this section is to introduce you to Provisioning process which would require to obtain Google CCAI licence for Webex Contact Center.
+
+### Introduction to Provisioning
+
+For billing purposes, you need to provision Webex Contact Center with Google CCAI.
+
+Google provides these APIs for integration of Dialogflow Virtual Agent and Text-to-Speech technologies:
+
+- Dialogflow API
+- Cloud Speech-to-Text API
+- Cloud Natural Language API
+- Cloud Text-to-Speech API
+ 
+These APIs are not necessarily free and can require a billing account on Google Cloud Portal. The main reason of the Provisioning process is to create the billing account between Cisco and Google for the user, so all user billing goes directly through the Cisco Accounting team. It means the user pays to Cisco and Cisco pays to Google.
 
 <img src="/assets/images/CX/2023-12-23_22h21_31.png">
+
+The process takes a couple of days, so you are not going to complete the Provisioning process in this section. For your information in the next screenshot, you can see the high-level diagram with the required steps to complete the Provisioning.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---
