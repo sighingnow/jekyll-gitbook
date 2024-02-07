@@ -230,11 +230,13 @@ The integration requires you to do configuration in multiple portals: Google Clo
 ## Addresses and Credentials
 
 - <a href="https://admin.webex.com">Webex Control Hub</a>
-- <a href="[https://admin.webex.com](https://portal-v2.wxcc-us1.cisco.com/portal)">Webex Contact Center Management Portal</a>
-  
-- Google Cloud Portal Console: https://console.cloud.google.com
-  
-- Google Dialogflow CX: https://dialogflow.cloud.google.com/cx
+
+- <a href="https://portal-v2.wxcc-us1.cisco.com/portal">Webex Contact Center Management Portal</a>
+
+- <a href="https://console.cloud.google.com">Google Cloud Portal Console</a>
+
+- <a href="https://dialogflow.cloud.google.com/cx">Google Dialogflow CX</a>
+
 
 ## Provisioning
  
@@ -261,8 +263,8 @@ The process takes a couple of days, so you are not going to complete the Provisi
 
 <img src="/assets/images/CX/2023-12-23_22h22_46.png">
 
-If you would like to read more about the Provisioning process, refer to Provision Google CCAI for WxCC article.
-https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217594-provision-google-ccai-with-webex-contact.html
+If you would like to read more about the Provisioning process, refer to <a href="https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217594-provision-google-ccai-with-webex-contact.html">Provision Google CCAI for WxCC</a> article.
+
 
 ## Create Dialogflow CX Virtual Agent
 
@@ -278,10 +280,37 @@ Step 2. Click <b>Create Agent</b>. Then select <b>Build your own</b>.
 
 <img src="/assets/images/CX/2023-12-23_22h25_09.png">
 
+Step 3. Provide the name for the new agent using this format: <b>{Your Name}_Virtual_Agent</b> . Select location global <b>(Global serving, data-at-rest in US)</b>.
 
+<img src="/assets/images/CX/2023-12-23_22h27_26.png">
 
+### Task 2.  Assign the agent that you created for the Conversational profile.
 
+Note: <i>A Dialogflow Conversation profile is a set of configuration settings that define the behavior of the virtual agent in a conversation with a user</i>.
 
+Step 1. On the left top corner click <b>Menu</b> icon.
+
+<img src="/assets/images/CX/2023-12-23_22h28_19.png">
+
+Step 2. From the <b>Menu</b> options, select <b>Agent Assist</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h29_20.png">
+
+Step 3. In the next window click on the <b>Conversation profile</b> under the DATA section. Now create a new Conversation profile for your section.
+
+<img src="/assets/images/CX/2023-12-23_22h30_08 (1).png">
+
+Step 4. Create the name for your <b>Conversation profile</b> using this format: <b>{Your Name}_Conversational_Profile</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h30_56.png">
+
+Step 5. Scroll down and enable the virtual agent for this <b>Conversation profile</b>. Click on the <b>Agents</b> field and select the agent that you created in the previous task and then click <b>Create</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h31_32.png">
+
+Step 6. Once the <b>Conversation profile</b> is created, copy the profile ID past it to a notepad, or just know that this is the place where you can get the <b>Conversation Profile ID</b> as you need it the Task 4 of this section when configuring the AI config in Webex Control Hub.
+
+<img src="/assets/images/CX/2023-12-23_22h32_10.png">
 
 
 
