@@ -260,12 +260,24 @@ These APIs are not necessarily free and can require a billing account on Google 
 
 The process takes a couple of days, so you are not going to complete the Provisioning process in this section. For your information in the next screenshot, you can see the high-level diagram with the required steps to complete the Provisioning.
 
+<img src="/assets/images/CX/2023-12-23_22h22_46.png">
 
+If you would like to read more about the Provisioning process, refer to Provision Google CCAI for WxCC article.
+https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217594-provision-google-ccai-with-webex-contact.html
 
+## Create Dialogflow CX Virtual Agent
 
+### Objectives 
 
+This section describes how to navigate Dialogflow CX and Webex Control Hub portals to create a new agent and bind the agent to the Webex environment by creating a new Contact Center AI Config.
 
+### Task 1.  Create new Virtual Agent
 
+Step 1. Log into Dialogflow CX portal using your user account and password. Select project CL2024AMS. (If you experience any difficulties with logging in please clear the catch and cookies on the browser you use.)
+
+Step 2. Click <b>Create Agent</b>. Then select <b>Build your own</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h25_09.png">
 
 
 
