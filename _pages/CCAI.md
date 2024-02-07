@@ -229,9 +229,8 @@ The integration requires you to do configuration in multiple portals: Google Clo
 
 ## Addresses and Credentials
 
-- Webex Control Hub: https://admin.webex.com
-  
-- Webex Contact Center Management Portal: https://portal-v2.wxcc-us1.cisco.com/portal
+- <a href="https://admin.webex.com">Webex Control Hub</a>
+- <a href="[https://admin.webex.com](https://portal-v2.wxcc-us1.cisco.com/portal)">Webex Contact Center Management Portal</a>
   
 - Google Cloud Portal Console: https://console.cloud.google.com
   
