@@ -312,7 +312,7 @@ Step 6. Once the <b>Conversation profile</b> is created, copy the profile ID pas
 
 <img src="/assets/images/CX/2023-12-23_22h32_10.png">
 
-
+### Task 3.  Configure Google Contact Center AI connector
 
 
 
