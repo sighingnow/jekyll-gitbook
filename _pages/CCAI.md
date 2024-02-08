@@ -220,7 +220,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 ## Table of Contents
 
 <ul>
-  <li><a href="#introduction">Introduction to Webex Contact Center with Dialogflow CX</a></li>
+  <li><a href="#Introduction to Webex Contact Center with Dialogflow CX">Introduction to Webex Contact Center with Dialogflow CX</a></li>
   <li><a href="#addresses-and-credentials">Addresses and Credentials</a></li>
   <li><a href="#provisioning">Provisioning</a>
     <ul>
@@ -231,7 +231,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
   <li><a href="#create-dialogflow-cx-virtual-agent">Create Dialogflow CX Virtual Agent</a>
     <ul>
       <li><a href="#objectives-create-dialogflow-cx-virtual-agent">Objectives</a></li>
-      <li><a href="#task-1">Task 1. Create new Virtual Agent</a></li>
+      <li><a href="#Task 1. Create new Virtual Agent">Task 1. Create new Virtual Agent</a></li>
       <li><a href="#task-2">Task 2. Assign the agent that you created for the Conversational profile.</a></li>
       <li><a href="#task-3">Task 3. Configure Google Contact Center AI connector</a></li>
       <li><a href="#task-4">Task 4. Create Contact Center AI config</a></li>
