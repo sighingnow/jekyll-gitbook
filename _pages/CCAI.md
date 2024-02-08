@@ -220,10 +220,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 ## Table of Contents
 
 <ul>
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#prerequisites">Prerequisites</a></li>
-  <li><a href="#requirements">Requirements</a></li>
-  <li><a href="#components-used">Components Used</a></li>
+  <li><a href="#introduction">Introduction to Webex Contact Center with Dialogflow CX</a></li>
   <li><a href="#addresses-and-credentials">Addresses and Credentials</a></li>
   <li><a href="#introduction-to-webex-contact-center-with-google-ccai">Introduction to Webex Contact Center with Google CCAI</a>
     <ul>
