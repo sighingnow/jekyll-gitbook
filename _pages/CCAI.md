@@ -217,36 +217,32 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 # Configure Dialogflow CX Virutal Agent
 
-## Table of Content
+## <h1>Table of Contents</h1>
 
-Introduction to Webex Contact Center with Dialogflow CX
-Addresses and Credentials
-Provisioning
-	Objectives
-	Introduction to Provisioning
-Create Dialogflow CX Virtual Agent
-	Objectives
-	Task 1. Create new Virtual Agent
-	Task 2. Assign the agent that you created for the Conversational profile.
-	Task 3. Configure Google Contact Center AI connector
-	Task 4. Create Contact Center AI config
-Configure Dialogflow CX Virtual Agent
-	Objectives
-	Task 1. Navigate to Dialogflow CX Agent flow builder and customize the initial greeting.
-	Task 2. Create new page to collect the caller name
-	Task 3. Create new page Agent_or_Estimate and connect it with the Caller_Name page.
-	Task 4. Configure Route in Agent_or_Estimate page to move the call to new page What_Kind_Of_Agent.
-	Task 5. Configure Route for Estimate branch and Connect Agent_or_Estimate to new page Estimate_Detai...
-	Task 6. Configure Estimate_Details page with Parameters and Route
-	Task 7. Configure Estimate_Details page with Routes.
-Configure Flow with Virtual Agent in Webex Contact Center Management Portal
-	Objectives
-	Task 1. Create new flow.
-	Task 2. Configured Handled path to extract estimate data for the Analyzer report.
-	Task 3. Configured Escalated to move the call to the appropriate Queue with live agents.
-	Task 4. Add the flow to you Entry Point.
-	Task 5. Test your configurations.
-Related Information
+<ul>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#prerequisites">Prerequisites</a></li>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#components-used">Components Used</a></li>
+  <li><a href="#addresses-and-credentials">Addresses and Credentials</a></li>
+  <li><a href="#introduction-to-webex-contact-center-with-google-ccai">Introduction to Webex Contact Center with Google CCAI</a>
+    <ul>
+      <li><a href="#provisioning">Provisioning</a></li>
+      <li><a href="#objectives">Objectives</a></li>
+      <li><a href="#introduction-to-provisioning">Introduction to Provisioning</a>
+        <ul>
+          <li><a href="#create-dialogflow-cx-virtual-agent">Create Dialogflow CX Virtual Agent</a></li>
+          <li><a href="#objectives-1">Objectives</a></li>
+          <li><a href="#task-1">Task 1. Create new Virtual Agent</a></li>
+          <!-- Continue adding sub-sections as necessary -->
+        </ul>
+      </li>
+      <!-- Continue adding sub-sections as necessary -->
+    </ul>
+  </li>
+  <!-- Continue adding main sections as necessary -->
+</ul>
+
 
 ## Introduction to Webex Contact Center with Dialogflow CX
 
