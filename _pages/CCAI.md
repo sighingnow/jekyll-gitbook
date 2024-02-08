@@ -217,12 +217,14 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 # Configure Dialogflow CX Virutal Agent
 
-## <h1>Table of Contents</h1>
+## Table of Contents
 
 <ul>
-  <li><a href="#introduction">Introduction to Webex Contact Center with Dialogflow CX
-</a></li>
-  <li><a href="#addresses-and-credentials"Addresses and Credentials</a></li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#prerequisites">Prerequisites</a></li>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#components-used">Components Used</a></li>
+  <li><a href="#addresses-and-credentials">Addresses and Credentials</a></li>
   <li><a href="#introduction-to-webex-contact-center-with-google-ccai">Introduction to Webex Contact Center with Google CCAI</a>
     <ul>
       <li><a href="#provisioning">Provisioning</a></li>
@@ -378,8 +380,6 @@ Step 3. Give the name for the feature using this format: <b>{Your Name}_WxCC__Vi
 Step 4. You can now see the <b>Feature</b> was created.
 
 <img src="/assets/images/CX/2023-12-23_22h36_12.png">
-
-## Configure Dialogflow CX Virtual Agent
 
 <h2>Configure Dialogflow CX Virtual Agent</h2>
 <h2>&nbsp;</h2>
