@@ -381,7 +381,460 @@ Step 4. You can now see the <b>Feature</b> was created.
 
 ## Configure Dialogflow CX Virtual Agent
 
-
+<h2>Configure Dialogflow CX Virtual Agent</h2>
+<h2>&nbsp;</h2>
+<h3>Objectives</h3>
+<p>This section describes how to configure the <strong>Virtual Agent</strong>&nbsp;to have a conversation with a caller and decide whether to send the call directly to the queue with human agents or collect estimate information and send the data to the <strong>Analyzer</strong> report.</p>
+<p>&nbsp;</p>
+<p>In the next screenshot, you can see a functional diagram of the flow for this section.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="468" alt="2023-12-27_10h47_01.png" align="inline" id="412033i05B86D59E02D9E25" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<h3>Task 1.&nbsp; Navigate to Dialogflow CX Agent flow builder and customize the initial greeting.</h3>
+<p>&nbsp;</p>
+<p>Step 1. Log in to <a href="https://dialogflow.cloud.google.com/cx%20" target="_blank" rel="noopener">Dialogflow CX</a> portal&nbsp;using your user account and password. Select project <strong>CL2024AMS</strong>.</p>
+<p>&nbsp;</p>
+<p>Step 2. Select the&nbsp;<strong>Virtual Agent</strong>&nbsp;that you created earlier.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="417" alt="2023-12-23_22h38_41.png" align="inline" id="411724iB83358A9053ACE9F" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 3. In the Dialogflow CX builder click on the Start page.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: In Dialogflow CX, a page is a set of instructions that holds one or more related conversational turns. It represents a single step in a conversation flow, and it can contain various types of content, including text responses, prompts for user input, fulfillment actions, and more. Pages are connected together to create a conversation flow that guides the user through a conversation with the Dialogflow CX agent.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><em>&nbsp;</em></p>
+<p><em><li-image width="999" height="349" alt="2023-12-23_22h39_19.png" align="inline" id="411725i2CCA2B0C7CBD9CAC" size="large" sourceType="new"></li-image></em></p>
+<p>&nbsp;</p>
+<p>Step 4. In the <strong>Start</strong> page click on <strong>Default Welcome Intent Route</strong>. On the right window, scroll down, delete all the default Agent responses, and click on the field to <strong>Enter</strong> agent dialog.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: A route is a mapping between an intent and a specific page or flow within a conversation. Routes define how a conversation can flow based on the user input and the intent that is matched.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="480" alt="2023-12-23_22h40_10.png" align="inline" id="411726iC3DFBD31AD442F0A" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 5. Provide your customized message to let the caller know that they reached an organization that provides sales services of Webex Contact Center. You can type something like: Hello! Thank you for calling. Here you know all about Webex Contact Center. In Dialogflow CX, the changes are not saved automatically, so you need to save the page every time you make a change.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: Agent responses are the messages or actions that an agent sends back to the user or caller during a conversation. When a user or caller sends a message or makes a request to a Dialogflow CX agent, the agent analyses the input and determines the appropriate response to send back.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><em>&nbsp;<li-image width="999" height="441" alt="2023-12-23_22h40_56.png" align="inline" id="411727iB1E31B9BE6C39FAE" size="large" sourceType="new"></li-image></em></p>
+<p>&nbsp;</p>
+<p>Step 6. Test the agent response that you just created. Click <strong>Test Agent</strong> and type a greeting message such as Hello.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="483" alt="2023-12-23_22h44_11.png" align="inline" id="411728i329817EE749F3B78" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<h3>Task 2.&nbsp; Create new page to collect the caller name</h3>
+<p>&nbsp;</p>
+<p>Step 1. Close the <strong>Start</strong> page and <strong>Test Agent</strong> windows and click the plus icon (<strong>+</strong>)&nbsp;to create a new page. Name the page <strong>Caller_Name</strong> and confirm the creation.</p>
+<p><li-image width="999" height="498" alt="2023-12-23_22h46_25.png" align="inline" id="411729iBE246BA3A276390E" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Connect the <strong>Start</strong> page and <strong>Caller_Name</strong> page. For this, click the <strong>Default Welcome Intent</strong> route on the <strong>Start</strong> page. Scroll down on the right side and select that you would like the conversation to go to the next page.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="453" alt="2023-12-23_22h47_09.png" align="inline" id="411730iE4E3AD14ECC17C87" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 3. From the drop-down list, select <strong>Caller_Name</strong> page. Do not forget to <strong>Save</strong> the change.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="440" alt="2023-12-23_22h47_44.png" align="inline" id="411731i3F53A5CDF59C6C93" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 4. Configure the <strong>Caller_Name</strong> page to collect the name from the caller and store it in the parameter. In the <strong>Caller_Name</strong> page click <strong>Entry Fulfillment</strong> and type message in which you ask the caller name. Click <strong>Add</strong> and <strong>Save</strong> the change.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: <strong>Entry Fulfillment</strong> is needed to provide a message to the caller once the call is moved to a new page to let the caller know where they are in the conversation and set the right expectations.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="492" alt="2023-12-23_22h48_24.png" align="inline" id="411732i0925818D39ADF19F" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 5. While on the <strong>Caller_Name</strong> page, click on <strong>Parameters</strong>, type <strong>Name</strong> as the parameter&rsquo;s name, select <strong><code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;">sys.any </code></strong>&nbsp;from the list of preconfigured Entities, and click on <strong>Save</strong>.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: A <strong>Parameter</strong> is a named entity or value that is extracted from user input during a conversation. Parameters can be used to store information that is relevant to the user request, such as their name, date of birth, or preferred language. Parameters can also be used to pass data to other parts of your application such as Contact Center.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><em>&nbsp;</em></p>
+<p><li-image width="999" height="452" alt="2023-12-23_22h49_33.png" align="inline" id="411733i62D45BCA81A98FAF" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 6. Configure <strong>Routes</strong> in the <strong>Caller_Name</strong> page. Click <strong>Route</strong>, on the right window scroll down to <strong>Condition</strong> and set the condition <strong><code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;">$page.params.status ="FINAL"</code></strong>. Click <strong>Save</strong>. By setting this condition, you can expect the call to move to the next page once the <strong>Name</strong> parameter which you created in the previous step is filled with a value. For example, if the caller says Nick then the call can move forward.&nbsp;</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: A <strong>Condition</strong> in the Dialogflow Routes configuration is a rule or set of rules that define when the route must be triggered. The <strong>Condition</strong> can be based on various factors such as user input, context, parameters, and session data.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p><li-image width="999" height="467" alt="2023-12-23_22h50_16.png" align="inline" id="411734i9625E1278A5DAFE7" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 7. Using the <strong>Test Agent</strong> option on the right top side, test if the flow is working as designed at this point.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="475" alt="2023-12-23_22h51_16.png" align="inline" id="411735i97B590577FCE5A22" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<h3>Task 3.&nbsp; Create new page Agent_or_Estimate and connect it with the Caller_Name page.</h3>
+<p>&nbsp;</p>
+<p>Step 1. On the left bottom side, click to add a new page, name it <strong>Agent_or_Estimate</strong>, and confirm the creation.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="439" alt="2023-12-23_22h52_03.png" align="inline" id="411736iB1F5674B6D64FBA0" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Connect <strong>Caller_Name</strong> and <strong>Agent_or_Estimate</strong> pages. Open the <strong>Caller_Name</strong> page, and select the route that you created in the previous step, on the right side scroll down and select the page <strong>Agent_or_Estimate</strong>. Do not forget to <strong>Save</strong> the change.</p>
+<p>Remember in Task 2 of this section you configured the condition that once the parameter is filled it triggers an action. By selecting the next page you specify what action it is, in this example the call moves to the page <strong>Agent_or_Estimate</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="495" alt="2023-12-23_22h52_45.png" align="inline" id="411737i0FC253A486CD7927" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 3. Configure <strong>Entry Fulfillment</strong> for <strong>Agent_or_Estimate</strong> page. Open up <strong>Agent_or_Estimate</strong> page, and click <strong>Entry Fulfillment</strong>. In the Agent response type: Hi $session.params.Name, please let me know if you would like to speak with an agent or if you would to create an estimate?</p>
+<p>&nbsp;</p>
+<p>Do not forget to <strong>Save</strong> the change.</p>
+<p>&nbsp;</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: If you cannot copy and paste the suggested fulfillment just start typing in the <strong>Agent Response</strong> field, then you can paste the text, then delete unnecessary text.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="479" alt="2023-12-23_22h54_20.png" align="inline" id="411738i8A72604F2D2292CF" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 4. Test if the conversation flow is configured properly at this point. Click <strong>Test Agent</strong> and in the <strong>Talk to Agent</strong> field type Hello and then type your name.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="483" alt="2023-12-23_22h55_05.png" align="inline" id="411739i37AD9A4004A7AC4B" size="large" sourceType="new"></li-image></p>
+<div id="tinyMceEditormdanylch_32" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<h3>Task 4.&nbsp; Configure Route in Agent_or_Estimate page to move the call to new page What_Kind_Of_Agent.</h3>
+<p>&nbsp;</p>
+<p>Step 1. Open up the <strong>Agent_or_Estimate</strong> page, click on <strong>Create New Route</strong>, and then click on <strong>Create New Intent</strong>.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: An intent is a mapping between what a user says or types and a specific action or response that the conversational agent can take. Intents help the agent understand the user request and determine the appropriate response or action to take.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="tinyMceEditormdanylch_33" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p><li-image width="999" height="484" alt="2023-12-23_22h55_56.png" align="inline" id="411740i7618C5D9EC1A8E3E" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Name the <strong>Intent Agent_intent</strong>. Provide 3-5 training phrases, something like agent, representative, escalate, real person. Do not forget to save the change of the page.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="480" alt="2023-12-23_22h56_39.png" align="inline" id="411741iEC1970EC37637A68" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 3. Create new page and name it&nbsp;<strong>What_Kind_Of_Agent</strong> .</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="497" alt="2023-12-23_22h57_12.png" align="inline" id="411742i01AE3BC80DF707FD" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 4. Click on <strong>Agent_or_Estimate</strong> page. Add a new <strong>Route</strong>, select the <strong>Intent</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="444" alt="2023-12-23_22h57_50.png" align="inline" id="411743i6430A7C4CDF9F3EB" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 5. On the <strong>Routes</strong> settings scroll down and select action to move the call to the page&nbsp;<strong>What_Kind_Of_Agent&nbsp;</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="459" alt="2023-12-23_22h58_23.png" align="inline" id="411744i650CEE5583C83E61" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 6. For a better communication experience you need to add no-input-default <strong>Event handlers</strong>&nbsp;otherwise the system detects no input even before you have a chance to provide input. While on the <strong>Agent_or_Estimate</strong> page, click on <strong>Add state handler</strong>, select <strong>Event handlers</strong>, and click on <strong>Apply</strong>.</p>
+<p>&nbsp;</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: An <strong>Event handlers</strong> is a type of intent that is triggered when a specific event occurs. For example, if the <strong>Virtual Agent</strong> does not&nbsp;receive any input or it does not&nbsp;recognize the input, the event handler is used to trigger no-input intent which helps to continue the conversation.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><em>&nbsp;<li-image width="999" height="416" alt="2023-12-23_22h58_57.png" align="inline" id="411745i5037142FBA6702C3" size="large" sourceType="new"></li-image></em></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 7. Click on <strong>Add New Event handlers</strong>, select from the <strong>No-input default</strong> list and save the change.</p>
+<p><li-image width="999" height="472" alt="2023-12-23_22h59_34.png" align="inline" id="411746iCD0EAFF062D41611" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Task 5.&nbsp; Configure Route for Estimate branch and Connect Agent_or_Estimate to new page Estimate_Details</h3>
+<p>&nbsp;</p>
+<p>Step 1. Create <strong>Estimate_Intent</strong>. While on <strong>Agent_or_Estimate</strong> page click the plus icon (<strong>+</strong>) to add new <strong>Route</strong> and create new <strong>Intent</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="465" alt="2023-12-23_23h00_31.png" align="inline" id="411747i1DE58EAF0A88EFB4" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Name the intent as <strong>Estimate_Intent</strong> and provide some training phrases. As for the training phrases you can add statements like estimate, price calculation, I need to know how much it cost. Save the intent.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="448" alt="2023-12-23_23h01_08.png" align="inline" id="411748i8198846F350B45AE" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 3. Create new page with the name <strong>Estimate_Details</strong>. Connect <strong>Agent_or_Estimate</strong> and <strong>Estimate_Details</strong> pages when <strong>Estimate_Intent</strong> is triggered.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="420" alt="2023-12-23_23h01_43.png" align="inline" id="411749i75DB8BF92FB166C4" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 4. Click the <strong>Agent_or_Estimate</strong> page. Add new <strong>Route</strong>, and select the <strong>Intent Estimate_Intent </strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="200" height="200" alt="2023-12-23_23h02_22.png" align="inline" id="411750i9B020C3EE6B94A70" size="small" resized="false" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 5. Scroll a bit down and add the agent response that the caller hears once the <strong>Estimate_Intent</strong> is triggered. You can type something like, let me collect some information for the estimate.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="473" alt="2023-12-23_23h03_07.png" align="inline" id="411751iD25B49DF3F8C6DE8" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 6. Scroll all the way down and select the transaction to the page <strong>Estimate_Details</strong> once the intent is triggered. Save the page configuration.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="460" alt="2023-12-23_23h03_39.png" align="inline" id="411752i0984DDE10D26D591" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<h3>Task 6.&nbsp; Configure Estimate_Details page with Parameters and Route</h3>
+<p>&nbsp;</p>
+<p>Step 1. Similar to how you created the <strong>Parameter</strong> for the caller name, create the <strong>Parameter</strong> for the number of agents which the caller needs the estimate for. Click on the <strong>Estimate_Details</strong> page, add the <strong>Parameter</strong>, name it <strong>Number_of_agents</strong>, and select from the list the standard <strong>Entity</strong> type <strong><code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;">sys.number</code></strong>&nbsp;. Do not forget to save the change.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="428" alt="2023-12-23_23h04_25.png" align="inline" id="411753iC7181FA3BC69FABD" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Configure the <strong>Entry Fulfillment</strong> for the caller to understand what information the <strong>Virtual Agent</strong> is looking for. You can type something like, please let me know how many agents you are planning to have in your Contact Center.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: If you cannot copy and paste the suggested fulfillment just start typing in the <strong>Agent Responses</strong> field, then you can paste the text, then delete unnecessary text.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="423" alt="2023-12-23_23h04_55.png" align="inline" id="411754i201C3BDFDCB35521" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<div id="tinyMceEditormdanylch_47" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 3. Select the condition which triggers the action on the <strong>Estimate_Details</strong> page. While on the <strong>Estimate_details</strong> page, click on add new <strong>Route</strong>, on the right window scroll down a bit and configure the condition <code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;"><strong>$page.params.status =&ldquo;FINAL&rdquo;</strong></code>&nbsp;.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="478" alt="2023-12-23_23h05_26.png" align="inline" id="411755i59D773D301673D6B" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 4. Scroll more down and add the <strong>Virtual Agent</strong> response. Type: I am putting together the estimate request details for <code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;"><strong>$session.params.Number_of_agents</strong></code>&nbsp; agents.</p>
+<div id="tinyMceEditormdanylch_49" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p><li-image width="999" height="469" alt="2023-12-23_23h06_08.png" align="inline" id="411756i24863FDCC0C0D372" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 5. Add dialogue option and select <strong>Custom payload</strong> from the list.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="429" alt="2023-12-25_11h32_46.png" align="inline" id="411828i0211915BE1D2075A" size="large" sourceType="new"></li-image></p>
+<div id="tinyMceEditormdanylch_50" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p>&nbsp;</p>
+<p>Post this next syntax to the <strong>Custom</strong> <strong>payload</strong> section and save the configurations.</p>
+<pre>{<br /><br />&nbsp; "Execute_Request": {<br /><br />&nbsp;&nbsp;&nbsp; "Data": {<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Params": {<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Estimate_Agents_Count": "$session.params.Number_of_agents"<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp;&nbsp;&nbsp; }<br /><br />&nbsp; }<br /><br />}</pre>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: In JSON data format, a variable is a key-value pair that represents a property of an object. The key is a string that identifies the property, and the value is the data associated with the property.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The&nbsp;<strong>Custom payload</strong> contains the key <strong>Estimate_Agents_Count</strong> and the value is the <strong>Parameter</strong> <code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;"><strong>$session.params.Number_of_agents</strong></code>. This <strong>Parameter</strong> is changed depending on the caller response.</p>
+<p><li-image width="999" height="437" alt="2023-12-25_11h34_03.png" align="inline" id="411829i3AA66168F986A61A" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 6. Scroll more down on the <strong>Route</strong> section and set up <strong>Transition</strong> to <strong>End Flow</strong>.</p>
+<div id="tinyMceEditormdanylch_52" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p><li-image width="999" height="490" alt="2023-12-25_11h34_59.png" align="inline" id="411830i771B49CA78A3CBA0" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>It terminates the session on the Dialogflow side and transfers the call to WxCC where it continues from the&nbsp;<strong>Virtual Agent Handled</strong> path. <br /><br /></p>
+<p><li-image width="999" height="638" alt="2023-12-25_11h35_26.png" align="inline" id="411831iBDA90D96C08E1370" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 7. Test your <strong>Virtual Agent</strong> flow at this point.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="489" alt="2023-12-25_11h35_51.png" align="inline" id="411832i73D6BAAF9911099A" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<h3>Task 7. Configure Estimate_Details page with Routes.</h3>
+<p>&nbsp;</p>
+<p>Step 1. Create two additional intents,&nbsp;<strong>TAC_Intent</strong> and <strong>Sales_Intent</strong>. Click on <strong>Manage</strong>, select Intents from the <strong>Resources</strong> list, and then click on <strong>Create</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="518" alt="2023-12-25_11h36_35.png" align="inline" id="411833i6B4962038C93422E" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Name the intent and provide some training phrases. For example, for <strong>TAC_Intent</strong> you can add the phrases like: TAC Engineer, Technical Support.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="518" alt="2023-12-25_11h37_10.png" align="inline" id="411834iC06D4E5948E1635D" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>For <strong>Sales_Intent</strong> you can specify something like Price, Sales, and so on.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="495" alt="2023-12-25_11h38_06.png" align="inline" id="411835iD4864EBBE1632A16" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Add <strong>Route</strong> for the TAC queue. Go back to the queue and click on the <strong>What_Kind_Of_Agent</strong> page. Then click on <strong>Add New Route</strong> and select the intent you created in the previous step for the TAC queue. Save the route settings.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="485" alt="2023-12-25_11h39_35.png" align="inline" id="411836i3086D60B2E54EE63" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 3. Scroll down and add the agent response that the caller hears once the intent is triggered.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="388" alt="2023-12-25_11h40_34.png" align="inline" id="411837i78A7BA4FF77CF9B4" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 4. Add the dialog option to move the call to the live agent by selecting <strong>Live agent&nbsp;handoff</strong> .</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="390" alt="2023-12-25_11h41_16.png" align="inline" id="411838i7282B7E77A405681" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>By selecting this option, the call moves out of the <strong>Escalate</strong> output of the <strong>Virtual Agent V2</strong> block in the flow builder.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="524" alt="2023-12-25_11h41_42.png" align="inline" id="411839iD527127D6B75B860" size="large" sourceType="new"></li-image></p>
+<div id="tinyMceEditormdanylch_61" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p>&nbsp;</p>
+<p>Step 5. In the <strong>Live agent handoff</strong> payload field, you can add the data in the JSON format which you can later parse in the WxCC flow. In this case, you need to add <strong>Type_Of_Agent (TAC)</strong>. <strong>TAC</strong>&nbsp; which helps you to make the routing decision to the correct queue in the flow.</p>
+<pre>{<br /><br />&nbsp; "dialogflow.ccai.live-agent-escalation": {<br /><br />&nbsp;&nbsp;&nbsp; "Type_Of_Agent": "TAC"<br /><br />&nbsp; }<br /><br />}</pre>
+<div id="tinyMceEditormdanylch_62" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p><li-image width="999" height="405" alt="2023-12-25_11h42_11.png" align="inline" id="411840i1D1B4BF392FA08D5" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 6. End the flow on the Dialogflow side once the call is moved to the WxCC flow.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="454" alt="2023-12-25_11h42_47.png" align="inline" id="411841iE3C7E3961179F6DA" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 7. Do the same steps to configure the <strong>Route</strong> for the <strong>Sales</strong> queue. Click on <strong>Add New Route</strong>. Select <strong>Sales_Intent</strong> and save the <strong>Route</strong> settings.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="488" alt="2023-12-25_11h43_17.png" align="inline" id="411842i1DE78DA35F145018" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 8. Add the <strong>Agent</strong> response and <strong>Live agent handoff</strong> dialog option.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="434" alt="2023-12-25_11h43_53.png" align="inline" id="411843i475C4F4A6ED9C4B5" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 9. End the flow for this page once the intent is triggered and the call is moved to the WxCC flow.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="417" alt="2023-12-25_11h44_32.png" align="inline" id="411844iA8D39DF30ED4BC32" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Step 10. Add the <strong>Entry Fulfillment</strong> to the <strong>What_Kind_Of_Agent</strong> page so the caller knows what kind of answer the <strong>Virtual Agent</strong> expects. Click on the <strong>Entry Fulfillment</strong> field and type, please let me if you would like to speak with a Technical Support Engineer or you would like to talk about sales.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="405" alt="2023-12-25_11h45_02.png" align="inline" id="411845i807246B353681962" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 11. Test your Virtual Agent.</p>
+<p>&nbsp;</p>
+<h2>Configure Flow with Virtual Agent in Webex Contact Center Management Portal</h2>
+<h1>&nbsp;</h1>
+<h3>Objectives</h3>
+<p>&nbsp;</p>
+<p>In this section, you can see how to build flow in Webex Contact Center Flow Builder with the <strong>Virtual Agent</strong> block which moves the call to queue with live agents or to estimate branch where data about the number of agents for the estimate can be extracted and used for <strong>Analyzer</strong> report.&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Task 1. Create new flow.</h3>
+<p>&nbsp;</p>
+<p>Step 1. In the Webex Contact Center Admin portal open up the <strong>Routing Strategy Module</strong> and <strong>Create New Flow</strong> entry window.</p>
+<div id="tinyMceEditormdanylch_69" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p><li-image width="999" height="351" alt="2023-12-25_11h45_58.png" align="inline" id="411846i0B402D582FB3DD2B" size="large" sourceType="new"></li-image></p>
+<p>Step 2. Call the flow <strong><code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;">{Your Name}_Virtual_Agent_Flow</code></strong>&nbsp;.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="404" alt="2023-12-25_11h46_25.png" align="inline" id="411847i26A9F01ED4EB9143" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Task 2. Configured Handled path to extract estimate data for the Analyzer report.</h3>
+<p>&nbsp;</p>
+<p>Step 1. Move the <strong>Virtual Agent V2</strong> to the flow and connect it with the <strong>NewPhoneContact</strong> block.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="455" alt="2023-12-25_11h46_58.png" align="inline" id="411848i102F130FAF11C803" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Click on <strong>Virtual Agent V2</strong> block and under the block settings select <strong>Contact Center AI Config</strong> which you created earlier or use the preconfigured <strong>Virtual Agent</strong> <strong><code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;">Dan_User1_Virtual_Agent</code>&nbsp;</strong>.&nbsp;Also, click <strong>Advanced Settings</strong> and increase the <strong>Termination Delay</strong> time from 3 to 5 seconds.</p>
+<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
+<div style="margin-left: 38px; margin-top: -25px;">
+<p><strong>Note</strong>: <strong>Termination Delay</strong> is the time range that must be set to allow completion of the audio prompt from the <strong>Virtual Agent</strong> in Dialogflow before the contacts move to the Webex Contact Center. For example, if in Dialogflow VA config there is a long response before the call goes to <strong>Live agent handoff</strong>,&nbsp;it cuts the response not finished and the call moves to the queue.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="486" alt="2023-12-25_11h47_31.png" align="inline" id="411849iBD6B578758B3B6C1" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 3. (Informational only) Understand how the call-related data is moving from Dialogflow to Webex Contact Center.</p>
+<p>When the conversation is transferred from Dialogflow to WxCC, it creates some output variable with data in JSON format which has been generated in the Dialogflow portal while the caller was interacting with the <strong>Virtual Agent</strong>. One of the output variables is <strong>VirtualAgentV2.MetaData</strong>. You can see it by clicking anywhere on the grey area in the <strong>Flow Builder</strong> and scroll down on the right window. This output variable contains the data you specified in the <strong>Custom payload</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="454" alt="2023-12-25_11h48_04.png" align="inline" id="411850i7B53380879C7100B" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The goal here is to extract the information about how many agents the caller requested for the estimate. In the previous section, you have created the parameter with the name <strong>Number_of_Agents</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="391" alt="2023-12-25_11h48_43.png" align="inline" id="411851iD2EFF306C42D20F1" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>And you configure the <strong>Route</strong> with <strong>Custom payload</strong> where once the parameter is filled, the value of the parameter is assigned to the key <strong>Estimate_Agents_Count</strong> and then the call is moved to WxCC side.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="441" alt="2023-12-25_11h49_14.png" align="inline" id="411852i68A86E47CB395988" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 4. Configure <strong>Virtual Agent Handled</strong> path to extract the estimate data and associate it with <strong>Global Variable</strong>. By parsing JSON data from the <strong>VirtualAgentV2_MetaData</strong> variable you can extract the value of the <strong>Number_of_Agents</strong> parameter value and assign it to the new variable on the WxCC environment. You also want the variable to be reportable, so you need to use a <strong>Global Variable</strong>. While in WxCC flow builder, cick anywhere on the grey area, and on the right window click on <strong>Add Global Variable</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="450" alt="2023-12-25_11h49_48.png" align="inline" id="411853i864AAAC94D5ECEDD" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>The <strong>Global Variable</strong> <strong>Estimate_Number_of_Agents</strong> needs to be created earlier in the WxCC Admin Portal. Then you just need to select it and click Add. This makes this <strong>Global Variable</strong> available for you to use in your flow.&nbsp;</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="492" alt="2023-12-25_11h50_19.png" align="inline" id="411854iDDFE26FAFDBACC78" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 5. Add the <strong>Parse</strong> node. In the <strong>Parse</strong> node select <strong>VirtualAgentV2.MetaData</strong> as the <strong>Input Variable</strong>, select from the list the <strong>Global Variable</strong> you added to the flow in the previous step as the <strong>Output Variable</strong>, and use this next string to parse the JSON data <strong><code class="cCN_CmdName" style="white-space: pre-wrap !important; color: unset !important; border-radius: unset !important; padding: unset !important; font-family: unset !important;">$.Params.Estimate_Agents_Count</code>&nbsp;</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="457" alt="2023-12-25_11h50_52.png" align="inline" id="411855iE9BDDF2A0CCCC17B" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step. 6. Use the <strong>Play Message</strong> node to validate the result and notify the caller. Add the <strong>Play Message</strong> node, <strong>Enable Text-to-Speech</strong> feature, select the TTS connector and choose <strong>Output Voice</strong> from the list.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="442" alt="2023-12-25_11h51_27.png" align="inline" id="411856i0F10D57788529407" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 7. Add <strong>Disconnect Contact</strong> node. Then click in the <strong>Play Message</strong> again, and add this Text-to-Speech Message, in the TTS field type, thank you. The estimate request for <strong>{{Estimate_Number_of_Agents}}</strong>&nbsp; agents was created, and your team can reach out to you soon with the results.</p>
+<p>Delete the <strong>Audio File</strong> option and publish the flow.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="495" alt="2023-12-25_11h51_58.png" align="inline" id="411857i7776D0D3DC020F6A" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<h3>Task 3. Configured Escalated to move the call to the appropriate Queue with live agents.</h3>
+<p>&nbsp;</p>
+<p>Step 1. Create Flow variable and name it <strong>Queue_Routing</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="487" alt="2023-12-25_11h52_40.png" align="inline" id="411858i38F3BD534BBF590C" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 2. Add the <strong>Parse</strong> node and configure it to assign the value of the <strong>Type_Of_Agent</strong> variable from Dialogflow to the <strong>Queue_Routing </strong>flow variable.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="497" alt="2023-12-25_11h53_14.png" align="inline" id="411859i6D38D9D36911C3AE" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 3 Add the <strong>Case</strong> node and configure it with the variable <strong>Queue_Routing</strong>. In the link, Description configure values <strong>TAC</strong> and <strong>Sales</strong> as these are two values you move from the <strong>Dialogflow</strong> portal.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="486" alt="2023-12-25_11h53_44.png" align="inline" id="411860i53913B972CCA8926" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 4. Add <strong>Play Message</strong> nodes to verify the call goes to the TAC queue. Configure the <strong>Play Message</strong> node with TTS and type the text similar to this, Thank ou for waiting. The TAC engineer can be with you shortly.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="494" alt="2023-12-25_11h54_25.png" align="inline" id="411861iAB49CF7F0D3AD2CD" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 5. Do the same for the <strong>Sales</strong> queue. Let the caller know that the call can be connected to the <strong>Sales</strong> agent shortly.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="492" alt="2023-12-25_11h55_03.png" align="inline" id="411862i3CE8FF2C2F372CC9" size="large" sourceType="new"></li-image></p>
+<p><br />Step 6. Add <strong>Queue Contact</strong> block and configure it with the <strong>TAC_Queue</strong>.</p>
+<p><br /><li-image width="999" height="492" alt="2023-12-25_11h55_36.png" align="inline" id="411863iF8BE76E620D1FC2F" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 7. Add additional <strong>Queue Contact</strong> and configure it with the <strong>Sales_Queue</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="487" alt="2023-12-25_12h01_53.png" align="inline" id="411864iC868519DC2BA6EDB" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 8. Point <strong>Default</strong> output on the <strong>Case</strong> node to the <strong>Play Message</strong> related to the <strong>Sales Queue</strong>. Validate and click <strong>Publish the Flow</strong>.</p>
+<p><br /><li-image width="999" height="495" alt="2023-12-25_12h02_38.png" align="inline" id="411865i04FDF8F5C585B870" size="large" sourceType="new"></li-image></p>
+<div id="tinyMceEditormdanylch_88" class="mceNonEditable lia-copypaste-placeholder">&nbsp;</div>
+<p>&nbsp;</p>
+<h3>Task 4. Add the flow to you Entry Point.</h3>
+<p>&nbsp;</p>
+<p>Step 1. Go to <strong>Entry Points</strong> and select your <strong>Entry Point</strong>. Click on three dots to edit the <strong>Entry Point</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="414" alt="2023-12-25_12h03_13.png" align="inline" id="411866iDC9E61396DC8DF49" size="large" sourceType="new"></li-image></p>
+<p><br />Step 2. Select the flow and other required fields and save the <strong>Entry Point</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="459" alt="2023-12-25_12h03_52.png" align="inline" id="411867i318EA898B536B0AF" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<p>Step 3. Configure <strong>Entry Point</strong> mapping for your <strong>Entry Point</strong>.</p>
+<p>&nbsp;</p>
+<p><li-image width="999" height="435" alt="2023-12-25_12h04_54.png" align="inline" id="411869iBBD77D6684447D89" size="large" sourceType="new"></li-image></p>
+<p>&nbsp;</p>
+<h3>Task 5. Test your configurations. &nbsp;</h3>
+<p>&nbsp;</p>
+<p>After all these configurations are completed, call the DN related to your <strong>Entry Point</strong> and test the integration.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>Related Information</h2>
+<p>&nbsp;</p>
+<ul>
+<li><a href="https://www.cisco.com/c/en/us/support/index.html?referring_site=bodynav" target="_blank" rel="noopener"><strong>Cisco Technical Support &amp; Downloads</strong></a></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div id="tecz_2097_autosave" class="2097_autosave" style="display: none;" data-templete_id="ce" data-language_id="en_us">&nbsp;</div>
 
 
 
