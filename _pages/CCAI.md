@@ -401,9 +401,7 @@ Step 4. You can now see the <b>Feature</b> was created.
 <p><li-image width="999" height="417" alt="2023-12-23_22h38_41.png" align="inline" id="411724iB83358A9053ACE9F" size="large" sourceType="new"></li-image></p>
 <p>&nbsp;</p>
 <p>Step 3. In the Dialogflow CX builder click on the Start page.</p>
-<div style="border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 10px; margin-top: 20px;"><img style="margin-top: -10px;" class="custom-image-class" src="https://www.cisco.com/c/dam/en/us/td/i/templates/note.gif" border="0" alt="note-icon" />
-<div style="margin-left: 38px; margin-top: -25px;">
-<p><strong>Note</strong>: In Dialogflow CX, a page is a set of instructions that holds one or more related conversational turns. It represents a single step in a conversation flow, and it can contain various types of content, including text responses, prompts for user input, fulfillment actions, and more. Pages are connected together to create a conversation flow that guides the user through a conversation with the Dialogflow CX agent.</p>
+<i>In Dialogflow CX, a page is a set of instructions that holds one or more related conversational turns. It represents a single step in a conversation flow, and it can contain various types of content, including text responses, prompts for user input, fulfillment actions, and more. Pages are connected together to create a conversation flow that guides the user through a conversation with the Dialogflow CX agent.</i>
 </div>
 </div>
 <p>&nbsp;</p>
