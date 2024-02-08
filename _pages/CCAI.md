@@ -222,36 +222,41 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 <ul>
   <li><a href="#introduction">Introduction to Webex Contact Center with Dialogflow CX</a></li>
   <li><a href="#addresses-and-credentials">Addresses and Credentials</a></li>
-  <li><a href="#introduction-to-webex-contact-center-with-google-ccai">Introduction to Webex Contact Center with Google CCAI</a>
+  <li><a href="#provisioning">Provisioning</a>
     <ul>
-      <li><a href="#provisioning">Provisioning</a></li>
-      <li><a href="#objectives">Objectives</a></li>
-      <li><a href="#introduction-to-provisioning">Introduction to Provisioning</a>
-        <ul>
-          <li><a href="#create-dialogflow-cx-virtual-agent">Create Dialogflow CX Virtual Agent</a></li>
-          <li><a href="#objectives-1">Objectives</a></li>
-          <li><a href="#task-1">Task 1. Create new Virtual Agent</a></li>
-          <li><a href="#task-2">Task 2. Assign the agent that you created for the Conversational profile.</a></li>
-          <li><a href="#task-3">Task 3. Configure Google Contact Center AI connector</a></li>
-          <li><a href="#task-4">Task 4. Create Contact Center AI config</a></li>
-          <li><a href="#configure-dialogflow-cx-virtual-agent">Configure Dialogflow CX Virtual Agent</a></li>
-          <li><a href="#objectives-2">Objectives</a></li>
-          <li><a href="#task-1-1">Task 1. Navigate to Dialogflow CX Agent flow builder and customize the initial greeting.</a></li>
-          <li><a href="#task-2-1">Task 2. Create new page to collect the caller name</a></li>
-          <li><a href="#task-3-1">Task 3. Create new page Agent_or_Estimate and connect it with the Caller_Name page.</a></li>
-          <li><a href="#task-4-1">Task 4. Configure Route in Agent_or_Estimate page to move the call to new page What_Kind_Of_Agent.</a></li>
-          <li><a href="#task-5">Task 5. Configure Route for Estimate branch and Connect Agent_or_Estimate to new page Estimate_Details.</a></li>
-          <li><a href="#task-6">Task 6. Configure Estimate_Details page with Parameters and Route</a></li>
-          <li><a href="#task-7">Task 7. Configure Estimate_Details page with Routes.</a></li>
-          <li><a href="#configure-flow-with-virtual-agent-in-webex-contact-center-management-portal">Configure Flow with Virtual Agent in Webex Contact Center Management Portal</a></li>
-          <li><a href="#objectives-3">Objectives</a></li>
-          <li><a href="#task-1-2">Task 1. Create new flow.</a></li>
-          <li><a href="#task-2-2">Task 2. Configured Handled path to extract estimate data for the Analyzer report.</a></li>
-          <li><a href="#task-3-2">Task 3. Configured Escalated to move the call to the appropriate Queue with live agents.</a></li>
-          <li><a href="#task-4-2">Task 4. Add the flow to you Entry Point.</a></li>
-          <li><a href="#task-5-1">Task 5. Test your configurations.</a></li>
-        </ul>
-      </li>
+      <li><a href="#objectives-provisioning">Objectives</a></li>
+      <li><a href="#introduction-to-provisioning">Introduction to Provisioning</a></li>
+    </ul>
+  </li>
+  <li><a href="#create-dialogflow-cx-virtual-agent">Create Dialogflow CX Virtual Agent</a>
+    <ul>
+      <li><a href="#objectives-create-dialogflow-cx-virtual-agent">Objectives</a></li>
+      <li><a href="#task-1">Task 1. Create new Virtual Agent</a></li>
+      <li><a href="#task-2">Task 2. Assign the agent that you created for the Conversational profile.</a></li>
+      <li><a href="#task-3">Task 3. Configure Google Contact Center AI connector</a></li>
+      <li><a href="#task-4">Task 4. Create Contact Center AI config</a></li>
+    </ul>
+  </li>
+  <li><a href="#configure-dialogflow-cx-virtual-agent">Configure Dialogflow CX Virtual Agent</a>
+    <ul>
+      <li><a href="#objectives-configure-dialogflow-cx-virtual-agent">Objectives</a></li>
+      <li><a href="#task-1-1">Task 1. Navigate to Dialogflow CX Agent flow builder and customize the initial greeting.</a></li>
+      <li><a href="#task-2-1">Task 2. Create new page to collect the caller name</a></li>
+      <li><a href="#task-3-1">Task 3. Create new page Agent_or_Estimate and connect it with the Caller_Name page.</a></li>
+      <li><a href="#task-4-1">Task 4. Configure Route in Agent_or_Estimate page to move the call to new page What_Kind_Of_Agent.</a></li>
+      <li><a href="#task-5">Task 5. Configure Route for Estimate branch and Connect Agent_or_Estimate to new page Estimate_Details.</a></li>
+      <li><a href="#task-6">Task 6. Configure Estimate_Details page with Parameters and Route</a></li>
+      <li><a href="#task-7">Task 7. Configure Estimate_Details page with Routes.</a></li>
+    </ul>
+  </li>
+  <li><a href="#configure-flow-with-virtual-agent-in-webex-contact-center-management-portal">Configure Flow with Virtual Agent in Webex Contact Center Management Portal</a>
+    <ul>
+      <li><a href="#objectives-configure-flow">Objectives</a></li>
+      <li><a href="#task-1-2">Task 1. Create new flow.</a></li>
+      <li><a href="#task-2-2">Task 2. Configured Handled path to extract estimate data for the Analyzer report.</a></li>
+      <li><a href="#task-3-2">Task 3. Configured Escalated to move the call to the appropriate Queue with live agents.</a></li>
+      <li><a href="#task-4-2">Task 4. Add the flow to you Entry Point.</a></li>
+      <li><a href="#task-5-1">Task 5. Test your configurations.</a></li>
     </ul>
   </li>
   <li><a href="#related-information">Related Information</a></li>
