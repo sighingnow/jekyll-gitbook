@@ -217,6 +217,37 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 # Configure Dialogflow CX Virutal Agent
 
+## Table of Content
+
+Introduction to Webex Contact Center with Dialogflow CX
+Addresses and Credentials
+Provisioning
+	Objectives
+	Introduction to Provisioning
+Create Dialogflow CX Virtual Agent
+	Objectives
+	Task 1. Create new Virtual Agent
+	Task 2. Assign the agent that you created for the Conversational profile.
+	Task 3. Configure Google Contact Center AI connector
+	Task 4. Create Contact Center AI config
+Configure Dialogflow CX Virtual Agent
+	Objectives
+	Task 1. Navigate to Dialogflow CX Agent flow builder and customize the initial greeting.
+	Task 2. Create new page to collect the caller name
+	Task 3. Create new page Agent_or_Estimate and connect it with the Caller_Name page.
+	Task 4. Configure Route in Agent_or_Estimate page to move the call to new page What_Kind_Of_Agent.
+	Task 5. Configure Route for Estimate branch and Connect Agent_or_Estimate to new page Estimate_Detai...
+	Task 6. Configure Estimate_Details page with Parameters and Route
+	Task 7. Configure Estimate_Details page with Routes.
+Configure Flow with Virtual Agent in Webex Contact Center Management Portal
+	Objectives
+	Task 1. Create new flow.
+	Task 2. Configured Handled path to extract estimate data for the Analyzer report.
+	Task 3. Configured Escalated to move the call to the appropriate Queue with live agents.
+	Task 4. Add the flow to you Entry Point.
+	Task 5. Test your configurations.
+Related Information
+
 ## Introduction to Webex Contact Center with Dialogflow CX
 
 The Webex Contact Center with Google CCAI is the integration that allows the use of Google Text-To-Speech, Natural Language Understanding and Virtual Agent technologies with Webex Contact Center.
@@ -313,6 +344,34 @@ Step 6. Once the <b>Conversation profile</b> is created, copy the profile ID pas
 <img src="/assets/images/CX/2023-12-23_22h32_10.png">
 
 ### Task 3.  Configure Google Contact Center AI connector
+
+<b>(This Task is information only)</b>
+Log into Webex Control Hub using your user account, select Contact Center service and open Connectors. You can see the Google Contact Center AI card. This connector is used specifically for Dialogflow CX agents. Only users with permissions to Cisco Project can create this connector. For security reasons, the users for this section do not have such permission so this connector is preconfigured for you. For the demo purposes Dialogflow-CX connector can be used. 
+
+<img src="/assets/images/CX/2023-12-23_22h32_59.png">
+
+## Task 4.  Create Contact Center AI config
+
+Step 1. In <a href="https://admin.webex.com">Webex Control Hub</a>, go to the <b>Contact Center service</b>, select <b>Feature</b>, and click <b>New</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h33_57.png">
+
+Step 2. On the next window, select <b>Contact Center AI Config</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h34_37.png">
+
+Step 3. Give the name for the feature using this format: <b>{Your Name}_WxCC__Virtual_Agent</b>. Select Dialogflow CX as the <b>Google Contact Center AI Connector</b> and post the <b>Conversation profile ID</b> that you had previously in Task 2.
+
+<img src="/assets/images/CX/2023-12-23_22h35_31.png">
+
+Step 4. You can now see the <b>Feature</b> was created.
+
+<img src="/assets/images/CX/2023-12-23_22h36_12.png">
+
+## Configure Dialogflow CX Virtual Agent
+
+
+
 
 
 
