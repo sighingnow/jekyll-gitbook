@@ -475,7 +475,7 @@ Step 3. Configure <b>Entry Fulfillment</b> for <b>Agent_or_Estimate</b> page. Op
 
 Do not forget to <b>Save</b> the change.
 
-<i>Note: If you cannot copy and paste the suggested fulfillment just start typing in the Agent Response field, then you can paste the text, then delete unnecessary text.<i>
+<i>Note: If you cannot copy and paste the suggested fulfillment just start typing in the Agent Response field, then you can paste the text, then delete unnecessary text.</i>
 
 <img src="/assets/images/CX/2023-12-23_22h54_20.png">
 
