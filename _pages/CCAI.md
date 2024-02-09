@@ -471,6 +471,79 @@ Remember in Task 2 of this section you configured the condition that once the pa
 
 <img src="/assets/images/CX/2023-12-23_22h52_45.png">
 
+Step 3. Configure <b>Entry Fulfillment</b> for <b>Agent_or_Estimate</b> page. Open up <b>Agent_or_Estimate</b> page, and click <b>Entry Fulfillment</b>. In the Agent response type: Hi $session.params.Name, please let me know if you would like to speak with an agent or if you would to create an estimate?
+
+Do not forget to <b>Save</b> the change.
+
+<i>Note: If you cannot copy and paste the suggested fulfillment just start typing in the Agent Response field, then you can paste the text, then delete unnecessary text.<i>
+
+<img src="/assets/images/CX/2023-12-23_22h54_20.png">
+
+Step 4. Test if the conversation flow is configured properly at this point. Click <b>Test Agent</b> and in the <b>Talk to Agent</b> field type Hello and then type your name.
+
+<img src="/assets/images/CX/2023-12-23_22h55_05.png">
+
+<h3 id="task-4-1">Task 4. Configure Route in Agent_or_Estimate page to move the call to new page What_Kind_Of_Agent.</h3>
+
+Step 1. Open up the <b>Agent_or_Estimate</b> page, click on <b>Create New Route</b>, and then click on <b>Create New Intent</b>.
+
+<i>Note: An intent is a mapping between what a user says or types and a specific action or response that the conversational agent can take. Intents help the agent understand the user request and determine the appropriate response or action to take.</i>
+
+<img src="/assets/images/CX/2023-12-23_22h55_56.png">
+
+Step 2. Name the Intent <b>Agent_intent</b>. Provide 3-5 training phrases, something like agent, representative, escalate, real person. Do not forget to save the change of the page.
+
+<img src="/assets/images/CX/2023-12-23_22h56_39.png">
+
+Step 3. Create new page and name it <b>What_Kind_Of_Agent</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h57_12.png">
+
+Step 4. Click on <b>Agent_or_Estimate</b> page. Add a new <b>Route</b>, select the <b>Intent</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h57_50.png">
+
+Step 5. On the <b>Routes</b> settings scroll down and select action to move the call to the page <b>What_Kind_Of_Agent</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h58_23.png">
+
+Step 6. For a better communication experience you need to add no-input-default <b>Event handlers</b> otherwise the system detects no input even before you have a chance to provide input. While on the <b>Agent_or_Estimate</b> page, click on <b>Add state handler</b>, select <b>Event handlers</b>, and click on <b>Apply</b>.
+
+<i>Note: An Event handlers is a type of intent that is triggered when a specific event occurs. For example, if the Virtual Agent does not receive any input or it does not recognize the input, the event handler is used to trigger no-input intent which helps to continue the conversation.</i>
+
+<img src="/assets/images/CX/2023-12-23_22h58_57.png">
+
+Step 7. Click on <b>Add New Event handlers</b>, select from the <b>No-input default</b> list and save the change.
+
+<img src="/assets/images/CX/2023-12-23_22h59_34.png">
+
+<h3 id="task-5">Task 5. Configure Route for Estimate branch and Connect Agent_or_Estimate to new page Estimate_Details.</h3>
+
+Step 1. Create <b>Estimate_Intent</b>. While on <b>Agent_or_Estimate</b> page click the plus icon <b>(+)</b> to add new <b>Route</b> and create new <b>Intent</b>.
+
+<img src="/assets/images/CX/2023-12-23_23h00_31.png">
+
+Step 2. Name the intent as <b>Estimate_Intent</b> and provide some training phrases. As for the training phrases you can add statements like estimate, price calculation, I need to know how much it cost. Save the intent.
+
+<img src="/assets/images/CX/2023-12-23_23h01_08.png">
+
+Step 3. Create new page with the name <b>Estimate_Details</b>. Connect <b>Agent_or_Estimate</b> and <b>Estimate_Details</b> pages when <b>Estimate_Intent</b> is triggered.
+
+<img src="/assets/images/CX/2023-12-23_23h01_43.png">
+
+Step 4. Click the <b>Agent_or_Estimate</b> page. Add new <b>Route</b>, and select the Intent <b>Estimate_Intent</b>.
+
+<img src="/assets/images/CX/2023-12-23_23h02_22.png">
+
+Step 5. Scroll a bit down and add the agent response that the caller hears once the <b>Estimate_Intent</b> is triggered. You can type something like, let me collect some information for the estimate.
+
+<img src="/assets/images/CX/2023-12-23_23h03_07.png">
+
+Step 6. Scroll all the way down and select the transaction to the page <b>Estimate_Details</b> once the intent is triggered. Save the page configuration.
+
+<img src="/assets/images/CX/2023-12-23_23h03_39.png">
+
+
 
 
 
