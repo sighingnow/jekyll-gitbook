@@ -395,14 +395,81 @@ In the next screenshot, you can see a functional diagram of the flow for this se
 
 <h3 id="task-1-1">Task 1. Navigate to Dialogflow CX Agent flow builder and customize the initial greeting.</h3>
 
-Step 1. Log in to Dialogflow: **[https://dialogflow.cloud.google.com](https://dialogflow.cloud.google.com/){:target="_blank"}** portal using your user account and password. Select project <b>CL2024AMS</b>.
+Step 1. Log in to <a href="https://dialogflow.cloud.google.com/cx">Google Dialogflow CX</a> portal using your user account and password. Select project <b>CL2024AMS</b>.
 
 Step 2. Select the <b>Virtual Agent</b> that you created earlier.
 
+<img src="/assets/images/CX/2023-12-23_22h38_41.png">
 
+Step 3. In the Dialogflow CX builder click on the Start page.
 
+<i>Note: In Dialogflow CX, a page is a set of instructions that holds one or more related conversational turns. It represents a single step in a conversation flow, and it can contain various types of content, including text responses, prompts for user input, fulfillment actions, and more. Pages are connected together to create a conversation flow that guides the user through a conversation with the Dialogflow CX agent.</i>
 
+<img src="/assets/images/CX/2023-12-23_22h39_19.png">
 
+Step 4. In the <b>Start</b> page click on <b>Default Welcome Intent Route<//b>. On the right window, scroll down, delete all the default Agent responses, and click on the field to <b>Enter</b> agent dialog.
+
+<i>Note: A route is a mapping between an intent and a specific page or flow within a conversation. Routes define how a conversation can flow based on the user input and the intent that is matched.</i>
+
+<img src="/assets/images/CX/2023-12-23_22h40_10.png">
+
+Step 5. Provide your customized message to let the caller know that they reached an organization that provides sales services of Webex Contact Center. You can type something like: Hello! Thank you for calling. Here you know all about Webex Contact Center. In Dialogflow CX, the changes are not saved automatically, so you need to save the page every time you make a change.
+
+<i>Note: Agent responses are the messages or actions that an agent sends back to the user or caller during a conversation. When a user or caller sends a message or makes a request to a Dialogflow CX agent, the agent analyses the input and determines the appropriate response to send back.</i>
+
+<img src="/assets/images/CX/2023-12-23_22h40_56.png">
+
+Step 6. Test the agent response that you just created. Click <b>Test Agent</b> and type a greeting message such as Hello.
+
+<img src="/assets/images/CX/2023-12-23_22h44_11.png">
+
+<h3 id="task-2-1">Task 2. Create new page to collect the caller name</h3>
+
+Step 1. Close the <b>Start</b> page and <b>Test Agent</b> windows and click the plus icon <b>(+)</b> to create a new page. Name the page <b>Caller_Name</b> and confirm the creation.
+
+<img src="/assets/images/CX/2023-12-23_22h46_25.png">
+
+Step 2. Connect the <b>Start</b> page and <b>Caller_Name</b> page. For this, click the <b>Default Welcome Intent</b> route on the <b>Start</b> page. Scroll down on the right side and select that you would like the conversation to go to the next page.
+
+<img src="/assets/images/CX/2023-12-23_22h47_09.png">
+
+Step 3. From the drop-down list, select <b>Caller_Name</b> page. Do not forget to <b>Save</b> the change.
+
+<img src="/assets/images/CX/2023-12-23_22h47_44.png">
+
+Step 4. Configure the <b>Caller_Name</b> page to collect the name from the caller and store it in the parameter. In the <b>Caller_Name</b> page click <b>Entry Fulfillment</b> and type message in which you ask the caller name. Click <b>Add</b> and <b>Save</b> the change.
+
+<i>Note: Entry Fulfillment is needed to provide a message to the caller once the call is moved to a new page to let the caller know where they are in the conversation and set the right expectations.</i>
+
+<img src="/assets/images/CX/2023-12-23_22h48_24.png">
+
+Step 5. While on the <b>Caller_Name</b> page, click on <b>Parameters</b>, type <b>Name</b> as the parameter’s name, select <b>sys.any</b>  from the list of preconfigured Entities, and click on <b>Save</b>.
+
+<i>Note: A Parameter is a named entity or value that is extracted from user input during a conversation. Parameters can be used to store information that is relevant to the user request, such as their name, date of birth, or preferred language. Parameters can also be used to pass data to other parts of your application such as Contact Center.</i>
+
+<img src="/assets/images/CX/2023-12-23_22h49_33.png">
+
+Step 6. Configure <b>Routes</b> in the <b>Caller_Name</b> page. Click <b>Route</b>, on the right window scroll down to <b>Condition</b> and set the condition <b>$page.params.status ="FINAL"</b>. Click <b>Save</b>. By setting this condition, you can expect the call to move to the next page once the <b>Name</b> parameter which you created in the previous step is filled with a value. For example, if the caller says Nick then the call can move forward. 
+
+<i>Note: A Condition in the Dialogflow Routes configuration is a rule or set of rules that define when the route must be triggered. The Condition can be based on various factors such as user input, context, parameters, and session data.</i>
+
+<img src="/assets/images/CX/2023-12-23_22h50_16.png">
+
+Step 7. Using the <b>Test</b> Agent option on the right top side, test if the flow is working as designed at this point.
+
+<img src="/assets/images/CX/2023-12-23_22h51_16.png">
+
+<h3 id="task-3-1">Task 3. Create new page Agent_or_Estimate and connect it with the Caller_Name page.</h3>
+
+Step 1. On the left bottom side, click to add a new page, name it <b>Agent_or_Estimate</b>, and confirm the creation.
+
+<img src="/assets/images/CX/2023-12-23_22h52_03.png">
+
+Step 2. Connect <b>Caller_Name</b> and <b>Agent_or_Estimate</b> pages. Open the <b>Caller_Name</b> page, and select the route that you created in the previous step, on the right side scroll down and select the page <b>Agent_or_Estimate</b>. Do not forget to <b>Save</b> the change.
+
+Remember in Task 2 of this section you configured the condition that once the parameter is filled it triggers an action. By selecting the next page you specify what action it is, in this example the call moves to the page <b>Agent_or_Estimate</b>.
+
+<img src="/assets/images/CX/2023-12-23_22h52_45.png">
 
 
 
