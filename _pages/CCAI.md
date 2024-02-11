@@ -675,25 +675,111 @@ Step 11. Test your Virtual Agent.
 
 <h2 id="configure-flow-with-virtual-agent-in-webex-contact-center-management-portal">Configure Flow with Virtual Agent in Webex Contact Center Management Portal</h2>
 
+<h3 id="objectives-configure-flow">Objectives</h3>
 
+In this section, you can see how to build flow in Webex Contact Center Flow Builder with the <b>Virtual Agent</b> block which moves the call to queue with live agents or to estimate branch where data about the number of agents for the estimate can be extracted and used for <b>Analyzer</b> report.  
 
+<h3 id="task-1-2">Task 1. Create new flow.</h3>
 
+Step 1. In the Webex Contact Center Admin portal open up the  <b>Routing Strategy Module</b> and  <b>Create New Flow </b> entry window.
 
+<img src="/assets/images/CX/2023-12-25_11h45_58.png">
 
+Step 2. Call the flow <b>{Your Name}_Virtual_Agent_Flow</b>.
 
+<img src="/assets/images/CX/2023-12-25_11h46_25.png">
 
+<h3 id="task-2-2">Task 2. Configured Handled path to extract estimate data for the Analyzer report.</h3>
 
+Step 1. Move the <b>Virtual Agent V2</b> to the flow and connect it with the <b>NewPhoneContact</b> block.
 
+<img src="/assets/images/CX/2023-12-25_11h46_58.png">
 
+Step 2. Click on <b>Virtual Agent V2</b> block and under the block settings select <b>Contact Center AI Config</b> which you created earlier or use the preconfigured <b>Virtual Agent Dan_User1_Virtual_Agent</b>. Also, click <b>Advanced Settings</b> and increase the <b>Termination Delay</b> time from 3 to 5 seconds.
 
+<i>Note: Termination Delay is the time range that must be set to allow completion of the audio prompt from the Virtual Agent in Dialogflow before the contacts move to the Webex Contact Center. For example, if in Dialogflow VA config there is a long response before the call goes to Live agent handoff, it cuts the response not finished and the call moves to the queue.</i>
 
+<img src="/assets/images/CX/2023-12-25_11h47_31.png">
 
+Step 3. <b>(Informational only)</b> Understand how the call-related data is moving from Dialogflow to Webex Contact Center.
 
+When the conversation is transferred from Dialogflow to WxCC, it creates some output variable with data in JSON format which has been generated in the Dialogflow portal while the caller was interacting with the <b>Virtual Agent</b>. One of the output variables is <b>VirtualAgentV2.MetaData</b>. You can see it by clicking anywhere on the grey area in the <b>Flow Builder</b> and scroll down on the right window. This output variable contains the data you specified in the <b>Custom payload</b>.
 
+<img src="/assets/images/CX/2023-12-25_11h48_04.png">
 
+The goal here is to extract the information about how many agents the caller requested for the estimate. In the previous section, you have created the parameter with the name <b>Number_of_Agents</b>.
 
+<img src="/assets/images/CX/2023-12-25_11h48_43.png">
 
+And you configure the <b>Route</b> with <b>Custom payload</b> where once the parameter is filled, the value of the parameter is assigned to the key <b>Estimate_Agents_Count</b> and then the call is moved to WxCC side.
 
+<img src="/assets/images/CX/2023-12-25_11h49_14.png">
+
+Step 4. Configure <b>Virtual Agent Handled</b> path to extract the estimate data and associate it with <b>Global Variable</b>. By parsing JSON data from the <b>VirtualAgentV2_MetaData</b> variable you can extract the value of the <b>Number_of_Agents</b> parameter value and assign it to the new variable on the WxCC environment. You also want the variable to be reportable, so you need to use a <b>Global Variable</b>. While in WxCC flow builder, cick anywhere on the grey area, and on the right window click on <b>Add Global Variable</b>.
+
+<img src="/assets/images/CX/2023-12-25_11h49_48.png">
+
+The <b>Global Variable Estimate_Number_of_Agents</b> needs to be created earlier in the WxCC Admin Portal. Then you just need to select it and click Add. This makes this <b>Global Variable</b> available for you to use in your flow. 
+
+<img src="/assets/images/CX/2023-12-25_11h50_19.png">
+
+Step 5. Add the <b>Parse</b> node. In the <b>Parse</b> node select <b>VirtualAgentV2.MetaData</b> as the <b>Input Variable</b>, select from the list the <b>Global Variable</b> you added to the flow in the previous step as the <b>Output Variable</b>, and use this next string to parse the JSON data <b>$.Params.Estimate_Agents_Count</b>.
+
+<img src="/assets/images/CX/2023-12-25_11h50_52.png">
+
+Step. 6. Use the <b>Play Message</b> node to validate the result and notify the caller. Add the <b>Play Message</b> node, <b>Enable Text-to-Speech</b> feature, select the TTS connector and choose <b>Output Voice</b> from the list.
+
+<img src="/assets/images/CX/2023-12-25_11h51_27.png">
+
+Step 7. <b>Add Disconnect Contact</b> node. Then click in the <b>Play Message</b> again, and add this Text-to-Speech Message, in the TTS field type, thank you. The estimate request for <b>{{Estimate_Number_of_Agents}}</b>  agents was created, and your team can reach out to you soon with the results.
+
+Delete the <b>Audio File</b> option and publish the flow.
+
+<img src="/assets/images/CX/2023-12-25_11h51_58.png">
+
+<h3 id="task-3-2">Task 3. Configured Escalated to move the call to the appropriate Queue with live agents.</h3>
+
+Step 1. Create Flow variable and name it <b>Queue_Routing</b>.
+
+<img src="/assets/images/CX/2023-12-25_11h52_40.png">
+
+Step 2. Add the <b>Parse</b> node and configure it to assign the value of the <b>Type_Of_Agent</b> variable from Dialogflow to the <b>Queue_Routing</b> flow variable.
+
+<img src="/assets/images/CX/2023-12-25_11h53_14.png">
+
+Step 3 Add the <b>Case</b> node and configure it with the variable <b>Queue_Routing</b>. In the link, Description configure values <b>TAC</b> and <b>Sales</b> as these are two values you move from the <b>Dialogflow</b> portal.
+
+<img src="/assets/images/CX/2023-12-25_11h53_44.png">
+
+Step 4. Add <b>Play Message</b> nodes to verify the call goes to the TAC queue. Configure the <b>Play Message</b> node with TTS and type the text similar to this, Thank ou for waiting. The TAC engineer can be with you shortly.
+
+<img src="/assets/images/CX/2023-12-25_11h54_25.png">
+
+Step 5. Do the same for the <b>Sales</b> queue. Let the caller know that the call can be connected to the <b>Sales</b> agent shortly.
+
+<img src="/assets/images/CX/2023-12-25_11h55_03.png">
+
+Step 6. Add <b>Queue</b> Contact block and configure it with the <b>TAC_Queue</b>.
+
+<img src="/assets/images/CX/2023-12-25_11h55_36.png">
+
+Step 7. Add additional <b>Queue Contact</b> and configure it with the <b>Sales_Queue</b>.
+
+<img src="/assets/images/CX/2023-12-25_12h01_53.png">
+
+Step 8. Point <b>Default</b> output on the Case node to the <b>Play Message</b> related to the <b>Sales Queue</b>. Validate and click <b>Publish the Flow</b>.
+
+<img src="/assets/images/CX/2023-12-25_12h02_38.png">
+
+<h3 id="task-4-2">Task 4. Add the flow to you Entry Point.</h3>
+
+Step 1. Go to <b>Entry Points</b> and select your <b>Entry Point</b>. Click on three dots to edit the <b>Entry Point</b>.
+
+<img src="/assets/images/CX/2023-12-25_12h03_13.png">
+
+Step 2. Select the flow and other required fields and save the <b>Entry Point</b>.
+
+<img src="/assets/images/CX/2023-12-25_12h03_52.png">
 
 
 
