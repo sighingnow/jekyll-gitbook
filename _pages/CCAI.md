@@ -220,7 +220,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 ## Table of Contents
 
 <ul>
-  <li><a href="#introduction123>Introduction to Webex Contact Center with Dialogflow CX</a></li>
+  <li><a href="#introduction123">Introduction to Webex Contact Center with Dialogflow CX</a></li>
   <li><a href="#addresses-and-credentials">Addresses and Credentials</a></li>
   <li><a href="#provisioning">Provisioning</a>
     <ul>
