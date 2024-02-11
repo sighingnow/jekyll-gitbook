@@ -263,7 +263,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 </ul>
 
 
-## Introduction to Webex Contact Center with Dialogflow CX
+<h2 id="introduction">Introduction to Webex Contact Center with Dialogflow CX</h2>
 
 The Webex Contact Center with Google CCAI is the integration that allows the use of Google Text-To-Speech, Natural Language Understanding and Virtual Agent technologies with Webex Contact Center.
 
@@ -273,7 +273,7 @@ Webex Contact Center now supports Dialogflow CX integration and using this artic
 
 The integration requires you to do configuration in multiple portals: Google Cloud Platform and Google Dialogflow CX, Webex Control Hub, and Webex Contract Center.
 
-## Addresses and Credentials
+<h2 id="addresses-and-credentials">Addresses and Credentials</h2>
 
 - <a href="https://admin.webex.com">Webex Control Hub</a>
 
@@ -284,13 +284,13 @@ The integration requires you to do configuration in multiple portals: Google Clo
 - <a href="https://dialogflow.cloud.google.com/cx">Google Dialogflow CX</a>
 
 
-## Provisioning
+<h2 id="provisioning">Provisioning</h2>
  
-### Objectives
+<h3 id="objectives-provisioning">Objectives</h3>
 
 The objective of this section is to introduce you to Provisioning process which would require to obtain Google CCAI licence for Webex Contact Center.
 
-### Introduction to Provisioning
+<h3 id="introduction-to-provisioning">Introduction to Provisioning</h3>
 
 For billing purposes, you need to provision Webex Contact Center with Google CCAI.
 
@@ -312,7 +312,7 @@ The process takes a couple of days, so you are not going to complete the Provisi
 If you would like to read more about the Provisioning process, refer to <a href="https://www.cisco.com/c/en/us/support/docs/contact-center/webex-contact-center/217594-provision-google-ccai-with-webex-contact.html">Provision Google CCAI for WxCC</a> article.
 
 
-## Create Dialogflow CX Virtual Agent
+<h2 id="create-dialogflow-cx-virtual-agent">Create Dialogflow CX Virtual Agent</h2>
 
 ### Objectives 
 
