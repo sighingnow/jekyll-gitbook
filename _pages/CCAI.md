@@ -781,11 +781,13 @@ Step 2. Select the flow and other required fields and save the <b>Entry Point</b
 
 <img src="/assets/images/CX/2023-12-25_12h03_52.png">
 
+Step 3. Configure Entry Point mapping for your <b>Entry Point</b>.
 
+<img src="/assets/images/CX/2023-12-25_12h04_54.png">
 
+<h3 id="task-5-1">Task 5. Test your configurations.</h3>
 
-
-
+After all these configurations are completed, call the DN related to your Entry Point and test the integration.
 
 
 
