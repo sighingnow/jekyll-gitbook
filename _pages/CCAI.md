@@ -231,7 +231,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
   <li><a href="#create-dialogflow-cx-virtual-agent">Create Dialogflow CX Virtual Agent</a>
     <ul>
       <li><a href="#objectives-create-dialogflow-cx-virtual-agent">Objectives</a></li>
-      <li><a href="#Task 1. Create new Virtual Agent">Task 1. Create new Virtual Agent</a></li>
+      <li><a href="#task-1">Task 1. Create new Virtual Agent</a></li>
       <li><a href="#task-2">Task 2. Assign the agent that you created for the Conversational profile.</a></li>
       <li><a href="#task-3">Task 3. Configure Google Contact Center AI connector</a></li>
       <li><a href="#task-4">Task 4. Create Contact Center AI config</a></li>
@@ -318,7 +318,7 @@ If you would like to read more about the Provisioning process, refer to <a href=
 
 This section describes how to navigate Dialogflow CX and Webex Control Hub portals to create a new agent and bind the agent to the Webex environment by creating a new Contact Center AI Config.
 
-<h3 id="Task-1">Task 1. Create new Virtual Agent</h3>
+<h3 id="task-1">Task 1. Create new Virtual Agent</h3>
 
 Step 1. Log into Dialogflow CX portal using your user account and password. Select project CL2024AMS. (If you experience any difficulties with logging in please clear the catch and cookies on the browser you use.)
 
