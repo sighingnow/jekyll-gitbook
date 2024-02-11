@@ -543,6 +543,142 @@ Step 6. Scroll all the way down and select the transaction to the page <b>Estima
 
 <img src="/assets/images/CX/2023-12-23_23h03_39.png">
 
+<h3 id="task-6">Task 6. Configure Estimate_Details page with Parameters and Route</h3>
+
+Step 1. Similar to how you created the Parameter for the caller name, create the <b>Parameter</b> for the number of agents which the caller needs the estimate for. Click on the <b>Estimate_Details</b> page, add the <b>Parameter</b>, name it <b>Number_of_agents</b>, and select from the list the standard <b>Entity</b> type <b>sys.number</b>. Do not forget to save the change.
+
+<img src="/assets/images/CX/2023-12-23_23h04_25.png">
+
+Step 2. Configure the <b>Entry Fulfillment</b> for the caller to understand what information the <b>Virtual Agent</b> is looking for. You can type something like, please let me know how many agents you are planning to have in your Contact Center.
+
+<i>Note: If you cannot copy and paste the suggested fulfillment just start typing in the Agent Responses field, then you can paste the text, then delete unnecessary text.</i>
+
+<img src="/assets/images/CX/2023-12-23_23h04_55.png">
+
+Step 3. Select the condition which triggers the action on the <b>Estimate_Details</b> page. While on the <b>Estimate_details</b> page, click on add new <b>Route</b>, on the right window scroll down a bit and configure the condition <b>$page.params.status =“FINAL”</b>.
+
+<img src="/assets/images/CX/2023-12-23_23h05_26.png">
+
+Step 4. Scroll more down and add the <b>Virtual Agent</b> response. Type: I am putting together the estimate request details for <b>$session.params.Number_of_agents</b>  agents.
+
+<img src="/assets/images/CX/2023-12-23_23h06_08.png">
+
+Step 5. Add dialogue option and select <b>Custom payload</b> from the list.
+
+<img src="/assets/images/CX/2023-12-25_11h32_46.png">
+
+Post this next syntax to the Custom payload section and save the configurations.
+
+{
+
+  "Execute_Request": {
+
+    "Data": {
+
+      "Params": {
+
+        "Estimate_Agents_Count": "$session.params.Number_of_agents"
+
+      }
+
+    }
+
+  }
+
+}
+
+<i>Note: In JSON data format, a variable is a key-value pair that represents a property of an object. The key is a string that identifies the property, and the value is the data associated with the property.</i>
+
+The <b>Custom payload</b> contains the key <b>Estimate_Agents_Count</b> and the value is the <b>Parameter $session.params.Number_of_agents</b>. This <b>Parameter</b> is changed depending on the caller response.
+
+<img src="/assets/images/CX/2023-12-25_11h34_03.png">
+
+Step 6. Scroll more down on the <b>Route</b> section and set up <b>Transition</b> to <b>End Flow</b>.
+
+<img src="/assets/images/CX/2023-12-25_11h34_59.png">
+
+It terminates the session on the Dialogflow side and transfers the call to WxCC where it continues from the <b>Virtual Agent Handled</b> path.
+
+<img src="/assets/images/CX/2023-12-25_11h35_26.png">
+
+Step 7. Test your Virtual Agent flow at this point.
+
+<img src="/assets/images/CX/2023-12-25_11h35_51.png">
+
+<h3 id="task-7">Task 7. Configure Estimate_Details page with Routes.</h3>
+
+Step 1. Create two additional intents, <b>TAC_Intent</b> and <b>Sales_Intent</b>. Click on <b>Manage</b>, select Intents from the <b>Resources</b> list, and then click on <b>Create</b>.
+
+<img src="/assets/images/CX/2023-12-25_11h36_35.png">
+
+Name the intent and provide some training phrases. For example, for <b>TAC_Intent<b> you can add the phrases like: TAC Engineer, Technical Support.
+
+<img src="/assets/images/CX/2023-12-25_11h37_10.png">
+
+For <b>Sales_Intent</b> you can specify something like Price, Sales, and so on.
+
+<img src="/assets/images/CX/2023-12-25_11h38_06.png">
+
+Step 2. Add <b>Route</b> for the TAC queue. Go back to the queue and click on the <b>What_Kind_Of_Agent</b> page. Then click on <b>Add New Route</b> and select the intent you created in the previous step for the TAC queue. Save the route settings.
+
+<img src="/assets/images/CX/2023-12-25_11h39_35.png">
+
+Step 3. Scroll down and add the agent response that the caller hears once the intent is triggered.
+
+<img src="/assets/images/CX/2023-12-25_11h40_34.png">
+
+Step 4. Add the dialog option to move the call to the live agent by selecting Live agent <b>handoff</b>.
+
+<img src="/assets/images/CX/2023-12-25_11h41_16.png">
+
+By selecting this option, the call moves out of the Escalate output of the Virtual Agent V2 block in the flow builder.
+
+<img src="/assets/images/CX/2023-12-25_11h41_42.png">
+
+Step 5. In the <b>Live agent handoff</b> payload field, you can add the data in the JSON format which you can later parse in the WxCC flow. In this case, you need to add <b>Type_Of_Agent (TAC)</b>. TAC  which helps you to make the routing decision to the correct queue in the flow.
+
+{
+
+  "dialogflow.ccai.live-agent-escalation": {
+
+    "Type_Of_Agent": "TAC"
+
+  }
+
+}
+
+
+<img src="/assets/images/CX/2023-12-25_11h42_11.png">
+
+
+Step 6. End the flow on the Dialogflow side once the call is moved to the WxCC flow.
+
+<img src="/assets/images/CX/2023-12-25_11h42_47.png">
+
+Step 7. Do the same steps to configure the <b>Route</b> for the Sales queue. Click on <b>Add New Route</b>. Select <b>Sales_Intent</b> and save the <b>Route</b> settings.
+
+<img src="/assets/images/CX/2023-12-25_11h43_17.png">
+
+Step 8. Add the <b>Agent</b> response and <b>Live agent handoff</b> dialog option.
+
+<img src="/assets/images/CX/2023-12-25_11h43_53.png">
+
+Step 9. End the flow for this page once the intent is triggered and the call is moved to the WxCC flow.
+
+<img src="/assets/images/CX/2023-12-25_11h44_32.png">
+
+Step 10. Add the <b>Entry Fulfillment</b> to the <b>What_Kind_Of_Agent</b> page so the caller knows what kind of answer the <b>Virtual Agent</b> expects. Click on the <b>Entry Fulfillment</b> field and type, please let me if you would like to speak with a Technical Support Engineer or you would like to talk about sales.
+
+<img src="/assets/images/CX/2023-12-25_11h45_02.png">
+
+Step 11. Test your Virtual Agent.
+
+<h2 id="configure-flow-with-virtual-agent-in-webex-contact-center-management-portal">Configure Flow with Virtual Agent in Webex Contact Center Management Portal</h2>
+
+
+
+
+
 
 
 
