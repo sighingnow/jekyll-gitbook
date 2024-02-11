@@ -259,7 +259,6 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
       <li><a href="#task-5-1">Task 5. Test your configurations.</a></li>
     </ul>
   </li>
-  <li><a href="#related-information">Related Information</a></li>
 </ul>
 
 
