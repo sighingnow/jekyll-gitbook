@@ -220,7 +220,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 ## Table of Contents
 
 <ul>
-  <li><a href="#introduction>Introduction to Webex Contact Center with Dialogflow CX</a></li>
+  <li><a href="#introduction123>Introduction to Webex Contact Center with Dialogflow CX</a></li>
   <li><a href="#addresses-and-credentials">Addresses and Credentials</a></li>
   <li><a href="#provisioning">Provisioning</a>
     <ul>
@@ -263,7 +263,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 </ul>
 
 
-<h2 id="introduction">Introduction to Webex Contact Center with Dialogflow CX</h2>
+<h2 id="introduction123">Introduction to Webex Contact Center with Dialogflow CX</h2>
 
 The Webex Contact Center with Google CCAI is the integration that allows the use of Google Text-To-Speech, Natural Language Understanding and Virtual Agent technologies with Webex Contact Center.
 
