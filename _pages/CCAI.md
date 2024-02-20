@@ -18,11 +18,13 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 | Topic                                                                         | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
 | [Setup the Google Account](#setup-the-google-account)        | Practical Lab | EASY            | 20 min           |
-| [Setup Dialogflow Agent \& Google Connector](#setup-dialogflow-agent--google-connector) | Practical Lab | MID            | 20 min            |
-| [TTS, EWT \& PIQ](#tts-ewt--piq)                                           | Practical Lab | MID            | 20 min            |
-| [Virtual Agent](#virtual-agent)                   | Practical Lab | MID            | 15 min           |
+| [Setup Dialogflow ES Agent \& Google Connector](#setup-dialogflow-es-agent--google-connector) | Practical Lab | MID            | 20 min            |
+| [Configure TTS, EWT \& PIQ](#configure-tts-ewt--piq)                                           | Practical Lab | MID            | 20 min            |
+| [Configure Dialogflow ES Virutal Agent](#configure-dialogflow-es-virutal-agent)                   | Practical Lab | MID            | 15 min           |
+| [Configure Dialogflow CX Virutal Agent](#configure-dialogflow-cx-virutal-agent)                   | Practical Lab | MID            | 90 min           |
 
 
+Configure Dialogflow CX Virutal Agent
 
 
 ## Introduction
@@ -115,7 +117,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 - Click on **Service Accounts** on the left and follow the same procedure to download the TTS JSON key as well.
 
 
-# Setup Dialogflow Agent & Google Connector
+# Setup Dialogflow ES Agent & Google Connector
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/Q0j13mrjKrw?rel=0" title="Google CCAI Integration Lab: Setup Dialogflow Agent & Google Connector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -157,7 +159,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 - Click on **Finish** to complete the Virtual Agent creation.
 
 
-# TTS, EWT & PIQ 
+# Configure TTS, EWT & PIQ
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/0XFQfwzPhzw?rel=0" title="Google CCAI Integration Lab: TTS EWT PIQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -185,7 +187,7 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 
 > **Note:** Make sure no agent is available to handle the call to be able to listen to the PIQ prompt.
 
-# Virtual Agent
+# Configure Dialogflow ES Virutal Agent
 
 <iframe width="1024" height="576" src="https://www.youtube-nocookie.com/embed/QHkKbr2DsMA?rel=0" title="Google CCAI Integration Lab: Virtual Agent" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
