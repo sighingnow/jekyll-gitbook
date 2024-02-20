@@ -5,7 +5,7 @@ date: 2022-07-07
 layout: post
 ---
 ```
-Last modified: Thu, 30 March 2023
+Last modified: Thu, 20 Feb 2024
 ```
 
 ### Overview of the lab:
@@ -24,7 +24,6 @@ In this Lab, we will go through the tasks that are required to setup **Contact C
 | [Configure Dialogflow CX Virutal Agent](#configure-dialogflow-cx-virutal-agent)                   | Practical Lab | MID            | 90 min           |
 
 
-Configure Dialogflow CX Virutal Agent
 
 
 ## Introduction
