@@ -4,7 +4,7 @@
 	max-height: 0px;
 }
 
-.book .book-summary .chapter li ul {
+.book .book-summary .chapter li > ul {
 	overflow: hidden;
 	max-height: 0px !important;
 }
@@ -14,7 +14,7 @@
 	max-height: 9999px;
 }
 
-.book .book-summary .chapter.expanded li.expanded ul {
+.book .book-summary .chapter.expanded li.expanded > ul {
 	max-height: 9999px !important;
 }
 
