@@ -108,6 +108,18 @@ tracker:
 disqushandler: "<YOUR DISQUS SHORTNAME>"
 ```
 
+## Jekyll collections
+
+Jekyll's [collections][15] is supported to organize the pages in a more fine-grained manner, e.g.,
+
+```yaml
+collections:
+  pages:
+    output: true
+    sort_by: date
+    permalink: /:collection/:year-:month-:day-:title:output_ext
+```
+
 ## Extra StyleSheet or Javascript elements
 
 You can add extra CSS or JavaScript references using configuration collections:
@@ -204,3 +216,4 @@ Copyright 2019 Tao He.
 [12]: https://rubygems.org/gems/jekyll-remote-theme
 [13]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
 [14]: https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml
+[15]: https://jekyllrb.com/docs/collections/
