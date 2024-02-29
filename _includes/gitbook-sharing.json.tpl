@@ -1,5 +1,5 @@
             "sharing": {
-                "facebook": true,
+                "facebook": false,
 
                 "google": false,
 
@@ -15,14 +15,17 @@
 
                 "instapaper": false,
 
-                "twitter": true,
+                "twitter": false,
               {% if site.twitter_username %}
                 "twitter_link": "https://twitter.com/{{ site.twitter_username }}",
+              {% endif %}
+              "linkedin": true,
+              {% if site.linkedin_username %}
+                "linkedin_link": "https://linkedin.com/in/{{ site.linkedin_username }}",
               {% endif %}
 
                 "vk": false,
 
                 "weibo": false,
 
-                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
             },

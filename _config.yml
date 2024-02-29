@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
+title:            Jeff Kantarek
+longtitle:        Jeff Kantarek - Human built with mostly AI, some real world experience
+author:           Jeff Kantarek
 email:            sighingnow@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  Personal blog and idea dumping ground
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://jkantarek.github.io'
+baseurl:          ''
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -37,6 +37,10 @@ kramdown:
     guess_lang:           true
 
 syntax_highlighter_style: colorful
+
+github_username: jkantarek
+gitlab_username: jkantarek
+linkedin_username: jkantarek
 
 markdown_ext:             markdown,mkdown,mkdn,mkd,md
 

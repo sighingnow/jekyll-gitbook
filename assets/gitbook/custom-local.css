@@ -3,3 +3,11 @@
  * Its purpose is for users of the theme to be able to add css rules from a blank file
  *   these get simply added to the ones already active in the layout.
  */
+ .row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+}
