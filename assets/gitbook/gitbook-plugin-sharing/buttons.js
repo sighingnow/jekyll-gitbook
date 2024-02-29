@@ -13,7 +13,15 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             'icon': 'fa fa-twitter',
             'onClick': function(e) {
                 e.preventDefault();
-                window.open('http://twitter.com/home?status='+encodeURIComponent(document.title+' '+location.href));
+                window.open('http://linkedin.com/in/jkantarek');
+            }
+        },
+        'linkedin': {
+            'label': 'Linkedin',
+            'icon': 'fa fa-linkedin',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open('http://linkedin.com/in/jkantarek');
             }
         },
         'github': {
@@ -70,7 +78,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
     gitbook.events.bind('start', function(e, config) {
         var opts = config.sharing;
-
+        
         // Create dropdown menu
         var menu = $.map(opts.all, function(id) {
             var site = SITES[id];
