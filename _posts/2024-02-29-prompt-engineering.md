@@ -6,17 +6,17 @@ layout: post
 mermaid: true
 ---
 
-
 <div class="row">
   <div class="column" markdown="1">
   <div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/lang/en/deb_roy_the_birth_of_a_word" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
-
 </div>
 
 <div class="column" markdown="1">
-One of my absolute favorite Ted talks that I share with _every_ new parent is called "The Birth of a Word."  It unlocked an idea for me that learning words and meaning is as much about context as it is content.
+One of my absolute favorite Ted talks that I share with _every_ new parent is called "The Birth of a Word."  It unlocked an idea for me that learning words is as much about context as it is content.
   </div>
 </div>
+
+<!--more-->
 
 <div class="row">
   <div class="column" markdown="1">
@@ -28,7 +28,7 @@ The vast majority of newborn experience and early child development is a race to
   </div>
 </div>
 
-What it also means is that words and the _context_ of those words matter.  With kids (and lets be honest adults too) you have to keep things simple so they actually hear what you have to say and it has to be relevant to their current situation.  Hey kids, can you make sure to put the bowl (that you're currently holding in your hand) in the sink??  On top of that you have to repeat yourself _a lot_ until they get it.  Every time you start a conversation with ChatGPT _you_ have to supply the framing and context for the specific thing you're trying to do. On top of that you have to give it as much context with as few tokens as possible in a way that isn't confusing.
+What it also means is that words and the _context_ of those words matter.  With kids (and lets be honest adults too) you have to keep things simple so they actually hear what you have to say. It has to be relevant to their current situation.  Hey kids, can you make sure to put the bowl (that you're currently holding in your hand) in the sink??  You have to repeat yourself _a lot_ until they get it.  Every time you start a conversation with ChatGPT _you_ have to supply the framing and context for the specific thing you're trying to do. On top of that you have to give it as much context with as few tokens as possible in a way that isn't confusing.
 
 <div class="row">
   <div class="column" markdown="1">
@@ -40,7 +40,7 @@ A quick aside on tokens. They aren't just letters, or spaces they're a way to co
   </div>
 </div>
 
-You might wonder if using emojis to convey context is a way to build a higher density prompt. Asking ChatGPT to convert the original message into _just_ emojis results in 👨‍👦⚔️🪦😡👊🔜 or 👨‍👦⚔️😵👋🤺. These _almost_ feel like [rebus puzzles](https://en.wikipedia.org/wiki/Rebus) where it's a bit of a crap shoot if the reader will understand. The Tokenizer tool says that 6 emojis ultimately results in *23* and 15 characters vs the original text only being 16 tokens! The tool also adds a specific note:
+You might wonder if using emojis to convey context is a way to build a higher density prompt. Asking ChatGPT to convert the original message into _just_ emojis results in 👨‍👦⚔️🪦😡👊🔜 or 👨‍👦⚔️😵👋🤺. These _almost_ feel like [rebus puzzles](https://en.wikipedia.org/wiki/Rebus) where it's a bit of a crap shoot if the reader will understand. The Tokenizer tool says that 6 emojis ultimately results in *23 tokens* and 15 characters vs the original text only being 16 tokens! The tool also adds a specific note:
 > Note: Your input contained one or more unicode characters that map to multiple tokens. The output visualization may display the bytes in each token in a non-standard way.
 
 What's important to remember here is that the tokenizer itself is a tool used to interact with the underlying model. So a bug in a tokenizer or a more sophisticated tokenizer might be better or worse at interacting with a foundational model.  Pretending that a child is a foundational language model it's equivalent to parents being able to speak to and understand their child _much better_ than a stranger. It can be easy for parents to miss a child that needs speach therapy because we've already developed a tokenizer that is _more_ compatible with the way our child speaks and communicates!  So what are strategies for building out high quality, high density prompts that more quickly get you where you want to go?
