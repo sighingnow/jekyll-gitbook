@@ -64,6 +64,13 @@ destination:      ./_site
 incremental:      false
 regenerate:       true
 
+excerpt_separator: "<!--more-->"
+
+readme_index:
+  enabled:          false
+  remove_originals: false
+  with_frontmatter: false
+
 plugins:
   - jekyll-feed
   - jekyll-readme-index
