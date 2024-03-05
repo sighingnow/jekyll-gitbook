@@ -46,7 +46,7 @@ There are a few other critical parts to this framework:
 
 ### Make it easy to always be done with _something_
 
-A huge part of my life is wrapped up in the maker movement from the late 2000s. One of the most important things I realized is that it's more important to finish _something_ than to keep trying to figure out what to do next. The idea of this is distilled (at least for me) by the [Done Manifesto by Bre Pettis](https://medium.com/@bre/the-cult-of-done-manifesto-724ca1c2ff13) and [JFDI from Chicago's Pumping Station: One](https://wiki.pumpingstationone.org/wiki/Just_Fucking_Do_It). The done manifesto is worth reading in its eentirety:
+A huge part of my life is wrapped up in the maker movement from the late 2000s. One of the most important things I realized is that it's more important to finish _something_ than to keep trying to figure out what to do next. The idea of this is distilled (at least for me) by the [Done Manifesto by Bre Pettis](https://medium.com/@bre/the-cult-of-done-manifesto-724ca1c2ff13) and [JFDI from Chicago's Pumping Station: One](https://wiki.pumpingstationone.org/wiki/Just_Fucking_Do_It). The done manifesto is worth reading in its entirety:
 
 > **The Cult of Done Manifesto**
 > 
