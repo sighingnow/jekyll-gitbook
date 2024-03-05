@@ -35,6 +35,7 @@
                 <div class="body-inner">
                     {%- include body.html -%}
 
+		    <div class="footer-padding"></div>
                     {% if page.previous %}
                         <a href="{{site.baseurl}}{{page.previous.url}}" class="navigation navigation-prev navigation-unique" aria-label="Previous page: {{page.previous.title}}">
                             <i class="fa fa-angle-left"></i>
@@ -60,6 +61,7 @@
             });
             </script>
         </div>
+
 
         {%- include footer.html -%}
 
