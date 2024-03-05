@@ -12,9 +12,10 @@ Last modified: Tue, 06 Feb 2024
 
 | Topic                                                             | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
-| [Verify Tenant Provisioning](#verify-tenant-provisioning )                               | Practical Lab | EASY             | 5 min           |
-| [Webex CC Configurations](#webex-cc-configurations)                               | Practical Lab | EASY             | 5 min           |
-| [Acqueon Configurations](#acqueon-configurations)                               | Practical Lab | EASY             | 5 min           |
+| [Lab 9.1 Verify Tenant Provisioning](#verify-tenant-provisioning )                               | Practical Lab | EASY             | 5 min           |
+| [Lab 9.2 Preview Campaign](#lab-92-preview-campaign)                               | Practical Lab | EASY             | 5 min           |
+| [# Lab 9.3 Progressive Campaign](#lab-93-progressive-campaign)                               | Practical Lab | EASY             | 5 min           |
+| [# Lab 9.4 Progressive Campaign](#lab-94-predictive-campaign)                               | TBD | TBD             | TBD           |
 
 
 
@@ -48,19 +49,19 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 
 # Lab 9.2 Preview Campaign
 
-Step 1: Navigate to Flows > Manage Flows > Create Flows
+### Step 1: Navigate to Flows > Manage Flows > Create Flows
 ![Outbound](/assets/images/Acqueon/AE_9.2.1.png)
 
-Step 2: Provide a desired `Flow Name` and click `Start building Flow`
+### Step 2: Provide a desired `Flow Name` and click `Start building Flow`
 ![Outbound](/assets/images/Acqueon/AE_9.2.2.png)
 
-Step 3: Connect the `NewPhoneContact` activity to `EndFlow` activity. Set `Validations` to On and `Publish Flow` 
+### Step 3: Connect the `NewPhoneContact` activity to `EndFlow` activity. Set `Validations` to On and `Publish Flow` 
 
 ![Outbound](/assets/images/Acqueon/AE_9.2.3.png)
 
 >Note: A flow must be configured with each campaign, referenced by the outdial entrypoint. The flow is simple, but dictates which variables are shown on the agent desktop and in which order. This is done via global variables. Configure variables in the flow as required. In this lab exercise, we will not be configuring any variables.
 
-Step 4: Create Outdial Queue 
+### Step 4: Create Outdial Queue 
 
 - Navigate to `Queues` and click `Create Queue`
 ![Outbound](/assets/images/Acqueon/AE_9.2.4.png)
@@ -78,7 +79,7 @@ Step 4: Create Outdial Queue
  
 ![Outbound](/assets/images/Acqueon/AE_9.2.5.gif)
 
-Step 5: Create Outdial EntryPoint 
+### Step 5: Create Outdial EntryPoint 
 
 - Navigate to `Channels` and click `Create Channel`
 ![Outbound](/assets/images/Acqueon/AE_9.2.6.png)
@@ -94,7 +95,7 @@ Step 5: Create Outdial EntryPoint
 
 ![Outbound](/assets/images/Acqueon/AE_9.2.7.gif)
 
-Step 6: Configure Desktop layout for preview 
+### Step 6: Configure Desktop layout for preview 
 
 - Navigate to `Desktop Layouts` and click `Create Desktop Layout`
 ![Outbound](/assets/images/Acqueon/AE_9.2.8.png)
@@ -140,15 +141,97 @@ Step 6: Configure Desktop layout for preview
 ![Outbound](/assets/images/Acqueon/AE_9.2.12.png)
 
 
+### ### Step 7: Create Campaign Group
 
+- Navigate to Contact Center Administration portal 
+![Outbound](/assets/images/Acqueon/AE_9.2.13.png)
 
-Step 7: Create Campaign Group
+- Cross launch into Acqueon administration portal 
+![Outbound](/assets/images/Acqueon/AE_9.2.14.png)
+
+- Navigate to `Group` and click `+` 
+![Outbound](/assets/images/Acqueon/AE_9.2.15.png)
+
+- Select `Voice Campaign Group` option
+![Outbound](/assets/images/Acqueon/AE_9.2.16.png)
+
+- Configure the below: 
+  - Name: `Enter desired Name`
+  - Dialer Name: `Select the dialer configured in your tenant`
+  - Entry POint: `Select the outdial entrypoint created in Step 5`
+  - Pacing Mode: `Preview`
+- Click `Next`
+![Outbound](/assets/images/Acqueon/AE_9.2.17.png)
+
+- Select ANI based on your requirement 
+- From the list of available teams, select the respective team that is assigned to agent and move it under `Assigned Teams`. Click `Next`
+![Outbound](/assets/images/Acqueon/AE_9.2.18.png)
+
+- Click `Save`
+![Outbound](/assets/images/Acqueon/AE_9.2.19.png)
+
+- Verify group status shows as `Executing` 
+![Outbound](/assets/images/Acqueon/AE_9.2.20.png)
 
 Step 8: Create Campaign
 
-Step 9: Upload Contact list 
+- Navigate to `Campaign` and click `Add Campaign`
+![Outbound](/assets/images/Acqueon/AE_9.2.21.png)
 
-Step 9: 
+- Configure the below: 
+  - Name: `Enter desired Name`
+- Select Date Range, Time Range, TimeZone as per your requirement
+- Click `Next`
+![Outbound](/assets/images/Acqueon/AE_9.2.22.png)
+
+- Select `Dedicated Campaign Group` and select the group created in previous step
+- Click `Next`
+![Outbound](/assets/images/Acqueon/AE_9.2.23.png)
+
+- Select `Default_Simple_Strategy` as the contact strategy 
+- Click `Next`
+![Outbound](/assets/images/Acqueon/AE_9.2.24.png)
+
+- Leave the default values as such and click `Next`
+![Outbound](/assets/images/Acqueon/AE_9.2.25.png)
+
+### Step 9: Create and upload contact list
+
+- Create a text file with comma seperated values as shown in the video below 
+- The first row in the file should be : Firstname,Lastname,Phone
+- The second row in the file should be: Test,Agent1,<`Any US phone number of your choice`>
+- Save the file 
+
+![Outbound](/assets/images/Acqueon/AE_9.2.31.png)
+
+- Navigate to "Contact Lists" section. Click on the "+" sign at the bottom right and click "Upload Contacts"
+![Outbound](/assets/images/Acqueon/AE_9.2.27.png)
+
+-  Verify "Source Type" is `Formatted File`
+-  Verify "File Type" is `Text/CSV` and "Delimiter" is `,`
+-  Click "Choose File" and select the file created in the previous step
+![Outbound](/assets/images/Acqueon/AE_9.2.28.png)
+
+- Navigate to "Field Mapping", select "ZoneName" as `Campaign Specific TimeZone`
+![Outbound](/assets/images/Acqueon/AE_9.2.29.png)
+
+- Navigate to "Modes Mapping", select "Mobile" as `Mobile`
+- Click "Upload"
+![Outbound](/assets/images/Acqueon/AE_9.2.30.png)
+
+- Click "Refresh" and verify that the list shows up under the list of records
+![Outbound](/assets/images/Acqueon/AE_9.2.32.png)
+
+- Navigate to `Campaign` > `Actions` > `Start`
+![Outbound](/assets/images/Acqueon/AE_9.2.33.png)
+
+### Step 10: Accept the Campaign Contact from Agent Desktop
+
+- Login to desktop with agent credentials
+- Click `Campaign Contact` and accept the preview contact 
+![Outbound](/assets/images/Acqueon/AE_9.2.34.png)
+
+
 
 # Lab 9.3 Progressive Campaign
 
