@@ -1,5 +1,5 @@
 ---
-title: Lab 9 - Outbound Campaign
+title: Lab 9 - Outbound Campaign (Preview)
 author: Gagarin Sathiyanarayanan
 date: 2024-02-06
 layout: post
