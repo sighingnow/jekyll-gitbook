@@ -5,7 +5,11 @@ date: 2024-02-06
 layout: post
 ---
 ```
-Last modified: Tue, 06 Feb 2024
+title: Lab 9 - Outbound Campaign (Preview, Progressive 1:1, Progressive 1:N)
+author: Gagarin Sathiyanarayanan
+date: 2024-03-06
+layout: post
+Last modified: Wed, 06 Mar 2024
 ```
 
 ## Table of Contents
@@ -15,25 +19,26 @@ Last modified: Tue, 06 Feb 2024
 | [Lab 9.1 Verify Tenant Provisioning](#verify-tenant-provisioning )                               | Practical Lab | EASY             | 5 min           |
 | [Lab 9.2 Preview Campaign](#lab-92-preview-campaign)                               | Practical Lab | EASY             | 5 min           |
 | [Lab 9.3 Progressive Campaign](#lab-93-progressive-campaign)                               | Practical Lab | EASY             | 5 min           |
-| [Lab 9.4 Progressive Campaign](#lab-94-predictive-campaign)                               | Coming Soon | Coming Soon             | Coming Soon           |
-| [Lab 9.5 Progressive Campaign](#lab-95-call-guide)                               | Coming Soon | Coming Soon             | Coming Soon           |
+| [Lab 9.4 Predictive Campaign](#lab-94-predictive-campaign)                               | Coming Soon | Coming Soon             | Coming Soon           |
+| [Lab 9.5 Call Guide](#lab-95-call-guide)                               | Coming Soon | Coming Soon             | Coming Soon           |
 
 
 
-## Introduction
+# Introduction
 In this lab you will learn about configuring Webex Contact centre to manage outbound voice campaigns using the LCM (List and Campaign Manager) application.
 
-## Lab Objective
+# Lab Objective
 1. Configure Webex Contact Centre and LCM (List and Campaign Manager) application
 2. Verify that the Agents can accept outbound campaign calls from the Webex CC Agent Desktop
 
-## Lab Pre-requisites
+# Lab Pre-requisites
 - In this lab tenant, the tenant provisioning and integration is already completed. If you are using a different tenant, you can configure and use outbound campaigns only if your enterprise has purchased the Acqueon SKU and provisioning, integration is completed. 
 - You should also be able to login to agent desktop with your respective team created in previous labs
 - This step should have been completed as part of previous lab sections. If not already done, please create a team and add your agent to this new team
+- Acqueon tenant version should be `v4.2.1.2310 and above` ( instructions in this guide are based on `v4.2.1.2401`)
 
 
-## Lab Section
+# Lab Section
 
 # Lab 9.1 Verify Tenant Provisioning 
 
@@ -181,7 +186,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 
 - Configure the below: 
   - Name: `Enter desired Name`
-- Select Date Range, Time Range, TimeZone as per your requirement
+  - Select Date Range, Time Range, TimeZone as per your requirement
 - Click `Next`
 ![Outbound](/assets/images/Acqueon/AE_9.2.22.png)
 
@@ -424,7 +429,7 @@ In this lab you will learn about configuring Webex Contact centre to manage outb
 ![Outbound](/assets/images/Acqueon/AE_9.3.24.gif)
 
 - In the `Progressive & Predictive Campaign Realtime Report` we can verify that both the numbers in the contact list were dialed once an agent was available
-![Outbound](/assets/images/Acqueon/AE_9.3.25.gif)
+![Outbound](/assets/images/Acqueon/AE_9.3.25.png)
 
 
 # Lab 9.4 Predictive Campaign
