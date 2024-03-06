@@ -1,24 +1,23 @@
 ---
-title: Lab 9 - Outbound Campaign (Progressive)
-author: Gagarin Sathiyanarayanan
+title: Lab 9 - Outbound Campaign (Preview & Progressive)
+author: Gagarin Sathiyanarayanan (gasathiy@cisco.com)
 date: 2024-02-06
 layout: post
 ---
+
 ```
-title: Lab 9 - Outbound Campaign (Preview, Progressive 1:1, Progressive 1:N)
-author: Gagarin Sathiyanarayanan
-date: 2024-03-06
-layout: post
+author: Gagarin Sathiyanarayanan (gasathiy@cisco.com)
 Last modified: Wed, 06 Mar 2024
 ```
+
 
 ## Table of Contents
 
 | Topic                                                             | Lab Type      | Difficulty Level | Estimated length |
 | ----------------------------------------------------------------- | ------------- | ---------------- | ---------------- |
 | [Lab 9.1 Verify Tenant Provisioning](#verify-tenant-provisioning )                               | Practical Lab | EASY             | 5 min           |
-| [Lab 9.2 Preview Campaign](#lab-92-preview-campaign)                               | Practical Lab | EASY             | 5 min           |
-| [Lab 9.3 Progressive Campaign](#lab-93-progressive-campaign)                               | Practical Lab | EASY             | 5 min           |
+| [Lab 9.2 Preview Campaign](#lab-92-preview-campaign)                               | Practical Lab | EASY             | 20 min           |
+| [Lab 9.3 Progressive Campaign](#lab-93-progressive-campaign)                               | Practical Lab | EASY             | 20 min           |
 | [Lab 9.4 Predictive Campaign](#lab-94-predictive-campaign)                               | Coming Soon | Coming Soon             | Coming Soon           |
 | [Lab 9.5 Call Guide](#lab-95-call-guide)                               | Coming Soon | Coming Soon             | Coming Soon           |
 
