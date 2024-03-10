@@ -1,15 +1,15 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            MCUs Garage
+longtitle:        MCUs Garage
+author:           Dawoon Kim
+email:            kim1023123@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  Study and Hack All of the MCU's
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
+url:              'https://mcusgarage.github.io/'
 baseurl:          '/jekyll-gitbook'
 rss:              RSS
 
