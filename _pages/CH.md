@@ -219,7 +219,7 @@ update()
 
 - Navigate to **_Contact Center Users_** under the **_USER MANAGEMENT_**.
 
-- Find your and select the agent, to launch the **_Edit_** view for a particular User configuration.
+- Using Search, find your attendee ID and select the agent, to launch the **_Edit_** view for a particular User configuration.
 
 - Click on **_Contact Center Enabled_** toggle to move it to **_On_**.
 
