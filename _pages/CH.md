@@ -358,8 +358,10 @@ Now you can continue with Lab 2 or try the bonus SSO task below.
 # Bonus: Single Sign-on with OKTA IdP
 
 > **NOTE:** Please skip this task If you are using the **Lab Tenant**, this task can be configured only on your Gold Tenant. Inform other users on your tenant since the non SSO accounts will be deactivated.
+>
+
 >In this section you will learn how to enable Single sign-on (SSO) in Control Hub. It enables users to sign in to Webex securely by authenticating to your organizations common identity provider (IdP). The Webex App uses the Webex service to communicate with the Webex Platform Identity Service. The identity service authenticates with your identity provider (IdP)
-> {: .block-warning }
+{: .block-warning }
  
 - From the customer view in [https://admin.webex.com](https://admin.webex.com/), go to Management > Organization Settings, and then scroll to Authentication, and then toggle on the Single sign-on setting to start the setup wizard.
 
