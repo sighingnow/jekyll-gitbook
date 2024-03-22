@@ -9,8 +9,9 @@ header,
 hgroup,
 main,
 nav,
-section,
-summary {
+section
+/* summary  */
+{
     display: block
 }
 
