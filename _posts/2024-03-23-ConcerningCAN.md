@@ -266,7 +266,7 @@ Standard 와의 호환
         <td colspan="2">
 Active Error: 6 consecutive 'dominant' bits<br>
 Passive Error: 6 consecutive 'recessive' bits unless it is overwritten by ’dominant’ bits from other nodes.<br>
-에러를 감지한 ’error active’ 스테이션은 active error flag를 전송한다. SOF부터 CRC까지 모든 필드에 적용되는 비트 스터핑을 위반해서 다른 스테이션에 알린다.<br>
+에러를 감지한 ’error active’ 스테이션은 active error flag를 전송한다. SOF부터 CRC까지 모든 필드에 적용되는 비트 스터핑을 위반해서 다른 스테이션에 알림.<br>
 The PASSIVE ERROR FLAG is complete when these 6 equal bits have been detected.
         </td>
     </tr>
@@ -274,7 +274,7 @@ The PASSIVE ERROR FLAG is complete when these 6 equal bits have been detected.
         <td>Error Delimeter</td>
         <td colspan="2">
         8 ’recessive’ bits<br>
-ERROR FLAG 전송 후 각 스테이션은 'recessive' 비트를 전송하고 'recessive' 비트를 감지할 때까지 버스를 모니터링함. 그 후에는 7개의 'recessive' 비트를 더 전송하기 시작한다
+ERROR FLAG 전송 후 각 스테이션은 'recessive' 비트를 전송하고 'recessive' 비트를 감지할 때까지 버스를 모니터링함. 그 후에는 7개의 'recessive' 비트를 더 전송하기 시작함
         </td>
     </tr>
 </table>
@@ -282,7 +282,7 @@ ERROR FLAG 전송 후 각 스테이션은 'recessive' 비트를 전송하고 're
 
 ### Overload Frame
 
-프레임 사이에 추가 딜레이를 요청할때 사용
+프레임 사이에 추가 딜레이를 요청할때 사용한다.
 
 <table>
     <tr>
@@ -309,8 +309,8 @@ ERROR FLAG 전송 후 각 스테이션은 'recessive' 비트를 전송하고 're
 ### Interframe Spacing
 
 메세지 프레임을 구분하기 위한 장치
-- Data Frame 및 Remote Frame은 interframe spacing을 통해 이전 프레임과 구분됨 
-- Overload Frame 및 Error Frame은 해당 비트필드로 구분되지 않음
+- Data Frame 및 Remote Frame은 interframe spacing을 통해 이전 프레임과 구분된다.
+- Overload Frame 및 Error Frame은 해당 비트필드로 구분되지 않는다.
 
 
 <table>
@@ -346,11 +346,106 @@ ERROR FLAG 전송 후 각 스테이션은 'recessive' 비트를 전송하고 're
     </tr>
 </table>
 
-해당 프레임이 끝나면 CAN 버스라인은 IDLE 상태로 인식됨
+해당 프레임이 끝나면 CAN 버스라인은 IDLE 상태로 인식된다.
+
+## Other things related to CAN 2.0A
+
+### Message Validation
+메세지가 유효하다고 판단되는 시점
+- 송신기: 보내는 메세지의 EOF가 끝날 때까지 오류가 없는 경우
+- 수신기: 받는 메세지의 EOF가 마지막 1비트까지 오류가 없는 경우
+
+### Coding
+Data Frame과 Remote Frame의 SOF 부터 CRC Sequence 까지만 bit stuffing이 사용된다.
+- bit stuffing: 연속되는 5개의 동일한 비트가 감지되면 자동으로 반대 비트를 섞어서 보내는 것.
+
+비트스트림은 NRZ 방식으로 코딩된다.
+- NRZ(Non Return to Zero): 한 비트를 표현할 때 전압을 계속 유지한다.
+- RZ(Return to Zero): 한 클럭 내에서 데이터의 전압을 표현하고 다시 0으로 돌아간다.
+
+![Compare-NRZ-RZ](https://upload.wikimedia.org/wikipedia/commons/9/95/Digital_signal_encoding_formats-en.svg)
+
+출처 - 위키피디아
+
+### Error Handling
+
+**Error Detection**
+
+1. Bit Error: 보낸 비트값이랑 버스에서 모니터링된 값이 다른 때
+2. Stuff Error: 비트 스터핑이 잘못 되었을 때
+3. CRC Error: 계산된 CRC 값과 수신된 결과가 다를 때
+4. Form Error: 고정된 형식의 비트필드에 잘못된 비트가 포함된 때
+5. Acknowledgment Error: ACK SLOT에서 수신기가 값을 바꾸지 않은 때
+
+(+) 오류들은 같이 뜰 수 있음
+
+**Error Signalling**
+
+오류를 감지한 노드는 Error Flag를 전송한다.
+- Error Active Node: Active Error Flag 전송
+- Error Passive Node: Passive Error Flag 전송
+
+### Fault Confinement
+
+Fault Confinement 과 관련해서 송수신기는 아래 세 가지 상태 중에 있을 수 있다.
+
+1. Error Active
+   - 버스 통신에 참여할수 있음
+   - 오류가 감지되면 Active Error Flag 전송함
+2. Error Passive
+   - 버스 통신에 참여할수 있음
+   - 오류가 감지되면 Passive Error Flag 전송함
+   - 플래그 전송후 추가 전송을 시작하기전 대기함
+3. Bus Off
+   - 버스에 어떤 영향도 미칠수 없음.
+
+결함 제한을 위해 모든 버스 장치에 오류 횟수를 저장한다.
+1. 전송 오류 횟수
+2. 수신 오류 횟수
+
+이러한 개수는 총 12개의 규칙에 따라 변경된다.
+- 자세한 내용은 can 스펙 참조
+
+## Other things related to CAN 2.0B
+
+웬만한건 CAN 2.0 A와 겹치므로 Extended CAN에만 있는 내용을 추가했다.
+
+### Message Filtering
+
+전체 식별자를 기반으로 필터링된다
+- 마스크 레지스터를 사용하여 연결된 수신 버퍼에 매핑할 식별자 그룹을 선택할 수 있다.
+- 마스크 레지스터의 모든 비트는 프로그래밍 가능해야 한다. (메시지 필터링을 위해 활성화하거나 비활성화할 수 있다.)
 
 # 1.2 Concerning CAN FD
 
 CAN with Flexible Data-Rate
+
+## 특징
+
+CAN 2.0 프로토콜과 호환된다.
+- ISO 11898-1에 따라 모든 CAN 메세지를 송수신 할 수 있음
+- Data Link Layer, Physical Layer는 CAN 2.0 B 와 동일함
+
+CAN 보다 빠르고 더 많은 비트를 전송할 수 있다.
+- Classic CAN: 1 MBit/s, 8 Byte/Frame
+- CAN FD:
+  - Bit rate: Control Field의 BRS로 속도를 조절함
+    - 1 MBit/s(Arbitration phase)
+    - 8 MBit/s(Data Phase) 
+  - DLC: 0~8 Bytes(CAN 호환) + 8~64 Bytes(추가)
+
+프레임 형식이 추가 되었다.
+- 4가지 프레임 형식(CAN or CANFD / BASE or EXTENDED)
+   1. CAN BASE FORMAT: 11 bit long identifier and constant bit rate
+   ![CAN_Base_Format](../assets/postsAssets/ConcerningCAN/CAN_Base_Format.png)
+   2. CAN EXTENDED FORMAT: 29 bit long identifier and constant bit rate
+   ![CAN_Extended_Format](../assets/postsAssets/ConcerningCAN/CAN_Extended_Format.png)
+   3. CAN FD BASE FORMAT: 11 bit long identifier and dual bit rate
+   ![CANFD_Base_Format](../assets/postsAssets/ConcerningCAN/CANFD_Base_Format.png)
+   4. CAN FD EXTENDED FORMAT: 29 bit long identifier and dual bit rate
+   ![CANFD_Extended_Format](../assets/postsAssets/ConcerningCAN/CANFD_Extended_Format.png)
+
+CAN FD에는 Remote Frame이 없다.
 
 # 1.3. Concerning CAN-based Protocols
 ## UDS on CAN
