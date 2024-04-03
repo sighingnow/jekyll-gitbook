@@ -20,23 +20,23 @@ Last modified: Wed, 06 Mar 2024
 | [Lab 9.4 Predictive Campaign](#lab-94-predictive-campaign)        | Coming Soon   | Coming Soon      | Coming Soon      |
 | [Lab 9.5 Call Guide](#lab-95-call-guide)                          | Coming Soon   | Coming Soon      | Coming Soon      |
 
-# Introduction
+## Introduction
 
 In this lab you will learn about configuring Webex Contact centre to manage outbound voice campaigns using the LCM (List and Campaign Manager) application.
 
-# Lab Objective
+## Lab Objective
 
 1. Configure Webex Contact Centre and LCM (List and Campaign Manager) application
 2. Verify that the Agents can accept outbound campaign calls from the Webex CC Agent Desktop
 
-# Lab Pre-requisites
+## Lab Pre-requisites
 
 - In this lab tenant, the tenant provisioning and integration is already completed. If you are using a different tenant, you can configure and use outbound campaigns only if your enterprise has purchased the Acqueon SKU and provisioning, integration is completed.
 - You should also be able to login to agent desktop with your respective team created in previous labs
 - This step should have been completed as part of previous lab sections. If not already done, please create a team and add your agent to this new team
 - Acqueon tenant version should be `v4.2.1.2310 and above` ( instructions in this guide are based on `v4.2.1.2401`)
 
-# Lab Section
+## Lab Section
 
 # Lab 9.1 Verify Tenant Provisioning
 
