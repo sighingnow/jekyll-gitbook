@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            Guqin Book
+longtitle:        Guqin Book For Global Learners
+author:           ChenQi
+email:            guqinx@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  This is a book for non-chinese speakers to learn Guqin.
 
 version:          1.0
-gitbook_version:  3.2.3
+gitbook_version:  1.1.1
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://guqinx.com'
+baseurl:          
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
