@@ -14,12 +14,11 @@ This is a supportive videos that do not require any actions since your tenant is
 ## Table of Contents
 
 
-| Topic                                                                                                                     | Lab Type           | Difficulty Level | Estimated length |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
-| [Part 1: How to create Webex Contact Center Trial](#how-to-create-webex-contact-center-trial)                             | Watch & Understand | EASY             | 6 min            |
-| [Part 2: Provisioning with Creating a New Customer Organization](#provisioning-with-creating-a-new-customer-organization) | Watch & Understand | EASY             | 9 min            |
-| [Part 3: Provisioning on existing Customer Organization](#provisioning-on-existing-customer-organization)                 | Watch & Understand | EASY             | 7 min            |
-| [Webex Contact Center Developer Sandbox](#webex-contact-center-developer-sandbox)                                         | Read & Understand  | EASY             | 30 min           |
+| Topic                                                                                 | Lab Type           | Difficulty Level | Estimated length |
+| ------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
+| [How to create Webex Contact Center Trial](#how-to-create-webex-contact-center-trial) | Watch & Understand | EASY             | 6 min            |
+| [Provisioning New Customer Organization](#provisioning-a-new-customer-organization)   | Watch & Understand | EASY             | 9 min            |
+| [Webex Contact Center Developer Sandbox](#webex-contact-center-developer-sandbox)     | Read & Understand  | EASY             | 30 min           |
 
 
 
@@ -33,31 +32,16 @@ This video demonstrates the process of creation Webex Contact Center Trial. To c
 </div>
 
 
-
-
-# Provisioning with Creating a New Customer Organization
+# Provisioning a New Customer Organization
 This video demonstrates how to create a new Customer organization by using Provisioning email generated in Web Order.
->Note: Demonstration was done on Cisco internal lab environment and some options will not be visible in your production environment.
+>Note: The demo explains how to provision a Gold Tenant order but the process is identical to production Webex Contact Center environment
 {: .block-tip }
 
 <div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/d2868402-dd55-4a83-8dc1-9e984d787143" width="100%" height="100%" title="Provisioning New Webex Contact Center" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
-</div>
----
-
-
-# Provisioning on existing Customer Organization
-This video demonstrates how to apply Webex Contact Center subscription to an existing Customer organization by using Provisioning email generated in Web Order. In our example the organization has  a Webex Calling tenant already deployed.
->Note: Demonstration was done on Cisco internal lab environment and some options will not be visible in your production environment.
-{: .block-tip }
-
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="https://app.vidcast.io/share/embed/21310ae1-5a7b-43d5-af28-6986785aa0d3" width="100%" height="100%" title="Provisioning on existing Customer Organization.mp4" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+	<iframe src="Embedded_Link_to_Provide" width="100%" height="100%" title="Provisioning New Webex Contact Center" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
 </div>
 
-
 ---
-
 
 # RTMS Overview
 
