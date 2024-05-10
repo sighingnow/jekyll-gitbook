@@ -5,7 +5,7 @@ date: 2022-01-01
 layout: post
 ---
 ```
-Last modified: Tue, 3 Jul 2023
+Last modified: Fri, 10 May 2024
 ```
 
 ## Webex Contact Center Provisioning
@@ -14,13 +14,12 @@ This is a supportive videos that do not require any actions since your tenant is
 ## Table of Contents
 
 
-| Topic                                                                                    | Lab Type      | Difficulty Level | Estimated length |
-| -------------------------------------------------------------------------------------------- | ------------- | --------------- | ---------------- |
-| [Part 1: How to create Webex Contact Center Trial](#how-to-create-webex-contact-center-trial) | Watch & Understand | EASY            | 6 min           |
-| [Part 2: Provisioning with Creating a New Customer Organization](#provisioning-with-creating-a-new-customer-organization)                       | Watch & Understand | EASY            | 9 min            |
-| [Part 3: Provisioning on existing Customer Organization](#provisioning-on-existing-customer-organization)                       | Watch & Understand | EASY            | 7 min            |
-| [RTMS Overview](#rtms-overview)                       | Watch & Understand | EASY            | 25 min            |
-| [Webex Contact Center Developer Sandbox](#webex-contact-center-developer-sandbox)                       | Read & Understand | EASY            | 30 min            |
+| Topic                                                                                                                     | Lab Type           | Difficulty Level | Estimated length |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------- | ---------------- |
+| [Part 1: How to create Webex Contact Center Trial](#how-to-create-webex-contact-center-trial)                             | Watch & Understand | EASY             | 6 min            |
+| [Part 2: Provisioning with Creating a New Customer Organization](#provisioning-with-creating-a-new-customer-organization) | Watch & Understand | EASY             | 9 min            |
+| [Part 3: Provisioning on existing Customer Organization](#provisioning-on-existing-customer-organization)                 | Watch & Understand | EASY             | 7 min            |
+| [Webex Contact Center Developer Sandbox](#webex-contact-center-developer-sandbox)                                         | Read & Understand  | EASY             | 30 min           |
 
 
 
