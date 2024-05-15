@@ -37,8 +37,8 @@ This video demonstrates how to create a new Customer organization by using Provi
 >Note: The demo explains how to provision a Gold Tenant order but the process is identical to production Webex Contact Center environment
 {: .block-tip }
 
-<div style="padding-bottom:60.25%; position:relative; display:block; width: 100%">
-	<iframe src="Embedded_Link_to_Provide" width="100%" height="100%" title="Provisioning New Webex Contact Center" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0"></iframe>
+<div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+	<iframe src="https://app.vidcast.io/share/embed/3f80d074-8f60-40bf-9062-655ed0c8dde3" width="100%" height="100%" title="[BEGINNER] How to provision a Webex Contact Center Gold Tenant" frameborder="0" loading="lazy" allowfullscreen style="position:absolute; top:0; left: 0;border: solid; border-radius:12px;"></iframe>
 </div>
 
 ---
