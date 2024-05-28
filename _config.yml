@@ -1,17 +1,20 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title: Lucas Cruz
+longtitle: Lucas Cruz
+author: Lucas Cruz
+email: lucas@lucas-cruz.com
 description: >
-  Build Jekyll site with the GitBook style.
+  A blog where I dive into my research and discuss topics like experimentation, causal inference, reinforcement learning, and robotics.
 
-version:          1.0
-gitbook_version:  3.2.3
+version: 1.0
+gitbook_version: 3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
-rss:              RSS
+url: "https://lucas-cruz.com"
+baseurl: ""
+rss: RSS
+
+github_username: cruz-lucas
+twitter_username: _Lucas_Cruz
 
 # bootstrap: use the remote theme for the site itself
 remote_theme: sighingnow/jekyll-gitbook
@@ -19,29 +22,29 @@ remote_theme: sighingnow/jekyll-gitbook
 toc:
   enabled: true
   h_min: 1
-  h_max: 3
+  h_max: 4
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path:     /assets/gitbook/images/favicon.ico
+favicon_path: /assets/gitbook/images/favicon.ico
 
 # markdown render engine.
-markdown:         kramdown
+markdown: kramdown
 kramdown:
-  auto_ids:               true
-  input:                  GFM
-  math_engine:            mathjax
-  smart_quotes:           lsquo,rsquo,ldquo,rdquo
-  toc_levels:             1..6
-  syntax_highlighter:     rouge
+  auto_ids: true
+  input: GFM
+  math_engine: mathjax
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  toc_levels: 1..6
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
-    guess_lang:           true
+    guess_lang: true
 
 syntax_highlighter_style: colorful
 
-markdown_ext:             markdown,mkdown,mkdn,mkd,md
+markdown_ext: markdown,mkdown,mkdn,mkd,md
 
 # Permalinks
-permalink:                /:categories/:year-:month-:day-:title:output_ext
+permalink: /:categories/:year-:month-:day-:title:output_ext
 
 # Disqus comments
 # disqushandler:            sighingnow
@@ -56,9 +59,9 @@ collections:
 
 page_width: 800px
 
-destination:      ./_site
-incremental:      false
-regenerate:       true
+destination: ./_site
+incremental: false
+regenerate: true
 
 plugins:
   - jekyll-feed
