@@ -699,8 +699,9 @@ update()
 
 ### Coming soon:
 #### Making the flow bi-lingual
-#### Adding HTTP lookups and agent routing
-#### Business Hours
+#### Cisco TTS
+#### Adding HTTP Request
+#### Pubble Template
 
 
 
