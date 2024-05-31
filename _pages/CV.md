@@ -11,7 +11,20 @@ permalink: /cv
 
 ## Contact
 
-[Email](mailto:lucas@lucas-cruz.com) | [LinkedIn](https://www.linkedin.com/in/lucasdearaujocruz) | [GitHub](https://github.com/cruz-lucas)
+<div style="display: flex; gap: 10px;">
+    <a href="mailto:lucas@lucas-cruz.com">
+        <img src="https://img.icons8.com/ios-filled/50/apple-mail.png" alt="Email" width="30" height="30"/>
+    </a>
+    <a href="https://linkedin.com/in/lucasdearaujocruz" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" width="30" height="30"/>
+    </a>
+    <a href="https://github.com/cruz-lucas" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" width="30" height="30"/>
+    </a>
+    <a href="https://twitter.com/_Lucas_Cruz" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="Twitter" width="30" height="30"/>
+    </a>
+</div>
 
 ## Education
 
@@ -37,7 +50,7 @@ Mar 2018 – Jun 2019 (1 yr 4 mos)
 
 ## Work Experience
 
-**Senior Data Engineer**  
+**Senior Machine Learning Engineer**  
 *Hurb*  
 March 2023 – Present
 - Directing Hurb’s experimentation program, fostering an experimentation culture via guides, demos, and tutorials, and leading the platform’s development and deployment.
@@ -45,7 +58,7 @@ March 2023 – Present
 **Research and Development Engineer**  
 *Loon Factory*  
 Dec 2021 – March 2023 (2 yr 4 mos)
-- Founding member of Loon Factory, a R&D lab focused on high-impact societal issues. Led the Libert project, employing Large Language Models to predict civil lawsuit outcomes with 83% accuracy.
+- Founding member of Loon Factory, a R&D lab focused on high-impact societal issues. Led the Libert project, employing Large Language Models to predict civil lawsuit outcomes with 83% accuracy (in production).
 - Managed end-to-end machine learning model development, from data handling to deployment and monitoring, and led a 5-member team.
 
 **Research and Development Engineer (Internship)**  
