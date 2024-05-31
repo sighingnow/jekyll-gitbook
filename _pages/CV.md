@@ -7,9 +7,7 @@ layout: post
 permalink: /cv
 ---
 
-# Lucas Cruz
-
-## Contact
+# Contact
 
 <div style="display: flex; gap: 10px;">
     <a href="mailto:lucas@lucas-cruz.com">
@@ -26,14 +24,14 @@ permalink: /cv
     </a>
 </div>
 
-## Education
+# Education
 
 **B.Sc. in Electronics and Computer Engineering**  
 Federal University of Rio de Janeiro (UFRJ - Brazil)  
 Thesis: Applications of Machine Learning Methods for Pathology Classification in X-Ray Images  
 Advisor: Natanael de Moura Junior
 
-## Research Experience
+# Research Experience
 
 **Undergraduate Researcher**  
 *Signal Processing Lab*  
@@ -48,7 +46,7 @@ Mar 2018 – Jun 2019 (1 yr 4 mos)
 - Prototyped PCBs for subsea use with Altium Designer, optimizing underwater thruster controls, cameras, and sensors for precision and reliability.
 - Developed C++ routines for ROV communication and control, enabling SPI data interfacing between AVR microcontrollers to allow vehicle module coordination.
 
-## Work Experience
+# Work Experience
 
 **Senior Machine Learning Engineer**  
 *Hurb*  
@@ -71,14 +69,14 @@ May 2021 – Oct 2021 (7 mos)
 Oct 2020 – April 2021 (7 mos)
 - Designed and trained linear models for SME credit analysis, leveraging diverse economic and sociodemographic data.
 
-## Teaching Experience
+# Teaching Experience
 
 **Robotics Instructor**  
 *TRON - Ensino de Robótica Educativa*  
 May 2018 – Aug 2018 (3 mos)
 - Conducted a robotics workshop for 9-10-year-olds, teaching basics of electricity, electronics, and Arduino programming.
 
-## Extracurricular Activities
+# Extracurricular Activities
 
 **MinervaBots - Robotics Team**  
 April 2017 – Jan 2020 (2 yrs 9 mos)
@@ -87,12 +85,12 @@ April 2017 – Jan 2020 (2 yrs 9 mos)
 - Led a 6-person cross-functional team in developing an autonomous sumo robot.
 - Coordinated and ensured technical readiness of 12 robots for competitions.
 
-## Presentations
+# Presentations
 
 **11th Academic Integration Week:**  
 Support Vector Machine (SVM) to Support Tuberculosis Screening
 
-## Certificates
+# Certificates
 
 **Climate Change AI Summer School 2023**  
 Climate Change AI, Sep 2023
