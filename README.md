@@ -4,9 +4,14 @@ title: Home
 permalink: /
 ---
 
+<div style="flex: 0 0 200px;">
+    <img src="./assets/gitbook/images/profile.jpeg" alt="Lucas" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+</div>
+
+
 ## About Me
 
-Hi, I'm Lucas! I'm a senior Machine Learning Engineer at Hurb, a Brazilian travel company, and starting this fall, I will be a master's student at the University of Alberta. As an electronics engineer, roboticist, classical guitarist, and autistic individual, I try to be as precise as possible in my writing, but feel free to contact me to suggest any changes.
+Hi, I'm Lucas! I'm a senior Machine Learning Engineer and, starting this fall, I will be a master's student at the University of Alberta. As an electronics engineer, roboticist, classical guitarist, and autistic individual, I try to be as precise as possible in my writing, but feel free to contact me to suggest any corrections.
 
 I began writing as a way to deepen my understanding of the topics I was studying, approaching them as if I were explaining them to myself. This blog is a reflection of that journey, a place where I can share my passion for learning and exploration.
 
