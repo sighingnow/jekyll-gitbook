@@ -1,21 +1,24 @@
 ---
 layout: home
-title: Home
+title: About
 permalink: /
 ---
 
-<div style="flex: 0 0 200px;">
-    <img src="./assets/gitbook/images/profile.jpeg" alt="Lucas" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
-</div>
+Hi, I'm Lucas, an electronics engineer, roboticist, classical guitarist, and autistic individual.
+
+<img src="./assets/gitbook/images/profile.jpeg" alt="Lucas" style="float: right; margin: 0 50px 20px 30px; border-radius: 50%; width: 200px; height: auto; object-fit: cover;">
+
+I'm a senior Machine Learning Engineer at Hurb, a Brazilian travel company. I lead the experimentation program, developing a culture of experimentation within the company. 
+
+<!-- This includes managing the hypothesis workflow, developing courses, providing training and guides, optimizing data pipelines, and working on causal inference and recommendation models. -->
+
+Starting this fall, I will be a master's student at the University of Alberta, where I will focus my research on reinforcement learning. My academic journey is driven by my curiosity and a desire to push the boundaries of what's possible in the field of artificial intelligence and autonomous agents.
+
+I began writing as a way to deepen my understanding of the topics I was studying, approaching them as if I were explaining them to myself. This blog is a reflection of that journey, a place where I can share my passion for learning and exploration. Here, you'll find my thoughts on various topics, from reinforcement learning and robotics to statistics and beyond.
+
+Whether you're a fellow researcher, a curious student, or someone with a love for learning, I hope you'll find value in my writings. Feel free to reach out with questions, suggestions, or collaboration ideas. Make yourself at home.
 
 
-## About Me
-
-Hi, I'm Lucas! I'm a senior Machine Learning Engineer and, starting this fall, I will be a master's student at the University of Alberta. As an electronics engineer, roboticist, classical guitarist, and autistic individual, I try to be as precise as possible in my writing, but feel free to contact me to suggest any corrections.
-
-I began writing as a way to deepen my understanding of the topics I was studying, approaching them as if I were explaining them to myself. This blog is a reflection of that journey, a place where I can share my passion for learning and exploration.
-
-Through my writing, I hope to inspire others to dive into the fascinating worlds of reinforcement learning, robotics, statistics, and beyond. Feel free to reach out with questions, suggestions, or collaboration ideas. Thank you for visiting, and make yourself at home.
 
 
 <div style="display: flex; gap: 10px;">

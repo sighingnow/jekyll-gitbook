@@ -95,7 +95,7 @@ A/B testing involves comparing two versions of a variable to determine which one
 <br>
 
 ```mermaid
-graph LR;
+graph TD;
 id1["Button A"];
 id2["Button B"];
 
@@ -576,3 +576,142 @@ In a randomization test, we do not consider all possible rearrangements. Instead
   $$
   p\text{-value} = \frac{1}{N} \sum_{k=1}^{N} \mathbb{I}\{ t^*_k \geq t \}
   $$
+
+## Chapter 3: Experiments with More Than Two Conditions
+
+### 3.1 Anatomy of an "A/B/$m$" Test
+
+In this chapter, we consider the design and analysis of experiments consisting of more than two experimental conditions, commonly referred to as “A/B/m Testing.” 
+
+**Canonical A/B/m test:**
+
+<br>
+
+```mermaid
+graph TD;
+id1["Click me"];
+id2["Click me"];
+id3["Click me"];
+id4["Click me"];
+
+style id1 fill:#fa828e
+style id2 fill:#8284fa
+style id3 fill:green
+style id4 fill:yellow
+
+```
+
+<center>
+Figure 3.1: Canonical Button Colour Test. What colour maximizes click-through rate?
+</center>
+<br>
+
+Typically, the goal is to decide which condition is optimal with respect to some metric of interest, $\theta$, such as:
+- Mean
+- Proportion
+- Variance
+- Quantile
+- Any statistic that can be calculated from sample data
+
+The design of an A/B/m test is similar to a two-condition experiment:
+1. Choose a metric of interest $\theta$ that addresses the question you are trying to answer.
+2. Determine the response variable $y$ to be measured on each unit to estimate $\hat{\theta}$.
+3. Choose the design factor $x$ and the $m$ levels you will experiment with.
+4. Choose $n_1, n_2, \ldots, n_m$ and assign units to conditions at random.
+5. Collect the data and estimate the metric of interest in each condition: $\hat{\theta}_1, \hat{\theta}_2, \ldots, \hat{\theta}_m$.
+
+Determining which condition is optimal typically involves a series of pairwise comparisons (e.g., $t$-tests, $z$-tests, or randomization tests). It is useful to begin with a _gatekeeper_ test (test of overall equality) to determine whether there is any difference between the $m$ experimental conditions. Formally, we phrase such a question as the following statistical hypothesis:
+
+$$
+H_0: \theta_1 = \theta_2 = \cdots = \theta_m \quad \text{versus} \quad H_A: \theta_j \neq \theta_k \text{ for some } j \neq k
+$$
+
+In the case of means:
+
+$$
+H_0: \mu_1 = \mu_2 = \cdots = \mu_m \quad \text{versus} \quad H_A: \mu_j \neq \mu_k \text{ for some } j \neq k
+$$
+
+In the case of proportions:
+
+$$
+H_0: \pi_1 = \pi_2 = \cdots = \pi_m \quad \text{versus} \quad H_A: \pi_j \neq \pi_k \text{ for some } j \neq k
+$$
+
+### 3.2 Comparing Means in Multiple Conditions
+
+Assume that our response variable follows a normal distribution, with the mean depending on the condition in which we take the measurements, and the variance being the same across all conditions:
+
+$$
+Y_{ij} \sim \mathcal{N}(\mu_j, \sigma^2) \quad \text{for} \ i = 1, 2, \ldots, n_j \ \text{and} \ j = 1, 2, \ldots, m
+$$
+
+We use an $F$-test to test for means:
+$$
+H_0: \mu_1 = \mu_2 = \cdots = \mu_m \quad \text{versus} \quad H_A: \mu_j \neq \mu_k \text{ for some } j \neq k
+$$
+
+#### The $F$-test for Overall Significance in a Linear Regression
+
+We use the $F$-test for overall significance in an appropriately defined linear regression model. This model is defined as:
+
+$$
+Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \cdots + \beta_{m-1} x_{i, m-1} + \epsilon_i
+$$
+
+Where:
+- $Y_i$ is the response observation for unit $i = 1, 2, \ldots, N = \sum_{j=1}^m n_j$.
+- $\epsilon_i$ is the random error term assumed to follow a $\mathcal{N}(0, \sigma^2)$ distribution independently for all $i$.
+- $\beta_0$ is the expected response in condition $m$.
+- $\beta_j$ is the expected difference in response value in condition $j$ versus condition $m$ for $j = 1, 2, \ldots, m-1$.
+
+The expected responses are:
+$$
+\mathbb{E}[Y_i | x_{i1} = x_{i2} = \cdots = x_{i,m-1} = 0] = \beta_0 = \mu_m
+$$
+$$
+\mathbb{E}[Y_i | x_{ij} = 1] = \beta_0 + \beta_j = \mu_j \quad \text{for} \ j = 1, 2, \ldots, m-1
+$$
+
+Based on these assumptions, $H_0: \theta_1 = \theta_2 = \cdots = \theta_m$ is true if and only if $\beta_1 = \beta_2 = \cdots = \beta_{m-1} = 0$, which is equivalent to testing:
+$$
+H_0: \beta_1 = \beta_2 = \cdots = \beta_{m-1} = 0 \quad \text{versus} \quad H_A: \beta_j \neq 0 \text{ for some } j
+$$
+
+This hypothesis corresponds to the $F$-test for overall significance in the model. The test statistic is the ratio of the regression mean squares (MSR) to the mean squared error (MSE):
+
+$$
+t = \frac{MSR}{MSE}
+$$
+
+Intuitively, the test statistic compares the response variability between conditions to the response variability within conditions:
+- Average response in condition $j$: $\bar{y}_{\cdot j} = \frac{1}{n_j} \sum_{i=1}^{n_j} y_{ij}$
+- Overall average response: $\bar{y}_{\cdot \cdot} = \frac{1}{N} \sum_{j=1}^m \sum_{i=1}^{n_j} y_{ij} = \frac{1}{N} \sum_{j=1}^m n_j \bar{y}_{\cdot j}$
+- Quantifies variability between conditions: $SSC = \sum_{j=1}^m n_j (\bar{y}_{\cdot j} - \bar{y}_{\cdot \cdot})^2$
+- Quantifies variability within conditions: $SSE = \sum_{j=1}^m \sum_{i=1}^{n_j} (y_{ij} - \bar{y}_{\cdot j})^2$
+- Quantifies overall variability: $SST = \sum_{j=1}^m \sum_{i=1}^{n_j} (y_{ij} - \bar{y}_{\cdot \cdot})^2 = SSC + SSE$
+
+The null distribution for this test is $F(m-1, N-m)$. The $p$-value is computed as:
+
+$$
+p\text{-value} = \mathbb{P}(T \geq t) \quad \text{where} \ T \sim F(m-1, N-m)
+$$
+
+If $H_0: \mu_1 = \cdots = \mu_m$ is true, then $\mathbb{E}[MSC] = \sigma^2$ and $\mathbb{E}[MSE] = \sigma^2$.
+
+**Table 3.1: ANOVA Table**
+| Source    | SS   | d.f. | MS          | Test Statistic       |
+|-----------|------|------|-------------|----------------------|
+| Condition | SSC  | $m-1$ | MSC = SSC/$(m-1)$ | $t = MSC/MSE$  |
+| Error     | SSE  | $N-m$ | MSE = SSE/$(N-m)$ |                      |
+| Total     | SST  | $N-1$ |             |                      |
+
+#### Example: Candy Crush Boosters
+
+Candy Crush is experimenting with three different versions of in-game “boosters”: the lollipop hammer, the jelly fish, and the colour bomb. Users are randomized to one of these three conditions ($n_1 = 121$, $n_2 = 135$, $n_3 = 117$), and they receive 5 boosters corresponding to their condition. Interest lies in evaluating the effect of these boosters on the length of time a user plays the game.
+
+Let $\mu_j$ represent the average length of gameplay (in minutes) associated with booster condition $j = 1, 2, 3$. While interest lies in finding the condition associated with the longest average length of gameplay, here we first test whether booster type influences gameplay length ($\mu_1 = \mu_2 = \mu_3$).
+
+We fit the linear regression model:
+$$
+Y = \beta_0 + \beta_1 x
