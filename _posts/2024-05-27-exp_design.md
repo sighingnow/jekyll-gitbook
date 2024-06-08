@@ -99,8 +99,8 @@ graph TD;
 id1["Button A"];
 id2["Button B"];
 
-style id1 fill:#fa828e
-style id2 fill:#8284fa
+style id1 fill:#1f77b4,stroke-width:0px,color:white
+style id2 fill:#ff7f0e,stroke-width:0px,color:white
 
 ```
 
@@ -594,10 +594,10 @@ id2["Click me"];
 id3["Click me"];
 id4["Click me"];
 
-style id1 fill:#fa828e
-style id2 fill:#8284fa
-style id3 fill:green
-style id4 fill:yellow
+style id1 fill:#1f77b4,stroke-width:0px,color:white
+style id2 fill:#ff7f0e,stroke-width:0px,color:white
+style id3 fill:#2ca02c,stroke-width:0px,color:white
+style id4 fill:#d62728,stroke-width:0px,color:white
 
 ```
 

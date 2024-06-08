@@ -35,6 +35,9 @@ GEM
     google-protobuf (4.27.0-arm64-darwin)
       bigdecimal
       rake (>= 13)
+    google-protobuf (4.27.0-x64-mingw-ucrt)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.27.0-x86-linux)
       bigdecimal
       rake (>= 13)
@@ -95,6 +98,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.16.5-x64-mingw-ucrt)
+      racc (~> 1.4)
     nokogiri (1.16.5-x86-linux)
       racc (~> 1.4)
     nokogiri (1.16.5-x86_64-darwin)
@@ -123,6 +128,8 @@ GEM
       google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.77.2-arm64-darwin)
       google-protobuf (>= 3.25, < 5.0)
+    sass-embedded (1.77.2-x64-mingw-ucrt)
+      google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.77.2-x86-linux-gnu)
       google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.77.2-x86-linux-musl)
@@ -149,6 +156,7 @@ PLATFORMS
   arm-linux-gnueabihf
   arm-linux-musleabihf
   arm64-darwin
+  x64-mingw-ucrt
   x86-linux
   x86-linux-gnu
   x86-linux-musl
