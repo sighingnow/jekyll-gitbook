@@ -24,6 +24,29 @@ permalink: /cv
     </a>
 </div>
 
+# Work Experience
+
+**Senior Machine Learning Engineer**  
+*Hurb*  
+March 2024 – Present
+- Directing Hurb’s experimentation program, fostering an experimentation culture via guides, demos, and tutorials, and leading the platform’s development and deployment.
+
+**Research and Development Engineer**  
+*Loon Factory*  
+Dec 2021 – March 2024 (2 yr 4 mos)
+- Founding member of Loon Factory, a R&D lab focused on high-impact societal issues. Led the Libert project, employing Large Language Models to predict civil lawsuit outcomes with 83% accuracy (in production).
+- Managed end-to-end machine learning model development, from data handling to deployment and monitoring, and led a 5-member team.
+
+**Research and Development Engineer (Internship)**  
+*TechnipFMC*  
+May 2021 – Oct 2021 (7 mos)
+- Designed PCBs for an underwater robotic manipulator, ensuring power and signal continuity for joint motor control, safeguarding electronic subsystem integrity.
+
+**Data Scientist (Internship)**  
+*Murabei Data Science*  
+Oct 2020 – April 2021 (7 mos)
+- Designed and trained linear models for SME credit analysis, leveraging diverse economic and sociodemographic data.
+
 # Education
 
 **B.Sc. in Electronics and Computer Engineering**  
@@ -46,28 +69,6 @@ Mar 2018 – Jun 2019 (1 yr 4 mos)
 - Prototyped PCBs for subsea use with Altium Designer, optimizing underwater thruster controls, cameras, and sensors for precision and reliability.
 - Developed C++ routines for ROV communication and control, enabling SPI data interfacing between AVR microcontrollers to allow vehicle module coordination.
 
-# Work Experience
-
-**Senior Machine Learning Engineer**  
-*Hurb*  
-March 2023 – Present
-- Directing Hurb’s experimentation program, fostering an experimentation culture via guides, demos, and tutorials, and leading the platform’s development and deployment.
-
-**Research and Development Engineer**  
-*Loon Factory*  
-Dec 2021 – March 2023 (2 yr 4 mos)
-- Founding member of Loon Factory, a R&D lab focused on high-impact societal issues. Led the Libert project, employing Large Language Models to predict civil lawsuit outcomes with 83% accuracy (in production).
-- Managed end-to-end machine learning model development, from data handling to deployment and monitoring, and led a 5-member team.
-
-**Research and Development Engineer (Internship)**  
-*TechnipFMC*  
-May 2021 – Oct 2021 (7 mos)
-- Designed PCBs for an underwater robotic manipulator, ensuring power and signal continuity for joint motor control, safeguarding electronic subsystem integrity.
-
-**Data Scientist (Internship)**  
-*Murabei Data Science*  
-Oct 2020 – April 2021 (7 mos)
-- Designed and trained linear models for SME credit analysis, leveraging diverse economic and sociodemographic data.
 
 # Teaching Experience
 
