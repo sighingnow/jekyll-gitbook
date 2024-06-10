@@ -8,7 +8,7 @@ description: >
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://hagi39077.github.io'
+url:              'https://hagi39077.github.io/blog'
 baseurl:          '/blog'
 rss:              RSS
 
