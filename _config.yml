@@ -9,7 +9,7 @@ version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://hagi39077.github.io/blog/'
-baseurl:          '/blog'
+baseurl:          '/_posts'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
