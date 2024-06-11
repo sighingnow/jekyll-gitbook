@@ -10,9 +10,7 @@ Hi, I'm Lucas, an electronics engineer, roboticist, classical guitarist, and aut
 
 I'm a senior Machine Learning Engineer at Hurb, a Brazilian travel company. I lead the experimentation program, developing a culture of experimentation within the company. 
 
-<!-- This includes managing the hypothesis workflow, developing courses, providing training and guides, optimizing data pipelines, and working on causal inference and recommendation models. -->
-
-Starting this fall, I will be a master's student at the University of Alberta, where I will focus my research on reinforcement learning. My academic journey is driven by my curiosity and a desire to push the boundaries of what's possible in the field of artificial intelligence and autonomous agents.
+Starting this fall, I will be a master's student at the University of Alberta, where I will focus my research on reinforcement learning.
 
 I began writing as a way to deepen my understanding of the topics I was studying, approaching them as if I were explaining them to myself. This blog is a reflection of that journey, a place where I can share my passion for learning and exploration. Here, you'll find my thoughts on various topics, from reinforcement learning and robotics to statistics and beyond.
 

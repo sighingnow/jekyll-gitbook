@@ -1,14 +1,19 @@
 ---
-title: Experimental Design Handbook
+title: Experimental Design and Analysis Handbook
 author: Lucas Cruz
 date: 2024-05-27
-category: experimentation
+category: [experimentation, statistics]
 layout: post
 permalink: /experimental-design
 mermaid: true
 ---
 
-This handbook provides an introductory guide to experimental design, made for data scientists and researchers. The material is based on the lecture notes from the University of Waterloo's STAT 430/830 course, which offers an in-depth exploration of statistical methods for designing and analyzing experiments. The goal is to present these concepts in a clear and precise manner, ensuring that readers can apply these principles to their own work in experimentation as I did.
+This handbook provides an introductory guide to experimental design, made for data scientists and researchers. The material is based on the book [Design and Analysis of Experiments, 10th Edition](https://www.wiley.com/en-br/Design+and+Analysis+of+Experiments%2C+10th+Edition-p-9781119492443) by Douglas C. Montgomery. The goal is to present these concepts clearly and precisely, ensuring that readers can apply these principles to their own work in experimentation as I did.
+
+> **Note:** While the book focuses on engineering and science applications, this handbook will emphasize product and e-commerce applications.
+>
+> For a more comprehensive coverage of experimental design principles, **I highly recommend checking out the full book**.
+{: .block-tip }
 
 ## Chapter 1: Introduction
 
@@ -48,34 +53,7 @@ In contrast, observational studies involve passively collecting data without any
 | **Experiment**          | Causal Inference is clean                     | Experiments might be unethical, risky, or costly |
 | **Observational Study** | No additional cost, risk, or ethical concerns | Causal inference is muddy                        |
 
-### 1.3 QPDAC: Answering Questions with Data
-
-The QPDAC cycle is a structured approach for using data to answer questions. The first step is to clearly define the question, ensuring it is quantifiable and aligned with the metric of interest. For example, Nike might ask, "Which visual layout, tile view or list view, corresponds to the highest checkout rate?" Similarly, Nixon might ask, "Which ad theme, camping, surfing, rock climbing, or business, corresponds to the highest average viewing duration?"
-
-<br>
-```mermaid
-graph LR;
-Question-->Plan-->Data-->Analysis-->Conclusion-->Question;
-```
-
-<center>
-Figure 1.1: QPDAC cycle
-</center>
-<br>
-
-Next, in the planning stage, we design the experiment and address all pre-experimental questions. This involves choosing the response variable based on the question and metric of interest, identifying factors that might influence the response, and determining the experimental units, sample size, and sampling mechanism. For instance, factors could be:
-
-1. **Design factors** that are manipulated in the experiment;
-2. **Nuisance factors** that are controlled through _blocking_;
-3. **Allowed-to-vary factors** that are neither controlled nor specifically considered.
-
-Data collection follows the plan and must be executed correctly to ensure the validity of the analysis. **An A/A test can be conducted to verify the random assignment of units to conditions**. If the ratio of users between variants deviates significantly from the expected ratio, the experiment may suffer from a **sample ratio mismatch (SRM)**.
-
-In the analysis stage, we statistically analyze the collected data to provide an objective answer to the question. This typically involves estimating parameters, fitting models, and conducting hypothesis tests. If the experiment was well-designed and the data correctly collected, the analysis should be straightforward.
-
-Finally, in the conclusion stage, we interpret the results of the analysis and communicate the findings to all stakeholders. Clearly communicating both successful and unsuccessful outcomes helps foster a culture of experimentation.
-
-### 1.4 Fundamental Principles of Experimental Design
+### 1.3 Fundamental Principles of Experimental Design
 
 **Randomization**  
 Randomization is crucial in experimental design and occurs at two levels: selecting experimental units for inclusion and assigning them to experimental conditions. The first level ensures that the sample is representative of the population, allowing for generalizable conclusions. The second level balances the effects of extraneous variables, making conditions more homogeneous and facilitating causal inference.
@@ -85,6 +63,105 @@ Replication involves having multiple response observations within each experimen
 
 **Blocking**  
 Blocking is a technique used to control nuisance factors by holding them fixed during the experiment. For example, in an email promotion experiment by GAP, different variations of the message in the subject line were tested to maximize the open rate. To control for the nuisance factor of "send time," all emails were sent at the same time of day and on the same day of the week, thereby eliminating its effect.
+
+### 1.4 Guidelines for Designing Experiments
+
+A general procedure for designing and analyzing an experiment is outlined below:
+1. [Recognition of and Statement of the Problem](#141-recognition-of-and-statement-of-the-problem)
+2. [Selection of the Response Variable](#141-recognition-of-and-statement-of-the-problem)
+3. [Choice of Factors, Levels, and Ranges](#143-choice-of-factors-levels-and-range)
+4. [Choice of Experimental Design](#144-choice-of-experimental-design)
+5. [Performing the Experiment](#145-performing-the-experiment)
+6. [Statistical Analysis of the Data](#146-statistical-analysis-of-the-data)
+7. [Conclusions and Recommendations](#147-conclusions-and-recommendations)
+
+
+#### 1.4.1 Recognition of and Statement of the Problem
+
+A clear and concise problem statement is crucial. It defines the objectives of the experiment and lays the foundation for all subsequent steps. Recognizing and defining the problem often requires input from various stakeholders including engineering, marketing, management, customers, and operating personnel. Engaging a diverse team can ensure all perspectives are considered, leading to a well-rounded problem definition.
+
+Experiments are conducted for a variety of reasons, each aligned with specific objectives and intended outcomes. Here are some common motivations for running experiments:
+
+1. **Factor Screening or Characterization:**
+   - **Purpose:** To identify the most significant factors affecting the response variable.
+   - **Application:** In digital marketing, this could involve identifying which factors (such as ad copy, target audience, or time of day) have the most significant impact on conversion rates. For machine learning, factor screening might involve determining which features in a dataset are the most predictive for a given model.
+
+2. **Optimization:**
+   - **Purpose:** To find the optimal levels of the identified significant factors to achieve the best performance.
+   - **Application:** For an ecommerce website, optimization experiments might focus on finding the best placement for call-to-action buttons to maximize click-through rates. In machine learning, optimization could involve tuning hyperparameters to improve model accuracy.
+
+3. **Confirmation:**
+   - **Purpose:** To verify that the system operates as expected under the optimized conditions.
+   - **Application:** Before deploying a new recommendation algorithm on a live ecommerce platform, confirmation experiments can ensure it performs well under real-world traffic conditions.
+
+4. **Discovery:**
+   - **Purpose:** To explore new factors, materials, or conditions that might improve the system.
+   - **Application:** In a web application, discovery experiments could involve testing new UI/UX designs to see if they improve user engagement.
+
+5. **Robustness:**
+   - **Purpose:** To understand how variability in the system affects the response and to ensure the system performs reliably under different conditions.
+   - **Application:** For a digital payment system, robustness testing ensures the system operates correctly under various network conditions. In ecommerce, robustness experiments might test the impact of different loading times on user satisfaction and purchase behavior.
+
+By understanding these motivations, experimenters can better design their studies to address the specific goals and needs of their projects.
+
+#### 1.4.2 Selection of the Response Variable
+
+The response variable is the measurable outcome that is affected by the experimental conditions. It is essential that this variable accurately reflects the objectives of the experiment and provides useful information about the process under study. Commonly, the average or standard deviation of the measured characteristic is used as the response variable. Ensuring the chosen response variable is measurable and reliable is critical to the experiment's success.
+
+**Examples of Response Variables:**
+
+- **In ecommerce:** Conversion rate, average order value, or bounce rate.
+- **In digital systems:** System latency, error rate, or uptime percentage.
+- **In machine learning:** Model accuracy, precision, recall, or F1 score.
+
+
+#### 1.4.3 Choice of Factors, Levels, and Ranges
+
+Factors are the variables that the experimenter manipulates to observe their effect on the response variable. Identifying and selecting the relevant factors involves classifying them as design factors, held-constant factors, or allowed-to-vary factors. Design factors are the main focus of the study, while held-constant factors are kept at a specific level to avoid confounding effects. Allowed-to-vary factors are those that are not of primary interest but are allowed to change to study their potential impact.
+
+**Types of Factors:**
+- **Design Factors:** Variables actively manipulated to observe their impact.
+- **Held-Constant Factors:** Variables kept constant to avoid confounding effects.
+- **Allowed-to-Vary Factors:** Variables that may change and potentially affect the outcome.
+
+**Nuisance Factors**
+These factors can be controllable or uncontrollable and often introduce variability that must be accounted for. Techniques such as blocking, analysis of covariance, and robust design are used to manage these effects.
+
+**Examples:**
+- **In ecommerce:** Factors might include different website layouts, promotional offers, or pricing strategies.
+- **In digital systems:** Factors could be server configurations, caching strategies, or network conditions.
+- **In machine learning:** Factors might be hyperparameters, feature sets, or training algorithms.
+
+#### 1.4.4 Choice of Experimental Design
+
+Design selection involves choosing the number of replicates, the sequence of experimental trials, and whether to include blocking or other randomization restrictions. The design should aim to minimize variability and ensure accurate results.
+
+**Common Experimental Designs:**
+- **Completely Randomized Design (CRD):** Suitable when all experimental units are homogeneous.
+- **Randomized Block Design (RBD):** Used when there are identifiable blocks that might introduce variability.
+- **Factorial Design:** Allows studying the effect of two or more factors simultaneously.
+
+#### 1.4.5 Performing the Experiment
+
+Executing the experiment involves careful monitoring to ensure adherence to the plan. Up-front planning and assigning responsibilities for each trial run are essential to prevent errors and ensure consistency.
+
+**Best Practices:**
+- **Pre-Experiment Checks:** Ensure all equipment and systems are functioning correctly.
+- **Training:** Ensure all personnel involved understand their roles and responsibilities.
+- **Data Collection Protocols:** Establish clear protocols for collecting and recording data.
+
+#### 1.4.6 Statistical Analysis of the Data
+
+Statistical methods should be used to analyze the data objectively. This includes hypothesis testing, confidence interval estimation, and regression analysis. Presenting the results through empirical models helps in interpreting the relationship between the factors and the response variable.
+
+#### 1.4.7 Conclusions and Recommendations
+
+The final step involves interpreting the results, drawing practical conclusions, and making recommendations based on the findings. This may include follow-up experiments and confirmation testing to validate the conclusions.
+
+**Considerations:**
+- **Practical Significance:** Assess whether the results have meaningful implications in the real world.
+- **Limitations:** Identify any limitations of the study and suggest areas for future research.
+- **Actionable Insights:** Provide clear, actionable recommendations based on the findings.
 
 ## Chapter 2: Experiments with Two Conditions
 
