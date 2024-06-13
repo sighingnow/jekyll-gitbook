@@ -53,7 +53,7 @@ A probability distribution describes how the values of a random variable are dis
 
     Where $p$ is the probability of success, $1-p$ is the probability of failure, and $k$ can be either 0 (failure) or 1 (success).
 
-![Bernoulli distribution](/assets/gitbook/images/stat/bernoulli.png)
+{% include stat/bernoulli.html %}
 
   - **Poisson Distribution:** The Poisson distribution describes the number of events occurring within a fixed interval of time or space when these events happen independently of each other and at a constant rate.
     - **Example:** The number of emails you receive in an hour.
@@ -65,7 +65,7 @@ A probability distribution describes how the values of a random variable are dis
 
     Where $\lambda$ is the average number of events in the interval, $k$ is the number of occurrences, and $e$ is the Euler's constant.
 
-![Poisson distribution](/assets/gitbook/images/stat/poisson.png)
+{% include stat/poisson.html %}
 
 - **Continuous Probability Distributions:** Include probability density functions (PDFs) which describe the likelihood of a continuous random variable falling within a particular range of values, such that:
 
@@ -93,7 +93,7 @@ A probability distribution describes how the values of a random variable are dis
 
     Where $a$ and $b$ are the minimum and maximum values of the range.
 
-![Uniform distribution](/assets/gitbook/images/stat/uniform.png)
+{% include stat/uniform.html %}
 
   - **Normal Distribution:** The normal distribution, often referred to as the Gaussian distribution or bell curve, describes data that clusters around a mean.
     - **Example:** Heights of people in a population.
@@ -105,7 +105,7 @@ A probability distribution describes how the values of a random variable are dis
 
     Where $\mu$ is the mean and $\sigma$ is the standard deviation.
 
-![Normal distribution](/assets/gitbook/images/stat/normal.png)
+{% include stat/normal.html %}
 
   - **Student's t-Distribution:** The Student's t-distribution is used to estimate population parameters when the sample size is small and the population standard deviation is unknown.
     - **Example:** The distribution of the sample mean for small sample sizes.
@@ -118,7 +118,7 @@ A probability distribution describes how the values of a random variable are dis
     Where $\nu$ is the degrees of freedom, and $\Gamma$ the gamma function.
 
 
-![T-distribution](/assets/gitbook/images/stat/t-dist.png)
+{% include stat/t-dist.html %}
 
 ## Mean, Variance, and Expected Values
 These are fundamental concepts in statistics that describe the central tendency and variability of a probability distribution.
