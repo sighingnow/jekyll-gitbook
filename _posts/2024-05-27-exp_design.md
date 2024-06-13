@@ -8,6 +8,9 @@ permalink: /experimental-design
 mermaid: true
 ---
 
+> WIP
+{: .block-danger }
+
 This handbook provides an introductory guide to experimental design, made for data scientists and researchers. The material is based on the book [Design and Analysis of Experiments, 10th Edition](https://www.wiley.com/en-br/Design+and+Analysis+of+Experiments%2C+10th+Edition-p-9781119492443) by Douglas C. Montgomery. The goal is to present these concepts clearly and precisely, ensuring that readers can apply these principles to their own work in experimentation as I did.
 
 > **Note:** While the book focuses on engineering and science applications, this handbook will emphasize product and e-commerce applications.
