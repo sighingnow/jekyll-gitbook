@@ -14,7 +14,9 @@ Starting this fall, I will be a **master's student at the University of Alberta*
 
 I began writing as a way to deepen my understanding of the topics I was studying, approaching them as if I were explaining them to myself. This blog is a reflection of that journey, a place where I can share my passion for learning and exploration. Here, you'll find my thoughts on various topics, from reinforcement learning and robotics to statistics and beyond.
 
-Whether you're a fellow researcher, a curious student, or someone with a love for learning, I hope you'll find value in my writings. Feel free to reach out with questions, suggestions, or collaboration ideas. Make yourself at home.
+Whether you're a fellow researcher, a curious student, or someone with a love for learning, I hope you'll find value in my writings.
+
+**Feel free to reach out with questions, suggestions, or collaboration ideas. Make yourself at home.**
 
 
 
