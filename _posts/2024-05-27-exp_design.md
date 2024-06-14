@@ -8,15 +8,15 @@ permalink: /experimental-design
 mermaid: true
 ---
 
-> WIP
-{: .block-danger }
+This handbook provides an introductory guide to experimental design, made for data scientists and researchers. The goal is to present these concepts clearly and precisely, ensuring that readers can apply these principles to their own work in experimentation as I did.
 
-This handbook provides an introductory guide to experimental design, made for data scientists and researchers. The material is based on the book [Design and Analysis of Experiments, 10th Edition](https://www.wiley.com/en-br/Design+and+Analysis+of+Experiments%2C+10th+Edition-p-9781119492443) by Douglas C. Montgomery. The goal is to present these concepts clearly and precisely, ensuring that readers can apply these principles to their own work in experimentation as I did.
+The material is based on the book [Design and Analysis of Experiments, 10th Edition](https://www.wiley.com/en-br/Design+and+Analysis+of+Experiments%2C+10th+Edition-p-9781119492443) by Douglas C. Montgomery and the lecture notes from the University of Waterloo's STAT 430/830 course.
 
-> **Note:** While the book focuses on engineering and science applications, this handbook will emphasize product and e-commerce applications.
+
+> **Note:** While the book focuses on engineering and science applications, the course and this handbook emphasize product and e-commerce applications.
 >
 > For a more comprehensive coverage of experimental design principles, **I highly recommend checking out the full book**.
-{: .block-tip }
+{: .block-warning }
 
 ## Chapter 1: Introduction
 
@@ -200,17 +200,23 @@ Consider a button color test where the observed CTRs for red and blue buttons ar
 
 #### 2.1.1 Hypothesis Testing
 
-To determine if the observed differences are statistically significant, we formulate and test hypotheses using the data collected from the experiment. The hypotheses could be:
+> **Definition: Statistical Hypotheses**
+>
+> A **statistical hypothesis** is a statement either about the parameters of a probability distribution or the parameters of a model for the data. The hypothesis reflects some **conjecture** about the problem. For example, in the canonical button colour experiment, we may think that the orange button will have higher CTR.
+{: .block-tip }
 
-- $H_0: \theta_1 = \theta_2$ versus $H_A: \theta_1 \neq \theta_2$ (two-sided).
-- $H_0: \theta_1 \leq \theta_2$ versus $H_A: \theta_1 > \theta_2$ (one-sided).
-- $H_0: \theta_1 \geq \theta_2$ versus $H_A: \theta_1 < \theta_2$ (one-sided).
+
+To determine if the observed differences are statistically significant, we formulate and test hypotheses using the data collected from the experiment. The hypotheses can be formally stated as:
+
+- $H_0: \theta_1 = \theta_2$ versus $H_a: \theta_1 \neq \theta_2$ (two-sided).
+- $H_0: \theta_1 \leq \theta_2$ versus $H_a: \theta_1 > \theta_2$ (one-sided).
+- $H_0: \theta_1 \geq \theta_2$ versus $H_a: \theta_1 < \theta_2$ (one-sided).
 
 The goal is to decide whether to reject the null hypothesis ($H_0$) based on the observed data. This decision is made using a test statistic, denoted as $T$.
 
-> ##### Definition: Test Statistic
+> **Definition: Test Statistic**
 >
-> The test statistic, $T$, is a random variable that must:
+> The **test statistic**, $T$, is a random variable that must:
 >
 > 1. Be a function of the observed data.
 > 2. Be a function of the parameters $\theta_1$ and $\theta_2$.
@@ -221,41 +227,38 @@ The goal is to decide whether to reject the null hypothesis ($H_0$) based on the
 
 #### 2.1.2 Choosing the Significance Level
 
-The significance level of the test, denoted $\alpha$, determines how extreme $t$ must be to reject $H_0$. Common choices for $\alpha$ are 0.05 and 0.01.
+Part of the procedure of testing a hypothesis is specifying the set of values for the test statistic that leads to rejection of $H_0$. This set of values is called the **critical region** or **rejection region** $\mathcal{R}$ for the test.
 
-> ##### Definition: $p$-value
+$$
+\mathcal{R} = \{t: H_0 \text{ is rejected}\}
+$$
+
+Where $t_{\alpha/2}$ is the critical value from the standard normal distribution corresponding to the significance level $\alpha$ in a two-tailed test, and it is $t_{\alpha}$ in a one-tailed test.
+
+![Reject region in different test types](/assets/gitbook/images/experimental-design/reject-region.png)
+
+> **Definition: Significance level**
 >
-> The $p$-value is the probability of observing a value of the test statistic at least as extreme as the value we observed, assuming the null hypothesis is true. The $p$-value quantifies the extremity of the observed test statistic. The more extreme the value of $t$, the smaller the $p$-value, providing more evidence against the null hypothesis.
+> The **significance level** of a test is $\alpha = \mathbb{P}$(Type I Error). It determines how extreme $t$ must be to reject $H_0$. Common choices for $\alpha$ are 0.05 and 0.01.
 {: .block-tip }
-
-- If $p$-value $\le \alpha$, we reject $H_0$.
-- If $p$-value $> \alpha$, we do not reject $H_0$.
 
 To choose $\alpha$, it is essential to understand the two types of errors that can occur in hypothesis testing:
 
 - **Type I Error:** Rejecting $H_0$ when it is true.
 - **Type II Error:** Not rejecting $H_0$ when it is false.
 
+$$
+\begin{align}
+   \alpha &= \mathbb{P}(\text{type I error}) = \mathbb{P}(\text{reject $H_0|H_0$ is true}) \\
+   \beta &= \mathbb{P}(\text{type II error}) = \mathbb{P}(\text{fail to reject $H_0|H_0$ is false})
+\end{align}
+$$
+
 We aim to minimize both types of errors, though they have different consequences.
 
-**Example: Pregnancy Test**
 
-- $H_0$: The person is not pregnant.
-- Type I Error: A non-pregnant person is classified as pregnant (false positive).
-- Type II Error: A pregnant person is classified as not pregnant (false negative).
 
-**Example: Courtroom Analogy**
-
-- $H_0$: The defendant is innocent.
-- Type I Error: Convicting an innocent person.
-- Type II Error: Acquitting a guilty person.
-
-> ##### Definition: Significance level
->
-> The **significance level** of a test is $\alpha = \mathbb{P}$(Type I Error)
-{: .block-tip }
-
-> ##### Definition: Power
+> **Definition: Power**
 >
 > The **power** of a test is the probability that the test correctly rejects a false null hypothesis. It is defined as $1- \beta$, where $\beta= \mathbb{P}$(Type II Error)
 {: .block-tip }
@@ -274,17 +277,17 @@ Where $Y_{ij}$ is the response observation for unit $i$ in condition $j$.
 
 We test hypotheses of the form:
 
-- $H_0: \mu_1 = \mu_2$ versus $H_A: \mu_1 \neq \mu_2$
-- $H_0: \mu_1 \leq \mu_2$ versus $H_A: \mu_1 > \mu_2$
-- $H_0: \mu_1 \geq \mu_2$ versus $H_A: \mu_1 < \mu_2$
+- $H_0: \mu_1 = \mu_2$ versus $H_a: \mu_1 \neq \mu_2$
+- $H_0: \mu_1 \leq \mu_2$ versus $H_a: \mu_1 > \mu_2$
+- $H_0: \mu_1 \geq \mu_2$ versus $H_a: \mu_1 < \mu_2$
 
 #### 2.2.1 The Two-Sample $t$-Test
 
 The Student's $t$-test is used to compare the means ($\mu_1$ and $\mu_2$) of two conditions, assuming the variances are unknown but equal.
 
-> ##### Assumption
+> **Assumption**
 >
-> The variances are equal, that is $\sigma_1=\sigma_2$.
+> The variances are equal, that is $\sigma_1^2=\sigma_2^2$.
 {: .block-danger }
 
 The test statistic is calculated as:
@@ -299,12 +302,12 @@ T &= \frac{(\bar{Y}_1 - \bar{Y}_2) - \overbrace{(\mu_1-\mu_2)}^0}{\hat{\sigma} \
 \end{align*}
 $$
 
-Where $\hat{\sigma}$ is the pooled standard deviation estimator, and $t(n_1+n_2-2)$ is our null distribution.
+Where $\hat{\sigma}$ is the pooled standard deviation estimator, our hypothesis is that the means are equal, $n_1$ and $n_2$ are the sample sizes, and $t(n_1+n_2-2)$ is our null distribution, with $n_1+n_2-2$ degrees of freedom.
 
 The observed version is:
 
 $$
-t=\frac{\hat{\mu_1}-\hat{\mu_2}}{\hat{\sigma}{\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}}
+t_0=\frac{\hat{\mu_1}-\hat{\mu_2}}{\hat{\sigma}{\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}}
 $$
 
 Where:
@@ -317,11 +320,32 @@ $$
 \end{align*}
 $$
 
-We then compute the $p$-value to determine the significance of the results.
+We then check if $t_0$ falls under the rejection region. Formally, we reject $H_0$ if:
 
-- For $H_0: \mu_1 = \mu_2$, versus $H_A: \mu_1 \neq \mu_2$, we compute $p$-value $= \mathbb{P}(T\ge \|t\|)+\mathbb{P}(T \le -\|t\|)$
-- For $H_0: \mu_1 \le \mu_2$, versus $H_A: \mu_1 > \mu_2$, we compute $p$-value $= \mathbb{P}(T\ge t)$
-- For $H_0: \mu_1 \ge \mu_2$, versus $H_A: \mu_1 < \mu_2$, we compute $p$-value $= \mathbb{P}(T\le t)$
+$$
+\begin{cases}
+   |t_0| > t_{\alpha/2} &\text{in a two-tailed test} \\
+   t_0 < -t_\alpha &\text{in a left-tailed test} \\
+   t_0 > t_\alpha &\text{in a right-tailed test}
+\end{cases}
+$$
+
+##### 2.2.1.1 $P$-value in Hypothesys Testing
+
+> **Definition: $P$-value**
+>
+> The **$P$-value** is the probability of observing a value of the test statistic at least as extreme as the value we observed, assuming the null hypothesis is true. The $P$-value quantifies the extremity of the observed test statistic.
+{: .block-tip }
+
+
+- For $H_0: \mu_1 = \mu_2$, versus $H_a: \mu_1 \neq \mu_2$, we compute $P$-value $= \mathbb{P}(T\ge \|t_{\alpha/2}\|)+\mathbb{P}(T \le -\|t_{\alpha/2}\|)$
+- For $H_0: \mu_1 \le \mu_2$, versus $H_a: \mu_1 > \mu_2$, we compute $P$-value $= \mathbb{P}(T\ge t_{\alpha})$
+- For $H_0: \mu_1 \ge \mu_2$, versus $H_a: \mu_1 < \mu_2$, we compute $P$-value $= \mathbb{P}(T\le t_{\alpha/2})$
+
+The $P$-value is a better report than just saying $H_0$ was rejected with significance level $\alpha$, it provides a quantifiable assurance to the decision maker. But as a general rule, we can assume:
+
+- If $P$-value $\le \alpha$, we reject $H_0$.
+- If $P$-value $> \alpha$, we do not reject $H_0$.
 
 #### 2.2.2 The Welch's $t$-Test
 
@@ -343,7 +367,7 @@ $$
 t = \frac{\hat{\mu_1} - \hat{\mu_2}}{\sqrt{\frac{\hat{\sigma}_1^2}{n_1} + \frac{\hat{\sigma}_2^2}{n_2}}}
 $$
 
-The test statistic $T$ follows a $t$-distribution with $\nu$ degrees of freedom. The $p$-value is calculated based on this distribution to determine if there is a significant difference between the means of the two groups.
+The test statistic $T$ follows a $t$-distribution with $\nu$ degrees of freedom. The $P$-value is calculated based on this distribution to determine if there is a significant difference between the means of the two groups.
 
 #### 2.2.3 F-Test for Variances
 
@@ -355,49 +379,69 @@ $$
 
 Where $\hat{\sigma}_1^2$ and $\hat{\sigma}_2^2$ are the sample variances of the two groups. Under the null hypothesis that the variances are equal ($\sigma_1^2 = \sigma_2^2$, or that $\sigma_1^2/\sigma_2^2 =1$), the test statistic follows an $F$-distribution with $(n_1 - 1)$ and $(n_2 - 1)$ degrees of freedom.
 
-The $p$-value is calculated as follows:
+The $P$-value is calculated as follows:
 
 $$
 p\text{-value} =
 \begin{cases}
-\mathbb{P}(F \ge f) + \mathbb{P}(F \le 1/f) ,& \text{If } t\ge 1 \\
-\mathbb{P}(F \le f) + \mathbb{P}(F \ge 1/f) ,& \text{If } t < 1
+\mathbb{P}(F \ge f) + \mathbb{P}(F \le 1/f) ,& \text{If } f\ge 1 \\
+\mathbb{P}(F \le f) + \mathbb{P}(F \ge 1/f) ,& \text{If } f < 1
 \end{cases}
 $$
 
-Where $f$ is the observed value of the test statistic. The $p$-value determines whether there is a significant difference in variances between the two groups.
+Where $f$ is the observed value of the test statistic. The $P$-value determines whether there is a significant difference in variances between the two groups.
 
 #### 2.2.4 Example: Instagram Ad Frequency
 
-Suppose you are a data scientist at Instagram, and you want to investigate the influence of ad frequency on user engagement. Users currently see an ad every 8 posts, but your manager wants to increase ad frequency to every 5 posts. You hypothesize that this change will decrease user engagement, measured by average session time, in minutes, ($y$).
+Suppose you are a data scientist at Instagram, and you want to investigate the influence of ad frequency on user engagement. Users currently see an ad every 8 posts, but your manager wants to increase ad frequency to every 5 posts. You hypothesize that this change will decrease user engagement, measured by average session time, in minutes.
 
 The Hypothesis here is:
 
 $$
-H_0: \mu_1 \le \mu_2 \text{ versus } H_A: \mu_1 > \mu_2
+H_0: \mu_1 \le \mu_2 \text{ versus } H_a: \mu_1 > \mu_2
 $$
 
 The data summaries for the two conditions (7:1 ad frequency and 4:1 ad frequency) show that:
 
-- Condition 1 (7:1): $n_1 = 500$, $\hat{\mu}_1 = \bar{y}_1 = 4.916$, $\hat{\sigma}_1 = s_1 = 0.963$
-- Condition 2 (4:1): $n_2 = 500$, $\hat{\mu}_2 = \bar{y}_2 = 3.052$, $\hat{\sigma}_2 = s_2 = 0.995$
+|                | Condition 1 | Condition 2 |
+|----------------|:-----------:|:-----------:|
+| $n$            | 500         | 500         |
+| $\hat{\mu}$    | 4.916       | 3.052       |
+| $\hat{\sigma}$ | 0.963       | 0.995       |
 
-##### $F$-test
 
-- $t = \hat{\sigma}^2_1/\hat{\sigma}^2_2 = (963)^2/(995)^2 = 0.938$
-- $p$-value $= \mathbb{P}(T \le 0.938) + \mathbb{P}(T \ge 1/0.938) = 0.472$ where $T\sim F(499,499)$
-- This $p$-value is larger than any ordinary $\alpha$, so we do not reject $H_0: \sigma^2_1 = \sigma^2_2$, and so we continue with Students's $t$-test.
+**$F$-test**
 
-##### Student's $t$-test
+$$
+\begin{gather}
+t = \hat{\sigma}^2_1/\hat{\sigma}^2_2 = (963)^2/(995)^2 = 0.938\\\\
 
-- $\hat{\sigma}^2 = \frac{499(0.963)^2+499(0.995)^2}{998} = (0.979)^2$
-- $t = \frac{4.916-3.052}{0.979\sqrt{\frac{1}{500}+\frac{1}{500}}} = 30.101$
-- $p$-value $= \mathbb{P}(T \ge 30.101) = 1.838 \times 10^{-142}$ where $T \sim t(998)$
-- This $p$-value is much smaller than any typical $\alpha$, and so we reject $H_0: \mu_1 \le \mu_2$, and conclude that increasing ad frequency significantly reduces average session duration.
+P\text{-value} = \mathbb{P}(T \le 0.938) + \mathbb{P}(T \ge 1/0.938) = 0.472 \\
+\text{where} \quad T\sim F(499,499)
+\end{gather}
+
+$$
+
+- This $P$-value is larger than any ordinary $\alpha$, so we do not reject $H_0: \sigma^2_1 = \sigma^2_2$, and so we continue with Students's $t$-test.
+
+**Student's $t$-test**
+
+$$
+\begin{gather}
+
+\hat{\sigma}^2 = \frac{499(0.963)^2+499(0.995)^2}{998} = (0.979)^2\\\\
+t = \frac{4.916-3.052}{0.979\sqrt{\frac{1}{500}+\frac{1}{500}}} = 30.101\\\\
+P\text{-value} = \mathbb{P}(T \ge 30.101) = 1.838 \times 10^{-142}\\
+\text{where} \quad T \sim t(998)
+
+\end{gather}
+$$
+
+- This $P$-value is much smaller than any typical $\alpha$, and so we reject $H_0: \mu_1 \le \mu_2$, and conclude that increasing ad frequency significantly reduces average session duration.
 
 ### 2.3 Comparing Proportions in Two Conditions
 
-When the response variable is binary (e.g., indicating whether an action was performed), we often assume a Bernoulli distribution. The $Z$-test for proportions compares the probabilities ($\pi_1$ and $\pi_2$) that the action of interest occurs in each condition.
+When the response variable is binary (e.g., indicating whether an action was performed), we often assume a Bernoulli distribution. That is, $Y_{ij} \sim B(1,\pi_j)$ where $\pi_j$ represents the probability that $Y_{ij}=1$, i.e. the unit $i$ under condition $j$ performs the "action of interest." The $Z$-test for proportions compares the probabilities ($\pi_1$ and $\pi_2$) that the action of interest occurs in each condition. 
 
 In cases like these, we let
 
@@ -409,7 +453,7 @@ Y_{ij} =
 \end{cases} 
 $$
 
-The test statistic for the Z-test is given by:
+In general, we can use $Z$-test when we know the variances. The test statistic for the Z-test is given by:
 
 $$
 Z = \frac{(\bar{Y}_1 - \bar{Y}_2) - \overbrace{(\pi_1 - \pi_2)}^0}{\sqrt{\hat{\pi}(1 - \hat{\pi})\left( \frac{1}{n_1} + \frac{1}{n_2} \right)}} \sim \mathcal{N}(0,1)
@@ -426,24 +470,24 @@ $$
 The observed version is:
 
 $$
-z = \frac{(\hat{\pi}_1 - \hat{\pi}_2)}{\sqrt{\hat{\pi}(1 - \hat{\pi})\left( \frac{1}{n_1} + \frac{1}{n_2} \right)}}
+z_0 = \frac{(\hat{\pi}_1 - \hat{\pi}_2)}{\sqrt{\hat{\pi}(1 - \hat{\pi})\left( \frac{1}{n_1} + \frac{1}{n_2} \right)}}
 $$
 
 
 The hypotheses for the Z-test can be formulated as:
-- $H_0: \pi_1 = \pi_2$ versus $H_A: \pi_1 \neq \pi_2$ (two-sided)
-- $H_0: \pi_1 \leq \pi_2$ versus $H_A: \pi_1 > \pi_2$ (one-sided)
-- $H_0: \pi_1 \geq \pi_2$ versus $H_A: \pi_1 < \pi_2$ (one-sided)
+- $H_0: \pi_1 = \pi_2$ versus $H_a: \pi_1 \neq \pi_2$ (two-sided)
+- $H_0: \pi_1 \leq \pi_2$ versus $H_a: \pi_1 > \pi_2$ (one-sided)
+- $H_0: \pi_1 \geq \pi_2$ versus $H_a: \pi_1 < \pi_2$ (one-sided)
 
 
-The $p$-value for the Z-test is calculated based on the standard normal distribution, except that $Z \sim \mathcal{N}(0,1)$:
+The $P$-value for the Z-test is calculated based on the standard normal distribution, except that $Z \sim \mathcal{N}(0,1)$:
 
 $$
-p\text{-value} = 
+P\text{-value} = 
 \begin{cases} 
-2 \cdot P(Z \geq |z|) & \text{for a two-sided test} \\
-P(Z \geq z) & \text{for a right-sided test} \\
-P(Z \leq z) & \text{for a left-sided test} 
+2 \cdot \mathbb{P}(Z \geq |z_0|) & \text{for a two-sided test} \\
+\mathbb{P}(Z \geq z_0) & \text{for a right-sided test} \\
+\mathbb{P}(Z \leq z_0) & \text{for a left-sided test} 
 \end{cases}
 $$
 
@@ -456,7 +500,7 @@ Consider a scenario where Optimizely is interested in determining if a redesigne
 The hypothesis here is:
 
 $$
-H_0: \pi_1 \ge \pi_2 \text{ versus } H_A: \pi_1 < \pi_2
+H_0: \pi_1 \ge \pi_2 \text{ versus } H_a: \pi_1 < \pi_2
 $$
 
 We summarize the data from this experiment in a $2 \times 2$ contingency table:
@@ -482,99 +526,35 @@ $$
 z = \frac{0.032 - 0.046}{\sqrt{0.039 \times (1 - 0.039) \left( \frac{1}{8872} + \frac{1}{8642} \right)}} = -5.007
 $$
 
-$p$-value $= \mathbb{P}(T\le -5.007) = 2.758\times 10^{-7}$, where $T \sim \mathcal{N}(0,1)$
+$P$-value $= \mathbb{P}(T\le -5.007) = 2.758\times 10^{-7}$, where $T \sim \mathcal{N}(0,1)$
 
 We reject $H_0$ and conclude that the redesigned homepage significantly increases conversion rate.
 
 
-### 2.4 Power Analysis and Sample Size Calculations
+### 2.4 Power Analysis and Sample Size Choice
 
 Power analysis helps control Type II errors and determine the required sample size for detecting a meaningful effect. The power of a test, defined as $1 - \beta$, is the probability of correctly rejecting a false null hypothesis ($H_0$). A higher power indicates a greater likelihood of detecting an effect when it exists.
 
-#### 2.4.1 Hypothesis Testing Design
+#### 2.4.1 Sample Size Calculation
 
-Suppose we are interested in testing the hypothesis:
-
-$$
-H_0: \theta_1 = \theta_2 \quad \text{versus} \quad H_A: \theta_1 \neq \theta_2
-$$
-
-Where $\theta_1$ and $\theta_2$ are the parameters of interest (e.g., means or proportions) in two groups.
-
-##### Test Statistic
-
-Assume the test statistic $T$ follows a normal distribution under the null hypothesis:
+We can derive the number of samples as:
 
 $$
-T = \frac{(\bar{Y}_1 - \bar{Y}_2) - 0}{\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_2}}} \sim \mathcal{N}(0, 1)
+n = \frac{(z_{\alpha/2} + z_{1-\beta})^2 [Var(Y_1) + Var(Y_2)]}{\Delta^2}  
 $$
 
-Where $\bar{Y}_1$ and $\bar{Y}_2$ are the sample means, $\sigma_1^2$ and $\sigma_2^2$ are the population variances, and $n_1$ and $n_2$ are the sample sizes.
+Where:
 
-##### Rejection Region
+- $z_{\alpha}$ is the critical value corresponding to the desired significance level.
+- $z_{1-\beta}$ is the critical value corresponding to the desired power $1 - \beta$.
+- $Var(Y_1)$ and $Var(Y_2)$ are the variances of the response in the two conditions, these need to be guessed or determined by historical information.
+- $\Delta = \theta_1 - \theta_2$ is the **minimum detectable effect** (MDE).
 
-The rejection region, $\mathcal{R}$, is defined as the set of values for the test statistic that would lead to the rejection of $H_0$:
-
-$$
-\mathcal{R} = \{t: H_0 \text{ is rejected}\}
-$$
-
-Where $z_{\alpha/2}$ is the critical value from the standard normal distribution corresponding to the significance level $\alpha$ in a two-tailed test, and it is $z_{\alpha}$ in a one-tailed test.
-
-![Reject region in different test types](/assets/gitbook/images/experimental-design/reject-region.png)
-
-##### Defining Type I and II Error Rates
-
-Defining the error rates in terms of a reject region is also useful (refer to the original material for more detailed derivation):
-
-###### Type I
-
-$$
-\alpha = \mathbb{P}(\text{Type I Error}) = \mathbb{P}(\text{Reject } H_0|H_0 \text{ is true}) = \mathbb{P}(T \in \mathcal{R}|H_0 \text{ is true})
-$$
-
-###### Type II
-
-$$
-\beta = \mathbb{P}(\text{Type II Error}) = \mathbb{P}(\text{Do not Reject } H_0|H_0 \text{ is false}) = \mathbb{P}(T \in \mathcal{R}^\complement | H_0 \text{ is false})
-$$
-
-##### Sample Size Calculation
-
-From the definitions above, we can derive and rearrange the number of samples as:
-
-$$
-n = \frac{(z_{\alpha/2} - z_{1-\beta})^2 [\mathbb{V}(Y_1) + \mathbb{V}(Y_2)]}{\delta^2}  
-$$
-
-Where $z_{1-\beta}$ is the critical value corresponding to the desired power $1 - \beta$. $\mathbb{V}(Y_1)$ and $\mathbb{V}(Y_2)$ are the variances of the response in the two conditions, these need to be guessed or determined by historical information.
-
-$\delta = \theta_1 - \theta_2$ is the **minimum detectable effect** (MDE).
-
-> ##### Definition: Minimum Detectable Effect (MDE)
+> **Definition: Minimum Detectable Effect (MDE)**
 >
-> The **minimum detectable effect**, denoted $\delta$, is the smallest difference between conditions (i.e, between $\theta_1$ and $\theta_2$) that we find to be practically relevant and we would like to detect as being statistically significant.
+> The **minimum detectable effect**, denoted $\Delta$, is the smallest difference between conditions (i.e, between $\theta_1$ and $\theta_2$) that we find to be practically relevant and we would like to detect as being statistically significant.
 {: .block-tip }
 
-#### 2.4.2 Example: Calculating Sample Size
-
-Suppose we want to detect a difference in means between two groups with the following parameters:
-
-- Significance level: $\alpha = 0.05$
-- Desired power: $1 - \beta = 0.80$
-- Population variances: $\sigma_1^2 = 1.5$ and $\sigma_2^2 = 2.0$
-- Minimum detectable effect: $\delta = 0.5$
-
-
-Using the critical values $z_{0.025} = 1.96$ and $z_{0.20} = 0.84$, the required sample size for each group is:
-
-$$
-n = \left( \frac{1.96 + 0.84}{0.5} \right)^2 \left( 1.5 + 2.0 \right) = \left( 5.6 \right)^2 \cdot 3.5 = 109.76 \approx 110
-$$
-
-Thus, each group should contain at least 110 participants to achieve the desired power.
-
-Power analysis and sample size calculations are essential for designing robust experiments that can detect meaningful effects while controlling for Type I and Type II errors.
 
 ### 2.5 Permutation and Randomization Tests
 
@@ -629,7 +609,7 @@ In a randomization test, we do not consider all possible rearrangements. Instead
     t^*_k = \hat{\theta}^*_1 - \hat{\theta}^*_2 \quad \text{or} \quad t^*_k = \frac{\hat{\theta}^*_1}{\hat{\theta}^*_2}
     $$
 
-5. Compare $t$ to $\\{ t_1^\*, t_2^\*, \cdots, t_N^\* \\}$, the empirical null distribution, and calculate the $p$-value:
+5. Compare $t$ to $\\{ t_1^\*, t_2^\*, \cdots, t_N^\* \\}$, the empirical null distribution, and calculate the $P$-value:
    
    $$
    \begin{align*}
@@ -639,19 +619,19 @@ In a randomization test, we do not consider all possible rearrangements. Instead
    
    $$
 
-- $H_0: \theta_1 = \theta_2$ versus $H_A: \theta_1 \neq \theta_2$. If $t = \hat{\theta}_1 - \hat{\theta}_2$, then the $p$-value is:
+- $H_0: \theta_1 = \theta_2$ versus $H_a: \theta_1 \neq \theta_2$. If $t = \hat{\theta}_1 - \hat{\theta}_2$, then the $P$-value is:
   
   $$
   p\text{-value} = \frac{1}{N} \sum_{k=1}^{N} \mathbb{I}\{ t^*_k \geq |t| \cup t^*_k \leq -|t| \}
   $$
 
-- $H_0: \theta_1 \geq \theta_2$ versus $H_A: \theta_1 < \theta_2$. If $t = \hat{\theta}_1 - \hat{\theta}_2$, then the $p$-value is:
+- $H_0: \theta_1 \geq \theta_2$ versus $H_a: \theta_1 < \theta_2$. If $t = \hat{\theta}_1 - \hat{\theta}_2$, then the $P$-value is:
   
   $$
   p\text{-value} = \frac{1}{N} \sum_{k=1}^{N} \mathbb{I}\{ t^*_k \leq t \}
   $$
 
-- $H_0: \theta_1 \leq \theta_2$ versus $H_A: \theta_1 > \theta_2$. If $t = \hat{\theta}_1 - \hat{\theta}_2$, then the $p$-value is:
+- $H_0: \theta_1 \leq \theta_2$ versus $H_a: \theta_1 > \theta_2$. If $t = \hat{\theta}_1 - \hat{\theta}_2$, then the $P$-value is:
   
   $$
   p\text{-value} = \frac{1}{N} \sum_{k=1}^{N} \mathbb{I}\{ t^*_k \geq t \}
@@ -703,19 +683,19 @@ The design of an A/B/m test is similar to a two-condition experiment:
 Determining which condition is optimal typically involves a series of pairwise comparisons (e.g., $t$-tests, $z$-tests, or randomization tests). It is useful to begin with a _gatekeeper_ test (test of overall equality) to determine whether there is any difference between the $m$ experimental conditions. Formally, we phrase such a question as the following statistical hypothesis:
 
 $$
-H_0: \theta_1 = \theta_2 = \cdots = \theta_m \quad \text{versus} \quad H_A: \theta_j \neq \theta_k \text{ for some } j \neq k
+H_0: \theta_1 = \theta_2 = \cdots = \theta_m \quad \text{versus} \quad H_a: \theta_j \neq \theta_k \text{ for some } j \neq k
 $$
 
 In the case of means:
 
 $$
-H_0: \mu_1 = \mu_2 = \cdots = \mu_m \quad \text{versus} \quad H_A: \mu_j \neq \mu_k \text{ for some } j \neq k
+H_0: \mu_1 = \mu_2 = \cdots = \mu_m \quad \text{versus} \quad H_a: \mu_j \neq \mu_k \text{ for some } j \neq k
 $$
 
 In the case of proportions:
 
 $$
-H_0: \pi_1 = \pi_2 = \cdots = \pi_m \quad \text{versus} \quad H_A: \pi_j \neq \pi_k \text{ for some } j \neq k
+H_0: \pi_1 = \pi_2 = \cdots = \pi_m \quad \text{versus} \quad H_a: \pi_j \neq \pi_k \text{ for some } j \neq k
 $$
 
 ### 3.2 Comparing Means in Multiple Conditions
@@ -728,11 +708,14 @@ $$
 
 We use an $F$-test to test for means:
 $$
-H_0: \mu_1 = \mu_2 = \cdots = \mu_m \quad \text{versus} \quad H_A: \mu_j \neq \mu_k \text{ for some } j \neq k
+H_0: \mu_1 = \mu_2 = \cdots = \mu_m \quad \text{versus} \quad H_a: \mu_j \neq \mu_k \text{ for some } j \neq k
 $$
 
 #### The $F$-test for Overall Significance in a Linear Regression
 
+> WIP
+{: .block-danger }
+<!-- 
 We use the $F$-test for overall significance in an appropriately defined linear regression model. This model is defined as:
 
 $$
@@ -755,7 +738,7 @@ $$
 
 Based on these assumptions, $H_0: \theta_1 = \theta_2 = \cdots = \theta_m$ is true if and only if $\beta_1 = \beta_2 = \cdots = \beta_{m-1} = 0$, which is equivalent to testing:
 $$
-H_0: \beta_1 = \beta_2 = \cdots = \beta_{m-1} = 0 \quad \text{versus} \quad H_A: \beta_j \neq 0 \text{ for some } j
+H_0: \beta_1 = \beta_2 = \cdots = \beta_{m-1} = 0 \quad \text{versus} \quad H_a: \beta_j \neq 0 \text{ for some } j
 $$
 
 This hypothesis corresponds to the $F$-test for overall significance in the model. The test statistic is the ratio of the regression mean squares (MSR) to the mean squared error (MSE):
@@ -771,7 +754,7 @@ Intuitively, the test statistic compares the response variability between condit
 - Quantifies variability within conditions: $SSE = \sum_{j=1}^m \sum_{i=1}^{n_j} (y_{ij} - \bar{y}_{\cdot j})^2$
 - Quantifies overall variability: $SST = \sum_{j=1}^m \sum_{i=1}^{n_j} (y_{ij} - \bar{y}_{\cdot \cdot})^2 = SSC + SSE$
 
-The null distribution for this test is $F(m-1, N-m)$. The $p$-value is computed as:
+The null distribution for this test is $F(m-1, N-m)$. The $P$-value is computed as:
 
 $$
 p\text{-value} = \mathbb{P}(T \geq t) \quad \text{where} \ T \sim F(m-1, N-m)
@@ -794,4 +777,4 @@ Let $\mu_j$ represent the average length of gameplay (in minutes) associated wit
 
 We fit the linear regression model:
 $$
-Y = \beta_0 + \beta_1 x
+Y = \beta_0 + \beta_1 x -->

@@ -18,7 +18,6 @@ Whether you're a fellow researcher, a curious student, or someone with a love fo
 
 
 
-
 <div style="display: flex; gap: 10px;">
     <a href="mailto:lucas@lucas-cruz.com">
         <img src="https://img.icons8.com/ios-filled/50/apple-mail.png" alt="Email" width="30" height="30"/>

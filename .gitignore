@@ -1,3 +1,4 @@
 _site/
 _draft/
 .jekyll-cache/
+node_modules/

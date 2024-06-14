@@ -1,5 +1,5 @@
 ---
-title: Basic Statistical Concepts
+title: (Not that) Basic Statistical Concepts
 author: Lucas Cruz
 date: 2024-06-11
 category: statistics
@@ -35,9 +35,9 @@ A probability distribution describes how the values of a random variable are dis
 
     $$
     \begin{gather*}
-        0 \le P(x) \le 1 \qquad \forall x \\
-        P(x=y)=P(y) \qquad \forall y \\
-        \sum_X P(x) = 1
+        0 \le \mathbb{P}(x) \le 1 \qquad \forall x \\
+        \mathbb{P}(x=y)=\mathbb{P}(y) \qquad \forall y \\
+        \sum_X \mathbb{P}(x) = 1
     \end{gather*}
     $$
 
@@ -48,31 +48,34 @@ A probability distribution describes how the values of a random variable are dis
     - **Formula:**
        
         $$
-        P(x = k) = p^k (1-p)^{1-k} \quad \forall k \in \{0,1\}
+        \mathbb{P}(x = k) = p^k (1-p)^{1-k} \quad \forall k \in \{0,1\}
         $$
 
     Where $p$ is the probability of success, $1-p$ is the probability of failure, and $k$ can be either 0 (failure) or 1 (success).
 
-{% include stat/bernoulli.html %}
+![Bernoulli distribution](/assets/gitbook/images/stat/bernoulli.png)
+<!-- {% include stat/bernoulli.html %} -->
 
   - **Poisson Distribution:** The Poisson distribution describes the number of events occurring within a fixed interval of time or space when these events happen independently of each other and at a constant rate.
     - **Example:** The number of emails you receive in an hour.
     - **Formula:**
        
         $$
-        P(x = k) = \frac{\lambda^k e^{-\lambda}}{k!}
+        \mathbb{P}(x = k) = \frac{\lambda^k e^{-\lambda}}{k!}
         $$
 
     Where $\lambda$ is the average number of events in the interval, $k$ is the number of occurrences, and $e$ is the Euler's constant.
 
-{% include stat/poisson.html %}
+
+![Poisson distribution](/assets/gitbook/images/stat/poisson.png)
+<!-- {% include stat/poisson.html %} -->
 
 - **Continuous Probability Distributions:** Include probability density functions (PDFs) which describe the likelihood of a continuous random variable falling within a particular range of values, such that:
 
     $$
     \begin{gather*}
         0 \le f(x) \\
-        P(a \le x \le b) = \int_a^b f(x) \,dx \\
+        \mathbb{P}(a \le x \le b) = \int_a^b f(x) \,dx \\
         \int_\infty^{-\infty} f(x) \,dx = 1
     \end{gather*}
     $$
@@ -93,7 +96,8 @@ A probability distribution describes how the values of a random variable are dis
 
     Where $a$ and $b$ are the minimum and maximum values of the range.
 
-{% include stat/uniform.html %}
+![Uniform distribution](/assets/gitbook/images/stat/uniform.png)
+<!-- {% include stat/uniform.html %} -->
 
   - **Normal Distribution:** The normal distribution, often referred to as the Gaussian distribution or bell curve, describes data that clusters around a mean.
     - **Example:** Heights of people in a population.
@@ -105,7 +109,8 @@ A probability distribution describes how the values of a random variable are dis
 
     Where $\mu$ is the mean and $\sigma$ is the standard deviation.
 
-{% include stat/normal.html %}
+![Normal distribution](/assets/gitbook/images/stat/normal.png)
+<!-- {% include stat/normal.html %} -->
 
   - **Student's t-Distribution:** The Student's t-distribution is used to estimate population parameters when the sample size is small and the population standard deviation is unknown.
     - **Example:** The distribution of the sample mean for small sample sizes.
@@ -117,16 +122,16 @@ A probability distribution describes how the values of a random variable are dis
 
     Where $\nu$ is the degrees of freedom, and $\Gamma$ the gamma function.
 
-
-{% include stat/t-dist.html %}
+![T-distribution](/assets/gitbook/images/stat/t-dist.png)
+<!-- {% include stat/t-dist.html %} -->
 
 ## Mean, Variance, and Expected Values
 These are fundamental concepts in statistics that describe the central tendency and variability of a probability distribution.
 
 ### Mean
-The mean, $\mu$, of a probability provides a measure of the central tendency. For a discrete random variable $$X$$ with a probability mass function $$P(x)$$:
+The mean, $\mu$, of a probability provides a measure of the central tendency. For a discrete random variable $$X$$ with a probability mass function $$\mathbb{P}(x)$$:
 
-$$ \mu = \sum_X x \cdot P(x) $$
+$$ \mu = \sum_X x \cdot \mathbb{P}(x) $$
 
 For a continuous random variable $$X$$ with a probability density function $$f(x)$$:
 
@@ -147,7 +152,7 @@ $$
 \sigma^2 = 
 \begin{cases}
     \int_{-\infty}^\infty(x-\mu)^2f(x)\,dx  & \text{$x$ continuous}\\
-    \sum_X (x-\mu)^2P(x) & \text{$x$ discrete}
+    \sum_X (x-\mu)^2\mathbb{P}(x) & \text{$x$ discrete}
 \end{cases}
 $$
 
@@ -171,4 +176,5 @@ The central limit theorem states that the sampling distribution of the sample me
 
 $$ \bar{X} \sim \mathcal{N}(\mu, \frac{\sigma^2}{n}) $$
 
-By understanding these basic statistical concepts, one can effectively analyze and interpret data to make informed decisions in various fields such as ecommerce, digital systems, and machine learning.
+> WIP
+{: .block-danger }
