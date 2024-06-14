@@ -4,13 +4,13 @@ title: About
 permalink: /
 ---
 
-Hi, I'm Lucas, an electronics engineer, roboticist, classical guitarist, and autistic individual.
+<img src="./assets/gitbook/images/profile.jpeg" alt="Lucas" style="float: left; margin: 10px 50px 20px 20px; border-radius: 50%; width: 200px; height: auto; object-fit: cover;">
 
-<img src="./assets/gitbook/images/profile.jpeg" alt="Lucas" style="float: right; margin: 0 50px 20px 30px; border-radius: 50%; width: 200px; height: auto; object-fit: cover;">
+Hi, I'm **Lucas**, an electronics engineer, roboticist, classical guitarist, and autistic individual.
 
-I'm a senior Machine Learning Engineer at Hurb, a Brazilian travel company. I lead the experimentation program, developing a culture of experimentation within the company. 
+I'm a **senior Machine Learning Engineer** at Hurb, a Brazilian travel company. I lead the experimentation program, developing a culture of experimentation within the company. 
 
-Starting this fall, I will be a master's student at the University of Alberta, where I will focus my research on reinforcement learning.
+Starting this fall, I will be a **master's student at the University of Alberta**, where I will focus my research on reinforcement learning.
 
 I began writing as a way to deepen my understanding of the topics I was studying, approaching them as if I were explaining them to myself. This blog is a reflection of that journey, a place where I can share my passion for learning and exploration. Here, you'll find my thoughts on various topics, from reinforcement learning and robotics to statistics and beyond.
 
