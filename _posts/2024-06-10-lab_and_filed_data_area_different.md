@@ -36,7 +36,7 @@ mermaid: true
 フィールドデータでは改善が必要と表示されるこもあります。逆のパターンもあります。
 
 下記例は、ラボデータとフィールドデータが Core Web Vitals のすべての指標で異なる可能性があることを示しています。
-![PSI レポート結果](../assets/img/)
+![PSI レポート結果](../assets/img/layout-Shift_sample.gif)
 
 ## 本題
 
