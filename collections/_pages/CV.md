@@ -29,11 +29,11 @@ permalink: /cv
 **Senior Machine Learning Engineer**  
 *Hurb*  
 March 2024 – Present
-- Directing Hurb’s experimentation program, fostering an experimentation culture via guides, demos, and tutorials, and leading the platform’s development and deployment.
+- Directing Hurb’s experimentation program, fostering an experimentation culture, and leading the platform’s development and deployment.
 
 **Research and Development Engineer**  
 *Loon Factory*  
-Dec 2021 – March 2024 (2 yr 4 mos)
+Dec 2021 – March 2024 (2 yrs 4 mos)
 - Founding member of Loon Factory, a R&D lab focused on high-impact societal issues. Led the Libert project, employing Large Language Models to predict civil lawsuit outcomes with 83% accuracy (in production).
 - Managed end-to-end machine learning model development, from data handling to deployment and monitoring, and led a 5-member team.
 
@@ -67,7 +67,7 @@ Aug 2020 – Dec 2021 (1 yr 5 mos)
 Mar 2018 – Jun 2019 (1 yr 4 mos)
 - Designed electronic systems for a Remotely Operated Vehicle (ROV) for underwater exploration, supervised by Professors Alessandro Jacoud Peixoto and Liu Hsu.
 - Prototyped PCBs for subsea use with Altium Designer, optimizing underwater thruster controls, cameras, and sensors for precision and reliability.
-- Developed C++ routines for ROV communication and control, enabling SPI data interfacing between AVR microcontrollers to allow vehicle module coordination.
+- Developed C++ routines for ROV communication and control, enabling SPI data interfacing between AVR microcontrollers to allow vehicle coordination.
 
 
 # Teaching Experience

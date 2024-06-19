@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThis content is a summary and my key takeaways from the excellent book Designing Machine Learning Systems by Chip Huyen.\\E$"}

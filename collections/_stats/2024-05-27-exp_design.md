@@ -2,7 +2,7 @@
 title: Experimental Design and Analysis Handbook
 author: Lucas Cruz
 date: 2024-05-27
-category: [experimentation, statistics]
+category: statistics
 layout: post
 permalink: /experimental-design
 mermaid: true
@@ -18,9 +18,30 @@ The material is based on the book [Design and Analysis of Experiments, 10th Edit
 > For a more comprehensive coverage of experimental design principles, **I highly recommend checking out the full book**.
 {: .block-warning }
 
-## Chapter 1: Introduction
+<h1>Table of Contents</h1>
 
-### 1.1 Notation and Nomenclature
+<!-- no toc -->
+- [Chapter 1: Introduction](#chapter-1-introduction)
+  - [1.1 Notation and Nomenclature](#11-notation-and-nomenclature)
+  - [1.2 Experiments versus Observational Studies](#12-experiments-versus-observational-studies)
+  - [1.3 Fundamental Principles of Experimental Design](#13-fundamental-principles-of-experimental-design)
+  - [1.4 Guidelines for Designing Experiments](#14-guidelines-for-designing-experiments)
+- [Chapter 2: Experiments with Two Conditions](#chapter-2-experiments-with-two-conditions)
+  - [2.1 Anatomy of an A/B Test](#21-anatomy-of-an-ab-test)
+  - [2.2 Comparing Means in Two Conditions](#22-comparing-means-in-two-conditions)
+  - [2.3 Comparing Proportions in Two Conditions](#23-comparing-proportions-in-two-conditions)
+  - [2.4 Power Analysis and Sample Size Choice](#24-power-analysis-and-sample-size-choice)
+  - [2.5 Permutation and Randomization Tests](#25-permutation-and-randomization-tests)
+- [Chapter 3: Experiments with More Than Two Conditions](#chapter-3-experiments-with-more-than-two-conditions)
+  - [3.1 Anatomy of an "A/B/$m$" Test](#31-anatomy-of-an-abm-test)
+  - [3.2 Comparing Means in Multiple Conditions](#32-comparing-means-in-multiple-conditions)
+
+> WIP
+{: .block-danger }
+
+# Chapter 1: Introduction
+
+## 1.1 Notation and Nomenclature
 
 In the context of this handbook, **an experiment refers to a systematic procedure where one or more factors are purposefully manipulated to observe their effect on a response variable**. The primary goal is to identify and quantify the differences in the response variable values across different conditions or treatments. For instance:
 
@@ -43,7 +64,7 @@ Experimental conditions refer to the unique combinations of levels of one or mor
 **Experimental Units**  
 Experimental units are the entities assigned to the experimental conditions and on which the response variable is measured. In the Nike example, the experimental units are Nike mobile customers, and in the Nixon example, they are Instagram users. It is important to note that in many online experiments, the experimental unit is often a user or customer, but this is not always the case.
 
-### 1.2 Experiments versus Observational Studies
+## 1.2 Experiments versus Observational Studies
 
 An experiment involves a collection of conditions defined by purposeful changes to one or more factors. The primary goal is to identify and quantify differences in the response variable values across these conditions. In experiments, we intervene in the data collection process. For example, to determine whether a video ad’s theme significantly influences its average viewing duration, it is crucial to understand how experimental units respond when exposed to each condition. Although we cannot observe how the same unit behaves under all conditions, we can infer this by randomly assigning different units to different conditions and comparing their responses. Randomization ensures that the only difference between units in each condition is the condition itself, which helps facilitate causal inference.
 
@@ -56,7 +77,7 @@ In contrast, observational studies involve passively collecting data without any
 | **Experiment**          | Causal Inference is clean                     | Experiments might be unethical, risky, or costly |
 | **Observational Study** | No additional cost, risk, or ethical concerns | Causal inference is muddy                        |
 
-### 1.3 Fundamental Principles of Experimental Design
+## 1.3 Fundamental Principles of Experimental Design
 
 **Randomization**  
 Randomization is crucial in experimental design and occurs at two levels: selecting experimental units for inclusion and assigning them to experimental conditions. The first level ensures that the sample is representative of the population, allowing for generalizable conclusions. The second level balances the effects of extraneous variables, making conditions more homogeneous and facilitating causal inference.
@@ -67,7 +88,7 @@ Replication involves having multiple response observations within each experimen
 **Blocking**  
 Blocking is a technique used to control nuisance factors by holding them fixed during the experiment. For example, in an email promotion experiment by GAP, different variations of the message in the subject line were tested to maximize the open rate. To control for the nuisance factor of "send time," all emails were sent at the same time of day and on the same day of the week, thereby eliminating its effect.
 
-### 1.4 Guidelines for Designing Experiments
+## 1.4 Guidelines for Designing Experiments
 
 A general procedure for designing and analyzing an experiment is outlined below:
 1. [Recognition of and Statement of the Problem](#141-recognition-of-and-statement-of-the-problem)
@@ -79,7 +100,7 @@ A general procedure for designing and analyzing an experiment is outlined below:
 7. [Conclusions and Recommendations](#147-conclusions-and-recommendations)
 
 
-#### 1.4.1 Recognition of and Statement of the Problem
+### 1.4.1 Recognition of and Statement of the Problem
 
 A clear and concise problem statement is crucial. It defines the objectives of the experiment and lays the foundation for all subsequent steps. Recognizing and defining the problem often requires input from various stakeholders including engineering, marketing, management, customers, and operating personnel. Engaging a diverse team can ensure all perspectives are considered, leading to a well-rounded problem definition.
 
@@ -107,7 +128,7 @@ Experiments are conducted for a variety of reasons, each aligned with specific o
 
 By understanding these motivations, experimenters can better design their studies to address the specific goals and needs of their projects.
 
-#### 1.4.2 Selection of the Response Variable
+### 1.4.2 Selection of the Response Variable
 
 The response variable is the measurable outcome that is affected by the experimental conditions. It is essential that this variable accurately reflects the objectives of the experiment and provides useful information about the process under study. Commonly, the average or standard deviation of the measured characteristic is used as the response variable. Ensuring the chosen response variable is measurable and reliable is critical to the experiment's success.
 
@@ -118,7 +139,7 @@ The response variable is the measurable outcome that is affected by the experime
 - **In machine learning:** Model accuracy, precision, recall, or F1 score.
 
 
-#### 1.4.3 Choice of Factors, Levels, and Ranges
+### 1.4.3 Choice of Factors, Levels, and Ranges
 
 Factors are the variables that the experimenter manipulates to observe their effect on the response variable. Identifying and selecting the relevant factors involves classifying them as design factors, held-constant factors, or allowed-to-vary factors. Design factors are the main focus of the study, while held-constant factors are kept at a specific level to avoid confounding effects. Allowed-to-vary factors are those that are not of primary interest but are allowed to change to study their potential impact.
 
@@ -135,7 +156,7 @@ These factors can be controllable or uncontrollable and often introduce variabil
 - **In digital systems:** Factors could be server configurations, caching strategies, or network conditions.
 - **In machine learning:** Factors might be hyperparameters, feature sets, or training algorithms.
 
-#### 1.4.4 Choice of Experimental Design
+### 1.4.4 Choice of Experimental Design
 
 Design selection involves choosing the number of replicates, the sequence of experimental trials, and whether to include blocking or other randomization restrictions. The design should aim to minimize variability and ensure accurate results.
 
@@ -144,7 +165,7 @@ Design selection involves choosing the number of replicates, the sequence of exp
 - **Randomized Block Design (RBD):** Used when there are identifiable blocks that might introduce variability.
 - **Factorial Design:** Allows studying the effect of two or more factors simultaneously.
 
-#### 1.4.5 Performing the Experiment
+### 1.4.5 Performing the Experiment
 
 Executing the experiment involves careful monitoring to ensure adherence to the plan. Up-front planning and assigning responsibilities for each trial run are essential to prevent errors and ensure consistency.
 
@@ -153,11 +174,11 @@ Executing the experiment involves careful monitoring to ensure adherence to the 
 - **Training:** Ensure all personnel involved understand their roles and responsibilities.
 - **Data Collection Protocols:** Establish clear protocols for collecting and recording data.
 
-#### 1.4.6 Statistical Analysis of the Data
+### 1.4.6 Statistical Analysis of the Data
 
 Statistical methods should be used to analyze the data objectively. This includes hypothesis testing, confidence interval estimation, and regression analysis. Presenting the results through empirical models helps in interpreting the relationship between the factors and the response variable.
 
-#### 1.4.7 Conclusions and Recommendations
+### 1.4.7 Conclusions and Recommendations
 
 The final step involves interpreting the results, drawing practical conclusions, and making recommendations based on the findings. This may include follow-up experiments and confirmation testing to validate the conclusions.
 
@@ -166,9 +187,9 @@ The final step involves interpreting the results, drawing practical conclusions,
 - **Limitations:** Identify any limitations of the study and suggest areas for future research.
 - **Actionable Insights:** Provide clear, actionable recommendations based on the findings.
 
-## Chapter 2: Experiments with Two Conditions
+# Chapter 2: Experiments with Two Conditions
 
-### 2.1 Anatomy of an A/B Test
+## 2.1 Anatomy of an A/B Test
 
 A/B testing involves comparing two versions of a variable to determine which one performs better in terms of a specific metric. This type of experiment typically includes one design factor with two levels. For example, consider a canonical A/B test where the goal is to determine which button color, red or blue, results in a higher click-through rate (CTR).
 
@@ -198,7 +219,7 @@ The primary objective of an A/B test is to decide which condition is optimal wit
 
 Consider a button color test where the observed CTRs for red and blue buttons are $\hat{\theta}\_1 = 0.12$ and $\hat{\theta}\_2 = 0.03$, respectively. Although $\hat{\theta}\_1 > \hat{\theta}\_2$, we need to statistically test whether $\theta_1$ is indeed greater than $\theta_2$.
 
-#### 2.1.1 Hypothesis Testing
+### 2.1.1 Hypothesis Testing
 
 > **Definition: Statistical Hypotheses**
 >
@@ -225,7 +246,7 @@ The goal is to decide whether to reject the null hypothesis ($H_0$) based on the
 > Assuming the null hypothesis is true, $T$ follows a particular distribution known as the null distribution (e.g., $\mathcal{N}(0, 1)$, $t$-distribution). We calculate the observed value of the test statistic, $t$, and evaluate its extremity relative to the null distribution.
 {: .block-tip }
 
-#### 2.1.2 Choosing the Significance Level
+### 2.1.2 Choosing the Significance Level
 
 Part of the procedure of testing a hypothesis is specifying the set of values for the test statistic that leads to rejection of $H_0$. This set of values is called the **critical region** or **rejection region** $\mathcal{R}$ for the test.
 
@@ -263,7 +284,7 @@ We aim to minimize both types of errors, though they have different consequences
 > The **power** of a test is the probability that the test correctly rejects a false null hypothesis. It is defined as $1- \beta$, where $\beta= \mathbb{P}$(Type II Error)
 {: .block-tip }
 
-### 2.2 Comparing Means in Two Conditions
+## 2.2 Comparing Means in Two Conditions
 
 In experiments comparing two conditions, we often measure the response variable on a continuous scale. We assume the response observations in the two conditions follow normal distributions:
 
@@ -281,7 +302,7 @@ We test hypotheses of the form:
 - $H_0: \mu_1 \leq \mu_2$ versus $H_a: \mu_1 > \mu_2$
 - $H_0: \mu_1 \geq \mu_2$ versus $H_a: \mu_1 < \mu_2$
 
-#### 2.2.1 The Two-Sample $t$-Test
+### 2.2.1 The Two-Sample $t$-Test
 
 The Student's $t$-test is used to compare the means ($\mu_1$ and $\mu_2$) of two conditions, assuming the variances are unknown but equal.
 
@@ -330,7 +351,7 @@ $$
 \end{cases}
 $$
 
-##### 2.2.1.1 $P$-value in Hypothesys Testing
+#### 2.2.1.1 $P$-value in Hypothesys Testing
 
 > **Definition: $P$-value**
 >
@@ -347,7 +368,7 @@ The $P$-value is a better report than just saying $H_0$ was rejected with signif
 - If $P$-value $\le \alpha$, we reject $H_0$.
 - If $P$-value $> \alpha$, we do not reject $H_0$.
 
-#### 2.2.2 The Welch's $t$-Test
+### 2.2.2 The Welch's $t$-Test
 
 When the assumption of equal variances does not hold, Welch's $t$-test is a more appropriate method for comparing the means of two independent samples. The test statistic for Welch's $t$-test is given by:
 
@@ -369,7 +390,7 @@ $$
 
 The test statistic $T$ follows a $t$-distribution with $\nu$ degrees of freedom. The $P$-value is calculated based on this distribution to determine if there is a significant difference between the means of the two groups.
 
-#### 2.2.3 F-Test for Variances
+### 2.2.3 F-Test for Variances
 
 The F-test is used to compare the variances of two independent samples. The test statistic is defined as:
 
@@ -391,7 +412,7 @@ $$
 
 Where $f$ is the observed value of the test statistic. The $P$-value determines whether there is a significant difference in variances between the two groups.
 
-#### 2.2.4 Example: Instagram Ad Frequency
+### 2.2.4 Example: Instagram Ad Frequency
 
 Suppose you are a data scientist at Instagram, and you want to investigate the influence of ad frequency on user engagement. Users currently see an ad every 8 posts, but your manager wants to increase ad frequency to every 5 posts. You hypothesize that this change will decrease user engagement, measured by average session time, in minutes.
 
@@ -439,7 +460,7 @@ $$
 
 - This $P$-value is much smaller than any typical $\alpha$, and so we reject $H_0: \mu_1 \le \mu_2$, and conclude that increasing ad frequency significantly reduces average session duration.
 
-### 2.3 Comparing Proportions in Two Conditions
+## 2.3 Comparing Proportions in Two Conditions
 
 When the response variable is binary (e.g., indicating whether an action was performed), we often assume a Bernoulli distribution. That is, $Y_{ij} \sim B(1,\pi_j)$ where $\pi_j$ represents the probability that $Y_{ij}=1$, i.e. the unit $i$ under condition $j$ performs the "action of interest." The $Z$-test for proportions compares the probabilities ($\pi_1$ and $\pi_2$) that the action of interest occurs in each condition. 
 
@@ -493,7 +514,7 @@ $$
 
 Where $z$ is the observed value of the test statistic.
 
-#### 2.3.1 Example: Optimizing Optimizely
+### 2.3.1 Example: Optimizing Optimizely
 
 Consider a scenario where Optimizely is interested in determining if a redesigned homepage leads to a significant increase in the number of new accounts created compared to the original homepage.
 
@@ -531,11 +552,11 @@ $P$-value $= \mathbb{P}(T\le -5.007) = 2.758\times 10^{-7}$, where $T \sim \math
 We reject $H_0$ and conclude that the redesigned homepage significantly increases conversion rate.
 
 
-### 2.4 Power Analysis and Sample Size Choice
+## 2.4 Power Analysis and Sample Size Choice
 
 Power analysis helps control Type II errors and determine the required sample size for detecting a meaningful effect. The power of a test, defined as $1 - \beta$, is the probability of correctly rejecting a false null hypothesis ($H_0$). A higher power indicates a greater likelihood of detecting an effect when it exists.
 
-#### 2.4.1 Sample Size Calculation
+### 2.4.1 Sample Size Calculation
 
 We can derive the number of samples as:
 
@@ -556,7 +577,7 @@ Where:
 {: .block-tip }
 
 
-### 2.5 Permutation and Randomization Tests
+## 2.5 Permutation and Randomization Tests
 
 All the previous tests have made some kind of distributional assumption for the response measurements, such as $Y_{ij} \sim \mathcal{N}(\mu_j, \sigma^2)$ or $Y_{ij} \sim \text{Binomial}(1, \pi_j)$. It would be preferable to have a test that does not rely on any assumptions. This is precisely the purpose of permutation and randomization tests.
 
@@ -576,7 +597,7 @@ A true permutation test considers all possible rearrangements of the original da
 
 In a randomization test, we do not consider all possible rearrangements. Instead, we consider a large number $N$ of them. We use this in practice instead of a permutation test because the exact permutation tests have too many permutations to consider.
 
-#### 2.5.1 Randomization Test Algorithm
+### 2.5.1 Randomization Test Algorithm
 
 1. Collect response observations in each condition:
    
@@ -637,9 +658,9 @@ In a randomization test, we do not consider all possible rearrangements. Instead
   p\text{-value} = \frac{1}{N} \sum_{k=1}^{N} \mathbb{I}\{ t^*_k \geq t \}
   $$
 
-## Chapter 3: Experiments with More Than Two Conditions
+# Chapter 3: Experiments with More Than Two Conditions
 
-### 3.1 Anatomy of an "A/B/$m$" Test
+## 3.1 Anatomy of an "A/B/$m$" Test
 
 In this chapter, we consider the design and analysis of experiments consisting of more than two experimental conditions, commonly referred to as “A/B/m Testing.” 
 
@@ -698,7 +719,7 @@ $$
 H_0: \pi_1 = \pi_2 = \cdots = \pi_m \quad \text{versus} \quad H_a: \pi_j \neq \pi_k \text{ for some } j \neq k
 $$
 
-### 3.2 Comparing Means in Multiple Conditions
+## 3.2 Comparing Means in Multiple Conditions
 
 Assume that our response variable follows a normal distribution, with the mean depending on the condition in which we take the measurements, and the variance being the same across all conditions:
 
@@ -711,7 +732,7 @@ $$
 H_0: \mu_1 = \mu_2 = \cdots = \mu_m \quad \text{versus} \quad H_a: \mu_j \neq \mu_k \text{ for some } j \neq k
 $$
 
-#### The $F$-test for Overall Significance in a Linear Regression
+### The $F$-test for Overall Significance in a Linear Regression
 
 > WIP
 {: .block-danger }
@@ -769,7 +790,7 @@ If $H_0: \mu_1 = \cdots = \mu_m$ is true, then $\mathbb{E}[MSC] = \sigma^2$ and 
 | Error     | SSE  | $N-m$ | MSE = SSE/$(N-m)$ |                      |
 | Total     | SST  | $N-1$ |             |                      |
 
-#### Example: Candy Crush Boosters
+### Example: Candy Crush Boosters
 
 Candy Crush is experimenting with three different versions of in-game “boosters”: the lollipop hammer, the jelly fish, and the colour bomb. Users are randomized to one of these three conditions ($n_1 = 121$, $n_2 = 135$, $n_3 = 117$), and they receive 5 boosters corresponding to their condition. Interest lies in evaluating the effect of these boosters on the length of time a user plays the game.
 

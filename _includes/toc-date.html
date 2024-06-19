@@ -38,10 +38,11 @@
 
             <li class="divider"></li>
 
-            {% for collection in site.collections %}
-                <!-- <p>{{ collection.label }}</p> -->
+            {% assign collections = site.collections | sort: 'weight' %}
+            {% for collection in collections %}
                 {% if collection.output %}
-                    {% if collection.label == "posts" %}
+                    {% if collection.label != "pages" %}
+                        <p class="collection-name">{{ collection.name }}</p>
                         {% assign reversed_posts = site[collection.label] | reverse %}
                     {% else %}
                         {% assign reversed_posts = site[collection.label] %}

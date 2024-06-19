@@ -7,7 +7,20 @@ layout: post
 permalink: /basic-stats
 ---
 
-## Random Variable
+<h1>Table of Contents</h1>
+
+- [Random Variable](#random-variable)
+- [Probability Distributions](#probability-distributions)
+  - [Types of Probability Distributions:](#types-of-probability-distributions)
+- [Mean, Variance, and Expected Values](#mean-variance-and-expected-values)
+  - [Mean](#mean)
+  - [Variance](#variance)
+  - [Standard Deviation](#standard-deviation)
+- [Sampling and Sampling Distributions](#sampling-and-sampling-distributions)
+  - [Sampling Distribution](#sampling-distribution)
+  - [Central Limit Theorem](#central-limit-theorem)
+
+# Random Variable
 A random variable is a variable whose values depend on outcomes of a random process. It is a mathematical function that assigns a numerical value to each outcome in a sample space of a random experiment.
 
 > **Definition**
@@ -27,10 +40,10 @@ A random variable is a variable whose values depend on outcomes of a random proc
 - **Continuous Random Variable:** Takes on an infinite number of possible values.
   - **Example:** The time it takes to run a race. It could be 12.3 seconds, 12.31 seconds, 12.315 seconds, etc.
 
-## Probability Distributions
+# Probability Distributions
 A probability distribution describes how the values of a random variable are distributed. It gives the probability that a random variable will take on each of its possible values.
 
-### Types of Probability Distributions:
+## Types of Probability Distributions:
 - **Discrete Probability Distributions:** Include probability mass functions (PMFs) which assign probabilities to discrete outcomes, such that:
 
     $$
@@ -125,10 +138,10 @@ A probability distribution describes how the values of a random variable are dis
 ![T-distribution](/assets/gitbook/images/stat/t-dist.png)
 <!-- {% include stat/t-dist.html %} -->
 
-## Mean, Variance, and Expected Values
+# Mean, Variance, and Expected Values
 These are fundamental concepts in statistics that describe the central tendency and variability of a probability distribution.
 
-### Mean
+## Mean
 The mean, $\mu$, of a probability provides a measure of the central tendency. For a discrete random variable $$X$$ with a probability mass function $$\mathbb{P}(x)$$:
 
 $$ \mu = \sum_X x \cdot \mathbb{P}(x) $$
@@ -143,7 +156,7 @@ $$
     \mu = E(X)
 $$
 
-### Variance
+## Variance
 Variance measures the spread or dispersion of a set of values. It is the expected value of the squared deviation of a random variable from its mean.
 
 $$ \text{Var}(X) = \sigma^2 = E[(X - \mu)^2] $$
@@ -156,22 +169,22 @@ $$
 \end{cases}
 $$
 
-### Standard Deviation
+## Standard Deviation
 The standard deviation is the square root of the variance and provides a measure of the dispersion in the same units as the mean.
 
 $$ \sigma = \sqrt{\text{Var}(X)} $$
 
-## Sampling and Sampling Distributions
+# Sampling and Sampling Distributions
 Sampling involves selecting a subset of data from a population to estimate characteristics of the whole population.
 
-### Sampling Distribution
+## Sampling Distribution
 The sampling distribution is the probability distribution of a statistic (such as the sample mean) obtained from a large number of samples drawn from a specific population.
 
 > WIP
 {: .block-danger }
 
 
-### Central Limit Theorem
+## Central Limit Theorem
 The central limit theorem states that the sampling distribution of the sample mean will approximate a normal distribution, regardless of the shape of the population distribution, provided the sample size is sufficiently large (usually $$ n > 30 $$).
 
 $$ \bar{X} \sim \mathcal{N}(\mu, \frac{\sigma^2}{n}) $$
