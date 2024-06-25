@@ -231,7 +231,7 @@
   border: 1px solid transparent;
 }
 .book.color-theme-1 .book-summary ul.summary li.divider {
-  background: #7e888b;
+  background: #585f61;
   box-shadow: none;
 }
 .book.color-theme-1 .book-summary ul.summary li i.fa-check {
@@ -242,7 +242,7 @@
 }
 .book.color-theme-1 .book-summary ul.summary li a,
 .book.color-theme-1 .book-summary ul.summary li span {
-  color: #877f6a;
+  color: #ffffff;
   background: transparent;
   font-weight: normal;
 }
@@ -251,6 +251,14 @@
   color: #704214;
   background: transparent;
   font-weight: normal;
+}
+.book.color-theme-1 .collection-name {
+  margin: auto;
+  text-align: center;
+  color: #afa790;
+  padding-bottom: 3%;
+  font-weight: bold;
+  background: transparent;
 }
 /*
  * Theme 2
@@ -288,4 +296,12 @@
   color: #f4f4f5;
   background: #252737;
   font-weight: 600;
+}
+.book.color-theme-2 .collection-name {
+  margin: auto;
+  text-align: center;
+  color: #aaaaaa;
+  padding-bottom: 3%;
+  font-weight: bold;
+  background: transparent;
 }
