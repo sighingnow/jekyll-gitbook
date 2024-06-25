@@ -254,7 +254,8 @@
 }
 .book.color-theme-1 .collection-name {
   margin: auto;
-  text-align: center;
+  text-align: left;
+  margin-left: 2.14285714em;
   color: #afa790;
   padding-bottom: 3%;
   font-weight: bold;
@@ -299,7 +300,8 @@
 }
 .book.color-theme-2 .collection-name {
   margin: auto;
-  text-align: center;
+  text-align: left;
+  margin-left: 2.14285714em;
   color: #aaaaaa;
   padding-bottom: 3%;
   font-weight: bold;

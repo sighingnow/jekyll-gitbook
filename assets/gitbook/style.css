@@ -4326,7 +4326,8 @@ body {
 
 .collection-name {
     margin: auto;
-    text-align: center;
+    text-align: left;
+    margin-left: 2.14285714em;
     color: #2c2c2c;
     padding-bottom: 3%;
     font-weight: bold;
