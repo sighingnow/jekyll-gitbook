@@ -146,7 +146,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
             return theme.config == configName;
         })[0];
         // Fallback to default theme
-        return (!!configTheme)? configTheme.id : 1;
+        return (!!configTheme)? configTheme.id : 0;
     }
 
     function update() {

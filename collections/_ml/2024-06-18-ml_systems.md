@@ -10,6 +10,7 @@ mermaid: true
 
 This content is a summary and my key takeaways from the excellent book [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen.
 
+<!-- prettier-ignore -->
 > **Note:** This document is a very condensed version of the book, reflecting the points I found most relevant.
 >
 > For a more comprehensive coverage of the topics, **I highly recommend reading the full book**.
@@ -52,6 +53,7 @@ This content is a summary and my key takeaways from the excellent book [Designin
 
 Before starting a machine learning (ML) project, it is essential to determine if it is necessary or cost-effective.
 
+<!-- prettier-ignore -->
 > Machine Learning is an approach to (1) _learn_ (2) _complex patterns_ from (3) _existing data_ and use these patterns to make (4) _predictions_ on (5) _unseen data_.
 {: .block-tip }
 
@@ -79,6 +81,7 @@ Other differences include time spent on data. In research, data is typically cle
 
 ## Business and ML Objectives
 
+<!-- prettier-ignore -->
 > Most companies don't care about the fancy ML metrics.
 {: .block-tip }
 
@@ -133,6 +136,7 @@ $$
 
 The discussion of mind versus data revolves around approaches to ML systems development. The "mind" approach favors spend more time researching inductive bias and architectural designs, while the "data" approach favors getting more data and computation. There are arguments supporting both data-centric and model-centric development of ML systems.
 
+<!-- prettier-ignore -->
 > Here are some recommended readings:
 >
 > 1. [Anand Rajaraman, "More data usually beats better algorithms"](https://anand.typepad.com/datawocky/2008/03/more-data-usual.html)
@@ -144,6 +148,7 @@ The discussion of mind versus data revolves around approaches to ML systems deve
 
 # Chapter 3: Data Engineering Fundamentals
 
+<!-- prettier-ignore -->
 > This chapter is very introductory. The recommendation is Martin Kleppmann's book [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/), which I plan on writing about on this blog in the future.
 {: .block-tip}
 
@@ -193,7 +198,7 @@ Reservoir sampling is a technique used when dealing with streaming data or when 
 2. Fill the reservoir with the first $k$ data points;
 3. For each subsequent data point, the $n^{\text{th}}$ data point (where $n > k$), generate a random number $i \in [1, n]$, and replace the $i^\text{th}$ element of the reservoir if $i \le k$.
 
-This ensures that each data point has an equal probability, $k/n$, of being included in the sample. 
+This ensures that each data point has an equal probability, $k/n$, of being included in the sample.
 
 <center>
 <p>
@@ -204,11 +209,12 @@ This ensures that each data point has an equal probability, $k/n$, of being incl
 
 **Importance Sampling**
 
-Importance sampling is a statistical technique used to estimate properties of a target distribution by sampling from a different distribution. This method is particularly useful in situations where it is difficult to sample directly from the target distribution, but easier to sample from an auxiliary distribution. So, if we have a distribution P(x) that is really expensive, slow, or unfeasible to sample from, we can define a *proposal distribution* or *importance distribution* $Q(x)$ that we can sample and weight this sample by $P(x)/Q(x)$. The following equation shows that, in expectation, $x$ sampled from $P(x)$ is equal to $x$ sampled from $Q(x)$ weighted by $P(x)/Q(x)$:
+Importance sampling is a statistical technique used to estimate properties of a target distribution by sampling from a different distribution. This method is particularly useful in situations where it is difficult to sample directly from the target distribution, but easier to sample from an auxiliary distribution. So, if we have a distribution P(x) that is really expensive, slow, or unfeasible to sample from, we can define a _proposal distribution_ or _importance distribution_ $Q(x)$ that we can sample and weight this sample by $P(x)/Q(x)$. The following equation shows that, in expectation, $x$ sampled from $P(x)$ is equal to $x$ sampled from $Q(x)$ weighted by $P(x)/Q(x)$:
 
 $$
 
 \mathbb{E}_{P(x)}[x]  =  \sum_x P(x)x = \sum_x Q(x)x\frac{P(x)}{Q(x)} = \mathbb{E}_{Q(x)} \bigg[ x\frac{P(x)}{Q(x)} \bigg]
+
 
 $$
 
@@ -230,7 +236,7 @@ When different sources or annotators provide data, it's common to have conflicti
 
 **Data Lineage**
 
-The system must be capable of differentiating data from multiple sources and labeling techniques using *data lineage*. This helps flag potential biases in the data and debug the models effectively.
+The system must be capable of differentiating data from multiple sources and labeling techniques using _data lineage_. This helps flag potential biases in the data and debug the models effectively.
 
 ### Natural Labels
 
@@ -244,31 +250,32 @@ Feedback can come in different formats and at various stages of the system. For 
 
 ### Handling the Lack of Labels
 
-| Method            |                               How                              |                                                                              Ground truths required?                                                                             |
-|-------------------|:--------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Weak Supervision  | Leverages (often noisy) heuristics to generate labels.         | No, but a small number of labels are recommended to guide the development of heuristics.                                                                                         |
-| Semi-Supervision  | Leverages structural assumptions to generate labels.           | Yes, a small number of initial labels as seeds to generate more labels.                                                                                                          |
+| Method            |                              How                               |                                                                             Ground truths required?                                                                              |
+| ----------------- | :------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Weak Supervision  |     Leverages (often noisy) heuristics to generate labels.     |                                             No, but a small number of labels are recommended to guide the development of heuristics.                                             |
+| Semi-Supervision  |      Leverages structural assumptions to generate labels.      |                                                     Yes, a small number of initial labels as seeds to generate more labels.                                                      |
 | Transfer Learning | Leverages models pretrained on another task for your new task. | No for zero-shot learning. Yes for fine-tuning, though the number of ground truths required is often much smaller than what would be needed if you train the model from scratch. |
-| Active Learning   | Labels data samples that are most useful to your model.        | Yes.                                                                                                                                                                             |
+| Active Learning   |    Labels data samples that are most useful to your model.     |                                                                                       Yes.                                                                                       |
 
 **Weak Supervision**
 
-One of the most popular tools for weak supervision is Snorkel, developed by the Stanford AI Lab. This tool relies on the concept of labeling functions (LFs), which encode heuristics. These heuristics can be based on *keywords*, *regular expressions*, *database lookups*, the *outputs of other models*, etc.
+One of the most popular tools for weak supervision is Snorkel, developed by the Stanford AI Lab. This tool relies on the concept of labeling functions (LFs), which encode heuristics. These heuristics can be based on _keywords_, _regular expressions_, _database lookups_, the _outputs of other models_, etc.
 
 **Semi-supervision**
 
-Several semi-supervised techniques have been developed over the years. One of them is *self-training*, where you start by training a model on your existing set of labeled data and use this model to make predictions for unlabeled samples. You can expand your training set with high-probability labels and continue this process until you're satisfied with the results.
+Several semi-supervised techniques have been developed over the years. One of them is _self-training_, where you start by training a model on your existing set of labeled data and use this model to make predictions for unlabeled samples. You can expand your training set with high-probability labels and continue this process until you're satisfied with the results.
 
 Additionally, clustering algorithms can label samples based on similarity with labeled samples. Another method is the perturbation-based approach, where you add perturbations to labeled samples to generate new samples with the same label, assuming the perturbations don't change the labels. This method is further discussed in the data augmentation section.
 
 **Transfer Learning**
 
-In transfer learning, a base model is trained on a base task with abundant training data (e.g., language modeling with next-token prediction). This model can then be used in a *zero-shot* scenario or *fine-tuned* for a downstream task. Fine-tuning involves tweaking the base model, such as continuing its training on data from the target task.
+In transfer learning, a base model is trained on a base task with abundant training data (e.g., language modeling with next-token prediction). This model can then be used in a _zero-shot_ scenario or _fine-tuned_ for a downstream task. Fine-tuning involves tweaking the base model, such as continuing its training on data from the target task.
 
 **Active Learning**
 
-Active learning involves labeling data samples that are most useful to the model, based on specific metrics or heuristics. The most straightforward metric is uncertainty measurement, where you label the examples the model is least certain about, hoping they will help the model learn the decision boundary better. Another method is *query-by-committee*, which is based on the disagreement among an ensemble of candidate models.
+Active learning involves labeling data samples that are most useful to the model, based on specific metrics or heuristics. The most straightforward metric is uncertainty measurement, where you label the examples the model is least certain about, hoping they will help the model learn the decision boundary better. Another method is _query-by-committee_, which is based on the disagreement among an ensemble of candidate models.
 
+<!-- prettier-ignore -->
 > For a more comprehensive review of active learning methods, it's recommended to read Burr Settles's [Active Learning Literature Survey](https://burrsettles.com/pub/settles.activelearning.pdf).
 {: .block-tip}
 
@@ -282,14 +289,13 @@ Class imbalance is a common issue in many machine learning problems, where certa
 2. **Skewed Metrics and Overfitting:** The model might overfit to the majority class, failing to generalize well to the minority class or unseen data. It's easier for the model get stuck in a nonoptimal solution by exploiting simple heuristics, for example, if the model learns to always outputs the majority class and its accuracy is already 99%.
 3. **Asymmetric Costs of Error:** The cost of a wrong prediction on a sample of the rare class might be much higher than a wrong prediction on a sample of the majority class, such as in the lung cancer detection example. Misclassification on an X-ray with cancerous cells is much more dangerous than misclassification on an X-ray of a normal lung.
 
-
 ### Handling Class Imbalance
 
 Addressing class imbalance involves various techniques at both the data and algorithm levels to ensure that the model can learn effectively from imbalanced data.
 
+<!-- prettier-ignore -->
 > For a more comprehensive review of class imbalance methods, it's recommended to read Johnson and Khoshgoftaar's [Survey on deep learning with class imbalance](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0192-5).
 {: .block-tip}
-
 
 **Using the Right Evaluation Metrics**
 
@@ -298,10 +304,15 @@ Instead of relying on accuracy, use evaluation metrics that provide a clearer pi
 - **Precision and Recall:** Measure the accuracy of positive predictions and the ability to find all positive instances.
 - **F1 Score:** The harmonic mean of precision and recall, providing a single metric that balances both.
 
-F1, precision, and recall are asymmetric metrics, which means that their values change depending on which class is considered the positive class. 
+F1, precision, and recall are asymmetric metrics, which means that their values change depending on which class is considered the positive class.
 
 - **Area Under the ROC Curve (AUC-ROC):** Evaluates the trade-off between true positive and false positive rates.
+
+{% include ml_systems/roc.html %}
+
 - **Area Under the Precision-Recall Curve (AUC-PR):** Particularly useful for imbalanced datasets, focusing on the performance for the minority class.
+
+{% include ml_systems/pr.html %}
 
 **Data-Level Methods: Resampling**
 
@@ -310,9 +321,9 @@ F1, precision, and recall are asymmetric metrics, which means that their values 
 - **Cost-sensitive learning:**
 - **Class-balanced loss:**
 
-
 ## Data Augmentation
 
+<!-- prettier-ignore -->
 > WIP
 {: .block-danger }
 
