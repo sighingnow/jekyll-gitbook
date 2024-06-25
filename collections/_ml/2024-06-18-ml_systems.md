@@ -38,6 +38,9 @@ This content is a summary and my key takeaways from the excellent book [Designin
   - [Class Imbalance](#class-imbalance)
     - [Challenges of Class Imbalance](#challenges-of-class-imbalance)
     - [Handling Class Imbalance](#handling-class-imbalance)
+      - [Using the Right Evaluation Metrics](#using-the-right-evaluation-metrics)
+      - [Data-Level Methods: Resampling](#data-level-methods-resampling)
+      - [Algorithm-Level Methods](#algorithm-level-methods)
   - [Data Augmentation](#data-augmentation)
 - [Chapter 5: Feature Engineering](#chapter-5-feature-engineering)
 - [Chapter 6: Model Development and Offline Evaluation](#chapter-6-model-development-and-offline-evaluation)
@@ -297,7 +300,7 @@ Addressing class imbalance involves various techniques at both the data and algo
 > For a more comprehensive review of class imbalance methods, it's recommended to read Johnson and Khoshgoftaar's [Survey on deep learning with class imbalance](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0192-5).
 {: .block-tip}
 
-**Using the Right Evaluation Metrics**
+#### Using the Right Evaluation Metrics
 
 Instead of relying on accuracy, use evaluation metrics that provide a clearer picture of the model's performance on imbalanced data:
 
@@ -308,18 +311,76 @@ F1, precision, and recall are asymmetric metrics, which means that their values 
 
 - **Area Under the ROC Curve (AUC-ROC):** Evaluates the trade-off between true positive and false positive rates.
 
-
 - **Area Under the Precision-Recall Curve (AUC-PR):** Particularly useful for imbalanced datasets, focusing on the performance for the minority class.
 
 
-**Data-Level Methods: Resampling**
+#### Data-Level Methods: Resampling
+
+Data-level methods modify the distribution of the training data to reduce imbalance. There are two primary techniques: undersampling the majority class and oversampling the minority class.
+
+- **Undersampling:** This involves reducing the number of samples in the majority class. The simplest method is to randomly remove samples. Another technique is **Tomek links**, where samples from the majority class that are close to minority class samples are removed, helping to clarify the decision boundary. However, this can make the model less robust to subtle differences between classes.
+
+- **Oversampling:** This involves increasing the number of samples in the minority class. The simplest method is to randomly duplicate existing samples. A more sophisticated technique is **SMOTE** (Synthetic Minority Oversampling Technique), which generates new minority class samples by interpolating between existing samples. SMOTE works well with low-dimensional data but can introduce noise if overused.
+
+Both Tomek links and SMOTE, along with other techniques like Near-Miss and one-sided selection, are effective for low-dimensional data.
+
+**Avoiding Overfitting**
+
+Overfitting is a risk when using resampling techniques. Oversampling can lead to overfitting on the resampled training data, while undersampling can result in the loss of valuable information. To mitigate these risks, consider the following strategies:
+
+- **Two-Phase Learning:** Train the model initially on the resampled data, then fine-tune it on the original data. This helps the model generalize better.
+- **Dynamic Sampling:** Adjust the sampling strategy dynamically during training. For example, oversample low-performing classes and undersample high-performing classes to balance the learning process. This method helps the model focus on areas it hasn't learned well yet.
+
+#### Algorithm-Level Methods
+
+Algorithm-level methods keep the data distribution intact but alter the learning algorithm to make it more robust to imbalance. These methods often adjust the weights for samples in the loss function, emphasizing the learning of minority class instances.
+
+- **Cost-sensitive learning:** Define a cost matrix to specify the cost of each possible outcome of the model concerning the correct label. For example:
 
 
+| | Actual Negative | Actual Positive |
+| :--: | :--: | :--: |
+| Predicted Negative | $C_{00}$ | $C_{10}$ |
+| Predicted Positive | $C_{01}$ | $C_{11}$ |
 
-**Algorithm-Level Methods**
+We then have the loss function:
 
-- **Cost-sensitive learning:**
-- **Class-balanced loss:**
+$$
+
+\mathcal{L}(x;\theta) = \sum_j C_{ij} \, P(j|x;\theta)
+
+$$
+
+- **Class-balanced loss:** This method modifies the loss function to weigh the contributions of each class based on their prevalence in the dataset. This ensures that the minority class has more influence on the loss. A more advanced version of this method accounts for the overlap among existing samples, such as the class-balanced loss based on the effective number of samples:
+
+$$
+
+\begin{gather*}
+  W_i = \frac{N}{\text{number of samples of class i}}, \qquad \text{where N is the total number of training samples} \\ \\
+  \mathcal{L}_{\text{weighted}}(x;\theta) = W_i \sum_j P(j|x;\theta) \, \mathcal{L}(x,j)
+\end{gather*}
+
+$$
+
+- **Focal loss:** Focal loss increases the weight for instances that are harder for the model to classify (i.e., those with lower prediction probabilities). The formula for focal loss, compared to cross-entropy, is:
+
+
+$$
+\begin{gather*}
+CE(\rho_t) = - \log(\rho_t) \\
+FL(\rho_t) = - (1-\rho_t)^\gamma \log(\rho_t)
+\end{gather*}
+$$
+
+
+<center>
+<p>
+    <img src="/assets/gitbook/images/ml-sys/loss.png" alt>
+</p>
+<a href="https://arxiv.org/abs/1708.02002">Source</a>
+</center>
+
+
 
 ## Data Augmentation
 
