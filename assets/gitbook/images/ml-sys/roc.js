@@ -1,8 +1,4 @@
-{% raw %}
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<div id="roc-curve"></div>
-<script>
-    // Sample data
+document.addEventListener('DOMContentLoaded', function () {
     var fpr = [0., 0., 0., 0.00398406, 0.00398406,
         0.00796813, 0.00796813, 0.01195219, 0.01195219, 0.01593625,
         0.01593625, 0.01992032, 0.01992032, 0.02390438, 0.02390438,
@@ -114,6 +110,4 @@
     };
 
     Plotly.newPlot('roc-curve', data, layout);
-</script>
-
-{% endraw %}
+});

@@ -308,7 +308,9 @@ F1, precision, and recall are asymmetric metrics, which means that their values 
 
 - **Area Under the ROC Curve (AUC-ROC):** Evaluates the trade-off between true positive and false positive rates.
 
-{% include ml_systems/roc.html %}
+{% raw %}
+<script src="/assets/gitbook/images/ml-sys/roc.js"></script>
+{% endraw %}
 
 - **Area Under the Precision-Recall Curve (AUC-PR):** Particularly useful for imbalanced datasets, focusing on the performance for the minority class.
 
