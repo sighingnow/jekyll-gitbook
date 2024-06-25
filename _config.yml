@@ -24,8 +24,8 @@ toc:
   h_min: 1
   h_max: 1
 
-# customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
-favicon_path: /assets/gitbook/images/favicon.ico
+# customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}/favicon.ico
+favicon_path: /assets/gitbook/images/favicon
 
 # markdown render engine.
 markdown: kramdown
