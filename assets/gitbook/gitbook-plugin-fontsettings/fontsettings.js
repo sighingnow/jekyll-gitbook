@@ -10,14 +10,14 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     // Default themes
     var THEMES = [
         {
-            config: 'sepia',
-            text: 'Sepia',
-            id: 1
-        },
-        {
             config: 'white',
             text: 'White',
             id: 0
+        },
+        {
+            config: 'sepia',
+            text: 'Sepia',
+            id: 1
         },
         {
             config: 'night',
