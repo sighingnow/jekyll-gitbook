@@ -16,6 +16,11 @@ This content is a summary and my personal takeaways from the excellent book [Des
 > For a more comprehensive coverage of the topics, **I highly recommend reading the full book**.
 {: .block-warning }
 
+
+<!-- prettier-ignore -->
+> **WIP - Update 28/06/24:** Content written up to Chapter 6.2
+{: .block-danger }
+
 <h1>Table of Contents</h1>
 
 - [Chapter 1: Overview of Machine Learning Systems](#chapter-1-overview-of-machine-learning-systems)
@@ -634,27 +639,27 @@ Feature generalization ensures that the features used in the model are not overl
 
 # Chapter 6: Model Development and Offline Evaluation
 
-Model development is an iterative process. After each iteration, you'll want to compare your model's performance against its performance in previous iterations and evaluate how suitable this iteration is for production.
+Model development is an iterative process. After each iteration, it's crucial to compare your model's performance against previous versions and evaluate its suitability for production.
 
 ## 6.1 Model Development and Training
 
 ### 6.1.1 Six Tips for Model Selection
 
-1. **Avoid the state-of-the-art trap:** Don’t be swayed by the latest and most complex algorithms just because they are state-of-the-art. Often, simpler models can perform just as well or better, especially if they are well-tuned and well-understood. Researchers often only evaluate models in academic settings, which we discussed in chapter 1.
+1. **Avoid the state-of-the-art trap:** Don’t be swayed by the latest and most complex algorithms just because they are state-of-the-art. Often, simpler models can perform just as well or better, especially if they are well-tuned and well-understood. Remember that researchers often evaluate models in academic settings, which we discussed in Chapter 1.
 
-2. **Start with the simplest models:** Begin with simple models like linear regression or decision trees. These models are easier to interpret and debug. Once you understand the baseline performance and your training and prediction pipelines are consistent, you can move to more complex models if necessary. You can even start with more complex models that require little effort to get started (i.e., a pretrained version of BERT like in Hugging Face's Transformers), but ensure to test simpler models to verify the more complex solution is indeed better than the simpler one.
+2. **Start with the simplest models:** Begin with simple models like linear regression or decision trees. These models are easier to interpret and debug. Once you establish a baseline performance and ensure your training and prediction pipelines are consistent, you can move to more complex models if necessary. While you can start with more complex models that require little effort to get started (e.g., a pretrained version of BERT from Hugging Face's Transformers), always test simpler models to verify that the more complex solution indeed outperforms them.
 
     <!-- prettier-ignore -->
     > Simple is better than complex
     {: .block-tip }
 
-3. **Avoid human biases in selecting models:** Ensure that model selection is based on objective performance metrics rather than subjective preferences or biases. If an engineer is more excited about a solution in specific, they may spend more time tuning it, ensure to architectures under comparable setups.
+3. **Avoid human biases in selecting models:** Ensure that model selection is based on objective performance metrics rather than subjective preferences or biases. If an engineer is more enthusiastic about a specific solution, they may spend more time tuning it. Make sure to compare architectures under similar setups.
 
 
-4. **Evaluate good performance now versus good performance later:** Consider both short-term and long-term performance. Some models might perform well initially but degrade over time, and some models might gain performance as more data is collected. Regularly monitor model performance and be prepared to update or replace models as necessary.
+4. **Evaluate good performance now versus good performance later:** Consider both short-term and long-term performance. Some models might perform well initially but degrade over time, while others might improve as more data is collected. Regularly monitor model performance and be prepared to update or replace models as necessary.
 
 
-5. **Evaluate trade-offs:** Every model comes with trade-offs. Consider factors such as training time, inference time, scalability, interpretability, and resource requirements, but also the false positives and false negatives trade-off. Choose a model that balances these factors in a way that aligns with your project goals.
+5. **Evaluate trade-offs:** Every model comes with trade-offs. Consider factors such as training time, inference time, scalability, interpretability, and resource requirements, as well as the trade-off between false positives and false negatives. Choose a model that balances these factors in a way that aligns with your project goals.
 
 
 6. **Understand your model's assumptions:** Each model makes specific assumptions about the data. Ensure that these assumptions hold for your dataset. For example:
@@ -665,8 +670,6 @@ Model development is an iterative process. After each iteration, you'll want to 
    5. *Boundaries:* A linear classifier assumes that decision boundaries are linear.
    6. *Conditional independence:* A naive Bayes classifier assumes that the attribute values are independent of each other given the class.
    7. *Normally distributed:* Many statistical methods assume that data is normally distributed.
-
-
 
 ## 6.2 Ensembles
 

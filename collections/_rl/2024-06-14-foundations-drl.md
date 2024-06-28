@@ -9,6 +9,10 @@ permalink: /foundations-drl
 
 This post is based on the [Foundations of Deep RL](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNymuBM9RdmB3Z9N5-0IlY0) series, from professor Pieter Abbeel's channel.
 
+<!-- prettier-ignore -->
+> **WIP - Update 28/06/24:** Content written up to Lecture 1
+{: .block-danger }
+
 <h1>Table of Contents</h1>
 
 <!-- no toc -->

@@ -18,6 +18,10 @@ The material is based on the book [Design and Analysis of Experiments, 10th Edit
 > For a more comprehensive coverage of experimental design principles, **I highly recommend checking out the full book**.
 {: .block-warning }
 
+<!-- prettier-ignore -->
+> **WIP - Update 28/06/24:** Content written up to Chapter 3.1
+{: .block-danger }
+
 <h1>Table of Contents</h1>
 
 <!-- no toc -->
