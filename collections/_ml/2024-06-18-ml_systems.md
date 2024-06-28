@@ -8,10 +8,10 @@ permalink: /ml-systems
 mermaid: true
 ---
 
-This content is a summary and my key takeaways from the excellent book [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen.
+This content is a summary and my personal takeaways from the excellent book [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen.
 
 <!-- prettier-ignore -->
-> **Note:** This document is a very condensed version of the book, reflecting the points I found most relevant.
+> **Note:** This document is a highly condensed version of the book, reflecting the points I found most relevant along with my own conclusions on the topics discussed.
 >
 > For a more comprehensive coverage of the topics, **I highly recommend reading the full book**.
 {: .block-warning }
@@ -19,31 +19,54 @@ This content is a summary and my key takeaways from the excellent book [Designin
 <h1>Table of Contents</h1>
 
 - [Chapter 1: Overview of Machine Learning Systems](#chapter-1-overview-of-machine-learning-systems)
-  - [When to Use Machine Learning](#when-to-use-machine-learning)
-  - [Machine Learning in Research Versus Production](#machine-learning-in-research-versus-production)
+  - [1.1 When to Use Machine Learning](#11-when-to-use-machine-learning)
+  - [1.2 Machine Learning in Research Versus Production](#12-machine-learning-in-research-versus-production)
 - [Chapter 2: Introduction to Machine Learning Systems Design](#chapter-2-introduction-to-machine-learning-systems-design)
-  - [Business and ML Objectives](#business-and-ml-objectives)
-  - [Requirements for ML Systems](#requirements-for-ml-systems)
-  - [Iterative Process](#iterative-process)
-  - [Objective Functions](#objective-functions)
-    - [Decoupling Objectives](#decoupling-objectives)
-  - [Mind Versus Data](#mind-versus-data)
+  - [2.1 Business and ML Objectives](#21-business-and-ml-objectives)
+  - [2.2 Requirements for ML Systems](#22-requirements-for-ml-systems)
+  - [2.3 Iterative Process](#23-iterative-process)
+  - [2.4 Objective Functions](#24-objective-functions)
+    - [2.4.1 Decoupling Objectives](#241-decoupling-objectives)
+  - [2.5 Mind Versus Data](#25-mind-versus-data)
 - [Chapter 3: Data Engineering Fundamentals](#chapter-3-data-engineering-fundamentals)
 - [Chapter 4: Training Data](#chapter-4-training-data)
-  - [Sampling](#sampling)
-  - [Labeling](#labeling)
-    - [Hand Labels](#hand-labels)
-    - [Natural Labels](#natural-labels)
-    - [Handling the Lack of Labels](#handling-the-lack-of-labels)
-  - [Class Imbalance](#class-imbalance)
-    - [Challenges of Class Imbalance](#challenges-of-class-imbalance)
-    - [Handling Class Imbalance](#handling-class-imbalance)
-      - [Using the Right Evaluation Metrics](#using-the-right-evaluation-metrics)
-      - [Data-Level Methods: Resampling](#data-level-methods-resampling)
-      - [Algorithm-Level Methods](#algorithm-level-methods)
-  - [Data Augmentation](#data-augmentation)
+  - [4.1 Sampling](#41-sampling)
+  - [4.2 Labeling](#42-labeling)
+    - [4.2.1 Hand Labels](#421-hand-labels)
+    - [4.2.2 Natural Labels](#422-natural-labels)
+    - [4.2.3 Handling the Lack of Labels](#423-handling-the-lack-of-labels)
+  - [4.3 Class Imbalance](#43-class-imbalance)
+    - [4.3.1 Challenges of Class Imbalance](#431-challenges-of-class-imbalance)
+    - [4.3.2 Handling Class Imbalance](#432-handling-class-imbalance)
+      - [4.3.2.1 Using the Right Evaluation Metrics](#4321-using-the-right-evaluation-metrics)
+      - [4.3.2.2 Data-Level Methods: Resampling](#4322-data-level-methods-resampling)
+      - [4.3.2.3 Algorithm-Level Methods](#4323-algorithm-level-methods)
+  - [4.4 Data Augmentation](#44-data-augmentation)
+    - [4.4.1 Simple Label-Preserving Transformations](#441-simple-label-preserving-transformations)
+    - [4.4.2 Perturbation](#442-perturbation)
+    - [4.4.3 Data Synthesis](#443-data-synthesis)
 - [Chapter 5: Feature Engineering](#chapter-5-feature-engineering)
+  - [5.1 Learned Features Versus Engineered Features](#51-learned-features-versus-engineered-features)
+  - [5.2 Common Feature Engineering Operations](#52-common-feature-engineering-operations)
+    - [5.2.1 Handling Missing Values](#521-handling-missing-values)
+    - [5.2.2 Scaling](#522-scaling)
+    - [5.2.3 Discretization](#523-discretization)
+    - [5.2.4 Encoding Categorical Features](#524-encoding-categorical-features)
+    - [5.2.5 Feature Crossing](#525-feature-crossing)
+    - [5.2.6 Discrete and Continuous Positional Embeddings](#526-discrete-and-continuous-positional-embeddings)
+  - [5.3 Data Leakage](#53-data-leakage)
+    - [5.3.1 Common Causes for Data Leakage](#531-common-causes-for-data-leakage)
+    - [5.3.2 Detecting Data Leakage](#532-detecting-data-leakage)
+  - [5.4 Engineering Good Features](#54-engineering-good-features)
+    - [5.4.1 Feature Importance](#541-feature-importance)
+    - [5.4.2 Feature Generalization](#542-feature-generalization)
 - [Chapter 6: Model Development and Offline Evaluation](#chapter-6-model-development-and-offline-evaluation)
+  - [6.1 Model Development and Training](#61-model-development-and-training)
+    - [6.1.1 Six Tips for Model Selection](#611-six-tips-for-model-selection)
+  - [6.2 Ensembles](#62-ensembles)
+  - [6.3 Experiment Tracking and Versioning](#63-experiment-tracking-and-versioning)
+  - [6.4 Distributed Training](#64-distributed-training)
+  - [6.5 AutoML](#65-automl)
 - [Chapter 7: Model Deployment and Prediction Service](#chapter-7-model-deployment-and-prediction-service)
 - [Chapter 8: Data Distribution Shifts and Monitoring](#chapter-8-data-distribution-shifts-and-monitoring)
 - [Chapter 9: Continual Learning and Test in Production](#chapter-9-continual-learning-and-test-in-production)
@@ -52,7 +75,7 @@ This content is a summary and my key takeaways from the excellent book [Designin
 
 # Chapter 1: Overview of Machine Learning Systems
 
-## When to Use Machine Learning
+## 1.1 When to Use Machine Learning
 
 Before starting a machine learning (ML) project, it is essential to determine if it is necessary or cost-effective.
 
@@ -72,7 +95,7 @@ ML solutions are particularly suited to problems that:
 7. **Have a low cost of wrong predictions:** The consequences of incorrect predictions should be manageable.
 8. **Are at scale:** The problem should be significant enough to justify the use of ML.
 
-## Machine Learning in Research Versus Production
+## 1.2 Machine Learning in Research Versus Production
 
 The focus in research is on optimizing a metric to excel in a benchmark. In production, the focus shifts to optimizing one or multiple business metrics, even if this means accepting lower F1 scores or other traditional ML metrics. Stakeholders may require constraints such as limited response time or maximized revenue, necessitating a balance of all requirements.
 
@@ -82,7 +105,7 @@ Other differences include time spent on data. In research, data is typically cle
 
 # Chapter 2: Introduction to Machine Learning Systems Design
 
-## Business and ML Objectives
+## 2.1 Business and ML Objectives
 
 <!-- prettier-ignore -->
 > Most companies don't care about the fancy ML metrics.
@@ -92,7 +115,7 @@ For an ML project to succeed within an organization, it's crucial to tie the per
 
 The business metrics optimized by experiments can impact profit either directly (i.e., conversion rate or cost reduction) or indirectly (i.e., higher customer satisfaction or increased time spent on the site). Many companies create their own metrics to map business metrics to ML metrics, such as [Netflix's _take rate_](https://netflixtechblog.com/artwork-personalization-c589f074ad76).
 
-## Requirements for ML Systems
+## 2.2 Requirements for ML Systems
 
 Most ML systems should satisfy 4 common requirements: reliability, scalability, maintainability, and adaptability.
 
@@ -101,7 +124,7 @@ Most ML systems should satisfy 4 common requirements: reliability, scalability, 
 3. **Maintainability:** Workloads should be structured so that people from different backgrounds and expertise can contribute and use the same tools. Code should be documented, and code, data, and artifacts should be versioned. Models should be reproducible.
 4. **Adaptability:** ML systems should be able to evolve in response to data shifts, changes in targets, or business objectives without service interruption.
 
-## Iterative Process
+## 2.3 Iterative Process
 
 <center>
 <p>
@@ -119,9 +142,9 @@ Brief description of the steps of an ML system design process:
 5. **Monitoring and continual learning:** Monitor performance in production, ensuring the system remains reliable, scalable, maintainable, and adaptable.
 6. **Business Analysis:** Evaluate model performance against business goals and generate new business insights.
 
-## Objective Functions
+## 2.4 Objective Functions
 
-### Decoupling Objectives
+### 2.4.1 Decoupling Objectives
 
 Models often need to optimize multiple objectives. Traditionally, this is done by combining objectives during loss calculation and tuning $\alpha$ and $\beta$:
 
@@ -135,7 +158,7 @@ $$
 \text{score} = \alpha \, \text{score}_1 + \beta \, \text{score}_2
 $$
 
-## Mind Versus Data
+## 2.5 Mind Versus Data
 
 The discussion of mind versus data revolves around approaches to ML systems development. The "mind" approach favors spend more time researching inductive bias and architectural designs, while the "data" approach favors getting more data and computation. There are arguments supporting both data-centric and model-centric development of ML systems.
 
@@ -166,7 +189,7 @@ Key topic from the chapter:
 
 # Chapter 4: Training Data
 
-## Sampling
+## 4.1 Sampling
 
 Sampling occurs at several stages of an ML project lifecycle (e.g., sampling real-world data to create training data; sampling from a dataset to create training/validation/test splits; sampling events for better monitoring the ML system, etc.) and is often overlooked in typical ML coursework. Choosing the right sampling method helps mitigate possible biases and improves data efficiency.
 
@@ -223,11 +246,11 @@ $$
 
 Importance sampling is highly applicable in reinforcement learning, specially in off-policy algorithms, where the agent's behavior and target policies differ. That is, the agent learns from data collected by a different policy that the one it is currently trying to optimize. Importance sampling allows us to correct the bias by weighting the returns according to the probability of actions under the new policy, and then reuse historical data.
 
-## Labeling
+## 4.2 Labeling
 
 Labeling is a core component of any supervised ML system. The performance of an ML model depends heavily on the quantity and quality of the labeled data it's trained on.
 
-### Hand Labels
+### 4.2.1 Hand Labels
 
 Hand-labeling data can be expensive, especially if the data requires subject matter expertise (SME). For instance, labeling chest X-rays would require board-certified radiologists, whose time is limited and costly. Additionally, data privacy concerns must be addressed.
 
@@ -241,7 +264,7 @@ When different sources or annotators provide data, it's common to have conflicti
 
 The system must be capable of differentiating data from multiple sources and labeling techniques using _data lineage_. This helps flag potential biases in the data and debug the models effectively.
 
-### Natural Labels
+### 4.2.2 Natural Labels
 
 Some tasks have natural ground truth labels, such as stock prediction or recommendation systems. Even if a task doesn't have natural labels, it can often be reframed to generate feedback on the predictions. For instance, offering users the option to submit a different translation in a translation system or using a like button in a newsfeed ranking task are forms of generating new labels.
 
@@ -251,7 +274,7 @@ Choosing the appropriate length for the feedback loop requires careful considera
 
 Feedback can come in different formats and at various stages of the system. For example, in an e-commerce application, feedback could include clicking on a product, adding a product to the cart, purchasing a product, rating, leaving a review, or returning a previously bought product.
 
-### Handling the Lack of Labels
+### 4.2.3 Handling the Lack of Labels
 
 | Method            |                              How                               |                                                                             Ground truths required?                                                                              |
 | ----------------- | :------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -282,17 +305,17 @@ Active learning involves labeling data samples that are most useful to the model
 > For a more comprehensive review of active learning methods, it's recommended to read Burr Settles's [Active Learning Literature Survey](https://burrsettles.com/pub/settles.activelearning.pdf).
 {: .block-tip}
 
-## Class Imbalance
+## 4.3 Class Imbalance
 
 Class imbalance is a common issue in many machine learning problems, where certain classes are significantly underrepresented compared to others. This can lead to models that perform well on the majority class but poorly on the minority class, resulting in biased and ineffective predictions. And in some applications, you're interested on the performance on the rare cases (i.e., detecting lung cancer).
 
-### Challenges of Class Imbalance
+### 4.3.1 Challenges of Class Imbalance
 
 1. **Biased Predictions:** The model tends to be biased towards the majority class, often ignoring the minority class, leading to poor performance on the latter. In the extreme case where there is no instance of the rare class in the training set, the model might assume these rare classes don't exist.
 2. **Skewed Metrics and Overfitting:** The model might overfit to the majority class, failing to generalize well to the minority class or unseen data. It's easier for the model get stuck in a nonoptimal solution by exploiting simple heuristics, for example, if the model learns to always outputs the majority class and its accuracy is already 99%.
 3. **Asymmetric Costs of Error:** The cost of a wrong prediction on a sample of the rare class might be much higher than a wrong prediction on a sample of the majority class, such as in the lung cancer detection example. Misclassification on an X-ray with cancerous cells is much more dangerous than misclassification on an X-ray of a normal lung.
 
-### Handling Class Imbalance
+### 4.3.2 Handling Class Imbalance
 
 Addressing class imbalance involves various techniques at both the data and algorithm levels to ensure that the model can learn effectively from imbalanced data.
 
@@ -300,7 +323,7 @@ Addressing class imbalance involves various techniques at both the data and algo
 > For a more comprehensive review of class imbalance methods, it's recommended to read Johnson and Khoshgoftaar's [Survey on deep learning with class imbalance](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0192-5).
 {: .block-tip}
 
-#### Using the Right Evaluation Metrics
+#### 4.3.2.1 Using the Right Evaluation Metrics
 
 Instead of relying on accuracy, use evaluation metrics that provide a clearer picture of the model's performance on imbalanced data:
 
@@ -314,7 +337,7 @@ F1, precision, and recall are asymmetric metrics, which means that their values 
 - **Area Under the Precision-Recall Curve (AUC-PR):** Particularly useful for imbalanced datasets, focusing on the performance for the minority class.
 
 
-#### Data-Level Methods: Resampling
+#### 4.3.2.2 Data-Level Methods: Resampling
 
 Data-level methods modify the distribution of the training data to reduce imbalance. There are two primary techniques: undersampling the majority class and oversampling the minority class.
 
@@ -331,7 +354,7 @@ Overfitting is a risk when using resampling techniques. Oversampling can lead to
 - **Two-Phase Learning:** Train the model initially on the resampled data, then fine-tune it on the original data. This helps the model generalize better.
 - **Dynamic Sampling:** Adjust the sampling strategy dynamically during training. For example, oversample low-performing classes and undersample high-performing classes to balance the learning process. This method helps the model focus on areas it hasn't learned well yet.
 
-#### Algorithm-Level Methods
+#### 4.3.2.3 Algorithm-Level Methods
 
 Algorithm-level methods keep the data distribution intact but alter the learning algorithm to make it more robust to imbalance. These methods often adjust the weights for samples in the loss function, emphasizing the learning of minority class instances.
 
@@ -382,15 +405,303 @@ $$
 
 
 
-## Data Augmentation
+## 4.4 Data Augmentation
+
+Data augmentation is a technique used to artificially increase the size and diversity of a training dataset without collecting new data. Data augmentation is particularly useful in scenarios where data collection is expensive or time-consuming. However, even when data is abundant, augmented data can make our models more robust to noise and even adversarial attacks.
+
+### 4.4.1 Simple Label-Preserving Transformations
+
+Simple label-preserving transformations involve applying basic modifications to the existing data that do not alter the underlying class label. These transformations are particularly useful for image and text data.
+
+**Image Data**
+
+- **Rotation:** Rotating images by a certain degree (e.g., 90°, 180°, 270°).
+- **Translation:** Shifting images horizontally or vertically.
+- **Scaling:** Resizing images.
+- **Flipping:** Mirroring images horizontally or vertically.
+- **Color Jittering:** Randomly changing the brightness, contrast, saturation, and hue.
+- **Cropping:** Randomly cropping and resizing images back to the original size.
+
+**Text Data**
+
+- **Synonym Replacement:** Replacing words with their synonyms.
+- **Random Insertion:** Inserting random words into the text.
+- **Random Deletion:** Deleting random words from the text.
+- **Shuffling:** Shuffling the order of words or phrases in the text.
+
+### 4.4.2 Perturbation
+
+Perturbation-based augmentation involves adding small, controlled changes to the data that preserve the original label. These changes are usually subtle and designed to simulate natural variations in the data or even be make to fool a neural network. [Su at al.](https://arxiv.org/abs/1710.08864) showed that 67.97% of the natural images in the Kaggle CIFAR-10 test dataset and 16.04% of the ImageNet test images can be misclassified by changing just one pixel.
+
+Perturbation can be injected by adding noise, either random noise or by search strategy (i.e., DeepFool). One of the most notable examples is [BERT](https://arxiv.org/abs/1810.04805), where the model chooses 15% of all tokens in each sequence at random and chooses to replace 10% of the chosen tokens with random words.
+
+<!-- prettier-ignore -->
+> Recommended readings:
+>
+> - Goodfellow et al., [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)
+> - Moosavi-Dezfooli et al., [DeepFool: a simple and accurate method to fool deep neural networks](https://arxiv.org/abs/1511.04599)
+> - Miyato et al., [Virtual Adversarial Training: A Regularization Method for Supervised and Semi-Supervised Learning](https://arxiv.org/abs/1704.03976)
+{: .block-tip}
+
+### 4.4.3 Data Synthesis
+
+Data synthesis involves generating entirely new data points based on the distribution of the existing dataset. This technique can be particularly useful when dealing with rare classes or when collecting new data is impractical.
+
+- **Generative Adversarial Networks (GANs):** GANs can generate new data points by training a generator network to produce realistic samples that can fool a discriminator network. This method is widely used for image synthesis but can also be applied to other data types.
+- **Mixup:** Combining two data points to create a new one by taking a weighted average of their features and labels. This encourages the model to learn more linear decision boundaries.
+
+  Example of Mixup:
+
+  $$
+  \begin{gather*}
+  
+  \tilde{x} = \lambda x_i + (1 - \lambda) x_j \\
+  \tilde{y} = \lambda y_i + (1 - \lambda) y_j
+
+  \end{gather*}
+  $$
+
+  Where $x_i, x_j$ are input data points, $y_i, y_j$ are their labels, and $\lambda$ is a random value between 0 and 1.
+
+
+<!-- prettier-ignore -->
+> Recommended readings:
+>
+> - Zhang et al., [mixup: Beyond Empirical Risk Minimization](https://arxiv.org/abs/1710.09412)
+> - Sandfort et al., [Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks](https://www.nature.com/articles/s41598-019-52737-x)
+> - Shorten et al., [A survey on Image Data Augmentation for Deep Learning](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0197-0)
+{: .block-tip}
+
+# Chapter 5: Feature Engineering
+
+Feature engineering involves creating new features or transforming existing ones to improve the performance of models. Well-engineered features tend to give the models the biggest performance boost compared to algorithmic techniques such as hyperparameter tuning.
+
+## 5.1 Learned Features Versus Engineered Features
+
+In machine learning, features can be broadly categorized into two types: learned features and engineered features.
+
+- **Learned Features:** These are features automatically extracted by models, typically deep learning models, during the training process. Convolutional Neural Networks (CNNs) for image data and Large Language Models (LLMs) for text are examples where features are learned from the raw input data. However, not all features can be automatically learned.
+- **Engineered Features:** These are features created manually based on domain-specific knowledge and insights into the data. Feature engineering involves transforming raw data into meaningful inputs that can improve the performance of machine learning algorithms.
+
+While learned features can capture complex patterns directly from raw data, engineered features leverage human expertise and can often lead to more interpretable models.
+
+## 5.2 Common Feature Engineering Operations
+
+This section presents some of the most common feature engineering operations, but is nowhere near being comprehensive.
+
+### 5.2.1 Handling Missing Values
+
+Missing values are a common issue in datasets and need to be addressed, but not all missing values are equal:
+
+- **Missing not at random (MNAR):** This is when the reason a value is missing is because of the true value itself. For instance, respondents to a form with higher income might be less prone to disclose it.
+- **Missing at random (MAR):** This is when the reason a value is missing is not due to the value itself, but due to another observed variable. For instance, respondents from gender A might be less prone to disclosure their age.
+- **Missing completely at random (MCAR):** This is when there's no pattern in when the value is missing.
+
+There are two primary methods to handle missing values: deletion and imputation.
+
+**Deletion**
+
+- **Column deletion:** Remove the feature that have high missing value rate. The drawback is that you can be removing important information and reducing the model's accuracy.
+- **Row deletion:** Remove the sample that has missing value(s). This method works best when the missing values are completely at random (MCAR) and the number of examples with missing values is small.
+
+**Imputation**
+
+- **Default value:** Fill the missing values with the default value. For example, if the job is missing, you might fill it with an empty string “".
+- **Mean, Median or Mode Imputation:** Replace missing values with the mean, median, or mode (most frequent value) of the non-missing values. This method is simple but can introduce bias if the data is not normally distributed.
+- **Advanced Techniques:** Use more sophisticated models like interpolation, regression, iterative imputation, or machine learning algorithms (such as KNN) to predict and fill in missing values.
+
+In general, you want to avoid filling missing values with possible values, such as the missing number of children with 0. It makes it hard to distinguish between people whose information is missing and people who don't have children.
+
+### 5.2.2 Scaling
+
+Scaling transforms features to a common scale without distorting differences in the range of values. This is particularly important for algorithms sensitive to the scale of input data, such as Support Vector Machines (SVM), gradient-boosted trees, and logistic regression.
+
+- **Min-Max Scaling:** Scale features to a fixed range, typically $[0, 1]$, but you can define arbitrary values $[a, b]$ (i.e., $[-1, 1]$).
+
+  $$
+  \begin{gather*}
+    \tilde{x} = \frac{x - \min(x)}{\max(x) - \min(x)} \\
+    or \\
+    \tilde{x} = a + \frac{(x - \min(x))(b-a)}{\max(x) - \min(x)} \\
+  \end{gather*}
+  $$
+
+- **Standardization:** Scale features to have a mean of $\bar{x}$ and a standard deviation of $\sigma$. If you think that your variable might follow a normal distribution, it might be helpful to normalize them with zero mean and unit variance.
+
+  $$
+  \tilde{x} = \frac{x-\bar{x}}{\sigma}
+  $$
+
+- **Log Scaling:** This method is useful for transforming skewed data to reduce the impact of outliers and make the distribution more normal. It involves taking the logarithm of the feature values.
+
+  $$
+  \begin{gather}
+    \tilde{x} = \log(x) \\
+    or \\
+    \tilde{x} = \log(x + c)
+  \end{gather}
+  $$
+
+  Where $c$ is a constant added to ensure all values are positive before applying the logarithm.
+
+<!-- prettier-ignore -->
+> **Notes:**
+> 1. Scaling is a major source of data leakage (covered in the section 5.3).
+> 2. It requires global statistics, calculated with training data, and saved to be used in test and inference. If the new data has changed significantly compared to the training, these statistics won't be very helpful. Therefore, it's important to retrain your model often to account for these changes.
+{: .block-warning}
+
+### 5.2.3 Discretization
+
+Discretization (or quantization) transforms continuous features into discrete buckets or bins. This can help models learn simpler representations and make them more interpretable. By converting continuous variables into discrete categories, we can enable models to treat similar feature values uniformly, potentially improving performance on certain tasks.
+
+### 5.2.4 Encoding Categorical Features
+
+Categorical features must be encoded into numerical values before being used in machine learning models. One challenge is that categories are not always static. For instance, if you treat product brands as categories, new brands can emerge that your model didn't encounter during training. You can create an “UNKNOWN” category in your training data to prevent the model from crashing, but this approach treats all unseen brands, whether luxurious or sketchy, the same.
+
+**The Hashing Trick**
+
+One solution for handling dynamic categories is the *hashing trick*. A hash function generates a hashed value for each category, which becomes the index for that category. By specifying the hash space, you can fix the number of encoded values for a feature in advance, without needing to know the exact number of categories.
+
+One problem with hashed functions is that different categories may hash to the same index. However, collisions are random and spread across the hash space. According to research done by Booking.com, even with 50% colliding features, the performance loss was less than 0.5%. [Source](https://booking.ai/dont-be-tricked-by-the-hashing-trick-192a6aae3087)
+
+### 5.2.5 Feature Crossing
+
+Feature crossing creates new features by combining existing ones to capture interactions between features. This can help models learn non-linear relationships in the data. It's helpful with model that are bad or even can't learn non-linear representations, such as linear regression, logistic regression, and tree-based models. It's less helpful in neural networks, but it could still help the model learn faster. DeepFM and xDeepFM are the family of models that have successfully leverage explicit feature interactions for recommender systems and click-through rate prediction.
+
+### 5.2.6 Discrete and Continuous Positional Embeddings
+
+<!-- prettier-ignore -->
+> **Embedding**
+>
+> An embedding represents a piece of data as a vector. Word embeddings, for instance, map words to vectors in a continuous space. Similarly, positional embeddings map the position of each token in a sequence to a vector.
+{: .block-tip}
+
+Introduced in the paper “Attention Is All You Need” (Vaswani et al., 2017), positional embeddings are essential for tasks in NLP and computer vision. They help models understand the order of inputs.
+
+In models like transformers, words are processed in parallel, so positional information must be explicitly provided. We avoid using absolute positions (0, 1, 2, …) directly because neural networks don't perform well with such inputs.
+
+**Learned Position Embeddings**
+
+One way to handle position embeddings is to treat it like we'd treat word embedding, by using an embedding matrix. Each position gets an embedding that is learned during training.
+
+**Fixed Position Embeddings**
+
+Another way to handle position embeddings is to use predefined functions, typically sine and cosine, to encode positions. This method, from the original Transformer paper, ensures positional embeddings capture relative positions effectively.
+
+Fixed embeddings can be extended to continuous spaces using Fourier features, which are effective for tasks involving coordinates (or positions).
+
+<!-- prettier-ignore -->
+> Recommended reading
+>
+> - Tancik et al., [Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains](https://arxiv.org/abs/2006.10739)
+{: .block-tip}
+
+## 5.3 Data Leakage
+
+Data leakage occurs when information (i.e., the label) “leaks” from outside into the training dataset is used to create the model, leading to overly optimistic performance estimates during training but poor performance in production. It can happen because of how data are collected, handled, or even due to the innate origin of data (i.e., hospital A always sends patients with suspect of having lung cancer to a specific CT scan machine that outputs slightly different images).
+
+### 5.3.1 Common Causes for Data Leakage
+
+- **Splitting time-correlated data randomly instead of by time:** When working with time-series data (or time-correlated data, e.g., the time the data is generated affects its label distribution), splitting the data randomly can cause the model to learn from future information. Always split by time to ensure the model only has access to past information during training.
+- **Scaling before splitting:** Performing scaling operations on the entire dataset before splitting can leak information from the test set into the training set. Scale the training data independently and apply the same transformation to the test set.
+- **Filling in missing data with statistics from the test split:** Imputing missing values using statistics (e.g., mean, median) computed from the entire dataset can lead to leakage. Compute statistics only from the training data and use them to fill missing values in both training and test sets.
+- **Poor handling of data duplication before splitting:** Duplicates in the dataset can cause leakage if not handled properly. Remove duplicates before splitting the data to ensure that no information from the test set influences the training process.
+- **Group leakage:** When samples are grouped together, information from one sample can inadvertently leak into another if not split correctly. For example, in object detection task, photos taken milliseconds apart may land in different splits. Ensure that groups of related samples are kept entirely within either the training or test set.
+- **Leakage from data generation process:** If the process used to generate the data unintentionally includes target information, it can cause leakage, just like in the CT scan machine example. Review the data generation process to ensure that no target information is inadvertently included in the features, and don't forget to include subject matter experts, who have more contexts on how data is collected and used.
+
+### 5.3.2 Detecting Data Leakage
+
+Investigate the importance of each feature. If a feature has an unusually high importance that doesn't make logical sense, it might be leaking information from the target. Keep an eye out the impact of new features on you model's performance, if it improves a lot, the feature is very good or just contains leakage. Finally, be careful every time you look at the test split, only use it to report a model's final performance.
+
+## 5.4 Engineering Good Features
+
+Effective feature engineering can significantly enhance the performance and robustness of machine learning models. This involves creating features that are both informative and generalizable while minimizing the number of features needed to train the model. By focusing on fewer, high-quality features, we reduce the risk of data leakage, decrease the likelihood of overfitting, and lower the memory requirements for serving the model. Additionally, this approach diminishes latency in feature extraction, particularly for online processing, and reduces technical debt, making the overall system more efficient and maintainable.
+
+### 5.4.1 Feature Importance
+
+- **Model-Based Methods:** Algorithms like Random Forest, Gradient Boosting, and XGBoost provide built-in feature importance metrics. These methods assess the importance of each feature based on how often they are used to make splits in decision trees or their impact on the loss function.
+- **SHAP Values (SHapley Additive exPlanations):** SHAP values provide a unified measure of feature importance by considering the contribution of each feature to every prediction made by the model.
+- **LIME (Local Interpretable Model-agnostic Explanations):** LIME approximates the model locally around a prediction to understand the contribution of each feature.
+
+### 5.4.2 Feature Generalization
+
+Feature generalization ensures that the features used in the model are not overly specific to the training data and can generalize well to new, unseen data. Overall, there are two aspects to consider regarding generalization: feature coverage and the distribution of feature values.
+
+- **Coverage:** Feature coverage refers to the extent to which the features represent the entire input space. Ensuring broad coverage means that the model has seen a diverse range of examples during training, making it more likely to perform well on new data.
+
+- **Distribution:** The distribution of feature values should be consistent between the training and test datasets. Features should not only cover the input space broadly but also follow the same statistical properties across different datasets.
+
+
+# Chapter 6: Model Development and Offline Evaluation
+
+Model development is an iterative process. After each iteration, you'll want to compare your model's performance against its performance in previous iterations and evaluate how suitable this iteration is for production.
+
+## 6.1 Model Development and Training
+
+### 6.1.1 Six Tips for Model Selection
+
+1. **Avoid the state-of-the-art trap:** Don’t be swayed by the latest and most complex algorithms just because they are state-of-the-art. Often, simpler models can perform just as well or better, especially if they are well-tuned and well-understood. Researchers often only evaluate models in academic settings, which we discussed in chapter 1.
+
+2. **Start with the simplest models:** Begin with simple models like linear regression or decision trees. These models are easier to interpret and debug. Once you understand the baseline performance and your training and prediction pipelines are consistent, you can move to more complex models if necessary. You can even start with more complex models that require little effort to get started (i.e., a pretrained version of BERT like in Hugging Face's Transformers), but ensure to test simpler models to verify the more complex solution is indeed better than the simpler one.
+
+    <!-- prettier-ignore -->
+    > Simple is better than complex
+    {: .block-tip }
+
+3. **Avoid human biases in selecting models:** Ensure that model selection is based on objective performance metrics rather than subjective preferences or biases. If an engineer is more excited about a solution in specific, they may spend more time tuning it, ensure to architectures under comparable setups.
+
+
+4. **Evaluate good performance now versus good performance later:** Consider both short-term and long-term performance. Some models might perform well initially but degrade over time, and some models might gain performance as more data is collected. Regularly monitor model performance and be prepared to update or replace models as necessary.
+
+
+5. **Evaluate trade-offs:** Every model comes with trade-offs. Consider factors such as training time, inference time, scalability, interpretability, and resource requirements, but also the false positives and false negatives trade-off. Choose a model that balances these factors in a way that aligns with your project goals.
+
+
+6. **Understand your model's assumptions:** Each model makes specific assumptions about the data. Ensure that these assumptions hold for your dataset. For example:
+   1. *Prediction assumption:* It's possible to predict $Y$ based on $X$.
+   2. *IID:* Neural Networks assume that examples are independent and identically distributed.
+   3. *Smoothness:* If an input $X$ produces an output $Y$, then an input close to $X$ would produce an output proportionally close to $Y$.
+   4. *Tractability:* Let $X$ be the input and $Z$ be the latent representation of $X$. Every generative model makes the assumption that it's tractable to compute the probability $\mathbb{P}(Z\|X)$.
+   5. *Boundaries:* A linear classifier assumes that decision boundaries are linear.
+   6. *Conditional independence:* A naive Bayes classifier assumes that the attribute values are independent of each other given the class.
+   7. *Normally distributed:* Many statistical methods assume that data is normally distributed.
+
+
+
+## 6.2 Ensembles
 
 <!-- prettier-ignore -->
 > WIP
 {: .block-danger }
 
-# Chapter 5: Feature Engineering
+**Bagging**
 
-# Chapter 6: Model Development and Offline Evaluation
+**Boosting**
+
+**Stacking**
+
+## 6.3 Experiment Tracking and Versioning
+
+**Experiment Tracking**
+
+**Versioning**
+
+**Debugging ML Models**
+
+## 6.4 Distributed Training
+
+**Data Parallelism**
+
+**Model Parallelism**
+
+## 6.5 AutoML
+
+**Soft AutoML: Hyperparameter tuning**
+
+**Hard AutoML: Architecture search and learned optimizer**
+
+
+
 
 # Chapter 7: Model Deployment and Prediction Service
 
