@@ -118,7 +118,23 @@ collections:
     output: true
     sort_by: date
     permalink: /:collection/:year-:month-:day-:title:output_ext
+  others:
+    output: true
+    sort_by: date
+    permalink: /:collection/:year-:month-:day-:title:output_ext
 ```
+
+An optional `ordered_collections` key can be added to `_config.yaml` to control the order of collections in the sidebar:
+
+```yaml
+ordered_collections:
+  - posts
+  - pages
+  - others
+```
+
+If not specified, the order of collections would be decided by Jekyll. Note that the key `posts` is a special collection
+that indicates the `_posts` pages of Jekyll.
 
 ## Extra StyleSheet or Javascript elements
 
