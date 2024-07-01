@@ -19,6 +19,8 @@ permalink: /basic-stats
 - [Sampling and Sampling Distributions](#sampling-and-sampling-distributions)
   - [Sampling Distribution](#sampling-distribution)
   - [Central Limit Theorem](#central-limit-theorem)
+- [Hypothesis Testing](#hypothesis-testing)
+  - [P-Value](#p-value)
 
 # Random Variable
 A random variable is a variable whose values depend on outcomes of a random process. It is a mathematical function that assigns a numerical value to each outcome in a sample space of a random experiment.
@@ -188,6 +190,13 @@ The sampling distribution is the probability distribution of a statistic (such a
 The central limit theorem states that the sampling distribution of the sample mean will approximate a normal distribution, regardless of the shape of the population distribution, provided the sample size is sufficiently large (usually $$ n > 30 $$).
 
 $$ \bar{X} \sim \mathcal{N}(\mu, \frac{\sigma^2}{n}) $$
+
+> WIP
+{: .block-danger }
+
+# Hypothesis Testing
+
+## P-Value
 
 > WIP
 {: .block-danger }
