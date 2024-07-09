@@ -4,7 +4,7 @@ title: About
 permalink: /
 ---
 
-<img src="./assets/gitbook/images/profile.jpeg" alt="Lucas" style="float: left; margin: 10px 50px 20px 20px; border-radius: 50%; width: 200px; height: auto; object-fit: cover;">
+<img src="./assets/images/profile.jpeg" alt="Lucas" style="float: left; margin: 10px 50px 20px 20px; border-radius: 50%; width: 200px; height: auto; object-fit: cover;">
 
 Hi, I'm **Lucas**, an electronics engineer, roboticist, classical guitarist, and autistic individual.
 

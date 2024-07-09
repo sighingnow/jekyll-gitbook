@@ -8,14 +8,11 @@ permalink: /ml-systems
 mermaid: true
 ---
 
-This content is a summary and my personal takeaways from the excellent book [Designing Machine Learning Systems](https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/) by Chip Huyen.
+{% include admonition.html type="info" title="Info"
 
-<!-- prettier-ignore -->
-> **Note:** This document is a highly condensed version of the book, reflecting the points I found most relevant along with my own conclusions on the topics discussed.
->
-> For a more comprehensive coverage of the topics, **I highly recommend reading the full book**.
-{: .block-warning }
+body="This content is a summary and my personal takeaways from the excellent book <a href='https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/'>Designing Machine Learning Systems</a> by Chip Huyen. It reflects the points I found most relevant along with my own conclusions on the topics discussed.<br/><br/>
 
+For a more comprehensive coverage of the topics, <b>I highly recommend reading the full book.</b>" %}
 
 <!-- prettier-ignore -->
 > **WIP - Update 28/06/24:** Content written up to Chapter 6.2
@@ -30,9 +27,7 @@ This content is a summary and my personal takeaways from the excellent book [Des
   - [2.1 Business and ML Objectives](#21-business-and-ml-objectives)
   - [2.2 Requirements for ML Systems](#22-requirements-for-ml-systems)
   - [2.3 Iterative Process](#23-iterative-process)
-  - [2.4 Objective Functions](#24-objective-functions)
-    - [2.4.1 Decoupling Objectives](#241-decoupling-objectives)
-  - [2.5 Mind Versus Data](#25-mind-versus-data)
+  - [2.4 Mind Versus Data](#24-mind-versus-data)
 - [Chapter 3: Data Engineering Fundamentals](#chapter-3-data-engineering-fundamentals)
 - [Chapter 4: Training Data](#chapter-4-training-data)
   - [4.1 Sampling](#41-sampling)
@@ -66,8 +61,7 @@ This content is a summary and my personal takeaways from the excellent book [Des
     - [5.4.1 Feature Importance](#541-feature-importance)
     - [5.4.2 Feature Generalization](#542-feature-generalization)
 - [Chapter 6: Model Development and Offline Evaluation](#chapter-6-model-development-and-offline-evaluation)
-  - [6.1 Model Development and Training](#61-model-development-and-training)
-    - [6.1.1 Six Tips for Model Selection](#611-six-tips-for-model-selection)
+  - [6.1 Six Tips for Model Selection](#61-six-tips-for-model-selection)
   - [6.2 Ensembles](#62-ensembles)
   - [6.3 Experiment Tracking and Versioning](#63-experiment-tracking-and-versioning)
   - [6.4 Distributed Training](#64-distributed-training)
@@ -80,13 +74,18 @@ This content is a summary and my personal takeaways from the excellent book [Des
 
 # Chapter 1: Overview of Machine Learning Systems
 
+
+Machine learning (ML) has become a cornerstone of modern technology, driving advancements in various fields such as healthcare, finance, marketing, and more. However, the decision to use machine learning and the approach to building and deploying ML systems requires careful consideration and planning. This chapter provides a foundational overview of when to use machine learning, the differences between research and production environments, and the essential factors that influence the success of ML projects.
+
+
 ## 1.1 When to Use Machine Learning
 
 Before starting a machine learning (ML) project, it is essential to determine if it is necessary or cost-effective.
 
-<!-- prettier-ignore -->
-> Machine Learning is an approach to (1) _learn_ (2) _complex patterns_ from (3) _existing data_ and use these patterns to make (4) _predictions_ on (5) _unseen data_.
-{: .block-tip }
+{% include admonition.html type="quote" title="Quote"
+
+body="Machine Learning is an approach to (1) _learn_ (2) _complex patterns_ from (3) _existing data_ and use these patterns to make (4) _predictions_ on (5) _unseen data_." %}
+
 
 1. **Learn:** Most ML algorithms learn from data, meaning they can adjust the model's state based on feedback from the model's performance relative to the data. This learning process generally aims at approximating a desired function.
 2. **Complex patterns:** ML algorithms are particularly useful when there is a complex mapping between input data and the desired output. This complexity makes it difficult to manually craft heuristics, as seen in tasks like image classification.
@@ -94,11 +93,12 @@ Before starting a machine learning (ML) project, it is essential to determine if
 4. **Predictions:** An ML model makes estimates to answer questions without existing answers. The key is to reframe the question as a predictive problem.
 5. **Unseen data:** An ML model is only useful if it can generalize to new data. This implies that production and training data should come from similar, if not the same, distributions. We can only assume the distribution remains stable and monitor future performance to either trigger retraining or assess continual learning.
 
-ML solutions are particularly suited to problems that:
+{% include admonition.html type="tip" title="ML solutions are particularly suited to problems that:" body="
 
-6. **Are repetitive:** When a pattern appears frequently, machines can learn it more easily.
-7. **Have a low cost of wrong predictions:** The consequences of incorrect predictions should be manageable.
-8. **Are at scale:** The problem should be significant enough to justify the use of ML.
+1. **Are repetitive:** When a pattern appears frequently, machines can learn it more easily.
+2. **Have a low cost of wrong predictions:** The consequences of incorrect predictions should be manageable.
+3. **Are at scale:** The problem should be significant enough to justify the use of ML.
+" %}
 
 ## 1.2 Machine Learning in Research Versus Production
 
@@ -110,15 +110,34 @@ Other differences include time spent on data. In research, data is typically cle
 
 # Chapter 2: Introduction to Machine Learning Systems Design
 
+
+Designing machine learning systems requires a holistic approach that encompasses both business objectives and technical requirements. A well-designed ML system not only delivers accurate predictions but also aligns with the overall goals of the organization. This chapter delves into the essential aspects of ML systems design, starting from aligning ML objectives with business goals to understanding the critical requirements for building robust and scalable systems. Additionally, it discusses the iterative nature of ML system development and the ongoing debate between data-centric and model-centric approaches in machine learning.
+
+
 ## 2.1 Business and ML Objectives
 
-<!-- prettier-ignore -->
-> Most companies don't care about the fancy ML metrics.
-{: .block-tip }
+{% include admonition.html type="quote" title="Quote" body="
+Most companies don't care about the fancy ML metrics.
+" %}
+
 
 For an ML project to succeed within an organization, it's crucial to tie the performance of an ML system to business metrics. Most companies assess the impact of different ML models through experimentation, like A/B testing, and choose the model that leads to better business metrics, regardless of whether the model has better ML metrics.
 
 The business metrics optimized by experiments can impact profit either directly (i.e., conversion rate or cost reduction) or indirectly (i.e., higher customer satisfaction or increased time spent on the site). Many companies create their own metrics to map business metrics to ML metrics, such as [Netflix's _take rate_](https://netflixtechblog.com/artwork-personalization-c589f074ad76).
+
+{% include admonition.html type="tip" title="Decoupling Objectives" body="
+Models often need to optimize multiple objectives. Traditionally, this is done by combining objectives during loss calculation and tuning $\alpha$ and $\beta$:
+
+$$
+loss = \alpha \, \text{objective}_1 + \beta \, \text{objective}_2
+$$
+
+A better practice is to train different models for each objective and then weight the outputs by $\alpha$ and $\beta$. This allows changing system behavior without retraining and applying different monitoring policies for each model, improving maintainability.
+
+$$
+\text{score} = \alpha \, \text{score}_1 + \beta \, \text{score}_2
+$$
+" %}
 
 ## 2.2 Requirements for ML Systems
 
@@ -133,7 +152,7 @@ Most ML systems should satisfy 4 common requirements: reliability, scalability, 
 
 <center>
 <p>
-    <img src="/assets/gitbook/images/ml-sys/ml_design_process.png" alt>
+    <img src="/assets/images/ml-sys/ml_design_process.png" alt>
     <p>Iterative process of an ML system design. Source: Adapted from the book.</p>
 </p>
 </center>
@@ -147,41 +166,25 @@ Brief description of the steps of an ML system design process:
 5. **Monitoring and continual learning:** Monitor performance in production, ensuring the system remains reliable, scalable, maintainable, and adaptable.
 6. **Business Analysis:** Evaluate model performance against business goals and generate new business insights.
 
-## 2.4 Objective Functions
-
-### 2.4.1 Decoupling Objectives
-
-Models often need to optimize multiple objectives. Traditionally, this is done by combining objectives during loss calculation and tuning $\alpha$ and $\beta$:
-
-$$
-loss = \alpha \, \text{objective}_1 + \beta \, \text{objective}_2
-$$
-
-A better practice is to train different models for each objective and then weight the outputs by $\alpha$ and $\beta$. This allows changing system behavior without retraining and applying different monitoring policies for each model, improving maintainability.
-
-$$
-\text{score} = \alpha \, \text{score}_1 + \beta \, \text{score}_2
-$$
-
-## 2.5 Mind Versus Data
+## 2.4 Mind Versus Data
 
 The discussion of mind versus data revolves around approaches to ML systems development. The "mind" approach favors spend more time researching inductive bias and architectural designs, while the "data" approach favors getting more data and computation. There are arguments supporting both data-centric and model-centric development of ML systems.
 
-<!-- prettier-ignore -->
-> Here are some recommended readings:
->
-> 1. [Anand Rajaraman, "More data usually beats better algorithms"](https://anand.typepad.com/datawocky/2008/03/more-data-usual.html)
-> 2. [Richard Sutton, "The Bitter Lesson"](https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf)
-> 3. [Judea Pearl, "The book of Why"](https://bayes.cs.ucla.edu/WHY/)
-> 4. [Discussion between Yann LeCun and Christopher Manning about Deep Learning and Innate Priors](https://www.youtube.com/watch?v=fKk9KhGRBdI)
-> 5. [Alon Halevy, Peter Norvig, and Fernando Pereira, "The Unreasonable Effectiveness of Data"](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf)
-{: .block-tip}
+
+{% include admonition.html type="reading" title="Recommended Readings" body=" "
+refs="https://anand.typepad.com/datawocky/2008/03/more-data-usual.html||Anand Rajaraman, More data usually beats better algorithms;;;
+https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf||Richard Sutton, The Bitter Lesson;;;
+https://bayes.cs.ucla.edu/WHY/||Judea Pearl, The book of Why;;;
+https://www.youtube.com/watch?v=fKk9KhGRBdI||Discussion between Yann LeCun and Christopher Manning about Deep Learning and Innate Priors;;;
+https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf||Alon Halevy, Peter Norvig, and Fernando Pereira, The Unreasonable Effectiveness of Data
+" %}
+
 
 # Chapter 3: Data Engineering Fundamentals
 
-<!-- prettier-ignore -->
-> This chapter is very introductory. The recommendation is Martin Kleppmann's book [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/), which I plan on writing about on this blog in the future.
-{: .block-tip}
+
+{% include admonition.html type="reading" title="Recommended Readings" body="This chapter is very introductory. The recommendation is Martin Kleppmann's book:"
+refs="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/||Designing Data-Intensive Applications" %}
 
 Key topic from the chapter:
 
@@ -193,6 +196,8 @@ Key topic from the chapter:
     - **Message Queue:** Often an event (or message) generated is destined for a specific consumer, and the message queue is responsible for delivering the right message for the right consumer. Common solutions for message queue are Apache RocketMQ and RabbitMQ.
 
 # Chapter 4: Training Data
+
+The quality and quantity of training data are critical to the success of any machine learning project. Effective sampling, labeling, handling class imbalance, and data augmentation are essential techniques to prepare robust datasets that improve model performance and generalization. This chapter explores various methods for creating and refining training datasets, ensuring they are comprehensive, representative, and suitable for training accurate and reliable machine learning models.
 
 ## 4.1 Sampling
 
@@ -233,7 +238,7 @@ This ensures that each data point has an equal probability, $k/n$, of being incl
 
 <center>
 <p>
-    <img src="/assets/gitbook/images/ml-sys/reservoir.png" alt>
+    <img src="/assets/images/ml-sys/reservoir.png" alt>
     <a href="https://towardsdatascience.com/reservoir-sampling-for-efficient-stream-processing-97f47f85c11b">Source</a>
 </p>
 </center>
@@ -306,9 +311,8 @@ In transfer learning, a base model is trained on a base task with abundant train
 
 Active learning involves labeling data samples that are most useful to the model, based on specific metrics or heuristics. The most straightforward metric is uncertainty measurement, where you label the examples the model is least certain about, hoping they will help the model learn the decision boundary better. Another method is _query-by-committee_, which is based on the disagreement among an ensemble of candidate models.
 
-<!-- prettier-ignore -->
-> For a more comprehensive review of active learning methods, it's recommended to read Burr Settles's [Active Learning Literature Survey](https://burrsettles.com/pub/settles.activelearning.pdf).
-{: .block-tip}
+{% include admonition.html type="reading" title="Recommended Readings" body="For a more comprehensive review of active learning methods, it's recommended to read Burr Settles's paper:"
+refs="https://burrsettles.com/pub/settles.activelearning.pdf||Active Learning Literature Survey" %}
 
 ## 4.3 Class Imbalance
 
@@ -324,9 +328,9 @@ Class imbalance is a common issue in many machine learning problems, where certa
 
 Addressing class imbalance involves various techniques at both the data and algorithm levels to ensure that the model can learn effectively from imbalanced data.
 
-<!-- prettier-ignore -->
-> For a more comprehensive review of class imbalance methods, it's recommended to read Johnson and Khoshgoftaar's [Survey on deep learning with class imbalance](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0192-5).
-{: .block-tip}
+
+{% include admonition.html type="reading" title="Recommended Readings" body="For a more comprehensive review of class imbalance methods, it's recommended to read Johnson and Khoshgoftaar's paper:"
+refs="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0192-5||Survey on deep learning with class imbalance" %}
 
 #### 4.3.2.1 Using the Right Evaluation Metrics
 
@@ -403,7 +407,7 @@ $$
 
 <center>
 <p>
-    <img src="/assets/gitbook/images/ml-sys/loss.png" alt>
+    <img src="/assets/images/ml-sys/loss.png" alt>
 </p>
 <a href="https://arxiv.org/abs/1708.02002">Source</a>
 </center>
@@ -440,13 +444,11 @@ Perturbation-based augmentation involves adding small, controlled changes to the
 
 Perturbation can be injected by adding noise, either random noise or by search strategy (i.e., DeepFool). One of the most notable examples is [BERT](https://arxiv.org/abs/1810.04805), where the model chooses 15% of all tokens in each sequence at random and chooses to replace 10% of the chosen tokens with random words.
 
-<!-- prettier-ignore -->
-> Recommended readings:
->
-> - Goodfellow et al., [Explaining and Harnessing Adversarial Examples](https://arxiv.org/abs/1412.6572)
-> - Moosavi-Dezfooli et al., [DeepFool: a simple and accurate method to fool deep neural networks](https://arxiv.org/abs/1511.04599)
-> - Miyato et al., [Virtual Adversarial Training: A Regularization Method for Supervised and Semi-Supervised Learning](https://arxiv.org/abs/1704.03976)
-{: .block-tip}
+
+{% include admonition.html type="reading" title="Recommended Readings" body=" "
+refs="https://arxiv.org/abs/1412.6572||Goodfellow et al., Explaining and Harnessing Adversarial Examples;;;
+https://arxiv.org/abs/1511.04599||Moosavi-Dezfooli et al., DeepFool: a simple and accurate method to fool deep neural networks;;;
+https://arxiv.org/abs/1704.03976||Miyato et al., Virtual Adversarial Training: A Regularization Method for Supervised and Semi-Supervised Learning" %}
 
 ### 4.4.3 Data Synthesis
 
@@ -468,18 +470,14 @@ Data synthesis involves generating entirely new data points based on the distrib
 
   Where $x_i, x_j$ are input data points, $y_i, y_j$ are their labels, and $\lambda$ is a random value between 0 and 1.
 
-
-<!-- prettier-ignore -->
-> Recommended readings:
->
-> - Zhang et al., [mixup: Beyond Empirical Risk Minimization](https://arxiv.org/abs/1710.09412)
-> - Sandfort et al., [Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks](https://www.nature.com/articles/s41598-019-52737-x)
-> - Shorten et al., [A survey on Image Data Augmentation for Deep Learning](https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0197-0)
-{: .block-tip}
+{% include admonition.html type="reading" title="Recommended Readings" body=" "
+refs="https://arxiv.org/abs/1710.09412||Zang et al., mixup: Beyond Empirical Risk Minimization;;;
+https://www.nature.com/articles/s41598-019-52737-x||Sandfort et al., Data augmentation using generative adversarial networks (CycleGAN) to improve generalizability in CT segmentation tasks;;;
+https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0197-0||Shorten et al., A survey on Image Data Augmentation for Deep Learning" %}
 
 # Chapter 5: Feature Engineering
 
-Feature engineering involves creating new features or transforming existing ones to improve the performance of models. Well-engineered features tend to give the models the biggest performance boost compared to algorithmic techniques such as hyperparameter tuning.
+Feature engineering involves creating new features or transforming existing ones to improve the performance of models. Well-engineered features tend to give the models the biggest performance boost compared to algorithmic techniques such as hyperparameter tuning. This chapter explores the types of features, common feature engineering operations, strategies to avoid data leakage, and best practices for creating robust and generalizable features.
 
 ## 5.1 Learned Features Versus Engineered Features
 
@@ -549,11 +547,10 @@ Scaling transforms features to a common scale without distorting differences in 
 
   Where $c$ is a constant added to ensure all values are positive before applying the logarithm.
 
-<!-- prettier-ignore -->
-> **Notes:**
-> 1. Scaling is a major source of data leakage (covered in the section 5.3).
-> 2. It requires global statistics, calculated with training data, and saved to be used in test and inference. If the new data has changed significantly compared to the training, these statistics won't be very helpful. Therefore, it's important to retrain your model often to account for these changes.
-{: .block-warning}
+{% include admonition.html type="note" title="Note" body="
+1. Scaling is a major source of data leakage (covered in the section 5.3).
+2. It requires global statistics, calculated with training data, and saved to be used in test and inference. If the new data has changed significantly compared to the training, these statistics won't be very helpful. Therefore, it's important to retrain your model often to account for these changes.
+" %}
 
 ### 5.2.3 Discretization
 
@@ -575,11 +572,9 @@ Feature crossing creates new features by combining existing ones to capture inte
 
 ### 5.2.6 Discrete and Continuous Positional Embeddings
 
-<!-- prettier-ignore -->
-> **Embedding**
->
-> An embedding represents a piece of data as a vector. Word embeddings, for instance, map words to vectors in a continuous space. Similarly, positional embeddings map the position of each token in a sequence to a vector.
-{: .block-tip}
+{% include admonition.html type="tip" title="Embedding" body="
+An embedding represents a piece of data as a vector. Word embeddings, for instance, map words to vectors in a continuous space. Similarly, positional embeddings map the position of each token in a sequence to a vector.
+" %}
 
 Introduced in the paper “Attention Is All You Need” (Vaswani et al., 2017), positional embeddings are essential for tasks in NLP and computer vision. They help models understand the order of inputs.
 
@@ -595,11 +590,8 @@ Another way to handle position embeddings is to use predefined functions, typica
 
 Fixed embeddings can be extended to continuous spaces using Fourier features, which are effective for tasks involving coordinates (or positions).
 
-<!-- prettier-ignore -->
-> Recommended reading
->
-> - Tancik et al., [Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains](https://arxiv.org/abs/2006.10739)
-{: .block-tip}
+{% include admonition.html type="reading" title="Recommended Readings" body=" " refs="https://arxiv.org/abs/2006.10739||Tancik et al., Fourier Features Let Networks Learn High Frequency Functions in Low Dimensional Domains" %}
+
 
 ## 5.3 Data Leakage
 
@@ -639,19 +631,17 @@ Feature generalization ensures that the features used in the model are not overl
 
 # Chapter 6: Model Development and Offline Evaluation
 
-Model development is an iterative process. After each iteration, it's crucial to compare your model's performance against previous versions and evaluate its suitability for production.
 
-## 6.1 Model Development and Training
 
-### 6.1.1 Six Tips for Model Selection
+## 6.1 Six Tips for Model Selection
 
 1. **Avoid the state-of-the-art trap:** Don’t be swayed by the latest and most complex algorithms just because they are state-of-the-art. Often, simpler models can perform just as well or better, especially if they are well-tuned and well-understood. Remember that researchers often evaluate models in academic settings, which we discussed in Chapter 1.
 
 2. **Start with the simplest models:** Begin with simple models like linear regression or decision trees. These models are easier to interpret and debug. Once you establish a baseline performance and ensure your training and prediction pipelines are consistent, you can move to more complex models if necessary. While you can start with more complex models that require little effort to get started (e.g., a pretrained version of BERT from Hugging Face's Transformers), always test simpler models to verify that the more complex solution indeed outperforms them.
 
-    <!-- prettier-ignore -->
-    > Simple is better than complex
-    {: .block-tip }
+  {% include admonition.html type="quote" title="Quote" body="
+  Simple is better than complex
+  " %}
 
 3. **Avoid human biases in selecting models:** Ensure that model selection is based on objective performance metrics rather than subjective preferences or biases. If an engineer is more enthusiastic about a specific solution, they may spend more time tuning it. Make sure to compare architectures under similar setups.
 
@@ -673,38 +663,186 @@ Model development is an iterative process. After each iteration, it's crucial to
 
 ## 6.2 Ensembles
 
-<!-- prettier-ignore -->
-> WIP
-{: .block-danger }
+Ensemble methods combine multiple models to improve overall performance, robustness, and generalization capabilities. By leveraging the strengths of different models, ensemble techniques can often achieve better results than individual models (base learners). The effectiveness of an ensemble depends on the diversity and independence of the individual models: the less correlated the models, the better the ensemble performance. Thus, creating an ensemble with different architectures of models can significantly boost performance.
+
+Although ensemble methods can provide substantial performance improvements, they are less favored in production due to their complexity in deployment and maintenance. However, they remain common in scenarios where even a small performance boost can lead to significant financial gains, such as predicting click-through rates for advertisements.
 
 **Bagging**
 
+Bagging, or *Bootstrap Aggregating*, aims to reduce variance and prevent overfitting by training multiple instances of the same model on different subsets of the training data. These subsets are generated by random sampling with replacement (bootstrap sampling). The predictions of these models are then aggregated, typically by averaging for regression tasks or majority voting for classification tasks.
+
+Random Forests are a popular implementation of bagging, where multiple decision trees are trained on different subsets of the data and their predictions are averaged or voted upon to produce the final output. Random Forests also introduce additional randomness by selecting a random subset of features at each split in the trees, further reducing correlation among trees.
+
+<center>
+<p>
+    <img src="/assets/images/ml-sys/bagging.png" alt>
+</p>
+<a href="https://www.geeksforgeeks.org/bagging-vs-boosting-in-machine-learning/">Source</a>
+</center>
+
 **Boosting**
+
+Boosting aims to reduce bias and improve model accuracy by sequentially training models, where each new model attempts to correct the errors made by the previous models. This process focuses more on difficult instances that were misclassified or had higher errors in previous iterations. The final prediction is typically a weighted sum of the predictions from all models.
+
+AdaBoost, short for *Adaptive Boosting*, assigns weights to each training instance and adjusts them after each iteration. Misclassified instances receive higher weights, forcing the next model to focus more on those hard-to-classify cases. The final model is a weighted sum of the individual models' predictions.
+
+Gradient Boosting builds models sequentially, with each new model being trained to predict the residuals (errors) of the previous models. By minimizing these residuals, Gradient Boosting effectively improves the model's accuracy over iterations. Gradient Boosting Machines (GBMs), such as XGBoost, LightGBM, and CatBoost, are popular implementations that offer efficient training and strong performance.
+
+<center>
+<p>
+    <img src="/assets/images/ml-sys/boosting.png" alt>
+</p>
+<a href="https://www.geeksforgeeks.org/bagging-vs-boosting-in-machine-learning/">Source</a>
+</center>
 
 **Stacking**
 
+Stacking, or Stacked Generalization, involves training multiple base models and then using their predictions as inputs to a higher-level meta-model. The meta-model learns to combine the predictions and make the final predictions. The meta-model can be either a heuristic or another model. This approach allows for leveraging different types of models and their unique strengths.
+
+<center>
+<p>
+    <img src="/assets/images/ml-sys/stacking.png" alt>
+</p>
+<a href="https://supunsetunga.medium.com/stacking-in-machine-learning-357db1cfc3a">Source</a>
+</center>
+
 ## 6.3 Experiment Tracking and Versioning
+
+Experiment tracking and versioning are practices in machine learning to ensure reproducibility, facilitate debugging, and manage the iterative nature of model development. By systematically tracking experiments you can compare different setups (architecture, hyperparameters, initialization, etc.) and better understand how changes affect your model's performance.
 
 **Experiment Tracking**
 
+Experiment tracking involves recording all aspects of an experiment, including configurations, code, data, results, and metrics. This helps in comparing different experiments, understanding what changes lead to performance improvements, and ensuring reproducibility. A short list of things you might want to consider tracking for each experiment during its training:
+
+- The **configuration** for the experiment, such as: hyperparameters, model architecture, data preprocessing steps, and other configuration settings.
+- The **loss curve** corresponding to the train split and each of the eval splits.
+- The **model performance metrics** such as accuracy, loss, precision, recall, F1 score, and any custom metrics relevant to the project.
+- The log of **corresponding sample, prediction, and ground truth label**. This comes in handy for ad hoc analytics and sanity checks.
+- The **speed** of your model, evaluated by the number of steps per second or, if your data is text, the number of tokens processed per second.
+- **System performance metrics** such as memory usage and CPU/GPU utilization. They're important to identify bottlenecks and avoid wasting system resources.
+
 **Versioning**
+
+Versioning ensures that different versions of datasets, code, and models are systematically managed and can be reproduced or reverted to as needed.
 
 **Debugging ML Models**
 
+{% include admonition.html type="reading" title="Recommended Readings" body="For more comprehensive understanding of the topic, it's recommended Andrej Karpathy's blog post:" refs="https://karpathy.github.io/2019/04/25/recipe/||A Recipe for Training Neural Networks" %}
+
+
+Some steps and strategies for debugging ML models according to Karpathy's blog:
+
+1. **Become One with the Data**
+   - Spend significant time understanding and visualizing the data.
+   - Look for patterns, imbalances, biases, and outliers.
+   - Write code to filter, sort, and visualize data distributions and outliers.
+
+2. **Set Up End-to-End Training and Evaluation Skeleton**
+   - Start with a simple model (e.g., a linear classifier) to set up the training and evaluation pipeline.
+   - Fix random seeds to ensure reproducibility.
+   - Disable unnecessary features like data augmentation initially.
+   - Verify that the initial loss and model behavior are as expected.
+   - Use human-interpretable metrics and baselines for comparison.
+   - Overfit a single batch to verify the model can learn properly.
+
+3. **Overfit**
+   - Initially, focus on overfitting a large model to the training data to ensure it can achieve a low error rate.
+   - Choose a well-established model architecture related to your problem.
+   - Use a forgiving optimizer like Adam with an appropriate learning rate.
+   - Gradually introduce complexity and verify performance improvements.
+
+4. **Regularize**
+   - Once the model overfits, introduce regularization to improve validation accuracy.
+   - Add more data if possible, as it is the best way to regularize.
+   - Use data augmentation and pretrained models.
+   - Reduce input dimensionality and model size if appropriate.
+   - Apply techniques like dropout, weight decay, and early stopping.
+
+5. **Tune**
+   - Explore a wide range of hyperparameters using random search rather than grid search.
+   - Consider hyperparameter optimization tools for more systematic tuning.
+
+6. **Squeeze Out the Juice**
+   - Once the best model and hyperparameters are found, use ensembles to boost performance.
+   - Let models train longer than initially expected, as they often continue to improve.
+
 ## 6.4 Distributed Training
+
+As models are getting bigger and more resource-intensive, companies care a lot more about training at scale. It's common to train a model using data that doesn't fit into memory. In these cases, our algorithms for preprocessing, shuffling, and batching data will need to run out-of-core and in parallel.
+
+In some cases, a single data sample is so large it can't fit into memory, and we'll have to use something like gradient checkpointing. Even when a sample fits into memory, using checkpointing can allow you to fit more samples into a batch, which might allow you to train your model faster.
 
 **Data Parallelism**
 
+Data parallelism involves splitting the dataset into smaller chunks and distributing them across multiple devices (e.g., GPUs or nodes). Each device trains a copy of the model on its subset of the data, and you accumulate the gradients across devices to update the model parameters. 
+
+{% include admonition.html type="tip" title="Synchronous Stochastic Gradient Descent (SGD)" body="
+In synchronous SGD, all devices wait until every device has completed its gradient computation for the current batch before averaging the gradients and updating the model parameters. This ensures that each device is working with the same model parameters at each step, leading to more stable convergence.
+" %}
+
+{% include admonition.html type="tip" title="Asynchronous Stochastic Gradient Descent (SGD)" body="
+In asynchronous SGD, devices do not wait for each other to complete their gradient computations. Instead, each device independently updates the model parameters as soon as it finishes its computations. This approach can lead to faster training times as devices are not idly waiting, but it can introduce inconsistencies in the model parameters across devices, potentially affecting convergence stability.
+" %}
+
+<center>
+<p>
+    <img src="/assets/images/ml-sys/data_parallel.png" alt>
+</p>
+<a href="https://www.oreilly.com/content/distributed-tensorflow/">Source</a>
+</center>
+
+Asynchronous SGD theoretically converges with more steps than synchronous SGD. However, in practice, with a large number of weights, gradient updates are typically sparse, affecting only small fractions of the parameters. This reduces conflicts between updates from different machines. Consequently, gradient staleness is minimized, and the model converges similarly for both synchronous and asynchronous SGD.
+
 **Model Parallelism**
+
+Model parallelism involves splitting the model itself across multiple devices. Different parts of the model are assigned to different devices, and the forward and backward passes are executed across these devices. This approach is useful when the model is too large to fit into the memory of a single device.
+
+<center>
+<p>
+    <img src="/assets/images/ml-sys/model_parallel_1.png" alt>
+</p>
+<a href="https://papers.nips.cc/paper_files/paper/2012/hash/6aca97005c68f1206823815f66102863-Abstract.html">Source</a>
+</center>
+
+*Pipeline parallelism* involves splitting the model into stages and distributing these stages across multiple devices. Each device processes a different part of the model, passing intermediate results to the next device in the pipeline.
+
+<center>
+<p>
+    <img src="/assets/images/ml-sys/model_parallel_2.png" alt>
+</p>
+<a href="https://arxiv.org/abs/1811.06965">Source</a>
+</center>
+
+In practice, combining both data parallelism and model parallelism can be beneficial, especially for very large models and datasets.
 
 ## 6.5 AutoML
 
+Automated Machine Learning (AutoML) encompasses techniques and tools designed to automate parts of the machine learning pipeline. AutoML can significantly reduce the time and expertise required to build high-performing models by automating tasks such as hyperparameter tuning, feature selection, and model selection. AutoML can be broadly categorized into Soft AutoML and Hard AutoML.
+
 **Soft AutoML: Hyperparameter tuning**
+
+Hyperparameter tuning involves finding the best set of hyperparameters that maximize model performance. Soft AutoML focuses on automating this process to enhance efficiency and performance.
+
+Key Techniques in Hyperparameter Tuning:
+
+- **Grid Search:** Exhaustively searches over a specified parameter grid to find the optimal hyperparameters. While thorough, it can be computationally expensive.
+- **Random Search:** Randomly samples hyperparameter combinations within a specified range. It is more efficient than grid search and can often find good hyperparameters with fewer iterations.
+- **Bayesian Optimization:** Uses a probabilistic model to predict the performance of hyperparameter combinations and iteratively improves this model to find the optimal set. This method balances exploration and exploitation, making it more efficient than random search.
+- **Hyperband:** Combines random search with an early stopping strategy to allocate resources to promising hyperparameter configurations while discarding poor performers early.
+
+{% include admonition.html type="danger" title="Danger" body="
+Never use your test split to tune hyperparameters. Choose the best set of hyperparameters for a model basedon a validation split, then report the model's final performance on a test split.
+" %}
 
 **Hard AutoML: Architecture search and learned optimizer**
 
+Hard AutoML involves more complex tasks, such as neural architecture search (NAS) and the development of learned optimizers, to automate the design and training of machine learning models.
 
+A NAS setup consists of three components:
 
+1. **A Search Space:** Defines possible model architectures, the building block to choose from and constraints on how they can be combined.
+2. **A Performance Estimation Strategy:** To evaluate the performance of a candidate architecture without having to train each candidate architecture from scratch until convergence.
+3. **A Search Strategy:** Some common approaches are random search, reinforcement learning (rewarding the choices that improve performance estimation) and evolution (adding mutations to an architecture, choosing the best-performing ones, and so on).
 
 # Chapter 7: Model Deployment and Prediction Service
 
