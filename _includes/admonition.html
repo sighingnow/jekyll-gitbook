@@ -1,5 +1,5 @@
 {% if include.type.size > 0 and include.title.size > 0 and include.body.size > 0 %}
-    {% assign types = "note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, reading" | split: ", " %}
+    {% assign types = "note, abstract, info, tip, success, question, warning, failure, danger, bug, example, quote, reading, working, education, research, teaching, extracurricular, presentation, certificate" | split: ", " %}
     {% if types contains include.type %}
 <div class="admonition {{ include.type }} rounded">
     <p class="admonition-title">{{ include.title }}</p>

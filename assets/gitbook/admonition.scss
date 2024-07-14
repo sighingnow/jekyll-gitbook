@@ -22,6 +22,16 @@ $admonitions:
     ('bug', 'bug-solid.svg', '#DE5E52', '#692C27')
 
     ('reading', 'reading-solid.svg', '#ffd700', '#a28834')
+
+    //CV sections
+    ('working', 'working.svg', '#B8D3C4', '#3A443F')
+    ('education', 'cap.svg', '#B8D3C4', '#3A443F')
+    ('research', 'research.svg', '#B8D3C4', '#3A443F')
+    ('teaching', 'teaching.svg', '#B8D3C4', '#3A443F')
+    ('extracurricular', 'cap.svg', '#B8D3C4', '#3A443F')
+    ('presentation', 'presentation.svg', '#B8D3C4', '#3A443F')
+    ('certificate', 'diploma.svg', '#B8D3C4', '#3A443F')
+
 ;
 .admonition {
 	margin: 1.5625em 0;
@@ -31,6 +41,8 @@ $admonitions:
 	background-color: #212121;
 	border-left: .3rem solid $primary-color;
 	border-radius: .7rem;
+    display: flex;
+    flex-direction: column;
 }
 .admonition p {
     padding: 0 1rem;
@@ -40,6 +52,7 @@ $admonitions:
     background-color: $primary-bgcolor;
     font-weight: 700;
     line-height: 3rem;
+    padding: 0 1rem;
 }
 .admonition-title::before {
     margin-right: 1rem;

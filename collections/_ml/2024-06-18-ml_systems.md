@@ -66,6 +66,9 @@ For a more comprehensive coverage of the topics, <b>I highly recommend reading t
   - [6.3 Experiment Tracking and Versioning](#63-experiment-tracking-and-versioning)
   - [6.4 Distributed Training](#64-distributed-training)
   - [6.5 AutoML](#65-automl)
+  - [6.6 Model Offline Evaluation](#66-model-offline-evaluation)
+    - [6.6.1 Baselines](#661-baselines)
+    - [6.6.2 Evaluation Methods](#662-evaluation-methods)
 - [Chapter 7: Model Deployment and Prediction Service](#chapter-7-model-deployment-and-prediction-service)
 - [Chapter 8: Data Distribution Shifts and Monitoring](#chapter-8-data-distribution-shifts-and-monitoring)
 - [Chapter 9: Continual Learning and Test in Production](#chapter-9-continual-learning-and-test-in-production)
@@ -843,6 +846,14 @@ A NAS setup consists of three components:
 1. **A Search Space:** Defines possible model architectures, the building block to choose from and constraints on how they can be combined.
 2. **A Performance Estimation Strategy:** To evaluate the performance of a candidate architecture without having to train each candidate architecture from scratch until convergence.
 3. **A Search Strategy:** Some common approaches are random search, reinforcement learning (rewarding the choices that improve performance estimation) and evolution (adding mutations to an architecture, choosing the best-performing ones, and so on).
+
+Learned optimizers are trained on various tasks to develop effective optimization strategies that generalize across different problems. The creation process involves training a meta-optimizer on a diverse set of tasks, this meta-optimizer can then be applied to new tasks, improving convergence rates and overall model performance. The beauty of this approach is that this learned optimizer can then be used to train a better-learned optimizer.
+
+## 6.6 Model Offline Evaluation
+
+### 6.6.1 Baselines
+
+### 6.6.2 Evaluation Methods
 
 # Chapter 7: Model Deployment and Prediction Service
 

@@ -1,5 +1,5 @@
 ---
-title: Foundations of Deep RL
+title: Foundations of Deep Reinforcement Learning
 author: Lucas Cruz
 date: 2024-06-14
 category: reinforcement-learning
@@ -7,19 +7,21 @@ layout: post
 permalink: /foundations-drl
 ---
 
-This post is based on the [Foundations of Deep RL](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNymuBM9RdmB3Z9N5-0IlY0) series, from professor Pieter Abbeel's channel.
+{% include admonition.html type="info" title="Info" body="
+This content is a direct translation of the [Foundations of Deep RL](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNymuBM9RdmB3Z9N5-0IlY0) lecture series, from professor Pieter Abbeel's YouTube channel.
 
-<!-- prettier-ignore -->
-> **WIP - Update 28/06/24:** Content written up to Lecture 1
-{: .block-danger }
+For a more detailed coverage of the topics, **I highly recommend watching the original videos.**
+" %}
 
 <h1>Table of Contents</h1>
 
-<!-- no toc -->
-- [MDPs, Exact Solution Methods, Max-ent RL](#mdps-exact-solution-methods-max-ent-rl)
+
+- [Lecture 1: Foundations on Reinforcement Learning](#lecture-1-foundations-on-reinforcement-learning)
   - [Motivation](#motivation)
   - [Markov Decision Processes (MDPs)](#markov-decision-processes-mdps)
   - [Exact Solution Methods](#exact-solution-methods)
+    - [Value Iteration](#value-iteration)
+    - [Policy Iteration](#policy-iteration)
   - [Maximum Entropy Formulation](#maximum-entropy-formulation)
 - [Deep Q-Learning](#deep-q-learning)
 - [Policy Gradients and Advantage Estimation](#policy-gradients-and-advantage-estimation)
@@ -27,88 +29,171 @@ This post is based on the [Foundations of Deep RL](https://www.youtube.com/playl
 - [DDPG and SAC](#ddpg-and-sac)
 - [Model-based RL](#model-based-rl)
 
+{% include admonition.html type="abstract" title="Goal" body="
+This lecture series is designed to **build a strong foundation in deep reinforcement learning**, enabling students to understand current developments and pursue their own research and applications in this exciting field.
+" %}
 
-# MDPs, Exact Solution Methods, Max-ent RL
+# Lecture 1: Foundations on Reinforcement Learning
+
+This lecture covers Markov Decision Processes (MDPs) and exact solution methods, laying the groundwork for understanding key concepts. We'll define the main components of MDPs—states, actions, transition probabilities, and rewards—and look at exact solution methods like dynamic programming. While these methods work well for small-scale problems, they don't scale effectively to larger ones, pointing to the need for advanced techniques that we'll discuss in later lectures. We'll also introduce the maximum entropy formulation, an approach that improves exploration and robustness in reinforcement learning (RL) agents.
 
 ## Motivation
 
-- 2013 - Atari (DQN) [Deepmind]
-- 2014 - 2D locomotion (TRPO) [Berkeley]
-- 2015 - Alphago [Deepmind]
-- 2016 - 3D locomotion (TRPO + GAE) [Berkeley]
-- 2016 - Real Robot Manipulation (GPS) [Berkeley]
-- 2017 - Dota 2 (PPO)
-- 2018 - Deepmimic [Berkeley]
-- 2019 - Alphastar [Deepmind]
-- 2019 - Rubik’s cube (PPO + DR) [Open AI]
+The excitement around deep reinforcement learning (DPRL) began in 2013 when DeepMind showed that neural net agents using DPRL could learn to play various Atari games. This breakthrough was significant as previous RL results were limited to small, simple problems. Suddenly, agents could process visual inputs and learn to play different games without specific programming for each.
+
+At Berkeley, researchers explored DPRL in robotics, particularly with simulated robots like the swimmer, hopper, and 2D walker. These robots learned their tasks—swimming, hopping, and running—through trial and error. Initially, they struggled, but over time, they improved significantly, mastering their skills through RL. In 2015, a major milestone was reached when DeepMind's AlphaGo defeated the human world champion in Go, an achievement many thought was years away, with RL at its core.
+
+Berkeley's researchers continued to push the boundaries with simulated robots, moving from 2D to full 3D robots learning to run. These robots improved through repeated trials, learning from their experiences. Transitioning from simulations to real robots, BRETT (Berkeley Robot for the Elimination of Tedious Tasks) learned tasks like inserting blocks into matching openings through RL. Running the same algorithms on multiple robots, they discovered that robots could share data and learn faster, demonstrating the power of RL in physical robots.
+
+In 2017, OpenAI's bot succeeded in the complex game of Dota 2, beating top human players, showing that DPRL could handle much more complex video games beyond Atari. At Berkeley, researchers showed that simulated robots could learn a wide range of acrobatic skills through trial and error, even for non-human robots like a simulated lion. In 2019, DeepMind's AlphaStar demonstrated near top human-level performance in Starcraft, combining imitation learning and RL. Another highlight from OpenAI was a robot hand learning to solve a Rubik's Cube through RL, showcasing DPRL's practical applications and potential.
+
+These examples illustrate the potential of RL. It's not just about the impressive final results but the fact that these agents acquire skills through their own trial and error learning, demonstrating robust learning capabilities that can adapt to new tasks. This progress in DPRL is both exciting and promising for the future of artificial intelligence and robotics.
 
 ## Markov Decision Processes (MDPs)
 
-The agent gets to choose an action based on the observations of the environment, then the environment changes returning a reward. This process is repeated and the agent learns the best actions to maximize its rewards.
+RL operates within the framework of Markov Decision Processes (MDPs). This framework provides a structured environment where an agent interacts by choosing actions that influence the state of the environment, which in turn provides feedback in the form of rewards.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/500e27ac-a6df-4cd3-bdc3-8860fcc844e0/Untitled.png)
+In an MDP, the agent's interaction cycle involves observing the current state, taking an action, and receiving a reward based on the new state. This reward assesses how favorable the new state is. For example, in a video game, the score might serve as the reward, while for a running robot, the distance covered could determine the reward. The agent's objective is to maximize its cumulative reward by learning the optimal action for each situation through repeated interactions.
 
-An MDP is defined by:
+<center>
+<p>
+    <img src="/assets/images/rl/mdp.png" alt="MDP agent-environment interaction. Source: Adapted from the lecture slides." width="75%" height="auto">
+    <p>MDP agent-environment interaction. Source: Adapted from the lecture slides.</p>
+</p>
+</center>
 
-- Set of States **$S$**
-- Set of Actions **$A$**
-- Transition function **$P(s'|s,a)$**
-- Reward function **$R(s,a,s')$**
-- Start state $s_0$
-- Discount factor $\gamma$
-- Horizon $H$
+The key components that define an MDP are:
 
-**Goal: find a policy that maximizes the expected discounted reward over time.**
+1. **Set of States ($S$):** The different situations the agent can encounter.
+2. **Set of Actions ($A$):** The possible actions the agent can take.
+3. **Transition Function ($P(s'\|s,a)$):** This defines the probability of transitioning to a new state (s') given the current state (s) and action (a).
+4. **Reward Function ($R(s,a,s')$):** This assigns a reward based on the transition from state s to state s' via action a.
+5. **Start State ($s_0$):** The initial state or distribution of states where the agent begins.
+6. **Discount Factor ($\gamma$):** This factor accounts for the preference of immediate rewards over future rewards. For example, if rewards are monetary, money available now can be invested to grow, making future money less valuable in comparison. Thus, future rewards are discounted.
+7. **Horizon ($H$):** The length of time over which the agent will operate and make decisions.
+
+{% include admonition.html type="tip" title="Goal" body="
+The goal is for the agent to learn a policy that maximizes its expected discounted reward over time:
 
 $$
 \underset{\pi}{max}\ \mathbb E[\displaystyle\sum_{t=0}^H \gamma^t \cdot R(S_t, A_t, S_{t+1})|\pi]
 $$
 
-### Examples
+" %}
 
-- Cleaning robot
-- Walking robot
-- Pole balancing
-- Games: Tetris, backgammon
-- Server management
-- Shortest path problems
-- Model for animals, people
+{% include admonition.html type="example" title="Examples" body="
+1. Consider a cleaning robot where the **states** include the robot's position and the layout of the house. **Actions** might include moving or picking up objects. The **transition model** describes the outcome probabilities of these actions, and the **reward function** could be based on cleanliness or organization.
+
+2. For a running robot, **states include** joint angles and velocities, with motor torques as **actions**. The **reward** might be for staying still or moving forward.
+
+    In both cases, the **discount factor** and **horizon** are chosen based on the desired timeframe for evaluating performance.
+
+3. Other examples include balancing a pole, playing games like Tetris or Go, managing server requests, or navigating self-driving cars. Each of these problems can be mapped onto the MDP framework, allowing the use of reinforcement learning algorithms to find optimal policies.
+" %}
+
+{% include admonition.html type="note" title="Grid-World" body="
+Throughout the course, a canonical example called grid world will be used to build intuition about MDPs and reinforcement learning algorithms. In grid world, an agent navigates a grid to reach a goal while avoiding obstacles and pitfalls, with rewards assigned to reaching specific squares. This simple environment allows for fast experimentation and helps visualize optimal policies. The discount factor in grid world incentivizes the shortest path to the goal, demonstrating the importance of timely actions in maximizing rewards.
+
+
+<center>
+<p>
+    <img src='/assets/images/rl/grid-world-intro.png' alt='Grid World example. Source: Adapted from the lecture slides.' width='70%' height='auto'>
+    <p>Grid world example. Source: Adapted from the lecture slides.</p>
+</p>
+</center>
+" %}
 
 ## Exact Solution Methods
 
 ### Value Iteration
 
-#### Optimal Value Function $V^*$
+**Optimal Value Function $V^*$**
 
-Optimal Value Function $V^*$: Sum of discounted rewards when starting from state $s$ and acting optimally
+The core concept of value iteration revolves around the optimal value function $V^*(s)$. This function represents the maximum expected discounted sum of rewards that can be achieved from state $s$ by following the optimal policy. Essentially, it quantifies the best possible outcome starting from any given state.
 
 $$
 V^*(s) = \underset{\pi}{max}\ \mathbb E[\displaystyle\sum_{t=0}^H \gamma^t \cdot R(s_t, a_t, s_{t+1})|\pi, s_0=s]
 $$
 
-To know the value of one state, we get a recursive equation in terms of the neighboring states that we might transition to. 
+{% include admonition.html type="note" title="Grid-World" body="
+To illustrate this, consider our grid world example. The agent in this world can move in four directions, except into boundaries. If it lands on a minus-one square, it receives a reward of -1 and the episode ends; if it lands on a plus-one square, it receives a reward of +1 and the episode ends.
 
-#### Value Iteration
+<center>
+<p>
+    <img src='/assets/images/rl/grid-world-actions.png' alt='Possible action in grid world. Source: Adapted from the lecture slides.' width='70%' height='auto'>
+</p>
+</center>
 
-We have to initialize the value function:
+Let's imagine three different scenarios:
 
-- $V^*_0(s)$ is the optimal value for state $s$ when $H=0$, which means when there are no time steps in the future.
-    - $V_0^*(s) = 0\ \forall s$
-- $V^*_1(s)$ is the optimal value for state $s$ when $H=1$, when there is 1 time step in the future.
-    - $V_1^*(s) = \displaystyle \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_0(s'))$. We look at all actions available in that state and sum over all future states.
+1. A deterministic environment with no discounting ($\gamma$ = 1) and a horizon $H$ of 100 steps, we can calculate the value function as follows:
+   - $V^*(4,3)$: The agent immediately collects the +1 reward.
+   - $V^*(3,3)$: The agent moves right to collect the +1 reward in one step.
+   - $V^*(2,3)$: The agent moves right twice to collect the reward, still yielding a value of +1 due to no discounting.
+   - $V^*(1,1)$: It takes five steps to reach the reward, but still has a value of +1.
+   - $V^*(4,2)$: The agent is stuck in the bomb and receives a reward of -1.<br/><br/>
+
+
+2. Introducing a discount factor gamma of 0.9, where actions are still deterministic:
+   - $V^*(4,3)$: The value remains 1 because the reward is immediate.
+   - $V^*(3,3)$: The reward is delayed by one step, so the value is $0.9^1 \times 1 = 0.9$.
+   - $V^*(2,3)$: The value is delayed by two steps, so the value is $0.9^2 \times 1 = 0.81$.
+   - $V^*(1,1)$: The value is $0.9^5 \times 1 = 0.59$.
+   - $V^*(4,2)$: The value remains -1 due to the bomb.<br/><br/>
+
+
+3. Adding further complexity, if the action success probability drops to 0.8, the agent faces uncertainty:
+   - $V^*(4,3)$: The value remains 1 since grabbing the prize is certain.
+   - $V^*(3,3)$: Moving right has an 80% success rate. If successful, the value is $0.9 \times 1$. With a 20% chance, the agent may stay in place (trying to move up), move down or move left, affecting the value recursively based on neighboring squares.
+
+
+This recursive dependency on neighboring values is the essence of value iteration. The value of each state is updated based on expected values from possible actions and their outcomes, iterating until convergence.
+" %}
+
+**Value Iteration**
+
+The process of computing the value function iteratively begins with its initialization:
+
+- $V^*_0(s)$ is the optimal value for state $s$ when $H=0$, which means when there are no time steps in the future. We set this initial value to zero.
+
+    $$V_0^*(s) = 0\ \forall s$$
+
+- $V^*_1(s)$ is the optimal value for state $s$ when $H=1$, when there is 1 time step in the future. We calculate the value for each state considering all available actions, the probability of transitioning to future states, and the rewards, and add the expected future discounted value using the past estimate.
+
+    $$V_1^*(s) = \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_0(s'))$$
+    
+
 - $V^*_2(s)$ is the optimal value for state $s$ when $H=2$.
-    - $V_2^*(s) = \displaystyle \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_1(s'))$.
 
-So for each action, we check what the expected reward we would get right away. And then we average (weighted by the transition dynamics) the rewards we would get in the future.
+    $$V_2^*(s) = \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_1(s'))$$
 
-- $V^*_k(s)$ is the optimal value for state $s$ when $H=k$.
-    - $V_2^*(s) = \displaystyle \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_{k-1}(s'))$.
+- This approach generalizes to $k$ time steps left. The value for being in state $s$ with $k$ time steps left is determined by the best action, accounting for the expected reward and the discounted value of future states. We might as well also catalog what the action is that is being prescribed in the optimal policy.
 
-#### Algorithm
+    $$
+    \begin{gather*}
+        V_k^*(s) =  \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_{k-1}(s'))\\
+        \pi_k^*(s) \leftarrow \underset{a}{\operatorname{argmax}} \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_{k-1}(s'))
+    \end{gather*}
+    $$
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e169eb52-5751-42e6-9e41-5ef419d5167e/Untitled.png)
 
-#### Value Iteration Convergence
+{% include admonition.html type="abstract" title="Algorithm" body="
+
+Start with $V^*_0(s)=0$ for all $s$.<br/>
+For $k=1, \cdots, H$:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For all states $s$ in $S$:
+
+$$
+\begin{gather}
+V_k^*(s) \leftarrow \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_{k-1}(s')) \\
+\pi_k^*(s) \leftarrow \underset{a}{\operatorname{argmax}} \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_{k-1}(s'))
+\end{gather}
+$$
+
+" %}
+
+
+**Value Iteration Convergence**
 
 > **Theorem.** Value iteration converges. At convergence, we have found the optimal value function $V^*$ for the discounted infinite horizon problem, which satisfies the Bellman equations.
 > 
@@ -131,7 +216,7 @@ $$
     
 - Note: the infinite horizon optimal policy is stationary, i.e., the optimal action at a state $s$ is the same action at all times (efficient to store!).
 
-#### Convergence: Intuition
+**Convergence: Intuition**
 
 Given:
 
@@ -153,7 +238,7 @@ The rewards collected are bounded by the maximum reward achievable, and as we in
 
 If the rewards can be negative, we have to redo the derivation with the absolute value of the rewards.
 
-#### Convergence and Contractions
+**Convergence and Contractions**
 
 - Definition: max-norm:
 
@@ -179,7 +264,7 @@ $$
 ||V_{i+1}-V_i|| \le \epsilon, \Rightarrow ||V_{i+1}-V^*|| \lt \frac{2\epsilon\gamma}{(1-\gamma)}
 $$
 
-#### Q-Values
+**Q-Values**
 
 Analogously to the Value function, we have Q-Values, that are going to be important in the future, and help us solve small MDPs, where we can loop through all the states and actions repeatedly.
 
@@ -201,7 +286,7 @@ $$
 
 Some of the approximate methods we are going to see in the future are built on Value Iteration, but some are built on Policy Iterations.
 
-#### Policy Evaluation
+**Policy Evaluation**
 
 In policy evaluation, we fix a policy and sample the action from that policy, we do not maximize the expected reward by choosing action.
 
@@ -233,7 +318,7 @@ R(s,a,s')+\gamma V^\pi_k(s')
 )
 $$
 
-#### Policy Iteration
+**Policy Iteration**
 
 - Policy evaluation for current policy $\pi_k$:
     - Iterate until convergence
@@ -256,7 +341,7 @@ So we choose an action that maximizes the immediate reward and then we follow th
 
 We repeat until policy converges. At convergence: optimal policy; and converges faster than value iteration under some conditions.
 
-#### Policy Iteration Guarantees
+**Policy Iteration Guarantees**
 
 - **Theorem.** Policy iteration is guaranteed to converge and at convergence, the current policy and its value function are the optimal policy and the optimal value function.
 
@@ -269,12 +354,12 @@ Proof Sketch:
 
 This is another method to frame MDPs, and some methods in the future will borrow ideas from this method.
 
-#### What if we could find a distribution over near-optimal solutions?
+**What if we could find a distribution over near-optimal solutions?**
 
 - More robust policy: if the environment changes, the distribution over near-optimal solutions might still have some good ones for the new situation.
 - More robust learning: if we can retain a distribution over near-optimal solutions our agent will collect more interesting exploratory data during learning.
 
-#### Entropy
+**Entropy**
 
 Entropy is the measure of uncertainty over a random variable $X$, the number of bits required to encode $X$, on average. Log 2 is used in the case of bits, but it can be measured with a natural log.
 
@@ -282,7 +367,7 @@ $$
 \mathcal{H}(X) = \sum_ip(x_i)\log_2\frac{1}{p(x_i)}=-\sum_ip(x_i) \log_2 p(x_i)
 $$
 
-#### Maximum Entropy MDP
+**Maximum Entropy MDP**
 
 - Regular formulation:
 
@@ -298,7 +383,7 @@ $$
 
 So we a maximizing the expected reward plus the entropy of the policy. The policy gives the action to take in each state. Beta is a trade-off factor, the more we can control our actions, the more precise the agent is in what it achieves and the reward it gets. The larger the beta, the more we focus on the entropy and the less reward we are going to get.
 
-#### Constrained Optimization
+**Constrained Optimization**
 
 - Original problem:
 
@@ -323,7 +408,7 @@ $$
 \frac{\partial\mathcal{L}(x,\lambda)}{\partial \lambda} = 0
 $$
 
-#### Max-ent for 1-step problem
+**Max-ent for 1-step problem**
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/88df98cf-9ad2-4d6f-852f-31623533c662/Untitled.png)
 
