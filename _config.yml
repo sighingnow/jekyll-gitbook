@@ -20,7 +20,7 @@ twitter_username: _Lucas_Cruz
 remote_theme: sighingnow/jekyll-gitbook
 
 toc:
-  enabled: false
+  enabled: true
   h_min: 1
   h_max: 1
 

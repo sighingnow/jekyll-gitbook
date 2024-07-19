@@ -7,7 +7,7 @@ layout: post
 permalink: /basic-stats
 ---
 
-<h1>Table of Contents</h1>
+{% include admonition.html type="abstract" title="Table of Contents" body="
 
 - [Random Variable](#random-variable)
 - [Probability Distributions](#probability-distributions)
@@ -21,6 +21,8 @@ permalink: /basic-stats
   - [Central Limit Theorem](#central-limit-theorem)
 - [Hypothesis Testing](#hypothesis-testing)
   - [P-Value](#p-value)
+
+"%}
 
 # Random Variable
 A random variable is a variable whose values depend on outcomes of a random process. It is a mathematical function that assigns a numerical value to each outcome in a sample space of a random experiment.

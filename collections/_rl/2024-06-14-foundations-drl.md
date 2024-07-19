@@ -13,8 +13,7 @@ This content is a direct translation of the [Foundations of Deep RL](https://www
 For a more detailed coverage of the topics, **I highly recommend watching the original videos.**
 " %}
 
-<h1>Table of Contents</h1>
-
+{% include admonition.html type="abstract" title="Table of Contents" body="
 
 - [Lecture 1: Foundations on Reinforcement Learning](#lecture-1-foundations-on-reinforcement-learning)
   - [Motivation](#motivation)
@@ -28,6 +27,8 @@ For a more detailed coverage of the topics, **I highly recommend watching the or
 - [TRPO and PPO](#trpo-and-ppo)
 - [DDPG and SAC](#ddpg-and-sac)
 - [Model-based RL](#model-based-rl)
+
+" %}
 
 {% include admonition.html type="abstract" title="Goal" body="
 This lecture series is designed to **build a strong foundation in deep reinforcement learning**, enabling students to understand current developments and pursue their own research and applications in this exciting field.
@@ -150,37 +151,10 @@ Let's imagine three different scenarios:
 This recursive dependency on neighboring values is the essence of value iteration. The value of each state is updated based on expected values from possible actions and their outcomes, iterating until convergence.
 " %}
 
-**Value Iteration**
-
-The process of computing the value function iteratively begins with its initialization:
-
-- $V^*_0(s)$ is the optimal value for state $s$ when $H=0$, which means when there are no time steps in the future. We set this initial value to zero.
-
-    $$V_0^*(s) = 0\ \forall s$$
-
-- $V^*_1(s)$ is the optimal value for state $s$ when $H=1$, when there is 1 time step in the future. We calculate the value for each state considering all available actions, the probability of transitioning to future states, and the rewards, and add the expected future discounted value using the past estimate.
-
-    $$V_1^*(s) = \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_0(s'))$$
-    
-
-- $V^*_2(s)$ is the optimal value for state $s$ when $H=2$.
-
-    $$V_2^*(s) = \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_1(s'))$$
-
-- This approach generalizes to $k$ time steps left. The value for being in state $s$ with $k$ time steps left is determined by the best action, accounting for the expected reward and the discounted value of future states. We might as well also catalog what the action is that is being prescribed in the optimal policy.
-
-    $$
-    \begin{gather*}
-        V_k^*(s) =  \max_a \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_{k-1}(s'))\\
-        \pi_k^*(s) \leftarrow \underset{a}{\operatorname{argmax}} \sum_{s'}P(s'|s,a)(R(s,a,s')+\gamma V^*_{k-1}(s'))
-    \end{gather*}
-    $$
-
-
 {% include admonition.html type="abstract" title="Algorithm" body="
 
 Start with $V^*_0(s)=0$ for all $s$.<br/>
-For $k=1, \cdots, H$:<br/>
+For $k=1, \cdots, H$ steps:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For all states $s$ in $S$:
 
 $$
@@ -195,34 +169,33 @@ $$
 
 **Value Iteration Convergence**
 
-> **Theorem.** Value iteration converges. At convergence, we have found the optimal value function $V^*$ for the discounted infinite horizon problem, which satisfies the Bellman equations.
-> 
+
+Value iteration demonstrates a key property: **convergence**. As iterations progress, the value function gradually stops changing, indicating convergence. This means that running the algorithm long enough will yield a stationary optimal policy and the infinite horizon value, even without needing to run infinite iterations. The speed of convergence is influenced by the discount factor $\gamma$. A lower discount factor (closer to 0) accelerates convergence, while a higher discount factor (closer to 1) slows it down.
+
+{% include admonition.html type="quote" title="Theorem" body="
+Value iteration converges. At convergence, we have found the optimal value function $V^*$ for the discounted infinite horizon problem, which satisfies the Bellman equations.
 
 $$
-\forall s \isin S: V^*(s)=\max_A
+\forall s \in S: V^*(s)=\max_A
 
 \sum_{s'} T(s,a,s')[R(s,a,s')+\gamma V^*(s')]
 $$
 
-- Now we know how to act for an infinite horizon with discounted rewards!
-    - Run value iteration till convergence.
-    - This produces $V^*$, which in turn tells us how to act (or we can store and compute in the iteration), namely the following:
-    
-    $$
-    \pi^*(s)=\argmax_{a\ \isin\ A}
-    
-    \sum_{s'}T(s,a,s')[R(s,a,s')+\gamma V^*(s')]
-    $$
-    
-- Note: the infinite horizon optimal policy is stationary, i.e., the optimal action at a state $s$ is the same action at all times (efficient to store!).
+" %}
 
-**Convergence: Intuition**
 
-Given:
+Running value iteration until convergence produces $V^\*$, from which we can extract the optimal action using the Bellman equation or by storing the optimal action during the algorithm’s execution. Importantly, the infinite horizon policy is stationary: the optimal action for any state $s$ remains the same over time. This efficiency in storage means we only need to store an action for each state, not for each time step, creating a convenient policy $\pi^\*$ that prescribes the optimal action for each state.
 
-- $V^*(s)=$ expected sum of rewards accumulated starting from state $s$, acting optimally for $\infty$ steps.
-- $V^*_H(s)=$ expected sum of rewards accumulated starting from state $s$, acting optimally for $H$ steps.
-- Additional reward collected over time steps $H+1, H+2,\cdots$  goes to zero as $H$ goes to infinity. Hence $V^*_H \xrightarrow{H\rarr \infty} V^*$.
+$$
+\pi^*(s)=\underset{a\ \in\ A}{\operatorname{argmax}}
+
+\sum_{s'}T(s,a,s')[R(s,a,s')+\gamma V^*(s')]
+$$
+
+
+{% include admonition.html type="tip" title="Why does value iteration converge?" body="
+
+$V^\*(s)$ represents the expected sum of rewards starting from state $s$ and acting optimally over infinite steps. Similarly, $V^\*_H(s)$ is the expected sum of rewards starting from state $s$ and acting optimally over $H$ steps. The additional rewards collected beyond $H$ steps can be expressed as a geometric series, discounted by $\gamma$:
 
 $$
 \gamma^{H+1}R(s_{H+1})+\gamma^{H+2}R(s_{H+2})+\cdots 
@@ -234,35 +207,38 @@ $$
 = \frac{\gamma^{H+1}}{1-\gamma}R_{\max}
 $$
 
-The rewards collected are bounded by the maximum reward achievable, and as we increase our horizon, that is the number of iterations we run our value iteration algorithm, the numerator will keep shrinking since gamma is smaller than 1. So the difference between optimal value $V^*$ for infinite horizon and $V^*_H$ for finite horizon $H$ is bounded.
+Where $R_{\text{max}}$ is the maximum possible reward. As the horizon $H$ increases, $\gamma^{H+1}$ shrinks because $\gamma$ is less than 1. Consequently, the difference between the optimal value $V^\*$ for infinite horizon and the optimal value $V^\*_H$ for finite horizon $H$ decreases, becoming negligible as $H$ grows larger. This guarantees that value iteration converges, as the difference between $V^\*$ and $V^\*_H$ approaches zero.
+" %}
 
-If the rewards can be negative, we have to redo the derivation with the absolute value of the rewards.
 
-**Convergence and Contractions**
+{% include admonition.html type="tip" title="Convergence through Contractions" body="
 
-- Definition: max-norm:
+Another way to understand the convergence of value iteration is through contractions. The key idea involves defining a norm, such as the max norm:
 
 $$
 ||U|| = \max_s |U(s)|
 $$
 
-- Definition: An update operation is a $\gamma$-contraction in max-norm if and only if for all $U_i, V_i$:
+Where the max norm of a vector is the maximum absolute value among all its entries. 
+
+An update operation is a $\gamma$-contraction in the max norm if, for any two vectors $U_i$ and $V_i$, the updated vectors $U_{i+1}$ and $V_{i+1}$ are closer together by a factor of $\gamma$ compared to the original vectors $U_i$ and $V_i$.
 
 $$
 ||U_{i+1}-V_{i+1}|| \le \gamma ||U_i-V_i||
 $$
 
-There is, we are bringing $U$ and $V$ closer together over time (subscript $i$) by a factor gamma each step.
+A theorem states that a contraction converges to a unique fixed point regardless of initialization. Intuitively, this means that no matter where you start, the vectors get pulled closer together over time, eventually converging to the same point.
 
-- Theorem: A contraction converges to a unique fixed point, no matter the initialization.
-- Fact: the value iteration update is a $\gamma$-contraction in max-norm.
-- Corollary: value iteration converges to a unique fixed point.
-- Additional fact:
-    - I.e. once the update is small, it must also be close to converged.
+Value iteration is a $\gamma$-contraction in the max norm. When applying a Bellman update to two different starting points, the resulting value functions are brought closer together. As a contraction, running the updates long enough ensures convergence to the optimal value function, $V^*$.
+
+Additionally, you can bound the error during the iteration process. The size of the update indicates how close you are to convergence. If the update is small, it means future changes will also be small, allowing you to estimate the error even with a finite number of iterations. This means you can stop value iteration once the updates are sufficiently small, indicating that you're close enough to the optimal value function.
 
 $$
 ||V_{i+1}-V_i|| \le \epsilon, \Rightarrow ||V_{i+1}-V^*|| \lt \frac{2\epsilon\gamma}{(1-\gamma)}
 $$
+
+" %}
+
 
 **Q-Values**
 

@@ -14,11 +14,12 @@ body="This content is a summary and my personal takeaways from the excellent boo
 
 For a more comprehensive coverage of the topics, <b>I highly recommend reading the full book.</b>" %}
 
-<!-- prettier-ignore -->
-> **WIP - Update 28/06/24:** Content written up to Chapter 6.2
-{: .block-danger }
+{% include admonition.html type="warninig" title="Warning" body="
+**WIP - Update 28/06/24:** Content written up to Chapter 6.2
+"%}
 
-<h1>Table of Contents</h1>
+
+{% include admonition.html type="abstract" title="Table of Contents" body="
 
 - [Chapter 1: Overview of Machine Learning Systems](#chapter-1-overview-of-machine-learning-systems)
   - [1.1 When to Use Machine Learning](#11-when-to-use-machine-learning)
@@ -74,6 +75,8 @@ For a more comprehensive coverage of the topics, <b>I highly recommend reading t
 - [Chapter 9: Continual Learning and Test in Production](#chapter-9-continual-learning-and-test-in-production)
 - [Chapter 10: Infrastructure and Tooling for MLOps](#chapter-10-infrastructure-and-tooling-for-mlops)
 - [Chapter 11: The Human Side of Machine Learning](#chapter-11-the-human-side-of-machine-learning)
+
+"%}
 
 # Chapter 1: Overview of Machine Learning Systems
 
