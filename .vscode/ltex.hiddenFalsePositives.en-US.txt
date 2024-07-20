@@ -1,2 +1,0 @@
-{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QThis content is a summary and my key takeaways from the excellent book Designing Machine Learning Systems by Chip Huyen.\\E$"}
-{"rule":"ADMIT_ENJOY_VB","sentence":"^\\QThese methods assess the importance of each feature based on how often they are used to make splits in decision trees or their impact on the loss function.\\E$"}
