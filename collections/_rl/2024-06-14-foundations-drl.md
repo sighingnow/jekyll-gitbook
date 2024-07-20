@@ -11,6 +11,8 @@ permalink: /foundations-drl
 This content is a direct translation of the [Foundations of Deep RL](https://www.youtube.com/playlist?list=PLwRJQ4m4UJjNymuBM9RdmB3Z9N5-0IlY0) lecture series, from professor Pieter Abbeel's YouTube channel.
 
 For a more detailed coverage of the topics, **I highly recommend watching the original videos.**
+
+This lecture series is designed to **build a strong foundation in deep reinforcement learning**, enabling students to understand current developments and pursue their own research and applications in this exciting field.
 " %}
 
 {% include admonition.html type="abstract" title="Table of Contents" body="
@@ -30,9 +32,6 @@ For a more detailed coverage of the topics, **I highly recommend watching the or
 
 " %}
 
-{% include admonition.html type="abstract" title="Goal" body="
-This lecture series is designed to **build a strong foundation in deep reinforcement learning**, enabling students to understand current developments and pursue their own research and applications in this exciting field.
-" %}
 
 # Lecture 1: Foundations on Reinforcement Learning
 
