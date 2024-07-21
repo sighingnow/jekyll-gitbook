@@ -1,10 +1,5 @@
 ---
 title: (Not that) Basic Statistical Concepts
-author: Lucas Cruz
-date: 2024-06-11
-category: statistics
-layout: post
-permalink: /basic-stats
 ---
 
 {% include admonition.html type="abstract" title="Table of Contents" body="

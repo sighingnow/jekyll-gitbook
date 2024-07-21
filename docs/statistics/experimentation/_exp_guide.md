@@ -1,11 +1,5 @@
 ---
 title: A Practical Guide to A/B Testing
-author: Lucas Cruz
-date: 2024-06-10
-category: statistics
-layout: post
-permalink: /ab-testing
-mermaid: true
 ---
 
 This document serves as a guide to experimental (A/B test) design, made for data scientists, data and ML engineers, and researchers. The goal is to present these concepts clearly and precisely, ensuring that readers can apply these principles to their own work in experimentation as I did.

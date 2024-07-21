@@ -127,44 +127,48 @@ const config: Config = {
           title: 'About Me',
           items: [
             {
+              label: 'About Me',
+              to: '/about'
+            },
+            {
               label: 'Projects',
-              to: '/docs/intro',
+              to: '/about/projects',
             },
             {
               label: 'Curriculum Vitae',
-              to: '/docs/intro',
+              to: '/about/CV',
             },
           ],
         },
         {
           title: 'Reinforcement Learning',
-          items: [
+          items: [/*
             {
               label: 'Foundations of Deep RL',
-              to: '/docs/intro',
-            },
+              to: '/docs/reinforcement-learning',
+            },*/
           ],
         },
         {
-          title: 'General Machine Learnig',
-          items: [
+          title: 'Machine Learnig',
+          items: [ /*
             {
               label: 'Designing Machine Learning Systems',
-              to: '/docs/intro',
-            },
+              to: '/docs/machine-learnin',
+            },*/
           ],
         },
         {
           title: 'Statistics',
           items: [
-            {
+            /* {
               label: '(Not that) Basic Statistical Concepts',
-              to: '/docs/intro',
+              to: '/docs/statistics/basic-statistics',
             },
             {
               label: 'A Practical Guide to A/B Testing',
-              to: '/docs/intro',
-            },
+              to: '/docs/statistics/experimentation',
+            },*/
           ],
         }, // TODO: insert contact links
       ],
