@@ -80,31 +80,44 @@ const config: Config = {
       // },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'RLSidebar',
+          type: 'dropdown',
+          label: 'Learning',
           position: 'left',
-          label: 'Reinforcement Learning',
+          to: 'learning/',
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'RLSidebar',
+              label: 'Reinforcement Learning',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'MLSidebar',        
+              label: 'Machine Learning',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'StatsSidebar',        
+              label: 'Statistics',
+            },
+          ],
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'MLSidebar',        
-          label: 'Machine Learning',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'StatsSidebar',        
-          label: 'Statistics',
-        },
-        {
-          to: 'CV',
-          label: 'Curriculum Vitae',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/cruz-lucas',
-          label: 'GitHub',
-          position: 'right',
-        },
+          label: 'About',
+          position: 'left', // or 'right'
+          to: '/about',
+          items: [
+            {
+              to: '/about/CV', // replace with your actual page paths
+              label: 'Curriculum Vitae',
+            },
+            {
+              to: '/about/projects',
+              label: 'Projects',
+            }
+            // add more pages as needed
+          ],
+        }
       ],
     },
     footer: {
@@ -120,14 +133,6 @@ const config: Config = {
             {
               label: 'Curriculum Vitae',
               to: '/docs/intro',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/cruz-lucas/',
-            },
-            {
-              label: 'LinkdIn',
-              href: 'https://www.linkedin.com/in/lucasdearaujocruz/',
             },
           ],
         },
@@ -161,7 +166,7 @@ const config: Config = {
               to: '/docs/intro',
             },
           ],
-        },
+        }, // TODO: insert contact links
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Lucas Cruz. Built with Docusaurus.`,
     },

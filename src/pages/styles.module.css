@@ -1,0 +1,350 @@
+.heroBanner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url("/static/img/background/home_background.jpeg");
+  background-color: var(--ifm-hero-background-color);
+  color: var(--ifm-hero-text-color);
+  height: 30vh;
+}
+
+.heroTextContainer {
+  margin: 0 auto;
+  max-width: var(--ifm-container-width);
+  min-width: fit-content;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.heroTextArea {
+  color: white;
+  margin-bottom: 30px;
+}
+
+.heroTextTitle {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.heroTextSubTitle {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.heroTextAreaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLinkIconArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.navLinkIconArea .navLink {
+  display: flex;
+  align-content: center;
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.navLinkIconArea .navLink .imageWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all ease-in 0.3s;
+  -webkit-transition: all ease-in 0.3s;
+  -moz-transition: all ease-in 0.3s;
+  -o-transition: all ease-in 0.3s;
+  -ms-transition: all ease-in 0.3s;
+}
+
+.navLinkIconArea .navLink .imageWrapper:active {
+  padding-bottom: 18px;
+  transition: all ease-out 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+}
+
+/* .navLinkIconArea .navLink img {
+  object-fit: cover;
+  border-radius: 20%;
+  padding: 2px;
+  background-color: darkgrey;
+  box-shadow: inset 0 0 3px white;
+} */
+
+.mainContainer {
+  width: 100%;
+  padding: 20px 15px;
+}
+
+.listTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.marginTop {
+  margin-top: 30px;
+}
+
+.portfolioArea {
+  padding-top: 100px;
+}
+
+.portfolioListWrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-gap: 0.5rem;
+  gap: 1rem;
+  padding-top: 8px;
+  padding: 1rem;
+}
+
+.portfolioCardWrapper {
+  display: flex;
+  border-radius: 6px;
+  border: 1.5px solid;
+  border-color: rgba(229, 231, 235, 1);
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: all 150ms linear;
+  text-decoration: none !important;
+  color: black !important;
+}
+
+[data-theme="dark"] .portfolioCardWrapper {
+  border-color: rgb(100, 92, 92);
+  color: white !important;
+}
+
+.portfolioCardWrapper:hover {
+  background-color: #efefef;
+}
+
+[data-theme="dark"] .portfolioCardWrapper:hover {
+  background-color: #414141 !important;
+}
+
+.portfolioCardLeft {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.portfolioCardLeft h4 {
+  font-weight: 500;
+  font-family: var(--ifm-font-family-monospace);
+  margin: 0;
+}
+
+.portfolioArea .description {
+  margin: 6px 0 4px 0;
+  font-size: 13px;
+}
+
+.portfolioArea .tagWrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portfolioArea .tag {
+  display: flex;
+  align-items: center;
+  text-align: baseline;
+  gap: 2px;
+  border-radius: 4px;
+  padding: 0 4px;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  font-family: var(--ifm-font-family-monospace);
+}
+
+.portfolioArea .development {
+  background-color: orange;
+}
+
+.portfolioArea .production {
+  background-color: rgb(28, 194, 28);
+}
+
+.portfolioCardRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
+  flex-shrink: 0;
+}
+
+.portfolioCardWrapper:hover .portfolioCardRight img {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-10%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .heroBanner {
+    height: 100vh;
+  }
+
+  .heroTextContainer {
+    width: 38%;
+  }
+  .avatarArea > img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    transition: ease 0.3s;
+    -webkit-transition: ease 0.3s;
+    -moz-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    -ms-transition: ease 0.3s;
+    object-fit: cover; /* Ensures the image covers the entire area */
+  }
+
+  .avatarArea > img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+  }
+  
+  .heroTextArea {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 1rem;
+    letter-spacing: 0;
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+
+  .heroTextTitle::selection {
+    color: var(--ifm-color-primary);
+  }
+
+  .heroTextSubTitle::selection {
+    color: var(--ifm-color-primary);
+  }
+
+  .navLinkIconArea {
+    margin-top: 15px;
+  }
+
+  .navLinkIconArea .navLink {
+    width: 38px;
+    height: 38px;
+  }
+
+  .navLinkIconArea .navLink .imageWrapper:hover {
+    padding-bottom: 18px;
+    transition: all ease-out 0.3s;
+    -webkit-transition: all ease-out 0.3s;
+    -moz-transition: all ease-out 0.3s;
+    -o-transition: all ease-out 0.3s;
+    -ms-transition: all ease-out 0.3s;
+  }
+
+  .arrowDownBtnWrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .arrowDownBtn {
+    color: white;
+    height: 30px;
+    width: 30px;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    animation: float 2s linear infinite;
+    -webkit-animation: float 2s linear infinite;
+    vertical-align: center;
+  }
+
+  .arrowDownBtn:hover {
+    cursor: pointer;
+    color: darkgrey;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(0px, -10px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  @-webkit-keyframes float {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(0px, -10px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
+
+  .mainContainer {
+    padding: 40px 20px;
+    width: 61.8%;
+    margin: auto;
+  }
+
+  .listTitle {
+    font-size: 1.5rem;
+  }
+
+  .portfolioListWrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
