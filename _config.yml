@@ -18,6 +18,7 @@ remote_theme: sighingnow/jekyll-gitbook
 
 toc:
   enabled: true
+  enabled_index: false
   h_min: 1
   h_max: 3
 
