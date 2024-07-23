@@ -17,10 +17,10 @@ rss:              RSS
 remote_theme: sighingnow/jekyll-gitbook
 
 toc:
-  enabled: true
-  enabled_index: false
-  h_min: 1
-  h_max: 3
+  enabled:       true
+  enabled_index: true 
+  h_min:         1
+  h_max:         3
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path:     /assets/gitbook/images/favicon.ico
