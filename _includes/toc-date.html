@@ -39,6 +39,11 @@
                 <a href="{{site.baseurl}}/" onclick="pageScrollToTop(this)">
                     {{ site.title | escape }}
                 </a>
+                {% if site.toc.enabled %}
+                    {% if site.toc.enabled_index %}
+                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                    {% endif %}
+                {% endif %}
             </li>
 
             <li class="divider"></li>
