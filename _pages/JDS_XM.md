@@ -287,6 +287,7 @@ The customer Journey widget provides a single pane of glass view to the customer
 ![jdsactivateproject](/assets/images/JDS/jds_activate_project.png)
 
 
+
 ### Add user identities to a journey project.
 1. Select a journey project for which connector was activated 
 2. Select Identities .Click Add identities
@@ -294,8 +295,11 @@ The customer Journey widget provides a single pane of glass view to the customer
 ![jdsaddidentities](/assets/images/JDS/jds_add_identities.png)
 
 
+
 3. Download sample template
+
 ![uploadcsvjds](/assets/images/JDS/upload_csv_jds.png)
+
 
 4. In CSV file download, add the Customer identities [First Name,Last Name,Email Addresses,Phone Numbers,Customers Ids]
 Each customer identity must have at least an email address, phone number, or customer ID or else the CSV file will return an error.
@@ -307,6 +311,7 @@ For the Id column, make sure to leave each row empty. When you upload the CSV fi
 
 5. Upload a CSV file that you created for customer identities, and then click Next
 6. If the CSV file is valid, a window appears to show you if the import was successful. Once you're done, select Close. You should see a list of all the uploaded customer identities
+
 
 ### Enable customer journey widget on an agent desktop
 
@@ -371,6 +376,7 @@ Here is a screenshot of the block in place (notice it is after IVR_TRASNCRIPT an
 5. Upload the Desktop Layout JSON file that you downloaded in step 1
 
 4. Click Save
+
 
 ### View customer journey widget on an Agent desktop
 
