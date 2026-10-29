@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            BeOps
+longtitle:        "BeOps: shipping AI that stays up. Evaluation, cost and reliability, from an SRE's notebook."
+author:           Kirill Kuklin
+email:            beops.it@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  BeOps: shipping AI that stays up. Evaluation, cost and reliability, from an SRE's notebook.
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://NeverTheSame.github.io'
+baseurl:          '/BeOps'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -48,19 +48,30 @@ permalink:                /:categories/:year-:month-:day-:title:output_ext
 
 exclude:
   - _drafts
+  # Defensive: never publish tooling even if it lingers in the working tree.
+  # The automation now lives in the private beops-ops superproject.
+  - posts-generator
+  - configs
+  - tests
+  - docs
+  - .github
+  - .copilot
+  - AGENTS.md
+  - doppler.yaml
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
 collections:
   pages:
-    output: true
-    permalink: /:collection/:path/
-  others:
     output: true
     permalink: /:collection/:path/
 
 ordered_collections:
   - posts
   - pages
-  - others
 
 page_width: 800px
 
@@ -70,5 +81,4 @@ regenerate:       true
 
 plugins:
   - jekyll-feed
-  - jekyll-readme-index
   - jemoji

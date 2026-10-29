@@ -1,7 +1,9 @@
 <script>
 window.MathJax = {
   tex: {
-    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+    // No single-$ delimiter: posts quote prices ("$9.01 ... $25.80"), and
+    // MathJax would typeset the text between two prices as italic math.
+    inlineMath: [ ['\\(', '\\)'] ]
   },
   svg: {
     fontCache: 'global'

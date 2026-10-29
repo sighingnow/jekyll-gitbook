@@ -1,3 +1,63 @@
+# Jekyll build artifacts
 _site/
-_draft/
+.sass-cache/
 .jekyll-cache/
+.jekyll-metadata
+
+# Tooling moved to the private NeverTheSame/beops-ops superproject.
+# This public repo is content-only; never re-track tooling here.
+posts-generator/
+.github/
+.copilot/
+tests/
+docs/
+AGENTS.md
+doppler.yaml
+.cursorrules
+.cursorindexingignore
+
+# Configuration files with sensitive data
+configs/
+# Service account keys (extra protection)
+configs/service-account.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+.specstory/
+.cursorindexingignore
+
+# Site audit artifacts
+tests/site-audit/node_modules/
+tests/site-audit/reports/
+tests/site-audit/lychee-*.txt

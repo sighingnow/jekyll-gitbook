@@ -48,69 +48,86 @@
 
             <li class="divider"></li>
 
+            {%- comment -%}
+              Group posts by category, using _data/categories.yml as the source of truth.
+              Each category is a parent <li> (linking to its index page); its posts
+              become a nested <ul> below, in date-reverse order. Categories with no
+              posts are still shown as a top-level entry.
+            {%- endcomment -%}
+            {% for cat in site.data.categories %}
+                {% assign cat_posts = site.posts | where: "category", cat.slug | sort: "date" | reverse %}
+                {% assign cat_url = '/' | append: cat.slug | append: '/' | relative_url %}
+                {% assign in_this_cat = false %}
+                {% if page.category == cat.slug %}{% assign in_this_cat = true %}{% endif %}
+                {% if page.url == cat_url or page.permalink == cat_url %}{% assign in_this_cat = true %}{% endif %}
+
+                <li class="chapter{% if in_this_cat %} active{% endif %}" data-level="1.1" data-path="{{ cat_url }}">
+                    <a href="{{ cat_url }}" onclick="pageScrollToTop(this)">
+                        {{ cat.title | escape }}
+                    </a>
+                    {% if cat_posts.size > 0 %}
+                    <ul class="articles">
+                        {% for post in cat_posts %}
+                            {% if page.url == post.url %}
+                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                            {% else %}
+                            <li class="chapter" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                            {% endif %}
+                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
+                                    {{ post.title | escape }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+
+            {%- comment -%}
+              Any posts whose `category:` is missing or doesn't match a known
+              category get listed under "Other" so they aren't lost.
+            {%- endcomment -%}
+            {% assign known_slugs = site.data.categories | map: "slug" %}
+            {% assign other_posts = "" | split: "" %}
+            {% for post in site.posts %}
+                {% unless known_slugs contains post.category %}
+                    {% assign other_posts = other_posts | push: post %}
+                {% endunless %}
+            {% endfor %}
+            {% if other_posts.size > 0 %}
+                <li class="chapter" data-level="1.1">
+                    <span class="chapter-title">Other</span>
+                    <ul class="articles">
+                        {% for post in other_posts %}
+                            <li class="chapter{% if page.url == post.url %} active{% endif %}" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
+                                    {{ post.title | escape }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endif %}
+
+            <li class="divider"></li>
+
+            {%- comment -%}
+              Utility pages (About, Contact, etc) — anything in the `pages` or
+              `others` collections that is NOT a category index page.
+            {%- endcomment -%}
             {% if site.ordered_collections %}
                 {% for label in site.ordered_collections %}
+                    {% if label == "posts" %}{% continue %}{% endif %}
                     {% assign collection = site.collections | where: "label", label | first %}
-                    <!-- <p>{{ collection.label }}</p> -->
                     {% if collection.output %}
-                        {% if collection.label == "posts" %}
-                            {% assign reversed_posts = site[collection.label] | reverse %}
-                        {% else %}
-                            {% assign reversed_posts = site[collection.label] %}
-                        {% endif %}
-
-                        {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
+                        {% for doc in site[collection.label] %}
+                            {% if doc.is_category %}{% continue %}{% endif %}
+                            <li class="chapter{% if page.url == doc.url %} active{% endif %}" data-level="1.1" data-path="{{site.baseurl}}{{doc.url}}">
+                                <a href="{{site.baseurl}}{{doc.url}}" onclick="pageScrollToTop(this)">
+                                    {{ doc.title | escape }}
                                 </a>
-                                {% if site.toc.enabled %}
-                                    {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
-                                    {% endif %}
-                                {% endif %}
                             </li>
                         {% endfor %}
-
-                        {% if reversed_posts.size > 0 %}
-                            <li class="divider"></li>
-                        {% endif %}
-                    {% endif %}
-                {% endfor %}
-            {% else %}
-                {% for collection in site.collections %}
-                    <!-- <p>{{ collection.label }}</p> -->
-                    {% if collection.output %}
-                        {% if collection.label == "posts" %}
-                            {% assign reversed_posts = site[collection.label] | reverse %}
-                        {% else %}
-                            {% assign reversed_posts = site[collection.label] %}
-                        {% endif %}
-
-                        {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
-                                </a>
-                                {% if site.toc.enabled %}
-                                    {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
-                                    {% endif %}
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-
-                        {% if reversed_posts.size > 0 %}
-                            <li class="divider"></li>
-                        {% endif %}
                     {% endif %}
                 {% endfor %}
             {% endif %}

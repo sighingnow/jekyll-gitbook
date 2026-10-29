@@ -1,0 +1,21 @@
+# Canonical category list for BeOps.
+# Single source of truth used by:
+#   - _includes/toc-date.html (sidebar grouping)
+#   - index.md (homepage category list)
+#   - _pages/<slug>.md  (the category index pages)
+#   - tests/site-audit (via BEOPS_CATEGORIES env var; keep in sync)
+- slug: ai
+  title: AI
+  description: AI engineering and operations
+- slug: devops
+  title: DevOps
+  description: Best practices and methodologies
+- slug: k8s
+  title: Kubernetes
+  description: Container orchestration and management
+- slug: sre
+  title: SRE
+  description: Site Reliability Engineering principles
+- slug: job-interviews
+  title: Job Interviews
+  description: Interviews — both ones I've taken and prep notes for SRE/DevOps/AI/platform roles

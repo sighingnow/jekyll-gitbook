@@ -29,6 +29,12 @@
                 </div>
 
                 <div class="body-inner">
+                    {% unless page.url == "/" or page.url == "/index.html" %}
+                    <div class="page-back-home" style="padding:12px 24px 0;">
+                        <a href="{{ '/' | relative_url }}" class="back-to-home">← Back to home</a>
+                    </div>
+                    {% endunless %}
+
                     {%- include body.html -%}
 
                     <a href="{{site.baseurl}}/" class="navigation navigation-pre navigation-unique">

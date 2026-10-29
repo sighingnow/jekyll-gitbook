@@ -33,6 +33,16 @@
                 </div>
 
                 <div class="body-inner">
+                    <div class="page-back-home" style="padding:12px 24px 0;">
+                        <a href="{{ '/' | relative_url }}" class="back-to-home">← Back to home</a>
+                        {% if page.category %}
+                            {% assign post_cat = site.data.categories | where: "slug", page.category | first %}
+                            {% if post_cat %}
+                              · <a href="{{ '/' | append: post_cat.slug | append: '/' | relative_url }}">{{ post_cat.title }}</a>
+                            {% endif %}
+                        {% endif %}
+                    </div>
+
                     {%- include body.html -%}
 
                     {% if page.previous %}

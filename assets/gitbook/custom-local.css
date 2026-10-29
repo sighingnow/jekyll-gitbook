@@ -3,3 +3,374 @@
  * Its purpose is for users of the theme to be able to add css rules from a blank file
  *   these get simply added to the ones already active in the layout.
  */
+
+/* =========================================================================
+   BeOps — "warm terminal" overlay
+   Matches the palette + typography of https://beops.site so the Jekyll
+   site and the Astro portfolio feel like the same brand.
+
+   Strategy: keep gitbook layout intact, override colors / typography /
+   components only. Light + dark via prefers-color-scheme.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter+Tight:wght@400;500;600;700&display=swap');
+
+:root {
+  /* light — parchment */
+  --bo-bg-0: #f4efe2;
+  --bo-bg-1: #ebe5d4;
+  --bo-bg-2: #e0d9c4;
+  --bo-bg-paper: #faf6ec;
+
+  --bo-fg-0: #1c1f1a;
+  --bo-fg-1: #2e312a;
+  --bo-fg-2: #5a5f4f;
+  --bo-fg-3: #8a8e7c;
+
+  --bo-line-1: #d3cab2;
+  --bo-line-2: #b8ad92;
+
+  --bo-accent: #5b7d4f;
+  --bo-accent-hover: #4a6940;
+  --bo-accent-soft: #d6dec8;
+  --bo-accent-ink: #faf6ec;
+
+  --bo-brand-brown: #8b5a3c;
+  --bo-warn: #b67619;
+  --bo-err:  #a8392b;
+  --bo-info: #4a6e8a;
+
+  --bo-font-mono: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", ui-monospace, monospace;
+  --bo-font-sans: "Inter Tight", -apple-system, "Helvetica Neue", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bo-bg-0: #15171a;
+    --bo-bg-1: #1a1d20;
+    --bo-bg-2: #21252a;
+    --bo-bg-paper: #1f2226;
+
+    --bo-fg-0: #f0ece2;
+    --bo-fg-1: #e0dcd0;
+    --bo-fg-2: #a8a99c;
+    --bo-fg-3: #75766a;
+
+    --bo-line-1: #2a2f35;
+    --bo-line-2: #3a4048;
+
+    --bo-accent: #8aab7b;
+    --bo-accent-hover: #a4c298;
+    --bo-accent-soft: rgba(138, 171, 123, 0.15);
+    --bo-accent-ink: #15171a;
+
+    --bo-brand-brown: #c0916c;
+    --bo-warn: #d8a85a;
+    --bo-err:  #d77b6a;
+    --bo-info: #7ea2b8;
+  }
+}
+
+/* ---- base canvas ---- */
+html, body,
+.book,
+.book-body,
+.book-body .body-inner,
+.book-body .body-inner .page-wrapper,
+.book-body .body-inner .page-wrapper .page-inner {
+  background: var(--bo-bg-0) !important;
+  color: var(--bo-fg-1) !important;
+  font-family: var(--bo-font-mono) !important;
+}
+
+.book.font-family-0,
+.book.font-family-1 {
+  font-family: var(--bo-font-mono) !important;
+}
+
+/* selection */
+::selection { background: var(--bo-accent-soft); color: var(--bo-fg-0); }
+
+/* ---- header (top bar) ---- */
+.book .book-body .book-header,
+.book.color-theme-1 .book-body .book-header,
+.book.color-theme-2 .book-body .book-header {
+  background: var(--bo-bg-0) !important;
+  border-bottom: 1px solid var(--bo-line-1) !important;
+  color: var(--bo-fg-0) !important;
+  box-shadow: none !important;
+}
+.book-body .book-header h1 a,
+.book-body .book-header h1 a:hover {
+  color: var(--bo-fg-0) !important;
+  font-family: var(--bo-font-mono) !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.book-body .book-header .btn,
+.book-body .book-header a {
+  color: var(--bo-fg-2) !important;
+}
+.book-body .book-header .btn:hover,
+.book-body .book-header a:hover {
+  color: var(--bo-accent) !important;
+}
+
+/* ---- sidebar (summary) ---- */
+.book-summary,
+.book.color-theme-1 .book-summary,
+.book.color-theme-2 .book-summary {
+  background: var(--bo-bg-1) !important;
+  border-right: 1px solid var(--bo-line-1) !important;
+  color: var(--bo-fg-1) !important;
+  font-family: var(--bo-font-mono) !important;
+}
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
+  color: var(--bo-fg-1) !important;
+  font-family: var(--bo-font-mono) !important;
+}
+.book-summary ul.summary li.divider {
+  background: var(--bo-line-1) !important;
+  height: 1px;
+}
+.book-summary ul.summary li a:hover {
+  color: var(--bo-accent) !important;
+  background: transparent !important;
+  text-decoration: none;
+}
+.book-summary ul.summary li.active > a,
+.book.color-theme-1 .book-summary ul.summary li.active > a,
+.book.color-theme-2 .book-summary ul.summary li.active > a {
+  color: var(--bo-accent-ink) !important;
+  background: var(--bo-accent) !important;
+  font-weight: 600;
+  border-radius: 2px;
+}
+.book-summary ul.summary li ul.articles {
+  border-left: 1px dashed var(--bo-line-1);
+  margin-left: 12px;
+}
+
+/* search box (if rendered) */
+#book-search-input input,
+#book-search-input input:focus {
+  background: var(--bo-bg-paper) !important;
+  color: var(--bo-fg-0) !important;
+  border: 1px solid var(--bo-line-1) !important;
+  border-radius: 2px;
+  font-family: var(--bo-font-mono) !important;
+}
+#book-search-input input::placeholder { color: var(--bo-fg-3); }
+
+/* ---- markdown content ---- */
+.markdown-section {
+  color: var(--bo-fg-1) !important;
+  font-family: var(--bo-font-sans);
+  font-size: 17px;
+  line-height: 28px;
+  max-width: 760px;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+  color: var(--bo-fg-0) !important;
+  font-family: var(--bo-font-mono) !important;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-bottom: none !important;
+}
+.markdown-section h1 { font-size: 36px; line-height: 44px; }
+.markdown-section h2 {
+  font-size: 24px; line-height: 32px;
+  margin-top: 2.2em;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed var(--bo-line-1) !important;
+}
+.markdown-section h3 { font-size: 19px; line-height: 28px; margin-top: 1.8em; }
+.markdown-section h4 { font-size: 16px; line-height: 24px; }
+
+.markdown-section p,
+.markdown-section li {
+  color: var(--bo-fg-1) !important;
+}
+
+.markdown-section a,
+.markdown-section a:visited {
+  color: var(--bo-fg-0) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--bo-fg-3);
+  transition: color 140ms ease, text-decoration-color 140ms ease;
+}
+.markdown-section a:hover {
+  color: var(--bo-accent) !important;
+  text-decoration-color: var(--bo-accent) !important;
+}
+
+.markdown-section hr {
+  border: 0 !important;
+  border-top: 1px dashed var(--bo-line-1) !important;
+  background: transparent !important;
+  margin: 2.4em 0 !important;
+}
+
+/* inline code */
+.markdown-section code {
+  background: var(--bo-bg-2) !important;
+  color: var(--bo-fg-0) !important;
+  border: 1px solid var(--bo-line-1) !important;
+  border-radius: 2px;
+  padding: 1px 6px;
+  font-family: var(--bo-font-mono) !important;
+  font-size: 0.92em;
+}
+
+/* code block */
+.markdown-section pre {
+  background: var(--bo-bg-1) !important;
+  border: 1px solid var(--bo-line-1) !important;
+  border-radius: 4px;
+  padding: 16px 20px !important;
+  font-family: var(--bo-font-mono) !important;
+}
+.markdown-section pre > code,
+.markdown-section pre code {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  color: var(--bo-fg-0) !important;
+  font-family: var(--bo-font-mono) !important;
+  font-size: 13.5px;
+  line-height: 22px;
+}
+
+/* tables */
+.markdown-section table {
+  border-collapse: collapse;
+  font-family: var(--bo-font-mono) !important;
+  font-size: 14px;
+}
+.markdown-section table th,
+.markdown-section table td {
+  border: 1px solid var(--bo-line-1) !important;
+  padding: 8px 12px;
+  background: transparent !important;
+}
+.markdown-section table th {
+  background: var(--bo-bg-1) !important;
+  color: var(--bo-fg-0) !important;
+  font-weight: 600;
+  text-align: left;
+}
+.markdown-section table tr:nth-child(2n) td {
+  background: var(--bo-bg-1) !important;
+}
+/* style.css paints every row #fff (and even rows #f8f8f8). With transparent
+   cells that white shows through behind light dark-mode text. */
+.markdown-section table tr,
+.markdown-section table tr:nth-child(2n) {
+  background-color: transparent !important;
+}
+.markdown-section table td {
+  color: var(--bo-fg-1) !important;
+}
+
+/* blockquote */
+.markdown-section blockquote {
+  border-left: 3px solid var(--bo-accent) !important;
+  background: var(--bo-accent-soft) !important;
+  color: var(--bo-fg-1) !important;
+  padding: 12px 18px !important;
+  border-radius: 0 4px 4px 0;
+}
+.markdown-section blockquote p { color: var(--bo-fg-1) !important; }
+
+/* tip / warning / danger callouts (kept from theme) */
+.markdown-section blockquote.block-tip {
+  border-color: var(--bo-accent) !important;
+  background: var(--bo-accent-soft) !important;
+}
+.markdown-section blockquote.block-warning {
+  border-color: var(--bo-warn) !important;
+  background: rgba(182, 118, 25, 0.10) !important;
+}
+.markdown-section blockquote.block-danger {
+  border-color: var(--bo-err) !important;
+  background: rgba(168, 57, 43, 0.10) !important;
+}
+
+/* images */
+.markdown-section img {
+  border: 1px solid var(--bo-line-1);
+  border-radius: 4px;
+  background: var(--bo-bg-paper);
+}
+
+/* back-to-top button */
+.back-to-top {
+  background: var(--bo-accent) !important;
+  color: var(--bo-accent-ink) !important;
+  border-radius: 2px !important;
+  border: 1px solid var(--bo-accent-hover) !important;
+}
+.back-to-top:hover {
+  background: var(--bo-accent-hover) !important;
+}
+
+/* page navigation arrows */
+.book .book-body .navigation {
+  color: var(--bo-fg-2) !important;
+}
+.book .book-body .navigation:hover {
+  color: var(--bo-accent) !important;
+  text-decoration: none;
+}
+
+/* font-settings dropdown items (the theme picker) */
+.dropdown-menu {
+  background: var(--bo-bg-paper) !important;
+  border: 1px solid var(--bo-line-1) !important;
+  border-radius: 2px;
+}
+.dropdown-menu .buttons button {
+  background: transparent !important;
+  color: var(--bo-fg-1) !important;
+  font-family: var(--bo-font-mono) !important;
+}
+.dropdown-menu .buttons button.active {
+  color: var(--bo-accent) !important;
+}
+
+/* TOC inside posts */
+.toc, .toc-h1, .toc-h2, .toc-h3 {
+  font-family: var(--bo-font-mono) !important;
+}
+
+/* rouge syntax highlighting — keep theme's existing colors but soften bg */
+.highlight, .highlighter-rouge {
+  background: var(--bo-bg-1) !important;
+}
+
+/* colorful.css is a light theme: it paints strings, interpolations and regexes
+   with their own pale backgrounds, which show as white boxes in dark mode.
+   Let tokens sit on the block background instead. */
+.highlight .s, .highlight .sb, .highlight .dl, .highlight .s1, .highlight .s2,
+.highlight .sh, .highlight .si, .highlight .sr, .highlight .err {
+  background-color: transparent !important;
+}
+.highlight .sr {
+  color: inherit;
+}
+
+/* "$ " terminal prompt flavor on inline code that starts with $ — opt-in */
+.prompt::before {
+  content: "$ ";
+  color: var(--bo-accent);
+  font-weight: 600;
+}

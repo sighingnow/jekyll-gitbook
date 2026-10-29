@@ -1,235 +1,157 @@
----
-layout: home
-title: Jekyll Gitbook Theme
-permalink: /
----
+# BeOps: shipping AI that stays up. Evaluation, cost and reliability, from an SRE's notebook
 
-Make Jelly site have a GitBook look!
+A comprehensive documentation site covering DevOps best practices, Kubernetes, and Site Reliability Engineering (SRE) principles.
 
-## Demo
+## 🚀 Features
 
-Live demo on Github Pages: [https://sighingnow.github.io/jekyll-gitbook](https://sighingnow.github.io/jekyll-gitbook)
+- **DevOps Best Practices**: Practical guides and tutorials
+- **Kubernetes Deep Dives**: From basics to advanced concepts
+- **SRE Principles**: Site Reliability Engineering methodologies
+- **Ingress Controllers**: Comprehensive coverage of Kubernetes networking
+- **AI-Powered Content Generation**: Automated blog post creation using OpenAI and Google Gemini APIs
+- **RAG over own posts**: Hybrid retrieval (pgvector + Postgres FTS + RRF) so the generator cites prior work and stops repeating itself — see [**docs/architecture.md**](docs/architecture.md) for diagrams of the pipeline.
 
-[![Jekyll Themes](https://img.shields.io/badge/featured%20on-JekyllThemes-red.svg)](https://jekyll-themes.com/jekyll-gitbook/)
+## 📚 Content
 
-## Why Jekyll with GitBook
+This site is built with Jekyll and hosted on GitHub Pages. Visit the live site at: https://neverthesame.github.io/BeOps/
 
-GitBook is an amazing frontend style to present and organize contents (such as book chapters
-and blogs) on Web. The typical to deploy GitBook at [Github Pages][1]
-is building HTML files locally and then push to Github repository, usually to the `gh-pages`
-branch. It's quite annoying to repeat such workload and make it hard for people do version
-control via git for when there are generated HTML files to be staged in and out.
+## 🏗️ Project Structure
 
-This theme takes style definition out of generated GitBook site and provided the template
-for Jekyll to rendering markdown documents to HTML, thus the whole site can be deployed
-to [Github Pages][1] without generating and uploading HTML bundle every time when there are
-changes to the original repo.
-
-## How to Get Started
-
-This theme can be used just as other [Jekyll themes][1] and support [remote theme][12],
-see [the official guide][13] as well.
-
-You can introduce this jekyll theme into your own site by either
-
-- [Fork][3] this repository and add your markdown posts to the `_posts` folder.
-- Use as a remote theme in your [`_config.yml`][14](just like what we do for this
-  site itself),
-
-```yaml
-remote_theme: sighingnow/jekyll-gitbook
+```
+BeOps/
+├── _posts/              # Blog posts (Jekyll format)
+├── _pages/              # Static pages
+├── _layouts/            # Jekyll layouts
+├── _includes/            # Jekyll includes
+├── assets/              # Images and static assets
+├── posts-generator/     # Python content generation tools
+│   ├── py-feedparser.py      # Main content generation script
+│   ├── title_generator.py     # AI-powered title generation
+│   ├── youtube_processor.py   # YouTube content processing
+│   ├── openai_worker_4o.py   # OpenAI API integration
+│   ├── prompts.json           # AI prompts configuration
+│   ├── configs/               # Configuration files
+│   ├── produced_posts/        # Generated content output
+│   └── logs/                  # Execution logs
+├── configs/             # Project configuration files
+├── AGENTS.md            # AI agent instructions (see below)
+└── README.md            # This file
 ```
 
-### Deploy Locally with Jekyll Serve
+## 🛠️ Local Development
 
-This theme can be ran locally using Ruby and Gemfiles.
+### Jekyll Site Setup
 
-[Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) - GitHub
+```bash
+# Install Ruby dependencies
+bundle install
 
-## Full-text search
+# Start local development server with live reload
+bundle exec jekyll serve --livereload
 
-The search functionality in jekyll-gitbook theme is powered by the [gitbook-plugin-search-pro][5] plugin and is enabled by default.
-
-[https://sighingnow.github.io/jekyll-gitbook/?q=generated](https://sighingnow.github.io/jekyll-gitbook/?q=generated)
-
-## Code highlight
-
-The code highlight style is configurable the following entry in `_config.yaml`:
-
-```yaml
-syntax_highlighter_style: colorful
+# Build for production
+bundle exec jekyll build
 ```
 
-The default code highlight style is `colorful`, the full supported styles can be found from [the rouge repository][6]. Customized
-style can be added to [./assets/gitbook/rouge/](./assets/gitbook/rouge/).
+The site will be available at `http://localhost:4000`
 
-## How to generate TOC
+### Python Content Generation Tools
 
-The jekyll-gitbook theme leverages [jekyll-toc][4] to generate the *Contents* for the page.
-The TOC feature is not enabled by default. To use the TOC feature, modify the TOC
-configuration in `_config.yml`:
+The project includes AI-powered tools for generating blog content:
 
-```yaml
-toc:
-    enabled: true
-    h_min: 1
-    h_max: 3
+```bash
+# Navigate to posts-generator directory
+cd posts-generator
+
+# Create and activate virtual environment
+python -m venv py-feedparser
+source py-feedparser/bin/activate  # On macOS/Linux
+# or
+py-feedparser\Scripts\activate     # On Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Generate new content
+python py-feedparser.py --config config-4o.json
 ```
 
-## Google Analytics, etc.
+**Key Tools:**
+- `py-feedparser.py`: Main content generation from RSS feeds and other sources
+- `title_generator.py`: AI-powered title generation
+- `youtube_processor.py`: Process YouTube videos into blog posts
+- `openai_worker_4o.py`: OpenAI GPT-4o integration
 
-The jekyll-gitboook theme supports embedding the [Google Analytics][7], [CNZZ][8] and [Application Insights][9] website analytical tools with the following
-minimal configuration in `_config.yaml`:
+**Configuration:**
+- API keys should be stored in `.env` file (not in version control)
+- Configuration files are in `posts-generator/configs/` directory
+- Generated posts are saved to `posts-generator/produced_posts/`
+- Logs are available in `posts-generator/logs/`
 
-```yaml
-tracker:
-  google_analytics: "<YOUR GOOGLE ANALYTICS KEY, e.g, UA-xxxxxx-x>"
+## 🧪 Testing
+
+### Jekyll Site
+```bash
+# Test build locally
+bundle exec jekyll build
+
+# Check for broken links
+bundle exec jekyll build --verbose
 ```
 
-Similarly, CNZZ can be added with the following configuration in `_config.yaml`
-
-```yaml
-tracker:
-  cnzz: "<YOUR CNZZ ANALYTICS KEY, e.g., xxxxxxxx>"
+### Python Tools
+```bash
+cd posts-generator
+python py-feedparser.py --test
+python title_generator.py --test
+python youtube_processor.py --test
 ```
 
-Application Insights can be added with the following configuration in `_config.yaml`
+## 📝 Contributing
 
-```yaml
-tracker:
-  application_insights: "<YOUR APPLICATION INSIGHTS CONNECTION STRING>"
-```
+We welcome contributions! Here's how you can help:
 
-## Disqus comments
+1. **Content Contributions**: Submit new blog posts or improve existing ones
+2. **Bug Reports**: Report issues via GitHub Issues
+3. **Feature Requests**: Suggest enhancements and new features
+4. **Code Improvements**: Improve the content generation tools
 
-[Disqus](https://disqus.com/) comments can be enabled by adding the following configuration in `_config.yaml`:
+### Adding New Content
 
-```yaml
-disqushandler: "<YOUR DISQUS SHORTNAME>"
-```
+1. Generate content using the Python tools (see above)
+2. Review and edit generated content
+3. Add to `_posts/` directory with format: `YYYY-MM-DD-title.md`
+4. Follow Jekyll front matter conventions
+5. Submit a pull request
 
-## Jekyll collections
+### Code Style
 
-Jekyll's [collections][15] is supported to organize the pages in a more fine-grained manner, e.g.,
+- **Python**: Follow PEP 8 guidelines, use type hints, add docstrings
+- **Markdown**: Use consistent front matter, follow Jekyll naming conventions
+- **Commits**: Use descriptive commit messages
 
-```yaml
-collections:
-  pages:
-    output: true
-    sort_by: date
-    permalink: /:collection/:year-:month-:day-:title:output_ext
-  others:
-    output: true
-    sort_by: date
-    permalink: /:collection/:year-:month-:day-:title:output_ext
-```
+## 🔒 Security
 
-An optional `ordered_collections` key can be added to `_config.yaml` to control the order of collections in the sidebar:
+- **API Keys**: Never commit API keys to the repository. Use `.env` files
+- **Service Accounts**: Google service account files should not be in public repos
+- **Sensitive Data**: Keep all sensitive configurations out of version control
 
-```yaml
-ordered_collections:
-  - posts
-  - pages
-  - others
-```
+## 🚀 Deployment
 
-If not specified, the order of collections would be decided by Jekyll. Note that the key `posts` is a special collection
-that indicates the `_posts` pages of Jekyll.
+The site is automatically deployed to GitHub Pages on push to the main branch. The build process is handled by GitHub Actions.
 
-## Extra StyleSheet or Javascript elements
+**Deployment Workflow:**
+1. Generate new content using Python tools
+2. Review and edit generated content
+3. Add to `_posts/` directory
+4. Commit and push to trigger automatic rebuild
 
-You can add extra CSS or JavaScript references using configuration collections:
+## 🤖 AI Agent Support
 
-- extra_css: for additional style sheets. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
-- extra_header_js: for additional scripts to be included in the `<head>` tag, after the `extra_css` has been added. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
-- extra_footer_js: for additional scripts to be included at the end of the HTML document, just before the site tracking script. If the url does not start by http, the path must be relative to the root of the site, without a starting `/`.
+This project includes an `AGENTS.md` file that provides detailed instructions for AI coding agents working on this project. If you're using AI assistants like Cursor, GitHub Copilot, or similar tools, they will automatically reference `AGENTS.md` for project-specific guidance.
 
-## Customizing font settings
+**For AI Agents**: See `AGENTS.md` for comprehensive setup instructions, code style guidelines, testing procedures, and workflow documentation.
 
-The fonts can be customized by modifying the `.book.font-family-0` and `.book.font-family-1` entry in [`./assets/gitbook/custom.css`][10],
+## 📄 License
 
-```css
-.book.font-family-0 {
-    font-family: Georgia, serif;
-}
-.book.font-family-1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-```
-
-## Tips, Warnings and Dangers blocks
-
-The jekyll-gitbook theme supports customized kramdown attributes (`{: .block-tip }`, `{: .block-warning }`,
-`{: .block-danger }`) like that displayed in [the discord.js website][11]. The marker can be used like
-
-```markdown
-> ##### TIP
->
-> This guide is last tested with @napi-rs/canvas^0.1.20, so make sure you have
-> this or a similar version after installation.
-{: .block-tip }
-```
-
-Rendered page can be previewed from
-
-[https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-06-30-tips_warnings_dangers.html)
-
-## Cover image inside pages
-
-The jekyll-gitbook theme supports adding a cover image to a specific page by adding
-a `cover` field to the page metadata:
-
-```diff
-  ---
-  title: Page with cover image
-  author: Tao He
-  date: 2022-05-24
-  category: Jekyll
-  layout: post
-+ cover: /assets/jekyll-gitbook/dinosaur.gif
-  ---
-```
-
-The effect can be previewed from
-
-[https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2022-05-24-page_cover.html)
-
-## Diagrams with mermaid.js
-
-This jekyll-theme supports [mermaid.js](https://mermaid.js.org/) to render diagrams
-in markdown.
-
-To enable the mermaid support, you need to set `mermaid: true` in the front matter
-of your post.
-
-```markdown
----
-mermaid: true
----
-```
-
-The example can be previewed from
-
-[https://sighingnow.github.io/jekyll-gitbook/jekyll/2023-08-31-mermaid.html](https://sighingnow.github.io/jekyll-gitbook/jekyll/2023-08-31-mermaid.html)
-
-## License
-
-This work is open sourced under the Apache License, Version 2.0.
-
-Copyright 2019 Tao He.
-
-[1]: https://pages.github.com
-[2]: https://pages.github.com/themes
-[3]: https://github.com/sighingnow/jekyll-gitbook/fork
-[4]: https://github.com/allejo/jekyll-toc
-[5]: https://github.com/gitbook-plugins/gitbook-plugin-search-pro
-[6]: https://github.com/rouge-ruby/rouge/tree/master/lib/rouge/themes
-[7]: https://analytics.google.com/analytics/web/
-[8]: https://www.cnzz.com/
-[9]: https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
-[10]: https://github.com/sighingnow/jekyll-gitbook/blob/master/gitbook/custom.css
-[11]: https://discordjs.guide/popular-topics/canvas.html#setting-up-napi-rs-canvas
-[12]: https://rubygems.org/gems/jekyll-remote-theme
-[13]: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
-[14]: https://github.com/sighingnow/jekyll-gitbook/blob/master/_config.yml
-[15]: https://jekyllrb.com/docs/collections/
+This project is licensed under the MIT License.
