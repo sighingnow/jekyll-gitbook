@@ -1,0 +1,19 @@
+<nav class="page-nav" aria-label="章節導覽">
+    {% if page.previous %}
+        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="page-nav-link page-nav-prev">‹ {{ page.previous.title | escape }}</a>
+    {% else %}
+        <span class="page-nav-link page-nav-prev page-nav-disabled">‹ 封面</span>
+    {% endif %}
+
+    {% if page.url == "/" %}
+        <span class="page-nav-link page-nav-home page-nav-disabled">目錄</span>
+    {% else %}
+        <a href="{{ site.baseurl }}/" class="page-nav-link page-nav-home">目錄</a>
+    {% endif %}
+
+    {% if page.next %}
+        <a href="{{ site.baseurl }}{{ page.next.url }}" class="page-nav-link page-nav-next">{{ page.next.title | escape }} ›</a>
+    {% else %}
+        <span class="page-nav-link page-nav-next page-nav-disabled">結尾 ›</span>
+    {% endif %}
+</nav>

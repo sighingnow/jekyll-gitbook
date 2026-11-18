@@ -12,13 +12,23 @@
         <div id="book-search-results">
             <div class="search-noresults">
                 <section class="normal markdown-section">
-                    {% if page.title %}
-                        <h1 id="{{ page.id }}">{{ page.title | escape }}</h1>
-                    {% else %}
-                        <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
+                    {% unless page.hide_title %}
+                        {% if page.title %}
+                            <h1 id="{{ page.id }}">{{ page.title | escape }}</h1>
+                        {% else %}
+                            <h1 id="{{ page.id }}">{{ site.title | escape }}</h1>
+                        {% endif %}
+                    {% endunless %}
+
+                    {% if page.layout == "post" or page.layout == "home" %}
+                        {%- include page-nav.html -%}
                     {% endif %}
 
                     {{ content }}
+
+                    {% if page.layout == "post" or page.layout == "home" %}
+                        {%- include page-nav.html -%}
+                    {% endif %}
 
                     {%- if jekyll.environment != 'dev' and site.disqushandler -%}
                         {%- include disqus.html -%}

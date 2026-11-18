@@ -3,3 +3,135 @@
  * Its purpose is for users of the theme to be able to add css rules from a blank file
  *   these get simply added to the ones already active in the layout.
  */
+
+/* ==========================================================================
+   手機導覽優化 (mobile navigation UX)
+
+   原本的問題：
+   1. 側欄目錄的漢堡選單只有一個圖示，沒有文字標籤，使用者不知道要點它。
+   2. 上一頁／下一頁的翻頁箭頭顏色太淺（#ccc）、沒有背景、沒有文字，
+      在手機版排版裡（<=1240px）很容易被忽略。
+
+   這裡只用 CSS 疊加樣式，沒有更動 gitbook.js / theme.js 等原廠檔案，
+   之後升級 remote_theme 也不會被覆蓋掉。
+   ========================================================================== */
+
+@media (max-width: 1240px) {
+    /* 側欄選單按鈕：加上「目錄」文字標籤，並提高對比 */
+    .book-header .btn:has(i.fa-align-justify) {
+        color: #444;
+    }
+
+    .book-header .btn:has(i.fa-align-justify)::after {
+        content: "目錄";
+        margin-left: 4px;
+        font-size: 13px;
+        text-transform: none;
+        vertical-align: middle;
+    }
+
+    /* 上一頁／下一頁：從淺灰色細箭頭，改成有底色、有文字的按鈕列 */
+    .navigation {
+        background: #f7f7f7;
+        border-top: 1px solid rgba(0, 0, 0, .08);
+        padding: 14px 0;
+        color: #444;
+    }
+
+    .navigation:hover {
+        background: #eee;
+        color: #222;
+    }
+
+    .navigation.navigation-prev {
+        border-right: 1px solid rgba(0, 0, 0, .08);
+    }
+
+    .navigation i {
+        font-size: 20px;
+        vertical-align: middle;
+    }
+
+    .navigation-prev::after {
+        content: " 上一頁";
+        font-size: 14px;
+        vertical-align: middle;
+    }
+
+    .navigation-next::before {
+        content: "下一頁 ";
+        font-size: 14px;
+        vertical-align: middle;
+    }
+}
+
+/* ==========================================================================
+   每頁頁首／頁尾導覽列 (page-nav)
+
+   在每個章節／案例頁面的標題正下方，以及內文結束之後，各放一列
+   「上一頁 · 目錄 · 下一頁」的文字連結，讓讀者不用滑到最底部、
+   也不用找漢堡選單，就能直接切換章節。
+   對應的 HTML 產生在 _includes/page-nav.html，由 _includes/body.html
+   在 page.layout == "post" 時於頁首、頁尾各插入一次。
+   ========================================================================== */
+
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+    padding: 10px 14px;
+    background: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.page-nav-link {
+    color: #444;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.page-nav-link:hover {
+    background: #eee;
+    color: #222;
+    text-decoration: none;
+}
+
+.page-nav-prev,
+.page-nav-next {
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.page-nav-home {
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.page-nav-disabled {
+    color: #bbb;
+    cursor: default;
+}
+
+.page-nav-disabled:hover {
+    background: none;
+    color: #bbb;
+}
+
+@media (max-width: 600px) {
+    .page-nav {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .page-nav-prev,
+    .page-nav-next {
+        max-width: 34%;
+    }
+}

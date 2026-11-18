@@ -1,16 +1,16 @@
 # Configurations
-title:            Jekyll Gitbook
-longtitle:        Jekyll Gitbook
-author:           HE Tao
-email:            sighingnow@gmail.com
+title:            改變最小的單位
+longtitle:        環境議題行動方案教練指南~以荒野奔鹿團為例
+author:           高三團 灰鷽
+email:            nestor.huang@gmail.com
 description: >
-  Build Jekyll site with the GitBook style.
+  環境議題行動方案教練指南~以荒野奔鹿團為例
 
 version:          1.0
 gitbook_version:  3.2.3
 
-url:              'https://sighingnow.github.io'
-baseurl:          '/jekyll-gitbook'
+url:              'https://nestorhuang.github.io/'
+baseurl:          '/atomic-change'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself
@@ -20,6 +20,81 @@ toc:
   enabled: true
   h_min:   1
   h_max:   3
+
+# 側邊欄目錄結構
+sidebar:
+  - title: 封面
+    url: /
+  - title: 前言
+    url: /head/
+  - title: 第一部 思維重塑
+    children:
+      - title: 第一章 不是多做一場活動
+        url: /chapter01/
+      - title: 第二章 小鹿的心理位置
+        url: /chapter02/
+      - title: 第三章 場域與系統
+        url: /chapter03/
+  - title: 第二部 行動路徑
+    children:
+      - title: 第四章 一年一輪
+        url: /chapter04/
+      - title: 第五章 啟動與感受
+        url: /chapter05/
+      - title: 第六章 聚焦與研究
+        url: /chapter06/
+      - title: 第七章 發想與原型
+        url: /chapter07/
+      - title: 第八章 實踐與擴散
+        url: /chapter08/
+  - title: 第三部 引導者工具箱
+    children:
+      - title: 第九章 導引員是教練
+        url: /chapter09/
+      - title: 第十章 問對問題的力量
+        url: /chapter10/
+      - title: 第十一章 鷹架怎麼搭
+        url: /chapter11/
+      - title: 第十二章 小隊衝突與分工不均
+        url: /chapter12/
+      - title: 第十三章 失敗教育
+        url: /chapter13/
+      - title: 第十四章 導引員也需要電池
+        url: /chapter14/
+  - title: 第四部 成長與評估
+    children:
+      - title: 第十五章 看見看不見的成果
+        url: /chapter15/
+      - title: 第十六章 歷程檔案怎麼做
+        url: /chapter16/
+      - title: 第十七章 Rubrics 怎麼設計
+        url: /chapter17/
+      - title: 第十八章 影響力怎麼看
+        url: /chapter18/
+  - title: 第五部 實戰故事集
+    children:
+      - title: 案例目錄與閱讀提醒
+        url: /case00/
+      - title: 案例一 挖篩小隊
+        url: /case01/
+      - title: 案例二 菸末小隊
+        url: /case02/
+      - title: 案例三 森聲不息
+        url: /case03/
+      - title: 案例四 甩廢！海有希望
+        url: /case04/
+      - title: 案例五 魚翔碧水
+        url: /case05/
+      - title: 案例六 「油」我真好
+        url: /case06/
+      - title: 案例七 簡的六次方
+        url: /case07/
+      - title: 案例八 木箱有點菜
+        url: /case08/
+      - title: 案例九 珊瑚大白話
+        url: /case09/
+      - title: 案例總結
+        url: /casesummary/
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path:     /assets/gitbook/images/favicon.ico
